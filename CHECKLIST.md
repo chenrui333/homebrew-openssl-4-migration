@@ -1,0 +1,781 @@
+# OpenSSL 4 Migration Checklist (2026-05-09)
+
+Progress: **41/759 (5.4%)**
+Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/homebrew-core/issues/278366)
+
+> Batches must be completed in order (0 → 1 → 2 → 3 → Leaves).
+> Depth-0 formulae are build-time dependencies of everything above them.
+
+## Batch 0 — Roots [0/25]
+
+- [ ] apr-util
+- [ ] asio
+- [ ] cmake
+- [ ] dotnet <!-- PR #280829 open -->
+- [ ] erlang
+- [ ] freetds
+- [ ] grpc <!-- PR #280832 open -->
+- [ ] hiredis
+- [ ] krb5
+- [ ] libevent
+- [ ] libfido2 <!-- PR #280836 open -->
+- [ ] librdkafka
+- [ ] libssh
+- [ ] libssh2
+- [ ] mariadb-connector-c
+- [ ] openldap
+- [ ] opusfile
+- [ ] python@3.11
+- [ ] python@3.12
+- [ ] python@3.13 <!-- PR #280845 open -->
+- [ ] python@3.14 <!-- PR #280846 open -->
+- [ ] srt
+- [ ] tcl-tk
+- [ ] tcl-tk@8
+- [ ] wget
+
+## Batch 1 [0/15]
+
+- [ ] apache-arrow <!-- PR #280851 open -->
+- [ ] bind
+- [ ] curl <!-- PR #280853 open -->
+- [ ] ffmpeg
+- [ ] folly
+- [ ] httpd
+- [ ] libpq
+- [ ] node <!-- PR #280858 open -->
+- [ ] postgresql@17
+- [ ] postgresql@18
+- [ ] pulseaudio <!-- PR #280861 open -->
+- [ ] qtbase <!-- PR #280862 open -->
+- [ ] rust <!-- PR #280863 open -->
+- [ ] systemd <!-- PR #280864 open -->
+- [ ] unbound
+
+## Batch 2 [0/5]
+
+- [ ] cargo-c <!-- PR #280867 open -->
+- [ ] cryptography <!-- PR #280868 open -->
+- [ ] gdal <!-- PR #280870 open -->
+- [ ] php <!-- PR #280871 open -->
+- [ ] ruby
+
+## Batch 3 [0/1]
+
+- [ ] gstreamer <!-- PR #280873 open -->
+
+## Leaves [41/713]
+
+- [ ] activemq-cpp
+- [ ] adios2
+- [ ] afflib
+- [ ] aftman
+- [ ] aiken
+- [ ] aircrack-ng
+- [ ] alpine
+- [ ] amber
+- [ ] amqp-cpp
+- [ ] ansible@10
+- [ ] ansible@9
+- [ ] aoe
+- [ ] apache-serf
+- [ ] apib
+- [ ] apkeep
+- [ ] apt
+- [ ] aptos
+- [ ] aqbanking
+- [ ] argyll-cms
+- [ ] aria2
+- [ ] arturo
+- [ ] asm-lsp
+- [ ] asuka
+- [ ] authoscope
+- [ ] aws-c-cal
+- [ ] aws-sam-cli
+- [ ] awscli
+- [ ] awscurl
+- [ ] axel
+- [ ] azure-cli
+- [ ] azure-core-cpp
+- [ ] azure-storage-common-cpp
+- [ ] azure-storage-cpp
+- [ ] bacon-ls
+- [ ] bacula-fd
+- [ ] bareos-client
+- [ ] baresip
+- [ ] barman
+- [ ] bbot
+- [ ] berkeley-db
+- [ ] biber
+- [ ] bibtexconv
+- [ ] bigloo
+- [ ] bitchx
+- [ ] bkmr
+- [ ] boa
+- [ ] borgbackup
+- [x] ~~bozohttpd~~
+- [ ] brpc
+- [ ] btcli
+- [ ] btfs
+- [ ] btpd
+- [ ] bulk_extractor
+- [ ] bulletty
+- [ ] burp
+- [ ] c2patool
+- [ ] cadaver
+- [x] ~~caf~~
+- [ ] cai
+- [ ] capnp
+- [ ] cargo-audit
+- [ ] cargo-bundle
+- [ ] cargo-clone
+- [ ] cargo-crev
+- [ ] cargo-geiger
+- [ ] cargo-generate
+- [ ] cargo-instruments
+- [ ] cargo-outdated
+- [ ] cargo-public-api
+- [ ] cargo-udeps
+- [ ] cargo-update
+- [ ] cassandra-cpp-driver
+- [ ] ccache
+- [ ] cfengine
+- [ ] cgal <!-- PR #281768 open -->
+- [ ] cgit
+- [ ] chawan
+- [ ] citus
+- [ ] clamav
+- [ ] click
+- [x] ~~clickhouse-cpp~~
+- [ ] clickhouse-odbc
+- [x] ~~clipboard~~
+- [ ] cmusfm
+- [ ] cnats
+- [ ] codanna
+- [ ] code-cli
+- [ ] code2prompt
+- [ ] codeberg-cli
+- [ ] codesnap
+- [ ] codex-acp
+- [ ] colmap
+- [ ] condure
+- [ ] conserver
+- [ ] coturn
+- [ ] couchbase-shell
+- [ ] couchdb
+- [x] ~~cpp-httplib~~
+- [ ] cppcms
+- [ ] cpprestsdk
+- [ ] cpr
+- [ ] crates-tui
+- [ ] crunchy-cli
+- [ ] crystal
+- [ ] crystal-icr
+- [ ] csound
+- [ ] ctpv
+- [ ] cups
+- [ ] cvsync
+- [ ] cyrus-sasl
+- [ ] datadog-static-analyzer
+- [ ] davix
+- [ ] dcmtk
+- [ ] ddclient
+- [ ] deadfinder
+- [ ] dezoomify-rs
+- [ ] dillo
+- [ ] distill-cli
+- [ ] dmg2img
+- [ ] dnsdist
+- [ ] dnsperf
+- [ ] dnsviz
+- [ ] doge
+- [ ] dotnet@6
+- [ ] dotnet@8
+- [ ] dotnet@9
+- [ ] dovecot
+- [ ] drill
+- [ ] drogon
+- [ ] duckscript
+- [ ] duo_unix
+- [ ] dura
+- [ ] dwarfs
+- [ ] dxpy
+- [ ] dynein
+- [ ] dynomite
+- [x] ~~easy-rsa~~
+- [ ] ecflow-ui
+- [ ] echtvar
+- [ ] edbrowse
+- [ ] efl
+- [ ] ejabberd
+- [ ] ekg2
+- [ ] electric
+- [ ] emmylua_ls
+- [ ] emqx
+- [x] ~~encfs~~
+- [ ] epic5
+- [ ] eralchemy <!-- PR #281771 open -->
+- [ ] erlang@24
+- [ ] erlang@25
+- [ ] erlang@26
+- [ ] erlang@27
+- [x] ~~et~~
+- [ ] etcd-cpp-apiv3
+- [ ] ettercap
+- [ ] eureka
+- [ ] exim
+- [ ] expert
+- [ ] fastd
+- [ ] fastnetmon
+- [ ] fb-client
+- [ ] fbthrift
+- [ ] felinks
+- [ ] feluda
+- [ ] fend
+- [ ] feroxbuster
+- [ ] fetchmail
+- [ ] ffmpeg@2.8
+- [ ] ffsend
+- [ ] findomain
+- [ ] firefoxpwa
+- [ ] fizz
+- [ ] flashrom
+- [ ] flawz
+- [ ] flowrs
+- [x] ~~fluent-bit~~
+- [ ] fnox
+- [ ] forbidden
+- [ ] forgejo-cli
+- [ ] fossil
+- [ ] fq
+- [ ] freeradius-server
+- [ ] freerdp
+- [ ] freeswitch
+- [ ] fw
+- [ ] gambit-scheme
+- [ ] gcli
+- [ ] gdcm
+- [ ] gensio
+- [ ] geph4
+- [ ] gerbil-scheme
+- [ ] gerust
+- [ ] get_iplayer
+- [ ] getdns
+- [ ] getxbook
+- [ ] ggshield
+- [ ] git
+- [ ] git-crypt
+- [ ] git-series
+- [ ] git-trim
+- [ ] git-workspace
+- [ ] git-xet
+- [ ] gitlogue
+- [ ] gitnr
+- [ ] gittype
+- [ ] gitui
+- [ ] gitversion
+- [ ] gkrellm
+- [ ] gloox
+- [ ] gnupg-pkcs11-scd
+- [x] ~~gocryptfs~~
+- [ ] got
+- [ ] gpac
+- [ ] grin-wallet
+- [ ] gsoap
+- [ ] gtmess
+- [ ] gurk
+- [ ] gwenhywfar
+- [ ] h2o
+- [ ] halide
+- [ ] haproxy
+- [ ] haproxy@2.8
+- [x] ~~hashcash~~
+- [ ] hcxtools
+- [ ] heimdal
+- [ ] helix-db
+- [ ] hf
+- [x] ~~hf-mount~~
+- [ ] himalaya
+- [ ] hk
+- [ ] htslib
+- [ ] http_load
+- [x] ~~httperf~~
+- [x] ~~httping~~
+- [x] ~~httrack~~
+- [ ] hydra
+- [ ] hyper-mcp
+- [ ] i2pd
+- [ ] iamb
+- [ ] icann-rdap
+- [ ] ice
+- [ ] icecast
+- [ ] icp-cli
+- [ ] ike-scan
+- [ ] imap-uw
+- [ ] imapfilter
+- [ ] imapsync
+- [ ] intelli-shell
+- [ ] intermodal
+- [ ] ios-webkit-debug-proxy
+- [x] ~~iperf3~~
+- [ ] ipmitool
+- [ ] ircd-hybrid
+- [ ] ircii
+- [ ] ironclaw
+- [ ] irssi
+- [ ] isync
+- [ ] jikken
+- [ ] jimtcl
+- [ ] john-jumbo
+- [ ] jose
+- [ ] julia
+- [ ] jwt-hack
+- [ ] karchive
+- [ ] kcov
+- [ ] kea
+- [ ] keeper-commander
+- [ ] keydb
+- [ ] kmod
+- [ ] komac
+- [ ] kore
+- [ ] kty
+- [ ] lakekeeper
+- [ ] languagetool-rust
+- [ ] lanraragi
+- [ ] lasso
+- [ ] lastpass-cli
+- [ ] lavinmq
+- [ ] ldapvi
+- [ ] ldid
+- [ ] ldid-procursus
+- [ ] ldns <!-- PR #281770 open -->
+- [ ] leetcode-cli
+- [ ] leetup
+- [ ] legba
+- [ ] lftp
+- [ ] libcoap
+- [ ] libcouchbase
+- [ ] libdap
+- [x] ~~libdpp~~
+- [ ] libetpan
+- [ ] libewf
+- [ ] libexosip
+- [x] ~~libff~~
+- [ ] libfixbuf
+- [ ] libfreefare
+- [ ] libgit2
+- [ ] libgit2@1.7
+- [ ] libgit2@1.8
+- [ ] libimobiledevice
+- [ ] libjwt
+- [ ] libks
+- [ ] libmowgli
+- [ ] libmsquic
+- [ ] libngtcp2
+- [x] ~~liboauth~~
+- [ ] liboqs
+- [ ] libp11
+- [ ] libpaho-mqtt
+- [ ] libpq@16
+- [ ] libpq@17
+- [ ] libpulsar
+- [ ] libre
+- [ ] librealsense
+- [ ] libretls
+- [ ] libshout
+- [ ] libslax
+- [ ] libstrophe
+- [x] ~~libtins~~
+- [ ] libtorrent-rakshasa
+- [ ] libtorrent-rasterbar
+- [ ] libtpms
+- [ ] libtrace
+- [ ] libu2f-server
+- [ ] libvncserver
+- [ ] libwebsockets
+- [ ] libxmlsec1
+- [ ] libzip
+- [ ] licensed
+- [ ] lighthouse
+- [ ] lighttpd
+- [x] ~~links~~
+- [ ] llama.cpp
+- [ ] llgo
+- [ ] localstack
+- [ ] luvit
+- [ ] lychee
+- [x] ~~lynx~~
+- [ ] magika
+- [ ] mago
+- [ ] mailcatcher
+- [ ] makepkg
+- [ ] manticoresearch
+- [ ] mapnik
+- [ ] mariadb
+- [ ] mariadb-connector-odbc
+- [ ] mariadb@10.11
+- [ ] mariadb@10.5
+- [ ] mariadb@10.6
+- [ ] mariadb@11.4
+- [ ] mariadb@11.8
+- [ ] mavsdk
+- [x] ~~md5sha1sum~~
+- [ ] mdcat
+- [ ] megatools
+- [ ] meli
+- [ ] memcached
+- [ ] memtier_benchmark
+- [ ] mender-artifact <!-- PR #278466 open -->
+- [ ] mender-cli <!-- PR #278465 open -->
+- [ ] mfterm
+- [ ] micromamba
+- [ ] midnight-commander
+- [ ] min-lang
+- [ ] minimal-racket
+- [x] ~~minizip-ng~~
+- [ ] mise
+- [x] ~~mktorrent~~
+- [ ] mlc
+- [ ] modsurfer
+- [ ] monero
+- [ ] monetdb
+- [ ] mongo-c-driver
+- [ ] mongo-c-driver@1
+- [ ] monit
+- [ ] monitoring-plugins
+- [ ] monkeysphere
+- [ ] monolith
+- [ ] moon
+- [ ] mosh
+- [ ] mosquitto
+- [ ] mupdf
+- [ ] musikcube
+- [ ] mutt
+- [ ] mvfst
+- [ ] mydumper
+- [ ] mysql
+- [ ] mysql-client
+- [ ] mysql-client@8.0
+- [ ] mysql-client@8.4
+- [ ] mysql-connector-c++
+- [ ] mysql@8.0
+- [ ] mysql@8.4
+- [x] ~~nagios~~
+- [ ] nagios-plugins
+- [ ] ncrack
+- [ ] ncspot
+- [ ] nemu
+- [ ] neomutt
+- [ ] neon
+- [ ] net-snmp
+- [ ] netdata
+- [ ] nghttp2
+- [ ] nginx
+- [ ] ngircd
+- [ ] nikto
+- [ ] nim
+- [ ] nmail
+- [ ] nmap
+- [ ] nmh
+- [ ] node-build
+- [ ] node@18
+- [ ] node@20
+- [ ] node@22
+- [ ] node@24
+- [ ] noir
+- [ ] nopoll
+- [ ] noseyparker
+- [ ] nrpe
+- [ ] nsd
+- [ ] ntopng
+- [ ] ntp
+- [ ] nuraft
+- [ ] nushell
+- [ ] nut
+- [ ] nvchecker
+- [ ] nzbget
+- [ ] oath-toolkit
+- [ ] objfw
+- [ ] observerward
+- [ ] octobuild
+- [ ] oha
+- [ ] omnara
+- [ ] omniorb
+- [ ] openapi-tui
+- [x] ~~openfortivpn~~
+- [ ] openiked
+- [ ] openrtsp
+- [ ] opensaml
+- [ ] opensc
+- [ ] openssh
+- [ ] opentelemetry-cpp
+- [ ] openvpn
+- [ ] ophcrack
+- [ ] ord
+- [ ] orogene
+- [x] ~~ortp~~
+- [ ] osslsigncode
+- [ ] oterm
+- [ ] overdrive
+- [ ] oxen
+- [ ] pam-u2f
+- [ ] passenger
+- [ ] pay
+- [ ] pdal
+- [ ] pdfalyzer
+- [ ] pdfly
+- [ ] pdns
+- [ ] pdnsrec
+- [ ] perbase
+- [ ] percona-server
+- [ ] percona-server@8.0
+- [ ] percona-xtrabackup
+- [ ] percona-xtrabackup@8.0
+- [ ] pgbackrest
+- [ ] pgbouncer
+- [ ] pgloader
+- [ ] pgrx
+- [ ] php@8.1
+- [ ] php@8.2
+- [ ] php@8.3
+- [ ] php@8.4
+- [ ] picoruby
+- [ ] pipewire
+- [ ] pistache
+- [ ] pixi
+- [ ] pixi-pack
+- [ ] pixiewps
+- [ ] pjproject
+- [ ] pkcs11-helper
+- [ ] pkcs11-tools
+- [ ] pkgx
+- [ ] pocket-tts
+- [ ] poco
+- [ ] podofo
+- [ ] postgresql@12
+- [ ] postgresql@13
+- [ ] postgresql@14
+- [ ] postgresql@15
+- [ ] postgresql@16
+- [ ] powershell
+- [ ] projectable
+- [ ] proto
+- [ ] prowler
+- [ ] proxelar
+- [ ] proxygen
+- [ ] proxytunnel
+- [ ] prr
+- [ ] prs
+- [ ] pulledpork
+- [ ] pure-ftpd
+- [ ] pushpin
+- [x] ~~pwsafe~~
+- [ ] pyenv
+- [ ] pypy
+- [ ] pypy3.10
+- [ ] pypy3.9
+- [ ] python-freethreading
+- [ ] python@3.10
+- [ ] python@3.9
+- [ ] qca
+- [ ] qpdf <!-- PR #281769 open -->
+- [ ] qpid-proton
+- [ ] qxmpp
+- [ ] rabbitmq-c
+- [ ] rails-mcp-server
+- [ ] rakudo-star
+- [ ] rathole
+- [ ] rattler-build
+- [ ] rattler-index
+- [ ] rawdog
+- [ ] readpe
+- [ ] recc
+- [ ] redict
+- [ ] redis
+- [ ] redis@6.2
+- [ ] redis@8.2
+- [ ] redwax-tool
+- [ ] reshape
+- [ ] retdec
+- [ ] rethinkdb
+- [ ] riemann-client
+- [ ] rink
+- [ ] river
+- [ ] rizin
+- [ ] rojo
+- [ ] root
+- [ ] rover
+- [ ] rpki-client
+- [ ] rpmspectool
+- [ ] rqbit
+- [ ] rsql
+- [ ] rsync
+- [ ] rtags
+- [ ] rtl_433
+- [ ] rtmpdump
+- [ ] ruby-build
+- [ ] ruby@3.1
+- [ ] ruby@3.2
+- [ ] ruby@3.3
+- [ ] ruby@3.4
+- [ ] rustup
+- [ ] rye
+- [ ] s-nail
+- [ ] s2geometry
+- [ ] s2n
+- [ ] s3-backer
+- [ ] sagittarius-scheme
+- [ ] samba
+- [ ] sapling
+- [ ] sblim-sfcc
+- [ ] scamper
+- [ ] sccache
+- [ ] screenpipe
+- [ ] scryer-prolog
+- [ ] scrypt
+- [ ] sem-cli
+- [ ] sentry-cli
+- [ ] sequoia-chameleon-gnupg
+- [ ] sequoia-sq
+- [ ] sgr
+- [ ] sh4d0wup
+- [ ] shairport-sync
+- [ ] sheldon
+- [ ] shellinabox
+- [ ] shibboleth-sp
+- [ ] siege
+- [ ] signalwire-client-c
+- [ ] sigstore
+- [ ] sile
+- [ ] silk
+- [x] ~~sipp~~
+- [x] ~~sipsak~~
+- [ ] sleuthkit
+- [ ] slowhttptest
+- [ ] slrn
+- [ ] smartdns
+- [x] ~~snapcast~~
+- [ ] sngrep
+- [ ] sniffnet
+- [ ] snobol4
+- [ ] snort
+- [ ] snownews
+- [ ] so
+- [ ] socat
+- [ ] sofia-sip
+- [ ] softhsm
+- [ ] solana
+- [ ] spice-gtk
+- [ ] spice-server
+- [ ] spiped
+- [ ] spotify_player
+- [ ] spotifyd
+- [ ] spr
+- [ ] sprocket
+- [ ] sproxy
+- [x] ~~sqlcipher~~
+- [ ] sqlx-cli
+- [ ] squid
+- [ ] srtp
+- [ ] ssldump
+- [ ] sslscan
+- [ ] sslsplit
+- [ ] sstp-client
+- [ ] stellar-cli
+- [ ] strongswan
+- [ ] stubby
+- [ ] stunnel
+- [ ] stuntman
+- [ ] superseedr
+- [ ] surfer
+- [ ] swi-prolog
+- [ ] swtpm
+- [ ] sylpheed
+- [ ] synergy-core
+- [ ] syslog-ng
+- [ ] tabiew
+- [ ] tarantool
+- [ ] tarsnap
+- [ ] tcpdump
+- [x] ~~tcpflow~~
+- [ ] tdlib
+- [ ] tectonic
+- [ ] teleport
+- [ ] teller
+- [ ] termscp
+- [ ] termusic
+- [ ] teslamate
+- [x] ~~testssl~~
+- [ ] texlive
+- [ ] text-embeddings-inference
+- [ ] thors-anvil
+- [ ] thrift
+- [ ] tiledb
+- [ ] tinc
+- [ ] tiny
+- [ ] toktop
+- [ ] tomcat-native
+- [ ] toml-bombadil
+- [ ] tor
+- [ ] trafficserver
+- [ ] transmission-cli
+- [ ] trunk
+- [ ] tsduck
+- [ ] tt
+- [ ] ttyd
+- [ ] tuisky
+- [ ] typst
+- [ ] u-boot-tools
+- [x] ~~uftp~~
+- [ ] unshield
+- [ ] urweb
+- [ ] urx
+- [ ] uuu
+- [ ] uwsgi
+- [ ] valkey
+- [ ] varnish
+- [ ] vineyard
+- [ ] virtuoso
+- [ ] vroom
+- [ ] vsd
+- [ ] vtcode
+- [ ] w3m
+- [ ] wabt
+- [ ] wally
+- [ ] wangle
+- [ ] wassette
+- [x] ~~watchman~~
+- [x] ~~wdc~~
+- [ ] weave
+- [ ] weaviate-cli
+- [x] ~~webfs~~
+- [ ] websocat
+- [ ] wownero
+- [x] ~~wrk~~
+- [ ] wrkflw
+- [ ] wthrr
+- [ ] wuppiefuzz
+- [ ] x-cli
+- [ ] x11vnc
+- [ ] x3270
+- [ ] xaric
+- [x] ~~xidel~~
+- [ ] xml-security-c
+- [ ] xml-tooling-c
+- [ ] xmlrpc-c
+- [ ] xmrig
+- [ ] xrootd
+- [ ] yafc
+- [ ] yara
+- [ ] yek
+- [ ] yozefu
+- [ ] yubico-piv-tool
+- [ ] zabbix
+- [ ] zchunk
+- [ ] zeek
+- [ ] zellij
+- [ ] znc
+- [ ] zola
+- [ ] zookeeper
+- [ ] zsign
+- [ ] zurl

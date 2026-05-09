@@ -1,0 +1,50 @@
+name: Sync tracking data
+
+on:
+  schedule:
+    - cron: '17 6 * * *'   # daily at 06:17 UTC
+  workflow_dispatch:         # manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout harness repo
+        uses: actions/checkout@v4
+
+      - name: Checkout homebrew-core (Formula/ only)
+        uses: actions/checkout@v4
+        with:
+          repository: Homebrew/homebrew-core
+          path: homebrew-core
+          sparse-checkout: Formula
+          sparse-checkout-cone-mode: true
+          fetch-depth: 1
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: true
+
+      - name: Build sslmigrate
+        run: go build -o bin/sslmigrate .
+
+      - name: Regenerate tracking data
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          bin/sslmigrate dep-tree --homebrew-core=homebrew-core
+          bin/sslmigrate status --homebrew-core=homebrew-core
+          bin/sslmigrate checklist --homebrew-core=homebrew-core
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/dep_tree.json TRACKING.md CHECKLIST.md
+          git diff --cached --quiet && echo "No changes" || \
+            git commit -m "data: sync tracking $(date +%Y-%m-%d)" && git push

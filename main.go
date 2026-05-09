@@ -6,6 +6,7 @@ import (
 
 	"github.com/spf13/cobra"
 
+	"github.com/chenrui333/homebrew-openssl-4-migration/internal/checklist"
 	"github.com/chenrui333/homebrew-openssl-4-migration/internal/deptree"
 	"github.com/chenrui333/homebrew-openssl-4-migration/internal/migrate"
 	"github.com/chenrui333/homebrew-openssl-4-migration/internal/status"
@@ -24,7 +25,7 @@ func rootCmd() *cobra.Command {
 		Use:   "sslmigrate",
 		Short: "Harness for migrating homebrew-core formulae from openssl@3 to openssl@4",
 	}
-	root.AddCommand(depTreeCmd(), statusCmd(), migrateCmd())
+	root.AddCommand(depTreeCmd(), statusCmd(), checklistCmd(), migrateCmd())
 	return root
 }
 
@@ -72,6 +73,21 @@ func statusCmd() *cobra.Command {
 	cmd.Flags().StringVar(&homebrewCore, "homebrew-core", envOr("HOMEBREW_CORE", defaultHomebrewCore), "path to homebrew-core checkout")
 	cmd.Flags().StringVar(&depTree, "dep-tree", "data/dep_tree.json", "dependency inventory JSON")
 	cmd.Flags().StringVar(&output, "output", "TRACKING.md", "tracking markdown output path")
+	return cmd
+}
+
+func checklistCmd() *cobra.Command {
+	var homebrewCore, depTree, output string
+	cmd := &cobra.Command{
+		Use:   "checklist",
+		Short: "Write CHECKLIST.md with markdown checkboxes grouped by migration batch",
+		RunE: func(_ *cobra.Command, _ []string) error {
+			return checklist.Run(homebrewCore, depTree, output)
+		},
+	}
+	cmd.Flags().StringVar(&homebrewCore, "homebrew-core", envOr("HOMEBREW_CORE", defaultHomebrewCore), "path to homebrew-core checkout")
+	cmd.Flags().StringVar(&depTree, "dep-tree", "data/dep_tree.json", "dependency inventory JSON")
+	cmd.Flags().StringVar(&output, "output", "CHECKLIST.md", "checklist markdown output path")
 	return cmd
 }
 
