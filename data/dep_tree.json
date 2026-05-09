@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-09T11:43:16-04:00",
+  "generated_at": "2026-05-09T11:48:49-04:00",
   "repository": "Homebrew/homebrew-core",
-  "git_head": "173531fba7a1966d4df3e950d4e9ae6178662d9b",
+  "git_head": "5d56cb4045b8e1b8fda0b49c16f65a4ee197561a",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "staging_branch": "openssl-4-migration-staging",
   "staged_depths": {
