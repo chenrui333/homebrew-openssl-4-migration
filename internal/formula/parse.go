@@ -51,10 +51,12 @@ func ParseDependencies(contents string) []string {
 	return deps
 }
 
-// isTestOnly returns true when a qualifier marks a dep as test-only.
-// Fixes the Ruby bug: handle both `:test` and `[:test]` forms.
+var (
+	testQualRe  = regexp.MustCompile(`\b:test\b`)
+	buildQualRe = regexp.MustCompile(`\b:build\b`)
+)
+
+// isTestOnly returns true when a qualifier marks a dep as test-only (not build+test).
 func isTestOnly(qualifier string) bool {
-	hasTest := strings.Contains(qualifier, ":test")
-	hasBuild := strings.Contains(qualifier, ":build")
-	return hasTest && !hasBuild
+	return testQualRe.MatchString(qualifier) && !buildQualRe.MatchString(qualifier)
 }

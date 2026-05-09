@@ -41,8 +41,9 @@ func CurrentBranch(dir string) (string, error) {
 }
 
 // BranchExists reports whether a local branch exists.
+// Uses refs/heads/ prefix to avoid false positives from tags or remote refs.
 func BranchExists(dir, branch string) bool {
-	_, ok := runAllowFailure(dir, "rev-parse", "--verify", branch)
+	_, ok := runAllowFailure(dir, "rev-parse", "--verify", "refs/heads/"+branch)
 	return ok
 }
 
@@ -102,6 +103,13 @@ func DiffNoIndex(before, after string) string {
 // Push pushes a branch to a remote and sets upstream tracking.
 func Push(dir, remote, branch string) error {
 	_, err := run(dir, "push", "-u", remote, branch)
+	return err
+}
+
+// PushForce pushes a branch using --force-with-lease, safe for re-runs after
+// a local reset --hard (the branch has been rewritten and needs a force push).
+func PushForce(dir, remote, branch string) error {
+	_, err := run(dir, "push", "--force-with-lease", "-u", remote, branch)
 	return err
 }
 

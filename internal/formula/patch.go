@@ -17,13 +17,13 @@ const (
 )
 
 var (
-	resourceRe  = regexp.MustCompile(`^\s*resource\s+["']`)
-	revisionRe  = regexp.MustCompile(`^(\s*revision\s+)(\d+)(\s*)$`)
-	bottleDoRe  = regexp.MustCompile(`^\s{2}bottle do\s*$`)
-	bottleEndRe = regexp.MustCompile(`^\s{2}end\s*$`)
-	installRe   = regexp.MustCompile(`^\s{2}def install\s*$`)
+	resourceRe = regexp.MustCompile(`^\s*resource\s+["']`)
+	revisionRe = regexp.MustCompile(`^(\s*revision\s+)(\d+)(.*)$`)
+	bottleDoRe = regexp.MustCompile(`^\s{2}bottle do\s*$`)
+	installRe  = regexp.MustCompile(`^\s{2}def install\s*$`)
 
-	// isBlockOpener matches Ruby constructs that open a new end-terminated block.
+	// blockOpenerRe matches Ruby constructs that open a new end-terminated block.
+	// Matched against the raw (non-trimmed) line so `\s+do\s*$` works correctly.
 	blockOpenerRe = regexp.MustCompile(`\s+do\s*$|^\s*(def|if|unless|while|until|case|begin|class|module)\b`)
 )
 
@@ -63,7 +63,8 @@ func MigrateContents(contents string) (string, MigrateResult) {
 			}
 		} else {
 			// Track nesting inside the resource block.
-			if blockOpenerRe.MatchString(trimmed) && trimmed != "end" {
+			// Match against the raw line (not trimmed) so `\s+do\s*$` works correctly.
+			if blockOpenerRe.MatchString(line) && trimmed != "end" {
 				resourceNesting++
 			} else if trimmed == "end" {
 				if resourceNesting > 0 {
@@ -110,11 +111,21 @@ func BumpRevision(contents string) string {
 		}
 	}
 	if bottleStart >= 0 {
+		// Find the matching end for the bottle block using nesting depth,
+		// not a naive first-match, so nested on_macos/on_linux blocks are handled correctly.
 		bottleEnd := -1
+		nesting := 0
 		for i := bottleStart + 1; i < len(lines); i++ {
-			if bottleEndRe.MatchString(lines[i]) {
-				bottleEnd = i
-				break
+			t := strings.TrimSpace(lines[i])
+			if blockOpenerRe.MatchString(lines[i]) && t != "end" {
+				nesting++
+			} else if t == "end" {
+				if nesting > 0 {
+					nesting--
+				} else {
+					bottleEnd = i
+					break
+				}
 			}
 		}
 		if bottleEnd >= 0 {

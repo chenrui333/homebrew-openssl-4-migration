@@ -163,7 +163,7 @@ func Run(formulaName string, opts Options) error {
 		}
 	}
 
-	if err := git.Push(opts.HomebrewCore, pushRemote, branchName); err != nil {
+	if err := git.PushForce(opts.HomebrewCore, pushRemote, branchName); err != nil {
 		return fmt.Errorf("pushing branch: %w", err)
 	}
 

@@ -75,12 +75,8 @@ func AddLabels(dir, repo, prURL string, labels []string) error {
 	}
 	cmd := exec.Command("gh", args...)
 	cmd.Dir = dir
-	if out, err := cmd.Output(); err != nil {
-		if exitErr, ok := err.(*exec.ExitError); ok {
-			return fmt.Errorf("gh pr edit: %s", strings.TrimSpace(string(exitErr.Stderr)))
-		}
-		_ = out
-		return fmt.Errorf("gh pr edit: %w", err)
+	if out, err := cmd.CombinedOutput(); err != nil {
+		return fmt.Errorf("gh pr edit: %s", strings.TrimSpace(string(out)))
 	}
 	return nil
 }

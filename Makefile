@@ -6,7 +6,7 @@ GO            ?= go
 
 help:
 	@echo "Targets:"
-	@echo "  build               Compile bin/openssl4"
+	@echo "  build               Compile bin/sslmigrate"
 	@echo "  dep-tree            Rebuild data/dep_tree.json from homebrew-core"
 	@echo "  status              Regenerate TRACKING.md + print dashboard"
 	@echo "  migrate FORMULA=X   Migrate formula X and open a PR"
