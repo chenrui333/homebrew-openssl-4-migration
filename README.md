@@ -9,7 +9,7 @@ The workflow is split into two parts:
 
 ## Prerequisites
 
-- Ruby
+- Go 1.21+
 - git
 - GitHub CLI (gh) authenticated for querying and creating Homebrew PRs
 - A local homebrew-core checkout
@@ -19,6 +19,14 @@ Set HOMEBREW_CORE when your checkout is not at the Makefile default:
 ~~~sh
 make status HOMEBREW_CORE=$HOME/path/to/homebrew-core
 ~~~
+
+## Build the binary
+
+~~~sh
+make build
+~~~
+
+This compiles `bin/openssl4`. All other targets run it automatically.
 
 ## Build the dependency inventory
 
@@ -55,23 +63,24 @@ Then run the migration:
 make migrate FORMULA=wget
 ~~~
 
-The migration script:
+The migration tool:
 
-- locates the formula file, including Formula/lib/ for lib* formulae
+- locates the formula file (formulae live at Formula/<first_char>/<name>.rb)
 - skips formulae already migrated to openssl@4
-- swaps depends_on "openssl@3" to depends_on "openssl@4"
+- swaps depends_on "openssl@3" to depends_on "openssl@4" (both quote styles)
+- skips depends_on lines inside resource blocks
 - bumps an existing revision or inserts revision 1
 - adds OpenSSL 4 environment variables to Rust/cargo formulae
-- creates branch rchen.openssl4.<formula> from the correct base
+- creates branch rchen.openssl4.<formula> from the correct base; resets it if it already exists
 - commits <formula>: use openssl@4 with a DCO sign-off
 - pushes to your fork remote and opens a PR unless --no-pr is used
 
-Optional script flags:
+Optional flags:
 
 ~~~sh
-ruby scripts/migrate.rb <formula> --dry-run
-ruby scripts/migrate.rb <formula> --no-pr
-ruby scripts/migrate.rb <formula> --push-remote=<remote>
+bin/openssl4 migrate <formula> --dry-run
+bin/openssl4 migrate <formula> --no-pr
+bin/openssl4 migrate <formula> --push-remote=<remote>
 ~~~
 
 PR bodies stay short and reference Homebrew/homebrew-core#278366. Staging PRs also receive staging-branch-pr and CI-skip-recursive-dependents labels in addition to openssl-4-migration.

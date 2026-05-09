@@ -1,16 +1,38 @@
+BINARY        := bin/openssl4
 HOMEBREW_CORE ?= /opt/homebrew/Library/Taps/homebrew/homebrew-core
-RUBY ?= ruby
+GO            ?= go
 
-.PHONY: dep-tree status migrate migrate-dry
+.PHONY: help build dep-tree status migrate migrate-dry clean
 
-dep-tree:
-	$(RUBY) scripts/build_dep_tree.rb --homebrew-core=$(HOMEBREW_CORE)
+help:
+	@echo "Targets:"
+	@echo "  build               Compile bin/openssl4"
+	@echo "  dep-tree            Rebuild data/dep_tree.json from homebrew-core"
+	@echo "  status              Regenerate TRACKING.md + print dashboard"
+	@echo "  migrate FORMULA=X   Migrate formula X and open a PR"
+	@echo "  migrate-dry FORMULA=X   Dry-run migration (no branch/PR created)"
+	@echo "  clean               Remove bin/ and generated artifacts"
 
-status:
-	$(RUBY) scripts/status.rb --homebrew-core=$(HOMEBREW_CORE)
+build:
+	$(GO) build -o $(BINARY) .
 
-migrate:
-	$(RUBY) scripts/migrate.rb $(FORMULA) --homebrew-core=$(HOMEBREW_CORE)
+dep-tree: build
+	$(BINARY) dep-tree --homebrew-core=$(HOMEBREW_CORE)
 
-migrate-dry:
-	$(RUBY) scripts/migrate.rb $(FORMULA) --homebrew-core=$(HOMEBREW_CORE) --dry-run
+status: build
+	$(BINARY) status --homebrew-core=$(HOMEBREW_CORE)
+
+migrate: build
+ifndef FORMULA
+	$(error FORMULA is required. Usage: make migrate FORMULA=wget)
+endif
+	$(BINARY) migrate $(FORMULA) --homebrew-core=$(HOMEBREW_CORE)
+
+migrate-dry: build
+ifndef FORMULA
+	$(error FORMULA is required. Usage: make migrate-dry FORMULA=wget)
+endif
+	$(BINARY) migrate $(FORMULA) --homebrew-core=$(HOMEBREW_CORE) --dry-run
+
+clean:
+	rm -rf bin/ data/dep_tree.json TRACKING.md

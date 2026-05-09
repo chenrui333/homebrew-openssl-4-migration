@@ -1,0 +1,24 @@
+package deptree
+
+// Formula represents a single formula in the dependency inventory.
+type Formula struct {
+	Name                     string   `json:"name"`
+	Path                     string   `json:"path"`
+	OpenSSLDependency        string   `json:"openssl_dependency,omitempty"`
+	Depth                    *int     `json:"depth"`
+	Dependencies             []string `json:"dependencies"`
+	OpenSSLFormulaDeps       []string `json:"openssl_formula_dependencies"`
+	OpenSSLFormulaDependents []string `json:"openssl_formula_dependents"`
+}
+
+// DepTree is the full migration inventory written to data/dep_tree.json.
+type DepTree struct {
+	GeneratedAt   string              `json:"generated_at"`
+	Repository    string              `json:"repository"`
+	GitHead       string              `json:"git_head,omitempty"`
+	TrackingIssue string              `json:"tracking_issue"`
+	StagingBranch string              `json:"staging_branch"`
+	StagedDepths  map[string][]string `json:"staged_depths"`
+	FormulaCount  int                 `json:"formula_count"`
+	Formulae      []Formula           `json:"formulae"`
+}
