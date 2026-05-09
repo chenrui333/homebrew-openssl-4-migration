@@ -26,7 +26,7 @@ make status HOMEBREW_CORE=$HOME/path/to/homebrew-core
 make build
 ~~~
 
-This compiles `bin/openssl4`. All other targets run it automatically.
+This compiles `bin/sslmigrate`. All other targets run it automatically.
 
 ## Build the dependency inventory
 
@@ -78,9 +78,9 @@ The migration tool:
 Optional flags:
 
 ~~~sh
-bin/openssl4 migrate <formula> --dry-run
-bin/openssl4 migrate <formula> --no-pr
-bin/openssl4 migrate <formula> --push-remote=<remote>
+bin/sslmigrate migrate <formula> --dry-run
+bin/sslmigrate migrate <formula> --no-pr
+bin/sslmigrate migrate <formula> --push-remote=<remote>
 ~~~
 
 PR bodies stay short and reference Homebrew/homebrew-core#278366. Staging PRs also receive staging-branch-pr and CI-skip-recursive-dependents labels in addition to openssl-4-migration.

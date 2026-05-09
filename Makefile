@@ -1,4 +1,4 @@
-BINARY        := bin/openssl4
+BINARY        := bin/sslmigrate
 HOMEBREW_CORE ?= /opt/homebrew/Library/Taps/homebrew/homebrew-core
 GO            ?= go
 

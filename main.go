@@ -21,7 +21,7 @@ func main() {
 
 func rootCmd() *cobra.Command {
 	root := &cobra.Command{
-		Use:   "openssl4",
+		Use:   "sslmigrate",
 		Short: "Harness for migrating homebrew-core formulae from openssl@3 to openssl@4",
 	}
 	root.AddCommand(depTreeCmd(), statusCmd(), migrateCmd())
