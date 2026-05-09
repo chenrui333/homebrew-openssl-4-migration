@@ -1,0 +1,19 @@
+CLAUDE.md
+  s_6d431d74e1ae42::t_b5592c1da8b113 1-96
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.4",
+  "base_commit_sha": "d0f57c64db2d5e3d323250ee6ae77e50aa8ec7c1",
+  "prompts": {},
+  "sessions": {
+    "s_6d431d74e1ae42": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "101f649a-f23b-4cb0-bab2-b0255274a36c",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}
