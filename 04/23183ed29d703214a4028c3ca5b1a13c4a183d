@@ -1,0 +1,23 @@
+main.go
+  s_6d431d74e1ae42::t_1fb9be219f4bd0 24
+README.md
+  s_6d431d74e1ae42::t_096c7345b6662b 29,81-83
+Makefile
+  s_6d431d74e1ae42::t_267a57a221a9be 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.4",
+  "base_commit_sha": "0423183ed29d703214a4028c3ca5b1a13c4a183d",
+  "prompts": {},
+  "sessions": {
+    "s_6d431d74e1ae42": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "101f649a-f23b-4cb0-bab2-b0255274a36c",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}
