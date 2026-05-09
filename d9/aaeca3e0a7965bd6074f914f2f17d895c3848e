@@ -1,0 +1,40 @@
+dist/config.yaml
+  s_6d431d74e1ae42::t_1d456727e33101 1-158
+.github/workflows/sync.yml
+  s_6d431d74e1ae42::t_3d17a394498f9f 1-50
+internal/checklist/checklist.go
+  s_6d431d74e1ae42::t_9e598bab3742b7 1-60
+main.go
+  s_6d431d74e1ae42::t_f0e616524f1e9a 28
+  s_6d431d74e1ae42::t_20329f98d21d96 9
+  s_6d431d74e1ae42::t_6bafeb2417082c 79-93
+internal/status/status.go
+  s_6d431d74e1ae42::t_6ef82d7bbd0d48 10,21,41,43-44,46-47,49-50,52
+dist/metadata.json
+  s_6d431d74e1ae42::t_1d456727e33101 1
+CHECKLIST.md
+  s_6d431d74e1ae42::t_a367d116cb9b00 1-781
+Makefile
+  s_6d431d74e1ae42::t_0763cb7b498e3d 26-28
+  s_6d431d74e1ae42::t_f7397178929559 5,12,15
+internal/tracking/tracking.go
+  s_6d431d74e1ae42::t_d441bbd25e1d1a 1-148
+dist/artifacts.json
+  s_6d431d74e1ae42::t_1d456727e33101 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.4",
+  "base_commit_sha": "d9aaeca3e0a7965bd6074f914f2f17d895c3848e",
+  "prompts": {},
+  "sessions": {
+    "s_6d431d74e1ae42": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "101f649a-f23b-4cb0-bab2-b0255274a36c",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}
