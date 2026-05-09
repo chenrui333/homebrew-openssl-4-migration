@@ -1,0 +1,32 @@
+internal/git/git.go
+  s_6d431d74e1ae42::t_5351a3c7496956 109-115
+  s_6d431d74e1ae42::t_da0252639f10fb 44,46
+internal/migrate/migrate.go
+  s_6d431d74e1ae42::t_e9e2c4f6bdfaa8 166
+internal/formula/patch.go
+  s_6d431d74e1ae42::t_f23c194de40705 114-115,117,119-128
+  s_6d431d74e1ae42::t_0b9486dd4c9e7c 20-23,25-26
+  s_6d431d74e1ae42::t_a7e675ef5256ea 66-67
+internal/formula/parse.go
+  s_6d431d74e1ae42::t_55db8271131eca 54-59,61
+internal/github/gh.go
+  s_6d431d74e1ae42::t_ca8d01108495cb 78-79
+Makefile
+  s_6d431d74e1ae42::t_1d5bbfb658654f 9
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.4",
+  "base_commit_sha": "3e56fae5e10cf472b2b5856e0d777b6e91389a80",
+  "prompts": {},
+  "sessions": {
+    "s_6d431d74e1ae42": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "101f649a-f23b-4cb0-bab2-b0255274a36c",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}
