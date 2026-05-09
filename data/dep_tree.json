@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-09T12:15:23-04:00",
+  "generated_at": "2026-05-09T12:46:04-04:00",
   "repository": "Homebrew/homebrew-core",
   "git_head": "5d56cb4045b8e1b8fda0b49c16f65a4ee197561a",
   "tracking_issue": "Homebrew/homebrew-core#278366",
@@ -72,7 +72,7 @@
         "openssl@3",
         "unixodbc"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "apache-serf",
         "httpd",
@@ -96,7 +96,7 @@
         "automake",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "csound",
         "musikcube",
@@ -112,7 +112,7 @@
       "dependencies": [
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "adios2",
         "amqp-cpp",
@@ -361,7 +361,7 @@
         "mesa-glu",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "couchdb",
         "ejabberd",
@@ -385,7 +385,7 @@
         "unixodbc",
         "readline"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "emqx",
         "pgloader",
@@ -432,7 +432,7 @@
       "dependencies": [
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "ccache",
         "coturn",
@@ -450,7 +450,7 @@
         "openssl@3",
         "keyutils"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "cyrus-sasl",
         "freerdp",
@@ -484,7 +484,7 @@
         "pkgconf",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "amber",
         "cnats",
@@ -563,7 +563,7 @@
         "zstd",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "syslog-ng"
       ]
@@ -600,7 +600,7 @@
         "openssl@3",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "aria2",
         "cargo-c",
@@ -656,7 +656,7 @@
         "openssl@3",
         "util-linux"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "dovecot",
         "heimdal",
@@ -684,8 +684,8 @@
         "openssl@3",
         "opus"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "python@3.11",
@@ -703,8 +703,8 @@
         "libtirpc",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "python@3.12",
@@ -722,7 +722,7 @@
         "libtirpc",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "ansible@10",
         "ansible@9",
@@ -744,7 +744,7 @@
         "berkeley-db@5",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "aws-sam-cli",
         "azure-cli",
@@ -770,7 +770,7 @@
         "zstd",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "adios2",
         "afflib",
@@ -864,7 +864,7 @@
         "libxext",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "gensio",
         "neomutt",
@@ -884,7 +884,7 @@
         "libxext",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "pypy",
         "pypy3.10",
@@ -909,8 +909,8 @@
         "util-linux",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "apache-arrow",
@@ -971,7 +971,7 @@
         "libcap",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "dnsviz",
         "monitoring-plugins",
@@ -1045,7 +1045,7 @@
         "zlib-ng-compat",
         "nasm"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "crunchy-cli",
         "freerdp",
@@ -1281,7 +1281,7 @@
         "dbus",
         "libcap"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "efl",
         "gpac",
@@ -1828,7 +1828,7 @@
         "net-snmp",
         "openldap"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "ruby",
@@ -1970,8 +1970,8 @@
         "apr",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "adios2",
@@ -2006,7 +2006,7 @@
         "cmake",
         "python@3.14"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "afflib",
@@ -2042,7 +2042,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "aiken",
@@ -2057,7 +2057,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "aircrack-ng",
@@ -2074,8 +2074,8 @@
         "sqlite",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "alpine",
@@ -2086,8 +2086,8 @@
         "openssl@3",
         "linux-pam"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "amber",
@@ -2108,7 +2108,7 @@
         "crystal",
         "libevent"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "amqp-cpp",
@@ -2122,7 +2122,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "ansible@10",
@@ -2144,7 +2144,7 @@
         "python@3.12",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "ansible@9",
@@ -2166,7 +2166,7 @@
         "python@3.12",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "aoe",
@@ -2185,7 +2185,7 @@
         "node",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "apache-serf",
@@ -2202,7 +2202,7 @@
       "openssl_formula_dependencies": [
         "apr-util"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "apib",
@@ -2217,7 +2217,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "apkeep",
@@ -2232,7 +2232,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "apt",
@@ -2267,7 +2267,7 @@
         "systemd",
         "w3m"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "aptos",
@@ -2289,7 +2289,7 @@
         "rust",
         "systemd"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "aqbanking",
@@ -2312,7 +2312,7 @@
         "gwenhywfar",
         "libxmlsec1"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "argyll-cms",
@@ -2333,8 +2333,8 @@
         "xorgproto",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "aria2",
@@ -2353,7 +2353,7 @@
       "openssl_formula_dependencies": [
         "libssh2"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "arturo",
@@ -2375,7 +2375,7 @@
       "openssl_formula_dependencies": [
         "nim"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "asm-lsp",
@@ -2390,7 +2390,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "asuka",
@@ -2405,7 +2405,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "authoscope",
@@ -2421,7 +2421,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "aws-c-cal",
@@ -2463,7 +2463,7 @@
         "cryptography",
         "python@3.13"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "awscli",
@@ -2479,7 +2479,7 @@
         "cmake",
         "python@3.14"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "awscurl",
@@ -2510,7 +2510,7 @@
         "cryptography",
         "python@3.14"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "axel",
@@ -2526,8 +2526,8 @@
         "pkgconf",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "azure-cli",
@@ -2546,7 +2546,7 @@
         "python@3.13",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "azure-core-cpp",
@@ -2578,7 +2578,7 @@
         "azure-core-cpp",
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "azure-storage-cpp",
@@ -2596,7 +2596,7 @@
         "cmake",
         "cpprestsdk"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "bacon-ls",
@@ -2611,7 +2611,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "bacula-fd",
@@ -2623,8 +2623,8 @@
         "readline",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "bareos-client",
@@ -2649,7 +2649,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "baresip",
@@ -2666,7 +2666,7 @@
         "cmake",
         "libre"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "barman",
@@ -2682,7 +2682,7 @@
         "libpq",
         "python@3.14"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "bbot",
@@ -2709,7 +2709,7 @@
         "python@3.14",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "berkeley-db",
@@ -2719,8 +2719,8 @@
       "dependencies": [
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "biber",
@@ -2731,8 +2731,8 @@
         "pkgconf",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "bibtexconv",
@@ -2748,7 +2748,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "bigloo",
@@ -2770,8 +2770,8 @@
         "sqlite",
         "alsa-lib"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "bitchx",
@@ -2781,8 +2781,8 @@
       "dependencies": [
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "bkmr",
@@ -2797,7 +2797,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "boa",
@@ -2812,7 +2812,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "borgbackup",
@@ -2832,7 +2832,7 @@
       "openssl_formula_dependencies": [
         "python@3.14"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "bozohttpd",
@@ -2842,8 +2842,8 @@
       "dependencies": [
         "openssl@4"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "brpc",
@@ -2861,7 +2861,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "btcli",
@@ -2880,7 +2880,7 @@
         "python@3.14",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "btfs",
@@ -2900,7 +2900,7 @@
         "curl",
         "libtorrent-rasterbar"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "btpd",
@@ -2913,8 +2913,8 @@
         "libtool",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "bulk_extractor",
@@ -2929,8 +2929,8 @@
         "openssl@3",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "bulletty",
@@ -2945,7 +2945,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "burp",
@@ -2963,8 +2963,8 @@
         "acl",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "c2patool",
@@ -2979,7 +2979,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "cadaver",
@@ -2999,7 +2999,7 @@
       "openssl_formula_dependencies": [
         "neon"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "caf",
@@ -3013,7 +3013,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "cai",
@@ -3029,7 +3029,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "capnp",
@@ -3063,7 +3063,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "cargo-bundle",
@@ -3078,7 +3078,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "cargo-clone",
@@ -3094,7 +3094,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "cargo-crev",
@@ -3109,7 +3109,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "cargo-geiger",
@@ -3125,7 +3125,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "cargo-generate",
@@ -3144,7 +3144,7 @@
         "libssh2",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "cargo-instruments",
@@ -3158,7 +3158,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "cargo-outdated",
@@ -3176,7 +3176,7 @@
         "libgit2",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "cargo-public-api",
@@ -3191,7 +3191,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "cargo-udeps",
@@ -3211,7 +3211,7 @@
         "libssh2",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "cargo-update",
@@ -3231,7 +3231,7 @@
         "libssh2",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "cassandra-cpp-driver",
@@ -3248,7 +3248,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "ccache",
@@ -3276,7 +3276,7 @@
         "cpp-httplib",
         "hiredis"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "cfengine",
@@ -3290,8 +3290,8 @@
         "pcre2",
         "linux-pam"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "cgal",
@@ -3323,8 +3323,8 @@
         "openssl@3",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "chawan",
@@ -3342,7 +3342,7 @@
         "libssh2",
         "nim"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "citus",
@@ -3362,7 +3362,7 @@
         "postgresql@17",
         "postgresql@18"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "clamav",
@@ -3384,7 +3384,7 @@
         "rust",
         "yara"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "click",
@@ -3399,7 +3399,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "clickhouse-cpp",
@@ -3416,7 +3416,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "clickhouse-odbc",
@@ -3436,7 +3436,7 @@
         "folly",
         "poco"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "clipboard",
@@ -3456,7 +3456,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "cmusfm",
@@ -3469,8 +3469,8 @@
         "pkgconf",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "cnats",
@@ -3488,7 +3488,7 @@
         "cmake",
         "libevent"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "codanna",
@@ -3504,7 +3504,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "code-cli",
@@ -3520,7 +3520,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "code2prompt",
@@ -3536,7 +3536,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "codeberg-cli",
@@ -3552,7 +3552,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "codesnap",
@@ -3567,7 +3567,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "codex-acp",
@@ -3584,7 +3584,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "colmap",
@@ -3622,7 +3622,7 @@
         "cmake",
         "qtbase"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "condure",
@@ -3638,7 +3638,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "conserver",
@@ -3648,8 +3648,8 @@
       "dependencies": [
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "coturn",
@@ -3668,7 +3668,7 @@
         "libevent",
         "libpq"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "couchbase-shell",
@@ -3686,7 +3686,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "couchdb",
@@ -3707,7 +3707,7 @@
       "openssl_formula_dependencies": [
         "erlang"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "cpp-httplib",
@@ -3740,7 +3740,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "cpprestsdk",
@@ -3775,7 +3775,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "crates-tui",
@@ -3790,7 +3790,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "crunchy-cli",
@@ -3807,7 +3807,7 @@
         "ffmpeg",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "crystal",
@@ -3824,7 +3824,7 @@
         "pkgconf",
         "libffi"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "amber",
         "crystal-icr",
@@ -3852,7 +3852,7 @@
         "crystal",
         "libevent"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "csound",
@@ -3894,7 +3894,7 @@
         "libwebsockets",
         "python@3.14"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "ctpv",
@@ -3905,8 +3905,8 @@
         "libmagic",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "cups",
@@ -3918,8 +3918,8 @@
         "openssl@3",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "cvsync",
@@ -3930,8 +3930,8 @@
         "openssl@3",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "cyrus-sasl",
@@ -3963,7 +3963,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "davix",
@@ -4000,7 +4000,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "ddclient",
@@ -4013,8 +4013,8 @@
         "openssl@3",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "deadfinder",
@@ -4037,7 +4037,7 @@
         "crystal",
         "libevent"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "dezoomify-rs",
@@ -4052,7 +4052,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "dillo",
@@ -4069,8 +4069,8 @@
         "libx11",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "distill-cli",
@@ -4085,7 +4085,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "dmg2img",
@@ -4096,8 +4096,8 @@
         "openssl@3",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "dnsdist",
@@ -4120,7 +4120,7 @@
       "openssl_formula_dependencies": [
         "python@3.14"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "dnsperf",
@@ -4137,7 +4137,7 @@
       "openssl_formula_dependencies": [
         "ldns"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "dnsviz",
@@ -4158,7 +4158,7 @@
         "cryptography",
         "python@3.14"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "doge",
@@ -4174,7 +4174,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "dotnet@6",
@@ -4194,7 +4194,7 @@
         "cmake",
         "python@3.13"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "dotnet@8",
@@ -4214,7 +4214,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "dotnet@9",
@@ -4237,7 +4237,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "dovecot",
@@ -4259,7 +4259,7 @@
       "openssl_formula_dependencies": [
         "openldap"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "drill",
@@ -4274,7 +4274,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "drogon",
@@ -4293,7 +4293,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "duckscript",
@@ -4308,7 +4308,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "duo_unix",
@@ -4322,8 +4322,8 @@
         "openssl@3",
         "linux-pam"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "dura",
@@ -4339,7 +4339,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "dwarfs",
@@ -4371,7 +4371,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "dxpy",
@@ -4406,7 +4406,7 @@
         "python@3.14",
         "s2n"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "dynein",
@@ -4423,7 +4423,7 @@
         "cmake",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "dynomite",
@@ -4436,8 +4436,8 @@
         "libtool",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "easy-rsa",
@@ -4447,8 +4447,8 @@
       "dependencies": [
         "openssl@4"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "ecflow-ui",
@@ -4469,7 +4469,7 @@
         "cmake",
         "qtbase"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "echtvar",
@@ -4486,7 +4486,7 @@
         "cmake",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "edbrowse",
@@ -4505,7 +4505,7 @@
       "openssl_formula_dependencies": [
         "curl"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "efl",
@@ -4551,7 +4551,7 @@
         "gstreamer",
         "pulseaudio"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "ejabberd",
@@ -4573,7 +4573,7 @@
       "openssl_formula_dependencies": [
         "erlang"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "ekg2",
@@ -4590,8 +4590,8 @@
         "openssl@3",
         "readline"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "electric",
@@ -4607,7 +4607,7 @@
       "openssl_formula_dependencies": [
         "erlang"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "emmylua_ls",
@@ -4622,7 +4622,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "emqx",
@@ -4645,7 +4645,7 @@
         "erlang@26",
         "freetds"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "encfs",
@@ -4663,7 +4663,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "epic5",
@@ -4673,8 +4673,8 @@
       "dependencies": [
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "eralchemy",
@@ -4692,7 +4692,7 @@
         "libpq",
         "python@3.14"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "erlang@24",
@@ -4704,8 +4704,8 @@
         "unixodbc",
         "wxwidgets@3.2"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "erlang@25",
@@ -4718,8 +4718,8 @@
         "wxwidgets@3.2",
         "mesa-glu"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "erlang@26",
@@ -4733,7 +4733,7 @@
         "mesa-glu",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "emqx"
       ]
@@ -4750,8 +4750,8 @@
         "mesa-glu",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "et",
@@ -4770,7 +4770,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "etcd-cpp-apiv3",
@@ -4820,7 +4820,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "eureka",
@@ -4836,7 +4836,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "exim",
@@ -4847,8 +4847,8 @@
         "openssl@3",
         "pcre2"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "expert",
@@ -4865,7 +4865,7 @@
       "openssl_formula_dependencies": [
         "erlang"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "fastd",
@@ -4884,8 +4884,8 @@
         "libcap",
         "libmnl"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "fastnetmon",
@@ -4913,7 +4913,7 @@
         "hiredis",
         "mongo-c-driver"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "fb-client",
@@ -4929,7 +4929,7 @@
         "curl",
         "python@3.14"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "fbthrift",
@@ -4984,8 +4984,8 @@
         "zstd",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "feluda",
@@ -5001,7 +5001,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "fend",
@@ -5017,7 +5017,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "feroxbuster",
@@ -5032,7 +5032,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "fetchmail",
@@ -5043,8 +5043,8 @@
         "pkgconf",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "ffmpeg@2.8",
@@ -5082,7 +5082,7 @@
       "openssl_formula_dependencies": [
         "rtmpdump"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "ffsend",
@@ -5097,7 +5097,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "findomain",
@@ -5112,7 +5112,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "firefoxpwa",
@@ -5128,7 +5128,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "fizz",
@@ -5172,8 +5172,8 @@
         "libusb",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "flawz",
@@ -5188,7 +5188,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "flowrs",
@@ -5203,7 +5203,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "fluent-bit",
@@ -5223,7 +5223,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "fnox",
@@ -5241,7 +5241,7 @@
         "rust",
         "systemd"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "forbidden",
@@ -5262,7 +5262,7 @@
         "curl",
         "python@3.14"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "forgejo-cli",
@@ -5278,7 +5278,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "fossil",
@@ -5289,8 +5289,8 @@
         "openssl@3",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "fq",
@@ -5303,8 +5303,8 @@
         "openssl@3",
         "util-linux"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "freeradius-server",
@@ -5324,7 +5324,7 @@
       "openssl_formula_dependencies": [
         "python@3.14"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "freerdp",
@@ -5369,7 +5369,7 @@
         "pkcs11-helper",
         "systemd"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "freeswitch",
@@ -5409,7 +5409,7 @@
         "signalwire-client-c",
         "sofia-sip"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "fw",
@@ -5424,7 +5424,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "gambit-scheme",
@@ -5435,8 +5435,8 @@
         "openssl@3",
         "gcc"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "gcli",
@@ -5449,8 +5449,8 @@
         "lowdown",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "gdcm",
@@ -5474,7 +5474,7 @@
         "cmake",
         "python@3.14"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "gensio",
@@ -5501,7 +5501,7 @@
         "systemd",
         "tcl-tk"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "geph4",
@@ -5516,7 +5516,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "gerbil-scheme",
@@ -5529,8 +5529,8 @@
         "gcc",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "gerust",
@@ -5546,7 +5546,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "get_iplayer",
@@ -5561,7 +5561,7 @@
       "openssl_formula_dependencies": [
         "ffmpeg"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "getdns",
@@ -5594,8 +5594,8 @@
       "dependencies": [
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "ggshield",
@@ -5617,7 +5617,7 @@
         "python@3.14",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "git",
@@ -5631,8 +5631,8 @@
         "openssl@3",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "git-crypt",
@@ -5644,8 +5644,8 @@
         "docbook-xsl",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "git-series",
@@ -5664,7 +5664,7 @@
         "libssh2",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "git-trim",
@@ -5680,7 +5680,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "git-workspace",
@@ -5699,7 +5699,7 @@
         "libssh2",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "git-xet",
@@ -5716,7 +5716,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "gitlogue",
@@ -5732,7 +5732,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "gitnr",
@@ -5747,7 +5747,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "gittype",
@@ -5763,7 +5763,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "gitui",
@@ -5781,7 +5781,7 @@
         "cmake",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "gitversion",
@@ -5795,7 +5795,7 @@
       "openssl_formula_dependencies": [
         "dotnet"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "gkrellm",
@@ -5816,8 +5816,8 @@
         "libsm",
         "libx11"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "gloox",
@@ -5830,8 +5830,8 @@
         "openssl@3",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "gnupg-pkcs11-scd",
@@ -5852,7 +5852,7 @@
       "openssl_formula_dependencies": [
         "pkcs11-helper"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "gocryptfs",
@@ -5865,8 +5865,8 @@
         "libfuse",
         "openssl@4"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "got",
@@ -5889,7 +5889,7 @@
         "libevent",
         "libretls"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "gpac",
@@ -5921,7 +5921,7 @@
         "ffmpeg",
         "pulseaudio"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "grin-wallet",
@@ -5936,7 +5936,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "gsoap",
@@ -5948,8 +5948,8 @@
         "openssl@3",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "gtmess",
@@ -5962,8 +5962,8 @@
         "libtool",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "gurk",
@@ -5979,7 +5979,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "gwenhywfar",
@@ -6016,7 +6016,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "halide",
@@ -6040,7 +6040,7 @@
         "python@3.14",
         "wabt"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "haproxy",
@@ -6052,8 +6052,8 @@
         "pcre2",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "haproxy@2.8",
@@ -6065,8 +6065,8 @@
         "pcre2",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "hashcash",
@@ -6076,8 +6076,8 @@
       "dependencies": [
         "openssl@4"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "hcxtools",
@@ -6089,8 +6089,8 @@
         "openssl@3",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "heimdal",
@@ -6106,7 +6106,7 @@
       "openssl_formula_dependencies": [
         "openldap"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "helix-db",
@@ -6120,7 +6120,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "hf",
@@ -6140,7 +6140,7 @@
         "python@3.14",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "hf-mount",
@@ -6156,7 +6156,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "himalaya",
@@ -6171,7 +6171,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "hk",
@@ -6188,7 +6188,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "htslib",
@@ -6201,8 +6201,8 @@
         "openssl@3",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "http_load",
@@ -6212,8 +6212,8 @@
       "dependencies": [
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "httperf",
@@ -6226,8 +6226,8 @@
         "libtool",
         "openssl@4"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "httping",
@@ -6244,7 +6244,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "httrack",
@@ -6255,8 +6255,8 @@
         "openssl@4",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "hydra",
@@ -6274,7 +6274,7 @@
         "libssh",
         "mariadb-connector-c"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "hyper-mcp",
@@ -6289,7 +6289,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "i2pd",
@@ -6302,8 +6302,8 @@
         "openssl@3",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "iamb",
@@ -6318,7 +6318,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "icann-rdap",
@@ -6333,7 +6333,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "ice",
@@ -6345,8 +6345,8 @@
         "mcpp",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "icecast",
@@ -6359,8 +6359,8 @@
         "libvorbis",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "icp-cli",
@@ -6378,7 +6378,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "ike-scan",
@@ -6391,8 +6391,8 @@
         "libtool",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "imap-uw",
@@ -6403,8 +6403,8 @@
         "openssl@3",
         "linux-pam"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "imapfilter",
@@ -6416,8 +6416,8 @@
         "openssl@3",
         "pcre2"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "imapsync",
@@ -6429,8 +6429,8 @@
         "openssl@3",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "intelli-shell",
@@ -6446,7 +6446,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "intermodal",
@@ -6462,7 +6462,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "ios-webkit-debug-proxy",
@@ -6482,7 +6482,7 @@
       "openssl_formula_dependencies": [
         "libimobiledevice"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "iperf3",
@@ -6495,8 +6495,8 @@
         "libtool",
         "openssl@4"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "ipmitool",
@@ -6510,8 +6510,8 @@
         "openssl@3",
         "readline"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "ircd-hybrid",
@@ -6522,8 +6522,8 @@
         "jansson",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "ircii",
@@ -6533,8 +6533,8 @@
       "dependencies": [
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "ironclaw",
@@ -6549,7 +6549,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "irssi",
@@ -6565,8 +6565,8 @@
         "perl",
         "gettext"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "isync",
@@ -6580,8 +6580,8 @@
         "openssl@3",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "jikken",
@@ -6596,7 +6596,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "jimtcl",
@@ -6608,8 +6608,8 @@
         "readline",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "john-jumbo",
@@ -6622,8 +6622,8 @@
         "openssl@3",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "jose",
@@ -6638,8 +6638,8 @@
         "openssl@3",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "julia",
@@ -6674,7 +6674,7 @@
         "libgit2",
         "libssh2"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "jwt-hack",
@@ -6689,7 +6689,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "karchive",
@@ -6712,7 +6712,7 @@
         "cmake",
         "qtbase"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "kcov",
@@ -6730,7 +6730,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "kea",
@@ -6750,7 +6750,7 @@
       "openssl_formula_dependencies": [
         "python@3.14"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "keeper-commander",
@@ -6782,7 +6782,7 @@
         "rust",
         "srtp"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "keydb",
@@ -6796,8 +6796,8 @@
         "zstd",
         "util-linux"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "kmod",
@@ -6814,8 +6814,8 @@
         "zlib-ng-compat",
         "zstd"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "komac",
@@ -6831,7 +6831,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "kore",
@@ -6842,8 +6842,8 @@
         "pkgconf",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "kty",
@@ -6858,7 +6858,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "lakekeeper",
@@ -6874,7 +6874,7 @@
         "cmake",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "languagetool-rust",
@@ -6889,7 +6889,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "lanraragi",
@@ -6912,7 +6912,7 @@
         "node",
         "redis"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "lasso",
@@ -6931,7 +6931,7 @@
       "openssl_formula_dependencies": [
         "libxmlsec1"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "lastpass-cli",
@@ -6951,7 +6951,7 @@
         "cmake",
         "curl"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "lavinmq",
@@ -6972,7 +6972,7 @@
       "openssl_formula_dependencies": [
         "crystal"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "ldapvi",
@@ -6988,8 +6988,8 @@
         "readline",
         "gettext"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "ldid",
@@ -7000,8 +7000,8 @@
         "libplist",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "ldid-procursus",
@@ -7013,8 +7013,8 @@
         "libplist",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "ldns",
@@ -7049,7 +7049,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "leetup",
@@ -7064,7 +7064,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "legba",
@@ -7083,7 +7083,7 @@
         "rust",
         "samba"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "lftp",
@@ -7097,8 +7097,8 @@
         "gettext",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "libcoap",
@@ -7112,8 +7112,8 @@
         "pkgconf",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "libcouchbase",
@@ -7131,7 +7131,7 @@
         "cmake",
         "libevent"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "libdap",
@@ -7150,8 +7150,8 @@
         "util-linux",
         "gcc@12"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "libdpp",
@@ -7169,7 +7169,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "libetpan",
@@ -7184,8 +7184,8 @@
         "openssl@3",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "libewf",
@@ -7201,7 +7201,7 @@
         "openssl@3",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "sleuthkit"
       ]
@@ -7217,8 +7217,8 @@
         "libosip",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "libff",
@@ -7233,7 +7233,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "libfixbuf",
@@ -7246,7 +7246,7 @@
         "openssl@3",
         "gettext"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "silk"
       ]
@@ -7262,8 +7262,8 @@
         "openssl@3",
         "libusb-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "libgit2",
@@ -7316,7 +7316,7 @@
         "cmake",
         "libssh2"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "libgit2@1.8",
@@ -7334,7 +7334,7 @@
         "cmake",
         "libssh2"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "libimobiledevice",
@@ -7354,7 +7354,7 @@
         "openssl@3",
         "readline"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "ios-webkit-debug-proxy"
       ]
@@ -7374,7 +7374,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "libks",
@@ -7403,8 +7403,8 @@
       "dependencies": [
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "libmsquic",
@@ -7418,7 +7418,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "libngtcp2",
@@ -7429,7 +7429,7 @@
         "pkgconf",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "curl",
         "node",
@@ -7445,8 +7445,8 @@
       "dependencies": [
         "openssl@4"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "liboqs",
@@ -7462,7 +7462,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "libp11",
@@ -7476,8 +7476,8 @@
         "libtool",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "libpaho-mqtt",
@@ -7511,7 +7511,7 @@
       "openssl_formula_dependencies": [
         "krb5"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "libpq@17",
@@ -7531,7 +7531,7 @@
       "openssl_formula_dependencies": [
         "krb5"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "libpulsar",
@@ -7551,7 +7551,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "libre",
@@ -7589,7 +7589,7 @@
         "cmake",
         "systemd"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "libretls",
@@ -7599,7 +7599,7 @@
       "dependencies": [
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "got",
         "rpki-client"
@@ -7618,7 +7618,7 @@
         "speex",
         "theora"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "gstreamer"
       ]
@@ -7635,8 +7635,8 @@
         "libtool",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "libstrophe",
@@ -7651,8 +7651,8 @@
         "openssl@3",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "libtins",
@@ -7666,7 +7666,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "libtorrent-rakshasa",
@@ -7681,8 +7681,8 @@
         "openssl@3",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "libtorrent-rasterbar",
@@ -7717,7 +7717,7 @@
         "pkgconf",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "swtpm"
       ]
@@ -7735,8 +7735,8 @@
         "openssl@3",
         "wandio"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "libu2f-server",
@@ -7751,8 +7751,8 @@
         "json-c",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "libvncserver",
@@ -7806,7 +7806,7 @@
         "libxml2",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "aqbanking",
         "lasso",
@@ -7856,7 +7856,7 @@
         "cmake",
         "ruby"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "lighthouse",
@@ -7875,7 +7875,7 @@
         "cmake",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "lighttpd",
@@ -7895,7 +7895,7 @@
       "openssl_formula_dependencies": [
         "openldap"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "links",
@@ -7907,8 +7907,8 @@
         "openssl@4",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "llama.cpp",
@@ -7923,7 +7923,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "llgo",
@@ -7941,8 +7941,8 @@
         "libunwind",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "localstack",
@@ -7963,7 +7963,7 @@
         "python@3.14",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "luvit",
@@ -7981,7 +7981,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "lychee",
@@ -7996,7 +7996,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "lynx",
@@ -8008,8 +8008,8 @@
         "openssl@4",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "magika",
@@ -8024,7 +8024,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "mago",
@@ -8039,7 +8039,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "mailcatcher",
@@ -8058,7 +8058,7 @@
         "node",
         "ruby"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "makepkg",
@@ -8075,8 +8075,8 @@
         "openssl@3",
         "gettext"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "manticoresearch",
@@ -8104,7 +8104,7 @@
         "libpq",
         "mariadb-connector-c"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "mapnik",
@@ -8138,7 +8138,7 @@
         "gdal",
         "libpq"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "mariadb",
@@ -8164,7 +8164,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "mariadb-connector-odbc",
@@ -8181,7 +8181,7 @@
         "cmake",
         "mariadb-connector-c"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "mariadb@10.11",
@@ -8207,7 +8207,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "mariadb@10.5",
@@ -8232,7 +8232,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "mariadb@10.6",
@@ -8257,7 +8257,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "mariadb@11.4",
@@ -8283,7 +8283,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "mariadb@11.8",
@@ -8309,7 +8309,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "mavsdk",
@@ -8340,7 +8340,7 @@
         "python@3.14",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "md5sha1sum",
@@ -8350,8 +8350,8 @@
       "dependencies": [
         "openssl@4"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "mdcat",
@@ -8367,7 +8367,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "megatools",
@@ -8382,8 +8382,8 @@
         "openssl@3",
         "gettext"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "meli",
@@ -8398,7 +8398,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "memcached",
@@ -8414,7 +8414,7 @@
       "openssl_formula_dependencies": [
         "libevent"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "memtier_benchmark",
@@ -8433,7 +8433,7 @@
       "openssl_formula_dependencies": [
         "libevent"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "mender-artifact",
@@ -8448,8 +8448,8 @@
         "mtools",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "mender-cli",
@@ -8462,8 +8462,8 @@
         "openssl@3",
         "xz"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "mfterm",
@@ -8477,8 +8477,8 @@
         "openssl@3",
         "readline"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "micromamba",
@@ -8509,7 +8509,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "midnight-commander",
@@ -8531,7 +8531,7 @@
       "openssl_formula_dependencies": [
         "libssh2"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "min-lang",
@@ -8546,7 +8546,7 @@
       "openssl_formula_dependencies": [
         "nim"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "minimal-racket",
@@ -8557,8 +8557,8 @@
         "openssl@3",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "minizip-ng",
@@ -8597,7 +8597,7 @@
         "cmake",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "mktorrent",
@@ -8607,8 +8607,8 @@
       "dependencies": [
         "openssl@4"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "mlc",
@@ -8623,7 +8623,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "modsurfer",
@@ -8638,7 +8638,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "monero",
@@ -8662,7 +8662,7 @@
         "cmake",
         "unbound"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "monetdb",
@@ -8683,7 +8683,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "mongo-c-driver",
@@ -8722,7 +8722,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "monit",
@@ -8734,8 +8734,8 @@
         "linux-pam",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "monitoring-plugins",
@@ -8750,7 +8750,7 @@
       "openssl_formula_dependencies": [
         "bind"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "monkeysphere",
@@ -8766,8 +8766,8 @@
         "libgpg-error",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "monolith",
@@ -8782,7 +8782,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "moon",
@@ -8799,7 +8799,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "mosh",
@@ -8815,8 +8815,8 @@
         "openssl@3",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "mosquitto",
@@ -8835,7 +8835,7 @@
         "cmake",
         "libwebsockets"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "mupdf",
@@ -8867,7 +8867,7 @@
       "openssl_formula_dependencies": [
         "python@3.14"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "musikcube",
@@ -8902,7 +8902,7 @@
         "pulseaudio",
         "systemd"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "mutt",
@@ -8922,8 +8922,8 @@
         "libunistring",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "mvfst",
@@ -8969,7 +8969,7 @@
         "cmake",
         "mariadb-connector-c"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "mysql",
@@ -8994,7 +8994,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "mysql-client",
@@ -9018,7 +9018,7 @@
         "krb5",
         "libfido2"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "mysql-client@8.0",
@@ -9041,7 +9041,7 @@
         "libevent",
         "libfido2"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "mysql-client@8.4",
@@ -9064,7 +9064,7 @@
         "libevent",
         "libfido2"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "mysql-connector-c++",
@@ -9082,7 +9082,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "mysql@8.0",
@@ -9110,7 +9110,7 @@
         "libevent",
         "libfido2"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "mysql@8.4",
@@ -9135,7 +9135,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "nagios",
@@ -9148,8 +9148,8 @@
         "openssl@4",
         "jpeg-turbo"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "nagios-plugins",
@@ -9177,8 +9177,8 @@
         "openssl@3",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "ncspot",
@@ -9195,7 +9195,7 @@
         "pulseaudio",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "nemu",
@@ -9215,7 +9215,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "neomutt",
@@ -9243,7 +9243,7 @@
       "openssl_formula_dependencies": [
         "tcl-tk"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "neon",
@@ -9256,7 +9256,7 @@
         "openssl@3",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "cadaver"
       ]
@@ -9272,7 +9272,7 @@
         "automake",
         "libtool"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "php",
         "php@8.4",
@@ -9317,7 +9317,7 @@
         "rust",
         "systemd"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "nghttp2",
@@ -9337,8 +9337,8 @@
         "llvm",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "nginx",
@@ -9350,7 +9350,7 @@
         "pcre2",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "passenger"
       ]
@@ -9365,8 +9365,8 @@
         "openssl@3",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "nikto",
@@ -9377,8 +9377,8 @@
         "zlib-ng-compat",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "nim",
@@ -9389,7 +9389,7 @@
         "help2man",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "arturo",
         "chawan",
@@ -9413,7 +9413,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "nmap",
@@ -9434,7 +9434,7 @@
         "libssh2",
         "python@3.14"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "nmh",
@@ -9452,7 +9452,7 @@
       "openssl_formula_dependencies": [
         "w3m"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "node-build",
@@ -9464,8 +9464,8 @@
         "openssl@3",
         "pkgconf"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "node@18",
@@ -9487,7 +9487,7 @@
       "openssl_formula_dependencies": [
         "python@3.13"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "node@20",
@@ -9509,7 +9509,7 @@
       "openssl_formula_dependencies": [
         "python@3.13"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "node@22",
@@ -9539,7 +9539,7 @@
         "libngtcp2",
         "python@3.13"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "node@24",
@@ -9592,7 +9592,7 @@
         "crystal",
         "libevent"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "nopoll",
@@ -9602,8 +9602,8 @@
       "dependencies": [
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "noseyparker",
@@ -9621,7 +9621,7 @@
         "cmake",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "nrpe",
@@ -9635,7 +9635,7 @@
       "openssl_formula_dependencies": [
         "nagios-plugins"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "nsd",
@@ -9650,7 +9650,7 @@
       "openssl_formula_dependencies": [
         "libevent"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "ntopng",
@@ -9682,7 +9682,7 @@
         "hiredis",
         "mariadb-connector-c"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "ntp",
@@ -9692,8 +9692,8 @@
       "dependencies": [
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "nuraft",
@@ -9732,7 +9732,7 @@
         "libgit2",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "nut",
@@ -9753,7 +9753,7 @@
       "openssl_formula_dependencies": [
         "systemd"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "nvchecker",
@@ -9769,7 +9769,7 @@
         "curl",
         "python@3.14"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "nzbget",
@@ -9786,7 +9786,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "oath-toolkit",
@@ -9806,7 +9806,7 @@
       "openssl_formula_dependencies": [
         "libxmlsec1"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "objfw",
@@ -9820,8 +9820,8 @@
         "llvm",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "observerward",
@@ -9837,7 +9837,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "octobuild",
@@ -9852,7 +9852,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "oha",
@@ -9869,7 +9869,7 @@
         "cmake",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "omnara",
@@ -9892,7 +9892,7 @@
         "python@3.14",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "omniorb",
@@ -9909,7 +9909,7 @@
       "openssl_formula_dependencies": [
         "python@3.14"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "openapi-tui",
@@ -9924,7 +9924,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "openfortivpn",
@@ -9937,8 +9937,8 @@
         "pkgconf",
         "openssl@4"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "openiked",
@@ -9954,7 +9954,7 @@
         "cmake",
         "libevent"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "openrtsp",
@@ -9964,8 +9964,8 @@
       "dependencies": [
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "opensaml",
@@ -10004,8 +10004,8 @@
         "readline",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "openssh",
@@ -10024,7 +10024,7 @@
         "ldns",
         "libfido2"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "opentelemetry-cpp",
@@ -10047,7 +10047,7 @@
         "cmake",
         "grpc"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "openvpn",
@@ -10068,7 +10068,7 @@
       "openssl_formula_dependencies": [
         "pkcs11-helper"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "ophcrack",
@@ -10078,8 +10078,8 @@
       "dependencies": [
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "ord",
@@ -10094,7 +10094,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "orogene",
@@ -10109,7 +10109,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "ortp",
@@ -10124,7 +10124,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "osslsigncode",
@@ -10139,7 +10139,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "oterm",
@@ -10164,7 +10164,7 @@
         "python@3.14",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "overdrive",
@@ -10175,8 +10175,8 @@
         "openssl@3",
         "util-linux"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "oxen",
@@ -10194,7 +10194,7 @@
         "cmake",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "pam-u2f",
@@ -10214,7 +10214,7 @@
       "openssl_formula_dependencies": [
         "libfido2"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "passenger",
@@ -10235,7 +10235,7 @@
         "httpd",
         "nginx"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "pay",
@@ -10254,7 +10254,7 @@
         "node",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "pdal",
@@ -10291,7 +10291,7 @@
         "libpq",
         "tiledb"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "pdfalyzer",
@@ -10306,7 +10306,7 @@
       "openssl_formula_dependencies": [
         "python@3.14"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "pdfly",
@@ -10329,7 +10329,7 @@
         "python@3.14",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "pdns",
@@ -10347,8 +10347,8 @@
         "openssl@3",
         "sqlite"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "pdnsrec",
@@ -10366,7 +10366,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "perbase",
@@ -10384,7 +10384,7 @@
         "cmake",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "percona-server",
@@ -10412,7 +10412,7 @@
         "libfido2",
         "openldap"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "percona-server@8.0",
@@ -10442,7 +10442,7 @@
         "libfido2",
         "openldap"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "percona-xtrabackup",
@@ -10469,7 +10469,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "percona-xtrabackup@8.0",
@@ -10499,7 +10499,7 @@
         "cmake",
         "libevent"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "pgbackrest",
@@ -10524,7 +10524,7 @@
         "libpq",
         "libssh2"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "pgbouncer",
@@ -10543,7 +10543,7 @@
       "openssl_formula_dependencies": [
         "libevent"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "pgloader",
@@ -10560,7 +10560,7 @@
       "openssl_formula_dependencies": [
         "freetds"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "pgrx",
@@ -10576,7 +10576,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "php@8.1",
@@ -10620,7 +10620,7 @@
         "libzip",
         "openldap"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "php@8.2",
@@ -10664,7 +10664,7 @@
         "libzip",
         "openldap"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "php@8.3",
@@ -10708,7 +10708,7 @@
         "libzip",
         "openldap"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "php@8.4",
@@ -10751,7 +10751,7 @@
         "net-snmp",
         "openldap"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "picoruby",
@@ -10765,7 +10765,7 @@
       "openssl_formula_dependencies": [
         "ruby"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "pipewire",
@@ -10792,7 +10792,7 @@
         "pulseaudio",
         "systemd"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "pistache",
@@ -10819,7 +10819,7 @@
         "cpp-httplib",
         "libevent"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "pixi",
@@ -10837,7 +10837,7 @@
         "cmake",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "pixi-pack",
@@ -10854,7 +10854,7 @@
         "cmake",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "pixiewps",
@@ -10864,8 +10864,8 @@
       "dependencies": [
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "pjproject",
@@ -10875,8 +10875,8 @@
       "dependencies": [
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "pkcs11-helper",
@@ -10890,7 +10890,7 @@
         "pkgconf",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "freerdp",
         "gnupg-pkcs11-scd",
@@ -10907,8 +10907,8 @@
         "pkgconf",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "pkgx",
@@ -10922,7 +10922,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "pocket-tts",
@@ -10946,7 +10946,7 @@
         "python@3.14",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "poco",
@@ -10988,7 +10988,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "postgresql@12",
@@ -11007,7 +11007,7 @@
       "openssl_formula_dependencies": [
         "krb5"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "postgresql@13",
@@ -11027,7 +11027,7 @@
       "openssl_formula_dependencies": [
         "krb5"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "postgresql@14",
@@ -11048,7 +11048,7 @@
       "openssl_formula_dependencies": [
         "krb5"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "postgresql@15",
@@ -11071,7 +11071,7 @@
       "openssl_formula_dependencies": [
         "krb5"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "postgresql@16",
@@ -11094,7 +11094,7 @@
       "openssl_formula_dependencies": [
         "krb5"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "powershell",
@@ -11108,7 +11108,7 @@
       "openssl_formula_dependencies": [
         "dotnet"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "projectable",
@@ -11128,7 +11128,7 @@
         "libssh2",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "proto",
@@ -11144,7 +11144,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "prowler",
@@ -11171,7 +11171,7 @@
         "python@3.12",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "proxelar",
@@ -11186,7 +11186,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "proxygen",
@@ -11216,7 +11216,7 @@
         "mvfst",
         "wangle"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "proxytunnel",
@@ -11228,8 +11228,8 @@
         "xmlto",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "prr",
@@ -11249,7 +11249,7 @@
         "libssh2",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "prs",
@@ -11266,7 +11266,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "pulledpork",
@@ -11276,8 +11276,8 @@
       "dependencies": [
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "pure-ftpd",
@@ -11289,8 +11289,8 @@
         "openssl@3",
         "linux-pam"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "pushpin",
@@ -11313,7 +11313,7 @@
         "rust",
         "zurl"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "pwsafe",
@@ -11326,8 +11326,8 @@
         "openssl@4",
         "readline"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "pyenv",
@@ -11341,8 +11341,8 @@
         "readline",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "pypy",
@@ -11383,7 +11383,7 @@
         "pypy",
         "tcl-tk@8"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "pypy3.9",
@@ -11403,7 +11403,7 @@
         "pypy",
         "tcl-tk@8"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "python-freethreading",
@@ -11422,8 +11422,8 @@
         "libtirpc",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "python@3.10",
@@ -11442,8 +11442,8 @@
         "libtirpc",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "python@3.9",
@@ -11462,8 +11462,8 @@
         "libtirpc",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "qca",
@@ -11490,7 +11490,7 @@
         "pkcs11-helper",
         "qtbase"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "qpdf",
@@ -11524,7 +11524,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "qxmpp",
@@ -11542,7 +11542,7 @@
         "cmake",
         "qtbase"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "rabbitmq-c",
@@ -11575,7 +11575,7 @@
       "openssl_formula_dependencies": [
         "ruby"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "rakudo-star",
@@ -11593,8 +11593,8 @@
         "bash",
         "libuv"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "rathole",
@@ -11609,7 +11609,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "rattler-build",
@@ -11626,7 +11626,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "rattler-index",
@@ -11641,7 +11641,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "rawdog",
@@ -11662,7 +11662,7 @@
         "python@3.14",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "readpe",
@@ -11672,8 +11672,8 @@
       "dependencies": [
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "recc",
@@ -11699,7 +11699,7 @@
         "cmake",
         "grpc"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "redict",
@@ -11709,8 +11709,8 @@
       "dependencies": [
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "redis",
@@ -11720,7 +11720,7 @@
       "dependencies": [
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "lanraragi"
       ]
@@ -11733,8 +11733,8 @@
       "dependencies": [
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "redis@8.2",
@@ -11744,8 +11744,8 @@
       "dependencies": [
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "redwax-tool",
@@ -11769,7 +11769,7 @@
         "ldns",
         "unbound"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "reshape",
@@ -11784,7 +11784,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "retdec",
@@ -11805,7 +11805,7 @@
         "cmake",
         "python@3.14"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "rethinkdb",
@@ -11817,8 +11817,8 @@
         "openssl@3",
         "protobuf@21"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "riemann-client",
@@ -11834,7 +11834,7 @@
         "openssl@3",
         "protobuf-c"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "syslog-ng"
       ]
@@ -11854,7 +11854,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "river",
@@ -11871,7 +11871,7 @@
         "cmake",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "rizin",
@@ -11899,7 +11899,7 @@
         "cmake",
         "libzip"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "rojo",
@@ -11914,7 +11914,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "root",
@@ -11966,7 +11966,7 @@
         "python@3.14",
         "xrootd"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "rover",
@@ -11981,7 +11981,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "rpki-client",
@@ -11999,7 +11999,7 @@
         "libretls",
         "rsync"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "rpmspectool",
@@ -12016,7 +12016,7 @@
         "curl",
         "python@3.14"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "rqbit",
@@ -12033,7 +12033,7 @@
         "node",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "rsql",
@@ -12048,7 +12048,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "rsync",
@@ -12065,7 +12065,7 @@
         "zstd",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "rpki-client"
       ]
@@ -12085,7 +12085,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "rtl_433",
@@ -12102,7 +12102,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "rtmpdump",
@@ -12113,7 +12113,7 @@
         "openssl@3",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "ffmpeg@2.8",
         "gstreamer"
@@ -12131,8 +12131,8 @@
         "pkgconf",
         "readline"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "ruby@3.1",
@@ -12146,8 +12146,8 @@
         "readline",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "ruby@3.2",
@@ -12167,7 +12167,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "ruby@3.3",
@@ -12185,7 +12185,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "ruby@3.4",
@@ -12203,7 +12203,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "rustup",
@@ -12236,7 +12236,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "s-nail",
@@ -12247,8 +12247,8 @@
         "libidn2",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "s2geometry",
@@ -12263,7 +12263,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "s2n",
@@ -12298,7 +12298,7 @@
       "openssl_formula_dependencies": [
         "curl"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "sagittarius-scheme",
@@ -12316,7 +12316,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "samba",
@@ -12376,7 +12376,7 @@
         "python@3.12",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "sblim-sfcc",
@@ -12389,8 +12389,8 @@
         "libtool",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "scamper",
@@ -12403,8 +12403,8 @@
         "xz",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "sccache",
@@ -12419,7 +12419,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "screenpipe",
@@ -12443,7 +12443,7 @@
         "ffmpeg",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "scryer-prolog",
@@ -12458,7 +12458,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "scrypt",
@@ -12470,8 +12470,8 @@
         "automake",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "sem-cli",
@@ -12489,7 +12489,7 @@
         "libgit2",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "sentry-cli",
@@ -12506,7 +12506,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "sequoia-chameleon-gnupg",
@@ -12523,7 +12523,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "sequoia-sq",
@@ -12542,7 +12542,7 @@
         "capnp",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "sgr",
@@ -12563,7 +12563,7 @@
         "libpq",
         "python@3.14"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "sh4d0wup",
@@ -12582,7 +12582,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "shairport-sync",
@@ -12604,7 +12604,7 @@
       "openssl_formula_dependencies": [
         "pulseaudio"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "sheldon",
@@ -12623,7 +12623,7 @@
         "libssh2",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "shellinabox",
@@ -12637,8 +12637,8 @@
         "openssl@3",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "shibboleth-sp",
@@ -12666,7 +12666,7 @@
         "xml-security-c",
         "xml-tooling-c"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "siege",
@@ -12677,8 +12677,8 @@
         "openssl@3",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "signalwire-client-c",
@@ -12718,7 +12718,7 @@
         "python@3.14",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "sile",
@@ -12745,7 +12745,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "silk",
@@ -12764,7 +12764,7 @@
       "openssl_formula_dependencies": [
         "libfixbuf"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "sipp",
@@ -12778,7 +12778,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "sipsak",
@@ -12788,8 +12788,8 @@
       "dependencies": [
         "openssl@4"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "sleuthkit",
@@ -12811,7 +12811,7 @@
         "libewf",
         "libpq"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "slowhttptest",
@@ -12821,8 +12821,8 @@
       "dependencies": [
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "slrn",
@@ -12833,8 +12833,8 @@
         "openssl@3",
         "s-lang"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "smartdns",
@@ -12849,7 +12849,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "snapcast",
@@ -12872,7 +12872,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "sngrep",
@@ -12887,8 +12887,8 @@
         "openssl@3",
         "libgcrypt"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "sniffnet",
@@ -12905,7 +12905,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "snobol4",
@@ -12917,8 +12917,8 @@
         "readline",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "snort",
@@ -12945,7 +12945,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "snownews",
@@ -12958,8 +12958,8 @@
         "ncurses",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "so",
@@ -12974,7 +12974,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "socat",
@@ -12984,7 +12984,7 @@
       "dependencies": [
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "swtpm"
       ]
@@ -13004,7 +13004,7 @@
         "gettext",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "freeswitch"
       ]
@@ -13021,8 +13021,8 @@
         "pkgconf",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "solana",
@@ -13040,7 +13040,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "spice-gtk",
@@ -13088,7 +13088,7 @@
         "gstreamer",
         "python@3.14"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "spice-server",
@@ -13113,7 +13113,7 @@
         "gstreamer",
         "systemd"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "spiped",
@@ -13123,8 +13123,8 @@
       "dependencies": [
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "spotify_player",
@@ -13141,7 +13141,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "spotifyd",
@@ -13161,7 +13161,7 @@
         "pulseaudio",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "spr",
@@ -13177,7 +13177,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "sprocket",
@@ -13193,7 +13193,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "sproxy",
@@ -13207,8 +13207,8 @@
         "openssl@3",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "sqlcipher",
@@ -13219,8 +13219,8 @@
         "openssl@4",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "sqlx-cli",
@@ -13235,7 +13235,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "squid",
@@ -13248,8 +13248,8 @@
         "libtool",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "srtp",
@@ -13260,7 +13260,7 @@
         "pkgconf",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "gstreamer",
         "keeper-commander"
@@ -13281,7 +13281,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "sslscan",
@@ -13291,8 +13291,8 @@
       "dependencies": [
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "sslsplit",
@@ -13310,7 +13310,7 @@
       "openssl_formula_dependencies": [
         "libevent"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "sstp-client",
@@ -13325,7 +13325,7 @@
       "openssl_formula_dependencies": [
         "libevent"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "stellar-cli",
@@ -13343,7 +13343,7 @@
         "rust",
         "systemd"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "strongswan",
@@ -13359,8 +13359,8 @@
         "pkgconf",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "stubby",
@@ -13381,7 +13381,7 @@
         "getdns",
         "unbound"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "stunnel",
@@ -13391,8 +13391,8 @@
       "dependencies": [
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "stuntman",
@@ -13403,8 +13403,8 @@
         "boost",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "superseedr",
@@ -13419,7 +13419,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "surfer",
@@ -13434,7 +13434,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "swi-prolog",
@@ -13456,7 +13456,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "swtpm",
@@ -13485,7 +13485,7 @@
         "libtpms",
         "socat"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "sylpheed",
@@ -13507,8 +13507,8 @@
         "libassuan",
         "libgpg-error"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "synergy-core",
@@ -13536,7 +13536,7 @@
         "cmake",
         "qtbase"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "syslog-ng",
@@ -13581,7 +13581,7 @@
         "rabbitmq-c",
         "riemann-client"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "tabiew",
@@ -13596,7 +13596,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "tarantool",
@@ -13615,7 +13615,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "tarsnap",
@@ -13629,8 +13629,8 @@
         "e2fsprogs",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "tcpdump",
@@ -13641,8 +13641,8 @@
         "libpcap",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "tcpflow",
@@ -13657,8 +13657,8 @@
         "openssl@4",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "tdlib",
@@ -13675,7 +13675,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "tectonic",
@@ -13697,7 +13697,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "teleport",
@@ -13721,7 +13721,7 @@
         "rust",
         "rustup"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "teller",
@@ -13737,7 +13737,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "termscp",
@@ -13756,7 +13756,7 @@
         "rust",
         "samba"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "termusic",
@@ -13775,7 +13775,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "teslamate",
@@ -13793,7 +13793,7 @@
         "erlang",
         "node"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "testssl",
@@ -13804,8 +13804,8 @@
         "openssl@4",
         "util-linux"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "texlive",
@@ -13855,7 +13855,7 @@
         "python@3.14",
         "tcl-tk"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "text-embeddings-inference",
@@ -13870,7 +13870,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "thors-anvil",
@@ -13891,7 +13891,7 @@
         "cmake",
         "libevent"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "thrift",
@@ -13908,7 +13908,7 @@
         "openssl@3",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "apache-arrow"
       ]
@@ -13947,8 +13947,8 @@
         "openssl@3",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "tiny",
@@ -13964,7 +13964,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "toktop",
@@ -13979,7 +13979,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "tomcat-native",
@@ -13991,8 +13991,8 @@
         "openjdk",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "toml-bombadil",
@@ -14008,7 +14008,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "tor",
@@ -14025,7 +14025,7 @@
       "openssl_formula_dependencies": [
         "libevent"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "trafficserver",
@@ -14056,7 +14056,7 @@
         "cmake",
         "nuraft"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "transmission-cli",
@@ -14076,7 +14076,7 @@
         "cmake",
         "libevent"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "trunk",
@@ -14091,7 +14091,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "tsduck",
@@ -14116,7 +14116,7 @@
         "qpdf",
         "srt"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "tt",
@@ -14130,8 +14130,8 @@
         "openssl@3",
         "bash-completion"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "ttyd",
@@ -14152,7 +14152,7 @@
         "libevent",
         "libwebsockets"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "tuisky",
@@ -14167,7 +14167,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "typst",
@@ -14182,7 +14182,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "u-boot-tools",
@@ -14193,8 +14193,8 @@
         "coreutils",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "uftp",
@@ -14204,8 +14204,8 @@
       "dependencies": [
         "openssl@4"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "unshield",
@@ -14220,7 +14220,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "urweb",
@@ -14236,8 +14236,8 @@
         "icu4c@78",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "urx",
@@ -14252,7 +14252,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "uuu",
@@ -14273,7 +14273,7 @@
         "cmake",
         "libzip"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "uwsgi",
@@ -14292,7 +14292,7 @@
       "openssl_formula_dependencies": [
         "python@3.14"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "valkey",
@@ -14302,8 +14302,8 @@
       "dependencies": [
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "varnish",
@@ -14318,8 +14318,8 @@
         "openssl@3",
         "pcre2"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "vineyard",
@@ -14352,7 +14352,7 @@
         "etcd-cpp-apiv3",
         "python@3.14"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "virtuoso",
@@ -14369,8 +14369,8 @@
         "xz",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "vroom",
@@ -14389,7 +14389,7 @@
       "openssl_formula_dependencies": [
         "asio"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "vsd",
@@ -14407,7 +14407,7 @@
         "ffmpeg",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "vtcode",
@@ -14424,7 +14424,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "w3m",
@@ -14438,7 +14438,7 @@
         "openssl@3",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "apt",
         "nmh"
@@ -14474,7 +14474,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "wangle",
@@ -14516,7 +14516,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "watchman",
@@ -14554,7 +14554,7 @@
         "python@3.14",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "wdc",
@@ -14570,7 +14570,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "weave",
@@ -14588,7 +14588,7 @@
         "libgit2",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "weaviate-cli",
@@ -14614,7 +14614,7 @@
         "cryptography",
         "python@3.14"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "webfs",
@@ -14628,7 +14628,7 @@
       "openssl_formula_dependencies": [
         "httpd"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "websocat",
@@ -14643,7 +14643,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "wownero",
@@ -14668,7 +14668,7 @@
         "cmake",
         "unbound"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "wrk",
@@ -14679,8 +14679,8 @@
         "luajit",
         "openssl@4"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "wrkflw",
@@ -14695,7 +14695,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "wthrr",
@@ -14710,7 +14710,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "wuppiefuzz",
@@ -14728,7 +14728,7 @@
         "cmake",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "x-cli",
@@ -14743,7 +14743,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "x11vnc",
@@ -14760,7 +14760,7 @@
       "openssl_formula_dependencies": [
         "libvncserver"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "x3270",
@@ -14775,7 +14775,7 @@
       "openssl_formula_dependencies": [
         "tcl-tk@8"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "xaric",
@@ -14785,8 +14785,8 @@
       "dependencies": [
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "xidel",
@@ -14797,8 +14797,8 @@
         "fpc",
         "openssl@4"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "xml-security-c",
@@ -14810,7 +14810,7 @@
         "openssl@3",
         "xerces-c"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "opensaml",
         "shibboleth-sp",
@@ -14850,8 +14850,8 @@
         "pkgconf",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "xmrig",
@@ -14867,7 +14867,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "xrootd",
@@ -14912,7 +14912,7 @@
       "openssl_formula_dependencies": [
         "libssh"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "yara",
@@ -14929,7 +14929,7 @@
         "openssl@3",
         "protobuf-c"
       ],
-      "openssl_formula_dependencies": null,
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "clamav"
       ]
@@ -14948,7 +14948,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "yozefu",
@@ -14965,7 +14965,7 @@
         "cmake",
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "yubico-piv-tool",
@@ -14984,7 +14984,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "zabbix",
@@ -14996,8 +14996,8 @@
         "openssl@3",
         "pcre2"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "zchunk",
@@ -15012,8 +15012,8 @@
         "zstd",
         "argp-standalone"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "zeek",
@@ -15039,7 +15039,7 @@
         "node@24",
         "python@3.14"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "zellij",
@@ -15054,7 +15054,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "znc",
@@ -15076,7 +15076,7 @@
         "cmake",
         "python@3.14"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "zola",
@@ -15092,7 +15092,7 @@
       "openssl_formula_dependencies": [
         "rust"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "zookeeper",
@@ -15109,8 +15109,8 @@
         "openjdk",
         "openssl@3"
       ],
-      "openssl_formula_dependencies": null,
-      "openssl_formula_dependents": null
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": []
     },
     {
       "name": "zsign",
@@ -15125,7 +15125,7 @@
       "openssl_formula_dependencies": [
         "minizip-ng"
       ],
-      "openssl_formula_dependents": null
+      "openssl_formula_dependents": []
     },
     {
       "name": "zurl",

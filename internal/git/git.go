@@ -93,6 +93,12 @@ func Diff(dir, path string) (string, error) {
 	return run(dir, "diff", "--", path)
 }
 
+// ShowFile returns the content of a file at a specific git ref (e.g. "origin/main:Formula/w/wget.rb").
+// Used for base-accurate dry-runs without switching the checkout.
+func ShowFile(dir, ref, path string) (string, error) {
+	return run(dir, "show", ref+":"+path)
+}
+
 // DiffNoIndex compares two files outside any git repo context.
 func DiffNoIndex(before, after string) string {
 	cmd := exec.Command("git", "diff", "--no-index", "--", before, after)

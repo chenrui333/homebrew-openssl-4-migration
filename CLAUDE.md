@@ -84,7 +84,7 @@ cd /path/to/this/repo
 make dep-tree
 make status
 git add data/dep_tree.json TRACKING.md
-git commit -m "data: sync dep_tree to homebrew-core $(git -C /opt/homebrew/Library/Taps/homebrew/homebrew-core rev-parse --short HEAD)"
+git commit -m "data: sync dep_tree to homebrew-core $(git -C $HOMEBREW_CORE rev-parse --short HEAD)"
 git push origin main
 ```
 

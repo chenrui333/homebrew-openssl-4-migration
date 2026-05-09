@@ -56,38 +56,44 @@ func Run(formulaName string, opts Options) error {
 	branchName := "rchen.openssl4." + formulaName
 	title := formulaName + ": use openssl@4"
 
-	// Locate the formula file.
+	// Locate the formula path to get its repo-relative path for display and git show.
 	formulaPath, err := formula.Locate(opts.HomebrewCore, formulaName, entry.Path)
 	if err != nil {
 		return err
 	}
-
-	original, err := os.ReadFile(formulaPath)
-	if err != nil {
-		return fmt.Errorf("reading formula: %w", err)
-	}
-
-	migrated, result := formula.MigrateContents(string(original))
-	switch result {
-	case formula.AlreadyMigrated:
-		fmt.Printf("%s already depends on openssl@4; nothing to do.\n", formulaName)
-		return nil
-	case formula.NoDependency:
-		return fmt.Errorf("%s does not depend on openssl@3", formulaName)
-	}
+	rel, _ := filepath.Rel(opts.HomebrewCore, formulaPath)
 
 	fmt.Printf("Formula: %s\n", formulaName)
-	rel, _ := filepath.Rel(opts.HomebrewCore, formulaPath)
 	fmt.Printf("Path:    %s\n", rel)
 	fmt.Printf("Base:    %s\n", baseBranch)
 	fmt.Printf("Branch:  %s\n", branchName)
 
 	if opts.DryRun {
-		printDiff(string(original), migrated, formulaName)
+		// Read from origin/<base> for a base-accurate diff:
+		// avoids false AlreadyMigrated when the current checkout is already on a migrated branch.
+		content, showErr := git.ShowFile(opts.HomebrewCore, "origin/"+baseBranch, rel)
+		if showErr != nil {
+			// origin/<base> not fetched yet; fall back to local file.
+			b, readErr := os.ReadFile(formulaPath)
+			if readErr != nil {
+				return fmt.Errorf("reading formula: %w", readErr)
+			}
+			content = string(b)
+		}
+		migrated, result := formula.MigrateContents(content)
+		switch result {
+		case formula.AlreadyMigrated:
+			fmt.Printf("%s already migrated on origin/%s; nothing to do.\n", formulaName, baseBranch)
+		case formula.NoDependency:
+			return fmt.Errorf("%s does not depend on openssl@3 on origin/%s", formulaName, baseBranch)
+		default:
+			printDiff(content, migrated, formulaName)
+		}
 		return nil
 	}
 
-	// Ensure working tree is clean before touching branches.
+	// Non-dry-run: clean check → fetch → branch switch → read → apply.
+
 	status, err := git.Status(opts.HomebrewCore)
 	if err != nil {
 		return err
@@ -119,20 +125,23 @@ func Run(formulaName string, opts Options) error {
 		}
 	}
 
-	// Re-read formula from the new branch (content should be identical, but be safe).
+	// Read formula from the newly-switched branch — avoids stale pre-switch content.
 	formulaPath, err = formula.Locate(opts.HomebrewCore, formulaName, entry.Path)
 	if err != nil {
 		return err
 	}
-	original, err = os.ReadFile(formulaPath)
+	original, err := os.ReadFile(formulaPath)
 	if err != nil {
-		return fmt.Errorf("re-reading formula after branch switch: %w", err)
+		return fmt.Errorf("reading formula: %w", err)
 	}
 
-	migrated, result = formula.MigrateContents(string(original))
-	if result == formula.AlreadyMigrated {
-		fmt.Printf("%s already depends on openssl@4 on %s; nothing to do.\n", formulaName, branchName)
+	migrated, result := formula.MigrateContents(string(original))
+	switch result {
+	case formula.AlreadyMigrated:
+		fmt.Printf("%s already migrated on %s; nothing to do.\n", formulaName, branchName)
 		return nil
+	case formula.NoDependency:
+		return fmt.Errorf("%s does not depend on openssl@3 on %s", formulaName, branchName)
 	}
 
 	if err := os.WriteFile(formulaPath, []byte(migrated), 0o644); err != nil {
@@ -169,8 +178,15 @@ func Run(formulaName string, opts Options) error {
 		}
 	}
 
-	if err := git.PushForce(opts.HomebrewCore, pushRemote, branchName); err != nil {
-		return fmt.Errorf("pushing branch: %w", err)
+	// Use --force-with-lease only when resetting an existing branch; new branches push normally.
+	if opts.ResetExisting {
+		if err := git.PushForce(opts.HomebrewCore, pushRemote, branchName); err != nil {
+			return fmt.Errorf("pushing branch: %w", err)
+		}
+	} else {
+		if err := git.Push(opts.HomebrewCore, pushRemote, branchName); err != nil {
+			return fmt.Errorf("pushing branch: %w", err)
+		}
 	}
 
 	remoteURL := git.RemoteURL(opts.HomebrewCore, pushRemote)

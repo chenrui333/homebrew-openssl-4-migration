@@ -9,7 +9,7 @@ The workflow is split into two parts:
 
 ## Prerequisites
 
-- Go 1.21+
+- Go 1.26+
 - git
 - GitHub CLI (gh) authenticated for querying and creating Homebrew PRs
 - A local homebrew-core checkout
@@ -71,7 +71,7 @@ The migration tool:
 - skips depends_on lines inside resource blocks
 - bumps an existing revision or inserts revision 1
 - adds OpenSSL 4 environment variables to Rust/cargo formulae
-- creates branch rchen.openssl4.<formula> from the correct base; resets it if it already exists
+- creates branch rchen.openssl4.<formula> from the correct base; fails if the branch exists (pass --reset-existing to reset)
 - commits <formula>: use openssl@4 with a DCO sign-off
 - pushes to your fork remote and opens a PR unless --no-pr is used
 

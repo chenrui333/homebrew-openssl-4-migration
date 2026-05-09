@@ -120,6 +120,9 @@ func Build(homebrewCore string) (*DepTree, error) {
 	}
 	for i := range formulae {
 		d := dependents[formulae[i].Name]
+		if d == nil {
+			d = []string{}
+		}
 		sort.Strings(d)
 		formulae[i].OpenSSLFormulaDependents = d
 	}
