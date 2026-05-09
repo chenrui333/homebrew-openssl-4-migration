@@ -1,0 +1,32 @@
+CLAUDE.md
+  s_6d431d74e1ae42::t_e720a2130751d4 10-11,19,24-25,33,59,63-64,67-68,88-89,92-94,98-99,102,104
+README.md
+  s_6d431d74e1ae42::t_98000e59f45cd4 84
+.github/workflows/sync.yml
+  s_6d431d74e1ae42::t_f4ddb2ea846c75 49-54
+main.go
+  s_6d431d74e1ae42::t_f1ef6bcf3dc1d8 17-19
+  s_6d431d74e1ae42::t_df0ca553631934 28-30
+  s_6d431d74e1ae42::t_09d23e5585c9fd 55-56,59-65
+internal/deptree/build.go
+  s_6d431d74e1ae42::t_0aa7a607fedbf6 4
+  s_6d431d74e1ae42::t_8ce70d75cd6686 186-205
+.gitignore
+  s_6d431d74e1ae42::t_70ebc0bd665cbf 2
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.4",
+  "base_commit_sha": "0ae5015e383624d8cbdda5021291698292060bd8",
+  "prompts": {},
+  "sessions": {
+    "s_6d431d74e1ae42": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "101f649a-f23b-4cb0-bab2-b0255274a36c",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}
