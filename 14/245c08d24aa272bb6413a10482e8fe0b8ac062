@@ -1,0 +1,41 @@
+internal/formula/patch.go
+  s_6d431d74e1ae42::t_b084c4c3bcb14d 28-37,42-46,48-52,55,73-75,119,172-173
+internal/migrate/migrate.go
+  s_6d431d74e1ae42::t_fa239f50c7aa9c 218-221,227,231-232,236
+  s_6d431d74e1ae42::t_9c28af191be479 103-105,107-109
+  s_6d431d74e1ae42::t_337fb565517a0d 17-19
+  s_6d431d74e1ae42::t_7bfd8e255168fa 26-31
+internal/formula/parse.go
+  s_6d431d74e1ae42::t_7c924b6d9fd114 55-56
+  s_6d431d74e1ae42::t_fc279b7981055d 35
+go.mod
+  s_6d431d74e1ae42::t_337fb565517a0d 5-6
+main.go
+  s_6d431d74e1ae42::t_e70cfc69d69445 87-92
+  s_6d431d74e1ae42::t_d8b9209d618dfe 100
+  s_6d431d74e1ae42::t_072403162dfca8 80
+internal/status/status.go
+  s_6d431d74e1ae42::t_ace41751e9ca28 113-114
+Makefile
+  s_6d431d74e1ae42::t_889302675bc6ce 38
+internal/formula/patch_test.go
+  s_6d431d74e1ae42::t_fb09941b9e28d1 1-253
+internal/deptree/build.go
+  s_6d431d74e1ae42::t_be639fcb42c3bb 81-86
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.4",
+  "base_commit_sha": "14245c08d24aa272bb6413a10482e8fe0b8ac062",
+  "prompts": {},
+  "sessions": {
+    "s_6d431d74e1ae42": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "101f649a-f23b-4cb0-bab2-b0255274a36c",
+        "model": "claude-sonnet-4-6"
+      },
+      "human_author": "Rui Chen <rui@chenrui.dev>"
+    }
+  }
+}
