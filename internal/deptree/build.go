@@ -78,10 +78,12 @@ func Build(homebrewCore string) (*DepTree, error) {
 		deps := formula.ParseDependencies(string(contents))
 
 		f := Formula{
-			Name:              name,
-			Path:              relPath,
-			OpenSSLDependency: dep,
-			Dependencies:      deps,
+			Name:                     name,
+			Path:                     relPath,
+			OpenSSLDependency:        dep,
+			Dependencies:             deps,
+			OpenSSLFormulaDeps:       []string{},
+			OpenSSLFormulaDependents: []string{},
 		}
 		if d, ok := depthByName[name]; ok {
 			f.Depth = intPtr(d)

@@ -110,7 +110,8 @@ func Run(homebrewCore, depTreePath, outputPath string) error {
 			if r.openPR != nil {
 				suffix = fmt.Sprintf("   [PR #%d open]", r.openPR.Number)
 			}
-			fmt.Fprintf(&sb, "  %-24s %-8s%s\n", r.Name, r.liveStatus, suffix)
+			line := fmt.Sprintf("  %-24s %-8s%s", r.Name, r.liveStatus, suffix)
+			fmt.Fprintf(&sb, "%s\n", strings.TrimRight(line, " "))
 		}
 		fmt.Fprintf(&sb, "\n")
 	}

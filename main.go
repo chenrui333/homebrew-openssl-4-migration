@@ -77,18 +77,19 @@ func statusCmd() *cobra.Command {
 
 func migrateCmd() *cobra.Command {
 	var homebrewCore, depTree, pushRemote string
-	var dryRun, noPR bool
+	var dryRun, noPR, resetExisting bool
 	cmd := &cobra.Command{
 		Use:   "migrate <formula>",
 		Short: "Migrate a formula from openssl@3 to openssl@4 and open a PR",
 		Args:  cobra.ExactArgs(1),
 		RunE: func(_ *cobra.Command, args []string) error {
 			return migrate.Run(args[0], migrate.Options{
-				HomebrewCore: homebrewCore,
-				DepTreePath:  depTree,
-				DryRun:       dryRun,
-				NoPR:         noPR,
-				PushRemote:   pushRemote,
+				HomebrewCore:  homebrewCore,
+				DepTreePath:   depTree,
+				DryRun:        dryRun,
+				NoPR:          noPR,
+				PushRemote:    pushRemote,
+				ResetExisting: resetExisting,
 			})
 		},
 	}
@@ -96,6 +97,7 @@ func migrateCmd() *cobra.Command {
 	cmd.Flags().StringVar(&depTree, "dep-tree", "data/dep_tree.json", "dependency inventory JSON")
 	cmd.Flags().BoolVar(&dryRun, "dry-run", false, "print planned diff without modifying homebrew-core")
 	cmd.Flags().BoolVar(&noPR, "no-pr", false, "create local commit but skip push and PR")
+	cmd.Flags().BoolVar(&resetExisting, "reset-existing", false, "reset an existing branch to origin/<base> (destructive)")
 	cmd.Flags().StringVar(&pushRemote, "push-remote", envOr("HOMEBREW_CORE_PUSH_REMOTE", ""), "fork remote to push to")
 	return cmd
 }

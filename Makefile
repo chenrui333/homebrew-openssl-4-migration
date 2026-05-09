@@ -35,4 +35,4 @@ endif
 	$(BINARY) migrate $(FORMULA) --homebrew-core=$(HOMEBREW_CORE) --dry-run
 
 clean:
-	rm -rf bin/ data/dep_tree.json TRACKING.md
+	rm -rf bin/

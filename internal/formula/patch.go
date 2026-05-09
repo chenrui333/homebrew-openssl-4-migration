@@ -25,17 +25,34 @@ var (
 	// blockOpenerRe matches Ruby constructs that open a new end-terminated block.
 	// Matched against the raw (non-trimmed) line so `\s+do\s*$` works correctly.
 	blockOpenerRe = regexp.MustCompile(`\s+do\s*$|^\s*(def|if|unless|while|until|case|begin|class|module)\b`)
+
+	// anyOpenssl3Re matches any quoted openssl@3 reference in a line:
+	// depends_on "openssl@3", Formula["openssl@3"], ENV[...] = Formula["openssl@3"].xxx, etc.
+	anyOpenssl3Re = regexp.MustCompile(`["']openssl@3["']`)
+)
+
+// openssl3Replacer replaces all "openssl@3" and 'openssl@3' with "openssl@4".
+var openssl3Replacer = strings.NewReplacer(
+	`"openssl@3"`, `"openssl@4"`,
+	`'openssl@3'`, `"openssl@4"`,
 )
 
 // MigrateContents applies the openssl@3 → openssl@4 migration to formula source.
 //
-// Bug fix 1: handles both single and double quoted depends_on.
-// Bug fix 2: skips depends_on lines inside resource blocks.
+// Replaces ALL quoted openssl@3 references outside resource blocks:
+//   - depends_on "openssl@3" / depends_on 'openssl@3'
+//   - Formula["openssl@3"].opt_prefix / .opt_lib / etc.
+//   - ENV[...] = Formula["openssl@3"]... (Rust formulae)
+//   - shared_library linker assertions
 func MigrateContents(contents string) (string, MigrateResult) {
-	if openssl4Re.MatchString(contents) {
+	hasOpenssl4 := openssl4Re.MatchString(contents)
+	hasOpenssl3 := anyOpenssl3Re.MatchString(contents)
+
+	// Fully migrated: has openssl@4 and no remaining openssl@3 references.
+	if hasOpenssl4 && !hasOpenssl3 {
 		return contents, AlreadyMigrated
 	}
-	if !openssl3Re.MatchString(contents) {
+	if !hasOpenssl3 {
 		return contents, NoDependency
 	}
 
@@ -53,12 +70,9 @@ func MigrateContents(contents string) (string, MigrateResult) {
 				resourceNesting = 0
 				continue
 			}
-			// Apply migration outside resource blocks (fixes bugs 1 & 2).
-			if strings.Contains(line, `depends_on "openssl@3"`) || strings.Contains(line, `depends_on 'openssl@3'`) {
-				lines[i] = strings.NewReplacer(
-					`depends_on "openssl@3"`, `depends_on "openssl@4"`,
-					`depends_on 'openssl@3'`, `depends_on "openssl@4"`,
-				).Replace(line)
+			// Replace all "openssl@3" / 'openssl@3' references outside resource blocks.
+			if anyOpenssl3Re.MatchString(line) {
+				lines[i] = openssl3Replacer.Replace(line)
 				changed = true
 			}
 		} else {
@@ -102,7 +116,7 @@ func BumpRevision(contents string) string {
 		}
 	}
 
-	// Case 2: insert after bottle block.
+	// Case 2: insert after bottle block using nesting depth to find the matching end.
 	bottleStart := -1
 	for i, line := range lines {
 		if bottleDoRe.MatchString(line) {
@@ -111,8 +125,6 @@ func BumpRevision(contents string) string {
 		}
 	}
 	if bottleStart >= 0 {
-		// Find the matching end for the bottle block using nesting depth,
-		// not a naive first-match, so nested on_macos/on_linux blocks are handled correctly.
 		bottleEnd := -1
 		nesting := 0
 		for i := bottleStart + 1; i < len(lines); i++ {
@@ -157,6 +169,8 @@ func BumpRevision(contents string) string {
 }
 
 // AddRustOpenSSLEnv inserts OPENSSL_* environment variables at the top of def install.
+// Skipped when OPENSSL_DIR already present (existing env block will have been updated
+// by MigrateContents replacing all Formula["openssl@3"] references).
 func AddRustOpenSSLEnv(contents string) string {
 	if strings.Contains(contents, "OPENSSL_DIR") {
 		return contents

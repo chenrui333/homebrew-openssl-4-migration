@@ -14,20 +14,21 @@ import (
 )
 
 const (
-	stagingBranch  = "openssl-4-migration-staging"
-	trackingIssue  = "Homebrew/homebrew-core#278366"
-	upstreamRepo   = "Homebrew/homebrew-core"
+	stagingBranch = "openssl-4-migration-staging"
+	trackingIssue = "Homebrew/homebrew-core#278366"
+	upstreamRepo  = "Homebrew/homebrew-core"
 )
 
 var ownerFromURLRe = regexp.MustCompile(`github\.com[:/]([^/]+)/homebrew-core(?:\.git)?$`)
 
 // Options controls migrate behaviour.
 type Options struct {
-	HomebrewCore string
-	DepTreePath  string
-	DryRun       bool
-	NoPR         bool
-	PushRemote   string // empty = auto-detect
+	HomebrewCore  string
+	DepTreePath   string
+	DryRun        bool
+	NoPR          bool
+	PushRemote    string // empty = auto-detect
+	ResetExisting bool   // if true, reset an existing branch to origin/<base> (destructive)
 }
 
 // Run migrates formulaName from openssl@3 to openssl@4.
@@ -99,8 +100,13 @@ func Run(formulaName string, opts Options) error {
 		return fmt.Errorf("fetching origin/%s: %w", baseBranch, err)
 	}
 
-	// Create or reset the branch (fix bug 3: stale branch rebased on re-run).
+	// Create branch or reset an existing one.
+	// Default is fail-closed: an existing branch means a prior run left state that
+	// needs review. Pass --reset-existing to reset it to origin/<base> deliberately.
 	if git.BranchExists(opts.HomebrewCore, branchName) {
+		if !opts.ResetExisting {
+			return fmt.Errorf("branch %s already exists; review its state or pass --reset-existing to reset it to origin/%s", branchName, baseBranch)
+		}
 		if err := git.Switch(opts.HomebrewCore, branchName); err != nil {
 			return err
 		}
@@ -209,29 +215,25 @@ func Run(formulaName string, opts Options) error {
 
 func detectPushRemote(homebrewCore string) (string, error) {
 	login := github.Login()
+	if login == "" {
+		return "", fmt.Errorf("could not authenticate with GitHub (is gh configured?); pass --push-remote=<fork-remote>")
+	}
+
 	remotes, err := git.Remotes(homebrewCore)
 	if err != nil {
 		return "", err
 	}
 	if len(remotes) == 0 {
-		return "", fmt.Errorf("no git remotes configured in %s", homebrewCore)
-	}
-
-	if login != "" {
-		for _, r := range remotes {
-			url := git.RemoteURL(homebrewCore, r)
-			if strings.Contains(url, login+"/homebrew-core") {
-				return r, nil
-			}
-		}
+		return "", fmt.Errorf("no git remotes configured in %s; pass --push-remote=<fork-remote>", homebrewCore)
 	}
 
 	for _, r := range remotes {
-		if r == "origin" {
+		url := git.RemoteURL(homebrewCore, r)
+		if strings.Contains(url, login+"/homebrew-core") {
 			return r, nil
 		}
 	}
-	return remotes[0], nil
+	return "", fmt.Errorf("no fork remote found for GitHub user %q; pass --push-remote=<fork-remote>", login)
 }
 
 func ownerFromURL(url string) string {

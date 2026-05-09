@@ -32,7 +32,7 @@ func IsRustFormula(contents string) bool {
 // ParseDependencies returns all depends_on names, excluding test-only deps.
 func ParseDependencies(contents string) []string {
 	seen := make(map[string]bool)
-	var deps []string
+	deps := []string{}
 	for _, line := range strings.Split(contents, "\n") {
 		m := depLineRe.FindStringSubmatch(line)
 		if m == nil {
@@ -52,8 +52,8 @@ func ParseDependencies(contents string) []string {
 }
 
 var (
-	testQualRe  = regexp.MustCompile(`\b:test\b`)
-	buildQualRe = regexp.MustCompile(`\b:build\b`)
+	testQualRe  = regexp.MustCompile(`:test\b`)
+	buildQualRe = regexp.MustCompile(`:build\b`)
 )
 
 // isTestOnly returns true when a qualifier marks a dep as test-only (not build+test).
