@@ -14,6 +14,9 @@ import (
 
 const defaultHomebrewCore = "/opt/homebrew/Library/Taps/homebrew/homebrew-core"
 
+// version is injected by goreleaser via -X main.version=<tag>.
+var version = "dev"
+
 func main() {
 	if err := rootCmd().Execute(); err != nil {
 		os.Exit(1)
@@ -22,8 +25,9 @@ func main() {
 
 func rootCmd() *cobra.Command {
 	root := &cobra.Command{
-		Use:   "sslmigrate",
-		Short: "Harness for migrating homebrew-core formulae from openssl@3 to openssl@4",
+		Use:     "sslmigrate",
+		Short:   "Harness for migrating homebrew-core formulae from openssl@3 to openssl@4",
+		Version: version,
 	}
 	root.AddCommand(depTreeCmd(), statusCmd(), checklistCmd(), migrateCmd())
 	return root
@@ -48,11 +52,17 @@ func depTreeCmd() *cobra.Command {
 					done++
 				}
 			}
-			if err := deptree.Save(tree, output); err != nil {
+			changed, err := deptree.SaveStable(tree, output)
+			if err != nil {
 				return err
 			}
-			fmt.Printf("Wrote %s (%d formulae: %d pending, %d done)\n",
-				output, tree.FormulaCount, pending, done)
+			if changed {
+				fmt.Printf("Wrote %s (%d formulae: %d pending, %d done)\n",
+					output, tree.FormulaCount, pending, done)
+			} else {
+				fmt.Printf("No content change in %s (%d formulae: %d pending, %d done)\n",
+					output, tree.FormulaCount, pending, done)
+			}
 			return nil
 		},
 	}

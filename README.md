@@ -81,6 +81,7 @@ Optional flags:
 bin/sslmigrate migrate <formula> --dry-run
 bin/sslmigrate migrate <formula> --no-pr
 bin/sslmigrate migrate <formula> --push-remote=<remote>
+bin/sslmigrate migrate <formula> --reset-existing
 ~~~
 
 PR bodies stay short and reference Homebrew/homebrew-core#278366. Staging PRs also receive staging-branch-pr and CI-skip-recursive-dependents labels in addition to openssl-4-migration.

@@ -1,6 +1,7 @@
 package deptree
 
 import (
+	"bytes"
 	"encoding/json"
 	"fmt"
 	"os"
@@ -180,6 +181,26 @@ func Save(tree *DepTree, outputPath string) error {
 		return err
 	}
 	return os.WriteFile(outputPath, append(data, '\n'), 0o644)
+}
+
+// SaveStable writes tree to outputPath, but reuses the existing generated_at
+// timestamp when inventory content is otherwise unchanged. This prevents the
+// sync workflow from committing a file that only has a new timestamp.
+// Returns true if the file was written (content actually changed).
+func SaveStable(tree *DepTree, outputPath string) (bool, error) {
+	existing, loadErr := Load(outputPath)
+	if loadErr == nil {
+		// Temporarily set the same timestamp and compare marshaled content.
+		savedTs := tree.GeneratedAt
+		tree.GeneratedAt = existing.GeneratedAt
+		newBytes, err1 := json.Marshal(tree)
+		oldBytes, err2 := json.Marshal(existing)
+		tree.GeneratedAt = savedTs // restore
+		if err1 == nil && err2 == nil && bytes.Equal(newBytes, oldBytes) {
+			return false, nil // no content change — skip write
+		}
+	}
+	return true, Save(tree, outputPath)
 }
 
 // Load reads a DepTree from a JSON file.
