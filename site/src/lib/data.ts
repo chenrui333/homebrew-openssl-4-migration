@@ -63,6 +63,7 @@ export function reviewedNoIssueRows() {
 export function trackerFilterCounts() {
   return {
     "current-gate": snapshot.rows.filter((row) => row.flags.current_gate).length,
+    "current-gate-blockers": snapshot.rows.filter((row) => row.flags.current_gate && isPending(row)).length,
     pending: snapshot.rows.filter((row) => isPending(row)).length,
     ready: snapshot.rows.filter((row) => row.flags.ready).length,
     draft: snapshot.rows.filter((row) => row.flags.draft).length,

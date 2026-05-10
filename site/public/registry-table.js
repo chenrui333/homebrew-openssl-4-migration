@@ -10,6 +10,7 @@
   function matchesFilter(row, filter) {
     if (filter === "all") return true;
     if (filter === "current-gate") return row.dataset.currentGate === "true";
+    if (filter === "current-gate-blockers") return row.dataset.currentGate === "true" && row.dataset.status === "pending";
     if (filter === "pending") return row.dataset.status === "pending";
     if (filter === "done") return row.dataset.status === "done";
     if (filter === "ready") return row.dataset.ready === "true";
@@ -32,6 +33,20 @@
     });
   }
 
+  function labelForFilter(active) {
+    const button = Array.from(document.querySelectorAll("[data-filter]")).find((candidate) => candidate.dataset.filter === active);
+    if (button && button.dataset.filterLabel) return button.dataset.filterLabel;
+    return String(active || "all").replace(/-/g, " ");
+  }
+
+  function clearFilters() {
+    document.querySelectorAll("[data-registry-search]").forEach((input) => {
+      input.value = "";
+    });
+    window.__registryActiveFilter = "all";
+    applyFilters("all");
+  }
+
   function applyFilters(active) {
     const query = String(document.querySelector("[data-registry-search]")?.value || "").toLowerCase();
     const rows = registryRows();
@@ -44,6 +59,12 @@
     setFilterState(active);
     document.querySelectorAll("[data-result-count]").forEach((count) => {
       count.textContent = visible + " of " + rows.length + " rows shown";
+    });
+    document.querySelectorAll("[data-active-filter]").forEach((summary) => {
+      summary.textContent = "Active filter: " + labelForFilter(active);
+    });
+    document.querySelectorAll("[data-filter-clear]").forEach((button) => {
+      button.hidden = active === "all" && query === "";
     });
   }
 
@@ -126,6 +147,9 @@
         window.__registryActiveFilter = button.dataset.filter || "all";
         applyFilters(window.__registryActiveFilter);
       });
+    });
+    document.querySelectorAll("[data-filter-clear]").forEach((button) => {
+      button.addEventListener("click", clearFilters);
     });
     document.querySelectorAll("[data-registry-search]").forEach((input) => {
       input.addEventListener("input", () => applyFilters(window.__registryActiveFilter || "all"));

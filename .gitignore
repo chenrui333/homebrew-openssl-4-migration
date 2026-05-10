@@ -3,4 +3,5 @@ dist/
 site/dist/
 site/.astro/
 site/.playwright-cli/
+site/artifacts/
 site/node_modules/

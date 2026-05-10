@@ -14,6 +14,8 @@ const {
 } = Astro.props;
 const currentPath = Astro.url.pathname.replace(basePath, "/");
 const summary = snapshot.summary;
+const gitSha = String(import.meta.env.PUBLIC_GIT_SHA || "").slice(0, 7);
+const buildLabel = gitSha || "local";
 const navItems = [
   { label: "Overview", href: pagePath(), match: "/" },
   { label: "Queue", href: pagePath("queue/"), match: "/queue/" },
@@ -56,7 +58,7 @@ function isActive(match: string) {
         <span>{summary.current_gate_pending} pending</span>
         <span>{summary.open_staging_prs} open staging PRs</span>
         <span>snapshot {formatDate(snapshot.generated_at)}</span>
-        <span>site build: committed Astro snapshot</span>
+        <span>site build {buildLabel}</span>
       </div>
     </header>
     <main id="content">

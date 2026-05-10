@@ -1,6 +1,6 @@
 ---
 import type { SnapshotRow } from "../lib/types";
-import { depthLabel, formulaAnchor, prLabel, slug, upstreamLabel } from "../lib/format";
+import { depthLabel, formatDate, formulaAnchor, prLabel, slug, upstreamLabel } from "../lib/format";
 
 interface Props {
   rows: SnapshotRow[];
@@ -9,6 +9,19 @@ interface Props {
 }
 
 const { rows, showControls = true, emptyMessage = "No rows match this section." } = Astro.props;
+const quickFilters = [
+  { filter: "all", label: "All / reset" },
+  { filter: "current-gate", label: "Current gate all" },
+  { filter: "current-gate-blockers", label: "Current gate blockers" },
+  { filter: "pending", label: "Pending" },
+  { filter: "ready", label: "Ready" },
+  { filter: "draft", label: "Draft" },
+  { filter: "ci-blocked", label: "CI blocked" },
+  { filter: "retarget", label: "Retarget" },
+  { filter: "missing-pr", label: "Missing PR" },
+  { filter: "upstream-blocked", label: "Upstream blocked" },
+  { filter: "done", label: "Done" },
+];
 ---
 
 {showControls && (
@@ -18,11 +31,15 @@ const { rows, showControls = true, emptyMessage = "No rows match this section." 
       <input type="search" data-registry-search placeholder="Formula, upstream repo, PR number, gate, action" />
     </label>
     <div class="filter-chips" aria-label="Registry filters">
-      {["all", "current-gate", "pending", "ready", "draft", "ci-blocked", "retarget", "missing-pr", "upstream-blocked", "done"].map((filter) => (
-        <button type="button" data-filter={filter} aria-pressed={filter === "all" ? "true" : "false"}>{filter.replace(/-/g, " ")}</button>
+      {quickFilters.map(({ filter, label }) => (
+        <button type="button" data-filter={filter} data-filter-label={label} aria-pressed={filter === "all" ? "true" : "false"}>{label}</button>
       ))}
     </div>
-    <p data-result-count class="figure-caption"></p>
+    <div class="filter-summary">
+      <p data-result-count class="figure-caption"></p>
+      <p data-active-filter class="figure-caption">Active filter: All / reset</p>
+      <button type="button" class="filter-clear" data-filter-clear hidden>Clear</button>
+    </div>
   </section>
 )}
 
@@ -80,16 +97,30 @@ const { rows, showControls = true, emptyMessage = "No rows match this section." 
           <td data-label="Impact"><span class="impact">{row.impact_count}</span></td>
           <td data-label="Gate">{row.group_label}</td>
           <td data-label="Status">{row.live_status}</td>
-          <td data-label="PR">{row.pr.url ? <a href={row.pr.url}>{prLabel(row)}</a> : prLabel(row)}</td>
+          <td data-label="PR">
+            {row.pr.url ? <a href={row.pr.url}>{prLabel(row)}</a> : prLabel(row)}
+            {row.pr.updated_at && <span class="pr-updated">updated {formatDate(row.pr.updated_at)}</span>}
+          </td>
           <td data-label="Evidence" class="evidence-cell">
-            {row.upstream.url ? <a href={row.upstream.url}>{upstreamLabel(row)}</a> : <span>{upstreamLabel(row)}</span>}
-            {row.issues.length === 0 ? <span class="muted">none</span> : row.issues.slice(0, 2).map((issue, index) => (
-              <>
-                {index === 0 && " "}
-                {index > 0 && ", "}
-                <a href={issue.url}>{issue.label}</a>
-              </>
-            ))}
+            <div class="evidence-line">
+              <span class="evidence-label">Upstream</span>
+              {row.upstream.url ? <a href={row.upstream.url}>{upstreamLabel(row)}</a> : <span>{upstreamLabel(row)}</span>}
+            </div>
+            <div class="evidence-line">
+              <span class="evidence-label">Issues</span>
+              {row.issues.length === 0 ? (
+                <span class="muted">none</span>
+              ) : (
+                <span class="issue-list">
+                  {row.issues.slice(0, 2).map((issue, index) => (
+                    <>
+                      {index > 0 && ", "}
+                      <a href={issue.url}>{issue.label}</a>
+                    </>
+                  ))}
+                </span>
+              )}
+            </div>
           </td>
         </tr>
       ))}

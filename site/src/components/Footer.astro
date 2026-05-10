@@ -1,13 +1,16 @@
 ---
 import { snapshot } from "../lib/data";
 import { formatDate, pagePath } from "../lib/format";
+
+const gitSha = String(import.meta.env.PUBLIC_GIT_SHA || "").slice(0, 7);
+const buildLabel = gitSha || "local";
 ---
 
 <footer class="site-footer">
   <div>
     <h2>Open migration registry</h2>
     <p>Static, inspectable pages generated from the OpenSSL 4 migration harness.</p>
-    <p class="footer-stamp">Generated {formatDate(snapshot.generated_at)}</p>
+    <p class="footer-stamp">Generated {formatDate(snapshot.generated_at)} · build {buildLabel}</p>
   </div>
   <nav aria-label="Footer navigation">
     <section>

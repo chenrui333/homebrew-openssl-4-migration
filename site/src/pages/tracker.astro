@@ -10,7 +10,8 @@ const counts = trackerFilterCounts();
 const gateFilterItems = gateCounts().map((gate) => ({ label: gate.label, filter: "gate:" + slug(gate.label), count: gate.count }));
 const filterItems = [
   { label: "All", filter: "all", count: snapshot.rows.length },
-  { label: "Current gate", filter: "current-gate", count: counts["current-gate"] },
+  { label: "Current gate all", filter: "current-gate", count: counts["current-gate"] },
+  { label: "Current gate blockers", filter: "current-gate-blockers", count: counts["current-gate-blockers"] },
   { label: "Pending", filter: "pending", count: counts.pending },
   { label: "Ready", filter: "ready", count: counts.ready },
   { label: "Draft", filter: "draft", count: counts.draft },
@@ -25,11 +26,15 @@ const filterItems = [
   { label: "Coverage gap", filter: "coverage-gap", count: snapshot.rows.filter((row) => row.issues.some((issue) => issue.label === "search")).length },
   ...gateFilterItems,
 ];
+const jumpItems = [
+  { label: "Methodology", href: "#methodology" },
+  { label: "Registry", href: "#registry", count: snapshot.rows.length },
+];
 ---
 
 <Layout title="Tracker | OpenSSL 4 Migration Control Room">
   <div class="workflow-shell">
-    <WorkflowRail title="Tracker filters" filters={filterItems} mobileLabel="Jump and filter" />
+    <WorkflowRail title="Tracker filters" items={jumpItems} filters={filterItems} mobileFilters={false} mobileLabel="Jump to section" />
     <div class="workflow-content">
       <section class="page-hero">
         <span class="eyebrow">Registry table</span>
@@ -37,7 +42,13 @@ const filterItems = [
         <p>Search, filter, and inspect every staging-scope formula targeting openssl-4-migration-staging.</p>
         <p class="figure-caption">{snapshot.rows.length} rows sorted by current gate, pending status, impact, then name.</p>
       </section>
-      <RegistryTable rows={registryRows} />
+      <section id="methodology" class="methodology-note">
+        <strong>Reading the registry</strong>
+        <p>Impact is the count of transitive OpenSSL-linked formula parents. Status is read from the staging branch. PR state is refreshed during daily sync.</p>
+      </section>
+      <section id="registry">
+        <RegistryTable rows={registryRows} />
+      </section>
       <Footer />
     </div>
   </div>

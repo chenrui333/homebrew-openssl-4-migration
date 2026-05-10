@@ -13,10 +13,11 @@ interface Props {
   title: string;
   items?: RailItem[];
   filters?: RailItem[];
+  mobileFilters?: boolean;
   mobileLabel?: string;
 }
 
-const { title, items = [], filters = [], mobileLabel = "Jump to section" } = Astro.props;
+const { title, items = [], filters = [], mobileFilters = true, mobileLabel = "Jump to section" } = Astro.props;
 const summary = snapshot.summary;
 ---
 
@@ -38,10 +39,10 @@ const summary = snapshot.summary;
         ))}
       </nav>
     )}
-    {filters.length > 0 && (
+    {mobileFilters && filters.length > 0 && (
       <div class="workflow-filter-list" aria-label={title + " filters"}>
         {filters.map((item) => (
-          <button type="button" data-filter={item.filter} aria-pressed={item.filter === "all" ? "true" : "false"}>
+          <button type="button" data-filter={item.filter} data-filter-label={item.label} aria-pressed={item.filter === "all" ? "true" : "false"}>
             <span>{item.label}</span>
             {item.count !== undefined && <b>{item.count}</b>}
           </button>
@@ -72,7 +73,7 @@ const summary = snapshot.summary;
     {filters.length > 0 && (
       <div class="workflow-filter-list" aria-label={title + " filters"}>
         {filters.map((item) => (
-          <button type="button" data-filter={item.filter} aria-pressed={item.filter === "all" ? "true" : "false"}>
+          <button type="button" data-filter={item.filter} data-filter-label={item.label} aria-pressed={item.filter === "all" ? "true" : "false"}>
             <span>{item.label}</span>
             {item.count !== undefined && <b>{item.count}</b>}
           </button>

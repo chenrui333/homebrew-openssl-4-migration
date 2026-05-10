@@ -45,6 +45,8 @@ jobs:
 
       - name: Build site
         working-directory: site
+        env:
+          PUBLIC_GIT_SHA: ${{ github.sha }}
         run: npm run build
 
       - name: Upload Pages artifact

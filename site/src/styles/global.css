@@ -828,6 +828,49 @@ main,
   font-size: 1rem;
 }
 
+.filter-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.8rem;
+}
+
+.filter-summary p {
+  margin: 0;
+}
+
+.filter-clear {
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  padding: 0.2rem 0.45rem;
+  text-transform: uppercase;
+}
+
+.methodology-note {
+  display: grid;
+  gap: 0.28rem;
+  margin: 0 0 1rem;
+  border: 1px solid var(--line);
+  background: var(--paper-strong);
+  padding: 0.9rem 1rem;
+}
+
+.methodology-note strong {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.methodology-note p {
+  margin: 0;
+  color: var(--muted);
+}
+
 .registry-table {
   margin-top: 1.25rem;
   overflow-x: auto;
@@ -938,14 +981,39 @@ main,
   min-width: 11rem;
 }
 
-.evidence-cell > a,
-.evidence-cell > span {
-  margin-right: 0.35rem;
+.evidence-line {
+  display: grid;
+  gap: 0.08rem;
+}
+
+.evidence-line + .evidence-line {
+  margin-top: 0.35rem;
+}
+
+.evidence-label {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.issue-list {
+  display: block;
 }
 
 .readiness-mini {
   display: block;
   margin-top: 0.25rem;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+}
+
+.pr-updated {
+  display: block;
+  margin-top: 0.2rem;
   color: var(--muted);
   font-family: var(--mono);
   font-size: 0.68rem;
