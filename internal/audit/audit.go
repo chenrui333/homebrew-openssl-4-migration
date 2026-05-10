@@ -4,6 +4,7 @@ package audit
 import (
 	"encoding/json"
 	"fmt"
+	"net/url"
 	"os"
 	"path/filepath"
 	"sort"
@@ -15,7 +16,11 @@ import (
 	"github.com/chenrui333/homebrew-openssl-4-migration/internal/tracking"
 )
 
-const mainTrackLimit = 30
+const (
+	mainTrackLimit    = 30
+	upstreamGapLimit  = 20
+	githubIssueSearch = "OpenSSL 4"
+)
 
 // UpstreamIssues is the curated upstream issue dataset.
 type UpstreamIssues struct {
@@ -114,6 +119,10 @@ func Render(groups []tracking.Group, pending, done int, issues *UpstreamIssues, 
 	fmt.Fprintf(&sb, "- PRs with merge/check blockers: %d\n", unstablePRs)
 	fmt.Fprintf(&sb, "- Pending formulae without open migration PRs: %d\n\n", missingPRs)
 
+	fmt.Fprintf(&sb, "## Branch/Base Mismatches\n\n")
+	fmt.Fprintf(&sb, "Open migration PRs whose base branch differs from the computed target branch.\n\n")
+	writeBaseMismatchTable(&sb, sortRows(baseMismatchRows(rows)))
+
 	fmt.Fprintf(&sb, "## Staging Priority\n\n")
 	fmt.Fprintf(&sb, "Pending staged formulae are sorted by transitive dependent count.\n\n")
 	writeRowsTable(&sb, sortRows(filterRows(rows, func(r tracking.Row) bool {
@@ -125,6 +134,10 @@ func Render(groups []tracking.Group, pending, done int, issues *UpstreamIssues, 
 	writeRowsTable(&sb, sortRows(filterRows(rows, func(r tracking.Row) bool {
 		return r.LiveStatus == "PENDING" && r.TargetBranchOrDefault() == deptree.MainBranch
 	})), issueByFormula, mainTrackLimit)
+
+	fmt.Fprintf(&sb, "## Upstream Issue Coverage Gaps\n\n")
+	fmt.Fprintf(&sb, "Top %d pending staged formulae with upstream metadata and no curated upstream issue entry.\n\n", upstreamGapLimit)
+	writeUpstreamGapTable(&sb, sortRows(upstreamGapRows(rows, issueByFormula)), upstreamGapLimit)
 
 	fmt.Fprintf(&sb, "## Curated Upstream Issues\n\n")
 	writeIssuesTable(&sb, issues)
@@ -176,6 +189,73 @@ func sortRows(rows []tracking.Row) []tracking.Row {
 		return rows[i].Name < rows[j].Name
 	})
 	return rows
+}
+
+func baseMismatchRows(rows []tracking.Row) []tracking.Row {
+	return filterRows(rows, func(row tracking.Row) bool {
+		return row.LiveStatus == "PENDING" &&
+			row.OpenPR != nil &&
+			row.OpenPR.BaseRefName != "" &&
+			row.OpenPR.BaseRefName != row.TargetBranchOrDefault()
+	})
+}
+
+func upstreamGapRows(rows []tracking.Row, issueByFormula map[string][]Issue) []tracking.Row {
+	return filterRows(rows, func(row tracking.Row) bool {
+		_, curated := issueByFormula[row.Name]
+		return row.LiveStatus == "PENDING" &&
+			row.TargetBranchOrDefault() == deptree.StagingBranch &&
+			!curated &&
+			hasUsefulUpstream(row.Formula)
+	})
+}
+
+func hasUsefulUpstream(f deptree.Formula) bool {
+	return f.UpstreamProvider != "" && f.UpstreamProvider != "other"
+}
+
+func writeBaseMismatchTable(sb *strings.Builder, rows []tracking.Row) {
+	fmt.Fprintf(sb, "| Formula | PR | Current Base | Expected Base | Target | Readiness |\n")
+	fmt.Fprintf(sb, "|---|---|---|---|---|---|\n")
+	if len(rows) == 0 {
+		fmt.Fprintf(sb, "| _none_ |  |  |  |  |  |\n\n")
+		return
+	}
+	for _, row := range rows {
+		expected := row.TargetBranchOrDefault()
+		fmt.Fprintf(sb, "| %s | %s | %s | %s | %s | %s |\n",
+			md(row.Name),
+			md(prLabel(row.OpenPR)),
+			md(row.OpenPR.BaseRefName),
+			md(expected),
+			md(targetLabel(row)),
+			md(Readiness(row)),
+		)
+	}
+	fmt.Fprintf(sb, "\n")
+}
+
+func writeUpstreamGapTable(sb *strings.Builder, rows []tracking.Row, limit int) {
+	if limit > 0 && len(rows) > limit {
+		rows = rows[:limit]
+	}
+	fmt.Fprintf(sb, "| Formula | Depth | Impact | Upstream | Search | Readiness |\n")
+	fmt.Fprintf(sb, "|---|---:|---:|---|---|---|\n")
+	if len(rows) == 0 {
+		fmt.Fprintf(sb, "| _none_ |  |  |  |  |  |\n\n")
+		return
+	}
+	for _, row := range rows {
+		fmt.Fprintf(sb, "| %s | %s | %d | %s | %s | %s |\n",
+			md(row.Name),
+			md(depthLabel(row)),
+			len(row.TransitiveOpenSSLFormulaParents),
+			md(upstreamLabel(row.Formula)),
+			upstreamSearchLink(row.Formula),
+			md(Readiness(row)),
+		)
+	}
+	fmt.Fprintf(sb, "\n")
 }
 
 func writeRowsTable(sb *strings.Builder, rows []tracking.Row, issueByFormula map[string][]Issue, limit int) {
@@ -318,6 +398,16 @@ func depthLabel(row tracking.Row) string {
 	return "-"
 }
 
+func targetLabel(row tracking.Row) string {
+	if row.TargetBranchOrDefault() == deptree.StagingBranch {
+		if row.Depth != nil {
+			return "staging depth " + depthLabel(row)
+		}
+		return "staging closure"
+	}
+	return "main-track leaf"
+}
+
 func prLabel(pr *github.PR) string {
 	if pr == nil {
 		return "none"
@@ -340,6 +430,14 @@ func upstreamIssueLabel(issues FormulaIssues) string {
 		return issues.UpstreamProvider + ":" + issues.UpstreamRepo
 	}
 	return issues.UpstreamProvider
+}
+
+func upstreamSearchLink(f deptree.Formula) string {
+	if f.UpstreamProvider != "github" || f.UpstreamRepo == "" {
+		return ""
+	}
+	query := url.QueryEscape("repo:" + f.UpstreamRepo + " " + fmt.Sprintf("%q", githubIssueSearch))
+	return fmt.Sprintf("[issues](https://github.com/search?q=%s&type=issues)", query)
 }
 
 func issueLinks(formulaName string, issueByFormula map[string][]Issue) string {

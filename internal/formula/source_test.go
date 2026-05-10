@@ -26,6 +26,39 @@ func TestParseSourceMetadata(t *testing.T) {
 			wantRepo:     "example/foo",
 		},
 		{
+			name: "github head block preferred",
+			contents: "class Foo < Formula\n" +
+				"  homepage \"https://libssh2.org/\"\n" +
+				"  url \"https://libssh2.org/download/libssh2-1.11.1.tar.gz\"\n" +
+				"  head do\n" +
+				"    url \"https://github.com/libssh2/libssh2.git\", branch: \"master\"\n" +
+				"  end\n" +
+				"end\n",
+			wantHomepage: "https://libssh2.org/",
+			wantURL:      "https://libssh2.org/download/libssh2-1.11.1.tar.gz",
+			wantHead:     "https://github.com/libssh2/libssh2.git",
+			wantProvider: "github",
+			wantRepo:     "libssh2/libssh2",
+		},
+		{
+			name: "head block skips nested block urls",
+			contents: "class Foo < Formula\n" +
+				"  homepage \"https://example.com\"\n" +
+				"  url \"https://example.com/foo-1.0.tar.gz\"\n" +
+				"  head do # track HEAD from upstream git\n" +
+				"    resource \"fixture\" do # nested block should not provide head URL\n" +
+				"      url \"https://example.com/fixture.tar.gz\"\n" +
+				"    end # fixture resource\n" +
+				"    url \"https://github.com/example/foo.git\", branch: \"main\"\n" +
+				"  end # head\n" +
+				"end\n",
+			wantHomepage: "https://example.com",
+			wantURL:      "https://example.com/foo-1.0.tar.gz",
+			wantHead:     "https://github.com/example/foo.git",
+			wantProvider: "github",
+			wantRepo:     "example/foo",
+		},
+		{
 			name: "gitlab archive",
 			contents: "class Foo < Formula\n" +
 				"  homepage \"https://gstreamer.freedesktop.org/\"\n" +

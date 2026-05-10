@@ -7,9 +7,12 @@ import (
 )
 
 var (
-	homepageLineRe = regexp.MustCompile("(?m)^\\s*homepage\\s+\"([^\"]+)\"")
-	urlLineRe      = regexp.MustCompile("(?m)^\\s*url\\s+\"([^\"]+)\"")
-	headLineRe     = regexp.MustCompile("(?m)^\\s*head\\s+\"([^\"]+)\"")
+	homepageLineRe = regexp.MustCompile(`(?m)^\s*homepage\s+"([^"]+)"`)
+	urlLineRe      = regexp.MustCompile(`(?m)^\s*url\s+"([^"]+)"`)
+	headLineRe     = regexp.MustCompile(`(?m)^\s*head\s+"([^"]+)"`)
+	headDoLineRe   = regexp.MustCompile(`^\s*head\s+do\s*(?:#.*)?$`)
+	rubyDoLineRe   = regexp.MustCompile(`\bdo(?:\s*\|[^|]*\|)?\s*(?:#.*)?$`)
+	rubyEndLineRe  = regexp.MustCompile(`^\s*end\s*(?:#.*)?$`)
 )
 
 // SourceMetadata is upstream source information parsed from a formula.
@@ -28,6 +31,9 @@ func ParseSourceMetadata(contents string) SourceMetadata {
 		SourceURL: firstMatch(urlLineRe, contents),
 		HeadURL:   firstMatch(headLineRe, contents),
 	}
+	if meta.HeadURL == "" {
+		meta.HeadURL = firstHeadBlockURL(contents)
+	}
 	meta.UpstreamProvider, meta.UpstreamRepo = detectUpstream(meta)
 	return meta
 }
@@ -38,6 +44,53 @@ func firstMatch(re *regexp.Regexp, contents string) string {
 		return ""
 	}
 	return match[1]
+}
+
+func firstHeadBlockURL(contents string) string {
+	inHead := false
+	depth := 0
+	for _, line := range strings.Split(contents, "\n") {
+		if !inHead {
+			inHead = headDoLineRe.MatchString(line)
+			continue
+		}
+		trimmed := strings.TrimSpace(line)
+		if rubyEndLineRe.MatchString(trimmed) {
+			if depth == 0 {
+				return ""
+			}
+			depth--
+			continue
+		}
+		if depth == 0 {
+			if match := urlLineRe.FindStringSubmatch(line); match != nil {
+				return match[1]
+			}
+		}
+		if opensRubyBlock(trimmed) {
+			depth++
+		}
+	}
+	return ""
+}
+
+func opensRubyBlock(trimmed string) bool {
+	if trimmed == "" || strings.HasPrefix(trimmed, "#") {
+		return false
+	}
+	if rubyDoLineRe.MatchString(trimmed) {
+		return true
+	}
+	fields := strings.Fields(trimmed)
+	if len(fields) == 0 {
+		return false
+	}
+	switch fields[0] {
+	case "begin", "case", "def", "for", "if", "module", "unless", "until", "while":
+		return true
+	default:
+		return false
+	}
 }
 
 func detectUpstream(meta SourceMetadata) (string, string) {

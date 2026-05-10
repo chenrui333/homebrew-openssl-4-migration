@@ -94,6 +94,40 @@ func TestRenderIncludesPriorityAndUpstreamIssues(t *testing.T) {
 					},
 					LiveStatus: "PENDING",
 				},
+				{
+					Formula: deptree.Formula{
+						Name:                            "libssh2",
+						Depth:                           &depth,
+						TargetBranch:                    deptree.StagingBranch,
+						UpstreamProvider:                "github",
+						UpstreamRepo:                    "libssh2/libssh2",
+						TransitiveOpenSSLFormulaParents: []string{"a", "b", "c"},
+					},
+					LiveStatus: "PENDING",
+				},
+				{
+					Formula: deptree.Formula{
+						Name:                            "curl",
+						Depth:                           &depth,
+						TargetBranch:                    deptree.StagingBranch,
+						UpstreamProvider:                "github",
+						UpstreamRepo:                    "curl/curl",
+						TransitiveOpenSSLFormulaParents: []string{"a"},
+					},
+					LiveStatus: "PENDING",
+				},
+				{
+					Formula: deptree.Formula{
+						Name:         "azure-core-cpp",
+						TargetBranch: deptree.MainBranch,
+					},
+					OpenPR: &github.PR{
+						Number:      281235,
+						IsDraft:     true,
+						BaseRefName: deptree.StagingBranch,
+					},
+					LiveStatus: "PENDING",
+				},
 			},
 		},
 	}
@@ -107,6 +141,12 @@ func TestRenderIncludesPriorityAndUpstreamIssues(t *testing.T) {
 					{URL: "https://github.com/rust-lang/rust/issues/155397", Title: "Build with OpenSSL-4.0.0 fails", State: "open", Status: "relevant"},
 				},
 			},
+			{
+				Name:             "libssh2",
+				UpstreamProvider: "github",
+				UpstreamRepo:     "libssh2/libssh2",
+				Issues:           []Issue{},
+			},
 		},
 	}
 
@@ -114,10 +154,18 @@ func TestRenderIncludesPriorityAndUpstreamIssues(t *testing.T) {
 	for _, want := range []string{
 		"# OpenSSL 4 Migration Audit (2026-05-10)",
 		"| rust | openssl-4-migration-staging | 0 | 2 | PENDING | none | missing-pr | github:rust-lang/rust | [issues#155397](https://github.com/rust-lang/rust/issues/155397) open |",
+		"| azure-core-cpp | #281235 | openssl-4-migration-staging | main | main-track leaf | draft, base-mismatch |",
+		"| curl | 0 | 1 | github:curl/curl | [issues](https://github.com/search?q=repo%3Acurl%2Fcurl+%22OpenSSL+4%22&type=issues) | missing-pr |",
 		"Build with OpenSSL-4.0.0 fails",
 	} {
 		if !strings.Contains(got, want) {
 			t.Fatalf("report missing %q\n%s", want, got)
 		}
+	}
+	if strings.Contains(got, "repo%3Arust-lang%2Frust") {
+		t.Fatalf("curated rust issue should suppress upstream coverage gap\n%s", got)
+	}
+	if strings.Contains(got, "repo%3Alibssh2%2Flibssh2") {
+		t.Fatalf("empty curated libssh2 entry should suppress upstream coverage gap\n%s", got)
 	}
 }

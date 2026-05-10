@@ -65,7 +65,7 @@ This regenerates [CHECKLIST.md](CHECKLIST.md) from the same dependency inventory
 make audit
 ~~~
 
-This regenerates [AUDIT.md](AUDIT.md) by combining data/dep_tree.json, live migration PR state, and the curated upstream issue dataset in data/upstream_issues.json. The report highlights staged-track blockers, main-track opportunities, readiness signals, upstream repository metadata, and known upstream OpenSSL 4 issues.
+This regenerates [AUDIT.md](AUDIT.md) by combining data/dep_tree.json, live migration PR state, and the curated upstream issue dataset in data/upstream_issues.json. The report highlights staged-track blockers, branch/base mismatches, main-track opportunities, readiness signals, upstream repository metadata, upstream issue coverage gaps, and known upstream OpenSSL 4 issues.
 
 ## Daily dataset sync
 

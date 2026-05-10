@@ -12,6 +12,19 @@ Tracking issue: Homebrew/homebrew-core#278366
 - PRs with merge/check blockers: 25
 - Pending formulae without open migration PRs: 653
 
+## Branch/Base Mismatches
+
+Open migration PRs whose base branch differs from the computed target branch.
+
+| Formula | PR | Current Base | Expected Base | Target | Readiness |
+|---|---|---|---|---|---|
+| ldns | #281770 | openssl-4-migration-staging | main | main-track leaf | draft, base-mismatch, checks-blocked, merge-unstable |
+| azure-core-cpp | #281235 | openssl-4-migration-staging | main | main-track leaf | draft, base-mismatch, checks-blocked, merge-unstable |
+| azure-storage-common-cpp | #281235 | openssl-4-migration-staging | main | main-track leaf | draft, base-mismatch, checks-blocked, merge-unstable |
+| dotnet@8 | #281784 | openssl-4-migration-staging | main | main-track leaf | draft, base-mismatch, checks-blocked, merge-unstable |
+| eralchemy | #281771 | openssl-4-migration-staging | main | main-track leaf | draft, base-mismatch, checks-blocked, merge-unstable |
+| liboqs | #280651 | openssl-4-migration-staging | main | main-track leaf | draft, base-mismatch, checks-blocked, merge-unstable |
+
 ## Staging Priority
 
 Pending staged formulae are sorted by transitive dependent count.
@@ -30,12 +43,12 @@ Pending staged formulae are sorted by transitive dependent count.
 | qtbase | openssl-4-migration-staging | 1 | 10 | PENDING | #280862 | draft, checks-blocked, merge-unstable | qt |  |
 | node | openssl-4-migration-staging | 1 | 8 | PENDING | #280858 | draft, checks-blocked, merge-unstable | github:nodejs/node | [issues#62817](https://github.com/nodejs/node/issues/62817) closed |
 | s2n | openssl-4-migration-staging | closure | 7 | PENDING | #280912 | draft, checks-blocked, merge-unstable | github:aws/s2n-tls | [issues#5783](https://github.com/aws/s2n-tls/issues/5783) open |
-| thrift | openssl-4-migration-staging | closure | 5 | PENDING | #280913 | draft, checks-blocked, merge-unstable | apache |  |
+| thrift | openssl-4-migration-staging | closure | 5 | PENDING | #280913 | draft, checks-blocked, merge-unstable | github:apache/thrift |  |
 | apache-arrow | openssl-4-migration-staging | 1 | 4 | PENDING | #280851 | draft, checks-blocked, merge-unstable | github:apache/arrow |  |
 | gstreamer | openssl-4-migration-staging | 3 | 4 | PENDING | #280873 | draft, checks-blocked, merge-unstable | gitlab:gitlab.freedesktop.org/gstreamer/gstreamer |  |
 | dotnet | openssl-4-migration-staging | 0 | 2 | PENDING | #280829 | draft, checks-blocked, merge-unstable | github:dotnet/dotnet |  |
 | gdal | openssl-4-migration-staging | 2 | 2 | PENDING | #280870 | draft, checks-blocked, merge-unstable | github:OSGeo/gdal |  |
-| php | openssl-4-migration-staging | 2 | 0 | PENDING | #280871 | draft, checks-blocked, merge-unstable | php |  |
+| php | openssl-4-migration-staging | 2 | 0 | PENDING | #280871 | draft, checks-blocked, merge-unstable | github:php/php-src |  |
 
 ## Main-Track Opportunities
 
@@ -72,7 +85,26 @@ Top 30 pending main-track formulae sorted by transitive dependent count.
 | fbthrift | main | - | 1 | PENDING | none | missing-pr | github:facebook/fbthrift |  |
 | getdns | main | - | 1 | PENDING | none | missing-pr | github:getdnsapi/getdns |  |
 | gwenhywfar | main | - | 1 | PENDING | none | missing-pr | other |  |
-| libewf | main | - | 1 | PENDING | none | missing-pr | github:libyal/libewf-legacy |  |
+| libewf | main | - | 1 | PENDING | none | missing-pr | github:libyal/libewf |  |
+
+## Upstream Issue Coverage Gaps
+
+Top 20 pending staged formulae with upstream metadata and no curated upstream issue entry.
+
+| Formula | Depth | Impact | Upstream | Search | Readiness |
+|---|---:|---:|---|---|---|
+| python@3.14 | 0 | 481 | python |  | draft, checks-blocked, merge-unstable |
+| python@3.13 | 0 | 80 | python |  | draft, checks-blocked, merge-unstable |
+| systemd | 1 | 72 | github:systemd/systemd | [issues](https://github.com/search?q=repo%3Asystemd%2Fsystemd+%22OpenSSL+4%22&type=issues) | draft, checks-blocked, merge-unstable |
+| cargo-c | 2 | 25 | github:lu-zero/cargo-c | [issues](https://github.com/search?q=repo%3Alu-zero%2Fcargo-c+%22OpenSSL+4%22&type=issues) | draft, checks-blocked, merge-unstable |
+| pulseaudio | 1 | 21 | gitlab:gitlab.freedesktop.org/pulseaudio/pulseaudio |  | draft, checks-blocked, merge-unstable |
+| qtbase | 1 | 10 | qt |  | draft, checks-blocked, merge-unstable |
+| thrift | closure | 5 | github:apache/thrift | [issues](https://github.com/search?q=repo%3Aapache%2Fthrift+%22OpenSSL+4%22&type=issues) | draft, checks-blocked, merge-unstable |
+| apache-arrow | 1 | 4 | github:apache/arrow | [issues](https://github.com/search?q=repo%3Aapache%2Farrow+%22OpenSSL+4%22&type=issues) | draft, checks-blocked, merge-unstable |
+| gstreamer | 3 | 4 | gitlab:gitlab.freedesktop.org/gstreamer/gstreamer |  | draft, checks-blocked, merge-unstable |
+| dotnet | 0 | 2 | github:dotnet/dotnet | [issues](https://github.com/search?q=repo%3Adotnet%2Fdotnet+%22OpenSSL+4%22&type=issues) | draft, checks-blocked, merge-unstable |
+| gdal | 2 | 2 | github:OSGeo/gdal | [issues](https://github.com/search?q=repo%3AOSGeo%2Fgdal+%22OpenSSL+4%22&type=issues) | draft, checks-blocked, merge-unstable |
+| php | 2 | 0 | github:php/php-src | [issues](https://github.com/search?q=repo%3Aphp%2Fphp-src+%22OpenSSL+4%22&type=issues) | draft, checks-blocked, merge-unstable |
 
 ## Curated Upstream Issues
 

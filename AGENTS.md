@@ -73,7 +73,7 @@ data/dep_tree.json             committed snapshot; regenerate with make dep-tree
 data/upstream_issues.json      curated upstream issue links for audit context
 TRACKING.md                    generated dashboard; regenerate with make status
 CHECKLIST.md                   generated checklist; regenerate with make checklist
-AUDIT.md                       generated audit report; regenerate with make audit
+AUDIT.md                       generated audit report with readiness, base mismatch, and upstream coverage sections
 .github/workflows/sync.yml     daily GitHub Action to auto-regenerate tracking data
 ```
 
