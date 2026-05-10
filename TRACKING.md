@@ -1,65 +1,78 @@
 OpenSSL 4 Migration Status (2026-05-10)
 ========================================
-Total pending:  718
-Total done:     41 (5.4%)
+Total pending:  679
+Total done:     80 (10.5%)
 
 Tracking issue: Homebrew/homebrew-core#278366
 
-Depth 0 (roots)   [0/25 done]
-  apr-util                 PENDING
-  asio                     PENDING
-  cmake                    PENDING
+Batch 0 — Roots -> openssl-4-migration-staging   [20/25 done]
+  apr-util                 DONE
+  asio                     DONE
+  cmake                    DONE
   dotnet                   PENDING    [PR #280829 open]
-  erlang                   PENDING
-  freetds                  PENDING
+  erlang                   DONE
+  freetds                  DONE
   grpc                     PENDING    [PR #280832 open]
-  hiredis                  PENDING
-  krb5                     PENDING
-  libevent                 PENDING
+  hiredis                  DONE
+  krb5                     DONE
+  libevent                 DONE
   libfido2                 PENDING    [PR #280836 open]
-  librdkafka               PENDING
-  libssh                   PENDING
-  libssh2                  PENDING
-  mariadb-connector-c      PENDING
-  openldap                 PENDING
-  opusfile                 PENDING
-  python@3.11              PENDING
-  python@3.12              PENDING
+  librdkafka               DONE
+  libssh                   DONE
+  libssh2                  DONE
+  mariadb-connector-c      DONE
+  openldap                 DONE
+  opusfile                 DONE
+  python@3.11              DONE
+  python@3.12              DONE
   python@3.13              PENDING    [PR #280845 open]
   python@3.14              PENDING    [PR #280846 open]
-  srt                      PENDING
-  tcl-tk                   PENDING
-  tcl-tk@8                 PENDING
-  wget                     PENDING
+  srt                      DONE
+  tcl-tk                   DONE
+  tcl-tk@8                 DONE
+  wget                     DONE
 
-Depth 1   [0/15 done]
+Batch 1 -> openssl-4-migration-staging   [9/15 done]
   apache-arrow             PENDING    [PR #280851 open]
-  bind                     PENDING
-  curl                     PENDING    [PR #280853 open]
-  ffmpeg                   PENDING
-  folly                    PENDING
-  httpd                    PENDING
-  libpq                    PENDING
+  bind                     DONE
+  curl                     DONE
+  ffmpeg                   DONE
+  folly                    DONE
+  httpd                    DONE
+  libpq                    DONE
   node                     PENDING    [PR #280858 open]
-  postgresql@17            PENDING
-  postgresql@18            PENDING
+  postgresql@17            DONE
+  postgresql@18            DONE
   pulseaudio               PENDING    [PR #280861 open]
   qtbase                   PENDING    [PR #280862 open]
   rust                     PENDING    [PR #280863 open]
   systemd                  PENDING    [PR #280864 open]
-  unbound                  PENDING
+  unbound                  DONE
 
-Depth 2   [0/5 done]
+Batch 2 -> openssl-4-migration-staging   [1/5 done]
   cargo-c                  PENDING    [PR #280867 open]
   cryptography             PENDING    [PR #280868 open]
   gdal                     PENDING    [PR #280870 open]
   php                      PENDING    [PR #280871 open]
-  ruby                     PENDING
+  ruby                     DONE
 
-Depth 3   [0/1 done]
+Batch 3 -> openssl-4-migration-staging   [0/1 done]
   gstreamer                PENDING    [PR #280873 open]
 
-Leaves   [41/713 done]
+Staging closure -> openssl-4-migration-staging   [9/11 done]
+  aws-c-cal                DONE
+  cgal                     DONE
+  libgit2                  DONE
+  libngtcp2                DONE
+  libshout                 DONE
+  libzip                   DONE
+  net-snmp                 DONE
+  rtmpdump                 DONE
+  s2n                      PENDING    [PR #280912 open]
+  srtp                     DONE
+  thrift                   PENDING    [PR #280913 open]
+
+Main-track leaves -> main   [41/702 done]
   activemq-cpp             PENDING
   adios2                   PENDING
   afflib                   PENDING
@@ -84,14 +97,13 @@ Leaves   [41/713 done]
   asm-lsp                  PENDING
   asuka                    PENDING
   authoscope               PENDING
-  aws-c-cal                PENDING
   aws-sam-cli              PENDING
   awscli                   PENDING
   awscurl                  PENDING
   axel                     PENDING
   azure-cli                PENDING
-  azure-core-cpp           PENDING
-  azure-storage-common-cpp PENDING
+  azure-core-cpp           PENDING    [PR #281235 open; base openssl-4-migration-staging, expected main]
+  azure-storage-common-cpp PENDING    [PR #281235 open; base openssl-4-migration-staging, expected main]
   azure-storage-cpp        PENDING
   bacon-ls                 PENDING
   bacula-fd                PENDING
@@ -134,7 +146,6 @@ Leaves   [41/713 done]
   cassandra-cpp-driver     PENDING
   ccache                   PENDING
   cfengine                 PENDING
-  cgal                     PENDING
   cgit                     PENDING
   chawan                   PENDING
   citus                    PENDING
@@ -184,7 +195,7 @@ Leaves   [41/713 done]
   dnsviz                   PENDING
   doge                     PENDING
   dotnet@6                 PENDING
-  dotnet@8                 PENDING
+  dotnet@8                 PENDING    [PR #281784 open; base openssl-4-migration-staging, expected main]
   dotnet@9                 PENDING
   dovecot                  PENDING
   drill                    PENDING
@@ -208,7 +219,7 @@ Leaves   [41/713 done]
   emqx                     PENDING
   encfs                    DONE
   epic5                    PENDING
-  eralchemy                PENDING    [PR #281771 open]
+  eralchemy                PENDING    [PR #281771 open; base openssl-4-migration-staging, expected main]
   erlang@24                PENDING
   erlang@25                PENDING
   erlang@26                PENDING
@@ -342,7 +353,7 @@ Leaves   [41/713 done]
   ldapvi                   PENDING
   ldid                     PENDING
   ldid-procursus           PENDING
-  ldns                     PENDING    [PR #281770 open]
+  ldns                     PENDING    [PR #281770 open; base openssl-4-migration-staging, expected main]
   leetcode-cli             PENDING
   leetup                   PENDING
   legba                    PENDING
@@ -357,7 +368,6 @@ Leaves   [41/713 done]
   libff                    DONE
   libfixbuf                PENDING
   libfreefare              PENDING
-  libgit2                  PENDING
   libgit2@1.7              PENDING
   libgit2@1.8              PENDING
   libimobiledevice         PENDING
@@ -365,9 +375,8 @@ Leaves   [41/713 done]
   libks                    PENDING
   libmowgli                PENDING
   libmsquic                PENDING
-  libngtcp2                PENDING
   liboauth                 DONE
-  liboqs                   PENDING
+  liboqs                   PENDING    [PR #280651 open; base openssl-4-migration-staging, expected main]
   libp11                   PENDING
   libpaho-mqtt             PENDING
   libpq@16                 PENDING
@@ -376,7 +385,6 @@ Leaves   [41/713 done]
   libre                    PENDING
   librealsense             PENDING
   libretls                 PENDING
-  libshout                 PENDING
   libslax                  PENDING
   libstrophe               PENDING
   libtins                  DONE
@@ -388,7 +396,6 @@ Leaves   [41/713 done]
   libvncserver             PENDING
   libwebsockets            PENDING
   libxmlsec1               PENDING
-  libzip                   PENDING
   licensed                 PENDING
   lighthouse               PENDING
   lighttpd                 PENDING
@@ -461,7 +468,6 @@ Leaves   [41/713 done]
   nemu                     PENDING
   neomutt                  PENDING
   neon                     PENDING
-  net-snmp                 PENDING
   netdata                  PENDING
   nghttp2                  PENDING
   nginx                    PENDING
@@ -606,7 +612,6 @@ Leaves   [41/713 done]
   rsync                    PENDING
   rtags                    PENDING
   rtl_433                  PENDING
-  rtmpdump                 PENDING
   ruby-build               PENDING
   ruby@3.1                 PENDING
   ruby@3.2                 PENDING
@@ -616,7 +621,6 @@ Leaves   [41/713 done]
   rye                      PENDING
   s-nail                   PENDING
   s2geometry               PENDING
-  s2n                      PENDING
   s3-backer                PENDING
   sagittarius-scheme       PENDING
   samba                    PENDING
@@ -670,7 +674,6 @@ Leaves   [41/713 done]
   sqlcipher                DONE
   sqlx-cli                 PENDING
   squid                    PENDING
-  srtp                     PENDING
   ssldump                  PENDING
   sslscan                  PENDING
   sslsplit                 PENDING
@@ -703,7 +706,6 @@ Leaves   [41/713 done]
   texlive                  PENDING
   text-embeddings-inference PENDING
   thors-anvil              PENDING
-  thrift                   PENDING
   tiledb                   PENDING
   tinc                     PENDING
   tiny                     PENDING

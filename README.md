@@ -34,12 +34,13 @@ This compiles `bin/sslmigrate`. All other targets run it automatically.
 make dep-tree
 ~~~
 
-This writes data/dep_tree.json. The inventory includes every formula that currently has a direct dependency on openssl@3 or openssl@4, plus the staged depth from Homebrew tracking issue Homebrew/homebrew-core#278366.
+This writes data/dep_tree.json. The inventory includes every formula that currently has a direct dependency on openssl@3 or openssl@4, plus the staged depth from Homebrew tracking issue Homebrew/homebrew-core#278366. The scan also reads the full formula dependency graph so it can compute transitive staging blockers through bridge formulae that do not directly depend on OpenSSL.
 
-Staged formulae use the openssl-4-migration-staging base branch:
+Target branches are computed from the staged dependency closure:
 
-- Depth 0 through depth 3: staging branch
-- Leaves with no staged depth: main
+- Depth 0 through depth 3: openssl-4-migration-staging
+- No-depth formulae required by a staged formula's transitive dependency graph: openssl-4-migration-staging
+- Main-track leaves that are not required by the staged track: main
 
 ## Refresh the status dashboard
 
@@ -47,7 +48,7 @@ Staged formulae use the openssl-4-migration-staging base branch:
 make status
 ~~~
 
-This checks the live formula files in the homebrew-core checkout, queries open PRs mentioning openssl@4, prints the dashboard, and regenerates [TRACKING.md](TRACKING.md).
+This refreshes the target Homebrew refs, checks formula files from each formula's computed target branch, queries open migration PRs by migration labels plus an openssl@4 title fallback, prints the dashboard, and regenerates [TRACKING.md](TRACKING.md).
 
 ## Migrate one formula
 
@@ -71,7 +72,7 @@ The migration tool:
 - skips depends_on lines inside resource blocks
 - bumps an existing revision or inserts revision 1
 - adds OpenSSL 4 environment variables to Rust/cargo formulae
-- creates branch rchen.openssl4.<formula> from the correct base; fails if the branch exists (pass --reset-existing to reset)
+- creates branch rchen.openssl4.<formula> from the computed target branch; fails if the branch exists (pass --reset-existing to reset)
 - commits <formula>: use openssl@4 with a DCO sign-off
 - pushes to your fork remote and opens a PR unless --no-pr is used
 

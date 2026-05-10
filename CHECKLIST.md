@@ -1,70 +1,84 @@
 # OpenSSL 4 Migration Checklist (2026-05-10)
 
-Progress: **41/759 (5.4%)**
+Progress: **80/759 (10.5%)**
 Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/homebrew-core/issues/278366)
 
-> Batches must be completed in order (0 → 1 → 2 → 3 → Leaves).
-> Depth-0 formulae are build-time dependencies of everything above them.
+> Staging batches are depth 0 → 1 → 2 → 3 plus their computed transitive closure.
+> Main-track leaves are not required by the staged track and can target main directly.
 
-## Batch 0 — Roots [0/25]
+## Batch 0 — Roots -> openssl-4-migration-staging [20/25]
 
-- [ ] apr-util
-- [ ] asio
-- [ ] cmake
+- [x] ~~apr-util~~
+- [x] ~~asio~~
+- [x] ~~cmake~~
 - [ ] dotnet <!-- PR #280829 open -->
-- [ ] erlang
-- [ ] freetds
+- [x] ~~erlang~~
+- [x] ~~freetds~~
 - [ ] grpc <!-- PR #280832 open -->
-- [ ] hiredis
-- [ ] krb5
-- [ ] libevent
+- [x] ~~hiredis~~
+- [x] ~~krb5~~
+- [x] ~~libevent~~
 - [ ] libfido2 <!-- PR #280836 open -->
-- [ ] librdkafka
-- [ ] libssh
-- [ ] libssh2
-- [ ] mariadb-connector-c
-- [ ] openldap
-- [ ] opusfile
-- [ ] python@3.11
-- [ ] python@3.12
+- [x] ~~librdkafka~~
+- [x] ~~libssh~~
+- [x] ~~libssh2~~
+- [x] ~~mariadb-connector-c~~
+- [x] ~~openldap~~
+- [x] ~~opusfile~~
+- [x] ~~python@3.11~~
+- [x] ~~python@3.12~~
 - [ ] python@3.13 <!-- PR #280845 open -->
 - [ ] python@3.14 <!-- PR #280846 open -->
-- [ ] srt
-- [ ] tcl-tk
-- [ ] tcl-tk@8
-- [ ] wget
+- [x] ~~srt~~
+- [x] ~~tcl-tk~~
+- [x] ~~tcl-tk@8~~
+- [x] ~~wget~~
 
-## Batch 1 [0/15]
+## Batch 1 -> openssl-4-migration-staging [9/15]
 
 - [ ] apache-arrow <!-- PR #280851 open -->
-- [ ] bind
-- [ ] curl <!-- PR #280853 open -->
-- [ ] ffmpeg
-- [ ] folly
-- [ ] httpd
-- [ ] libpq
+- [x] ~~bind~~
+- [x] ~~curl~~
+- [x] ~~ffmpeg~~
+- [x] ~~folly~~
+- [x] ~~httpd~~
+- [x] ~~libpq~~
 - [ ] node <!-- PR #280858 open -->
-- [ ] postgresql@17
-- [ ] postgresql@18
+- [x] ~~postgresql@17~~
+- [x] ~~postgresql@18~~
 - [ ] pulseaudio <!-- PR #280861 open -->
 - [ ] qtbase <!-- PR #280862 open -->
 - [ ] rust <!-- PR #280863 open -->
 - [ ] systemd <!-- PR #280864 open -->
-- [ ] unbound
+- [x] ~~unbound~~
 
-## Batch 2 [0/5]
+## Batch 2 -> openssl-4-migration-staging [1/5]
 
 - [ ] cargo-c <!-- PR #280867 open -->
 - [ ] cryptography <!-- PR #280868 open -->
 - [ ] gdal <!-- PR #280870 open -->
 - [ ] php <!-- PR #280871 open -->
-- [ ] ruby
+- [x] ~~ruby~~
 
-## Batch 3 [0/1]
+## Batch 3 -> openssl-4-migration-staging [0/1]
 
 - [ ] gstreamer <!-- PR #280873 open -->
 
-## Leaves [41/713]
+## Staging closure -> openssl-4-migration-staging [9/11]
+
+- [x] ~~aws-c-cal~~
+- [x] ~~cgal~~
+- [x] ~~libgit2~~
+- [x] ~~libngtcp2~~
+- [x] ~~libshout~~
+- [x] ~~libzip~~
+- [x] ~~net-snmp~~
+- [x] ~~rtmpdump~~
+- [ ] s2n <!-- PR #280912 open -->
+- [x] ~~srtp~~
+- [ ] thrift <!-- PR #280913 open -->
+
+## Main-track leaves -> main [41/702]
 
 - [ ] activemq-cpp
 - [ ] adios2
@@ -90,14 +104,13 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 - [ ] asm-lsp
 - [ ] asuka
 - [ ] authoscope
-- [ ] aws-c-cal
 - [ ] aws-sam-cli
 - [ ] awscli
 - [ ] awscurl
 - [ ] axel
 - [ ] azure-cli
-- [ ] azure-core-cpp
-- [ ] azure-storage-common-cpp
+- [ ] azure-core-cpp <!-- PR #281235 open; base openssl-4-migration-staging, expected main -->
+- [ ] azure-storage-common-cpp <!-- PR #281235 open; base openssl-4-migration-staging, expected main -->
 - [ ] azure-storage-cpp
 - [ ] bacon-ls
 - [ ] bacula-fd
@@ -140,7 +153,6 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 - [ ] cassandra-cpp-driver
 - [ ] ccache
 - [ ] cfengine
-- [ ] cgal
 - [ ] cgit
 - [ ] chawan
 - [ ] citus
@@ -190,7 +202,7 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 - [ ] dnsviz
 - [ ] doge
 - [ ] dotnet@6
-- [ ] dotnet@8
+- [ ] dotnet@8 <!-- PR #281784 open; base openssl-4-migration-staging, expected main -->
 - [ ] dotnet@9
 - [ ] dovecot
 - [ ] drill
@@ -214,7 +226,7 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 - [ ] emqx
 - [x] ~~encfs~~
 - [ ] epic5
-- [ ] eralchemy <!-- PR #281771 open -->
+- [ ] eralchemy <!-- PR #281771 open; base openssl-4-migration-staging, expected main -->
 - [ ] erlang@24
 - [ ] erlang@25
 - [ ] erlang@26
@@ -348,7 +360,7 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 - [ ] ldapvi
 - [ ] ldid
 - [ ] ldid-procursus
-- [ ] ldns <!-- PR #281770 open -->
+- [ ] ldns <!-- PR #281770 open; base openssl-4-migration-staging, expected main -->
 - [ ] leetcode-cli
 - [ ] leetup
 - [ ] legba
@@ -363,7 +375,6 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 - [x] ~~libff~~
 - [ ] libfixbuf
 - [ ] libfreefare
-- [ ] libgit2
 - [ ] libgit2@1.7
 - [ ] libgit2@1.8
 - [ ] libimobiledevice
@@ -371,9 +382,8 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 - [ ] libks
 - [ ] libmowgli
 - [ ] libmsquic
-- [ ] libngtcp2
 - [x] ~~liboauth~~
-- [ ] liboqs
+- [ ] liboqs <!-- PR #280651 open; base openssl-4-migration-staging, expected main -->
 - [ ] libp11
 - [ ] libpaho-mqtt
 - [ ] libpq@16
@@ -382,7 +392,6 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 - [ ] libre
 - [ ] librealsense
 - [ ] libretls
-- [ ] libshout
 - [ ] libslax
 - [ ] libstrophe
 - [x] ~~libtins~~
@@ -394,7 +403,6 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 - [ ] libvncserver
 - [ ] libwebsockets
 - [ ] libxmlsec1
-- [ ] libzip
 - [ ] licensed
 - [ ] lighthouse
 - [ ] lighttpd
@@ -467,7 +475,6 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 - [ ] nemu
 - [ ] neomutt
 - [ ] neon
-- [ ] net-snmp
 - [ ] netdata
 - [ ] nghttp2
 - [ ] nginx
@@ -612,7 +619,6 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 - [ ] rsync
 - [ ] rtags
 - [ ] rtl_433
-- [ ] rtmpdump
 - [ ] ruby-build
 - [ ] ruby@3.1
 - [ ] ruby@3.2
@@ -622,7 +628,6 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 - [ ] rye
 - [ ] s-nail
 - [ ] s2geometry
-- [ ] s2n
 - [ ] s3-backer
 - [ ] sagittarius-scheme
 - [ ] samba
@@ -676,7 +681,6 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 - [x] ~~sqlcipher~~
 - [ ] sqlx-cli
 - [ ] squid
-- [ ] srtp
 - [ ] ssldump
 - [ ] sslscan
 - [ ] sslsplit
@@ -709,7 +713,6 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 - [ ] texlive
 - [ ] text-embeddings-inference
 - [ ] thors-anvil
-- [ ] thrift
 - [ ] tiledb
 - [ ] tinc
 - [ ] tiny

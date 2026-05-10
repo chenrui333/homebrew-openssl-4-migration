@@ -47,6 +47,12 @@ func BranchExists(dir, branch string) bool {
 	return ok
 }
 
+// RefExists reports whether a git ref exists and resolves to a commit.
+func RefExists(dir, ref string) bool {
+	_, ok := runAllowFailure(dir, "rev-parse", "--verify", ref+"^{commit}")
+	return ok
+}
+
 // Status returns the porcelain status output (empty = clean).
 func Status(dir string) (string, error) {
 	return run(dir, "status", "--porcelain")
