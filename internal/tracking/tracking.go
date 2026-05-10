@@ -25,9 +25,9 @@ type prSearchQuery struct {
 }
 
 var migrationPRSearchQueries = []prSearchQuery{
-	{query: "label:openssl-4-migration", trustFiles: true},
-	{query: "label:staging-branch-pr openssl@4", trustFiles: true},
-	{query: "openssl@4"},
+	{query: "base:openssl-4-migration-staging label:staging-branch-pr", trustFiles: true},
+	{query: "base:openssl-4-migration-staging label:openssl-4-migration", trustFiles: true},
+	{query: "base:openssl-4-migration-staging openssl@4"},
 }
 
 // Row combines formula metadata with its live migration status and any open PR.
@@ -159,6 +159,9 @@ func sortPRsByNumber(prsByNumber map[int]github.PR) []github.PR {
 func mapPRsByFormula(prs []github.PR, trustedFileMapping map[int]bool) map[string]*github.PR {
 	m := make(map[string]*github.PR)
 	for i := range prs {
+		if prs[i].BaseRefName != deptree.StagingBranch {
+			continue
+		}
 		if trustedFileMapping[prs[i].Number] || prTitleRe.MatchString(prs[i].Title) {
 			for _, file := range prs[i].Files {
 				if name := formulaNameFromPath(file.Path); name != "" {

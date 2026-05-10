@@ -21,7 +21,7 @@ const githubIssueSearch = "OpenSSL 4"
 const (
 	actionDone            = "Done"
 	actionOpenPR          = "Open migration PR"
-	actionRetargetPR      = "Retarget PR"
+	actionRetargetPR      = "Retarget to staging"
 	actionDraft           = "Resolve draft blockers"
 	actionInspectCI       = "Inspect CI"
 	actionMerge           = "Fix merge state"
@@ -200,10 +200,13 @@ func Run(opts Options) error {
 }
 
 func BuildSnapshot(tree *deptree.DepTree, groups []tracking.Group, pending, done int, issues *audit.UpstreamIssues) Snapshot {
+	groups = stagingGroups(groups)
+	rows := collectRows(groups)
+	pending, done = statusCounts(rows)
 	m := model{
 		Tree:           tree,
 		Groups:         groups,
-		Rows:           collectRows(groups),
+		Rows:           rows,
 		Pending:        pending,
 		Done:           done,
 		Issues:         issues,
@@ -216,9 +219,9 @@ func BuildSnapshot(tree *deptree.DepTree, groups []tracking.Group, pending, done
 	for _, row := range current.Rows {
 		currentNames[row.Name] = true
 	}
-	rows := make([]SnapshotRow, 0, len(m.Rows))
+	snapshotRows := make([]SnapshotRow, 0, len(m.Rows))
 	for _, row := range sortRows(m.Rows) {
-		rows = append(rows, snapshotRow(row, m, currentNames[row.Name]))
+		snapshotRows = append(snapshotRows, snapshotRow(row, m, currentNames[row.Name]))
 	}
 	snapshot := Snapshot{
 		GeneratedAt:       generatedAt(tree),
@@ -229,7 +232,7 @@ func BuildSnapshot(tree *deptree.DepTree, groups []tracking.Group, pending, done
 		CurrentGate:       gateSnapshot(current),
 		UpstreamGapCount:  len(upstreamGapRows(m)),
 		BaseMismatchCount: len(baseMismatchRows(m.Rows)),
-		Rows:              rows,
+		Rows:              snapshotRows,
 	}
 	if next.Label != "" {
 		nextGate := gateSnapshot(next)
@@ -294,6 +297,42 @@ func collectRows(groups []tracking.Group) []tracking.Row {
 		}
 	}
 	return rows
+}
+
+func stagingGroups(groups []tracking.Group) []tracking.Group {
+	var out []tracking.Group
+	for _, group := range groups {
+		rows := stagingRows(group.Rows)
+		if len(rows) == 0 {
+			continue
+		}
+		group.Rows = rows
+		_, group.Done = statusCounts(rows)
+		out = append(out, group)
+	}
+	return out
+}
+
+func stagingRows(rows []tracking.Row) []tracking.Row {
+	var out []tracking.Row
+	for _, row := range rows {
+		if row.TargetBranchOrDefault() == deptree.StagingBranch {
+			out = append(out, row)
+		}
+	}
+	return out
+}
+
+func statusCounts(rows []tracking.Row) (pending, done int) {
+	for _, row := range rows {
+		switch row.LiveStatus {
+		case "PENDING":
+			pending++
+		case "DONE":
+			done++
+		}
+	}
+	return pending, done
 }
 
 func currentGate(groups []tracking.Group) tracking.Group {
@@ -383,9 +422,10 @@ func baseMismatchRows(rows []tracking.Row) []tracking.Row {
 	var out []tracking.Row
 	for _, row := range rows {
 		if row.LiveStatus == "PENDING" &&
+			row.TargetBranchOrDefault() == deptree.StagingBranch &&
 			row.OpenPR != nil &&
 			row.OpenPR.BaseRefName != "" &&
-			row.OpenPR.BaseRefName != row.TargetBranchOrDefault() {
+			row.OpenPR.BaseRefName != deptree.StagingBranch {
 			out = append(out, row)
 		}
 	}

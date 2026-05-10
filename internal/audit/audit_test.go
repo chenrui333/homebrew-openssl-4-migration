@@ -153,8 +153,9 @@ func TestRenderIncludesPriorityAndUpstreamIssues(t *testing.T) {
 	got := Render(groups, 1, 0, issues, time.Date(2026, 5, 10, 0, 0, 0, 0, time.UTC))
 	for _, want := range []string{
 		"# OpenSSL 4 Migration Audit (2026-05-10)",
+		"- Staging-scope formulae: 3",
+		"## Retarget to Staging",
 		"| rust | openssl-4-migration-staging | 0 | 2 | PENDING | none | missing-pr | github:rust-lang/rust | [issues#155397](https://github.com/rust-lang/rust/issues/155397) open |",
-		"| azure-core-cpp | #281235 | openssl-4-migration-staging | main | main-track leaf | draft, base-mismatch |",
 		"| curl | 0 | 1 | github:curl/curl | [issues](https://github.com/search?q=repo%3Acurl%2Fcurl+%22OpenSSL+4%22&type=issues) | missing-pr |",
 		"Build with OpenSSL-4.0.0 fails",
 	} {
@@ -167,5 +168,21 @@ func TestRenderIncludesPriorityAndUpstreamIssues(t *testing.T) {
 	}
 	if strings.Contains(got, "repo%3Alibssh2%2Flibssh2") {
 		t.Fatalf("empty curated libssh2 entry should suppress upstream coverage gap\n%s", got)
+	}
+	if strings.Contains(got, "azure-core-cpp") || strings.Contains(got, "Main-Track Opportunities") {
+		t.Fatalf("audit report should not surface main-track rows\n%s", got)
+	}
+}
+
+func TestBaseMismatchRowsOnlyReportsStagingTargetRows(t *testing.T) {
+	rows := []tracking.Row{
+		{Formula: deptree.Formula{Name: "curl", TargetBranch: deptree.StagingBranch}, LiveStatus: "PENDING", OpenPR: &github.PR{BaseRefName: deptree.MainBranch}},
+		{Formula: deptree.Formula{Name: "git", TargetBranch: deptree.MainBranch}, LiveStatus: "PENDING", OpenPR: &github.PR{BaseRefName: deptree.StagingBranch}},
+		{Formula: deptree.Formula{Name: "wget", TargetBranch: deptree.StagingBranch}, LiveStatus: "PENDING", OpenPR: &github.PR{BaseRefName: deptree.StagingBranch}},
+	}
+
+	got := baseMismatchRows(rows)
+	if len(got) != 1 || got[0].Name != "curl" {
+		t.Fatalf("baseMismatchRows = %#v, want only staging-target curl", got)
 	}
 }

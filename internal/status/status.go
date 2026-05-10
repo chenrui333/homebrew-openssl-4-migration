@@ -19,6 +19,8 @@ func Run(homebrewCore, depTreePath, outputPath string) error {
 	}
 
 	groups, pending, done := tracking.Build(homebrewCore, tree)
+	groups = stagingGroups(groups)
+	pending, done = statusCounts(groups)
 
 	total := pending + done
 	pct := 0.0
@@ -56,6 +58,31 @@ func statusLabel(g tracking.Group) string {
 		return g.Label
 	}
 	return fmt.Sprintf("%s -> %s", g.Label, g.TargetBranch)
+}
+
+func stagingGroups(groups []tracking.Group) []tracking.Group {
+	var out []tracking.Group
+	for _, group := range groups {
+		if group.TargetBranch != deptree.StagingBranch {
+			continue
+		}
+		out = append(out, group)
+	}
+	return out
+}
+
+func statusCounts(groups []tracking.Group) (pending, done int) {
+	for _, group := range groups {
+		for _, row := range group.Rows {
+			switch row.LiveStatus {
+			case "PENDING":
+				pending++
+			case "DONE":
+				done++
+			}
+		}
+	}
+	return pending, done
 }
 
 func prSuffix(r tracking.Row) string {

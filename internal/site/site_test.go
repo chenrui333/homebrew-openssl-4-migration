@@ -168,6 +168,60 @@ func TestCurrentGateChoosesLowestPendingDepth(t *testing.T) {
 	}
 }
 
+func TestStagingRowsExcludesMainTargetRows(t *testing.T) {
+	rows := []tracking.Row{
+		siteRow("curl", "PENDING", 1, deptree.StagingBranch, nil),
+		{Formula: deptree.Formula{Name: "git", TargetBranch: deptree.MainBranch}, LiveStatus: "PENDING"},
+	}
+
+	got := stagingRows(rows)
+	if len(got) != 1 || got[0].Name != "curl" {
+		t.Fatalf("stagingRows = %#v, want only curl", got)
+	}
+}
+
+func TestBuildSnapshotDoesNotIncludeMainTrackLeaves(t *testing.T) {
+	depth0 := 0
+	groups := []tracking.Group{
+		{
+			Depth:        &depth0,
+			Label:        "Batch 0 - Roots",
+			TargetBranch: deptree.StagingBranch,
+			Rows: []tracking.Row{
+				siteRow("curl", "PENDING", 1, deptree.StagingBranch, nil),
+			},
+		},
+		{
+			Label:        "Main-track leaves",
+			TargetBranch: deptree.MainBranch,
+			Rows: []tracking.Row{
+				{Formula: deptree.Formula{Name: "git", TargetBranch: deptree.MainBranch}, LiveStatus: "PENDING"},
+			},
+		},
+	}
+
+	snapshot := BuildSnapshot(&deptree.DepTree{}, groups, 2, 0, &audit.UpstreamIssues{})
+	if snapshot.TotalFormulae != 1 || len(snapshot.Rows) != 1 || snapshot.Rows[0].Name != "curl" {
+		t.Fatalf("snapshot rows = %#v, want only staging curl", snapshot.Rows)
+	}
+	if snapshot.CurrentGate.Label == "Main-track leaves" {
+		t.Fatalf("current gate should not use main-track group: %#v", snapshot.CurrentGate)
+	}
+}
+
+func TestBaseMismatchRowsOnlyReportsStagingTargetRows(t *testing.T) {
+	rows := []tracking.Row{
+		siteRow("curl", "PENDING", 1, deptree.StagingBranch, &github.PR{BaseRefName: deptree.MainBranch}),
+		{Formula: deptree.Formula{Name: "git", TargetBranch: deptree.MainBranch}, LiveStatus: "PENDING", OpenPR: &github.PR{BaseRefName: deptree.StagingBranch}},
+		siteRow("wget", "PENDING", 1, deptree.StagingBranch, &github.PR{BaseRefName: deptree.StagingBranch}),
+	}
+
+	got := baseMismatchRows(rows)
+	if len(got) != 1 || got[0].Name != "curl" {
+		t.Fatalf("baseMismatchRows = %#v, want only staging-target curl", got)
+	}
+}
+
 func findRow(rows []SnapshotRow, name string) *SnapshotRow {
 	for i := range rows {
 		if rows[i].Name == name {

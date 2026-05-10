@@ -10,10 +10,10 @@ const { snapshot } = Astro.props;
 const current = snapshot.current_gate;
 const next = snapshot.next_gate;
 const registryStats = [
-  ["Tracked", snapshot.total_formulae],
+  ["Staged", snapshot.total_formulae],
   ["Done", snapshot.done],
   ["Pending", snapshot.pending],
-  ["Open PRs", snapshot.open_prs],
+  ["Open staging PRs", snapshot.open_prs],
 ];
 ---
 
@@ -21,7 +21,7 @@ const registryStats = [
   <div class="hero__copy">
     <p class="eyebrow"><span></span>Homebrew/homebrew-core migration registry</p>
     <h1>OpenSSL 4 Migration Control Room</h1>
-    <p class="lede">A dated, inspectable registry for moving Homebrew formulae from openssl@3 to openssl@4.</p>
+    <p class="lede">A dated, inspectable staging branch registry for moving Homebrew formulae from openssl@3 to openssl@4 on openssl-4-migration-staging.</p>
     <div class="hero__meta" aria-label="Snapshot summary">
       <span>Snapshot {formatDate(snapshot.generated_at)}</span>
       <span>Current gate {current.label}</span>

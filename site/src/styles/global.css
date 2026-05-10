@@ -527,6 +527,7 @@ main,
 
 .action-open-migration-pr,
 .action-retarget-pr,
+.action-retarget-to-staging,
 .action-fix-merge-state,
 .action-track-upstream-blocker {
   background: var(--red-soft);

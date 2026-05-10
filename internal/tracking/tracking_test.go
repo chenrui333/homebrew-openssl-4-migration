@@ -4,6 +4,7 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
+	"strings"
 	"testing"
 
 	"github.com/chenrui333/homebrew-openssl-4-migration/internal/deptree"
@@ -39,8 +40,9 @@ func TestMapPRsByFormulaUsesChangedFormulaFiles(t *testing.T) {
 func TestMapPRsByFormulaFallsBackToTitle(t *testing.T) {
 	prs := []github.PR{
 		{
-			Number: 280853,
-			Title:  "curl: migrate to openssl@4",
+			Number:      280853,
+			Title:       "curl: migrate to openssl@4",
+			BaseRefName: deptree.StagingBranch,
 		},
 	}
 
@@ -53,8 +55,9 @@ func TestMapPRsByFormulaFallsBackToTitle(t *testing.T) {
 func TestMapPRsByFormulaUsesUnlabeledMigrationTitleFiles(t *testing.T) {
 	prs := []github.PR{
 		{
-			Number: 281234,
-			Title:  "foo bar: migrate to `openssl@4`",
+			Number:      281234,
+			Title:       "foo bar: migrate to `openssl@4`",
+			BaseRefName: deptree.StagingBranch,
 			Files: []github.PRFile{
 				{Path: "Formula/f/foo.rb"},
 				{Path: "Formula/b/bar.rb"},
@@ -74,8 +77,9 @@ func TestMapPRsByFormulaUsesUnlabeledMigrationTitleFiles(t *testing.T) {
 func TestMapPRsByFormulaIgnoresUntrustedNonMigrationFiles(t *testing.T) {
 	prs := []github.PR{
 		{
-			Number: 281235,
-			Title:  "openssl@4 follow-up",
+			Number:      281235,
+			Title:       "openssl@4 follow-up",
+			BaseRefName: deptree.StagingBranch,
 			Files: []github.PRFile{
 				{Path: "Formula/f/foo.rb"},
 			},
@@ -85,6 +89,32 @@ func TestMapPRsByFormulaIgnoresUntrustedNonMigrationFiles(t *testing.T) {
 	got := mapPRsByFormula(prs, nil)
 	if got["foo"] != nil {
 		t.Fatalf("foo should not map from an untrusted non-migration title: %#v", got["foo"])
+	}
+}
+
+func TestMapPRsByFormulaIgnoresNonStagingBase(t *testing.T) {
+	prs := []github.PR{
+		{
+			Number:      281770,
+			Title:       "ldns: migrate to openssl@4",
+			BaseRefName: deptree.MainBranch,
+			Files: []github.PRFile{
+				{Path: "Formula/l/ldns.rb"},
+			},
+		},
+	}
+
+	got := mapPRsByFormula(prs, map[int]bool{281770: true})
+	if got["ldns"] != nil {
+		t.Fatalf("ldns should not map from a non-staging-base PR: %#v", got["ldns"])
+	}
+}
+
+func TestMigrationPRSearchQueriesAreStagingScoped(t *testing.T) {
+	for _, query := range migrationPRSearchQueries {
+		if !strings.Contains(query.query, "base:"+deptree.StagingBranch) {
+			t.Fatalf("query %q is not staging-base scoped", query.query)
+		}
 	}
 }
 

@@ -17,7 +17,6 @@ import (
 )
 
 const (
-	mainTrackLimit    = 30
 	upstreamGapLimit  = 20
 	githubIssueSearch = "OpenSSL 4"
 )
@@ -84,7 +83,8 @@ func LoadUpstreamIssues(path string) (*UpstreamIssues, error) {
 
 // Render returns the markdown audit report.
 func Render(groups []tracking.Group, pending, done int, issues *UpstreamIssues, now time.Time) string {
-	rows := collectRows(groups)
+	rows := stagingRows(collectRows(groups))
+	pending, done = statusCounts(rows)
 	issueByFormula := issueMap(issues)
 	openPRs := uniquePRs(rows)
 	missingPRs := 0
@@ -111,16 +111,16 @@ func Render(groups []tracking.Group, pending, done int, issues *UpstreamIssues, 
 	fmt.Fprintf(&sb, "# OpenSSL 4 Migration Audit (%s)\n\n", now.Format("2006-01-02"))
 	fmt.Fprintf(&sb, "Tracking issue: Homebrew/homebrew-core#278366\n\n")
 	fmt.Fprintf(&sb, "## Summary\n\n")
-	fmt.Fprintf(&sb, "- Formulae tracked: %d\n", len(rows))
+	fmt.Fprintf(&sb, "- Staging-scope formulae: %d\n", len(rows))
 	fmt.Fprintf(&sb, "- Live pending: %d\n", pending)
 	fmt.Fprintf(&sb, "- Live done: %d (%.1f%%)\n", done, percent(done, len(rows)))
-	fmt.Fprintf(&sb, "- Open migration PRs: %d\n", len(openPRs))
+	fmt.Fprintf(&sb, "- Open staging PRs: %d\n", len(openPRs))
 	fmt.Fprintf(&sb, "- Draft migration PRs: %d\n", draftPRs)
 	fmt.Fprintf(&sb, "- PRs with merge/check blockers: %d\n", unstablePRs)
 	fmt.Fprintf(&sb, "- Pending formulae without open migration PRs: %d\n\n", missingPRs)
 
-	fmt.Fprintf(&sb, "## Branch/Base Mismatches\n\n")
-	fmt.Fprintf(&sb, "Open migration PRs whose base branch differs from the computed target branch.\n\n")
+	fmt.Fprintf(&sb, "## Retarget to Staging\n\n")
+	fmt.Fprintf(&sb, "Open staging-scope migration PRs whose base branch is not %s.\n\n", deptree.StagingBranch)
 	writeBaseMismatchTable(&sb, sortRows(baseMismatchRows(rows)))
 
 	fmt.Fprintf(&sb, "## Staging Priority\n\n")
@@ -128,12 +128,6 @@ func Render(groups []tracking.Group, pending, done int, issues *UpstreamIssues, 
 	writeRowsTable(&sb, sortRows(filterRows(rows, func(r tracking.Row) bool {
 		return r.LiveStatus == "PENDING" && r.TargetBranchOrDefault() == deptree.StagingBranch
 	})), issueByFormula, 0)
-
-	fmt.Fprintf(&sb, "## Main-Track Opportunities\n\n")
-	fmt.Fprintf(&sb, "Top %d pending main-track formulae sorted by transitive dependent count.\n\n", mainTrackLimit)
-	writeRowsTable(&sb, sortRows(filterRows(rows, func(r tracking.Row) bool {
-		return r.LiveStatus == "PENDING" && r.TargetBranchOrDefault() == deptree.MainBranch
-	})), issueByFormula, mainTrackLimit)
 
 	fmt.Fprintf(&sb, "## Upstream Issue Coverage Gaps\n\n")
 	fmt.Fprintf(&sb, "Top %d pending staged formulae with upstream metadata and no curated upstream issue entry.\n\n", upstreamGapLimit)
@@ -157,6 +151,28 @@ func collectRows(groups []tracking.Group) []tracking.Row {
 		}
 	}
 	return rows
+}
+
+func stagingRows(rows []tracking.Row) []tracking.Row {
+	var out []tracking.Row
+	for _, row := range rows {
+		if row.TargetBranchOrDefault() == deptree.StagingBranch {
+			out = append(out, row)
+		}
+	}
+	return out
+}
+
+func statusCounts(rows []tracking.Row) (pending, done int) {
+	for _, row := range rows {
+		switch row.LiveStatus {
+		case "PENDING":
+			pending++
+		case "DONE":
+			done++
+		}
+	}
+	return pending, done
 }
 
 func uniquePRs(rows []tracking.Row) map[int]*github.PR {
@@ -194,9 +210,10 @@ func sortRows(rows []tracking.Row) []tracking.Row {
 func baseMismatchRows(rows []tracking.Row) []tracking.Row {
 	return filterRows(rows, func(row tracking.Row) bool {
 		return row.LiveStatus == "PENDING" &&
+			row.TargetBranchOrDefault() == deptree.StagingBranch &&
 			row.OpenPR != nil &&
 			row.OpenPR.BaseRefName != "" &&
-			row.OpenPR.BaseRefName != row.TargetBranchOrDefault()
+			row.OpenPR.BaseRefName != deptree.StagingBranch
 	})
 }
 

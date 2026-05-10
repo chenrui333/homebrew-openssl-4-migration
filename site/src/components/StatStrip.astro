@@ -7,10 +7,10 @@ interface Props {
 
 const { snapshot } = Astro.props;
 const stats = [
-  ["Tracked formulae", snapshot.total_formulae],
+  ["Staging-scope formulae", snapshot.total_formulae],
   ["Done", snapshot.done],
   ["Pending", snapshot.pending],
-  ["Open PRs", snapshot.open_prs],
+  ["Open staging PRs", snapshot.open_prs],
   ["Current gate", snapshot.current_gate.label],
   ["Upstream gaps", snapshot.upstream_gap_count],
 ];

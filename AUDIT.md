@@ -4,26 +4,21 @@ Tracking issue: Homebrew/homebrew-core#278366
 
 ## Summary
 
-- Formulae tracked: 759
-- Live pending: 679
-- Live done: 80 (10.5%)
-- Open migration PRs: 25
-- Draft migration PRs: 25
-- PRs with merge/check blockers: 25
-- Pending formulae without open migration PRs: 653
+- Staging-scope formulae: 57
+- Live pending: 18
+- Live done: 39 (68.4%)
+- Open staging PRs: 18
+- Draft migration PRs: 18
+- PRs with merge/check blockers: 18
+- Pending formulae without open migration PRs: 0
 
-## Branch/Base Mismatches
+## Retarget to Staging
 
-Open migration PRs whose base branch differs from the computed target branch.
+Open staging-scope migration PRs whose base branch is not openssl-4-migration-staging.
 
 | Formula | PR | Current Base | Expected Base | Target | Readiness |
 |---|---|---|---|---|---|
-| ldns | #281770 | openssl-4-migration-staging | main | main-track leaf | draft, base-mismatch, checks-blocked, merge-unstable |
-| azure-core-cpp | #281235 | openssl-4-migration-staging | main | main-track leaf | draft, base-mismatch, checks-blocked, merge-unstable |
-| azure-storage-common-cpp | #281235 | openssl-4-migration-staging | main | main-track leaf | draft, base-mismatch, checks-blocked, merge-unstable |
-| dotnet@8 | #281784 | openssl-4-migration-staging | main | main-track leaf | draft, base-mismatch, checks-blocked, merge-unstable |
-| eralchemy | #281771 | openssl-4-migration-staging | main | main-track leaf | draft, base-mismatch, checks-blocked, merge-unstable |
-| liboqs | #280651 | openssl-4-migration-staging | main | main-track leaf | draft, base-mismatch, checks-blocked, merge-unstable |
+| _none_ |  |  |  |  |  |
 
 ## Staging Priority
 
@@ -49,43 +44,6 @@ Pending staged formulae are sorted by transitive dependent count.
 | dotnet | openssl-4-migration-staging | 0 | 2 | PENDING | #280829 | draft, checks-blocked, merge-unstable | github:dotnet/dotnet |  |
 | gdal | openssl-4-migration-staging | 2 | 2 | PENDING | #280870 | draft, checks-blocked, merge-unstable | github:OSGeo/gdal |  |
 | php | openssl-4-migration-staging | 2 | 0 | PENDING | #280871 | draft, checks-blocked, merge-unstable | github:php/php-src |  |
-
-## Main-Track Opportunities
-
-Top 30 pending main-track formulae sorted by transitive dependent count.
-
-| Formula | Target | Depth | Impact | Status | PR | Readiness | Upstream | Issues |
-|---|---|---:|---:|---|---|---|---|---|
-| crystal | main | - | 5 | PENDING | none | missing-pr | github:crystal-lang/crystal |  |
-| fizz | main | - | 5 | PENDING | none | missing-pr | github:facebookincubator/fizz |  |
-| ldns | main | - | 4 | PENDING | #281770 | draft, base-mismatch, checks-blocked, merge-unstable | other |  |
-| pkcs11-helper | main | - | 4 | PENDING | none | missing-pr | github:OpenSC/pkcs11-helper |  |
-| cpprestsdk | main | - | 3 | PENDING | none | missing-pr | github:microsoft/cpprestsdk |  |
-| libwebsockets | main | - | 3 | PENDING | none | missing-pr | github:warmcat/libwebsockets |  |
-| libxmlsec1 | main | - | 3 | PENDING | none | missing-pr | github:lsh123/xmlsec |  |
-| mvfst | main | - | 3 | PENDING | none | missing-pr | github:facebook/mvfst |  |
-| nim | main | - | 3 | PENDING | none | missing-pr | github:nim-lang/Nim |  |
-| wangle | main | - | 3 | PENDING | none | missing-pr | github:facebook/wangle |  |
-| xml-security-c | main | - | 3 | PENDING | none | missing-pr | apache |  |
-| capnp | main | - | 2 | PENDING | none | missing-pr | github:capnproto/capnproto |  |
-| davix | main | - | 2 | PENDING | none | missing-pr | github:cern-fts/davix |  |
-| libks | main | - | 2 | PENDING | none | missing-pr | github:signalwire/libks |  |
-| libretls | main | - | 2 | PENDING | none | missing-pr | other |  |
-| mongo-c-driver | main | - | 2 | PENDING | none | missing-pr | github:mongodb/mongo-c-driver |  |
-| pypy | main | - | 2 | PENDING | none | missing-pr | github:pypy/pypy |  |
-| riemann-client | main | - | 2 | PENDING | none | missing-pr | other |  |
-| samba | main | - | 2 | PENDING | none | missing-pr | other |  |
-| w3m | main | - | 2 | PENDING | none | missing-pr | other |  |
-| xml-tooling-c | main | - | 2 | PENDING | none | missing-pr | other |  |
-| afflib | main | - | 1 | PENDING | none | missing-pr | github:sshock/AFFLIBv3 |  |
-| azure-core-cpp | main | - | 1 | PENDING | #281235 | draft, base-mismatch, checks-blocked, merge-unstable | github:Azure/azure-sdk-for-cpp |  |
-| cyrus-sasl | main | - | 1 | PENDING | none | missing-pr | github:cyrusimap/cyrus-sasl |  |
-| erlang@26 | main | - | 1 | PENDING | none | missing-pr | github:erlang/otp |  |
-| etcd-cpp-apiv3 | main | - | 1 | PENDING | none | missing-pr | github:etcd-cpp-apiv3/etcd-cpp-apiv3 |  |
-| fbthrift | main | - | 1 | PENDING | none | missing-pr | github:facebook/fbthrift |  |
-| getdns | main | - | 1 | PENDING | none | missing-pr | github:getdnsapi/getdns |  |
-| gwenhywfar | main | - | 1 | PENDING | none | missing-pr | other |  |
-| libewf | main | - | 1 | PENDING | none | missing-pr | github:libyal/libewf |  |
 
 ## Upstream Issue Coverage Gaps
 
