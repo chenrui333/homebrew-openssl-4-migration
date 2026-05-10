@@ -1,6 +1,7 @@
 package site
 
 import (
+	"fmt"
 	"strings"
 	"testing"
 
@@ -77,21 +78,26 @@ func TestRenderIncludesGateTrackerAndUpstreamPages(t *testing.T) {
 	for _, page := range pages {
 		byPath[page.Path] = page.Content
 	}
-	for _, path := range []string{"index.md", "tracker.md", "upstream.md"} {
+	for _, path := range []string{"index.md", "queue.md", "tracker.md", "upstream.md"} {
 		if byPath[path] == "" {
 			t.Fatalf("missing generated page %s", path)
 		}
 	}
 	for _, want := range []string{
 		"OpenSSL 4 Migration Dashboard",
+		"Action Queue",
 		"Batch 0 - Roots",
 		"rust-lang/rust",
 		"Open curated blockers",
 		"systemd/systemd",
+		"Next action",
 	} {
 		if !strings.Contains(byPath["index.md"], want) {
 			t.Fatalf("index page missing %q\n%s", want, byPath["index.md"])
 		}
+	}
+	if !strings.Contains(byPath["queue.md"], "Ready to merge") {
+		t.Fatalf("queue page should include action sections\n%s", byPath["queue.md"])
 	}
 	if !strings.Contains(byPath["tracker.md"], "<details class=\"tracker-group\" open>") {
 		t.Fatalf("tracker should open the current gate\n%s", byPath["tracker.md"])
@@ -133,5 +139,138 @@ func TestCurrentGateChoosesLowestPendingDepth(t *testing.T) {
 	got := currentGate(groups)
 	if got.Label != "Batch 0 - Roots" {
 		t.Fatalf("currentGate = %q, want Batch 0 - Roots", got.Label)
+	}
+}
+
+func TestNextActionForReadinessStates(t *testing.T) {
+	checkFailure := []github.PRStatusCheck{{TypeName: "CheckRun", Status: "COMPLETED", Conclusion: "FAILURE"}}
+	checkSuccess := []github.PRStatusCheck{{TypeName: "CheckRun", Status: "COMPLETED", Conclusion: "SUCCESS"}}
+	tests := []struct {
+		name string
+		row  tracking.Row
+		want string
+	}{
+		{name: "done", row: siteRow("done", "DONE", 0, nil), want: actionDone},
+		{name: "missing pr", row: siteRow("missing", "PENDING", 0, nil), want: actionOpenPR},
+		{name: "retarget", row: siteRow("retarget", "PENDING", 0, &github.PR{BaseRefName: deptree.MainBranch}), want: actionRetargetPR},
+		{name: "draft", row: siteRow("draft", "PENDING", 0, &github.PR{BaseRefName: deptree.StagingBranch, IsDraft: true}), want: actionDraft},
+		{name: "ci", row: siteRow("ci", "PENDING", 0, &github.PR{BaseRefName: deptree.StagingBranch, StatusCheckRollup: checkFailure}), want: actionInspectCI},
+		{name: "merge", row: siteRow("merge", "PENDING", 0, &github.PR{BaseRefName: deptree.StagingBranch, MergeStateStatus: "DIRTY", StatusCheckRollup: checkSuccess}), want: actionMerge},
+		{name: "ready", row: siteRow("ready", "PENDING", 0, &github.PR{BaseRefName: deptree.StagingBranch, StatusCheckRollup: checkSuccess}), want: actionReviewMerge},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := nextActionFor(tt.row).Slug; got != tt.want {
+				t.Fatalf("nextActionFor() = %q, want %q", got, tt.want)
+			}
+		})
+	}
+}
+
+func TestQueueSectionsGroupRowsWithoutDuplicates(t *testing.T) {
+	checkFailure := []github.PRStatusCheck{{TypeName: "CheckRun", Status: "COMPLETED", Conclusion: "FAILURE"}}
+	checkSuccess := []github.PRStatusCheck{{TypeName: "CheckRun", Status: "COMPLETED", Conclusion: "SUCCESS"}}
+	rows := []tracking.Row{
+		siteRow("ready", "PENDING", 4, &github.PR{BaseRefName: deptree.StagingBranch, StatusCheckRollup: checkSuccess}),
+		siteRow("retarget", "PENDING", 3, &github.PR{BaseRefName: deptree.MainBranch, StatusCheckRollup: checkSuccess}),
+		siteRow("ci", "PENDING", 2, &github.PR{BaseRefName: deptree.StagingBranch, StatusCheckRollup: checkFailure}),
+		siteRow("merge", "PENDING", 2, &github.PR{BaseRefName: deptree.StagingBranch, MergeStateStatus: "DIRTY", StatusCheckRollup: checkSuccess}),
+		siteRow("draft", "PENDING", 1, &github.PR{BaseRefName: deptree.StagingBranch, IsDraft: true}),
+		siteRow("missing", "PENDING", 1, nil),
+		siteRow("upstream", "PENDING", 5, &github.PR{BaseRefName: deptree.StagingBranch, StatusCheckRollup: checkSuccess}),
+		siteRowWithTarget("main-upstream", "PENDING", 6, deptree.MainBranch, &github.PR{BaseRefName: deptree.MainBranch, StatusCheckRollup: checkSuccess}),
+	}
+	m := model{
+		Rows: rows,
+		IssueByFormula: map[string][]audit.Issue{
+			"upstream":      {{URL: "https://github.com/example/upstream/issues/1", State: "open", Status: "relevant"}},
+			"main-upstream": {{URL: "https://github.com/example/main-upstream/issues/1", State: "open", Status: "relevant"}},
+		},
+	}
+	sections := queueSections(m)
+	wants := map[string]string{
+		"Ready to merge":    "ready",
+		"Retarget needed":   "retarget",
+		"CI blocked":        "ci",
+		"Merge blocked":     "merge",
+		"Draft PRs":         "draft",
+		"Missing PRs":       "missing",
+		"Upstream blockers": "upstream",
+	}
+	seen := make(map[string]string)
+	for _, section := range sections {
+		if want := wants[section.Title]; want != "" {
+			if len(section.Rows) != 1 || section.Rows[0].Name != want {
+				t.Fatalf("section %q rows = %#v, want only %q", section.Title, section.Rows, want)
+			}
+		}
+		for _, row := range section.Rows {
+			if previous := seen[row.Name]; previous != "" {
+				t.Fatalf("row %q appears in both %q and %q", row.Name, previous, section.Title)
+			}
+			seen[row.Name] = section.Title
+		}
+	}
+	for _, row := range rows {
+		if row.Name == "main-upstream" {
+			continue
+		}
+		if seen[row.Name] == "" {
+			t.Fatalf("row %q missing from queue sections", row.Name)
+		}
+	}
+	if section := seen["main-upstream"]; section != "" {
+		t.Fatalf("main-track upstream row should not be grouped as a staged queue blocker, got %q", section)
+	}
+}
+
+func TestRenderQueueSortsCurrentGateByImpactThenName(t *testing.T) {
+	depth0 := 0
+	groups := []tracking.Group{{
+		Depth: &depth0,
+		Label: "Batch 0 - Roots",
+		Rows: []tracking.Row{
+			siteRow("z-low", "PENDING", 1, nil),
+			siteRow("a-high", "PENDING", 3, nil),
+			siteRow("b-high", "PENDING", 3, nil),
+		},
+	}}
+	pages := Render(&deptree.DepTree{}, groups, 3, 0, &audit.UpstreamIssues{})
+	var queue string
+	for _, page := range pages {
+		if page.Path == "queue.md" {
+			queue = page.Content
+		}
+	}
+	if queue == "" {
+		t.Fatal("missing queue page")
+	}
+	a := strings.Index(queue, "<strong>a-high</strong>")
+	b := strings.Index(queue, "<strong>b-high</strong>")
+	z := strings.Index(queue, "<strong>z-low</strong>")
+	if a < 0 || b < 0 || z < 0 || a >= b || b >= z {
+		t.Fatalf("current gate rows not sorted by impact then name\n%s", queue)
+	}
+}
+
+func siteRow(name, status string, impactCount int, pr *github.PR) tracking.Row {
+	return siteRowWithTarget(name, status, impactCount, deptree.StagingBranch, pr)
+}
+
+func siteRowWithTarget(name, status string, impactCount int, target string, pr *github.PR) tracking.Row {
+	parents := make([]string, impactCount)
+	for i := range parents {
+		parents[i] = fmt.Sprintf("parent-%d", i)
+	}
+	return tracking.Row{
+		Formula: deptree.Formula{
+			Name:                            name,
+			TargetBranch:                    target,
+			UpstreamProvider:                "github",
+			UpstreamRepo:                    "example/" + name,
+			TransitiveOpenSSLFormulaParents: parents,
+		},
+		LiveStatus: status,
+		OpenPR:     pr,
 	}
 }
