@@ -1,4 +1,4 @@
-# OpenSSL 4 Migration Checklist (2026-05-09)
+# OpenSSL 4 Migration Checklist (2026-05-10)
 
 Progress: **41/759 (5.4%)**
 Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/homebrew-core/issues/278366)
@@ -140,7 +140,7 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 - [ ] cassandra-cpp-driver
 - [ ] ccache
 - [ ] cfengine
-- [ ] cgal <!-- PR #281768 open -->
+- [ ] cgal
 - [ ] cgit
 - [ ] chawan
 - [ ] citus
@@ -578,7 +578,7 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 - [ ] python@3.10
 - [ ] python@3.9
 - [ ] qca
-- [ ] qpdf <!-- PR #281769 open -->
+- [ ] qpdf
 - [ ] qpid-proton
 - [ ] qxmpp
 - [ ] rabbitmq-c

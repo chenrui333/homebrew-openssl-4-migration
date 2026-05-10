@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-09T12:46:04-04:00",
+  "generated_at": "2026-05-10T07:10:43Z",
   "repository": "Homebrew/homebrew-core",
-  "git_head": "5d56cb4045b8e1b8fda0b49c16f65a4ee197561a",
+  "git_head": "2a3a1084e0e8d3b7f913e7db40cad05df569995e",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "staging_branch": "openssl-4-migration-staging",
   "staged_depths": {
@@ -741,7 +741,6 @@
         "openssl@3",
         "sqlite",
         "xz",
-        "berkeley-db@5",
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [],

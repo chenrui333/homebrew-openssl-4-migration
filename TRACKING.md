@@ -1,4 +1,4 @@
-OpenSSL 4 Migration Status (2026-05-09)
+OpenSSL 4 Migration Status (2026-05-10)
 ========================================
 Total pending:  718
 Total done:     41 (5.4%)
@@ -134,7 +134,7 @@ Leaves   [41/713 done]
   cassandra-cpp-driver     PENDING
   ccache                   PENDING
   cfengine                 PENDING
-  cgal                     PENDING    [PR #281768 open]
+  cgal                     PENDING
   cgit                     PENDING
   chawan                   PENDING
   citus                    PENDING
@@ -572,7 +572,7 @@ Leaves   [41/713 done]
   python@3.10              PENDING
   python@3.9               PENDING
   qca                      PENDING
-  qpdf                     PENDING    [PR #281769 open]
+  qpdf                     PENDING
   qpid-proton              PENDING
   qxmpp                    PENDING
   rabbitmq-c               PENDING
