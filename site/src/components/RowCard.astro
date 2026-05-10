@@ -1,6 +1,7 @@
 ---
 import type { SnapshotRow } from "../lib/types";
 import { depthLabel, formulaAnchor, prLabel, slug, upstreamLabel } from "../lib/format";
+import ImpactBadge from "./ImpactBadge.astro";
 
 interface Props {
   row: SnapshotRow;
@@ -34,7 +35,7 @@ const classes = ["evidence-row", compact && "evidence-row--compact", href && "ev
       </div>
       <div>
         <dt>Impact</dt>
-        <dd><span class="impact">{row.impact_count}</span></dd>
+        <dd><ImpactBadge value={row.impact_count} focusable={false} /></dd>
       </div>
       <div>
         <dt>PR</dt>
@@ -71,7 +72,7 @@ const classes = ["evidence-row", compact && "evidence-row--compact", href && "ev
       </div>
       <div>
         <dt>Impact</dt>
-        <dd><span class="impact">{row.impact_count}</span></dd>
+        <dd><ImpactBadge value={row.impact_count} /></dd>
       </div>
       <div>
         <dt>PR</dt>

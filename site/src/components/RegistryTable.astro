@@ -1,6 +1,7 @@
 ---
 import type { SnapshotRow } from "../lib/types";
 import { depthLabel, formatDate, formulaAnchor, prLabel, slug, upstreamLabel } from "../lib/format";
+import ImpactBadge from "./ImpactBadge.astro";
 
 interface Props {
   rows: SnapshotRow[];
@@ -94,7 +95,7 @@ const quickFilters = [
             <span class={"pill action-" + slug(row.next_action)}>{row.next_action}</span>
             {row.readiness.length > 0 && <span class="readiness-mini">{row.readiness.join(" · ")}</span>}
           </td>
-          <td data-label="Impact"><span class="impact">{row.impact_count}</span></td>
+          <td data-label="Impact"><ImpactBadge value={row.impact_count} /></td>
           <td data-label="Gate">{row.group_label}</td>
           <td data-label="Status">{row.live_status}</td>
           <td data-label="PR">

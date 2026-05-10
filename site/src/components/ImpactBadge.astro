@@ -1,0 +1,19 @@
+---
+interface Props {
+  value: number;
+  focusable?: boolean;
+}
+
+const { value, focusable = true } = Astro.props;
+const helpText = value + " transitive OpenSSL-linked formula parents. Higher impact means higher migration leverage.";
+const ariaLabel = value + " transitive OpenSSL-linked formula parents affected by this row. Higher impact means higher migration leverage.";
+---
+
+<span
+  class="impact metric-help"
+  tabindex={focusable ? "0" : undefined}
+  aria-label={ariaLabel}
+  data-tooltip={helpText}
+>
+  {value}
+</span>

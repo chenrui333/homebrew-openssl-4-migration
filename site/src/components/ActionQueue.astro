@@ -2,6 +2,7 @@
 import type { SnapshotRow } from "../lib/types";
 import { queueActions, rowsForAction } from "../lib/data";
 import { pagePath, prLabel, slug, trackerHref } from "../lib/format";
+import ImpactBadge from "./ImpactBadge.astro";
 ---
 
 <section id="action-queue" class="registry-section">
@@ -38,7 +39,7 @@ import { pagePath, prLabel, slug, trackerHref } from "../lib/format";
                     {row.issues.slice(0, 1).map((issue) => <a href={issue.url}>Issue</a>)}
                   </span>
                 </div>
-                <b>{row.impact_count}</b>
+                <ImpactBadge value={row.impact_count} />
               </li>
             ))}
           </ol>

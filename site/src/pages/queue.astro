@@ -2,6 +2,7 @@
 import Layout from "../components/Layout.astro";
 import WorkflowRail from "../components/WorkflowRail.astro";
 import Footer from "../components/Footer.astro";
+import ImpactBadge from "../components/ImpactBadge.astro";
 import { queueActions, rowsForAction } from "../lib/data";
 import { prLabel, sectionAnchor, slug, trackerHref } from "../lib/format";
 
@@ -22,6 +23,9 @@ const railItems = sections.map(({ action, rows }) => ({
         <h1>Operational action queue</h1>
         <p>Rows grouped by next maintainer action, sorted by impact within each group.</p>
       </section>
+      <p class="metric-legend">
+        <strong>Impact</strong> = number of transitive OpenSSL-linked formula parents affected by this row. Higher numbers should usually be handled first.
+      </p>
       <section class="registry-section queue-accordion-list" aria-label="Action queue buckets">
         {sections.map(({ action, rows }) => (
           <details id={sectionAnchor(action)} class="queue-accordion" open={rows.length > 0}>
@@ -41,7 +45,7 @@ const railItems = sections.map(({ action, rows }) => ({
                       <span class="label">{row.group_label}</span>
                       <strong>{row.name}</strong>
                     </a>
-                    <span class="impact">{row.impact_count}</span>
+                    <ImpactBadge value={row.impact_count} />
                     <div class="queue-row__links">
                       {row.pr.url && <a href={row.pr.url}>{prLabel(row)}</a>}
                       {row.upstream.url && <a href={row.upstream.url}>Upstream</a>}
