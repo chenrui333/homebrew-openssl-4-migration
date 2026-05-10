@@ -1,0 +1,17 @@
+---
+import Layout from "../components/Layout.astro";
+import RegistryTable from "../components/RegistryTable.astro";
+import Footer from "../components/Footer.astro";
+import { rowsByImpact, snapshot } from "../lib/data";
+---
+
+<Layout title="Tracker | OpenSSL 4 Migration Control Room">
+  <section class="page-hero">
+    <span class="eyebrow">Registry table</span>
+    <h1>Formula tracker</h1>
+    <p>Search, filter, and inspect every formula in the OpenSSL 4 migration snapshot.</p>
+    <p class="figure-caption">{snapshot.rows.length} rows sorted by impact descending.</p>
+  </section>
+  <RegistryTable rows={rowsByImpact} />
+  <Footer />
+</Layout>

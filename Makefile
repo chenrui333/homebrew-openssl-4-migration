@@ -2,7 +2,7 @@ BINARY        := bin/sslmigrate
 HOMEBREW_CORE ?= /opt/homebrew/Library/Taps/homebrew/homebrew-core
 GO            ?= go
 
-.PHONY: help build dep-tree status checklist audit site migrate migrate-dry clean
+.PHONY: help build dep-tree status checklist audit site-data site migrate migrate-dry clean
 
 help:
 	@echo "Targets:"
@@ -11,7 +11,8 @@ help:
 	@echo "  status              Regenerate TRACKING.md + print dashboard"
 	@echo "  checklist           Regenerate CHECKLIST.md with markdown checkboxes"
 	@echo "  audit               Regenerate AUDIT.md with readiness and upstream context"
-	@echo "  site                Regenerate MkDocs pages and run mkdocs build --strict"
+	@echo "  site-data           Regenerate data/site_snapshot.json"
+	@echo "  site                Regenerate site data and build Astro static site"
 	@echo "  migrate FORMULA=X   Migrate formula X and open a PR"
 	@echo "  migrate-dry FORMULA=X   Dry-run migration (no branch/PR created)"
 	@echo "  clean               Remove bin/"
@@ -31,9 +32,11 @@ checklist: build
 audit: build
 	$(BINARY) audit --homebrew-core=$(HOMEBREW_CORE)
 
-site: build
+site-data: build
 	$(BINARY) site --homebrew-core=$(HOMEBREW_CORE)
-	mkdocs build --strict
+
+site: site-data
+	cd site && npm run build
 
 migrate: build
 ifndef FORMULA

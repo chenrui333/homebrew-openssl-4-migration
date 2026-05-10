@@ -1,0 +1,44 @@
+---
+import "../styles/global.css";
+import { pagePath } from "../lib/format";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "OpenSSL 4 Migration Control Room",
+  description = "A dated, inspectable registry for moving Homebrew formulae from openssl@3 to openssl@4.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <header class="topbar">
+      <nav class="topbar__inner" aria-label="Primary navigation">
+        <a class="brand" href={pagePath()}>
+          <span class="brand__mark">SSL4</span>
+          <span>Migration Registry</span>
+        </a>
+        <div class="navlinks">
+          <a href={pagePath("tracker/")}>Tracker</a>
+          <a href={pagePath("queue/")}>Queue</a>
+          <a href={pagePath("upstream/")}>Upstream</a>
+          <a href={pagePath("api/snapshot.json")}>JSON</a>
+        </div>
+      </nav>
+    </header>
+    <main id="content">
+      <slot />
+    </main>
+  </body>
+</html>

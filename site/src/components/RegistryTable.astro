@@ -1,0 +1,126 @@
+---
+import type { SnapshotRow } from "../lib/types";
+import { depthLabel, prLabel, slug, upstreamLabel } from "../lib/format";
+
+interface Props {
+  rows: SnapshotRow[];
+  showControls?: boolean;
+}
+
+const { rows, showControls = true } = Astro.props;
+---
+
+{showControls && (
+  <section class="registry-controls" data-registry-controls>
+    <label>
+      <span>Search registry</span>
+      <input type="search" data-registry-search placeholder="formula, upstream, target branch, PR" />
+    </label>
+    <div class="filter-chips" aria-label="Registry filters">
+      {["all", "current-gate", "pending", "ready", "draft", "ci-blocked", "base-mismatch", "missing-pr", "upstream-blocked", "done"].map((filter) => (
+        <button type="button" data-filter={filter} aria-pressed={filter === "all" ? "true" : "false"}>{filter.replace(/-/g, " ")}</button>
+      ))}
+    </div>
+    <p data-result-count class="figure-caption"></p>
+  </section>
+)}
+
+<div class="registry-table" data-registry-table>
+  <table>
+    <thead>
+      <tr>
+        <th>Formula</th>
+        <th>Action</th>
+        <th>Impact</th>
+        <th>Status</th>
+        <th>PR</th>
+        <th>Target</th>
+        <th>Upstream</th>
+        <th>Issues</th>
+      </tr>
+    </thead>
+    <tbody>
+      {rows.map((row) => (
+        <tr
+          data-row
+          data-filter-text={(row.name + " " + upstreamLabel(row) + " " + row.target_branch + " " + prLabel(row) + " " + row.next_action + " " + row.readiness.join(" ")).toLowerCase()}
+          data-current-gate={row.is_current_gate}
+          data-status={row.live_status.toLowerCase()}
+          data-readiness={row.readiness.join(" ")}
+          data-action={slug(row.next_action)}
+          data-impact={row.impact_count}
+          data-target={row.target_branch}
+          data-ready={row.is_ready}
+          data-draft={row.is_draft}
+          data-ci-blocked={row.is_ci_blocked}
+          data-base-mismatch={row.is_base_mismatch}
+          data-missing-pr={row.is_missing_pr}
+          data-upstream-blocked={row.is_upstream_blocked}
+        >
+          <td data-label="Formula">
+            <strong>{row.name}</strong>
+            <span>{depthLabel(row)}</span>
+          </td>
+          <td data-label="Action"><span class={"pill action-" + slug(row.next_action)}>{row.next_action}</span></td>
+          <td data-label="Impact"><span class="impact">{row.impact_count}</span></td>
+          <td data-label="Status">{row.live_status}</td>
+          <td data-label="PR">{row.open_pr_url ? <a href={row.open_pr_url}>{prLabel(row)}</a> : prLabel(row)}</td>
+          <td data-label="Target"><code>{row.target_branch}</code></td>
+          <td data-label="Upstream">{row.upstream_url ? <a href={row.upstream_url}>{upstreamLabel(row)}</a> : upstreamLabel(row)}</td>
+          <td data-label="Issues">
+            {row.issue_links.length === 0 ? <span class="muted">none</span> : row.issue_links.slice(0, 2).map((issue, index) => (
+              <>
+                {index > 0 && " "}
+                <a href={issue.url}>{issue.label}</a>
+              </>
+            ))}
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+
+<script>
+  const controls = document.querySelector("[data-registry-controls]");
+  const rows = Array.from(document.querySelectorAll("[data-row]"));
+  const input = controls?.querySelector("[data-registry-search]");
+  const buttons = Array.from(controls?.querySelectorAll("[data-filter]") || []);
+  const count = controls?.querySelector("[data-result-count]");
+  let active = "all";
+
+  function matchesFilter(row, filter) {
+    if (filter === "all") return true;
+    if (filter === "current-gate") return row.dataset.currentGate === "true";
+    if (filter === "pending") return row.dataset.status === "pending";
+    if (filter === "done") return row.dataset.status === "done";
+    if (filter === "ready") return row.dataset.ready === "true";
+    if (filter === "draft") return row.dataset.draft === "true";
+    if (filter === "ci-blocked") return row.dataset.ciBlocked === "true";
+    if (filter === "base-mismatch") return row.dataset.baseMismatch === "true";
+    if (filter === "missing-pr") return row.dataset.missingPr === "true";
+    if (filter === "upstream-blocked") return row.dataset.upstreamBlocked === "true";
+    return true;
+  }
+
+  function applyFilters() {
+    const query = String(input?.value || "").toLowerCase();
+    let visible = 0;
+    rows.forEach((row) => {
+      const shown = matchesFilter(row, active) && String(row.dataset.filterText || "").includes(query);
+      row.hidden = !shown;
+      if (shown) visible += 1;
+    });
+    buttons.forEach((button) => button.setAttribute("aria-pressed", button.dataset.filter === active ? "true" : "false"));
+    if (count) count.textContent = visible + " of " + rows.length + " rows shown";
+  }
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      active = button.dataset.filter || "all";
+      applyFilters();
+    });
+  });
+  input?.addEventListener("input", applyFilters);
+  applyFilters();
+</script>

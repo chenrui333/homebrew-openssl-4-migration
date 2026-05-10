@@ -1,0 +1,46 @@
+---
+import type { SnapshotRow } from "../lib/types";
+import { rowsForAction } from "../lib/data";
+import { pagePath, slug } from "../lib/format";
+
+const actions = [
+  "Review and merge",
+  "Retarget PR",
+  "Inspect CI",
+  "Resolve draft blockers",
+  "Track upstream blocker",
+  "Open migration PR",
+];
+---
+
+<section class="registry-section">
+  <div class="section-heading">
+    <span>§ 02</span>
+    <div>
+      <h2>Action queue</h2>
+      <p>Daily maintainer buckets derived from readiness state.</p>
+    </div>
+  </div>
+  <div class="queue-grid">
+    {actions.map((action) => {
+      const rows = rowsForAction(action, 4) as SnapshotRow[];
+      return (
+        <article class="queue-card">
+          <div class="queue-card__head">
+            <span class={"pill action-" + slug(action)}>{action}</span>
+            <strong>{rowsForAction(action).length}</strong>
+          </div>
+          <ol>
+            {rows.map((row) => (
+              <li>
+                <a href={pagePath("tracker/")}>{row.name}</a>
+                <span>{row.impact_count}</span>
+              </li>
+            ))}
+          </ol>
+        </article>
+      );
+    })}
+  </div>
+  <p class="figure-caption">Open the queue page for complete sections and links.</p>
+</section>

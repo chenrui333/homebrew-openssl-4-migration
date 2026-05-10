@@ -1,0 +1,39 @@
+---
+import Layout from "../components/Layout.astro";
+import RegistryTable from "../components/RegistryTable.astro";
+import Footer from "../components/Footer.astro";
+import { rowsForAction } from "../lib/data";
+
+const actions = [
+  "Review and merge",
+  "Retarget PR",
+  "Inspect CI",
+  "Resolve draft blockers",
+  "Track upstream blocker",
+  "Open migration PR",
+];
+---
+
+<Layout title="Action Queue | OpenSSL 4 Migration Control Room">
+  <section class="page-hero">
+    <span class="eyebrow">Daily maintainer page</span>
+    <h1>Operational action queue</h1>
+    <p>Rows grouped by the next maintainer action, sorted by impact within each group.</p>
+  </section>
+  {actions.map((action, index) => {
+    const rows = rowsForAction(action);
+    return (
+      <section class="registry-section">
+        <div class="section-heading">
+          <span>§ {String(index + 1).padStart(2, "0")}</span>
+          <div>
+            <h2>{action}</h2>
+            <p>{rows.length} pending rows</p>
+          </div>
+        </div>
+        <RegistryTable rows={rows} showControls={false} />
+      </section>
+    );
+  })}
+  <Footer />
+</Layout>

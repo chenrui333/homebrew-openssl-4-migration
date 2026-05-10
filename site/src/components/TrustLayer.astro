@@ -1,0 +1,30 @@
+---
+---
+
+<section class="registry-section trust-layer">
+  <div class="section-heading">
+    <span>§ 03</span>
+    <div>
+      <h2>Trust and provenance</h2>
+      <p>Every row is generated from repository data, Homebrew formula state, mapped PRs, and curated upstream issues.</p>
+    </div>
+  </div>
+  <div class="trust-grid">
+    <article>
+      <span class="label">Target branch</span>
+      <p>Rows carry the computed migration target so staging work stays separate from direct main-track leaves.</p>
+    </article>
+    <article>
+      <span class="label">PR state</span>
+      <p>Draft, CI, base, and merge-state signals are derived from the mapped Homebrew/homebrew-core pull request.</p>
+    </article>
+    <article>
+      <span class="label">Upstream issue</span>
+      <p>Curated blockers and searchable upstream repositories are exposed beside formula rows.</p>
+    </article>
+    <article>
+      <span class="label">Impact graph</span>
+      <p>Impact counts come from the transitive OpenSSL-linked formula graph in the generated dependency inventory.</p>
+    </article>
+  </div>
+</section>

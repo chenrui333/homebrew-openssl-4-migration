@@ -123,20 +123,20 @@ func siteCmd() *cobra.Command {
 	var homebrewCore, depTree, upstreamIssues, output string
 	cmd := &cobra.Command{
 		Use:   "site",
-		Short: "Write MkDocs pages with migration progress and blockers",
+		Short: "Write normalized JSON snapshot for the static site",
 		RunE: func(_ *cobra.Command, _ []string) error {
 			return site.Run(site.Options{
 				HomebrewCore:       homebrewCore,
 				DepTreePath:        depTree,
 				UpstreamIssuesPath: upstreamIssues,
-				OutputDir:          output,
+				OutputPath:         output,
 			})
 		},
 	}
 	cmd.Flags().StringVar(&homebrewCore, "homebrew-core", envOr("HOMEBREW_CORE", defaultHomebrewCore), "path to homebrew-core checkout")
 	cmd.Flags().StringVar(&depTree, "dep-tree", "data/dep_tree.json", "dependency inventory JSON")
 	cmd.Flags().StringVar(&upstreamIssues, "upstream-issues", "data/upstream_issues.json", "curated upstream issue JSON")
-	cmd.Flags().StringVar(&output, "output", "docs", "MkDocs docs output directory")
+	cmd.Flags().StringVar(&output, "output", "data/site_snapshot.json", "normalized site snapshot JSON")
 	return cmd
 }
 

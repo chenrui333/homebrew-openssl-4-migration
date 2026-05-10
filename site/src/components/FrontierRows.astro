@@ -1,0 +1,24 @@
+---
+import type { SnapshotRow } from "../lib/types";
+import RowCard from "./RowCard.astro";
+
+interface Props {
+  rows: SnapshotRow[];
+}
+
+const { rows } = Astro.props;
+---
+
+<section class="registry-section">
+  <div class="section-heading">
+    <span>§ 01</span>
+    <div>
+      <h2>Current migration frontier</h2>
+      <p>Highest-impact pending rows in the active gate.</p>
+    </div>
+  </div>
+  <div class="row-stack">
+    {rows.map((row) => <RowCard row={row} />)}
+  </div>
+  <p class="figure-caption">Rows are sorted by downstream OpenSSL-linked formula count, then formula name.</p>
+</section>

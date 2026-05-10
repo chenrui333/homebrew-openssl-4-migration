@@ -1,0 +1,35 @@
+---
+import type { SnapshotRow } from "../lib/types";
+import { depthLabel, prLabel, slug, upstreamLabel } from "../lib/format";
+
+interface Props {
+  row: SnapshotRow;
+  compact?: boolean;
+}
+
+const { row, compact = false } = Astro.props;
+---
+
+<article class:list={["evidence-row", compact && "evidence-row--compact"]}>
+  <div>
+    <span class="label">{depthLabel(row)} · {row.target_branch}</span>
+    <h3>{row.name}</h3>
+  </div>
+  <div class="row-meta">
+    <span class={"pill action-" + slug(row.next_action)}>{row.next_action}</span>
+    <span class="impact">{row.impact_count}</span>
+    {row.open_pr_url ? <a href={row.open_pr_url}>{prLabel(row)}</a> : <span>{prLabel(row)}</span>}
+  </div>
+  {!compact && (
+    <p class="row-caption">
+      {upstreamLabel(row)}
+      {row.issue_links.length > 0 && " · "}
+      {row.issue_links.slice(0, 2).map((issue, index) => (
+        <>
+          {index > 0 && ", "}
+          <a href={issue.url}>{issue.label}</a>
+        </>
+      ))}
+    </p>
+  )}
+</article>

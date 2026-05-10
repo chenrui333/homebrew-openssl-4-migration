@@ -1,0 +1,29 @@
+---
+import type { Snapshot } from "../lib/types";
+import { formatDate, pagePath, pct } from "../lib/format";
+
+interface Props {
+  snapshot: Snapshot;
+}
+
+const { snapshot } = Astro.props;
+---
+
+<section class="hero registry-section">
+  <div class="hero__copy">
+    <p class="eyebrow">Homebrew/homebrew-core migration registry</p>
+    <h1>OpenSSL 4 Migration Control Room</h1>
+    <p class="lede">A dated, inspectable registry for moving Homebrew formulae from openssl@3 to openssl@4.</p>
+    <div class="hero__actions" aria-label="Primary actions">
+      <a class="button button--primary" href={pagePath("tracker/")}>Browse tracker</a>
+      <a class="button" href={pagePath("queue/")}>View action queue</a>
+      <a class="button" href={pagePath("api/snapshot.json")}>Open JSON</a>
+    </div>
+  </div>
+  <aside class="snapshot-card" aria-label="Snapshot provenance">
+    <span class="label">Snapshot</span>
+    <strong>{formatDate(snapshot.generated_at)}</strong>
+    <span>{snapshot.done} done / {snapshot.total_formulae} tracked</span>
+    <span>{pct(snapshot.done, snapshot.total_formulae)} complete</span>
+  </aside>
+</section>

@@ -1,3 +1,6 @@
 bin/
 dist/
-/site/
+site/dist/
+site/.astro/
+site/.playwright-cli/
+site/node_modules/

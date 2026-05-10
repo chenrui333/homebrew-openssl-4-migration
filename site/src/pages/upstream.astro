@@ -1,0 +1,33 @@
+---
+import Layout from "../components/Layout.astro";
+import RegistryTable from "../components/RegistryTable.astro";
+import Footer from "../components/Footer.astro";
+import { openCuratedBlockers, upstreamCoverageGaps, reviewedNoIssueRows } from "../lib/data";
+
+const sections = [
+  ["Open curated blockers", "Formulae with relevant open upstream issues.", openCuratedBlockers()],
+  ["Upstream coverage gaps", "Staged pending formulae with upstream metadata and no curated issue entry.", upstreamCoverageGaps()],
+  ["Reviewed / no issue", "Curated or reviewed rows without a recorded upstream blocker.", reviewedNoIssueRows()],
+] as const;
+---
+
+<Layout title="Upstream | OpenSSL 4 Migration Control Room">
+  <section class="page-hero">
+    <span class="eyebrow">Upstream evidence</span>
+    <h1>Upstream blockers</h1>
+    <p>Curated blockers, gaps, and reviewed formulae for staging decisions.</p>
+  </section>
+  {sections.map(([title, description, rows], index) => (
+    <section class="registry-section">
+      <div class="section-heading">
+        <span>§ {String(index + 1).padStart(2, "0")}</span>
+        <div>
+          <h2>{title}</h2>
+          <p>{description}</p>
+        </div>
+      </div>
+      <RegistryTable rows={rows} showControls={false} />
+    </section>
+  ))}
+  <Footer />
+</Layout>

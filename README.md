@@ -6,7 +6,7 @@ The workflow is split into the following steps:
 
 1. Build a dependency/status inventory from a local homebrew-core checkout.
 2. Regenerate tracking, checklist, audit, and dataset artifacts for the migration.
-3. Regenerate the MkDocs progress site for executive summary and depth-gate review.
+3. Regenerate the normalized site snapshot for executive summary and depth-gate review.
 4. Use the migration harness to update one formula, create the expected branch, commit, push to a fork, and open a PR.
 
 ## Prerequisites
@@ -14,7 +14,7 @@ The workflow is split into the following steps:
 - Go 1.26+
 - git
 - GitHub CLI (gh) authenticated for querying and creating Homebrew PRs
-- MkDocs and MkDocs Material for local site builds (`python -m pip install -r requirements-docs.txt`)
+- Node.js and npm for local Astro site builds
 - A local homebrew-core checkout
 
 Set HOMEBREW_CORE when your checkout is not at the Makefile default:
@@ -69,13 +69,33 @@ make audit
 
 This regenerates [AUDIT.md](AUDIT.md) by combining data/dep_tree.json, live migration PR state, and the curated upstream issue dataset in data/upstream_issues.json. The report highlights staged-track blockers, branch/base mismatches, main-track opportunities, readiness signals, upstream repository metadata, upstream issue coverage gaps, and known upstream OpenSSL 4 issues.
 
-## Refresh the MkDocs site
+## Refresh the site data
 
-Run `make site` to regenerate the MkDocs pages under [docs/](docs/index.md) and run `mkdocs build --strict`. The site shows an executive progress summary, current staged-depth gate, foldable migration tracker, upstream blockers, and upstream issue coverage gaps.
+~~~sh
+make site-data
+~~~
+
+This writes data/site_snapshot.json. Go owns the migration data and readiness normalization; Astro owns the public UI.
+
+## Run the Astro site
+
+~~~sh
+cd site
+npm install
+npm run dev
+~~~
+
+Build the static GitHub Pages site with:
+
+~~~sh
+make site
+~~~
+
+This regenerates data/site_snapshot.json and runs `npm run build` in [site/](site/).
 
 ## Daily dataset sync
 
-The GitHub Action in [.github/workflows/sync.yml](.github/workflows/sync.yml) runs daily and regenerates data/dep_tree.json, [TRACKING.md](TRACKING.md), [CHECKLIST.md](CHECKLIST.md), [AUDIT.md](AUDIT.md), and [docs/](docs/index.md). When those artifacts change, the workflow commits and pushes the updated datasets back to the repository. The Pages workflow in [.github/workflows/pages.yml](.github/workflows/pages.yml) builds the committed MkDocs content and deploys it with GitHub Pages.
+The GitHub Action in [.github/workflows/sync.yml](.github/workflows/sync.yml) runs daily and regenerates data/dep_tree.json, data/site_snapshot.json, [TRACKING.md](TRACKING.md), [CHECKLIST.md](CHECKLIST.md), and [AUDIT.md](AUDIT.md). When those artifacts change, the workflow commits and pushes the updated datasets back to the repository. The Pages workflow in [.github/workflows/pages.yml](.github/workflows/pages.yml) builds the Astro site from the committed snapshot and deploys site/dist with GitHub Pages.
 
 ## Migrate one formula
 
