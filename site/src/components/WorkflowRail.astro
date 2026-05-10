@@ -1,0 +1,83 @@
+---
+import { snapshot } from "../lib/data";
+import { formatDate } from "../lib/format";
+
+interface RailItem {
+  label: string;
+  href?: string;
+  count?: number | string;
+  filter?: string;
+}
+
+interface Props {
+  title: string;
+  items?: RailItem[];
+  filters?: RailItem[];
+  mobileLabel?: string;
+}
+
+const { title, items = [], filters = [], mobileLabel = "Jump to section" } = Astro.props;
+const summary = snapshot.summary;
+---
+
+<details class="mobile-jump-nav">
+  <summary>{mobileLabel}</summary>
+  <div class="workflow-panel">
+    <div class="workflow-panel__snapshot">
+      <span class="label">Snapshot</span>
+      <strong>{summary.current_gate}</strong>
+      <p>{summary.current_gate_pending} pending · {summary.open_staging_prs} open staging PRs</p>
+    </div>
+    {items.length > 0 && (
+      <nav aria-label={title + " sections"}>
+        {items.map((item) => (
+          <a href={item.href}>
+            <span>{item.label}</span>
+            {item.count !== undefined && <b>{item.count}</b>}
+          </a>
+        ))}
+      </nav>
+    )}
+    {filters.length > 0 && (
+      <div class="workflow-filter-list" aria-label={title + " filters"}>
+        {filters.map((item) => (
+          <button type="button" data-filter={item.filter} aria-pressed={item.filter === "all" ? "true" : "false"}>
+            <span>{item.label}</span>
+            {item.count !== undefined && <b>{item.count}</b>}
+          </button>
+        ))}
+      </div>
+    )}
+  </div>
+</details>
+
+<aside class="workflow-rail" aria-label={title}>
+  <div class="workflow-panel">
+    <div class="workflow-panel__snapshot">
+      <span class="label">Snapshot</span>
+      <strong>{summary.current_gate}</strong>
+      <p>{summary.current_gate_pending} pending · {summary.open_staging_prs} open staging PRs</p>
+      <small>{formatDate(snapshot.generated_at)}</small>
+    </div>
+    {items.length > 0 && (
+      <nav aria-label={title + " sections"}>
+        {items.map((item) => (
+          <a href={item.href}>
+            <span>{item.label}</span>
+            {item.count !== undefined && <b>{item.count}</b>}
+          </a>
+        ))}
+      </nav>
+    )}
+    {filters.length > 0 && (
+      <div class="workflow-filter-list" aria-label={title + " filters"}>
+        {filters.map((item) => (
+          <button type="button" data-filter={item.filter} aria-pressed={item.filter === "all" ? "true" : "false"}>
+            <span>{item.label}</span>
+            {item.count !== undefined && <b>{item.count}</b>}
+          </button>
+        ))}
+      </div>
+    )}
+  </div>
+</aside>

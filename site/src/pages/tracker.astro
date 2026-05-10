@@ -1,17 +1,44 @@
 ---
 import Layout from "../components/Layout.astro";
 import RegistryTable from "../components/RegistryTable.astro";
+import WorkflowRail from "../components/WorkflowRail.astro";
 import Footer from "../components/Footer.astro";
-import { registryRows, snapshot } from "../lib/data";
+import { gateCounts, registryRows, snapshot, trackerFilterCounts } from "../lib/data";
+import { slug } from "../lib/format";
+
+const counts = trackerFilterCounts();
+const gateFilterItems = gateCounts().map((gate) => ({ label: gate.label, filter: "gate:" + slug(gate.label), count: gate.count }));
+const filterItems = [
+  { label: "All", filter: "all", count: snapshot.rows.length },
+  { label: "Current gate", filter: "current-gate", count: counts["current-gate"] },
+  { label: "Pending", filter: "pending", count: counts.pending },
+  { label: "Ready", filter: "ready", count: counts.ready },
+  { label: "Draft", filter: "draft", count: counts.draft },
+  { label: "CI blocked", filter: "ci-blocked", count: counts["ci-blocked"] },
+  { label: "Retarget", filter: "retarget", count: counts.retarget },
+  { label: "Missing PR", filter: "missing-pr", count: counts["missing-pr"] },
+  { label: "Upstream blocked", filter: "upstream-blocked", count: counts["upstream-blocked"] },
+  { label: "Done", filter: "done", count: counts.done },
+  { label: "Has PR", filter: "has-pr", count: snapshot.rows.filter((row) => row.pr.number > 0).length },
+  { label: "No PR", filter: "no-pr", count: snapshot.rows.filter((row) => row.pr.number === 0).length },
+  { label: "Has upstream issue", filter: "has-upstream-issue", count: snapshot.rows.filter((row) => row.issues.length > 0).length },
+  { label: "Coverage gap", filter: "coverage-gap", count: snapshot.rows.filter((row) => row.issues.some((issue) => issue.label === "search")).length },
+  ...gateFilterItems,
+];
 ---
 
 <Layout title="Tracker | OpenSSL 4 Migration Control Room">
-  <section class="page-hero">
-    <span class="eyebrow">Registry table</span>
-    <h1>Formula tracker</h1>
-    <p>Search, filter, and inspect every staging-scope formula targeting openssl-4-migration-staging.</p>
-    <p class="figure-caption">{snapshot.rows.length} rows sorted by current gate, pending status, impact, then name.</p>
-  </section>
-  <RegistryTable rows={registryRows} />
-  <Footer />
+  <div class="workflow-shell">
+    <WorkflowRail title="Tracker filters" filters={filterItems} mobileLabel="Jump and filter" />
+    <div class="workflow-content">
+      <section class="page-hero">
+        <span class="eyebrow">Registry table</span>
+        <h1>Formula tracker</h1>
+        <p>Search, filter, and inspect every staging-scope formula targeting openssl-4-migration-staging.</p>
+        <p class="figure-caption">{snapshot.rows.length} rows sorted by current gate, pending status, impact, then name.</p>
+      </section>
+      <RegistryTable rows={registryRows} />
+      <Footer />
+    </div>
+  </div>
 </Layout>

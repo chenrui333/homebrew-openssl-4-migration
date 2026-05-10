@@ -1,6 +1,6 @@
 ---
 import type { SnapshotRow } from "../lib/types";
-import { depthLabel, prLabel, slug, upstreamLabel } from "../lib/format";
+import { depthLabel, formulaAnchor, prLabel, slug, upstreamLabel } from "../lib/format";
 
 interface Props {
   row: SnapshotRow;
@@ -22,7 +22,7 @@ const classes = ["evidence-row", compact && "evidence-row--compact", href && "ev
 ---
 
 {href ? (
-  <a class:list={classes} href={href}>
+  <a id={formulaAnchor(row)} class:list={classes} href={href}>
     <div class="row-main">
       <span class="label">{depthLabel(row)} · {row.target_branch}</span>
       <h3>{row.name}</h3>
@@ -59,7 +59,7 @@ const classes = ["evidence-row", compact && "evidence-row--compact", href && "ev
     )}
   </a>
 ) : (
-  <article class:list={classes}>
+  <article id={formulaAnchor(row)} class:list={classes}>
     <div class="row-main">
       <span class="label">{depthLabel(row)} · {row.target_branch}</span>
       <h3>{row.name}</h3>

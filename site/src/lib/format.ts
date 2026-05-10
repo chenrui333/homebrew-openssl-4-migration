@@ -25,6 +25,18 @@ export function slug(value: string) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 }
 
+export function formulaAnchor(row: SnapshotRow | string) {
+  return slug(typeof row === "string" ? row : row.name);
+}
+
+export function sectionAnchor(label: string) {
+  return slug(label);
+}
+
+export function trackerHref(row: SnapshotRow) {
+  return pagePath("tracker/#" + formulaAnchor(row));
+}
+
 export function prLabel(row: SnapshotRow) {
   return row.pr.number > 0 ? "#" + row.pr.number : "No PR";
 }

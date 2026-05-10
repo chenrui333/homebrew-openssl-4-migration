@@ -1,39 +1,60 @@
 ---
 import Layout from "../components/Layout.astro";
-import RegistryTable from "../components/RegistryTable.astro";
+import WorkflowRail from "../components/WorkflowRail.astro";
 import Footer from "../components/Footer.astro";
-import { rowsForAction } from "../lib/data";
+import { queueActions, rowsForAction } from "../lib/data";
+import { prLabel, sectionAnchor, slug, trackerHref } from "../lib/format";
 
-const actions = [
-  "Review and merge",
-  "Retarget to staging",
-  "Inspect CI",
-  "Resolve draft blockers",
-  "Track upstream blocker",
-  "Open migration PR",
-];
+const sections = queueActions.map((action) => ({ action, rows: rowsForAction(action) }));
+const railItems = sections.map(({ action, rows }) => ({
+  label: action,
+  href: "#" + sectionAnchor(action),
+  count: rows.length,
+}));
 ---
 
 <Layout title="Action Queue | OpenSSL 4 Migration Control Room">
-  <section class="page-hero">
-    <span class="eyebrow">Daily maintainer page</span>
-    <h1>Operational action queue</h1>
-    <p>Rows grouped by the next maintainer action, sorted by impact within each group.</p>
-  </section>
-  {actions.map((action, index) => {
-    const rows = rowsForAction(action);
-    return (
-      <section class="registry-section">
-        <div class="section-heading">
-          <span>§ {String(index + 1).padStart(2, "0")}</span>
-          <div>
-            <h2>{action}</h2>
-            <p>{rows.length} pending rows</p>
-          </div>
-        </div>
-        <RegistryTable rows={rows} showControls={false} />
+  <div class="workflow-shell">
+    <WorkflowRail title="Queue workflow" items={railItems} />
+    <div class="workflow-content">
+      <section class="page-hero">
+        <span class="eyebrow">Daily maintainer page</span>
+        <h1>Operational action queue</h1>
+        <p>Rows grouped by next maintainer action, sorted by impact within each group.</p>
       </section>
-    );
-  })}
-  <Footer />
+      <section class="registry-section queue-accordion-list" aria-label="Action queue buckets">
+        {sections.map(({ action, rows }) => (
+          <details id={sectionAnchor(action)} class="queue-accordion" open={rows.length > 0}>
+            <summary>
+              <span class={"pill action-" + slug(action)}>{action}</span>
+              <b>{rows.length}</b>
+            </summary>
+            {rows.length === 0 ? (
+              <div class="empty-state empty-state--compact">
+                <strong>No rows currently need this action.</strong>
+              </div>
+            ) : (
+              <ol class="queue-row-list" aria-label={action + " rows"}>
+                {rows.map((row) => (
+                  <li id={slug(row.name)} class="queue-row">
+                    <a class="queue-row__primary" href={trackerHref(row)}>
+                      <span class="label">{row.group_label}</span>
+                      <strong>{row.name}</strong>
+                    </a>
+                    <span class="impact">{row.impact_count}</span>
+                    <div class="queue-row__links">
+                      {row.pr.url && <a href={row.pr.url}>{prLabel(row)}</a>}
+                      {row.upstream.url && <a href={row.upstream.url}>Upstream</a>}
+                      {row.issues.slice(0, 1).map((issue) => <a href={issue.url}>Issue</a>)}
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            )}
+          </details>
+        ))}
+      </section>
+      <Footer />
+    </div>
+  </div>
 </Layout>

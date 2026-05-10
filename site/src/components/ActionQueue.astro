@@ -1,19 +1,10 @@
 ---
 import type { SnapshotRow } from "../lib/types";
-import { rowsForAction } from "../lib/data";
-import { pagePath, prLabel, slug } from "../lib/format";
-
-const actions = [
-  "Review and merge",
-  "Retarget to staging",
-  "Inspect CI",
-  "Resolve draft blockers",
-  "Track upstream blocker",
-  "Open migration PR",
-];
+import { queueActions, rowsForAction } from "../lib/data";
+import { pagePath, prLabel, slug, trackerHref } from "../lib/format";
 ---
 
-<section class="registry-section">
+<section id="action-queue" class="registry-section">
   <div class="section-heading">
     <span>§ 02</span>
     <div>
@@ -22,7 +13,7 @@ const actions = [
     </div>
   </div>
   <div class="queue-grid">
-    {actions.map((action) => {
+    {queueActions.map((action) => {
       const rows = rowsForAction(action, 4) as SnapshotRow[];
       const total = rowsForAction(action).length;
       return (
@@ -32,12 +23,21 @@ const actions = [
             <strong>{total}</strong>
           </div>
           <ol>
-            {rows.map((row) => (
+            {rows.length === 0 ? (
+              <li class="queue-empty">No rows currently need this action.</li>
+            ) : rows.map((row) => (
               <li>
-                <a href={row.pr.url || row.upstream.url || pagePath("tracker/")}>
-                  <span>{row.name}</span>
-                  <small>{prLabel(row)} · {row.target_branch}</small>
-                </a>
+                <div class="queue-card__item">
+                  <a href={trackerHref(row)}>
+                    <span>{row.name}</span>
+                    <small>{prLabel(row)} · {row.group_label}</small>
+                  </a>
+                  <span class="queue-card__links">
+                    {row.pr.url && <a href={row.pr.url}>PR</a>}
+                    {row.upstream.url && <a href={row.upstream.url}>Upstream</a>}
+                    {row.issues.slice(0, 1).map((issue) => <a href={issue.url}>Issue</a>)}
+                  </span>
+                </div>
                 <b>{row.impact_count}</b>
               </li>
             ))}

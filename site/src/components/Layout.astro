@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
-import { pagePath } from "../lib/format";
+import { snapshot } from "../lib/data";
+import { basePath, formatDate, pagePath } from "../lib/format";
 
 interface Props {
   title?: string;
@@ -11,6 +12,20 @@ const {
   title = "OpenSSL 4 Staging Migration Registry",
   description = "A dated, inspectable staging-branch registry for moving Homebrew formulae from openssl@3 to openssl@4 on openssl-4-migration-staging.",
 } = Astro.props;
+const currentPath = Astro.url.pathname.replace(basePath, "/");
+const summary = snapshot.summary;
+const navItems = [
+  { label: "Overview", href: pagePath(), match: "/" },
+  { label: "Queue", href: pagePath("queue/"), match: "/queue/" },
+  { label: "Tracker", href: pagePath("tracker/"), match: "/tracker/" },
+  { label: "Upstream", href: pagePath("upstream/"), match: "/upstream/" },
+  { label: "JSON", href: pagePath("api/snapshot.json"), match: "/api/snapshot.json" },
+];
+
+function isActive(match: string) {
+  if (match === "/") return currentPath === "/" || currentPath === "";
+  return currentPath.startsWith(match);
+}
 ---
 
 <!doctype html>
@@ -31,15 +46,21 @@ const {
           <em>Staging status ledger</em>
         </a>
         <div class="navlinks">
-          <a href={pagePath("tracker/")}>Tracker</a>
-          <a href={pagePath("queue/")}>Queue</a>
-          <a href={pagePath("upstream/")}>Upstream</a>
-          <a href={pagePath("api/snapshot.json")}>JSON</a>
+          {navItems.map((item) => (
+            <a href={item.href} aria-current={isActive(item.match) ? "page" : undefined}>{item.label}</a>
+          ))}
         </div>
       </nav>
+      <div class="snapshot-bar" aria-label="Current staging snapshot">
+        <span>{summary.current_gate}</span>
+        <span>{summary.current_gate_pending} pending</span>
+        <span>{summary.open_staging_prs} open staging PRs</span>
+        <span>snapshot {formatDate(snapshot.generated_at)}</span>
+      </div>
     </header>
     <main id="content">
       <slot />
     </main>
+    <script src={pagePath("registry-table.js")} defer></script>
   </body>
 </html>

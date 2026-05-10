@@ -1,33 +1,41 @@
 ---
 import Layout from "../components/Layout.astro";
 import RegistryTable from "../components/RegistryTable.astro";
+import WorkflowRail from "../components/WorkflowRail.astro";
 import Footer from "../components/Footer.astro";
 import { openCuratedBlockers, upstreamCoverageGaps, reviewedNoIssueRows } from "../lib/data";
+import { sectionAnchor } from "../lib/format";
 
 const sections = [
   ["Open curated blockers", "Formulae with relevant open upstream issues.", openCuratedBlockers()],
   ["Upstream coverage gaps", "Staged pending formulae with upstream metadata and no curated issue entry.", upstreamCoverageGaps()],
   ["Reviewed / no issue", "Curated or reviewed rows without a recorded upstream blocker.", reviewedNoIssueRows()],
 ] as const;
+const railItems = sections.map(([title, , rows]) => ({ label: title, href: "#" + sectionAnchor(title), count: rows.length }));
 ---
 
 <Layout title="Upstream | OpenSSL 4 Migration Control Room">
-  <section class="page-hero">
-    <span class="eyebrow">Upstream evidence</span>
-    <h1>Upstream blockers</h1>
-    <p>Curated blockers, gaps, and reviewed formulae for staging decisions.</p>
-  </section>
-  {sections.map(([title, description, rows], index) => (
-    <section class="registry-section">
-      <div class="section-heading">
-        <span>§ {String(index + 1).padStart(2, "0")}</span>
-        <div>
-          <h2>{title}</h2>
-          <p>{description}</p>
-        </div>
-      </div>
-      <RegistryTable rows={rows} showControls={false} />
-    </section>
-  ))}
-  <Footer />
+  <div class="workflow-shell">
+    <WorkflowRail title="Upstream workflow" items={railItems} />
+    <div class="workflow-content">
+      <section class="page-hero">
+        <span class="eyebrow">Upstream evidence</span>
+        <h1>Upstream blockers</h1>
+        <p>Curated blockers, gaps, and reviewed formulae for staging decisions.</p>
+      </section>
+      {sections.map(([title, description, rows], index) => (
+        <section id={sectionAnchor(title)} class="registry-section">
+          <div class="section-heading">
+            <span>§ {String(index + 1).padStart(2, "0")}</span>
+            <div>
+              <h2>{title}</h2>
+              <p>{description}</p>
+            </div>
+          </div>
+          <RegistryTable rows={rows} showControls={false} emptyMessage={"No rows in " + title.toLowerCase() + "."} />
+        </section>
+      ))}
+      <Footer />
+    </div>
+  </div>
 </Layout>

@@ -9,7 +9,7 @@ interface Props {
 const { rows } = Astro.props;
 ---
 
-<section class="registry-section">
+<section id="current-frontier" class="registry-section">
   <div class="section-heading">
     <span>§ 01</span>
     <div>
@@ -17,8 +17,15 @@ const { rows } = Astro.props;
       <p>Highest-impact pending rows in the active gate.</p>
     </div>
   </div>
-  <div class="row-stack">
-    {rows.map((row) => <RowCard row={row} />)}
-  </div>
+  {rows.length === 0 ? (
+    <div class="empty-state">
+      <strong>No current-gate blockers.</strong>
+      <p>The active batch is clear from the latest snapshot.</p>
+    </div>
+  ) : (
+    <div class="row-stack">
+      {rows.map((row) => <RowCard row={row} />)}
+    </div>
+  )}
   <p class="figure-caption">Rows are sorted by downstream OpenSSL-linked formula count, then formula name.</p>
 </section>

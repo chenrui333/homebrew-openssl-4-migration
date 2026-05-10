@@ -1,13 +1,14 @@
 ---
 import type { SnapshotRow } from "../lib/types";
-import { depthLabel, prLabel, slug, upstreamLabel } from "../lib/format";
+import { depthLabel, formulaAnchor, prLabel, slug, upstreamLabel } from "../lib/format";
 
 interface Props {
   rows: SnapshotRow[];
   showControls?: boolean;
+  emptyMessage?: string;
 }
 
-const { rows, showControls = true } = Astro.props;
+const { rows, showControls = true, emptyMessage = "No rows match this section." } = Astro.props;
 ---
 
 {showControls && (
@@ -25,6 +26,11 @@ const { rows, showControls = true } = Astro.props;
   </section>
 )}
 
+{rows.length === 0 ? (
+  <div class="empty-state">
+    <strong>{emptyMessage}</strong>
+  </div>
+) : (
 <div class="registry-table" data-registry-table>
   <table>
     <thead>
@@ -32,16 +38,16 @@ const { rows, showControls = true } = Astro.props;
         <th><button type="button" class="sort-button" data-sort="name">Formula</button></th>
         <th><button type="button" class="sort-button" data-sort="action">Action</button></th>
         <th aria-sort="descending"><button type="button" class="sort-button" data-sort="impact" data-sort-active="true">Impact</button></th>
+        <th><button type="button" class="sort-button" data-sort="gate">Gate</button></th>
         <th><button type="button" class="sort-button" data-sort="status">Status</button></th>
         <th>PR</th>
-        <th>Target</th>
-        <th>Upstream</th>
-        <th>Issues</th>
+        <th>Evidence</th>
       </tr>
     </thead>
     <tbody>
       {rows.map((row) => (
         <tr
+          id={formulaAnchor(row)}
           data-row
           data-name={row.name.toLowerCase()}
           data-filter-text={(row.name + " " + upstreamLabel(row) + " " + row.target_branch + " " + prLabel(row) + " " + row.next_action + " " + row.readiness.join(" ") + " " + row.group_label).toLowerCase()}
@@ -49,6 +55,8 @@ const { rows, showControls = true } = Astro.props;
           data-status={row.live_status.toLowerCase()}
           data-readiness={row.readiness.join(" ")}
           data-action={slug(row.next_action)}
+          data-gate={row.group_label.toLowerCase()}
+          data-gate-filter={slug(row.group_label)}
           data-impact={row.impact_count}
           data-target={row.target_branch}
           data-ready={row.flags.ready}
@@ -57,6 +65,9 @@ const { rows, showControls = true } = Astro.props;
           data-base-mismatch={row.flags.base_mismatch}
           data-missing-pr={row.flags.missing_pr}
           data-upstream-blocked={row.flags.upstream_blocked}
+          data-pr={row.pr.number > 0}
+          data-has-issue={row.issues.length > 0}
+          data-coverage-gap={row.issues.some((issue) => issue.label === "search")}
         >
           <td data-label="Formula">
             <strong>{row.name}</strong>
@@ -64,14 +75,15 @@ const { rows, showControls = true } = Astro.props;
           </td>
           <td data-label="Action"><span class={"pill action-" + slug(row.next_action)}>{row.next_action}</span></td>
           <td data-label="Impact"><span class="impact">{row.impact_count}</span></td>
+          <td data-label="Gate">{row.group_label}</td>
           <td data-label="Status">{row.live_status}</td>
           <td data-label="PR">{row.pr.url ? <a href={row.pr.url}>{prLabel(row)}</a> : prLabel(row)}</td>
-          <td data-label="Target"><code>{row.target_branch}</code></td>
-          <td data-label="Upstream">{row.upstream.url ? <a href={row.upstream.url}>{upstreamLabel(row)}</a> : upstreamLabel(row)}</td>
-          <td data-label="Issues">
+          <td data-label="Evidence" class="evidence-cell">
+            {row.upstream.url ? <a href={row.upstream.url}>{upstreamLabel(row)}</a> : <span>{upstreamLabel(row)}</span>}
             {row.issues.length === 0 ? <span class="muted">none</span> : row.issues.slice(0, 2).map((issue, index) => (
               <>
-                {index > 0 && " "}
+                {index === 0 && " "}
+                {index > 0 && ", "}
                 <a href={issue.url}>{issue.label}</a>
               </>
             ))}
@@ -81,105 +93,4 @@ const { rows, showControls = true } = Astro.props;
     </tbody>
   </table>
 </div>
-
-<script>
-  document.querySelectorAll("[data-registry-table]").forEach((table) => {
-    if (table.dataset.registryReady === "true") return;
-    table.dataset.registryReady = "true";
-    const controls = table.previousElementSibling?.matches("[data-registry-controls]") ? table.previousElementSibling : null;
-    const rows = Array.from(table.querySelectorAll("[data-row]"));
-    const input = controls?.querySelector("[data-registry-search]");
-    const buttons = Array.from(controls?.querySelectorAll("[data-filter]") || []);
-    const sortButtons = Array.from(table.querySelectorAll("[data-sort]"));
-    const tbody = table.querySelector("tbody");
-    const count = controls?.querySelector("[data-result-count]");
-    let active = "all";
-    let sortKey = "impact";
-    let sortDirection = "desc";
-
-    function matchesFilter(row, filter) {
-      if (filter === "all") return true;
-      if (filter === "current-gate") return row.dataset.currentGate === "true";
-      if (filter === "pending") return row.dataset.status === "pending";
-      if (filter === "done") return row.dataset.status === "done";
-      if (filter === "ready") return row.dataset.ready === "true";
-      if (filter === "draft") return row.dataset.draft === "true";
-      if (filter === "ci-blocked") return row.dataset.ciBlocked === "true";
-      if (filter === "retarget") return row.dataset.baseMismatch === "true";
-      if (filter === "missing-pr") return row.dataset.missingPr === "true";
-      if (filter === "upstream-blocked") return row.dataset.upstreamBlocked === "true";
-      return true;
-    }
-
-    function applyFilters() {
-      const query = String(input?.value || "").toLowerCase();
-      let visible = 0;
-      rows.forEach((row) => {
-        const shown = matchesFilter(row, active) && String(row.dataset.filterText || "").includes(query);
-        row.hidden = !shown;
-        if (shown) visible += 1;
-      });
-      buttons.forEach((button) => button.setAttribute("aria-pressed", button.dataset.filter === active ? "true" : "false"));
-      if (count) count.textContent = visible + " of " + rows.length + " rows shown";
-    }
-
-    function valueFor(row, key) {
-      if (key === "impact") return Number(row.dataset.impact || 0);
-      if (key === "action") return String(row.dataset.action || "");
-      if (key === "status") return String(row.dataset.status || "");
-      return String(row.dataset.name || "");
-    }
-
-    function applySort() {
-      if (!tbody) return;
-      const sorted = [...rows].sort((a, b) => {
-        if (sortKey === "impact") {
-          const currentDelta = Number(b.dataset.currentGate === "true") - Number(a.dataset.currentGate === "true");
-          if (currentDelta !== 0) return currentDelta;
-          const pendingDelta = Number(b.dataset.status === "pending") - Number(a.dataset.status === "pending");
-          if (pendingDelta !== 0) return pendingDelta;
-        }
-        const av = valueFor(a, sortKey);
-        const bv = valueFor(b, sortKey);
-        let result = 0;
-        if (typeof av === "number" && typeof bv === "number") {
-          result = av - bv;
-        } else {
-          result = String(av).localeCompare(String(bv));
-        }
-        if (result !== 0) return sortDirection === "asc" ? result : -result;
-        return String(a.dataset.name || "").localeCompare(String(b.dataset.name || ""));
-      });
-      sorted.forEach((row) => tbody.appendChild(row));
-      sortButtons.forEach((button) => {
-        const activeButton = button.dataset.sort === sortKey;
-        button.toggleAttribute("data-sort-active", activeButton);
-        button.setAttribute("aria-label", (button.textContent || "Column") + " sorted " + (activeButton ? sortDirection : "none"));
-        const th = button.closest("th");
-        if (th) th.setAttribute("aria-sort", activeButton ? (sortDirection === "asc" ? "ascending" : "descending") : "none");
-      });
-      applyFilters();
-    }
-
-    buttons.forEach((button) => {
-      button.addEventListener("click", () => {
-        active = button.dataset.filter || "all";
-        applyFilters();
-      });
-    });
-    input?.addEventListener("input", applyFilters);
-    sortButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        const next = button.dataset.sort || "impact";
-        if (next === sortKey) {
-          sortDirection = sortDirection === "asc" ? "desc" : "asc";
-        } else {
-          sortKey = next;
-          sortDirection = next === "impact" ? "desc" : "asc";
-        }
-        applySort();
-      });
-    });
-    applySort();
-  });
-</script>
+)}
