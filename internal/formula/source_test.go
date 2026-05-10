@@ -41,6 +41,24 @@ func TestParseSourceMetadata(t *testing.T) {
 			wantRepo:     "libssh2/libssh2",
 		},
 		{
+			name: "head block skips nested block urls",
+			contents: "class Foo < Formula\n" +
+				"  homepage \"https://example.com\"\n" +
+				"  url \"https://example.com/foo-1.0.tar.gz\"\n" +
+				"  head do\n" +
+				"    resource \"fixture\" do\n" +
+				"      url \"https://example.com/fixture.tar.gz\"\n" +
+				"    end\n" +
+				"    url \"https://github.com/example/foo.git\", branch: \"main\"\n" +
+				"  end\n" +
+				"end\n",
+			wantHomepage: "https://example.com",
+			wantURL:      "https://example.com/foo-1.0.tar.gz",
+			wantHead:     "https://github.com/example/foo.git",
+			wantProvider: "github",
+			wantRepo:     "example/foo",
+		},
+		{
 			name: "gitlab archive",
 			contents: "class Foo < Formula\n" +
 				"  homepage \"https://gstreamer.freedesktop.org/\"\n" +

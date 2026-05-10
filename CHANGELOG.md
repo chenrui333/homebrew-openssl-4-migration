@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.2.1 - 2026-05-10
+## 0.3.0 - 2026-05-10
 
 - Improve upstream metadata parsing for formulae that declare GitHub heads inside `head do` blocks.
 - Add audit report sections for branch/base mismatches and upstream issue coverage gaps.

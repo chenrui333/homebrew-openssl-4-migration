@@ -202,9 +202,10 @@ func baseMismatchRows(rows []tracking.Row) []tracking.Row {
 
 func upstreamGapRows(rows []tracking.Row, issueByFormula map[string][]Issue) []tracking.Row {
 	return filterRows(rows, func(row tracking.Row) bool {
+		_, curated := issueByFormula[row.Name]
 		return row.LiveStatus == "PENDING" &&
 			row.TargetBranchOrDefault() == deptree.StagingBranch &&
-			len(issueByFormula[row.Name]) == 0 &&
+			!curated &&
 			hasUsefulUpstream(row.Formula)
 	})
 }

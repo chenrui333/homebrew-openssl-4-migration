@@ -11,6 +11,7 @@ var (
 	urlLineRe      = regexp.MustCompile("(?m)^\\s*url\\s+\"([^\"]+)\"")
 	headLineRe     = regexp.MustCompile("(?m)^\\s*head\\s+\"([^\"]+)\"")
 	headDoLineRe   = regexp.MustCompile("^\\s*head\\s+do\\s*$")
+	rubyDoLineRe   = regexp.MustCompile("\\bdo(\\s*\\|[^|]*\\|)?\\s*$")
 )
 
 // SourceMetadata is upstream source information parsed from a formula.
@@ -46,19 +47,49 @@ func firstMatch(re *regexp.Regexp, contents string) string {
 
 func firstHeadBlockURL(contents string) string {
 	inHead := false
+	depth := 0
 	for _, line := range strings.Split(contents, "\n") {
 		if !inHead {
 			inHead = headDoLineRe.MatchString(line)
 			continue
 		}
-		if match := urlLineRe.FindStringSubmatch(line); match != nil {
-			return match[1]
+		trimmed := strings.TrimSpace(line)
+		if trimmed == "end" {
+			if depth == 0 {
+				return ""
+			}
+			depth--
+			continue
 		}
-		if strings.TrimSpace(line) == "end" {
-			return ""
+		if depth == 0 {
+			if match := urlLineRe.FindStringSubmatch(line); match != nil {
+				return match[1]
+			}
+		}
+		if opensRubyBlock(trimmed) {
+			depth++
 		}
 	}
 	return ""
+}
+
+func opensRubyBlock(trimmed string) bool {
+	if trimmed == "" || strings.HasPrefix(trimmed, "#") {
+		return false
+	}
+	if rubyDoLineRe.MatchString(trimmed) {
+		return true
+	}
+	fields := strings.Fields(trimmed)
+	if len(fields) == 0 {
+		return false
+	}
+	switch fields[0] {
+	case "begin", "case", "def", "for", "if", "module", "unless", "until", "while":
+		return true
+	default:
+		return false
+	}
 }
 
 func detectUpstream(meta SourceMetadata) (string, string) {
