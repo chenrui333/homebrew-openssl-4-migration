@@ -26,6 +26,7 @@ type scannedFormula struct {
 	Name              string
 	Path              string
 	OpenSSLDependency string
+	Source            formula.SourceMetadata
 	Dependencies      []string
 }
 
@@ -84,10 +85,12 @@ func Build(homebrewCore string) (*DepTree, error) {
 		relPath, _ := filepath.Rel(homebrewCore, path)
 		deps := formula.ParseDependencies(string(contents))
 		dep := formula.DetectOpenSSLDep(string(contents))
+		source := formula.ParseSourceMetadata(string(contents))
 		allFormulae[name] = scannedFormula{
 			Name:              name,
 			Path:              relPath,
 			OpenSSLDependency: dep,
+			Source:            source,
 			Dependencies:      deps,
 		}
 		if dep == "" {
@@ -98,6 +101,11 @@ func Build(homebrewCore string) (*DepTree, error) {
 			Name:                            name,
 			Path:                            relPath,
 			OpenSSLDependency:               dep,
+			Homepage:                        source.Homepage,
+			SourceURL:                       source.SourceURL,
+			HeadURL:                         source.HeadURL,
+			UpstreamProvider:                source.UpstreamProvider,
+			UpstreamRepo:                    source.UpstreamRepo,
 			TargetBranch:                    MainBranch,
 			StagingRequiredBy:               []string{},
 			Dependencies:                    deps,

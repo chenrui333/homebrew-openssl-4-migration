@@ -9,17 +9,38 @@ import (
 
 // PR represents an open pull request returned by gh.
 type PR struct {
-	Number      int      `json:"number"`
-	Title       string   `json:"title"`
-	State       string   `json:"state"`
-	BaseRefName string   `json:"baseRefName"`
-	URL         string   `json:"url"`
-	Files       []PRFile `json:"files"`
+	Number            int             `json:"number"`
+	Title             string          `json:"title"`
+	State             string          `json:"state"`
+	BaseRefName       string          `json:"baseRefName"`
+	URL               string          `json:"url"`
+	IsDraft           bool            `json:"isDraft"`
+	MergeStateStatus  string          `json:"mergeStateStatus"`
+	ReviewDecision    string          `json:"reviewDecision"`
+	UpdatedAt         string          `json:"updatedAt"`
+	Labels            []PRLabel       `json:"labels"`
+	Files             []PRFile        `json:"files"`
+	StatusCheckRollup []PRStatusCheck `json:"statusCheckRollup"`
+}
+
+// PRLabel is a label returned by gh for an open pull request.
+type PRLabel struct {
+	Name string `json:"name"`
 }
 
 // PRFile is one file changed by a pull request returned by gh.
 type PRFile struct {
 	Path string `json:"path"`
+}
+
+// PRStatusCheck is one check/status entry returned by gh's statusCheckRollup.
+type PRStatusCheck struct {
+	TypeName   string `json:"__typename"`
+	Name       string `json:"name"`
+	Context    string `json:"context"`
+	Status     string `json:"status"`
+	Conclusion string `json:"conclusion"`
+	State      string `json:"state"`
 }
 
 // Login returns the authenticated GitHub username via gh, or empty string.
@@ -38,7 +59,7 @@ func ListOpenPRs(repo, query string) ([]PR, error) {
 		"--repo", repo,
 		"--search", query,
 		"--state", "open",
-		"--json", "number,title,state,baseRefName,url,files",
+		"--json", "number,title,state,baseRefName,url,isDraft,mergeStateStatus,reviewDecision,updatedAt,labels,files,statusCheckRollup",
 		"--limit", "1000",
 	)
 	out, err := cmd.Output()

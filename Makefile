@@ -2,7 +2,7 @@ BINARY        := bin/sslmigrate
 HOMEBREW_CORE ?= /opt/homebrew/Library/Taps/homebrew/homebrew-core
 GO            ?= go
 
-.PHONY: help build dep-tree status checklist migrate migrate-dry clean
+.PHONY: help build dep-tree status checklist audit migrate migrate-dry clean
 
 help:
 	@echo "Targets:"
@@ -10,6 +10,7 @@ help:
 	@echo "  dep-tree            Rebuild data/dep_tree.json from homebrew-core"
 	@echo "  status              Regenerate TRACKING.md + print dashboard"
 	@echo "  checklist           Regenerate CHECKLIST.md with markdown checkboxes"
+	@echo "  audit               Regenerate AUDIT.md with readiness and upstream context"
 	@echo "  migrate FORMULA=X   Migrate formula X and open a PR"
 	@echo "  migrate-dry FORMULA=X   Dry-run migration (no branch/PR created)"
 	@echo "  clean               Remove bin/"
@@ -25,6 +26,9 @@ status: build
 
 checklist: build
 	$(BINARY) checklist --homebrew-core=$(HOMEBREW_CORE)
+
+audit: build
+	$(BINARY) audit --homebrew-core=$(HOMEBREW_CORE)
 
 migrate: build
 ifndef FORMULA

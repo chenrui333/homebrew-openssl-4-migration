@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Add an audit report command and generated AUDIT.md for readiness, blocker, main-track opportunity, and upstream issue review.
+- Add upstream source metadata to data/dep_tree.json and a curated data/upstream_issues.json dataset.
+- Update the daily sync workflow to regenerate and commit audit/report datasets with a concurrency guard.
+
 ## 0.1.1 - 2026-05-10
 
 - Compute OpenSSL 4 target branches from the full transitive staging closure, including blockers reached through bridge formulae that do not directly depend on OpenSSL.

@@ -1,0 +1,88 @@
+{
+  "formulae": [
+    {
+      "name": "grpc",
+      "upstream_provider": "github",
+      "upstream_repo": "grpc/grpc",
+      "issues": [
+        {
+          "url": "https://github.com/grpc/grpc/issues/42020",
+          "title": "Fix compile with OpenSSL 4.0",
+          "state": "open",
+          "status": "relevant",
+          "note": "Tracks upstream OpenSSL 4 compile compatibility."
+        }
+      ]
+    },
+    {
+      "name": "libfido2",
+      "upstream_provider": "github",
+      "upstream_repo": "Yubico/libfido2",
+      "issues": [
+        {
+          "url": "https://github.com/Yubico/libfido2/issues/966",
+          "title": "Fix library build with OpenSSL 4.x",
+          "state": "closed",
+          "status": "reference",
+          "note": "Closed upstream compatibility fix to inspect when validating Homebrew failures."
+        }
+      ]
+    },
+    {
+      "name": "node",
+      "upstream_provider": "github",
+      "upstream_repo": "nodejs/node",
+      "issues": [
+        {
+          "url": "https://github.com/nodejs/node/issues/62817",
+          "title": "[openssl-4.0.0] - failing tests",
+          "state": "closed",
+          "status": "reference",
+          "note": "Closed upstream test-failure tracker for OpenSSL 4."
+        }
+      ]
+    },
+    {
+      "name": "rust",
+      "upstream_provider": "github",
+      "upstream_repo": "rust-lang/rust",
+      "issues": [
+        {
+          "url": "https://github.com/rust-lang/rust/issues/155397",
+          "title": "Build with OpenSSL-4.0.0 fails",
+          "state": "open",
+          "status": "relevant",
+          "note": "Tracks upstream Rust build compatibility with OpenSSL 4."
+        }
+      ]
+    },
+    {
+      "name": "cryptography",
+      "upstream_provider": "github",
+      "upstream_repo": "pyca/cryptography",
+      "issues": [
+        {
+          "url": "https://github.com/pyca/cryptography/issues/14656",
+          "title": "OpenSSL 4.0.0 support",
+          "state": "closed",
+          "status": "reference",
+          "note": "Closed upstream support tracker for OpenSSL 4."
+        }
+      ]
+    },
+    {
+      "name": "s2n",
+      "upstream_provider": "github",
+      "upstream_repo": "aws/s2n-tls",
+      "issues": [
+        {
+          "url": "https://github.com/aws/s2n-tls/issues/5783",
+          "title": "OpenSSL Support Roadmap",
+          "state": "open",
+          "status": "relevant",
+          "note": "Upstream roadmap for supported OpenSSL versions."
+        }
+      ]
+    }
+  ]
+}
