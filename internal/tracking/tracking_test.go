@@ -14,7 +14,7 @@ func TestMapPRsByFormulaUsesChangedFormulaFiles(t *testing.T) {
 	prs := []github.PR{
 		{
 			Number:      280198,
-			Title:       "baresip libre: migrate to `openssl@4`",
+			Title:       "OpenSSL 4 migration batch",
 			BaseRefName: "openssl-4-migration-staging",
 			Files: []github.PRFile{
 				{Path: "Formula/b/baresip.rb"},
@@ -24,7 +24,7 @@ func TestMapPRsByFormulaUsesChangedFormulaFiles(t *testing.T) {
 		},
 	}
 
-	got := mapPRsByFormula(prs)
+	got := mapPRsByFormula(prs, map[int]bool{280198: true})
 	if got["baresip"] == nil || got["baresip"].Number != 280198 {
 		t.Fatalf("baresip PR mapping = %#v, want PR 280198", got["baresip"])
 	}
@@ -44,9 +44,47 @@ func TestMapPRsByFormulaFallsBackToTitle(t *testing.T) {
 		},
 	}
 
-	got := mapPRsByFormula(prs)
+	got := mapPRsByFormula(prs, nil)
 	if got["curl"] == nil || got["curl"].Number != 280853 {
 		t.Fatalf("curl PR mapping = %#v, want PR 280853", got["curl"])
+	}
+}
+
+func TestMapPRsByFormulaUsesUnlabeledMigrationTitleFiles(t *testing.T) {
+	prs := []github.PR{
+		{
+			Number: 281234,
+			Title:  "foo bar: migrate to `openssl@4`",
+			Files: []github.PRFile{
+				{Path: "Formula/f/foo.rb"},
+				{Path: "Formula/b/bar.rb"},
+			},
+		},
+	}
+
+	got := mapPRsByFormula(prs, nil)
+	if got["foo"] == nil || got["foo"].Number != 281234 {
+		t.Fatalf("foo PR mapping = %#v, want PR 281234", got["foo"])
+	}
+	if got["bar"] == nil || got["bar"].Number != 281234 {
+		t.Fatalf("bar PR mapping = %#v, want PR 281234", got["bar"])
+	}
+}
+
+func TestMapPRsByFormulaIgnoresUntrustedNonMigrationFiles(t *testing.T) {
+	prs := []github.PR{
+		{
+			Number: 281235,
+			Title:  "openssl@4 follow-up",
+			Files: []github.PRFile{
+				{Path: "Formula/f/foo.rb"},
+			},
+		},
+	}
+
+	got := mapPRsByFormula(prs, nil)
+	if got["foo"] != nil {
+		t.Fatalf("foo should not map from an untrusted non-migration title: %#v", got["foo"])
 	}
 }
 

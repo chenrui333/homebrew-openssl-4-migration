@@ -48,7 +48,7 @@ Target branches are computed from the staged dependency closure:
 make status
 ~~~
 
-This refreshes the target Homebrew refs, checks formula files from each formula's computed target branch, queries open migration PRs by label and changed formula files, prints the dashboard, and regenerates [TRACKING.md](TRACKING.md).
+This refreshes the target Homebrew refs, checks formula files from each formula's computed target branch, queries open migration PRs by migration labels plus an openssl@4 title fallback, prints the dashboard, and regenerates [TRACKING.md](TRACKING.md).
 
 ## Migrate one formula
 

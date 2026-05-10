@@ -43,6 +43,7 @@ make migrate FORMULA=wget        # migrate and open PR
 - Branch naming: `rchen.openssl4.<formula-name>`
 - Commit message: `<formula>: use openssl@4`
 - Labels: `openssl-4-migration` for all; also `staging-branch-pr` + `CI-skip-recursive-dependents` for staging PRs.
+- Status/checklist tracking should find PRs through migration labels and through migration-style `openssl@4` titles, because label application is non-fatal.
 - Rust formulae (detected via `system "cargo"` or `std_cargo_args`): inject `OPENSSL_DIR`, `OPENSSL_LIB_DIR`, `OPENSSL_INCLUDE_DIR`, `PKG_CONFIG_PATH` into `def install`.
 
 ## Source layout

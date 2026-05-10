@@ -17,7 +17,18 @@ import (
 	"github.com/chenrui333/homebrew-openssl-4-migration/internal/github"
 )
 
-var prTitleRe = regexp.MustCompile(`(?i)^(.+?):\s+(?:use|migrate\s+to)\s+openssl@?4`)
+var prTitleRe = regexp.MustCompile("(?i)^(.+?):\\s+(?:use|migrate\\s+to)\\s+`?openssl@?4`?")
+
+type prSearchQuery struct {
+	query      string
+	trustFiles bool
+}
+
+var migrationPRSearchQueries = []prSearchQuery{
+	{query: "label:openssl-4-migration", trustFiles: true},
+	{query: "label:staging-branch-pr openssl@4", trustFiles: true},
+	{query: "openssl@4"},
+}
 
 // Row combines formula metadata with its live migration status and any open PR.
 type Row struct {
@@ -107,21 +118,52 @@ func detectStatus(contents string) string {
 }
 
 func loadPRs() map[string]*github.PR {
-	m := make(map[string]*github.PR)
-	prs, err := github.ListOpenPRs("Homebrew/homebrew-core", "label:openssl-4-migration")
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Warning: could not fetch open PRs: %v\n", err)
-		return m
+	prsByNumber := make(map[int]github.PR)
+	trustedFileMapping := make(map[int]bool)
+	var failures []string
+
+	for _, search := range migrationPRSearchQueries {
+		prs, err := github.ListOpenPRs("Homebrew/homebrew-core", search.query)
+		if err != nil {
+			failures = append(failures, fmt.Sprintf("%s: %v", search.query, err))
+			continue
+		}
+		for _, pr := range prs {
+			prsByNumber[pr.Number] = pr
+			if search.trustFiles {
+				trustedFileMapping[pr.Number] = true
+			}
+		}
 	}
-	return mapPRsByFormula(prs)
+
+	if len(failures) > 0 {
+		message := "open PR search incomplete"
+		if len(prsByNumber) == 0 {
+			message = "could not fetch open PRs"
+		}
+		fmt.Fprintf(os.Stderr, "Warning: %s: %s\n", message, strings.Join(failures, "; "))
+	}
+
+	return mapPRsByFormula(sortPRsByNumber(prsByNumber), trustedFileMapping)
 }
 
-func mapPRsByFormula(prs []github.PR) map[string]*github.PR {
+func sortPRsByNumber(prsByNumber map[int]github.PR) []github.PR {
+	prs := make([]github.PR, 0, len(prsByNumber))
+	for _, pr := range prsByNumber {
+		prs = append(prs, pr)
+	}
+	sort.Slice(prs, func(i, j int) bool { return prs[i].Number < prs[j].Number })
+	return prs
+}
+
+func mapPRsByFormula(prs []github.PR, trustedFileMapping map[int]bool) map[string]*github.PR {
 	m := make(map[string]*github.PR)
 	for i := range prs {
-		for _, file := range prs[i].Files {
-			if name := formulaNameFromPath(file.Path); name != "" {
-				m[name] = &prs[i]
+		if trustedFileMapping[prs[i].Number] || prTitleRe.MatchString(prs[i].Title) {
+			for _, file := range prs[i].Files {
+				if name := formulaNameFromPath(file.Path); name != "" {
+					m[name] = &prs[i]
+				}
 			}
 		}
 		if match := prTitleRe.FindStringSubmatch(prs[i].Title); match != nil {

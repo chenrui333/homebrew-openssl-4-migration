@@ -1,7 +1,7 @@
 OpenSSL 4 Migration Status (2026-05-10)
 ========================================
-Total pending:  681
-Total done:     78 (10.3%)
+Total pending:  679
+Total done:     80 (10.5%)
 
 Tracking issue: Homebrew/homebrew-core#278366
 
@@ -32,10 +32,10 @@ Batch 0 — Roots -> openssl-4-migration-staging   [20/25 done]
   tcl-tk@8                 DONE
   wget                     DONE
 
-Batch 1 -> openssl-4-migration-staging   [8/15 done]
+Batch 1 -> openssl-4-migration-staging   [9/15 done]
   apache-arrow             PENDING    [PR #280851 open]
   bind                     DONE
-  curl                     PENDING    [PR #280853 open]
+  curl                     DONE
   ffmpeg                   DONE
   folly                    DONE
   httpd                    DONE
@@ -59,11 +59,11 @@ Batch 2 -> openssl-4-migration-staging   [1/5 done]
 Batch 3 -> openssl-4-migration-staging   [0/1 done]
   gstreamer                PENDING    [PR #280873 open]
 
-Staging closure -> openssl-4-migration-staging   [8/11 done]
+Staging closure -> openssl-4-migration-staging   [9/11 done]
   aws-c-cal                DONE
   cgal                     DONE
   libgit2                  DONE
-  libngtcp2                PENDING    [PR #280853 open]
+  libngtcp2                DONE
   libshout                 DONE
   libzip                   DONE
   net-snmp                 DONE
@@ -108,7 +108,7 @@ Main-track leaves -> main   [41/702 done]
   bacon-ls                 PENDING
   bacula-fd                PENDING
   bareos-client            PENDING
-  baresip                  PENDING    [PR #280198 open; base openssl-4-migration-staging, expected main]
+  baresip                  PENDING
   barman                   PENDING
   bbot                     PENDING
   berkeley-db              PENDING
@@ -382,7 +382,7 @@ Main-track leaves -> main   [41/702 done]
   libpq@16                 PENDING
   libpq@17                 PENDING
   libpulsar                PENDING
-  libre                    PENDING    [PR #280198 open; base openssl-4-migration-staging, expected main]
+  libre                    PENDING
   librealsense             PENDING
   libretls                 PENDING
   libslax                  PENDING

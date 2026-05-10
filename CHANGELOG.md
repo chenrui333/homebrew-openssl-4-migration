@@ -6,4 +6,5 @@
 - Add target-branch, staging-reason, staging-required-by, and transitive OpenSSL dependency metadata to data/dep_tree.json.
 - Group status/checklist output into explicit depth batches, staging closure formulae, and main-track leaves.
 - Map open migration PRs by changed formula files so multi-formula PRs are tracked correctly.
+- Include unlabeled migration PRs in tracking by unioning migration-label searches with an openssl@4 title fallback.
 - Rename repository agent guidance from CLAUDE.md to AGENTS.md for Codex-based harness work.

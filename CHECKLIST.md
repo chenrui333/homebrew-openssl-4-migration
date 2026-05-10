@@ -1,6 +1,6 @@
 # OpenSSL 4 Migration Checklist (2026-05-10)
 
-Progress: **78/759 (10.3%)**
+Progress: **80/759 (10.5%)**
 Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/homebrew-core/issues/278366)
 
 > Staging batches are depth 0 → 1 → 2 → 3 plus their computed transitive closure.
@@ -34,11 +34,11 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 - [x] ~~tcl-tk@8~~
 - [x] ~~wget~~
 
-## Batch 1 -> openssl-4-migration-staging [8/15]
+## Batch 1 -> openssl-4-migration-staging [9/15]
 
 - [ ] apache-arrow <!-- PR #280851 open -->
 - [x] ~~bind~~
-- [ ] curl <!-- PR #280853 open -->
+- [x] ~~curl~~
 - [x] ~~ffmpeg~~
 - [x] ~~folly~~
 - [x] ~~httpd~~
@@ -64,12 +64,12 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 
 - [ ] gstreamer <!-- PR #280873 open -->
 
-## Staging closure -> openssl-4-migration-staging [8/11]
+## Staging closure -> openssl-4-migration-staging [9/11]
 
 - [x] ~~aws-c-cal~~
 - [x] ~~cgal~~
 - [x] ~~libgit2~~
-- [ ] libngtcp2 <!-- PR #280853 open -->
+- [x] ~~libngtcp2~~
 - [x] ~~libshout~~
 - [x] ~~libzip~~
 - [x] ~~net-snmp~~
@@ -115,7 +115,7 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 - [ ] bacon-ls
 - [ ] bacula-fd
 - [ ] bareos-client
-- [ ] baresip <!-- PR #280198 open; base openssl-4-migration-staging, expected main -->
+- [ ] baresip
 - [ ] barman
 - [ ] bbot
 - [ ] berkeley-db
@@ -389,7 +389,7 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 - [ ] libpq@16
 - [ ] libpq@17
 - [ ] libpulsar
-- [ ] libre <!-- PR #280198 open; base openssl-4-migration-staging, expected main -->
+- [ ] libre
 - [ ] librealsense
 - [ ] libretls
 - [ ] libslax
