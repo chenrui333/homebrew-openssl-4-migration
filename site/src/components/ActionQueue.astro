@@ -1,8 +1,20 @@
 ---
 import type { SnapshotRow } from "../lib/types";
 import { queueActions, rowsForAction } from "../lib/data";
-import { pagePath, prLabel, slug, trackerHref } from "../lib/format";
+import { pagePath, prLabel, trackerHref } from "../lib/format";
+import ActionBadge from "./ActionBadge.astro";
 import ImpactBadge from "./ImpactBadge.astro";
+
+const buckets = queueActions.map((action) => {
+  const totalRows = rowsForAction(action) as SnapshotRow[];
+  return {
+    action,
+    rows: totalRows.slice(0, 4),
+    total: totalRows.length,
+  };
+});
+const activeBuckets = buckets.filter((bucket) => bucket.total > 0);
+const emptyBuckets = buckets.filter((bucket) => bucket.total === 0);
 ---
 
 <section id="action-queue" class="registry-section">
@@ -13,20 +25,21 @@ import ImpactBadge from "./ImpactBadge.astro";
       <p>Daily maintainer buckets derived from readiness state.</p>
     </div>
   </div>
-  <div class="queue-grid">
-    {queueActions.map((action) => {
-      const rows = rowsForAction(action, 4) as SnapshotRow[];
-      const total = rowsForAction(action).length;
-      return (
+  {activeBuckets.length === 0 ? (
+    <div class="empty-state">
+      <strong>No rows currently need action.</strong>
+      <p>All maintainer action buckets are clear in the current snapshot.</p>
+    </div>
+  ) : (
+    <div class="queue-grid">
+      {activeBuckets.map(({ action, rows, total }) => (
         <article class="queue-card">
           <div class="queue-card__head">
-            <span class={"pill action-" + slug(action)}>{action}</span>
+            <ActionBadge action={action} />
             <strong>{total}</strong>
           </div>
           <ol>
-            {rows.length === 0 ? (
-              <li class="queue-empty">No rows currently need this action.</li>
-            ) : rows.map((row) => (
+            {rows.map((row) => (
               <li>
                 <div class="queue-card__item">
                   <a href={trackerHref(row)}>
@@ -45,8 +58,19 @@ import ImpactBadge from "./ImpactBadge.astro";
           </ol>
           <a class="queue-card__more" href={pagePath("queue/")}>View {total} rows</a>
         </article>
-      );
-    })}
-  </div>
+      ))}
+    </div>
+  )}
+  {emptyBuckets.length > 0 && (
+    <p class="queue-clear-buckets">
+      <strong>Clear buckets</strong>
+      {emptyBuckets.map((bucket, index) => (
+        <>
+          {index === 0 ? " " : ", "}
+          <span>{bucket.action}</span>
+        </>
+      ))}
+    </p>
+  )}
   <p class="figure-caption">Open the queue page for complete sections and links.</p>
 </section>

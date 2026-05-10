@@ -1,0 +1,30 @@
+---
+import { slug } from "../lib/format";
+
+interface Props {
+  action: string;
+  focusable?: boolean;
+}
+
+const { action, focusable = true } = Astro.props;
+const actionHelp: Record<string, string> = {
+  "Done": "This formula already reports openssl@4 on the staging target branch. No migration action is needed.",
+  "Open migration PR": "No open staging PR is mapped to this formula. Open a migration PR against openssl-4-migration-staging.",
+  "Retarget to staging": "An open PR exists, but its base branch is not openssl-4-migration-staging. Retarget it before review.",
+  "Resolve draft blockers": "The mapped staging PR is still draft. Clear draft-only blockers before review or merge.",
+  "Inspect CI": "The mapped staging PR has missing, pending, or failing checks. Inspect CI before review.",
+  "Fix merge state": "The mapped staging PR has a blocked merge state. Resolve conflicts or mergeability problems first.",
+  "Track upstream blocker": "A curated relevant upstream issue is still open. Track the upstream blocker before pushing this formula forward.",
+  "Review and merge": "The mapped staging PR has no local readiness blockers. Review and merge when policy allows.",
+};
+const helpText = actionHelp[action] || "Next maintainer action derived from the staging PR readiness state.";
+---
+
+<span
+  class={"pill action-" + slug(action) + " action-help help-badge"}
+  tabindex={focusable ? "0" : undefined}
+  aria-label={action + ": " + helpText}
+  data-tooltip={helpText}
+>
+  {action}
+</span>

@@ -2,6 +2,7 @@
 import Layout from "../components/Layout.astro";
 import WorkflowRail from "../components/WorkflowRail.astro";
 import Footer from "../components/Footer.astro";
+import ActionBadge from "../components/ActionBadge.astro";
 import ImpactBadge from "../components/ImpactBadge.astro";
 import { queueActions, rowsForAction } from "../lib/data";
 import { prLabel, sectionAnchor, slug, trackerHref } from "../lib/format";
@@ -30,7 +31,7 @@ const railItems = sections.map(({ action, rows }) => ({
         {sections.map(({ action, rows }) => (
           <details id={sectionAnchor(action)} class="queue-accordion" open={rows.length > 0}>
             <summary>
-              <span class={"pill action-" + slug(action)}>{action}</span>
+              <ActionBadge action={action} focusable={false} />
               <b>{rows.length}</b>
             </summary>
             {rows.length === 0 ? (

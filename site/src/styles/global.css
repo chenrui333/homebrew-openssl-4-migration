@@ -650,13 +650,13 @@ main,
   color: var(--blue);
 }
 
-.metric-help {
+.help-badge {
   position: relative;
   cursor: help;
   overflow: visible;
 }
 
-.metric-help::after {
+.help-badge::after {
   content: attr(data-tooltip);
   position: absolute;
   left: 50%;
@@ -682,9 +682,10 @@ main,
   transition: opacity 120ms ease, visibility 120ms ease;
 }
 
-.metric-help:hover::after,
-.metric-help:focus-visible::after,
-.evidence-row--link:focus-visible .metric-help::after {
+.help-badge:hover::after,
+.help-badge:focus-visible::after,
+.evidence-row--link:focus-visible .help-badge::after,
+.queue-accordion summary:focus-visible .help-badge::after {
   opacity: 1;
   visibility: visible;
 }
@@ -791,6 +792,25 @@ main,
   color: var(--muted);
   font-family: var(--mono);
   font-size: 0.76rem;
+}
+
+.queue-clear-buckets {
+  margin: 0.85rem 0 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.queue-clear-buckets strong {
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  margin-right: 0.35rem;
+  text-transform: uppercase;
+}
+
+.queue-clear-buckets span {
+  color: var(--muted);
 }
 
 .queue-card__item {
