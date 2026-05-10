@@ -74,8 +74,12 @@ func refreshTargetRefs(homebrewCore string) {
 // "REMOVED", or "UNKNOWN".
 func LiveStatus(homebrewCore string, f deptree.Formula) string {
 	if f.Path != "" {
-		if contents, err := git.ShowFile(homebrewCore, "origin/"+f.TargetBranchOrDefault(), f.Path); err == nil {
+		ref := "origin/" + f.TargetBranchOrDefault()
+		if contents, err := git.ShowFile(homebrewCore, ref, f.Path); err == nil {
 			return detectStatus(contents)
+		}
+		if git.RefExists(homebrewCore, ref) {
+			return "REMOVED"
 		}
 	}
 
