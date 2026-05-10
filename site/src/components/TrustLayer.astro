@@ -5,26 +5,30 @@
   <div class="section-heading">
     <span>§ 03</span>
     <div>
-      <h2>Trust and provenance</h2>
-      <p>Every row is generated from repository data, Homebrew formula state, mapped PRs, and curated upstream issues.</p>
+      <h2>Methodology and provenance</h2>
+      <p>The public dashboard is a generated registry, not a hand-edited status page. Each signal has a source and a refresh path.</p>
     </div>
   </div>
   <div class="trust-grid">
     <article>
       <span class="label">Target branch</span>
-      <p>Rows carry the computed migration target so staging work stays separate from direct main-track leaves.</p>
+      <h3>Staged closure first</h3>
+      <p>Target branch is computed from the staged dependency closure so depth-gated roots stay on the staging branch while independent leaves can move on main.</p>
     </article>
     <article>
       <span class="label">PR state</span>
-      <p>Draft, CI, base, and merge-state signals are derived from the mapped Homebrew/homebrew-core pull request.</p>
+      <h3>Queried during sync</h3>
+      <p>Draft, CI, base-branch, and merge-state signals are queried from mapped Homebrew/homebrew-core pull requests when the dataset refreshes.</p>
     </article>
     <article>
       <span class="label">Upstream issue</span>
-      <p>Curated blockers and searchable upstream repositories are exposed beside formula rows.</p>
+      <h3>Curated evidence</h3>
+      <p>Known upstream blockers come from the curated issue dataset. Uncovered repositories keep search links visible instead of hiding the evidence gap.</p>
     </article>
     <article>
       <span class="label">Impact graph</span>
-      <p>Impact counts come from the transitive OpenSSL-linked formula graph in the generated dependency inventory.</p>
+      <h3>Transitive blast radius</h3>
+      <p>Impact count comes from transitive OpenSSL formula parents in the generated dependency graph, making high-leverage blockers easy to spot.</p>
     </article>
   </div>
 </section>

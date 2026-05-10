@@ -1,33 +1,39 @@
 ---
-import { pagePath } from "../lib/format";
+import { snapshot } from "../lib/data";
+import { formatDate, pagePath } from "../lib/format";
 ---
 
 <footer class="site-footer">
   <div>
     <h2>Open migration registry</h2>
     <p>Static, inspectable pages generated from the OpenSSL 4 migration harness.</p>
+    <p class="footer-stamp">Generated {formatDate(snapshot.generated_at)}</p>
   </div>
   <nav aria-label="Footer navigation">
     <section>
       <h3>Registry</h3>
+      <a href={pagePath()}>Overview</a>
       <a href={pagePath("tracker/")}>Tracker</a>
       <a href={pagePath("queue/")}>Action queue</a>
       <a href={pagePath("upstream/")}>Upstream</a>
     </section>
     <section>
+      <h3>Data</h3>
+      <a href={pagePath("api/snapshot.json")}>JSON snapshot</a>
+      <a href="https://github.com/chenrui333/homebrew-openssl-4-migration/blob/main/data/dep_tree.json">Dependency tree</a>
+      <a href="https://github.com/chenrui333/homebrew-openssl-4-migration/blob/main/AUDIT.md">Audit report</a>
+    </section>
+    <section>
       <h3>Workflow</h3>
+      <a href="https://github.com/chenrui333/homebrew-openssl-4-migration/actions">GitHub Actions</a>
       <a href="https://github.com/Homebrew/homebrew-core/issues/278366">Tracking issue</a>
       <a href="https://github.com/Homebrew/homebrew-core/pulls?q=is%3Aopen+is%3Apr+label%3Aopenssl-4-migration">Migration PRs</a>
     </section>
     <section>
-      <h3>Data</h3>
-      <a href={pagePath("api/snapshot.json")}>JSON snapshot</a>
-      <a href="https://github.com/chenrui333/homebrew-openssl-4-migration/blob/main/data/dep_tree.json">Dependency tree</a>
-    </section>
-    <section>
       <h3>Project</h3>
       <a href="https://github.com/chenrui333/homebrew-openssl-4-migration">Harness repository</a>
-      <a href="https://github.com/chenrui333/homebrew-openssl-4-migration/actions">Automation</a>
+      <a href="https://github.com/chenrui333/homebrew-openssl-4-migration/blob/main/README.md">README</a>
+      <a href="https://github.com/chenrui333/homebrew-openssl-4-migration/blob/main/TRACKING.md">Tracking artifact</a>
     </section>
   </nav>
 </footer>

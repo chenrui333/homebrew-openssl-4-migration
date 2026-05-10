@@ -8,28 +8,80 @@ interface Props {
 }
 
 const { row, compact = false } = Astro.props;
+const href = row.open_pr_url || row.upstream_url || row.issue_links[0]?.url || "";
+const blockers = [
+  row.is_base_mismatch && "Base mismatch",
+  row.is_draft && "Draft",
+  row.is_ci_blocked && "CI blocked",
+  row.is_upstream_blocked && "Upstream",
+  row.is_missing_pr && "Missing PR",
+].filter(Boolean);
+const blocker = row.live_status === "DONE" ? "Done" : row.is_ready ? "Ready" : blockers.slice(0, 2).join(" + ") || row.readiness[0] || "Pending";
+const blockerTone = row.live_status === "DONE" || row.is_ready ? "blocker-ok" : "blocker-open";
+const classes = ["evidence-row", compact && "evidence-row--compact", href && "evidence-row--link"];
 ---
 
-<article class:list={["evidence-row", compact && "evidence-row--compact"]}>
-  <div>
-    <span class="label">{depthLabel(row)} · {row.target_branch}</span>
-    <h3>{row.name}</h3>
-  </div>
-  <div class="row-meta">
-    <span class={"pill action-" + slug(row.next_action)}>{row.next_action}</span>
-    <span class="impact">{row.impact_count}</span>
-    {row.open_pr_url ? <a href={row.open_pr_url}>{prLabel(row)}</a> : <span>{prLabel(row)}</span>}
-  </div>
-  {!compact && (
-    <p class="row-caption">
-      {upstreamLabel(row)}
-      {row.issue_links.length > 0 && " · "}
-      {row.issue_links.slice(0, 2).map((issue, index) => (
-        <>
-          {index > 0 && ", "}
-          <a href={issue.url}>{issue.label}</a>
-        </>
-      ))}
-    </p>
-  )}
-</article>
+{href ? (
+  <a class:list={classes} href={href}>
+    <div class="row-main">
+      <span class="label">{depthLabel(row)} · {row.target_branch}</span>
+      <h3>{row.name}</h3>
+    </div>
+    <dl class="row-fields">
+      <div>
+        <dt>Action</dt>
+        <dd><span class={"pill action-" + slug(row.next_action)}>{row.next_action}</span></dd>
+      </div>
+      <div>
+        <dt>Impact</dt>
+        <dd><span class="impact">{row.impact_count}</span></dd>
+      </div>
+      <div>
+        <dt>PR</dt>
+        <dd>{prLabel(row)}</dd>
+      </div>
+      <div>
+        <dt>Blocker</dt>
+        <dd><span class={"blocker " + blockerTone}>{blocker}</span></dd>
+      </div>
+    </dl>
+    {!compact && (
+      <p class="row-caption">
+        {upstreamLabel(row)}
+        {row.issue_links.length > 0 && " · "}
+        {row.issue_links.slice(0, 2).map((issue, index) => (
+          <>
+            {index > 0 && ", "}
+            <span>{issue.label}</span>
+          </>
+        ))}
+      </p>
+    )}
+  </a>
+) : (
+  <article class:list={classes}>
+    <div class="row-main">
+      <span class="label">{depthLabel(row)} · {row.target_branch}</span>
+      <h3>{row.name}</h3>
+    </div>
+    <dl class="row-fields">
+      <div>
+        <dt>Action</dt>
+        <dd><span class={"pill action-" + slug(row.next_action)}>{row.next_action}</span></dd>
+      </div>
+      <div>
+        <dt>Impact</dt>
+        <dd><span class="impact">{row.impact_count}</span></dd>
+      </div>
+      <div>
+        <dt>PR</dt>
+        <dd>{prLabel(row)}</dd>
+      </div>
+      <div>
+        <dt>Blocker</dt>
+        <dd><span class={"blocker " + blockerTone}>{blocker}</span></dd>
+      </div>
+    </dl>
+    {!compact && <p class="row-caption">{upstreamLabel(row)}</p>}
+  </article>
+)}

@@ -1,7 +1,7 @@
 ---
 import type { SnapshotRow } from "../lib/types";
 import { rowsForAction } from "../lib/data";
-import { pagePath, slug } from "../lib/format";
+import { pagePath, prLabel, slug } from "../lib/format";
 
 const actions = [
   "Review and merge",
@@ -24,20 +24,25 @@ const actions = [
   <div class="queue-grid">
     {actions.map((action) => {
       const rows = rowsForAction(action, 4) as SnapshotRow[];
+      const total = rowsForAction(action).length;
       return (
         <article class="queue-card">
           <div class="queue-card__head">
             <span class={"pill action-" + slug(action)}>{action}</span>
-            <strong>{rowsForAction(action).length}</strong>
+            <strong>{total}</strong>
           </div>
           <ol>
             {rows.map((row) => (
               <li>
-                <a href={pagePath("tracker/")}>{row.name}</a>
-                <span>{row.impact_count}</span>
+                <a href={row.open_pr_url || row.upstream_url || pagePath("tracker/")}>
+                  <span>{row.name}</span>
+                  <small>{prLabel(row)} · {row.target_branch}</small>
+                </a>
+                <b>{row.impact_count}</b>
               </li>
             ))}
           </ol>
+          <a class="queue-card__more" href={pagePath("queue/")}>View {total} rows</a>
         </article>
       );
     })}

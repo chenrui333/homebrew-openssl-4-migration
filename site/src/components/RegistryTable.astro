@@ -14,7 +14,7 @@ const { rows, showControls = true } = Astro.props;
   <section class="registry-controls" data-registry-controls>
     <label>
       <span>Search registry</span>
-      <input type="search" data-registry-search placeholder="formula, upstream, target branch, PR" />
+      <input type="search" data-registry-search placeholder="Formula, upstream repo, target branch, PR number" />
     </label>
     <div class="filter-chips" aria-label="Registry filters">
       {["all", "current-gate", "pending", "ready", "draft", "ci-blocked", "base-mismatch", "missing-pr", "upstream-blocked", "done"].map((filter) => (
@@ -29,10 +29,10 @@ const { rows, showControls = true } = Astro.props;
   <table>
     <thead>
       <tr>
-        <th>Formula</th>
-        <th>Action</th>
-        <th>Impact</th>
-        <th>Status</th>
+        <th><button type="button" class="sort-button" data-sort="name">Formula</button></th>
+        <th><button type="button" class="sort-button" data-sort="action">Action</button></th>
+        <th aria-sort="descending"><button type="button" class="sort-button" data-sort="impact" data-sort-active="true">Impact</button></th>
+        <th><button type="button" class="sort-button" data-sort="status">Status</button></th>
         <th>PR</th>
         <th>Target</th>
         <th>Upstream</th>
@@ -43,6 +43,7 @@ const { rows, showControls = true } = Astro.props;
       {rows.map((row) => (
         <tr
           data-row
+          data-name={row.name.toLowerCase()}
           data-filter-text={(row.name + " " + upstreamLabel(row) + " " + row.target_branch + " " + prLabel(row) + " " + row.next_action + " " + row.readiness.join(" ")).toLowerCase()}
           data-current-gate={row.is_current_gate}
           data-status={row.live_status.toLowerCase()}
@@ -82,45 +83,97 @@ const { rows, showControls = true } = Astro.props;
 </div>
 
 <script>
-  const controls = document.querySelector("[data-registry-controls]");
-  const rows = Array.from(document.querySelectorAll("[data-row]"));
-  const input = controls?.querySelector("[data-registry-search]");
-  const buttons = Array.from(controls?.querySelectorAll("[data-filter]") || []);
-  const count = controls?.querySelector("[data-result-count]");
-  let active = "all";
+  document.querySelectorAll("[data-registry-table]").forEach((table) => {
+    if (table.dataset.registryReady === "true") return;
+    table.dataset.registryReady = "true";
+    const controls = table.previousElementSibling?.matches("[data-registry-controls]") ? table.previousElementSibling : null;
+    const rows = Array.from(table.querySelectorAll("[data-row]"));
+    const input = controls?.querySelector("[data-registry-search]");
+    const buttons = Array.from(controls?.querySelectorAll("[data-filter]") || []);
+    const sortButtons = Array.from(table.querySelectorAll("[data-sort]"));
+    const tbody = table.querySelector("tbody");
+    const count = controls?.querySelector("[data-result-count]");
+    let active = "all";
+    let sortKey = "impact";
+    let sortDirection = "desc";
 
-  function matchesFilter(row, filter) {
-    if (filter === "all") return true;
-    if (filter === "current-gate") return row.dataset.currentGate === "true";
-    if (filter === "pending") return row.dataset.status === "pending";
-    if (filter === "done") return row.dataset.status === "done";
-    if (filter === "ready") return row.dataset.ready === "true";
-    if (filter === "draft") return row.dataset.draft === "true";
-    if (filter === "ci-blocked") return row.dataset.ciBlocked === "true";
-    if (filter === "base-mismatch") return row.dataset.baseMismatch === "true";
-    if (filter === "missing-pr") return row.dataset.missingPr === "true";
-    if (filter === "upstream-blocked") return row.dataset.upstreamBlocked === "true";
-    return true;
-  }
+    function matchesFilter(row, filter) {
+      if (filter === "all") return true;
+      if (filter === "current-gate") return row.dataset.currentGate === "true";
+      if (filter === "pending") return row.dataset.status === "pending";
+      if (filter === "done") return row.dataset.status === "done";
+      if (filter === "ready") return row.dataset.ready === "true";
+      if (filter === "draft") return row.dataset.draft === "true";
+      if (filter === "ci-blocked") return row.dataset.ciBlocked === "true";
+      if (filter === "base-mismatch") return row.dataset.baseMismatch === "true";
+      if (filter === "missing-pr") return row.dataset.missingPr === "true";
+      if (filter === "upstream-blocked") return row.dataset.upstreamBlocked === "true";
+      return true;
+    }
 
-  function applyFilters() {
-    const query = String(input?.value || "").toLowerCase();
-    let visible = 0;
-    rows.forEach((row) => {
-      const shown = matchesFilter(row, active) && String(row.dataset.filterText || "").includes(query);
-      row.hidden = !shown;
-      if (shown) visible += 1;
-    });
-    buttons.forEach((button) => button.setAttribute("aria-pressed", button.dataset.filter === active ? "true" : "false"));
-    if (count) count.textContent = visible + " of " + rows.length + " rows shown";
-  }
+    function applyFilters() {
+      const query = String(input?.value || "").toLowerCase();
+      let visible = 0;
+      rows.forEach((row) => {
+        const shown = matchesFilter(row, active) && String(row.dataset.filterText || "").includes(query);
+        row.hidden = !shown;
+        if (shown) visible += 1;
+      });
+      buttons.forEach((button) => button.setAttribute("aria-pressed", button.dataset.filter === active ? "true" : "false"));
+      if (count) count.textContent = visible + " of " + rows.length + " rows shown";
+    }
 
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      active = button.dataset.filter || "all";
+    function valueFor(row, key) {
+      if (key === "impact") return Number(row.dataset.impact || 0);
+      if (key === "action") return String(row.dataset.action || "");
+      if (key === "status") return String(row.dataset.status || "");
+      return String(row.dataset.name || "");
+    }
+
+    function applySort() {
+      if (!tbody) return;
+      const sorted = [...rows].sort((a, b) => {
+        const av = valueFor(a, sortKey);
+        const bv = valueFor(b, sortKey);
+        let result = 0;
+        if (typeof av === "number" && typeof bv === "number") {
+          result = av - bv;
+        } else {
+          result = String(av).localeCompare(String(bv));
+        }
+        if (result === 0) result = String(a.dataset.name || "").localeCompare(String(b.dataset.name || ""));
+        return sortDirection === "asc" ? result : -result;
+      });
+      sorted.forEach((row) => tbody.appendChild(row));
+      sortButtons.forEach((button) => {
+        const activeButton = button.dataset.sort === sortKey;
+        button.toggleAttribute("data-sort-active", activeButton);
+        button.setAttribute("aria-label", (button.textContent || "Column") + " sorted " + (activeButton ? sortDirection : "none"));
+        const th = button.closest("th");
+        if (th) th.setAttribute("aria-sort", activeButton ? (sortDirection === "asc" ? "ascending" : "descending") : "none");
+      });
       applyFilters();
+    }
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        active = button.dataset.filter || "all";
+        applyFilters();
+      });
     });
+    input?.addEventListener("input", applyFilters);
+    sortButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const next = button.dataset.sort || "impact";
+        if (next === sortKey) {
+          sortDirection = sortDirection === "asc" ? "desc" : "asc";
+        } else {
+          sortKey = next;
+          sortDirection = next === "impact" ? "desc" : "asc";
+        }
+        applySort();
+      });
+    });
+    applySort();
   });
-  input?.addEventListener("input", applyFilters);
-  applyFilters();
 </script>

@@ -7,23 +7,62 @@ interface Props {
 }
 
 const { snapshot } = Astro.props;
+const current = snapshot.current_gate;
+const next = snapshot.next_gate;
+const registryStats = [
+  ["Tracked", snapshot.total_formulae],
+  ["Done", snapshot.done],
+  ["Pending", snapshot.pending],
+  ["Open PRs", snapshot.open_prs],
+];
 ---
 
 <section class="hero registry-section">
   <div class="hero__copy">
-    <p class="eyebrow">Homebrew/homebrew-core migration registry</p>
+    <p class="eyebrow"><span></span>Homebrew/homebrew-core migration registry</p>
     <h1>OpenSSL 4 Migration Control Room</h1>
     <p class="lede">A dated, inspectable registry for moving Homebrew formulae from openssl@3 to openssl@4.</p>
+    <div class="hero__meta" aria-label="Snapshot summary">
+      <span>Snapshot {formatDate(snapshot.generated_at)}</span>
+      <span>Current gate {current.label}</span>
+      <span>{pct(snapshot.done, snapshot.total_formulae)} complete</span>
+    </div>
     <div class="hero__actions" aria-label="Primary actions">
       <a class="button button--primary" href={pagePath("tracker/")}>Browse tracker</a>
       <a class="button" href={pagePath("queue/")}>View action queue</a>
       <a class="button" href={pagePath("api/snapshot.json")}>Open JSON</a>
     </div>
   </div>
-  <aside class="snapshot-card" aria-label="Snapshot provenance">
-    <span class="label">Snapshot</span>
-    <strong>{formatDate(snapshot.generated_at)}</strong>
-    <span>{snapshot.done} done / {snapshot.total_formulae} tracked</span>
-    <span>{pct(snapshot.done, snapshot.total_formulae)} complete</span>
+  <aside class="snapshot-card" aria-label="Current migration snapshot">
+    <div class="snapshot-card__head">
+      <span class="label">Snapshot ledger</span>
+      <span>{formatDate(snapshot.generated_at)}</span>
+    </div>
+    <strong>{current.label}</strong>
+    <p>{current.pending} pending of {current.total} rows in the active staged gate.</p>
+    <dl class="snapshot-list">
+      <div>
+        <dt>Target</dt>
+        <dd>{current.target_branch}</dd>
+      </div>
+      <div>
+        <dt>Depth</dt>
+        <dd>{current.depth === null ? "staging closure" : "depth " + current.depth}</dd>
+      </div>
+      {next && (
+        <div>
+          <dt>Next</dt>
+          <dd>{next.label}</dd>
+        </div>
+      )}
+    </dl>
+    <div class="hero-stat-grid">
+      {registryStats.map(([label, value]) => (
+        <div>
+          <span>{label}</span>
+          <b>{value}</b>
+        </div>
+      ))}
+    </div>
   </aside>
 </section>

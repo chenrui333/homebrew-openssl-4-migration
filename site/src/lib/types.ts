@@ -22,9 +22,9 @@ export interface SnapshotRow {
   depth: number | null;
   staging_reason?: string;
   impact_count: number;
-  open_pr_number?: number;
-  open_pr_url?: string;
-  open_pr_base?: string;
+  open_pr_number: number | null;
+  open_pr_url: string;
+  open_pr_base: string;
   readiness: string[];
   next_action: string;
   upstream_provider?: string;
@@ -47,7 +47,7 @@ export interface Snapshot {
   pending: number;
   open_prs: number;
   current_gate: GateSnapshot;
-  next_gate?: GateSnapshot;
+  next_gate: GateSnapshot | null;
   upstream_gap_count: number;
   base_mismatch_count: number;
   rows: SnapshotRow[];
