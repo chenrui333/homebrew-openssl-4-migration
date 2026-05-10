@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.2.0 - 2026-05-10
 
 - Add an audit report command and generated AUDIT.md for readiness, blocker, main-track opportunity, and upstream issue review.
 - Add upstream source metadata to data/dep_tree.json and a curated data/upstream_issues.json dataset.
