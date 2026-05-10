@@ -45,12 +45,12 @@ func TestParseSourceMetadata(t *testing.T) {
 			contents: "class Foo < Formula\n" +
 				"  homepage \"https://example.com\"\n" +
 				"  url \"https://example.com/foo-1.0.tar.gz\"\n" +
-				"  head do\n" +
-				"    resource \"fixture\" do\n" +
+				"  head do # track HEAD from upstream git\n" +
+				"    resource \"fixture\" do # nested block should not provide head URL\n" +
 				"      url \"https://example.com/fixture.tar.gz\"\n" +
-				"    end\n" +
+				"    end # fixture resource\n" +
 				"    url \"https://github.com/example/foo.git\", branch: \"main\"\n" +
-				"  end\n" +
+				"  end # head\n" +
 				"end\n",
 			wantHomepage: "https://example.com",
 			wantURL:      "https://example.com/foo-1.0.tar.gz",

@@ -7,11 +7,12 @@ import (
 )
 
 var (
-	homepageLineRe = regexp.MustCompile("(?m)^\\s*homepage\\s+\"([^\"]+)\"")
-	urlLineRe      = regexp.MustCompile("(?m)^\\s*url\\s+\"([^\"]+)\"")
-	headLineRe     = regexp.MustCompile("(?m)^\\s*head\\s+\"([^\"]+)\"")
-	headDoLineRe   = regexp.MustCompile("^\\s*head\\s+do\\s*$")
-	rubyDoLineRe   = regexp.MustCompile("\\bdo(\\s*\\|[^|]*\\|)?\\s*$")
+	homepageLineRe = regexp.MustCompile(`(?m)^\s*homepage\s+"([^"]+)"`)
+	urlLineRe      = regexp.MustCompile(`(?m)^\s*url\s+"([^"]+)"`)
+	headLineRe     = regexp.MustCompile(`(?m)^\s*head\s+"([^"]+)"`)
+	headDoLineRe   = regexp.MustCompile(`^\s*head\s+do\s*(?:#.*)?$`)
+	rubyDoLineRe   = regexp.MustCompile(`\bdo(?:\s*\|[^|]*\|)?\s*(?:#.*)?$`)
+	rubyEndLineRe  = regexp.MustCompile(`^\s*end\s*(?:#.*)?$`)
 )
 
 // SourceMetadata is upstream source information parsed from a formula.
@@ -54,7 +55,7 @@ func firstHeadBlockURL(contents string) string {
 			continue
 		}
 		trimmed := strings.TrimSpace(line)
-		if trimmed == "end" {
+		if rubyEndLineRe.MatchString(trimmed) {
 			if depth == 0 {
 				return ""
 			}
