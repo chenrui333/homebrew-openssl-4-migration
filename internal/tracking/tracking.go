@@ -5,6 +5,7 @@ package tracking
 import (
 	"fmt"
 	"os"
+	"path"
 	"path/filepath"
 	"regexp"
 	"sort"
@@ -12,6 +13,7 @@ import (
 
 	"github.com/chenrui333/homebrew-openssl-4-migration/internal/deptree"
 	"github.com/chenrui333/homebrew-openssl-4-migration/internal/formula"
+	"github.com/chenrui333/homebrew-openssl-4-migration/internal/git"
 	"github.com/chenrui333/homebrew-openssl-4-migration/internal/github"
 )
 
@@ -26,16 +28,18 @@ type Row struct {
 
 // Group is a set of rows at the same depth level, with aggregated counts.
 type Group struct {
-	Depth *int
-	Label string
-	Rows  []Row
-	Done  int
+	Depth        *int
+	Label        string
+	TargetBranch string
+	Rows         []Row
+	Done         int
 }
 
 // Build queries GitHub for open PRs, computes live status for every formula in
 // tree, groups by depth, and returns the groups alongside totals.
 // PR query failures are non-fatal (a warning is printed to stderr).
 func Build(homebrewCore string, tree *deptree.DepTree) (groups []Group, pending, done int) {
+	refreshTargetRefs(homebrewCore)
 	prByFormula := loadPRs()
 
 	var rows []Row
@@ -60,9 +64,21 @@ func Build(homebrewCore string, tree *deptree.DepTree) (groups []Group, pending,
 	return
 }
 
-// LiveStatus reads the formula file from the homebrew-core checkout and returns
-// "DONE", "PENDING", "REMOVED", or "UNKNOWN".
+func refreshTargetRefs(homebrewCore string) {
+	_ = git.Fetch(homebrewCore, "origin", deptree.MainBranch)
+	_ = git.Fetch(homebrewCore, "origin", deptree.StagingBranch)
+}
+
+// LiveStatus reads the formula from origin/<target branch> when available,
+// falling back to the local checkout, and returns "DONE", "PENDING",
+// "REMOVED", or "UNKNOWN".
 func LiveStatus(homebrewCore string, f deptree.Formula) string {
+	if f.Path != "" {
+		if contents, err := git.ShowFile(homebrewCore, "origin/"+f.TargetBranchOrDefault(), f.Path); err == nil {
+			return detectStatus(contents)
+		}
+	}
+
 	path := filepath.Join(homebrewCore, f.Path)
 	if _, err := os.Stat(path); os.IsNotExist(err) {
 		firstChar := strings.ToLower(string([]rune(f.Name)[0]))
@@ -72,7 +88,11 @@ func LiveStatus(homebrewCore string, f deptree.Formula) string {
 	if err != nil {
 		return "REMOVED"
 	}
-	switch formula.DetectOpenSSLDep(string(contents)) {
+	return detectStatus(string(contents))
+}
+
+func detectStatus(contents string) string {
+	switch formula.DetectOpenSSLDep(contents) {
 	case "openssl@4":
 		return "DONE"
 	case "openssl@3":
@@ -84,17 +104,36 @@ func LiveStatus(homebrewCore string, f deptree.Formula) string {
 
 func loadPRs() map[string]*github.PR {
 	m := make(map[string]*github.PR)
-	prs, err := github.ListOpenPRs("Homebrew/homebrew-core", "openssl@4")
+	prs, err := github.ListOpenPRs("Homebrew/homebrew-core", "label:openssl-4-migration")
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Warning: could not fetch open PRs: %v\n", err)
 		return m
 	}
+	return mapPRsByFormula(prs)
+}
+
+func mapPRsByFormula(prs []github.PR) map[string]*github.PR {
+	m := make(map[string]*github.PR)
 	for i := range prs {
+		for _, file := range prs[i].Files {
+			if name := formulaNameFromPath(file.Path); name != "" {
+				m[name] = &prs[i]
+			}
+		}
 		if match := prTitleRe.FindStringSubmatch(prs[i].Title); match != nil {
-			m[match[1]] = &prs[i]
+			if _, ok := m[match[1]]; !ok {
+				m[match[1]] = &prs[i]
+			}
 		}
 	}
 	return m
+}
+
+func formulaNameFromPath(filePath string) string {
+	if !strings.HasPrefix(filePath, "Formula/") || !strings.HasSuffix(filePath, ".rb") {
+		return ""
+	}
+	return strings.TrimSuffix(path.Base(filePath), ".rb")
 }
 
 var depthLabels = map[int]string{
@@ -104,7 +143,7 @@ var depthLabels = map[int]string{
 	3: "Batch 3",
 }
 
-var depthOrder = []*int{intPtr(0), intPtr(1), intPtr(2), intPtr(3), nil}
+var depthOrder = []*int{intPtr(0), intPtr(1), intPtr(2), intPtr(3)}
 
 func groupByDepth(rows []Row) []Group {
 	var groups []Group
@@ -130,9 +169,47 @@ func groupByDepth(rows []Row) []Group {
 				groupDone++
 			}
 		}
-		groups = append(groups, Group{Depth: depth, Label: label, Rows: g, Done: groupDone})
+		groups = append(groups, Group{Depth: depth, Label: label, TargetBranch: deptree.StagingBranch, Rows: g, Done: groupDone})
+	}
+
+	if g := rowsForTarget(rows, deptree.StagingBranch); len(g) > 0 {
+		groups = append(groups, Group{
+			Label:        "Staging closure",
+			TargetBranch: deptree.StagingBranch,
+			Rows:         g,
+			Done:         doneCount(g),
+		})
+	}
+	if g := rowsForTarget(rows, deptree.MainBranch); len(g) > 0 {
+		groups = append(groups, Group{
+			Label:        "Main-track leaves",
+			TargetBranch: deptree.MainBranch,
+			Rows:         g,
+			Done:         doneCount(g),
+		})
 	}
 	return groups
+}
+
+func rowsForTarget(rows []Row, targetBranch string) []Row {
+	var g []Row
+	for _, r := range rows {
+		if r.Depth == nil && r.TargetBranchOrDefault() == targetBranch {
+			g = append(g, r)
+		}
+	}
+	sort.Slice(g, func(i, j int) bool { return g[i].Name < g[j].Name })
+	return g
+}
+
+func doneCount(rows []Row) int {
+	done := 0
+	for _, r := range rows {
+		if r.LiveStatus == "DONE" {
+			done++
+		}
+	}
+	return done
 }
 
 func depthEqual(a, b *int) bool {

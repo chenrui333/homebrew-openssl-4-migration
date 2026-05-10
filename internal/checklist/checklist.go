@@ -33,11 +33,11 @@ func Run(homebrewCore, depTreePath, outputPath string) error {
 	fmt.Fprintf(&sb, "# OpenSSL 4 Migration Checklist (%s)\n\n", date)
 	fmt.Fprintf(&sb, "Progress: **%d/%d (%.1f%%)**\n", done, total, pct)
 	fmt.Fprintf(&sb, "Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/homebrew-core/issues/278366)\n\n")
-	fmt.Fprintf(&sb, "> Batches must be completed in order (0 → 1 → 2 → 3 → Leaves).\n")
-	fmt.Fprintf(&sb, "> Depth-0 formulae are build-time dependencies of everything above them.\n\n")
+	fmt.Fprintf(&sb, "> Staging batches are depth 0 → 1 → 2 → 3 plus their computed transitive closure.\n")
+	fmt.Fprintf(&sb, "> Main-track leaves are not required by the staged track and can target main directly.\n\n")
 
 	for _, g := range groups {
-		fmt.Fprintf(&sb, "## %s [%d/%d]\n\n", g.Label, g.Done, len(g.Rows))
+		fmt.Fprintf(&sb, "## %s [%d/%d]\n\n", checklistLabel(g), g.Done, len(g.Rows))
 		for _, r := range g.Rows {
 			checkbox := "- [ ]"
 			name := r.Name
@@ -45,10 +45,7 @@ func Run(homebrewCore, depTreePath, outputPath string) error {
 				checkbox = "- [x]"
 				name = "~~" + name + "~~"
 			}
-			prNote := ""
-			if r.OpenPR != nil && r.LiveStatus == "PENDING" {
-				prNote = fmt.Sprintf(" <!-- PR #%d open -->", r.OpenPR.Number)
-			}
+			prNote := prNote(r)
 			fmt.Fprintf(&sb, "%s %s%s\n", checkbox, name, prNote)
 		}
 		fmt.Fprintf(&sb, "\n")
@@ -57,4 +54,22 @@ func Run(homebrewCore, depTreePath, outputPath string) error {
 	output := strings.TrimRight(sb.String(), "\n") + "\n"
 	fmt.Print(output)
 	return os.WriteFile(outputPath, []byte(output), 0o644)
+}
+
+func checklistLabel(g tracking.Group) string {
+	if g.TargetBranch == "" {
+		return g.Label
+	}
+	return fmt.Sprintf("%s -> %s", g.Label, g.TargetBranch)
+}
+
+func prNote(r tracking.Row) string {
+	if r.OpenPR == nil || r.LiveStatus != "PENDING" {
+		return ""
+	}
+	expected := r.TargetBranchOrDefault()
+	if r.OpenPR.BaseRefName != "" && expected != "" && r.OpenPR.BaseRefName != expected {
+		return fmt.Sprintf(" <!-- PR #%d open; base %s, expected %s -->", r.OpenPR.Number, r.OpenPR.BaseRefName, expected)
+	}
+	return fmt.Sprintf(" <!-- PR #%d open -->", r.OpenPR.Number)
 }

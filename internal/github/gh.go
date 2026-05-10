@@ -9,9 +9,17 @@ import (
 
 // PR represents an open pull request returned by gh.
 type PR struct {
-	Number int    `json:"number"`
-	Title  string `json:"title"`
-	State  string `json:"state"`
+	Number      int      `json:"number"`
+	Title       string   `json:"title"`
+	State       string   `json:"state"`
+	BaseRefName string   `json:"baseRefName"`
+	URL         string   `json:"url"`
+	Files       []PRFile `json:"files"`
+}
+
+// PRFile is one file changed by a pull request returned by gh.
+type PRFile struct {
+	Path string `json:"path"`
 }
 
 // Login returns the authenticated GitHub username via gh, or empty string.
@@ -30,7 +38,7 @@ func ListOpenPRs(repo, query string) ([]PR, error) {
 		"--repo", repo,
 		"--search", query,
 		"--state", "open",
-		"--json", "number,title,state",
+		"--json", "number,title,state,baseRefName,url,files",
 		"--limit", "1000",
 	)
 	out, err := cmd.Output()

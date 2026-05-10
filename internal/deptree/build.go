@@ -15,9 +15,19 @@ import (
 )
 
 const (
-	TrackingIssue = "Homebrew/homebrew-core#278366"
-	StagingBranch = "openssl-4-migration-staging"
+	TrackingIssue                  = "Homebrew/homebrew-core#278366"
+	MainBranch                     = "main"
+	StagingBranch                  = "openssl-4-migration-staging"
+	StagingReasonStagedDepth       = "staged-depth"
+	StagingReasonTransitiveClosure = "staged-transitive-dependency"
 )
+
+type scannedFormula struct {
+	Name              string
+	Path              string
+	OpenSSLDependency string
+	Dependencies      []string
+}
 
 // StagedDepths maps depth level to formulae that must be migrated at that depth
 // before their dependents can follow (from tracking issue #278366).
@@ -54,6 +64,7 @@ func Build(homebrewCore string) (*DepTree, error) {
 		return nil, fmt.Errorf("Formula directory not found: %s", formulaRoot)
 	}
 
+	allFormulae := make(map[string]scannedFormula)
 	var formulae []Formula
 
 	err := filepath.Walk(formulaRoot, func(path string, info os.FileInfo, err error) error {
@@ -70,21 +81,30 @@ func Build(homebrewCore string) (*DepTree, error) {
 			return err
 		}
 
+		relPath, _ := filepath.Rel(homebrewCore, path)
+		deps := formula.ParseDependencies(string(contents))
 		dep := formula.DetectOpenSSLDep(string(contents))
+		allFormulae[name] = scannedFormula{
+			Name:              name,
+			Path:              relPath,
+			OpenSSLDependency: dep,
+			Dependencies:      deps,
+		}
 		if dep == "" {
 			return nil
 		}
 
-		relPath, _ := filepath.Rel(homebrewCore, path)
-		deps := formula.ParseDependencies(string(contents))
-
 		f := Formula{
-			Name:                     name,
-			Path:                     relPath,
-			OpenSSLDependency:        dep,
-			Dependencies:             deps,
-			OpenSSLFormulaDeps:       []string{},
-			OpenSSLFormulaDependents: []string{},
+			Name:                            name,
+			Path:                            relPath,
+			OpenSSLDependency:               dep,
+			TargetBranch:                    MainBranch,
+			StagingRequiredBy:               []string{},
+			Dependencies:                    deps,
+			OpenSSLFormulaDeps:              []string{},
+			OpenSSLFormulaDependents:        []string{},
+			TransitiveOpenSSLFormulaDeps:    []string{},
+			TransitiveOpenSSLFormulaParents: []string{},
 		}
 		if d, ok := depthByName[name]; ok {
 			f.Depth = intPtr(d)
@@ -102,7 +122,7 @@ func Build(homebrewCore string) (*DepTree, error) {
 		trackedNames[f.Name] = true
 	}
 
-	// Populate cross-references within the migration set.
+	// Populate direct and transitive cross-references within the migration set.
 	for i := range formulae {
 		for _, dep := range formulae[i].Dependencies {
 			if trackedNames[dep] {
@@ -110,13 +130,18 @@ func Build(homebrewCore string) (*DepTree, error) {
 			}
 		}
 		sort.Strings(formulae[i].OpenSSLFormulaDeps)
+		formulae[i].TransitiveOpenSSLFormulaDeps = transitiveOpenSSLDeps(formulae[i].Name, allFormulae, trackedNames)
 	}
 
-	// Reverse mapping: dependents.
+	// Reverse mappings: direct and transitive dependents.
 	dependents := make(map[string][]string)
+	transitiveDependents := make(map[string][]string)
 	for _, f := range formulae {
 		for _, dep := range f.OpenSSLFormulaDeps {
 			dependents[dep] = append(dependents[dep], f.Name)
+		}
+		for _, dep := range f.TransitiveOpenSSLFormulaDeps {
+			transitiveDependents[dep] = append(transitiveDependents[dep], f.Name)
 		}
 	}
 	for i := range formulae {
@@ -126,17 +151,20 @@ func Build(homebrewCore string) (*DepTree, error) {
 		}
 		sort.Strings(d)
 		formulae[i].OpenSSLFormulaDependents = d
+
+		td := transitiveDependents[formulae[i].Name]
+		if td == nil {
+			td = []string{}
+		}
+		sort.Strings(td)
+		formulae[i].TransitiveOpenSSLFormulaParents = td
 	}
 
-	// Sort by (depth nulls-last, name).
+	assignTargetBranches(formulae)
+
+	// Sort by migration order: explicit depths, staging closure, then main-track leaves.
 	sort.Slice(formulae, func(i, j int) bool {
-		di, dj := 99, 99
-		if formulae[i].Depth != nil {
-			di = *formulae[i].Depth
-		}
-		if formulae[j].Depth != nil {
-			dj = *formulae[j].Depth
-		}
+		di, dj := sortRank(formulae[i]), sortRank(formulae[j])
 		if di != dj {
 			return di < dj
 		}
@@ -169,6 +197,86 @@ func Build(homebrewCore string) (*DepTree, error) {
 		Formulae:      formulae,
 	}
 	return tree, nil
+}
+
+func transitiveOpenSSLDeps(name string, allFormulae map[string]scannedFormula, trackedNames map[string]bool) []string {
+	found := make(map[string]bool)
+	visited := map[string]bool{name: true}
+
+	var walk func(string)
+	walk = func(current string) {
+		currentFormula, ok := allFormulae[current]
+		if !ok {
+			return
+		}
+		for _, dep := range currentFormula.Dependencies {
+			if visited[dep] {
+				continue
+			}
+			visited[dep] = true
+			if trackedNames[dep] {
+				found[dep] = true
+			}
+			walk(dep)
+		}
+	}
+	walk(name)
+	return sortedKeys(found)
+}
+
+func assignTargetBranches(formulae []Formula) {
+	requiredBy := make(map[string]map[string]bool)
+	for _, f := range formulae {
+		if f.Depth == nil {
+			continue
+		}
+		for _, dep := range f.TransitiveOpenSSLFormulaDeps {
+			if dep == f.Name {
+				continue
+			}
+			if requiredBy[dep] == nil {
+				requiredBy[dep] = make(map[string]bool)
+			}
+			requiredBy[dep][f.Name] = true
+		}
+	}
+
+	for i := range formulae {
+		formulae[i].StagingRequiredBy = sortedKeys(requiredBy[formulae[i].Name])
+		switch {
+		case formulae[i].Depth != nil:
+			formulae[i].TargetBranch = StagingBranch
+			formulae[i].StagingReason = StagingReasonStagedDepth
+		case len(formulae[i].StagingRequiredBy) > 0:
+			formulae[i].TargetBranch = StagingBranch
+			formulae[i].StagingReason = StagingReasonTransitiveClosure
+		default:
+			formulae[i].TargetBranch = MainBranch
+			formulae[i].StagingReason = ""
+		}
+	}
+}
+
+func sortRank(f Formula) int {
+	if f.Depth != nil {
+		return *f.Depth
+	}
+	if f.TargetBranchOrDefault() == StagingBranch {
+		return 4
+	}
+	return 5
+}
+
+func sortedKeys(m map[string]bool) []string {
+	if len(m) == 0 {
+		return []string{}
+	}
+	keys := make([]string, 0, len(m))
+	for k := range m {
+		keys = append(keys, k)
+	}
+	sort.Strings(keys)
+	return keys
 }
 
 // Save writes tree to outputPath as indented JSON.

@@ -8,7 +8,7 @@ Migration harness and tracking repo for the Homebrew/homebrew-core openssl@3 →
 2. **Automates** the mechanical formula changes (dep swap + revision bump + Rust ENV wiring) and PR creation.
 
 The actual formulae live in a local homebrew-core checkout.
-Set `HOMEBREW_CORE` to its path (default: `/opt/homebrew/Library/Taps/homebrew/homebrew-core`).
+Set `HOMEBREW_CORE` when your checkout is not at the Makefile default.
 
 ## Binary
 
@@ -38,7 +38,8 @@ make migrate FORMULA=wget        # migrate and open PR
 ## Migration rules
 
 - **Depth 0–3 formulae** (cmake, curl, python@3.x, rust, etc.) target the `openssl-4-migration-staging` branch.
-- **Leaf formulae** (no depth in dep_tree.json) target `main`.
+- **Staging closure formulae** have no explicit staged depth, but are required by a staged formula's transitive dependency graph, so they also target `openssl-4-migration-staging`.
+- **Main-track leaves** are not required by the staged track and target `main`.
 - Branch naming: `rchen.openssl4.<formula-name>`
 - Commit message: `<formula>: use openssl@4`
 - Labels: `openssl-4-migration` for all; also `staging-branch-pr` + `CI-skip-recursive-dependents` for staging PRs.
@@ -55,7 +56,7 @@ internal/
     patch.go                   apply migration (swap dep, bump revision, Rust ENV)
   deptree/
     types.go                   Formula + DepTree structs
-    build.go                   scan formulae, assign depths, emit JSON
+    build.go                   scan formulae, compute staging closure, emit JSON
   tracking/tracking.go         shared live-status + PR query logic
   git/git.go                   thin wrappers around git CLI
   github/gh.go                 thin wrappers around gh CLI
@@ -76,9 +77,9 @@ CHECKLIST.md                   generated checklist; regenerate with make checkli
 | 1 | apache-arrow, bind, curl, ffmpeg, folly, httpd, libpq, node, postgresql@17, postgresql@18, pulseaudio, qtbase, rust, systemd, unbound |
 | 2 | cargo-c, cryptography, gdal, php, ruby |
 | 3 | gstreamer |
-| nil (leaves) | ~677 formulae with no staged depth |
+| nil | no staged depth; target staging only when required by the computed staging closure |
 
-Depth 0 must be fully merged to the staging branch before depth 1, and so on.
+Depth 0 must be fully merged to the staging branch before depth 1, and so on. Formulae in the computed staging closure should move with the staged track; main-track leaves that are not required by staged formulae can target `main` directly.
 
 ## Keeping data in sync
 
@@ -86,7 +87,7 @@ After pulling homebrew-core, regenerate and commit:
 
 ```sh
 cd $HOMEBREW_CORE && git pull --rebase
-cd /path/to/homebrew-openssl-4-migration
+cd $HOME/path/to/homebrew-openssl-4-migration
 make dep-tree
 make status
 make checklist

@@ -49,10 +49,7 @@ func Run(formulaName string, opts Options) error {
 		return fmt.Errorf("%s not found in %s", formulaName, opts.DepTreePath)
 	}
 
-	baseBranch := "main"
-	if entry.Depth != nil {
-		baseBranch = stagingBranch
-	}
+	baseBranch := entry.TargetBranchOrDefault()
 	branchName := "rchen.openssl4." + formulaName
 	title := formulaName + ": use openssl@4"
 
@@ -66,6 +63,9 @@ func Run(formulaName string, opts Options) error {
 	fmt.Printf("Formula: %s\n", formulaName)
 	fmt.Printf("Path:    %s\n", rel)
 	fmt.Printf("Base:    %s\n", baseBranch)
+	if entry.StagingReason != "" {
+		fmt.Printf("Reason:  %s\n", entry.StagingReason)
+	}
 	fmt.Printf("Branch:  %s\n", branchName)
 
 	if opts.DryRun {
@@ -196,7 +196,7 @@ func Run(formulaName string, opts Options) error {
 	}
 
 	body := fmt.Sprintf(
-		"Migrates %s from openssl@3 to openssl@4 as part of the staging migration.\n\nReferences:\n- %s\n",
+		"Migrates %s from openssl@3 to openssl@4 as part of the OpenSSL 4 migration.\n\nReferences:\n- %s\n",
 		formulaName, trackingIssue,
 	)
 	bodyFile, err := os.CreateTemp("", "openssl4-pr-body-*.md")

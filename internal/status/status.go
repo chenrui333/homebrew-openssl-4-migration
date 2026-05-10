@@ -36,19 +36,10 @@ func Run(homebrewCore, depTreePath, outputPath string) error {
 	fmt.Fprintf(&sb, "Tracking issue: Homebrew/homebrew-core#278366\n")
 	fmt.Fprintf(&sb, "\n")
 
-	depthLabels := map[int]string{0: "Depth 0 (roots)", 1: "Depth 1", 2: "Depth 2", 3: "Depth 3"}
-
 	for _, g := range groups {
-		label := "Leaves"
-		if g.Depth != nil {
-			label = depthLabels[*g.Depth]
-		}
-		fmt.Fprintf(&sb, "%s   [%d/%d done]\n", label, g.Done, len(g.Rows))
+		fmt.Fprintf(&sb, "%s   [%d/%d done]\n", statusLabel(g), g.Done, len(g.Rows))
 		for _, r := range g.Rows {
-			suffix := ""
-			if r.OpenPR != nil {
-				suffix = fmt.Sprintf("   [PR #%d open]", r.OpenPR.Number)
-			}
+			suffix := prSuffix(r)
 			line := fmt.Sprintf("  %-24s %-8s%s", r.Name, r.LiveStatus, suffix)
 			fmt.Fprintf(&sb, "%s\n", strings.TrimRight(line, " "))
 		}
@@ -58,4 +49,22 @@ func Run(homebrewCore, depTreePath, outputPath string) error {
 	output := strings.TrimRight(sb.String(), "\n") + "\n"
 	fmt.Print(output)
 	return os.WriteFile(outputPath, []byte(output), 0o644)
+}
+
+func statusLabel(g tracking.Group) string {
+	if g.TargetBranch == "" {
+		return g.Label
+	}
+	return fmt.Sprintf("%s -> %s", g.Label, g.TargetBranch)
+}
+
+func prSuffix(r tracking.Row) string {
+	if r.OpenPR == nil {
+		return ""
+	}
+	expected := r.TargetBranchOrDefault()
+	if r.OpenPR.BaseRefName != "" && expected != "" && r.OpenPR.BaseRefName != expected {
+		return fmt.Sprintf("   [PR #%d open; base %s, expected %s]", r.OpenPR.Number, r.OpenPR.BaseRefName, expected)
+	}
+	return fmt.Sprintf("   [PR #%d open]", r.OpenPR.Number)
 }
