@@ -67,6 +67,12 @@ Daily operator queue for the OpenSSL 4 migration. Rows are sorted by impact, the
 
 <p class="empty">None.</p>
 
+## Merge blocked
+
+<p class="muted">Open PRs with passing checks but a blocked merge state.</p>
+
+<p class="empty">None.</p>
+
 ## Draft PRs
 
 <p class="muted">Open migration PRs that are still draft.</p>

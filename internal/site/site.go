@@ -510,6 +510,9 @@ func queueSections(m model) []queueSection {
 		makeSection("CI blocked", "Open PRs whose status checks are failing, pending, or not yet reported.", func(row tracking.Row) bool {
 			return nextActionFor(row).Slug == actionInspectCI
 		}),
+		makeSection("Merge blocked", "Open PRs with passing checks but a blocked merge state.", func(row tracking.Row) bool {
+			return nextActionFor(row).Slug == actionMerge
+		}),
 		makeSection("Draft PRs", "Open migration PRs that are still draft.", func(row tracking.Row) bool {
 			return nextActionFor(row).Slug == actionDraft
 		}),
@@ -517,7 +520,7 @@ func queueSections(m model) []queueSection {
 			return nextActionFor(row).Slug == actionOpenPR
 		}),
 		makeSection("Upstream blockers", "Pending staged formulae with curated open upstream issues.", func(row tracking.Row) bool {
-			return hasOpenRelevantUpstreamIssue(row, m)
+			return row.TargetBranchOrDefault() == deptree.StagingBranch && hasOpenRelevantUpstreamIssue(row, m)
 		}),
 	}
 }
