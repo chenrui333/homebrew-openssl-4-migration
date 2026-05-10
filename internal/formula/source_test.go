@@ -26,6 +26,21 @@ func TestParseSourceMetadata(t *testing.T) {
 			wantRepo:     "example/foo",
 		},
 		{
+			name: "github head block preferred",
+			contents: "class Foo < Formula\n" +
+				"  homepage \"https://libssh2.org/\"\n" +
+				"  url \"https://libssh2.org/download/libssh2-1.11.1.tar.gz\"\n" +
+				"  head do\n" +
+				"    url \"https://github.com/libssh2/libssh2.git\", branch: \"master\"\n" +
+				"  end\n" +
+				"end\n",
+			wantHomepage: "https://libssh2.org/",
+			wantURL:      "https://libssh2.org/download/libssh2-1.11.1.tar.gz",
+			wantHead:     "https://github.com/libssh2/libssh2.git",
+			wantProvider: "github",
+			wantRepo:     "libssh2/libssh2",
+		},
+		{
 			name: "gitlab archive",
 			contents: "class Foo < Formula\n" +
 				"  homepage \"https://gstreamer.freedesktop.org/\"\n" +
