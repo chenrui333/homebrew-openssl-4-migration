@@ -7,6 +7,7 @@ Migration harness and tracking repo for the Homebrew/homebrew-core openssl@3 →
 1. **Tracks** which formulae have been migrated and which are still pending.
 2. **Automates** the mechanical formula changes (dep swap + revision bump + Rust ENV wiring) and PR creation.
 3. **Audits** staged blockers, main-track opportunities, upstream repositories, and curated upstream issue context.
+4. **Publishes** a MkDocs progress site for executive summary, depth-gate review, and foldable migration tracking.
 
 The actual formulae live in a local homebrew-core checkout.
 Set `HOMEBREW_CORE` when your checkout is not at the Makefile default.
@@ -17,13 +18,14 @@ Set `HOMEBREW_CORE` when your checkout is not at the Makefile default.
 make build          # compiles bin/sslmigrate
 ```
 
-Five subcommands:
+Six subcommands:
 
 ```sh
 bin/sslmigrate dep-tree   # scan homebrew-core → data/dep_tree.json
 bin/sslmigrate status     # live status dashboard → TRACKING.md
 bin/sslmigrate checklist  # markdown checkbox view → CHECKLIST.md
 bin/sslmigrate audit      # readiness/upstream report → AUDIT.md
+bin/sslmigrate site       # MkDocs progress site → docs/
 bin/sslmigrate migrate <formula> [--dry-run] [--no-pr] [--push-remote=REMOTE] [--reset-existing]
 ```
 
@@ -34,6 +36,7 @@ make dep-tree                    # rebuild data/dep_tree.json
 make status                      # regenerate TRACKING.md + print dashboard
 make checklist                   # regenerate CHECKLIST.md with checkboxes
 make audit                       # regenerate AUDIT.md from datasets + live PR state
+make site                        # regenerate docs/ and run mkdocs build --strict
 make migrate-dry FORMULA=wget    # preview diff, no changes to homebrew-core
 make migrate FORMULA=wget        # migrate and open PR
 ```
@@ -69,12 +72,16 @@ internal/
   status/status.go             TRACKING.md dashboard generator
   checklist/checklist.go       CHECKLIST.md checkbox generator
   audit/audit.go               AUDIT.md readiness/upstream report generator
+  site/site.go                 MkDocs progress site generator
 data/dep_tree.json             committed snapshot; regenerate with make dep-tree
 data/upstream_issues.json      curated upstream issue links for audit context
 TRACKING.md                    generated dashboard; regenerate with make status
 CHECKLIST.md                   generated checklist; regenerate with make checklist
 AUDIT.md                       generated audit report with readiness, base mismatch, and upstream coverage sections
+docs/                          generated MkDocs content; regenerate with make site
+mkdocs.yml                     MkDocs site configuration
 .github/workflows/sync.yml     daily GitHub Action to auto-regenerate tracking data
+.github/workflows/pages.yml    GitHub Pages deployment for the MkDocs site
 ```
 
 ## Depth levels (from tracking issue)
@@ -100,16 +107,18 @@ make dep-tree
 make status
 make checklist
 make audit
-git add data/dep_tree.json data/upstream_issues.json TRACKING.md CHECKLIST.md AUDIT.md
+make site
+git add data/dep_tree.json data/upstream_issues.json TRACKING.md CHECKLIST.md AUDIT.md docs
 git commit -s -m "data: sync dep_tree to homebrew-core $(git -C $HOMEBREW_CORE rev-parse --short HEAD)"
 git push origin main
 ```
 
-The GitHub Action (`.github/workflows/sync.yml`) runs dep-tree, status, checklist, and audit automatically every day at 06:17 UTC, then commits and pushes changed datasets/reports.
+The GitHub Action (`.github/workflows/sync.yml`) runs dep-tree, status, checklist, audit, and site automatically every day at 06:17 UTC, then commits and pushes changed datasets/reports.
 
 ## Prerequisites
 
 - Go 1.26+
 - `gh` CLI authenticated (`gh auth status`)
+- MkDocs and MkDocs Material (`python -m pip install -r requirements-docs.txt`) for local site builds
 - A local homebrew-core checkout
 - A fork of Homebrew/homebrew-core pushed as a remote in that checkout
