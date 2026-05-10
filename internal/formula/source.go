@@ -77,7 +77,7 @@ func upstreamFromURL(raw string) (string, string) {
 	switch {
 	case host == "github.com":
 		return "github", cleanRepoPath(firstPathSegments(path, 2))
-	case strings.Contains(host, "gitlab") || strings.Contains(host, "freedesktop.org"):
+	case strings.Contains(host, "gitlab") || host == "gitlab.freedesktop.org" || strings.HasSuffix(host, ".gitlab.freedesktop.org"):
 		return "gitlab", host + "/" + cleanRepoPath(stripGitLabArchive(path))
 	case strings.Contains(host, "python.org") || strings.Contains(host, "pythonhosted.org") || strings.Contains(host, "pypi.org"):
 		return "python", ""

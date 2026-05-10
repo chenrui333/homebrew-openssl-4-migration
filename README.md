@@ -2,7 +2,7 @@
 
 This repository tracks and automates mechanical openssl@3 to openssl@4 formula migrations in Homebrew/homebrew-core.
 
-The workflow is split into two parts:
+The workflow is split into the following steps:
 
 1. Build a dependency/status inventory from a local homebrew-core checkout.
 2. Regenerate tracking, checklist, audit, and dataset artifacts for the migration.

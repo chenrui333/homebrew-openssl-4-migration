@@ -37,6 +37,14 @@ func TestParseSourceMetadata(t *testing.T) {
 			wantRepo:     "gitlab.freedesktop.org/gstreamer/gstreamer",
 		},
 		{
+			name: "non gitlab freedesktop homepage",
+			contents: "class Foo < Formula\n" +
+				"  homepage \"https://gstreamer.freedesktop.org/\"\n" +
+				"end\n",
+			wantHomepage: "https://gstreamer.freedesktop.org/",
+			wantProvider: "other",
+		},
+		{
 			name: "known source preferred over unknown head",
 			contents: "class Foo < Formula\n" +
 				"  homepage \"https://example.com/foo\"\n" +
