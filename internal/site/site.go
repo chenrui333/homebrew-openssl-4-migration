@@ -105,7 +105,7 @@ func renderIndex(m model) string {
 	sb.WriteString("<h1>OpenSSL 4 Migration Dashboard</h1>\n")
 	sb.WriteString("<p class=\"lede\">A compact view of current progress, staged-depth readiness, upstream blockers, and migration PR health.</p>\n")
 	sb.WriteString("</div>\n")
-	sb.WriteString(fmt.Sprintf("<div class=\"donut\" style=\"--done: %.1f\"><span>%.1f%%</span><small>done</small></div>\n", donePct, donePct))
+	fmt.Fprintf(&sb, "<div class=\"donut\" style=\"--done: %.1f\"><span>%.1f%%</span><small>done</small></div>\n", donePct, donePct)
 	sb.WriteString("</div>\n\n")
 
 	sb.WriteString("<div class=\"metric-grid\">\n")
@@ -119,14 +119,14 @@ func renderIndex(m model) string {
 
 	sb.WriteString("## Current Depth Gate\n\n")
 	sb.WriteString("<div class=\"gate-panel\">\n")
-	sb.WriteString(fmt.Sprintf("<p><strong>%s</strong> has <strong>%d pending</strong> of %d formulae. ", html.EscapeString(current.Label), len(currentPending), len(current.Rows)))
+	fmt.Fprintf(&sb, "<p><strong>%s</strong> has <strong>%d pending</strong> of %d formulae. ", html.EscapeString(current.Label), len(currentPending), len(current.Rows))
 	if len(currentPending) == 0 {
 		sb.WriteString("This gate is clear from the current live status.</p>\n")
 	} else {
 		sb.WriteString("Clear this group before moving to the next staged depth.</p>\n")
 	}
 	if next.Label != "" {
-		sb.WriteString(fmt.Sprintf("<p class=\"muted\">Next staged group: <strong>%s</strong> (%d/%d done).</p>\n", html.EscapeString(next.Label), next.Done, len(next.Rows)))
+		fmt.Fprintf(&sb, "<p class=\"muted\">Next staged group: <strong>%s</strong> (%d/%d done).</p>\n", html.EscapeString(next.Label), next.Done, len(next.Rows))
 	}
 	sb.WriteString("</div>\n\n")
 	writeRowsTable(&sb, sortRows(currentPending), m, 0)
@@ -270,20 +270,34 @@ func collectRows(groups []tracking.Group) []tracking.Row {
 }
 
 func currentGate(groups []tracking.Group) tracking.Group {
+	var fallback tracking.Group
+	hasFallback := false
+	var current tracking.Group
+	hasCurrent := false
+	currentDepth := 0
+
 	for _, group := range groups {
-		if group.Depth != nil && len(pendingRows(group.Rows)) > 0 {
-			return group
+		if len(pendingRows(group.Rows)) == 0 {
+			continue
+		}
+		if !hasFallback {
+			fallback = group
+			hasFallback = true
+		}
+		if group.Depth == nil {
+			continue
+		}
+		if !hasCurrent || *group.Depth < currentDepth {
+			current = group
+			currentDepth = *group.Depth
+			hasCurrent = true
 		}
 	}
-	for _, group := range groups {
-		if group.Label == "Staging closure" && len(pendingRows(group.Rows)) > 0 {
-			return group
-		}
+	if hasCurrent {
+		return current
 	}
-	for _, group := range groups {
-		if len(pendingRows(group.Rows)) > 0 {
-			return group
-		}
+	if hasFallback {
+		return fallback
 	}
 	if len(groups) > 0 {
 		return groups[0]

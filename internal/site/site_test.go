@@ -100,3 +100,38 @@ func TestRenderIncludesGateTrackerAndUpstreamPages(t *testing.T) {
 		t.Fatalf("upstream page should include curated issue title\n%s", byPath["upstream.md"])
 	}
 }
+
+func TestCurrentGateChoosesLowestPendingDepth(t *testing.T) {
+	depth0 := 0
+	depth1 := 1
+	groups := []tracking.Group{
+		{
+			Depth: &depth1,
+			Label: "Batch 1",
+			Rows: []tracking.Row{{
+				Formula:    deptree.Formula{Name: "rust", Depth: &depth1},
+				LiveStatus: "PENDING",
+			}},
+		},
+		{
+			Label: "Staging closure",
+			Rows: []tracking.Row{{
+				Formula:    deptree.Formula{Name: "s2n"},
+				LiveStatus: "PENDING",
+			}},
+		},
+		{
+			Depth: &depth0,
+			Label: "Batch 0 - Roots",
+			Rows: []tracking.Row{{
+				Formula:    deptree.Formula{Name: "grpc", Depth: &depth0},
+				LiveStatus: "PENDING",
+			}},
+		},
+	}
+
+	got := currentGate(groups)
+	if got.Label != "Batch 0 - Roots" {
+		t.Fatalf("currentGate = %q, want Batch 0 - Roots", got.Label)
+	}
+}
