@@ -17,10 +17,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout harness repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6.0.2
 
       - name: Checkout homebrew-core (Formula/ only)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6.0.2
         with:
           repository: Homebrew/homebrew-core
           path: homebrew-core
@@ -29,7 +29,7 @@ jobs:
           fetch-depth: 1
 
       - name: Set up Go
-        uses: actions/setup-go@v5
+        uses: actions/setup-go@v6.4.0
         with:
           go-version-file: go.mod
           cache: true
@@ -45,12 +45,13 @@ jobs:
           bin/sslmigrate status --homebrew-core=homebrew-core
           bin/sslmigrate checklist --homebrew-core=homebrew-core
           bin/sslmigrate audit --homebrew-core=homebrew-core
+          bin/sslmigrate site --homebrew-core=homebrew-core
 
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/dep_tree.json data/upstream_issues.json TRACKING.md CHECKLIST.md AUDIT.md
+          git add data/dep_tree.json data/upstream_issues.json TRACKING.md CHECKLIST.md AUDIT.md docs
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else

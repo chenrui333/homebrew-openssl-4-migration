@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Add a Go-generated MkDocs progress site with executive summary, depth-gate tracking, upstream blocker views, and GitHub Pages deployment.
+
 ## 0.3.0 - 2026-05-10
 
 - Improve upstream metadata parsing for formulae that declare GitHub heads inside `head do` blocks.

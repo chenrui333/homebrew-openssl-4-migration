@@ -10,6 +10,7 @@ import (
 	"github.com/chenrui333/homebrew-openssl-4-migration/internal/checklist"
 	"github.com/chenrui333/homebrew-openssl-4-migration/internal/deptree"
 	"github.com/chenrui333/homebrew-openssl-4-migration/internal/migrate"
+	"github.com/chenrui333/homebrew-openssl-4-migration/internal/site"
 	"github.com/chenrui333/homebrew-openssl-4-migration/internal/status"
 )
 
@@ -30,7 +31,7 @@ func rootCmd() *cobra.Command {
 		Short:   "Harness for migrating homebrew-core formulae from openssl@3 to openssl@4",
 		Version: version,
 	}
-	root.AddCommand(depTreeCmd(), statusCmd(), checklistCmd(), auditCmd(), migrateCmd())
+	root.AddCommand(depTreeCmd(), statusCmd(), checklistCmd(), auditCmd(), siteCmd(), migrateCmd())
 	return root
 }
 
@@ -115,6 +116,27 @@ func auditCmd() *cobra.Command {
 	cmd.Flags().StringVar(&depTree, "dep-tree", "data/dep_tree.json", "dependency inventory JSON")
 	cmd.Flags().StringVar(&upstreamIssues, "upstream-issues", "data/upstream_issues.json", "curated upstream issue JSON")
 	cmd.Flags().StringVar(&output, "output", "AUDIT.md", "audit markdown output path")
+	return cmd
+}
+
+func siteCmd() *cobra.Command {
+	var homebrewCore, depTree, upstreamIssues, output string
+	cmd := &cobra.Command{
+		Use:   "site",
+		Short: "Write MkDocs pages with migration progress and blockers",
+		RunE: func(_ *cobra.Command, _ []string) error {
+			return site.Run(site.Options{
+				HomebrewCore:       homebrewCore,
+				DepTreePath:        depTree,
+				UpstreamIssuesPath: upstreamIssues,
+				OutputDir:          output,
+			})
+		},
+	}
+	cmd.Flags().StringVar(&homebrewCore, "homebrew-core", envOr("HOMEBREW_CORE", defaultHomebrewCore), "path to homebrew-core checkout")
+	cmd.Flags().StringVar(&depTree, "dep-tree", "data/dep_tree.json", "dependency inventory JSON")
+	cmd.Flags().StringVar(&upstreamIssues, "upstream-issues", "data/upstream_issues.json", "curated upstream issue JSON")
+	cmd.Flags().StringVar(&output, "output", "docs", "MkDocs docs output directory")
 	return cmd
 }
 

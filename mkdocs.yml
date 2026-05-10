@@ -1,0 +1,30 @@
+site_name: OpenSSL 4 Migration Dashboard
+site_url: https://chenrui333.github.io/homebrew-openssl-4-migration/
+repo_url: https://github.com/chenrui333/homebrew-openssl-4-migration
+repo_name: chenrui333/homebrew-openssl-4-migration
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: blue grey
+      accent: deep orange
+  features:
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+
+nav:
+  - Summary: index.md
+  - Tracker: tracker.md
+  - Upstream: upstream.md
+
+plugins:
+  - search
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+
+extra_css:
+  - stylesheets/extra.css
