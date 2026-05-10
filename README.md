@@ -67,7 +67,7 @@ This regenerates [CHECKLIST.md](CHECKLIST.md) from the same dependency inventory
 make audit
 ~~~
 
-This regenerates [AUDIT.md](AUDIT.md) by combining data/dep_tree.json, live migration PR state, and the curated upstream issue dataset in data/upstream_issues.json. The report highlights staged-track blockers, branch/base mismatches, main-track opportunities, readiness signals, upstream repository metadata, upstream issue coverage gaps, and known upstream OpenSSL 4 issues.
+This regenerates [AUDIT.md](AUDIT.md) by combining data/dep_tree.json, live migration PR state, and the curated upstream issue dataset in data/upstream_issues.json. The report highlights staged-track blockers, retarget-to-staging cases, readiness signals, upstream repository metadata, upstream issue coverage gaps, and known upstream OpenSSL 4 issues.
 
 ## Refresh the site data
 
@@ -76,6 +76,8 @@ make site-data
 ~~~
 
 This writes data/site_snapshot.json. Go owns the migration data and readiness normalization; Astro owns the public UI.
+
+The public site snapshot is staging-only. It publishes rows whose target branch is openssl-4-migration-staging, with summary metadata, nested PR/upstream/issue records, and flags used by the Astro tracker filters.
 
 ## Run the Astro site
 

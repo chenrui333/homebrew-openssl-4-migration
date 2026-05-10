@@ -7,25 +7,25 @@ interface Props {
 }
 
 const { snapshot } = Astro.props;
-const current = snapshot.current_gate;
-const next = snapshot.next_gate;
+const summary = snapshot.summary;
 const registryStats = [
-  ["Staged", snapshot.total_formulae],
-  ["Done", snapshot.done],
-  ["Pending", snapshot.pending],
-  ["Open staging PRs", snapshot.open_prs],
+  ["Staged", summary.staged_formulae],
+  ["Done", summary.done],
+  ["Pending", summary.pending],
+  ["Open staging PRs", summary.open_staging_prs],
 ];
 ---
 
 <section class="hero registry-section">
   <div class="hero__copy">
     <p class="eyebrow"><span></span>Homebrew/homebrew-core migration registry</p>
-    <h1>OpenSSL 4 Migration Control Room</h1>
-    <p class="lede">A dated, inspectable staging branch registry for moving Homebrew formulae from openssl@3 to openssl@4 on openssl-4-migration-staging.</p>
+    <h1>OpenSSL 4 Staging Migration Registry</h1>
+    <p class="lede">Human-readable tracker and machine-readable JSON for moving Homebrew formulae from openssl@3 to openssl@4 on the staging branch.</p>
     <div class="hero__meta" aria-label="Snapshot summary">
       <span>Snapshot {formatDate(snapshot.generated_at)}</span>
-      <span>Current gate {current.label}</span>
-      <span>{pct(snapshot.done, snapshot.total_formulae)} complete</span>
+      <span>Target branch {snapshot.target_branch}</span>
+      <span>Current gate {summary.current_gate}</span>
+      <span>{pct(summary.done, summary.staged_formulae)} complete</span>
     </div>
     <div class="hero__actions" aria-label="Primary actions">
       <a class="button button--primary" href={pagePath("tracker/")}>Browse tracker</a>
@@ -38,23 +38,21 @@ const registryStats = [
       <span class="label">Snapshot ledger</span>
       <span>{formatDate(snapshot.generated_at)}</span>
     </div>
-    <strong>{current.label}</strong>
-    <p>{current.pending} pending of {current.total} rows in the active staged gate.</p>
+    <strong>{summary.current_gate}</strong>
+    <p>{summary.current_gate_pending} pending rows in the active staged gate.</p>
     <dl class="snapshot-list">
       <div>
         <dt>Target</dt>
-        <dd>{current.target_branch}</dd>
+        <dd>{snapshot.target_branch}</dd>
       </div>
       <div>
-        <dt>Depth</dt>
-        <dd>{current.depth === null ? "staging closure" : "depth " + current.depth}</dd>
+        <dt>Scope</dt>
+        <dd>{snapshot.scope}</dd>
       </div>
-      {next && (
-        <div>
-          <dt>Next</dt>
-          <dd>{next.label}</dd>
-        </div>
-      )}
+      <div>
+        <dt>Issue</dt>
+        <dd>{snapshot.tracking_issue}</dd>
+      </div>
     </dl>
     <div class="hero-stat-grid">
       {registryStats.map(([label, value]) => (

@@ -17,7 +17,7 @@ const { rows, showControls = true } = Astro.props;
       <input type="search" data-registry-search placeholder="Formula, upstream repo, target branch, PR number" />
     </label>
     <div class="filter-chips" aria-label="Registry filters">
-      {["all", "current-gate", "pending", "ready", "draft", "ci-blocked", "base-mismatch", "missing-pr", "upstream-blocked", "done"].map((filter) => (
+      {["all", "current-gate", "pending", "ready", "draft", "ci-blocked", "retarget", "missing-pr", "upstream-blocked", "done"].map((filter) => (
         <button type="button" data-filter={filter} aria-pressed={filter === "all" ? "true" : "false"}>{filter.replace(/-/g, " ")}</button>
       ))}
     </div>
@@ -44,32 +44,32 @@ const { rows, showControls = true } = Astro.props;
         <tr
           data-row
           data-name={row.name.toLowerCase()}
-          data-filter-text={(row.name + " " + upstreamLabel(row) + " " + row.target_branch + " " + prLabel(row) + " " + row.next_action + " " + row.readiness.join(" ")).toLowerCase()}
-          data-current-gate={row.is_current_gate}
+          data-filter-text={(row.name + " " + upstreamLabel(row) + " " + row.target_branch + " " + prLabel(row) + " " + row.next_action + " " + row.readiness.join(" ") + " " + row.group_label).toLowerCase()}
+          data-current-gate={row.flags.current_gate}
           data-status={row.live_status.toLowerCase()}
           data-readiness={row.readiness.join(" ")}
           data-action={slug(row.next_action)}
           data-impact={row.impact_count}
           data-target={row.target_branch}
-          data-ready={row.is_ready}
-          data-draft={row.is_draft}
-          data-ci-blocked={row.is_ci_blocked}
-          data-base-mismatch={row.is_base_mismatch}
-          data-missing-pr={row.is_missing_pr}
-          data-upstream-blocked={row.is_upstream_blocked}
+          data-ready={row.flags.ready}
+          data-draft={row.flags.draft}
+          data-ci-blocked={row.flags.ci_blocked}
+          data-base-mismatch={row.flags.base_mismatch}
+          data-missing-pr={row.flags.missing_pr}
+          data-upstream-blocked={row.flags.upstream_blocked}
         >
           <td data-label="Formula">
             <strong>{row.name}</strong>
-            <span>{depthLabel(row)}</span>
+            <span>{depthLabel(row)} · {row.group_label}</span>
           </td>
           <td data-label="Action"><span class={"pill action-" + slug(row.next_action)}>{row.next_action}</span></td>
           <td data-label="Impact"><span class="impact">{row.impact_count}</span></td>
           <td data-label="Status">{row.live_status}</td>
-          <td data-label="PR">{row.open_pr_url ? <a href={row.open_pr_url}>{prLabel(row)}</a> : prLabel(row)}</td>
+          <td data-label="PR">{row.pr.url ? <a href={row.pr.url}>{prLabel(row)}</a> : prLabel(row)}</td>
           <td data-label="Target"><code>{row.target_branch}</code></td>
-          <td data-label="Upstream">{row.upstream_url ? <a href={row.upstream_url}>{upstreamLabel(row)}</a> : upstreamLabel(row)}</td>
+          <td data-label="Upstream">{row.upstream.url ? <a href={row.upstream.url}>{upstreamLabel(row)}</a> : upstreamLabel(row)}</td>
           <td data-label="Issues">
-            {row.issue_links.length === 0 ? <span class="muted">none</span> : row.issue_links.slice(0, 2).map((issue, index) => (
+            {row.issues.length === 0 ? <span class="muted">none</span> : row.issues.slice(0, 2).map((issue, index) => (
               <>
                 {index > 0 && " "}
                 <a href={issue.url}>{issue.label}</a>
@@ -105,7 +105,7 @@ const { rows, showControls = true } = Astro.props;
       if (filter === "ready") return row.dataset.ready === "true";
       if (filter === "draft") return row.dataset.draft === "true";
       if (filter === "ci-blocked") return row.dataset.ciBlocked === "true";
-      if (filter === "base-mismatch") return row.dataset.baseMismatch === "true";
+      if (filter === "retarget") return row.dataset.baseMismatch === "true";
       if (filter === "missing-pr") return row.dataset.missingPr === "true";
       if (filter === "upstream-blocked") return row.dataset.upstreamBlocked === "true";
       return true;
@@ -133,6 +133,12 @@ const { rows, showControls = true } = Astro.props;
     function applySort() {
       if (!tbody) return;
       const sorted = [...rows].sort((a, b) => {
+        if (sortKey === "impact") {
+          const currentDelta = Number(b.dataset.currentGate === "true") - Number(a.dataset.currentGate === "true");
+          if (currentDelta !== 0) return currentDelta;
+          const pendingDelta = Number(b.dataset.status === "pending") - Number(a.dataset.status === "pending");
+          if (pendingDelta !== 0) return pendingDelta;
+        }
         const av = valueFor(a, sortKey);
         const bv = valueFor(b, sortKey);
         let result = 0;
@@ -141,8 +147,8 @@ const { rows, showControls = true } = Astro.props;
         } else {
           result = String(av).localeCompare(String(bv));
         }
-        if (result === 0) result = String(a.dataset.name || "").localeCompare(String(b.dataset.name || ""));
-        return sortDirection === "asc" ? result : -result;
+        if (result !== 0) return sortDirection === "asc" ? result : -result;
+        return String(a.dataset.name || "").localeCompare(String(b.dataset.name || ""));
       });
       sorted.forEach((row) => tbody.appendChild(row));
       sortButtons.forEach((button) => {

@@ -26,12 +26,12 @@ export function slug(value: string) {
 }
 
 export function prLabel(row: SnapshotRow) {
-  return row.open_pr_number ? "#" + row.open_pr_number : "No PR";
+  return row.pr.number > 0 ? "#" + row.pr.number : "No PR";
 }
 
 export function upstreamLabel(row: SnapshotRow) {
-  if (row.upstream_repo) return row.upstream_provider + ":" + row.upstream_repo;
-  return row.upstream_provider || "other";
+  if (row.upstream.repo) return row.upstream.provider + ":" + row.upstream.repo;
+  return row.upstream.provider || "other";
 }
 
 export function depthLabel(row: SnapshotRow) {

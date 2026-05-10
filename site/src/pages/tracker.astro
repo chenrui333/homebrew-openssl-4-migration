@@ -2,7 +2,7 @@
 import Layout from "../components/Layout.astro";
 import RegistryTable from "../components/RegistryTable.astro";
 import Footer from "../components/Footer.astro";
-import { rowsByImpact, snapshot } from "../lib/data";
+import { registryRows, snapshot } from "../lib/data";
 ---
 
 <Layout title="Tracker | OpenSSL 4 Migration Control Room">
@@ -10,8 +10,8 @@ import { rowsByImpact, snapshot } from "../lib/data";
     <span class="eyebrow">Registry table</span>
     <h1>Formula tracker</h1>
     <p>Search, filter, and inspect every staging-scope formula targeting openssl-4-migration-staging.</p>
-    <p class="figure-caption">{snapshot.rows.length} rows sorted by impact descending.</p>
+    <p class="figure-caption">{snapshot.rows.length} rows sorted by current gate, pending status, impact, then name.</p>
   </section>
-  <RegistryTable rows={rowsByImpact} />
+  <RegistryTable rows={registryRows} />
   <Footer />
 </Layout>

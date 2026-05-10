@@ -16,7 +16,12 @@ import (
 	"github.com/chenrui333/homebrew-openssl-4-migration/internal/tracking"
 )
 
-const githubIssueSearch = "OpenSSL 4"
+const (
+	githubIssueSearch = "OpenSSL 4"
+	repositoryName    = "Homebrew/homebrew-core"
+	trackingIssue     = "Homebrew/homebrew-core#278366"
+	scopeStaging      = "staging"
+)
 
 const (
 	actionDone            = "Done"
@@ -49,50 +54,64 @@ type model struct {
 }
 
 type Snapshot struct {
-	GeneratedAt       string
-	TotalFormulae     int
-	Done              int
-	Pending           int
-	OpenPRs           int
-	CurrentGate       GateSnapshot
-	NextGate          *GateSnapshot
-	UpstreamGapCount  int
-	BaseMismatchCount int
-	Rows              []SnapshotRow
+	GeneratedAt   string        `json:"generated_at"`
+	Repository    string        `json:"repository"`
+	TrackingIssue string        `json:"tracking_issue"`
+	TargetBranch  string        `json:"target_branch"`
+	Scope         string        `json:"scope"`
+	Summary       Summary       `json:"summary"`
+	Rows          []SnapshotRow `json:"rows"`
 }
 
-type GateSnapshot struct {
-	Label        string
-	Depth        *int
-	TargetBranch string
-	Done         int
-	Total        int
-	Pending      int
+type Summary struct {
+	StagedFormulae     int    `json:"staged_formulae"`
+	Done               int    `json:"done"`
+	Pending            int    `json:"pending"`
+	OpenStagingPRs     int    `json:"open_staging_prs"`
+	CurrentGate        string `json:"current_gate"`
+	CurrentGatePending int    `json:"current_gate_pending"`
+	UpstreamBlockers   int    `json:"upstream_blockers"`
+	BaseMismatches     int    `json:"base_mismatches"`
 }
 
 type SnapshotRow struct {
-	Name              string
-	LiveStatus        string
-	TargetBranch      string
-	Depth             *int
-	StagingReason     string
-	ImpactCount       int
-	OpenPRNumber      *int
-	OpenPRURL         string
-	OpenPRBase        string
-	Readiness         []string
-	NextAction        string
-	UpstreamProvider  string
-	UpstreamRepo      string
-	UpstreamURL       string
-	IssueLinks        []IssueLink
-	IsCurrentGate     bool
-	IsUpstreamBlocked bool
-	IsBaseMismatch    bool
-	IsCIBlocked       bool
-	IsDraft           bool
-	IsMissingPR       bool
-	IsReady           bool
+	Name         string           `json:"name"`
+	LiveStatus   string           `json:"live_status"`
+	Depth        *int             `json:"depth"`
+	GroupLabel   string           `json:"group_label"`
+	ImpactCount  int              `json:"impact_count"`
+	TargetBranch string           `json:"target_branch"`
+	PR           PullRequest      `json:"pr"`
+	Readiness    []string         `json:"readiness"`
+	NextAction   string           `json:"next_action"`
+	Upstream     UpstreamSnapshot `json:"upstream"`
+	Issues       []IssueLink      `json:"issues"`
+	Flags        SnapshotRowFlags `json:"flags"`
+}
+
+type PullRequest struct {
+	Number     int    `json:"number"`
+	URL        string `json:"url"`
+	Base       string `json:"base"`
+	IsDraft    bool   `json:"is_draft"`
+	MergeState string `json:"merge_state"`
+	UpdatedAt  string `json:"updated_at"`
+}
+
+type UpstreamSnapshot struct {
+	Provider string `json:"provider"`
+	Repo     string `json:"repo"`
+	URL      string `json:"url"`
+}
+
+type SnapshotRowFlags struct {
+	CurrentGate     bool `json:"current_gate"`
+	Ready           bool `json:"ready"`
+	Draft           bool `json:"draft"`
+	CIBlocked       bool `json:"ci_blocked"`
+	BaseMismatch    bool `json:"base_mismatch"`
+	MissingPR       bool `json:"missing_pr"`
+	UpstreamBlocked bool `json:"upstream_blocked"`
 }
 
 type IssueLink struct {
@@ -101,61 +120,6 @@ type IssueLink struct {
 	Title  string
 	State  string
 	Status string
-}
-
-func (s Snapshot) MarshalJSON() ([]byte, error) {
-	out := map[string]any{
-		"generated_at":        s.GeneratedAt,
-		"total_formulae":      s.TotalFormulae,
-		"done":                s.Done,
-		"pending":             s.Pending,
-		"open_prs":            s.OpenPRs,
-		"current_gate":        s.CurrentGate,
-		"next_gate":           s.NextGate,
-		"upstream_gap_count":  s.UpstreamGapCount,
-		"base_mismatch_count": s.BaseMismatchCount,
-		"rows":                s.Rows,
-	}
-	return json.Marshal(out)
-}
-
-func (g GateSnapshot) MarshalJSON() ([]byte, error) {
-	return json.Marshal(map[string]any{
-		"label":         g.Label,
-		"depth":         g.Depth,
-		"target_branch": g.TargetBranch,
-		"done":          g.Done,
-		"total":         g.Total,
-		"pending":       g.Pending,
-	})
-}
-
-func (r SnapshotRow) MarshalJSON() ([]byte, error) {
-	out := map[string]any{
-		"name":                r.Name,
-		"live_status":         r.LiveStatus,
-		"target_branch":       r.TargetBranch,
-		"depth":               r.Depth,
-		"staging_reason":      r.StagingReason,
-		"impact_count":        r.ImpactCount,
-		"open_pr_number":      r.OpenPRNumber,
-		"open_pr_url":         r.OpenPRURL,
-		"open_pr_base":        r.OpenPRBase,
-		"readiness":           r.Readiness,
-		"next_action":         r.NextAction,
-		"upstream_provider":   r.UpstreamProvider,
-		"upstream_repo":       r.UpstreamRepo,
-		"upstream_url":        r.UpstreamURL,
-		"issue_links":         r.IssueLinks,
-		"is_current_gate":     r.IsCurrentGate,
-		"is_upstream_blocked": r.IsUpstreamBlocked,
-		"is_base_mismatch":    r.IsBaseMismatch,
-		"is_ci_blocked":       r.IsCIBlocked,
-		"is_draft":            r.IsDraft,
-		"is_missing_pr":       r.IsMissingPR,
-		"is_ready":            r.IsReady,
-	}
-	return json.Marshal(out)
 }
 
 func (i IssueLink) MarshalJSON() ([]byte, error) {
@@ -203,6 +167,7 @@ func BuildSnapshot(tree *deptree.DepTree, groups []tracking.Group, pending, done
 	groups = stagingGroups(groups)
 	rows := collectRows(groups)
 	pending, done = statusCounts(rows)
+	labels := groupLabels(groups)
 	m := model{
 		Tree:           tree,
 		Groups:         groups,
@@ -214,73 +179,82 @@ func BuildSnapshot(tree *deptree.DepTree, groups []tracking.Group, pending, done
 		Curated:        curatedMap(issues),
 	}
 	current := currentGate(groups)
-	next := nextDepthGroup(groups, current)
 	currentNames := make(map[string]bool)
 	for _, row := range current.Rows {
 		currentNames[row.Name] = true
 	}
 	snapshotRows := make([]SnapshotRow, 0, len(m.Rows))
 	for _, row := range sortRows(m.Rows) {
-		snapshotRows = append(snapshotRows, snapshotRow(row, m, currentNames[row.Name]))
+		snapshotRows = append(snapshotRows, snapshotRow(row, m, labels[row.Name], currentNames[row.Name]))
 	}
+	currentPending := len(pendingRows(current.Rows))
 	snapshot := Snapshot{
-		GeneratedAt:       generatedAt(tree),
-		TotalFormulae:     len(m.Rows),
-		Done:              done,
-		Pending:           pending,
-		OpenPRs:           len(uniquePRs(m.Rows)),
-		CurrentGate:       gateSnapshot(current),
-		UpstreamGapCount:  len(upstreamGapRows(m)),
-		BaseMismatchCount: len(baseMismatchRows(m.Rows)),
-		Rows:              snapshotRows,
-	}
-	if next.Label != "" {
-		nextGate := gateSnapshot(next)
-		snapshot.NextGate = &nextGate
+		GeneratedAt:   generatedAt(tree),
+		Repository:    repositoryName,
+		TrackingIssue: trackingIssue,
+		TargetBranch:  deptree.StagingBranch,
+		Scope:         scopeStaging,
+		Summary: Summary{
+			StagedFormulae:     len(m.Rows),
+			Done:               done,
+			Pending:            pending,
+			OpenStagingPRs:     len(uniquePRs(m.Rows)),
+			CurrentGate:        current.Label,
+			CurrentGatePending: currentPending,
+			UpstreamBlockers:   len(upstreamBlockerRows(m)),
+			BaseMismatches:     len(baseMismatchRows(m.Rows)),
+		},
+		Rows: snapshotRows,
 	}
 	return snapshot
 }
 
-func snapshotRow(row tracking.Row, m model, currentGate bool) SnapshotRow {
+func snapshotRow(row tracking.Row, m model, groupLabel string, currentGate bool) SnapshotRow {
 	readiness := readinessTokens(audit.Readiness(row))
 	issues := issueLinks(row, m)
 	upstreamBlocked := hasOpenRelevantUpstreamIssue(row, m)
-	prNumber := (*int)(nil)
-	prURL := ""
-	prBase := ""
+	var pr PullRequest
 	if row.OpenPR != nil {
 		number := row.OpenPR.Number
-		prNumber = &number
-		prURL = row.OpenPR.URL
+		prURL := row.OpenPR.URL
 		if prURL == "" && number > 0 {
 			prURL = fmt.Sprintf("https://github.com/Homebrew/homebrew-core/pull/%d", number)
 		}
-		prBase = row.OpenPR.BaseRefName
+		pr = PullRequest{
+			Number:     row.OpenPR.Number,
+			URL:        prURL,
+			Base:       row.OpenPR.BaseRefName,
+			IsDraft:    row.OpenPR.IsDraft,
+			MergeState: row.OpenPR.MergeStateStatus,
+			UpdatedAt:  row.OpenPR.UpdatedAt,
+		}
 	}
 	nextAction := nextActionFor(row, upstreamBlocked)
 	return SnapshotRow{
-		Name:              row.Name,
-		LiveStatus:        row.LiveStatus,
-		TargetBranch:      row.TargetBranchOrDefault(),
-		Depth:             row.Depth,
-		StagingReason:     row.StagingReason,
-		ImpactCount:       impact(row),
-		OpenPRNumber:      prNumber,
-		OpenPRURL:         prURL,
-		OpenPRBase:        prBase,
-		Readiness:         readiness,
-		NextAction:        nextAction,
-		UpstreamProvider:  row.UpstreamProvider,
-		UpstreamRepo:      row.UpstreamRepo,
-		UpstreamURL:       upstreamURL(row.Formula),
-		IssueLinks:        issues,
-		IsCurrentGate:     currentGate,
-		IsUpstreamBlocked: upstreamBlocked,
-		IsBaseMismatch:    hasToken(readiness, "base-mismatch"),
-		IsCIBlocked:       hasToken(readiness, "checks-blocked") || hasToken(readiness, "no-checks"),
-		IsDraft:           hasToken(readiness, "draft"),
-		IsMissingPR:       hasToken(readiness, "missing-pr"),
-		IsReady:           row.LiveStatus == "PENDING" && nextAction == actionReviewMerge,
+		Name:         row.Name,
+		LiveStatus:   row.LiveStatus,
+		Depth:        row.Depth,
+		GroupLabel:   groupLabel,
+		ImpactCount:  impact(row),
+		TargetBranch: row.TargetBranchOrDefault(),
+		PR:           pr,
+		Readiness:    readiness,
+		NextAction:   nextAction,
+		Upstream: UpstreamSnapshot{
+			Provider: row.UpstreamProvider,
+			Repo:     row.UpstreamRepo,
+			URL:      upstreamURL(row.Formula),
+		},
+		Issues: issues,
+		Flags: SnapshotRowFlags{
+			CurrentGate:     currentGate,
+			Ready:           row.LiveStatus == "PENDING" && nextAction == actionReviewMerge,
+			Draft:           hasToken(readiness, "draft"),
+			CIBlocked:       hasToken(readiness, "checks-blocked") || hasToken(readiness, "no-checks"),
+			BaseMismatch:    hasToken(readiness, "base-mismatch"),
+			MissingPR:       hasToken(readiness, "missing-pr"),
+			UpstreamBlocked: upstreamBlocked,
+		},
 	}
 }
 
@@ -297,6 +271,19 @@ func collectRows(groups []tracking.Group) []tracking.Row {
 		}
 	}
 	return rows
+}
+
+func groupLabels(groups []tracking.Group) map[string]string {
+	labels := make(map[string]string)
+	for _, group := range groups {
+		for _, row := range group.Rows {
+			if _, ok := labels[row.Name]; ok {
+				continue
+			}
+			labels[row.Name] = group.Label
+		}
+	}
+	return labels
 }
 
 func stagingGroups(groups []tracking.Group) []tracking.Group {
@@ -370,34 +357,20 @@ func currentGate(groups []tracking.Group) tracking.Group {
 	return tracking.Group{Label: "No migration groups"}
 }
 
-func nextDepthGroup(groups []tracking.Group, current tracking.Group) tracking.Group {
-	if current.Depth == nil {
-		return tracking.Group{}
-	}
-	nextDepth := *current.Depth + 1
-	for _, group := range groups {
-		if group.Depth != nil && *group.Depth == nextDepth {
-			return group
-		}
-	}
-	return tracking.Group{}
-}
-
-func gateSnapshot(group tracking.Group) GateSnapshot {
-	return GateSnapshot{
-		Label:        group.Label,
-		Depth:        group.Depth,
-		TargetBranch: group.TargetBranch,
-		Done:         group.Done,
-		Total:        len(group.Rows),
-		Pending:      len(pendingRows(group.Rows)),
-	}
-}
-
 func pendingRows(rows []tracking.Row) []tracking.Row {
 	var out []tracking.Row
 	for _, row := range rows {
 		if row.LiveStatus == "PENDING" {
+			out = append(out, row)
+		}
+	}
+	return out
+}
+
+func upstreamBlockerRows(m model) []tracking.Row {
+	var out []tracking.Row
+	for _, row := range m.Rows {
+		if row.LiveStatus == "PENDING" && hasOpenRelevantUpstreamIssue(row, m) {
 			out = append(out, row)
 		}
 	}

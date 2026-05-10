@@ -6,49 +6,63 @@ export interface IssueLink {
   status?: string;
 }
 
-export interface GateSnapshot {
-  label: string;
-  depth: number | null;
-  target_branch: string;
+export interface SnapshotSummary {
+  staged_formulae: number;
   done: number;
-  total: number;
   pending: number;
+  open_staging_prs: number;
+  current_gate: string;
+  current_gate_pending: number;
+  upstream_blockers: number;
+  base_mismatches: number;
+}
+
+export interface PullRequest {
+  number: number;
+  url: string;
+  base: string;
+  is_draft: boolean;
+  merge_state: string;
+  updated_at: string;
+}
+
+export interface Upstream {
+  provider: string;
+  repo: string;
+  url: string;
+}
+
+export interface RowFlags {
+  current_gate: boolean;
+  ready: boolean;
+  draft: boolean;
+  ci_blocked: boolean;
+  base_mismatch: boolean;
+  missing_pr: boolean;
+  upstream_blocked: boolean;
 }
 
 export interface SnapshotRow {
   name: string;
   live_status: string;
-  target_branch: string;
   depth: number | null;
-  staging_reason?: string;
+  group_label: string;
   impact_count: number;
-  open_pr_number: number | null;
-  open_pr_url: string;
-  open_pr_base: string;
+  target_branch: string;
+  pr: PullRequest;
   readiness: string[];
   next_action: string;
-  upstream_provider?: string;
-  upstream_repo?: string;
-  upstream_url?: string;
-  issue_links: IssueLink[];
-  is_current_gate: boolean;
-  is_upstream_blocked: boolean;
-  is_base_mismatch: boolean;
-  is_ci_blocked: boolean;
-  is_draft: boolean;
-  is_missing_pr: boolean;
-  is_ready: boolean;
+  upstream: Upstream;
+  issues: IssueLink[];
+  flags: RowFlags;
 }
 
 export interface Snapshot {
   generated_at: string;
-  total_formulae: number;
-  done: number;
-  pending: number;
-  open_prs: number;
-  current_gate: GateSnapshot;
-  next_gate: GateSnapshot | null;
-  upstream_gap_count: number;
-  base_mismatch_count: number;
+  repository: string;
+  tracking_issue: string;
+  target_branch: string;
+  scope: "staging";
+  summary: SnapshotSummary;
   rows: SnapshotRow[];
 }

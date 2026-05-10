@@ -8,16 +8,16 @@ interface Props {
 }
 
 const { row, compact = false } = Astro.props;
-const href = row.open_pr_url || row.upstream_url || row.issue_links[0]?.url || "";
+const href = row.pr.url || row.upstream.url || row.issues[0]?.url || "";
 const blockers = [
-  row.is_base_mismatch && "Base mismatch",
-  row.is_draft && "Draft",
-  row.is_ci_blocked && "CI blocked",
-  row.is_upstream_blocked && "Upstream",
-  row.is_missing_pr && "Missing PR",
+  row.flags.base_mismatch && "Retarget",
+  row.flags.draft && "Draft",
+  row.flags.ci_blocked && "CI blocked",
+  row.flags.upstream_blocked && "Upstream",
+  row.flags.missing_pr && "Missing PR",
 ].filter(Boolean);
-const blocker = row.live_status === "DONE" ? "Done" : row.is_ready ? "Ready" : blockers.slice(0, 2).join(" + ") || row.readiness[0] || "Pending";
-const blockerTone = row.live_status === "DONE" || row.is_ready ? "blocker-ok" : "blocker-open";
+const blocker = row.live_status === "DONE" ? "Done" : row.flags.ready ? "Ready" : blockers.slice(0, 2).join(" + ") || row.readiness[0] || "Pending";
+const blockerTone = row.live_status === "DONE" || row.flags.ready ? "blocker-ok" : "blocker-open";
 const classes = ["evidence-row", compact && "evidence-row--compact", href && "evidence-row--link"];
 ---
 
@@ -48,8 +48,8 @@ const classes = ["evidence-row", compact && "evidence-row--compact", href && "ev
     {!compact && (
       <p class="row-caption">
         {upstreamLabel(row)}
-        {row.issue_links.length > 0 && " · "}
-        {row.issue_links.slice(0, 2).map((issue, index) => (
+        {row.issues.length > 0 && " · "}
+        {row.issues.slice(0, 2).map((issue, index) => (
           <>
             {index > 0 && ", "}
             <span>{issue.label}</span>

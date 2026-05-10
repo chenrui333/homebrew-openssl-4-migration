@@ -34,7 +34,7 @@ const actions = [
           <ol>
             {rows.map((row) => (
               <li>
-                <a href={row.open_pr_url || row.upstream_url || pagePath("tracker/")}>
+                <a href={row.pr.url || row.upstream.url || pagePath("tracker/")}>
                   <span>{row.name}</span>
                   <small>{prLabel(row)} · {row.target_branch}</small>
                 </a>

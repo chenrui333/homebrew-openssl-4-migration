@@ -56,23 +56,26 @@ func TestBuildSnapshotIncludesNormalizedRows(t *testing.T) {
 	if snapshot.GeneratedAt != "2026-05-10T13:35:40-04:00" {
 		t.Fatalf("GeneratedAt = %q", snapshot.GeneratedAt)
 	}
-	if snapshot.TotalFormulae != 3 || snapshot.Pending != 2 || snapshot.Done != 1 || snapshot.OpenPRs != 1 {
+	if snapshot.Repository != repositoryName || snapshot.TrackingIssue != trackingIssue || snapshot.TargetBranch != deptree.StagingBranch || snapshot.Scope != scopeStaging {
+		t.Fatalf("unexpected snapshot metadata: %#v", snapshot)
+	}
+	if snapshot.Summary.StagedFormulae != 3 || snapshot.Summary.Pending != 2 || snapshot.Summary.Done != 1 || snapshot.Summary.OpenStagingPRs != 1 {
 		t.Fatalf("unexpected summary: %#v", snapshot)
 	}
-	if snapshot.CurrentGate.Label != "Batch 0 - Roots" || snapshot.CurrentGate.Pending != 1 {
-		t.Fatalf("unexpected current gate: %#v", snapshot.CurrentGate)
-	}
-	if snapshot.NextGate == nil || snapshot.NextGate.Label != "Batch 1" {
-		t.Fatalf("unexpected next gate: %#v", snapshot.NextGate)
+	if snapshot.Summary.CurrentGate != "Batch 0 - Roots" || snapshot.Summary.CurrentGatePending != 1 {
+		t.Fatalf("unexpected current gate summary: %#v", snapshot.Summary)
 	}
 	rust := findRow(snapshot.Rows, "rust")
 	if rust == nil {
 		t.Fatal("missing rust row")
 	}
-	if rust.NextAction != actionUpstreamBlocker || !rust.IsCurrentGate || !rust.IsUpstreamBlocked || rust.IsReady {
+	if rust.NextAction != actionUpstreamBlocker || !rust.Flags.CurrentGate || !rust.Flags.UpstreamBlocked || rust.Flags.Ready {
 		t.Fatalf("unexpected rust row: %#v", rust)
 	}
-	if rust.OpenPRNumber == nil || *rust.OpenPRNumber != 280863 || len(rust.IssueLinks) != 1 {
+	if rust.GroupLabel != "Batch 0 - Roots" {
+		t.Fatalf("unexpected group label: %#v", rust)
+	}
+	if rust.PR.Number != 280863 || len(rust.Issues) != 1 {
 		t.Fatalf("missing PR or issue metadata: %#v", rust)
 	}
 }
@@ -106,14 +109,20 @@ func TestNextActionForReadinessStates(t *testing.T) {
 
 func TestSnapshotJSONUsesSnakeCaseKeys(t *testing.T) {
 	snapshot := Snapshot{
-		GeneratedAt:       "now",
-		TotalFormulae:     1,
-		Done:              0,
-		Pending:           1,
-		OpenPRs:           1,
-		CurrentGate:       GateSnapshot{Label: "Batch 0", Pending: 1, Total: 1},
-		UpstreamGapCount:  2,
-		BaseMismatchCount: 3,
+		GeneratedAt:   "now",
+		Repository:    repositoryName,
+		TrackingIssue: trackingIssue,
+		TargetBranch:  deptree.StagingBranch,
+		Scope:         scopeStaging,
+		Summary: Summary{
+			StagedFormulae:     1,
+			Pending:            1,
+			OpenStagingPRs:     1,
+			CurrentGate:        "Batch 0",
+			CurrentGatePending: 1,
+			UpstreamBlockers:   2,
+			BaseMismatches:     3,
+		},
 		Rows: []SnapshotRow{{
 			Name:         "rust",
 			LiveStatus:   "PENDING",
@@ -121,7 +130,7 @@ func TestSnapshotJSONUsesSnakeCaseKeys(t *testing.T) {
 			ImpactCount:  10,
 			NextAction:   actionReviewMerge,
 			Readiness:    []string{"ready"},
-			IsReady:      true,
+			Flags:        SnapshotRowFlags{Ready: true},
 		}},
 	}
 	contents, err := json.Marshal(snapshot)
@@ -132,9 +141,18 @@ func TestSnapshotJSONUsesSnakeCaseKeys(t *testing.T) {
 	if err := json.Unmarshal(contents, &decoded); err != nil {
 		t.Fatal(err)
 	}
-	for _, key := range []string{"generated_at", "total_formulae", "current_gate", "upstream_gap_count", "base_mismatch_count", "rows"} {
+	for _, key := range []string{"generated_at", "repository", "tracking_issue", "target_branch", "scope", "summary", "rows"} {
 		if _, ok := decoded[key]; !ok {
 			t.Fatalf("missing key %q in %s", key, contents)
+		}
+	}
+	summary, ok := decoded["summary"].(map[string]any)
+	if !ok {
+		t.Fatalf("summary is not an object in %s", contents)
+	}
+	for _, key := range []string{"staged_formulae", "open_staging_prs", "current_gate_pending", "upstream_blockers", "base_mismatches"} {
+		if _, ok := summary[key]; !ok {
+			t.Fatalf("missing summary key %q in %s", key, contents)
 		}
 	}
 	if _, ok := decoded["GeneratedAt"]; ok {
@@ -201,11 +219,11 @@ func TestBuildSnapshotDoesNotIncludeMainTrackLeaves(t *testing.T) {
 	}
 
 	snapshot := BuildSnapshot(&deptree.DepTree{}, groups, 2, 0, &audit.UpstreamIssues{})
-	if snapshot.TotalFormulae != 1 || len(snapshot.Rows) != 1 || snapshot.Rows[0].Name != "curl" {
+	if snapshot.Summary.StagedFormulae != 1 || len(snapshot.Rows) != 1 || snapshot.Rows[0].Name != "curl" {
 		t.Fatalf("snapshot rows = %#v, want only staging curl", snapshot.Rows)
 	}
-	if snapshot.CurrentGate.Label == "Main-track leaves" {
-		t.Fatalf("current gate should not use main-track group: %#v", snapshot.CurrentGate)
+	if snapshot.Summary.CurrentGate == "Main-track leaves" {
+		t.Fatalf("current gate should not use main-track group: %#v", snapshot.Summary)
 	}
 }
 
