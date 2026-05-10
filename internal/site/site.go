@@ -18,6 +18,16 @@ import (
 
 const githubIssueSearch = "OpenSSL 4"
 
+const (
+	actionDone        = "done"
+	actionOpenPR      = "open-pr"
+	actionRetargetPR  = "retarget-pr"
+	actionDraft       = "draft"
+	actionInspectCI   = "ci-blocked"
+	actionMerge       = "merge-blocked"
+	actionReviewMerge = "ready"
+)
+
 // Options configures MkDocs page generation.
 type Options struct {
 	HomebrewCore       string
@@ -40,6 +50,17 @@ type model struct {
 type page struct {
 	Path    string
 	Content string
+}
+
+type nextAction struct {
+	Label string
+	Slug  string
+}
+
+type queueSection struct {
+	Title       string
+	Description string
+	Rows        []tracking.Row
 }
 
 // Run reads migration data, queries live PR state, and writes MkDocs pages.
@@ -81,6 +102,7 @@ func Render(tree *deptree.DepTree, groups []tracking.Group, pending, done int, i
 	}
 	return []page{
 		{Path: "index.md", Content: renderIndex(m)},
+		{Path: "queue.md", Content: renderQueue(m)},
 		{Path: "tracker.md", Content: renderTracker(m)},
 		{Path: "upstream.md", Content: renderUpstream(m)},
 	}
@@ -93,9 +115,11 @@ func renderIndex(m model) string {
 	current := currentGate(m.Groups)
 	currentPending := pendingRows(current.Rows)
 	next := nextDepthGroup(m.Groups, current)
+	currentActions := sortRows(actionableRows(currentPending))
 	upstreamOpen := upstreamOpenRows(m)
 	upstreamGaps := upstreamGapRows(m)
 	baseMismatches := baseMismatchRows(m.Rows)
+	queue := queueSections(m)
 
 	var sb strings.Builder
 	writeHeader(&sb, m)
@@ -114,6 +138,7 @@ func renderIndex(m model) string {
 	writeMetric(&sb, "Pending", fmt.Sprintf("%d", m.Pending), "Formulae still reporting openssl@3.")
 	writeMetric(&sb, "Open PRs", fmt.Sprintf("%d", len(openPRs)), "Known open migration PRs mapped to formulae.")
 	writeMetric(&sb, "Current gate", html.EscapeString(current.Label), gateDescription(current, currentPending))
+	writeMetric(&sb, "Ready queue", fmt.Sprintf("%d", len(queueRowsByTitle(queue, "Ready to merge"))), "Pending rows with an open PR and no local readiness blockers.")
 	writeMetric(&sb, "Upstream gaps", fmt.Sprintf("%d", len(upstreamGaps)), "Pending staged formulae with upstream metadata but no curated issue entry.")
 	sb.WriteString("</div>\n\n")
 
@@ -129,23 +154,59 @@ func renderIndex(m model) string {
 		fmt.Fprintf(&sb, "<p class=\"muted\">Next staged group: <strong>%s</strong> (%d/%d done).</p>\n", html.EscapeString(next.Label), next.Done, len(next.Rows))
 	}
 	sb.WriteString("</div>\n\n")
-	writeRowsTable(&sb, sortRows(currentPending), m, 0)
+
+	sb.WriteString("## Action Queue\n\n")
+	sb.WriteString("<p>Start with the current gate, then use the queue page for the full daily triage list.</p>\n\n")
+	writeActionLinks(&sb)
+	sb.WriteString("<h3>Top current-gate actions</h3>\n\n")
+	writeRowsTable(&sb, currentActions, m, 10)
 
 	sb.WriteString("## Upstream Blocker Snapshot\n\n")
 	sb.WriteString("<div class=\"split-grid\">\n")
 	sb.WriteString("<section>\n<h3>Open curated blockers</h3>\n")
-	writeRowsTable(&sb, sortRows(upstreamOpen), m, 10)
+	writeRowsTable(&sb, sortRows(upstreamOpen), m, 6)
 	sb.WriteString("</section>\n<section>\n<h3>Needs upstream review</h3>\n")
-	writeRowsTable(&sb, sortRows(upstreamGaps), m, 10)
+	writeRowsTable(&sb, sortRows(upstreamGaps), m, 6)
 	sb.WriteString("</section>\n</div>\n\n")
 
 	sb.WriteString("## PR Routing Watchlist\n\n")
 	sb.WriteString("Open migration PRs whose base branch differs from the computed target branch.\n\n")
-	writeRowsTable(&sb, sortRows(baseMismatches), m, 20)
+	writeRowsTable(&sb, sortRows(baseMismatches), m, 10)
 
 	sb.WriteString("## Navigation\n\n")
+	sb.WriteString("- [Action queue](queue.md)\n")
 	sb.WriteString("- [Foldable tracker](tracker.md)\n")
 	sb.WriteString("- [Upstream blockers](upstream.md)\n")
+	return sb.String()
+}
+
+func renderQueue(m model) string {
+	current := currentGate(m.Groups)
+	currentPending := sortRows(actionableRows(pendingRows(current.Rows)))
+	sections := queueSections(m)
+
+	var sb strings.Builder
+	writeHeader(&sb, m)
+	sb.WriteString("# Action Queue\n\n")
+	sb.WriteString("Daily operator queue for the OpenSSL 4 migration. Rows are sorted by impact, then formula name.\n\n")
+	writeActionLinks(&sb)
+	sb.WriteString("## Current Gate Summary\n\n")
+	sb.WriteString("<div class=\"gate-panel\">\n")
+	fmt.Fprintf(&sb, "<p><strong>%s</strong> has <strong>%d pending</strong> rows that still need action.</p>\n", html.EscapeString(current.Label), len(currentPending))
+	if len(currentPending) > 0 {
+		top := currentPending[0]
+		fmt.Fprintf(&sb, "<p class=\"muted\">Highest-impact current action: <strong>%s</strong> (%d downstream OpenSSL-linked formulae).</p>\n", html.EscapeString(top.Name), impact(top))
+	}
+	sb.WriteString("</div>\n\n")
+	writeRowsTable(&sb, currentPending, m, 10)
+
+	for _, section := range sections {
+		fmt.Fprintf(&sb, "## %s\n\n", html.EscapeString(section.Title))
+		if section.Description != "" {
+			fmt.Fprintf(&sb, "<p class=\"muted\">%s</p>\n\n", html.EscapeString(section.Description))
+		}
+		writeRowsTable(&sb, section.Rows, m, 0)
+	}
 	return sb.String()
 }
 
@@ -154,6 +215,7 @@ func renderTracker(m model) string {
 	writeHeader(&sb, m)
 	sb.WriteString("# Foldable Migration Tracker\n\n")
 	sb.WriteString("Each section is grouped by migration lane. Open the current staged depth first, then use the remaining groups for upcoming work and main-track leaf opportunities.\n\n")
+	writeTrackerControls(&sb)
 	for _, group := range m.Groups {
 		open := ""
 		if group.Label == currentGate(m.Groups).Label {
@@ -202,6 +264,46 @@ func writeMetric(sb *strings.Builder, label, value, note string) {
 	sb.WriteString("</div>\n")
 }
 
+func writeActionLinks(sb *strings.Builder) {
+	sb.WriteString("<div class=\"action-links\">\n")
+	sb.WriteString("<a href=\"queue.md\">Action queue</a>\n")
+	sb.WriteString("<a href=\"tracker.md\">Foldable tracker</a>\n")
+	sb.WriteString("<a href=\"upstream.md\">Upstream blockers</a>\n")
+	sb.WriteString("</div>\n\n")
+}
+
+func writeTrackerControls(sb *strings.Builder) {
+	sb.WriteString("<div class=\"tracker-controls\" data-tracker-controls>\n")
+	sb.WriteString("<label class=\"filter-box\">\n")
+	sb.WriteString("<span>Filter tracker</span>\n")
+	sb.WriteString("<input type=\"search\" data-filter-text placeholder=\"Formula, upstream, readiness, or action\">\n")
+	sb.WriteString("</label>\n")
+	sb.WriteString("<div class=\"quick-filters\" aria-label=\"Quick filters\">\n")
+	filters := []struct {
+		Slug  string
+		Label string
+	}{
+		{Slug: "all", Label: "All"},
+		{Slug: "pending", Label: "Pending"},
+		{Slug: "ready", Label: "Ready"},
+		{Slug: "draft", Label: "Draft"},
+		{Slug: "ci-blocked", Label: "CI blocked"},
+		{Slug: "base-mismatch", Label: "Base mismatch"},
+		{Slug: "missing-pr", Label: "Missing PR"},
+		{Slug: "upstream-blocked", Label: "Upstream blocked"},
+	}
+	for i, filter := range filters {
+		pressed := "false"
+		if i == 0 {
+			pressed = "true"
+		}
+		fmt.Fprintf(sb, "<button type=\"button\" data-quick-filter=\"%s\" aria-pressed=\"%s\">%s</button>\n", html.EscapeString(filter.Slug), pressed, html.EscapeString(filter.Label))
+	}
+	sb.WriteString("</div>\n")
+	sb.WriteString("<p class=\"filter-count\" data-filter-count></p>\n")
+	sb.WriteString("</div>\n\n")
+}
+
 func writeRowsTable(sb *strings.Builder, rows []tracking.Row, m model, limit int) {
 	if limit > 0 && len(rows) > limit {
 		rows = rows[:limit]
@@ -210,21 +312,48 @@ func writeRowsTable(sb *strings.Builder, rows []tracking.Row, m model, limit int
 		sb.WriteString("<p class=\"empty\">None.</p>\n\n")
 		return
 	}
-	sb.WriteString("<table class=\"tracker-table\">\n<thead><tr><th>Formula</th><th>Status</th><th>PR</th><th>Readiness</th><th>Impact</th><th>Target</th><th>Upstream</th><th>Issues</th></tr></thead>\n<tbody>\n")
+	sb.WriteString("<div class=\"table-shell\">\n")
+	sb.WriteString("<table class=\"tracker-table\" data-tracker-table>\n")
+	sb.WriteString("<thead><tr>")
+	sb.WriteString("<th><button type=\"button\" class=\"sort-button\" data-sort=\"formula\">Formula</button></th>")
+	sb.WriteString("<th><button type=\"button\" class=\"sort-button\" data-sort=\"status\">Status</button></th>")
+	sb.WriteString("<th><button type=\"button\" class=\"sort-button\" data-sort=\"action\">Next action</button></th>")
+	sb.WriteString("<th>PR</th><th>Readiness</th>")
+	sb.WriteString("<th><button type=\"button\" class=\"sort-button\" data-sort=\"impact\">Impact</button></th>")
+	sb.WriteString("<th>Target</th><th>Upstream</th><th>Issues</th>")
+	sb.WriteString("</tr></thead>\n<tbody>\n")
 	for _, row := range rows {
-		status := html.EscapeString(row.LiveStatus)
-		sb.WriteString("<tr>")
-		fmt.Fprintf(sb, "<td><strong>%s</strong></td>", html.EscapeString(row.Name))
-		fmt.Fprintf(sb, "<td><span class=\"badge status-%s\">%s</span></td>", strings.ToLower(status), status)
-		fmt.Fprintf(sb, "<td>%s</td>", prLink(row.OpenPR))
-		fmt.Fprintf(sb, "<td>%s</td>", readinessBadges(audit.Readiness(row)))
-		fmt.Fprintf(sb, "<td>%d</td>", len(row.TransitiveOpenSSLFormulaParents))
-		fmt.Fprintf(sb, "<td>%s</td>", html.EscapeString(row.TargetBranchOrDefault()))
-		fmt.Fprintf(sb, "<td>%s</td>", upstreamLink(row.Formula))
-		fmt.Fprintf(sb, "<td>%s</td>", issueLinks(row, m))
+		readiness := audit.Readiness(row)
+		action := nextActionFor(row)
+		upstreamBlocked := hasOpenRelevantUpstreamIssue(row, m)
+		rowClass := "tracker-row action-" + action.Slug
+		if upstreamBlocked {
+			rowClass += " upstream-blocked"
+		}
+		fmt.Fprintf(
+			sb,
+			"<tr class=\"%s\" data-formula=\"%s\" data-status=\"%s\" data-readiness=\"%s\" data-action=\"%s\" data-impact=\"%d\" data-target=\"%s\" data-upstream-blocked=\"%t\">",
+			html.EscapeString(rowClass),
+			html.EscapeString(row.Name),
+			badgeSlug(row.LiveStatus),
+			html.EscapeString(strings.Join(readinessTokens(readiness), " ")),
+			html.EscapeString(action.Slug),
+			impact(row),
+			html.EscapeString(row.TargetBranchOrDefault()),
+			upstreamBlocked,
+		)
+		fmt.Fprintf(sb, "<td data-label=\"Formula\"><strong>%s</strong></td>", html.EscapeString(row.Name))
+		fmt.Fprintf(sb, "<td data-label=\"Status\"><span class=\"badge status-%s\">%s</span></td>", badgeSlug(row.LiveStatus), html.EscapeString(row.LiveStatus))
+		fmt.Fprintf(sb, "<td data-label=\"Next action\">%s</td>", actionBadge(action))
+		fmt.Fprintf(sb, "<td data-label=\"PR\">%s</td>", prLink(row.OpenPR))
+		fmt.Fprintf(sb, "<td data-label=\"Readiness\">%s</td>", readinessBadges(readiness))
+		fmt.Fprintf(sb, "<td data-label=\"Impact\"><span class=\"impact-score\">%d</span></td>", impact(row))
+		fmt.Fprintf(sb, "<td data-label=\"Target\">%s</td>", html.EscapeString(row.TargetBranchOrDefault()))
+		fmt.Fprintf(sb, "<td data-label=\"Upstream\">%s</td>", upstreamLink(row.Formula))
+		fmt.Fprintf(sb, "<td data-label=\"Issues\">%s</td>", issueLinks(row, m))
 		sb.WriteString("</tr>\n")
 	}
-	sb.WriteString("</tbody>\n</table>\n\n")
+	sb.WriteString("</tbody>\n</table>\n</div>\n\n")
 }
 
 func writeCuratedIssueTable(sb *strings.Builder, m model) {
@@ -234,24 +363,25 @@ func writeCuratedIssueTable(sb *strings.Builder, m model) {
 	}
 	formulae := append([]audit.FormulaIssues(nil), m.Issues.Formulae...)
 	sort.Slice(formulae, func(i, j int) bool { return formulae[i].Name < formulae[j].Name })
+	sb.WriteString("<div class=\"table-shell\">\n")
 	sb.WriteString("<table class=\"tracker-table\">\n<thead><tr><th>Formula</th><th>Upstream</th><th>State</th><th>Status</th><th>Issue</th><th>Note</th></tr></thead>\n<tbody>\n")
 	for _, formulaIssues := range formulae {
 		if len(formulaIssues.Issues) == 0 {
-			fmt.Fprintf(sb, "<tr><td><strong>%s</strong></td><td>%s</td><td colspan=\"4\">Reviewed; no relevant upstream issue recorded.</td></tr>\n", html.EscapeString(formulaIssues.Name), html.EscapeString(upstreamIssueLabel(formulaIssues)))
+			fmt.Fprintf(sb, "<tr><td data-label=\"Formula\"><strong>%s</strong></td><td data-label=\"Upstream\">%s</td><td data-label=\"Issue\" colspan=\"4\">Reviewed; no relevant upstream issue recorded.</td></tr>\n", html.EscapeString(formulaIssues.Name), html.EscapeString(upstreamIssueLabel(formulaIssues)))
 			continue
 		}
 		for _, issue := range formulaIssues.Issues {
 			sb.WriteString("<tr>")
-			fmt.Fprintf(sb, "<td><strong>%s</strong></td>", html.EscapeString(formulaIssues.Name))
-			fmt.Fprintf(sb, "<td>%s</td>", html.EscapeString(upstreamIssueLabel(formulaIssues)))
-			fmt.Fprintf(sb, "<td>%s</td>", html.EscapeString(issue.State))
-			fmt.Fprintf(sb, "<td>%s</td>", html.EscapeString(issue.Status))
-			fmt.Fprintf(sb, "<td><a href=\"%s\">%s</a></td>", html.EscapeString(issue.URL), html.EscapeString(issue.Title))
-			fmt.Fprintf(sb, "<td>%s</td>", html.EscapeString(issue.Note))
+			fmt.Fprintf(sb, "<td data-label=\"Formula\"><strong>%s</strong></td>", html.EscapeString(formulaIssues.Name))
+			fmt.Fprintf(sb, "<td data-label=\"Upstream\">%s</td>", html.EscapeString(upstreamIssueLabel(formulaIssues)))
+			fmt.Fprintf(sb, "<td data-label=\"State\">%s</td>", html.EscapeString(issue.State))
+			fmt.Fprintf(sb, "<td data-label=\"Status\">%s</td>", html.EscapeString(issue.Status))
+			fmt.Fprintf(sb, "<td data-label=\"Issue\"><a href=\"%s\">%s</a></td>", html.EscapeString(issue.URL), html.EscapeString(issue.Title))
+			fmt.Fprintf(sb, "<td data-label=\"Note\">%s</td>", html.EscapeString(issue.Note))
 			sb.WriteString("</tr>\n")
 		}
 	}
-	sb.WriteString("</tbody>\n</table>\n\n")
+	sb.WriteString("</tbody>\n</table>\n</div>\n\n")
 }
 
 func collectRows(groups []tracking.Group) []tracking.Row {
@@ -338,20 +468,89 @@ func pendingRows(rows []tracking.Row) []tracking.Row {
 	return out
 }
 
+func actionableRows(rows []tracking.Row) []tracking.Row {
+	return filterRows(rows, func(row tracking.Row) bool {
+		return nextActionFor(row).Slug != actionDone
+	})
+}
+
+func filterRows(rows []tracking.Row, keep func(tracking.Row) bool) []tracking.Row {
+	var out []tracking.Row
+	for _, row := range rows {
+		if keep(row) {
+			out = append(out, row)
+		}
+	}
+	return out
+}
+
+func queueSections(m model) []queueSection {
+	rows := sortRows(filterRows(m.Rows, func(row tracking.Row) bool {
+		return row.LiveStatus == "PENDING"
+	}))
+	seen := make(map[string]bool)
+	makeSection := func(title, description string, keep func(tracking.Row) bool) queueSection {
+		section := queueSection{Title: title, Description: description}
+		for _, row := range rows {
+			if seen[row.Name] || !keep(row) {
+				continue
+			}
+			seen[row.Name] = true
+			section.Rows = append(section.Rows, row)
+		}
+		return section
+	}
+	return []queueSection{
+		makeSection("Ready to merge", "Open PRs with no local readiness blockers and no curated open upstream blocker.", func(row tracking.Row) bool {
+			return nextActionFor(row).Slug == actionReviewMerge && !hasOpenRelevantUpstreamIssue(row, m)
+		}),
+		makeSection("Retarget needed", "Open PRs whose base branch does not match the computed target branch.", func(row tracking.Row) bool {
+			return nextActionFor(row).Slug == actionRetargetPR
+		}),
+		makeSection("CI blocked", "Open PRs whose status checks are failing, pending, or not yet reported.", func(row tracking.Row) bool {
+			return nextActionFor(row).Slug == actionInspectCI
+		}),
+		makeSection("Draft PRs", "Open migration PRs that are still draft.", func(row tracking.Row) bool {
+			return nextActionFor(row).Slug == actionDraft
+		}),
+		makeSection("Missing PRs", "Pending formulae with no mapped open migration PR.", func(row tracking.Row) bool {
+			return nextActionFor(row).Slug == actionOpenPR
+		}),
+		makeSection("Upstream blockers", "Pending staged formulae with curated open upstream issues.", func(row tracking.Row) bool {
+			return hasOpenRelevantUpstreamIssue(row, m)
+		}),
+	}
+}
+
+func queueRowsByTitle(sections []queueSection, title string) []tracking.Row {
+	for _, section := range sections {
+		if section.Title == title {
+			return section.Rows
+		}
+	}
+	return nil
+}
+
 func upstreamOpenRows(m model) []tracking.Row {
 	var out []tracking.Row
 	for _, row := range m.Rows {
 		if row.LiveStatus != "PENDING" || row.TargetBranchOrDefault() != deptree.StagingBranch {
 			continue
 		}
-		for _, issue := range m.IssueByFormula[row.Name] {
-			if strings.EqualFold(issue.State, "open") && strings.EqualFold(issue.Status, "relevant") {
-				out = append(out, row)
-				break
-			}
+		if hasOpenRelevantUpstreamIssue(row, m) {
+			out = append(out, row)
 		}
 	}
 	return out
+}
+
+func hasOpenRelevantUpstreamIssue(row tracking.Row, m model) bool {
+	for _, issue := range m.IssueByFormula[row.Name] {
+		if strings.EqualFold(issue.State, "open") && strings.EqualFold(issue.Status, "relevant") {
+			return true
+		}
+	}
+	return false
 }
 
 func upstreamGapRows(m model) []tracking.Row {
@@ -384,14 +583,18 @@ func baseMismatchRows(rows []tracking.Row) []tracking.Row {
 func sortRows(rows []tracking.Row) []tracking.Row {
 	out := append([]tracking.Row(nil), rows...)
 	sort.Slice(out, func(i, j int) bool {
-		ii := len(out[i].TransitiveOpenSSLFormulaParents)
-		jj := len(out[j].TransitiveOpenSSLFormulaParents)
+		ii := impact(out[i])
+		jj := impact(out[j])
 		if ii != jj {
 			return ii > jj
 		}
 		return out[i].Name < out[j].Name
 	})
 	return out
+}
+
+func impact(row tracking.Row) int {
+	return len(row.TransitiveOpenSSLFormulaParents)
 }
 
 func uniquePRs(rows []tracking.Row) map[int]*github.PR {
@@ -448,9 +651,83 @@ func readinessBadges(readiness string) string {
 		if part == "" {
 			continue
 		}
-		out = append(out, fmt.Sprintf("<span class=\"badge readiness\">%s</span>", html.EscapeString(part)))
+		slug := badgeSlug(part)
+		out = append(out, fmt.Sprintf("<span class=\"badge readiness readiness-%s\">%s</span>", html.EscapeString(slug), html.EscapeString(part)))
 	}
 	return strings.Join(out, " ")
+}
+
+func nextActionFor(row tracking.Row) nextAction {
+	readiness := audit.Readiness(row)
+	tokens := readinessTokens(readiness)
+	switch {
+	case row.LiveStatus == "DONE":
+		return nextAction{Label: "Done", Slug: actionDone}
+	case row.OpenPR == nil:
+		return nextAction{Label: "Open migration PR", Slug: actionOpenPR}
+	case hasToken(tokens, "base-mismatch"):
+		return nextAction{Label: "Retarget PR", Slug: actionRetargetPR}
+	case hasToken(tokens, "draft"):
+		return nextAction{Label: "Resolve draft blockers", Slug: actionDraft}
+	case hasToken(tokens, "checks-blocked") || hasToken(tokens, "no-checks"):
+		return nextAction{Label: "Inspect CI", Slug: actionInspectCI}
+	case hasTokenPrefix(tokens, "merge-"):
+		return nextAction{Label: "Fix merge state", Slug: actionMerge}
+	default:
+		return nextAction{Label: "Review and merge", Slug: actionReviewMerge}
+	}
+}
+
+func actionBadge(action nextAction) string {
+	return fmt.Sprintf("<span class=\"badge action action-%s\">%s</span>", html.EscapeString(action.Slug), html.EscapeString(action.Label))
+}
+
+func readinessTokens(readiness string) []string {
+	parts := strings.Split(readiness, ",")
+	tokens := make([]string, 0, len(parts))
+	for _, part := range parts {
+		part = strings.TrimSpace(part)
+		if part != "" {
+			tokens = append(tokens, badgeSlug(part))
+		}
+	}
+	return tokens
+}
+
+func hasToken(tokens []string, want string) bool {
+	for _, token := range tokens {
+		if token == want {
+			return true
+		}
+	}
+	return false
+}
+
+func hasTokenPrefix(tokens []string, prefix string) bool {
+	for _, token := range tokens {
+		if strings.HasPrefix(token, prefix) {
+			return true
+		}
+	}
+	return false
+}
+
+func badgeSlug(value string) string {
+	value = strings.ToLower(strings.TrimSpace(value))
+	var sb strings.Builder
+	lastDash := false
+	for _, r := range value {
+		if (r >= 'a' && r <= 'z') || (r >= '0' && r <= '9') {
+			sb.WriteRune(r)
+			lastDash = false
+			continue
+		}
+		if !lastDash {
+			sb.WriteByte('-')
+			lastDash = true
+		}
+	}
+	return strings.Trim(sb.String(), "-")
 }
 
 func upstreamLink(f deptree.Formula) string {
