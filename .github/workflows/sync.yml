@@ -8,6 +8,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: sync-tracking-data
+  cancel-in-progress: false
+
 jobs:
   sync:
     runs-on: ubuntu-latest
@@ -33,19 +37,20 @@ jobs:
       - name: Build sslmigrate
         run: go build -o bin/sslmigrate .
 
-      - name: Regenerate tracking data
+      - name: Regenerate tracking reports
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           bin/sslmigrate dep-tree --homebrew-core=homebrew-core
           bin/sslmigrate status --homebrew-core=homebrew-core
           bin/sslmigrate checklist --homebrew-core=homebrew-core
+          bin/sslmigrate audit --homebrew-core=homebrew-core
 
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/dep_tree.json TRACKING.md CHECKLIST.md
+          git add data/dep_tree.json data/upstream_issues.json TRACKING.md CHECKLIST.md AUDIT.md
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else

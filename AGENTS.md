@@ -6,6 +6,7 @@ Migration harness and tracking repo for the Homebrew/homebrew-core openssl@3 →
 
 1. **Tracks** which formulae have been migrated and which are still pending.
 2. **Automates** the mechanical formula changes (dep swap + revision bump + Rust ENV wiring) and PR creation.
+3. **Audits** staged blockers, main-track opportunities, upstream repositories, and curated upstream issue context.
 
 The actual formulae live in a local homebrew-core checkout.
 Set `HOMEBREW_CORE` when your checkout is not at the Makefile default.
@@ -16,12 +17,13 @@ Set `HOMEBREW_CORE` when your checkout is not at the Makefile default.
 make build          # compiles bin/sslmigrate
 ```
 
-Four subcommands:
+Five subcommands:
 
 ```sh
 bin/sslmigrate dep-tree   # scan homebrew-core → data/dep_tree.json
 bin/sslmigrate status     # live status dashboard → TRACKING.md
 bin/sslmigrate checklist  # markdown checkbox view → CHECKLIST.md
+bin/sslmigrate audit      # readiness/upstream report → AUDIT.md
 bin/sslmigrate migrate <formula> [--dry-run] [--no-pr] [--push-remote=REMOTE] [--reset-existing]
 ```
 
@@ -31,6 +33,7 @@ bin/sslmigrate migrate <formula> [--dry-run] [--no-pr] [--push-remote=REMOTE] [-
 make dep-tree                    # rebuild data/dep_tree.json
 make status                      # regenerate TRACKING.md + print dashboard
 make checklist                   # regenerate CHECKLIST.md with checkboxes
+make audit                       # regenerate AUDIT.md from datasets + live PR state
 make migrate-dry FORMULA=wget    # preview diff, no changes to homebrew-core
 make migrate FORMULA=wget        # migrate and open PR
 ```
@@ -55,6 +58,7 @@ internal/
     locate.go                  find formula .rb file in homebrew-core
     parse.go                   detect openssl dep, parse depends_on, detect Rust
     patch.go                   apply migration (swap dep, bump revision, Rust ENV)
+    source.go                  parse formula homepage/source and upstream metadata
   deptree/
     types.go                   Formula + DepTree structs
     build.go                   scan formulae, compute staging closure, emit JSON
@@ -64,9 +68,12 @@ internal/
   migrate/migrate.go           full migration flow (branch, commit, push, PR)
   status/status.go             TRACKING.md dashboard generator
   checklist/checklist.go       CHECKLIST.md checkbox generator
+  audit/audit.go               AUDIT.md readiness/upstream report generator
 data/dep_tree.json             committed snapshot; regenerate with make dep-tree
+data/upstream_issues.json      curated upstream issue links for audit context
 TRACKING.md                    generated dashboard; regenerate with make status
 CHECKLIST.md                   generated checklist; regenerate with make checklist
+AUDIT.md                       generated audit report; regenerate with make audit
 .github/workflows/sync.yml     daily GitHub Action to auto-regenerate tracking data
 ```
 
@@ -92,12 +99,13 @@ cd $HOME/path/to/homebrew-openssl-4-migration
 make dep-tree
 make status
 make checklist
-git add data/dep_tree.json TRACKING.md CHECKLIST.md
+make audit
+git add data/dep_tree.json data/upstream_issues.json TRACKING.md CHECKLIST.md AUDIT.md
 git commit -s -m "data: sync dep_tree to homebrew-core $(git -C $HOMEBREW_CORE rev-parse --short HEAD)"
 git push origin main
 ```
 
-The GitHub Action (`.github/workflows/sync.yml`) runs this automatically every day at 06:17 UTC.
+The GitHub Action (`.github/workflows/sync.yml`) runs dep-tree, status, checklist, and audit automatically every day at 06:17 UTC, then commits and pushes changed datasets/reports.
 
 ## Prerequisites
 

@@ -2,10 +2,11 @@
 
 This repository tracks and automates mechanical openssl@3 to openssl@4 formula migrations in Homebrew/homebrew-core.
 
-The workflow is split into two parts:
+The workflow is split into the following steps:
 
 1. Build a dependency/status inventory from a local homebrew-core checkout.
-2. Use the migration harness to update one formula, create the expected branch, commit, push to a fork, and open a PR.
+2. Regenerate tracking, checklist, audit, and dataset artifacts for the migration.
+3. Use the migration harness to update one formula, create the expected branch, commit, push to a fork, and open a PR.
 
 ## Prerequisites
 
@@ -34,7 +35,7 @@ This compiles `bin/sslmigrate`. All other targets run it automatically.
 make dep-tree
 ~~~
 
-This writes data/dep_tree.json. The inventory includes every formula that currently has a direct dependency on openssl@3 or openssl@4, plus the staged depth from Homebrew tracking issue Homebrew/homebrew-core#278366. The scan also reads the full formula dependency graph so it can compute transitive staging blockers through bridge formulae that do not directly depend on OpenSSL.
+This writes data/dep_tree.json. The inventory includes every formula that currently has a direct dependency on openssl@3 or openssl@4, source/upstream metadata for each formula, plus the staged depth from Homebrew tracking issue Homebrew/homebrew-core#278366. The scan also reads the full formula dependency graph so it can compute transitive staging blockers through bridge formulae that do not directly depend on OpenSSL.
 
 Target branches are computed from the staged dependency closure:
 
@@ -49,6 +50,26 @@ make status
 ~~~
 
 This refreshes the target Homebrew refs, checks formula files from each formula's computed target branch, queries open migration PRs by migration labels plus an openssl@4 title fallback, prints the dashboard, and regenerates [TRACKING.md](TRACKING.md).
+
+## Refresh the checklist
+
+~~~sh
+make checklist
+~~~
+
+This regenerates [CHECKLIST.md](CHECKLIST.md) from the same dependency inventory and live PR/status data.
+
+## Refresh the audit report
+
+~~~sh
+make audit
+~~~
+
+This regenerates [AUDIT.md](AUDIT.md) by combining data/dep_tree.json, live migration PR state, and the curated upstream issue dataset in data/upstream_issues.json. The report highlights staged-track blockers, main-track opportunities, readiness signals, upstream repository metadata, and known upstream OpenSSL 4 issues.
+
+## Daily dataset sync
+
+The GitHub Action in [.github/workflows/sync.yml](.github/workflows/sync.yml) runs daily and regenerates data/dep_tree.json, [TRACKING.md](TRACKING.md), [CHECKLIST.md](CHECKLIST.md), and [AUDIT.md](AUDIT.md). When those artifacts change, the workflow commits and pushes the updated datasets back to the repository.
 
 ## Migrate one formula
 

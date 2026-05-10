@@ -5,6 +5,11 @@ type Formula struct {
 	Name                            string   `json:"name"`
 	Path                            string   `json:"path"`
 	OpenSSLDependency               string   `json:"openssl_dependency,omitempty"`
+	Homepage                        string   `json:"homepage,omitempty"`
+	SourceURL                       string   `json:"source_url,omitempty"`
+	HeadURL                         string   `json:"head_url,omitempty"`
+	UpstreamProvider                string   `json:"upstream_provider,omitempty"`
+	UpstreamRepo                    string   `json:"upstream_repo,omitempty"`
 	Depth                           *int     `json:"depth"`
 	TargetBranch                    string   `json:"target_branch"`
 	StagingReason                   string   `json:"staging_reason,omitempty"`

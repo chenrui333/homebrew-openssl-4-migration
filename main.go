@@ -6,6 +6,7 @@ import (
 
 	"github.com/spf13/cobra"
 
+	"github.com/chenrui333/homebrew-openssl-4-migration/internal/audit"
 	"github.com/chenrui333/homebrew-openssl-4-migration/internal/checklist"
 	"github.com/chenrui333/homebrew-openssl-4-migration/internal/deptree"
 	"github.com/chenrui333/homebrew-openssl-4-migration/internal/migrate"
@@ -29,7 +30,7 @@ func rootCmd() *cobra.Command {
 		Short:   "Harness for migrating homebrew-core formulae from openssl@3 to openssl@4",
 		Version: version,
 	}
-	root.AddCommand(depTreeCmd(), statusCmd(), checklistCmd(), migrateCmd())
+	root.AddCommand(depTreeCmd(), statusCmd(), checklistCmd(), auditCmd(), migrateCmd())
 	return root
 }
 
@@ -98,6 +99,22 @@ func checklistCmd() *cobra.Command {
 	cmd.Flags().StringVar(&homebrewCore, "homebrew-core", envOr("HOMEBREW_CORE", defaultHomebrewCore), "path to homebrew-core checkout")
 	cmd.Flags().StringVar(&depTree, "dep-tree", "data/dep_tree.json", "dependency inventory JSON")
 	cmd.Flags().StringVar(&output, "output", "CHECKLIST.md", "checklist markdown output path")
+	return cmd
+}
+
+func auditCmd() *cobra.Command {
+	var homebrewCore, depTree, upstreamIssues, output string
+	cmd := &cobra.Command{
+		Use:   "audit",
+		Short: "Write AUDIT.md with migration readiness and upstream issue context",
+		RunE: func(_ *cobra.Command, _ []string) error {
+			return audit.Run(homebrewCore, depTree, upstreamIssues, output)
+		},
+	}
+	cmd.Flags().StringVar(&homebrewCore, "homebrew-core", envOr("HOMEBREW_CORE", defaultHomebrewCore), "path to homebrew-core checkout")
+	cmd.Flags().StringVar(&depTree, "dep-tree", "data/dep_tree.json", "dependency inventory JSON")
+	cmd.Flags().StringVar(&upstreamIssues, "upstream-issues", "data/upstream_issues.json", "curated upstream issue JSON")
+	cmd.Flags().StringVar(&output, "output", "AUDIT.md", "audit markdown output path")
 	return cmd
 }
 
