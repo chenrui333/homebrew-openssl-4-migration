@@ -2,6 +2,7 @@
   "name": "homebrew-openssl-4-migration-site",
   "version": "0.1.0",
   "private": true,
+  "license": "Apache-2.0",
   "type": "module",
   "scripts": {
     "dev": "astro dev",

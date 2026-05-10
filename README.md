@@ -99,6 +99,10 @@ This regenerates data/site_snapshot.json and runs `npm run build` in [site/](sit
 
 The GitHub Action in [.github/workflows/sync.yml](.github/workflows/sync.yml) runs daily and regenerates data/dep_tree.json, data/site_snapshot.json, [TRACKING.md](TRACKING.md), [CHECKLIST.md](CHECKLIST.md), and [AUDIT.md](AUDIT.md). When those artifacts change, the workflow commits and pushes the updated datasets back to the repository. The Pages workflow in [.github/workflows/pages.yml](.github/workflows/pages.yml) builds the Astro site from the committed snapshot and deploys site/dist with GitHub Pages.
 
+## License
+
+This project is licensed under the [Apache License 2.0](LICENSE).
+
 ## Migrate one formula
 
 Dry-run first:
