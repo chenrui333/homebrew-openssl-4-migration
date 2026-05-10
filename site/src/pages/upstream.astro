@@ -28,7 +28,7 @@ const railItems = sections.map(([title, , rows]) => ({ label: title, href: "#" +
           <div class="section-heading">
             <span>§ {String(index + 1).padStart(2, "0")}</span>
             <div>
-              <h2>{title}</h2>
+              <h2>{title} · {rows.length}</h2>
               <p>{description}</p>
             </div>
           </div>

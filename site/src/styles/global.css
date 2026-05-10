@@ -169,6 +169,10 @@ main,
   margin-block: 2rem;
 }
 
+.registry-section + .registry-section {
+  margin-top: 3rem;
+}
+
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(320px, 0.42fr);
@@ -825,12 +829,14 @@ main,
 }
 
 .registry-table {
+  margin-top: 1.25rem;
   overflow-x: auto;
   border: 1px solid var(--line);
   background: var(--paper-strong);
 }
 
 .registry-table table {
+  table-layout: fixed;
   width: 100%;
   border-collapse: collapse;
   font-size: 0.88rem;
@@ -845,15 +851,49 @@ main,
 }
 
 .registry-table th {
-  position: sticky;
-  top: 104px;
-  z-index: 1;
-  background: var(--paper-strong);
+  background: #f1eadf;
   color: var(--muted);
   font-family: var(--mono);
   font-size: 0.68rem;
   letter-spacing: 0.07em;
+  white-space: nowrap;
   text-transform: uppercase;
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.registry-table th:nth-child(1),
+.registry-table td:nth-child(1) {
+  width: 20%;
+}
+
+.registry-table th:nth-child(2),
+.registry-table td:nth-child(2) {
+  width: 18%;
+}
+
+.registry-table th:nth-child(3),
+.registry-table td:nth-child(3) {
+  width: 8%;
+}
+
+.registry-table th:nth-child(4),
+.registry-table td:nth-child(4) {
+  width: 14%;
+}
+
+.registry-table th:nth-child(5),
+.registry-table td:nth-child(5) {
+  width: 10%;
+}
+
+.registry-table th:nth-child(6),
+.registry-table td:nth-child(6) {
+  width: 10%;
+}
+
+.registry-table th:nth-child(7),
+.registry-table td:nth-child(7) {
+  width: 20%;
 }
 
 .sort-button {
@@ -871,9 +911,14 @@ main,
 }
 
 .sort-button::after {
-  content: "↕";
+  content: "";
   color: var(--line-strong);
   font-size: 0.7rem;
+}
+
+.sort-button:hover::after,
+.sort-button:focus-visible::after {
+  content: "↕";
 }
 
 .sort-button[data-sort-active] {
@@ -896,6 +941,15 @@ main,
 .evidence-cell > a,
 .evidence-cell > span {
   margin-right: 0.35rem;
+}
+
+.readiness-mini {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
 }
 
 .empty-state {
@@ -1187,6 +1241,11 @@ pre {
   .registry-table tr,
   .registry-table td {
     display: block;
+    width: 100%;
+  }
+
+  .registry-table th:nth-child(n),
+  .registry-table td:nth-child(n) {
     width: 100%;
   }
 

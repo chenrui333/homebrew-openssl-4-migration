@@ -15,7 +15,7 @@ const { rows, showControls = true, emptyMessage = "No rows match this section." 
   <section class="registry-controls" data-registry-controls>
     <label>
       <span>Search registry</span>
-      <input type="search" data-registry-search placeholder="Formula, upstream repo, target branch, PR number" />
+      <input type="search" data-registry-search placeholder="Formula, upstream repo, PR number, gate, action" />
     </label>
     <div class="filter-chips" aria-label="Registry filters">
       {["all", "current-gate", "pending", "ready", "draft", "ci-blocked", "retarget", "missing-pr", "upstream-blocked", "done"].map((filter) => (
@@ -73,7 +73,10 @@ const { rows, showControls = true, emptyMessage = "No rows match this section." 
             <strong>{row.name}</strong>
             <span>{depthLabel(row)} · {row.group_label}</span>
           </td>
-          <td data-label="Action"><span class={"pill action-" + slug(row.next_action)}>{row.next_action}</span></td>
+          <td data-label="Action">
+            <span class={"pill action-" + slug(row.next_action)}>{row.next_action}</span>
+            {row.readiness.length > 0 && <span class="readiness-mini">{row.readiness.join(" · ")}</span>}
+          </td>
           <td data-label="Impact"><span class="impact">{row.impact_count}</span></td>
           <td data-label="Gate">{row.group_label}</td>
           <td data-label="Status">{row.live_status}</td>
