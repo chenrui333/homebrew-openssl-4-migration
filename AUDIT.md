@@ -1,4 +1,4 @@
-# OpenSSL 4 Migration Audit (2026-05-10)
+# OpenSSL 4 Migration Audit (2026-05-11)
 
 Tracking issue: Homebrew/homebrew-core#278366
 
@@ -8,8 +8,8 @@ Tracking issue: Homebrew/homebrew-core#278366
 - Live pending: 18
 - Live done: 39 (68.4%)
 - Open staging PRs: 18
-- Draft migration PRs: 18
-- PRs with merge/check blockers: 18
+- Draft migration PRs: 17
+- PRs with merge/check blockers: 17
 - Pending formulae without open migration PRs: 0
 
 ## Retarget to Staging
@@ -26,8 +26,8 @@ Pending staged formulae are sorted by transitive dependent count.
 
 | Formula | Target | Depth | Impact | Status | PR | Readiness | Upstream | Issues |
 |---|---|---:|---:|---|---|---|---|---|
-| python@3.14 | openssl-4-migration-staging | 0 | 481 | PENDING | #280846 | draft, checks-blocked, merge-unstable | python |  |
-| rust | openssl-4-migration-staging | 1 | 279 | PENDING | #280863 | draft, checks-blocked, merge-unstable | github:rust-lang/rust | [issues#155397](https://github.com/rust-lang/rust/issues/155397) open |
+| python@3.14 | openssl-4-migration-staging | 0 | 484 | PENDING | #280846 | draft, checks-blocked, merge-unstable | python |  |
+| rust | openssl-4-migration-staging | 1 | 281 | PENDING | #280863 | draft, checks-blocked, merge-unstable | github:rust-lang/rust | [issues#155397](https://github.com/rust-lang/rust/issues/155397) open |
 | python@3.13 | openssl-4-migration-staging | 0 | 80 | PENDING | #280845 | draft, checks-blocked, merge-unstable | python |  |
 | systemd | openssl-4-migration-staging | 1 | 72 | PENDING | #280864 | draft, checks-blocked, merge-unstable | github:systemd/systemd |  |
 | cargo-c | openssl-4-migration-staging | 2 | 25 | PENDING | #280867 | draft, checks-blocked, merge-unstable | github:lu-zero/cargo-c |  |
@@ -43,7 +43,7 @@ Pending staged formulae are sorted by transitive dependent count.
 | gstreamer | openssl-4-migration-staging | 3 | 4 | PENDING | #280873 | draft, checks-blocked, merge-unstable | gitlab:gitlab.freedesktop.org/gstreamer/gstreamer |  |
 | dotnet | openssl-4-migration-staging | 0 | 2 | PENDING | #280829 | draft, checks-blocked, merge-unstable | github:dotnet/dotnet |  |
 | gdal | openssl-4-migration-staging | 2 | 2 | PENDING | #280870 | draft, checks-blocked, merge-unstable | github:OSGeo/gdal |  |
-| php | openssl-4-migration-staging | 2 | 0 | PENDING | #280871 | draft, checks-blocked, merge-unstable | github:php/php-src |  |
+| php | openssl-4-migration-staging | 2 | 0 | PENDING | #280871 | ready | github:php/php-src |  |
 
 ## Upstream Issue Coverage Gaps
 
@@ -51,7 +51,7 @@ Top 20 pending staged formulae with upstream metadata and no curated upstream is
 
 | Formula | Depth | Impact | Upstream | Search | Readiness |
 |---|---:|---:|---|---|---|
-| python@3.14 | 0 | 481 | python |  | draft, checks-blocked, merge-unstable |
+| python@3.14 | 0 | 484 | python |  | draft, checks-blocked, merge-unstable |
 | python@3.13 | 0 | 80 | python |  | draft, checks-blocked, merge-unstable |
 | systemd | 1 | 72 | github:systemd/systemd | [issues](https://github.com/search?q=repo%3Asystemd%2Fsystemd+%22OpenSSL+4%22&type=issues) | draft, checks-blocked, merge-unstable |
 | cargo-c | 2 | 25 | github:lu-zero/cargo-c | [issues](https://github.com/search?q=repo%3Alu-zero%2Fcargo-c+%22OpenSSL+4%22&type=issues) | draft, checks-blocked, merge-unstable |
@@ -62,7 +62,7 @@ Top 20 pending staged formulae with upstream metadata and no curated upstream is
 | gstreamer | 3 | 4 | gitlab:gitlab.freedesktop.org/gstreamer/gstreamer |  | draft, checks-blocked, merge-unstable |
 | dotnet | 0 | 2 | github:dotnet/dotnet | [issues](https://github.com/search?q=repo%3Adotnet%2Fdotnet+%22OpenSSL+4%22&type=issues) | draft, checks-blocked, merge-unstable |
 | gdal | 2 | 2 | github:OSGeo/gdal | [issues](https://github.com/search?q=repo%3AOSGeo%2Fgdal+%22OpenSSL+4%22&type=issues) | draft, checks-blocked, merge-unstable |
-| php | 2 | 0 | github:php/php-src | [issues](https://github.com/search?q=repo%3Aphp%2Fphp-src+%22OpenSSL+4%22&type=issues) | draft, checks-blocked, merge-unstable |
+| php | 2 | 0 | github:php/php-src | [issues](https://github.com/search?q=repo%3Aphp%2Fphp-src+%22OpenSSL+4%22&type=issues) | ready |
 
 ## Curated Upstream Issues
 

@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-10T13:35:40-04:00",
+  "generated_at": "2026-05-11T07:33:56Z",
   "repository": "Homebrew/homebrew-core",
-  "git_head": "d738308f2eb1bbc0f93fdd3800ce41e022acc88e",
+  "git_head": "55422cb9f26c083655b266e36d62dba0e750dafb",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "staging_branch": "openssl-4-migration-staging",
   "staged_depths": {
@@ -60,7 +60,7 @@
       "gstreamer"
     ]
   },
-  "formula_count": 759,
+  "formula_count": 763,
   "formulae": [
     {
       "name": "apr-util",
@@ -369,6 +369,7 @@
         "river",
         "rizin",
         "root",
+        "rpm",
         "rtags",
         "rtl_433",
         "s2geometry",
@@ -919,6 +920,7 @@
         "root",
         "rover",
         "rpki-client",
+        "rpm",
         "rpmspectool",
         "rqbit",
         "rsql",
@@ -938,6 +940,7 @@
         "s2geometry",
         "s2n",
         "s3-backer",
+        "s3fs",
         "sagittarius-scheme",
         "samba",
         "sapling",
@@ -949,6 +952,7 @@
         "sentry-cli",
         "sequoia-chameleon-gnupg",
         "sequoia-sq",
+        "sequoia-sqv",
         "sgr",
         "sh4d0wup",
         "shairport-sync",
@@ -2007,6 +2011,7 @@
         "rojo",
         "root",
         "rover",
+        "rpm",
         "rpmspectool",
         "rqbit",
         "rsql",
@@ -2018,6 +2023,7 @@
         "rustup",
         "rye",
         "s3-backer",
+        "s3fs",
         "sapling",
         "sccache",
         "screenpipe",
@@ -2026,6 +2032,7 @@
         "sentry-cli",
         "sequoia-chameleon-gnupg",
         "sequoia-sq",
+        "sequoia-sqv",
         "sgr",
         "sh4d0wup",
         "sheldon",
@@ -2486,6 +2493,7 @@
         "rawdog",
         "retdec",
         "root",
+        "rpm",
         "rpmspectool",
         "sgr",
         "sigstore",
@@ -2877,6 +2885,7 @@
         "rojo",
         "root",
         "rover",
+        "rpm",
         "rpmspectool",
         "rqbit",
         "rsql",
@@ -2890,6 +2899,7 @@
         "rustup",
         "rye",
         "s3-backer",
+        "s3fs",
         "samba",
         "sapling",
         "sccache",
@@ -2899,6 +2909,7 @@
         "sentry-cli",
         "sequoia-chameleon-gnupg",
         "sequoia-sq",
+        "sequoia-sqv",
         "sgr",
         "sh4d0wup",
         "shairport-sync",
@@ -3246,6 +3257,7 @@
         "rtl_433",
         "s-nail",
         "s3-backer",
+        "s3fs",
         "samba",
         "sh4d0wup",
         "shibboleth-sp",
@@ -3435,6 +3447,7 @@
         "php@8.4",
         "rpmspectool",
         "s3-backer",
+        "s3fs",
         "xml-tooling-c"
       ],
       "transitive_openssl_formula_dependencies": [
@@ -3461,6 +3474,7 @@
         "php@8.4",
         "rpmspectool",
         "s3-backer",
+        "s3fs",
         "shibboleth-sp",
         "xml-tooling-c"
       ]
@@ -4215,6 +4229,7 @@
         "river",
         "rojo",
         "rover",
+        "rpm",
         "rqbit",
         "rsql",
         "ruby",
@@ -4231,6 +4246,7 @@
         "sentry-cli",
         "sequoia-chameleon-gnupg",
         "sequoia-sq",
+        "sequoia-sqv",
         "sh4d0wup",
         "sheldon",
         "sigstore",
@@ -4490,6 +4506,7 @@
         "rojo",
         "root",
         "rover",
+        "rpm",
         "rpmspectool",
         "rqbit",
         "rsql",
@@ -4507,6 +4524,7 @@
         "sentry-cli",
         "sequoia-chameleon-gnupg",
         "sequoia-sq",
+        "sequoia-sqv",
         "sgr",
         "sh4d0wup",
         "sheldon",
@@ -5622,6 +5640,7 @@
         "rojo",
         "root",
         "rover",
+        "rpm",
         "rpmspectool",
         "rqbit",
         "rsql",
@@ -5640,6 +5659,7 @@
         "sentry-cli",
         "sequoia-chameleon-gnupg",
         "sequoia-sq",
+        "sequoia-sqv",
         "sgr",
         "sh4d0wup",
         "sheldon",
@@ -5754,6 +5774,7 @@
         "rpmspectool",
         "rqbit",
         "s3-backer",
+        "s3fs",
         "sapling",
         "shibboleth-sp",
         "teleport",
@@ -6541,6 +6562,7 @@
       ],
       "openssl_formula_dependencies": [
         "cmake",
+        "sequoia-sqv",
         "systemd",
         "w3m"
       ],
@@ -6551,6 +6573,7 @@
         "libssh2",
         "python@3.14",
         "rust",
+        "sequoia-sqv",
         "systemd",
         "w3m",
         "wget"
@@ -11635,7 +11658,7 @@
       "path": "Formula/f/flowrs.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/jvanbuel/flowrs",
-      "source_url": "https://github.com/jvanbuel/flowrs/archive/refs/tags/flowrs-tui-v0.12.3.tar.gz",
+      "source_url": "https://github.com/jvanbuel/flowrs/archive/refs/tags/flowrs-tui-v0.12.4.tar.gz",
       "head_url": "https://github.com/jvanbuel/flowrs.git",
       "upstream_provider": "github",
       "upstream_repo": "jvanbuel/flowrs",
@@ -13801,6 +13824,31 @@
       "transitive_openssl_formula_dependencies": [
         "cmake"
       ],
+      "transitive_openssl_formula_dependents": []
+    },
+    {
+      "name": "inadyn",
+      "path": "Formula/i/inadyn.rb",
+      "openssl_dependency": "openssl@4",
+      "homepage": "https://troglobit.com/projects/inadyn/",
+      "source_url": "https://github.com/troglobit/inadyn/releases/download/v2.13.0/inadyn-2.13.0.tar.xz",
+      "head_url": "https://github.com/troglobit/inadyn.git",
+      "upstream_provider": "github",
+      "upstream_repo": "troglobit/inadyn",
+      "depth": null,
+      "target_branch": "main",
+      "staging_required_by": [],
+      "dependencies": [
+        "autoconf",
+        "automake",
+        "libtool",
+        "pkgconf",
+        "confuse",
+        "openssl@4"
+      ],
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": [],
+      "transitive_openssl_formula_dependencies": [],
       "transitive_openssl_formula_dependents": []
     },
     {
@@ -17155,6 +17203,7 @@
         "libgit2",
         "libssh2",
         "python@3.14",
+        "rpm",
         "rust"
       ],
       "transitive_openssl_formula_dependents": []
@@ -21881,7 +21930,7 @@
       "path": "Formula/p/pyenv.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/pyenv/pyenv",
-      "source_url": "https://github.com/pyenv/pyenv/archive/refs/tags/v2.6.30.tar.gz",
+      "source_url": "https://github.com/pyenv/pyenv/archive/refs/tags/v2.6.31.tar.gz",
       "head_url": "https://github.com/pyenv/pyenv.git",
       "upstream_provider": "github",
       "upstream_repo": "pyenv/pyenv",
@@ -23029,6 +23078,57 @@
       "transitive_openssl_formula_dependents": []
     },
     {
+      "name": "rpm",
+      "path": "Formula/r/rpm.rb",
+      "openssl_dependency": "openssl@3",
+      "homepage": "https://rpm.org/",
+      "source_url": "https://github.com/rpm-software-management/rpm/releases/download/rpm-4.20.1-release/rpm-4.20.1.tar.bz2",
+      "head_url": "https://github.com/rpm-software-management/rpm.git",
+      "upstream_provider": "github",
+      "upstream_repo": "rpm-software-management/rpm",
+      "depth": null,
+      "target_branch": "main",
+      "staging_required_by": [],
+      "dependencies": [
+        "cmake",
+        "gettext",
+        "python@3.14",
+        "rust",
+        "libarchive",
+        "libmagic",
+        "lua",
+        "openssl@3",
+        "pkgconf",
+        "popt",
+        "readline",
+        "sqlite",
+        "xz",
+        "zstd",
+        "libomp",
+        "elfutils",
+        "zlib-ng-compat"
+      ],
+      "openssl_formula_dependencies": [
+        "cmake",
+        "python@3.14",
+        "rust"
+      ],
+      "openssl_formula_dependents": [
+        "rpmspectool"
+      ],
+      "transitive_openssl_formula_dependencies": [
+        "cmake",
+        "libgit2",
+        "libssh2",
+        "python@3.14",
+        "rust"
+      ],
+      "transitive_openssl_formula_dependents": [
+        "micromamba",
+        "rpmspectool"
+      ]
+    },
+    {
       "name": "rpmspectool",
       "path": "Formula/r/rpmspectool.rb",
       "openssl_dependency": "openssl@3",
@@ -23046,7 +23146,8 @@
       ],
       "openssl_formula_dependencies": [
         "curl",
-        "python@3.14"
+        "python@3.14",
+        "rpm"
       ],
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
@@ -23056,6 +23157,7 @@
         "libngtcp2",
         "libssh2",
         "python@3.14",
+        "rpm",
         "rust",
         "wget"
       ],
@@ -23508,6 +23610,41 @@
       "transitive_openssl_formula_dependents": []
     },
     {
+      "name": "s3fs",
+      "path": "Formula/s/s3fs.rb",
+      "openssl_dependency": "openssl@3",
+      "homepage": "https://github.com/s3fs-fuse/s3fs-fuse/wiki",
+      "source_url": "https://github.com/s3fs-fuse/s3fs-fuse/archive/refs/tags/v1.97.tar.gz",
+      "head_url": "https://github.com/s3fs-fuse/s3fs-fuse.git",
+      "upstream_provider": "github",
+      "upstream_repo": "s3fs-fuse/s3fs-fuse",
+      "depth": null,
+      "target_branch": "main",
+      "staging_required_by": [],
+      "dependencies": [
+        "autoconf",
+        "automake",
+        "pkgconf",
+        "curl",
+        "libfuse",
+        "libxml2",
+        "openssl@3"
+      ],
+      "openssl_formula_dependencies": [
+        "curl"
+      ],
+      "openssl_formula_dependents": [],
+      "transitive_openssl_formula_dependencies": [
+        "cmake",
+        "curl",
+        "libngtcp2",
+        "libssh2",
+        "python@3.14",
+        "wget"
+      ],
+      "transitive_openssl_formula_dependents": []
+    },
+    {
       "name": "sagittarius-scheme",
       "path": "Formula/s/sagittarius-scheme.rb",
       "openssl_dependency": "openssl@3",
@@ -23877,8 +24014,6 @@
       "dependencies": [
         "pkgconf",
         "rust",
-        "gmp",
-        "nettle",
         "openssl@3"
       ],
       "openssl_formula_dependencies": [
@@ -23926,6 +24061,40 @@
         "rust"
       ],
       "transitive_openssl_formula_dependents": []
+    },
+    {
+      "name": "sequoia-sqv",
+      "path": "Formula/s/sequoia-sqv.rb",
+      "openssl_dependency": "openssl@3",
+      "homepage": "https://sequoia-pgp.org/",
+      "source_url": "https://gitlab.com/sequoia-pgp/sequoia-sqv/-/archive/v1.3.0/sequoia-sqv-v1.3.0.tar.bz2",
+      "head_url": "https://gitlab.com/sequoia-pgp/sequoia-sqv.git",
+      "upstream_provider": "gitlab",
+      "upstream_repo": "gitlab.com/sequoia-pgp/sequoia-sqv",
+      "depth": null,
+      "target_branch": "main",
+      "staging_required_by": [],
+      "dependencies": [
+        "pkgconf",
+        "rust",
+        "openssl@3"
+      ],
+      "openssl_formula_dependencies": [
+        "rust"
+      ],
+      "openssl_formula_dependents": [
+        "apt"
+      ],
+      "transitive_openssl_formula_dependencies": [
+        "cmake",
+        "libgit2",
+        "libssh2",
+        "python@3.14",
+        "rust"
+      ],
+      "transitive_openssl_formula_dependents": [
+        "apt"
+      ]
     },
     {
       "name": "sgr",
@@ -25399,7 +25568,7 @@
       "path": "Formula/s/superseedr.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/Jagalite/superseedr",
-      "source_url": "https://github.com/Jagalite/superseedr/archive/refs/tags/v1.0.6.tar.gz",
+      "source_url": "https://github.com/Jagalite/superseedr/archive/refs/tags/v1.0.7.tar.gz",
       "head_url": "https://github.com/Jagalite/superseedr.git",
       "upstream_provider": "github",
       "upstream_repo": "Jagalite/superseedr",

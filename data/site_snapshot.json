@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-10T13:35:40-04:00",
+  "generated_at": "2026-05-11T07:33:56Z",
   "repository": "Homebrew/homebrew-core",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "target_branch": "openssl-4-migration-staging",
@@ -20,7 +20,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 663,
+      "impact_count": 666,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -55,7 +55,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 481,
+      "impact_count": 484,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 280846,
@@ -92,7 +92,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 303,
+      "impact_count": 306,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -132,7 +132,7 @@
       "live_status": "DONE",
       "depth": null,
       "group_label": "Staging closure",
-      "impact_count": 281,
+      "impact_count": 283,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -172,7 +172,7 @@
       "live_status": "PENDING",
       "depth": 1,
       "group_label": "Batch 1",
-      "impact_count": 279,
+      "impact_count": 281,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 280863,
@@ -217,7 +217,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 132,
+      "impact_count": 133,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -295,7 +295,7 @@
         "base": "openssl-4-migration-staging",
         "is_draft": true,
         "merge_state": "UNSTABLE",
-        "updated_at": "2026-05-05T06:03:04Z"
+        "updated_at": "2026-05-11T03:00:51Z"
       },
       "readiness": [
         "draft",
@@ -372,7 +372,7 @@
         "base": "openssl-4-migration-staging",
         "is_draft": true,
         "merge_state": "UNSTABLE",
-        "updated_at": "2026-05-05T03:20:23Z"
+        "updated_at": "2026-05-11T01:17:14Z"
       },
       "readiness": [
         "draft",
@@ -446,7 +446,7 @@
       "live_status": "DONE",
       "depth": null,
       "group_label": "Staging closure",
-      "impact_count": 32,
+      "impact_count": 33,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -494,7 +494,7 @@
         "base": "openssl-4-migration-staging",
         "is_draft": true,
         "merge_state": "UNSTABLE",
-        "updated_at": "2026-05-05T03:20:27Z"
+        "updated_at": "2026-05-11T01:41:53Z"
       },
       "readiness": [
         "draft",
@@ -565,7 +565,7 @@
       "live_status": "DONE",
       "depth": 1,
       "group_label": "Batch 1",
-      "impact_count": 19,
+      "impact_count": 20,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -2163,16 +2163,14 @@
         "number": 280871,
         "url": "https://github.com/Homebrew/homebrew-core/pull/280871",
         "base": "openssl-4-migration-staging",
-        "is_draft": true,
-        "merge_state": "UNSTABLE",
-        "updated_at": "2026-05-05T03:42:26Z"
+        "is_draft": false,
+        "merge_state": "CLEAN",
+        "updated_at": "2026-05-11T02:41:47Z"
       },
       "readiness": [
-        "draft",
-        "checks-blocked",
-        "merge-unstable"
+        "ready"
       ],
-      "next_action": "Resolve draft blockers",
+      "next_action": "Review and merge",
       "upstream": {
         "provider": "github",
         "repo": "php/php-src",
@@ -2186,9 +2184,9 @@
       ],
       "flags": {
         "current_gate": false,
-        "ready": false,
-        "draft": true,
-        "ci_blocked": true,
+        "ready": true,
+        "draft": false,
+        "ci_blocked": false,
         "base_mismatch": false,
         "missing_pr": false,
         "upstream_blocked": false
