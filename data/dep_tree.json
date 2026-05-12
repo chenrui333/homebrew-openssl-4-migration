@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-11T07:33:56Z",
+  "generated_at": "2026-05-12T07:16:44Z",
   "repository": "Homebrew/homebrew-core",
-  "git_head": "55422cb9f26c083655b266e36d62dba0e750dafb",
+  "git_head": "5dc26bf820bc2ecffea52b12c85bd40c71232fb9",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "staging_branch": "openssl-4-migration-staging",
   "staged_depths": {
@@ -60,7 +60,7 @@
       "gstreamer"
     ]
   },
-  "formula_count": 763,
+  "formula_count": 757,
   "formulae": [
     {
       "name": "apr-util",
@@ -246,7 +246,6 @@
         "dotnet@9",
         "drogon",
         "dwarfs",
-        "dxpy",
         "dynein",
         "ecflow-ui",
         "echtvar",
@@ -401,7 +400,6 @@
         "watchman",
         "wdc",
         "weaviate-cli",
-        "wownero",
         "wuppiefuzz",
         "xmrig",
         "xrootd",
@@ -446,7 +444,6 @@
         "azure-core-cpp",
         "azure-storage-common-cpp",
         "azure-storage-cpp",
-        "bacon-ls",
         "bacula-fd",
         "bareos-client",
         "baresip",
@@ -967,7 +964,6 @@
         "sipp",
         "sleuthkit",
         "slrn",
-        "smartdns",
         "snapcast",
         "sniffnet",
         "snobol4",
@@ -991,7 +987,6 @@
         "stubby",
         "stuntman",
         "superseedr",
-        "surfer",
         "swi-prolog",
         "swtpm",
         "sylpheed",
@@ -1032,7 +1027,6 @@
         "typst",
         "u-boot-tools",
         "unshield",
-        "urx",
         "uuu",
         "uwsgi",
         "varnish",
@@ -1053,8 +1047,6 @@
         "webfs",
         "websocat",
         "wget",
-        "wownero",
-        "wrkflw",
         "wthrr",
         "wuppiefuzz",
         "x-cli",
@@ -1456,7 +1448,6 @@
         "teslamate",
         "texlive",
         "uwsgi",
-        "wownero",
         "xrootd",
         "zurl"
       ]
@@ -1587,7 +1578,6 @@
         "sslsplit",
         "sstp-client",
         "stubby",
-        "swtpm",
         "sylpheed",
         "termscp",
         "thors-anvil",
@@ -1598,8 +1588,7 @@
         "unbound",
         "vineyard",
         "wangle",
-        "watchman",
-        "wownero"
+        "watchman"
       ]
     },
     {
@@ -1802,7 +1791,6 @@
         "aws-sam-cli",
         "awscurl",
         "azure-cli",
-        "bacon-ls",
         "bbot",
         "bkmr",
         "boa",
@@ -2039,7 +2027,6 @@
         "shibboleth-sp",
         "sigstore",
         "sile",
-        "smartdns",
         "sniffnet",
         "so",
         "solana",
@@ -2052,7 +2039,6 @@
         "sqlx-cli",
         "stellar-cli",
         "superseedr",
-        "surfer",
         "sylpheed",
         "synergy-core",
         "tabiew",
@@ -2071,7 +2057,6 @@
         "tsduck",
         "tuisky",
         "typst",
-        "urx",
         "varnish",
         "vsd",
         "vtcode",
@@ -2081,7 +2066,6 @@
         "weave",
         "weaviate-cli",
         "websocat",
-        "wrkflw",
         "wthrr",
         "wuppiefuzz",
         "x-cli",
@@ -2276,8 +2260,7 @@
         "ansible@9",
         "prowler",
         "rethinkdb",
-        "sapling",
-        "wownero"
+        "sapling"
       ]
     },
     {
@@ -2398,7 +2381,6 @@
         "texlive",
         "vsd",
         "weaviate-cli",
-        "wownero",
         "zeek",
         "zurl"
       ]
@@ -2537,7 +2519,6 @@
         "awscli",
         "awscurl",
         "azure-cli",
-        "bacon-ls",
         "barman",
         "bbot",
         "bibtexconv",
@@ -2918,7 +2899,6 @@
         "sile",
         "silk",
         "sleuthkit",
-        "smartdns",
         "snapcast",
         "sniffnet",
         "so",
@@ -2934,7 +2914,6 @@
         "stellar-cli",
         "stubby",
         "superseedr",
-        "surfer",
         "swtpm",
         "sylpheed",
         "synergy-core",
@@ -2963,7 +2942,6 @@
         "ttyd",
         "tuisky",
         "typst",
-        "urx",
         "uuu",
         "uwsgi",
         "varnish",
@@ -2978,8 +2956,6 @@
         "weave",
         "weaviate-cli",
         "websocat",
-        "wownero",
-        "wrkflw",
         "wthrr",
         "wuppiefuzz",
         "x-cli",
@@ -3079,7 +3055,7 @@
       "path": "Formula/t/tcl-tk@8.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://www.tcl-lang.org",
-      "source_url": "https://downloads.sourceforge.net/project/tcl/Tcl/8.6.17/tcl8.6.17-src.tar.gz",
+      "source_url": "https://downloads.sourceforge.net/project/tcl/Tcl/8.6.18/tcl8.6.18-src.tar.gz",
       "upstream_provider": "other",
       "depth": 0,
       "target_branch": "openssl-4-migration-staging",
@@ -3268,7 +3244,6 @@
         "spotifyd",
         "stellar-cli",
         "stubby",
-        "swtpm",
         "sylpheed",
         "synergy-core",
         "systemd",
@@ -3282,7 +3257,6 @@
         "vineyard",
         "vroom",
         "weaviate-cli",
-        "wownero",
         "xml-tooling-c",
         "zurl"
       ]
@@ -3555,7 +3529,7 @@
       "path": "Formula/f/folly.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/facebook/folly",
-      "source_url": "https://github.com/facebook/folly/archive/refs/tags/v2026.05.04.00.tar.gz",
+      "source_url": "https://github.com/facebook/folly/archive/refs/tags/v2026.05.11.00.tar.gz",
       "head_url": "https://github.com/facebook/folly.git",
       "upstream_provider": "github",
       "upstream_repo": "facebook/folly",
@@ -4087,7 +4061,6 @@
         "asuka",
         "authoscope",
         "azure-cli",
-        "bacon-ls",
         "bbot",
         "bkmr",
         "boa",
@@ -4251,7 +4224,6 @@
         "sheldon",
         "sigstore",
         "sile",
-        "smartdns",
         "sniffnet",
         "so",
         "solana",
@@ -4262,7 +4234,6 @@
         "sqlx-cli",
         "stellar-cli",
         "superseedr",
-        "surfer",
         "tabiew",
         "tectonic",
         "teleport",
@@ -4276,7 +4247,6 @@
         "trunk",
         "tuisky",
         "typst",
-        "urx",
         "vsd",
         "vtcode",
         "wally",
@@ -4284,7 +4254,6 @@
         "watchman",
         "weave",
         "websocat",
-        "wrkflw",
         "wthrr",
         "wuppiefuzz",
         "x-cli",
@@ -4316,7 +4285,6 @@
         "aws-sam-cli",
         "awscurl",
         "azure-cli",
-        "bacon-ls",
         "bbot",
         "bkmr",
         "boa",
@@ -4530,7 +4498,6 @@
         "sheldon",
         "sigstore",
         "sile",
-        "smartdns",
         "sniffnet",
         "so",
         "solana",
@@ -4543,7 +4510,6 @@
         "sqlx-cli",
         "stellar-cli",
         "superseedr",
-        "surfer",
         "sylpheed",
         "synergy-core",
         "tabiew",
@@ -4562,7 +4528,6 @@
         "tsduck",
         "tuisky",
         "typst",
-        "urx",
         "varnish",
         "vsd",
         "vtcode",
@@ -4572,7 +4537,6 @@
         "weave",
         "weaviate-cli",
         "websocat",
-        "wrkflw",
         "wthrr",
         "wuppiefuzz",
         "x-cli",
@@ -4718,7 +4682,6 @@
         "teslamate",
         "tsduck",
         "uuu",
-        "wownero",
         "zurl"
       ]
     },
@@ -4750,8 +4713,7 @@
         "getdns",
         "monero",
         "redwax-tool",
-        "stubby",
-        "wownero"
+        "stubby"
       ],
       "transitive_openssl_formula_dependencies": [
         "libevent"
@@ -4786,11 +4748,9 @@
         "spice-gtk",
         "spice-server",
         "stubby",
-        "swtpm",
         "sylpheed",
         "termscp",
-        "tsduck",
-        "wownero"
+        "tsduck"
       ]
     },
     {
@@ -5108,7 +5068,7 @@
       "path": "Formula/r/ruby.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://www.ruby-lang.org/",
-      "source_url": "https://cache.ruby-lang.org/pub/ruby/4.0/ruby-4.0.3.tar.gz",
+      "source_url": "https://cache.ruby-lang.org/pub/ruby/4.0/ruby-4.0.4.tar.gz",
       "head_url": "https://github.com/ruby/ruby.git",
       "upstream_provider": "github",
       "upstream_repo": "ruby/ruby",
@@ -5449,7 +5409,6 @@
         "aws-sam-cli",
         "awscurl",
         "azure-cli",
-        "bacon-ls",
         "bbot",
         "bkmr",
         "boa",
@@ -5665,7 +5624,6 @@
         "sheldon",
         "sigstore",
         "sile",
-        "smartdns",
         "sniffnet",
         "so",
         "solana",
@@ -5678,7 +5636,6 @@
         "sqlx-cli",
         "stellar-cli",
         "superseedr",
-        "surfer",
         "sylpheed",
         "synergy-core",
         "tabiew",
@@ -5697,7 +5654,6 @@
         "tsduck",
         "tuisky",
         "typst",
-        "urx",
         "varnish",
         "vsd",
         "vtcode",
@@ -5707,7 +5663,6 @@
         "weave",
         "weaviate-cli",
         "websocat",
-        "wrkflw",
         "wthrr",
         "wuppiefuzz",
         "x-cli",
@@ -5961,9 +5916,7 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": [
-        "dxpy"
-      ],
+      "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake"
       ],
@@ -6409,7 +6362,7 @@
       "path": "Formula/a/aoe.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/njbrake/agent-of-empires",
-      "source_url": "https://github.com/njbrake/agent-of-empires/archive/refs/tags/v1.6.1.tar.gz",
+      "source_url": "https://github.com/njbrake/agent-of-empires/archive/refs/tags/v1.6.2.tar.gz",
       "head_url": "https://github.com/njbrake/agent-of-empires.git",
       "upstream_provider": "github",
       "upstream_repo": "njbrake/agent-of-empires",
@@ -7129,36 +7082,6 @@
       "transitive_openssl_formula_dependents": []
     },
     {
-      "name": "bacon-ls",
-      "path": "Formula/b/bacon-ls.rb",
-      "openssl_dependency": "openssl@3",
-      "homepage": "https://github.com/crisidev/bacon-ls",
-      "source_url": "https://github.com/crisidev/bacon-ls/archive/refs/tags/0.29.0.tar.gz",
-      "head_url": "https://github.com/crisidev/bacon-ls.git",
-      "upstream_provider": "github",
-      "upstream_repo": "crisidev/bacon-ls",
-      "depth": null,
-      "target_branch": "main",
-      "staging_required_by": [],
-      "dependencies": [
-        "pkgconf",
-        "rust",
-        "openssl@3"
-      ],
-      "openssl_formula_dependencies": [
-        "rust"
-      ],
-      "openssl_formula_dependents": [],
-      "transitive_openssl_formula_dependencies": [
-        "cmake",
-        "libgit2",
-        "libssh2",
-        "python@3.14",
-        "rust"
-      ],
-      "transitive_openssl_formula_dependents": []
-    },
-    {
       "name": "bacula-fd",
       "path": "Formula/b/bacula-fd.rb",
       "openssl_dependency": "openssl@3",
@@ -7418,7 +7341,7 @@
     {
       "name": "bitchx",
       "path": "Formula/b/bitchx.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://bitchx.sourceforge.net/",
       "source_url": "https://downloads.sourceforge.net/project/bitchx/ircii-pana/bitchx-1.2.1/bitchx-1.2.1.tar.gz",
       "head_url": "https://git.code.sf.net/p/bitchx/git.git",
@@ -7427,7 +7350,7 @@
       "target_branch": "main",
       "staging_required_by": [],
       "dependencies": [
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [],
@@ -7651,7 +7574,7 @@
     {
       "name": "btpd",
       "path": "Formula/b/btpd.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/btpd/btpd",
       "source_url": "https://github.com/btpd/btpd/archive/refs/tags/v0.16.tar.gz",
       "upstream_provider": "github",
@@ -7663,7 +7586,7 @@
         "autoconf",
         "automake",
         "libtool",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [],
@@ -7762,7 +7685,7 @@
       "path": "Formula/c/c2patool.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://contentauthenticity.org",
-      "source_url": "https://github.com/contentauth/c2pa-rs/archive/refs/tags/c2patool-v0.26.56.tar.gz",
+      "source_url": "https://github.com/contentauth/c2pa-rs/archive/refs/tags/c2patool-v0.26.58.tar.gz",
       "head_url": "https://github.com/contentauth/c2pa-rs.git",
       "upstream_provider": "github",
       "upstream_repo": "contentauth/c2pa-rs",
@@ -9697,7 +9620,7 @@
     {
       "name": "distill-cli",
       "path": "Formula/d/distill-cli.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://www.allthingsdistributed.com/2024/06/introducing-distill-cli.html",
       "source_url": "https://github.com/awslabs/distill-cli/archive/refs/tags/v0.2.0.tar.gz",
       "head_url": "https://github.com/awslabs/distill-cli.git",
@@ -9709,7 +9632,7 @@
       "dependencies": [
         "pkgconf",
         "rust",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [
         "rust"
@@ -10209,32 +10132,26 @@
       "target_branch": "main",
       "staging_required_by": [],
       "dependencies": [
-        "cmake",
         "aws-c-auth",
         "aws-c-cal",
         "aws-c-common",
-        "aws-c-compression",
         "aws-c-event-stream",
         "aws-c-http",
         "aws-c-io",
         "aws-c-mqtt",
         "aws-c-s3",
-        "aws-c-sdkutils",
         "aws-checksums",
         "certifi",
         "cryptography",
-        "openssl@3",
         "python@3.14",
-        "readline",
-        "aws-lc",
-        "s2n"
+        "aws-c-compression",
+        "aws-c-sdkutils",
+        "openssl@3"
       ],
       "openssl_formula_dependencies": [
         "aws-c-cal",
-        "cmake",
         "cryptography",
-        "python@3.14",
-        "s2n"
+        "python@3.14"
       ],
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
@@ -10285,7 +10202,7 @@
     {
       "name": "dynomite",
       "path": "Formula/d/dynomite.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/Netflix/dynomite",
       "source_url": "https://github.com/Netflix/dynomite/archive/refs/tags/v0.6.22.tar.gz",
       "upstream_provider": "github",
@@ -10297,7 +10214,7 @@
         "autoconf",
         "automake",
         "libtool",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [],
@@ -11209,7 +11126,7 @@
       "path": "Formula/f/fbthrift.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/facebook/fbthrift",
-      "source_url": "https://github.com/facebook/fbthrift/archive/refs/tags/v2026.05.04.00.tar.gz",
+      "source_url": "https://github.com/facebook/fbthrift/archive/refs/tags/v2026.05.11.00.tar.gz",
       "head_url": "https://github.com/facebook/fbthrift.git",
       "upstream_provider": "github",
       "upstream_repo": "facebook/fbthrift",
@@ -11550,7 +11467,7 @@
       "path": "Formula/f/fizz.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/facebookincubator/fizz",
-      "source_url": "https://github.com/facebookincubator/fizz/archive/refs/tags/v2026.05.04.00.tar.gz",
+      "source_url": "https://github.com/facebookincubator/fizz/archive/refs/tags/v2026.05.11.00.tar.gz",
       "head_url": "https://github.com/facebookincubator/fizz.git",
       "upstream_provider": "github",
       "upstream_repo": "facebookincubator/fizz",
@@ -13133,7 +13050,7 @@
       "path": "Formula/h/haproxy.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://www.haproxy.org/",
-      "source_url": "https://www.haproxy.org/download/3.3/src/haproxy-3.3.9.tar.gz",
+      "source_url": "https://www.haproxy.org/download/3.3/src/haproxy-3.3.10.tar.gz",
       "upstream_provider": "other",
       "depth": null,
       "target_branch": "main",
@@ -13155,7 +13072,7 @@
       "path": "Formula/h/haproxy@2.8.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://www.haproxy.org/",
-      "source_url": "https://www.haproxy.org/download/2.8/src/haproxy-2.8.23.tar.gz",
+      "source_url": "https://www.haproxy.org/download/2.8/src/haproxy-2.8.24.tar.gz",
       "upstream_provider": "other",
       "depth": null,
       "target_branch": "main",
@@ -13310,7 +13227,7 @@
       "path": "Formula/h/hf-mount.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/huggingface/hf-mount",
-      "source_url": "https://github.com/huggingface/hf-mount/archive/refs/tags/v0.5.0.tar.gz",
+      "source_url": "https://github.com/huggingface/hf-mount/archive/refs/tags/v0.6.0.tar.gz",
       "head_url": "https://github.com/huggingface/hf-mount.git",
       "upstream_provider": "github",
       "upstream_repo": "huggingface/hf-mount",
@@ -14031,7 +13948,7 @@
       "path": "Formula/i/ironclaw.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/nearai/ironclaw",
-      "source_url": "https://github.com/nearai/ironclaw/archive/refs/tags/ironclaw-v0.28.0.tar.gz",
+      "source_url": "https://github.com/nearai/ironclaw/archive/refs/tags/ironclaw-v0.28.1.tar.gz",
       "head_url": "https://github.com/nearai/ironclaw.git",
       "upstream_provider": "github",
       "upstream_repo": "nearai/ironclaw",
@@ -15995,7 +15912,7 @@
     {
       "name": "libvncserver",
       "path": "Formula/lib/libvncserver.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://libvnc.github.io",
       "source_url": "https://github.com/LibVNC/libvncserver/archive/refs/tags/LibVNCServer-0.9.15.tar.gz",
       "head_url": "https://github.com/LibVNC/libvncserver.git",
@@ -16007,9 +15924,8 @@
       "dependencies": [
         "cmake",
         "jpeg-turbo",
-        "libgcrypt",
         "libpng",
-        "openssl@3",
+        "openssl@4",
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
@@ -17329,7 +17245,7 @@
       "path": "Formula/m/mise.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://mise.jdx.dev/",
-      "source_url": "https://github.com/jdx/mise/archive/refs/tags/v2026.5.5.tar.gz",
+      "source_url": "https://github.com/jdx/mise/archive/refs/tags/v2026.5.6.tar.gz",
       "head_url": "https://github.com/jdx/mise.git",
       "upstream_provider": "github",
       "upstream_repo": "jdx/mise",
@@ -17931,7 +17847,7 @@
       "path": "Formula/m/mvfst.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/facebook/mvfst",
-      "source_url": "https://github.com/facebook/mvfst/archive/refs/tags/v2026.05.04.00.tar.gz",
+      "source_url": "https://github.com/facebook/mvfst/archive/refs/tags/v2026.05.11.00.tar.gz",
       "head_url": "https://github.com/facebook/mvfst.git",
       "upstream_provider": "github",
       "upstream_repo": "facebook/mvfst",
@@ -19936,7 +19852,7 @@
       "path": "Formula/o/oterm.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/ggozad/oterm",
-      "source_url": "https://files.pythonhosted.org/packages/1b/ef/b035a91bd646adaaa8ba06125e7ad9a96ae4ec6122c18767a1c36e2ba3b9/oterm-0.17.0.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/29/6b/eeb34587aa5e0ed18a9d3c05a014eca99c0885ef4c5409bf695c29bb69e9/oterm-0.17.1.tar.gz",
       "upstream_provider": "python",
       "depth": null,
       "target_branch": "main",
@@ -21677,7 +21593,7 @@
       "path": "Formula/p/proxygen.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/facebook/proxygen",
-      "source_url": "https://github.com/facebook/proxygen/releases/download/v2026.05.04.00/proxygen-v2026.05.04.00.tar.gz",
+      "source_url": "https://github.com/facebook/proxygen/releases/download/v2026.05.11.00/proxygen-v2026.05.11.00.tar.gz",
       "head_url": "https://github.com/facebook/proxygen.git",
       "upstream_provider": "github",
       "upstream_repo": "facebook/proxygen",
@@ -23326,7 +23242,7 @@
       "path": "Formula/r/ruby-build.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://rbenv.org/man/ruby-build.1",
-      "source_url": "https://github.com/rbenv/ruby-build/archive/refs/tags/v20260503.tar.gz",
+      "source_url": "https://github.com/rbenv/ruby-build/archive/refs/tags/v20260512.tar.gz",
       "head_url": "https://github.com/rbenv/ruby-build.git",
       "upstream_provider": "github",
       "upstream_repo": "rbenv/ruby-build",
@@ -23940,7 +23856,7 @@
       "path": "Formula/s/sem-cli.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/Ataraxy-Labs/sem",
-      "source_url": "https://github.com/Ataraxy-Labs/sem/archive/refs/tags/v0.5.3.tar.gz",
+      "source_url": "https://github.com/Ataraxy-Labs/sem/archive/refs/tags/v0.5.4.tar.gz",
       "head_url": "https://github.com/Ataraxy-Labs/sem.git",
       "upstream_provider": "github",
       "upstream_repo": "Ataraxy-Labs/sem",
@@ -23973,7 +23889,7 @@
       "path": "Formula/s/sentry-cli.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://docs.sentry.io/cli/",
-      "source_url": "https://github.com/getsentry/sentry-cli/archive/refs/tags/3.4.1.tar.gz",
+      "source_url": "https://github.com/getsentry/sentry-cli/archive/refs/tags/3.4.2.tar.gz",
       "head_url": "https://github.com/getsentry/sentry-cli.git",
       "upstream_provider": "github",
       "upstream_repo": "getsentry/sentry-cli",
@@ -24600,36 +24516,6 @@
       "transitive_openssl_formula_dependents": []
     },
     {
-      "name": "smartdns",
-      "path": "Formula/s/smartdns.rb",
-      "openssl_dependency": "openssl@3",
-      "homepage": "https://github.com/mokeyish/smartdns-rs",
-      "source_url": "https://github.com/mokeyish/smartdns-rs/archive/refs/tags/v0.13.0.tar.gz",
-      "head_url": "https://github.com/mokeyish/smartdns-rs.git",
-      "upstream_provider": "github",
-      "upstream_repo": "mokeyish/smartdns-rs",
-      "depth": null,
-      "target_branch": "main",
-      "staging_required_by": [],
-      "dependencies": [
-        "rust",
-        "openssl@3",
-        "pkgconf"
-      ],
-      "openssl_formula_dependencies": [
-        "rust"
-      ],
-      "openssl_formula_dependents": [],
-      "transitive_openssl_formula_dependencies": [
-        "cmake",
-        "libgit2",
-        "libssh2",
-        "python@3.14",
-        "rust"
-      ],
-      "transitive_openssl_formula_dependents": []
-    },
-    {
       "name": "snapcast",
       "path": "Formula/s/snapcast.rb",
       "openssl_dependency": "openssl@4",
@@ -24668,7 +24554,7 @@
     {
       "name": "sngrep",
       "path": "Formula/s/sngrep.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/irontec/sngrep",
       "source_url": "https://github.com/irontec/sngrep/releases/download/v1.8.3/sngrep-1.8.3.tar.gz",
       "upstream_provider": "github",
@@ -24681,8 +24567,7 @@
         "automake",
         "pkgconf",
         "ncurses",
-        "openssl@3",
-        "libgcrypt"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [],
@@ -25075,7 +24960,7 @@
     {
       "name": "spiped",
       "path": "Formula/s/spiped.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://www.tarsnap.com/spiped.html",
       "source_url": "https://www.tarsnap.com/spiped/spiped-1.6.4.tgz",
       "upstream_provider": "other",
@@ -25083,7 +24968,7 @@
       "target_branch": "main",
       "staging_required_by": [],
       "dependencies": [
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [],
@@ -25543,7 +25428,7 @@
     {
       "name": "stuntman",
       "path": "Formula/s/stuntman.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://www.stunprotocol.org",
       "source_url": "https://www.stunprotocol.org/stunserver-1.2.16.tgz",
       "head_url": "https://github.com/jselbie/stunserver.git",
@@ -25554,7 +25439,7 @@
       "staging_required_by": [],
       "dependencies": [
         "boost",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [],
@@ -25572,36 +25457,6 @@
       "head_url": "https://github.com/Jagalite/superseedr.git",
       "upstream_provider": "github",
       "upstream_repo": "Jagalite/superseedr",
-      "depth": null,
-      "target_branch": "main",
-      "staging_required_by": [],
-      "dependencies": [
-        "pkgconf",
-        "rust",
-        "openssl@3"
-      ],
-      "openssl_formula_dependencies": [
-        "rust"
-      ],
-      "openssl_formula_dependents": [],
-      "transitive_openssl_formula_dependencies": [
-        "cmake",
-        "libgit2",
-        "libssh2",
-        "python@3.14",
-        "rust"
-      ],
-      "transitive_openssl_formula_dependents": []
-    },
-    {
-      "name": "surfer",
-      "path": "Formula/s/surfer.rb",
-      "openssl_dependency": "openssl@3",
-      "homepage": "https://surfer-project.org/",
-      "source_url": "https://gitlab.com/surfer-project/surfer.git",
-      "head_url": "https://gitlab.com/surfer-project/surfer.git",
-      "upstream_provider": "gitlab",
-      "upstream_repo": "gitlab.com/surfer-project/surfer",
       "depth": null,
       "target_branch": "main",
       "staging_required_by": [],
@@ -25676,7 +25531,6 @@
         "socat",
         "glib",
         "gmp",
-        "gnutls",
         "json-glib",
         "libtasn1",
         "libtpms",
@@ -25692,12 +25546,9 @@
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
-        "libevent",
         "libtpms",
         "python@3.14",
-        "socat",
-        "unbound",
-        "wget"
+        "socat"
       ],
       "transitive_openssl_formula_dependents": []
     },
@@ -26960,35 +26811,6 @@
       "transitive_openssl_formula_dependents": []
     },
     {
-      "name": "urx",
-      "path": "Formula/u/urx.rb",
-      "openssl_dependency": "openssl@3",
-      "homepage": "https://github.com/hahwul/urx",
-      "source_url": "https://github.com/hahwul/urx/archive/refs/tags/0.9.0.tar.gz",
-      "upstream_provider": "github",
-      "upstream_repo": "hahwul/urx",
-      "depth": null,
-      "target_branch": "main",
-      "staging_required_by": [],
-      "dependencies": [
-        "pkgconf",
-        "rust",
-        "openssl@3"
-      ],
-      "openssl_formula_dependencies": [
-        "rust"
-      ],
-      "openssl_formula_dependents": [],
-      "transitive_openssl_formula_dependencies": [
-        "cmake",
-        "libgit2",
-        "libssh2",
-        "python@3.14",
-        "rust"
-      ],
-      "transitive_openssl_formula_dependents": []
-    },
-    {
       "name": "uuu",
       "path": "Formula/u/uuu.rb",
       "openssl_dependency": "openssl@3",
@@ -27384,7 +27206,7 @@
       "path": "Formula/w/wangle.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/facebook/wangle",
-      "source_url": "https://github.com/facebook/wangle/archive/refs/tags/v2026.05.04.00.tar.gz",
+      "source_url": "https://github.com/facebook/wangle/archive/refs/tags/v2026.05.11.00.tar.gz",
       "head_url": "https://github.com/facebook/wangle.git",
       "upstream_provider": "github",
       "upstream_repo": "facebook/wangle",
@@ -27460,7 +27282,7 @@
       "path": "Formula/w/watchman.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/facebook/watchman",
-      "source_url": "https://github.com/facebook/watchman/archive/refs/tags/v2026.05.04.00.tar.gz",
+      "source_url": "https://github.com/facebook/watchman/archive/refs/tags/v2026.05.11.00.tar.gz",
       "head_url": "https://github.com/facebook/watchman.git",
       "upstream_provider": "github",
       "upstream_repo": "facebook/watchman",
@@ -27545,7 +27367,7 @@
       "path": "Formula/w/weave.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/Ataraxy-Labs/weave",
-      "source_url": "https://github.com/Ataraxy-Labs/weave/archive/refs/tags/v0.3.2.tar.gz",
+      "source_url": "https://github.com/Ataraxy-Labs/weave/archive/refs/tags/v0.3.3.tar.gz",
       "head_url": "https://github.com/Ataraxy-Labs/weave.git",
       "upstream_provider": "github",
       "upstream_repo": "Ataraxy-Labs/weave",
@@ -27671,48 +27493,6 @@
       "transitive_openssl_formula_dependents": []
     },
     {
-      "name": "wownero",
-      "path": "Formula/w/wownero.rb",
-      "openssl_dependency": "openssl@3",
-      "homepage": "https://wownero.org",
-      "source_url": "https://codeberg.org/wownero/wownero.git",
-      "upstream_provider": "other",
-      "depth": null,
-      "target_branch": "main",
-      "staging_required_by": [],
-      "dependencies": [
-        "cmake",
-        "miniupnpc",
-        "pkgconf",
-        "boost@1.85",
-        "hidapi",
-        "libsodium",
-        "libusb",
-        "openssl@3",
-        "protobuf@21",
-        "readline",
-        "unbound",
-        "zeromq"
-      ],
-      "openssl_formula_dependencies": [
-        "cmake",
-        "unbound"
-      ],
-      "openssl_formula_dependents": [],
-      "transitive_openssl_formula_dependencies": [
-        "cmake",
-        "krb5",
-        "libevent",
-        "python@3.12",
-        "python@3.13",
-        "python@3.14",
-        "systemd",
-        "unbound",
-        "wget"
-      ],
-      "transitive_openssl_formula_dependents": []
-    },
-    {
       "name": "wrk",
       "path": "Formula/w/wrk.rb",
       "openssl_dependency": "openssl@4",
@@ -27731,36 +27511,6 @@
       "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [],
-      "transitive_openssl_formula_dependents": []
-    },
-    {
-      "name": "wrkflw",
-      "path": "Formula/w/wrkflw.rb",
-      "openssl_dependency": "openssl@3",
-      "homepage": "https://github.com/bahdotsh/wrkflw",
-      "source_url": "https://github.com/bahdotsh/wrkflw/archive/refs/tags/v0.8.0.tar.gz",
-      "head_url": "https://github.com/bahdotsh/wrkflw.git",
-      "upstream_provider": "github",
-      "upstream_repo": "bahdotsh/wrkflw",
-      "depth": null,
-      "target_branch": "main",
-      "staging_required_by": [],
-      "dependencies": [
-        "pkgconf",
-        "rust",
-        "openssl@3"
-      ],
-      "openssl_formula_dependencies": [
-        "rust"
-      ],
-      "openssl_formula_dependents": [],
-      "transitive_openssl_formula_dependencies": [
-        "cmake",
-        "libgit2",
-        "libssh2",
-        "python@3.14",
-        "rust"
-      ],
       "transitive_openssl_formula_dependents": []
     },
     {
@@ -27858,7 +27608,7 @@
     {
       "name": "x11vnc",
       "path": "Formula/x/x11vnc.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/LibVNC/x11vnc",
       "source_url": "https://github.com/LibVNC/x11vnc/archive/refs/tags/0.9.17.tar.gz",
       "head_url": "https://github.com/LibVNC/x11vnc.git",
@@ -27872,7 +27622,7 @@
         "automake",
         "pkgconf",
         "libvncserver",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [
         "libvncserver"
@@ -27914,7 +27664,7 @@
     {
       "name": "xaric",
       "path": "Formula/x/xaric.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://xaric.org/",
       "source_url": "https://xaric.org/software/xaric/releases/xaric-0.13.9.tar.gz",
       "upstream_provider": "other",
@@ -27922,7 +27672,7 @@
       "target_branch": "main",
       "staging_required_by": [],
       "dependencies": [
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [],

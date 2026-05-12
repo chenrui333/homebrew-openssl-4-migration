@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-11T07:33:56Z",
+  "generated_at": "2026-05-12T07:16:44Z",
   "repository": "Homebrew/homebrew-core",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "target_branch": "openssl-4-migration-staging",
@@ -20,7 +20,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 666,
+      "impact_count": 660,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -55,7 +55,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 484,
+      "impact_count": 478,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 280846,
@@ -92,7 +92,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 306,
+      "impact_count": 301,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -132,7 +132,7 @@
       "live_status": "DONE",
       "depth": null,
       "group_label": "Staging closure",
-      "impact_count": 283,
+      "impact_count": 278,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -172,7 +172,7 @@
       "live_status": "PENDING",
       "depth": 1,
       "group_label": "Batch 1",
-      "impact_count": 281,
+      "impact_count": 276,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 280863,
@@ -217,7 +217,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 133,
+      "impact_count": 131,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -252,7 +252,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 103,
+      "impact_count": 102,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -287,7 +287,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 80,
+      "impact_count": 79,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 280845,
@@ -295,7 +295,7 @@
         "base": "openssl-4-migration-staging",
         "is_draft": true,
         "merge_state": "UNSTABLE",
-        "updated_at": "2026-05-11T03:00:51Z"
+        "updated_at": "2026-05-12T05:42:45Z"
       },
       "readiness": [
         "draft",
@@ -324,7 +324,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 78,
+      "impact_count": 76,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -364,7 +364,7 @@
       "live_status": "PENDING",
       "depth": 1,
       "group_label": "Batch 1",
-      "impact_count": 72,
+      "impact_count": 71,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 280864,
@@ -402,46 +402,6 @@
       }
     },
     {
-      "name": "unbound",
-      "live_status": "DONE",
-      "depth": 1,
-      "group_label": "Batch 1",
-      "impact_count": 34,
-      "target_branch": "openssl-4-migration-staging",
-      "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
-      },
-      "readiness": [
-        "done"
-      ],
-      "next_action": "Done",
-      "upstream": {
-        "provider": "github",
-        "repo": "NLnetLabs/unbound",
-        "url": "https://github.com/NLnetLabs/unbound"
-      },
-      "issues": [
-        {
-          "label": "search",
-          "url": "https://github.com/search?q=repo%3ANLnetLabs%2Funbound+%22OpenSSL+4%22\u0026type=issues"
-        }
-      ],
-      "flags": {
-        "current_gate": false,
-        "ready": false,
-        "draft": false,
-        "ci_blocked": false,
-        "base_mismatch": false,
-        "missing_pr": false,
-        "upstream_blocked": false
-      }
-    },
-    {
       "name": "libngtcp2",
       "live_status": "DONE",
       "depth": null,
@@ -469,6 +429,46 @@
         {
           "label": "search",
           "url": "https://github.com/search?q=repo%3Angtcp2%2Fngtcp2+%22OpenSSL+4%22\u0026type=issues"
+        }
+      ],
+      "flags": {
+        "current_gate": false,
+        "ready": false,
+        "draft": false,
+        "ci_blocked": false,
+        "base_mismatch": false,
+        "missing_pr": false,
+        "upstream_blocked": false
+      }
+    },
+    {
+      "name": "unbound",
+      "live_status": "DONE",
+      "depth": 1,
+      "group_label": "Batch 1",
+      "impact_count": 32,
+      "target_branch": "openssl-4-migration-staging",
+      "pr": {
+        "number": 0,
+        "url": "",
+        "base": "",
+        "is_draft": false,
+        "merge_state": "",
+        "updated_at": ""
+      },
+      "readiness": [
+        "done"
+      ],
+      "next_action": "Done",
+      "upstream": {
+        "provider": "github",
+        "repo": "NLnetLabs/unbound",
+        "url": "https://github.com/NLnetLabs/unbound"
+      },
+      "issues": [
+        {
+          "label": "search",
+          "url": "https://github.com/search?q=repo%3ANLnetLabs%2Funbound+%22OpenSSL+4%22\u0026type=issues"
         }
       ],
       "flags": {
@@ -1238,41 +1238,6 @@
       }
     },
     {
-      "name": "python@3.12",
-      "live_status": "DONE",
-      "depth": 0,
-      "group_label": "Batch 0 — Roots",
-      "impact_count": 6,
-      "target_branch": "openssl-4-migration-staging",
-      "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
-      },
-      "readiness": [
-        "done"
-      ],
-      "next_action": "Done",
-      "upstream": {
-        "provider": "python",
-        "repo": "",
-        "url": ""
-      },
-      "issues": [],
-      "flags": {
-        "current_gate": true,
-        "ready": false,
-        "draft": false,
-        "ci_blocked": false,
-        "base_mismatch": false,
-        "missing_pr": false,
-        "upstream_blocked": false
-      }
-    },
-    {
       "name": "rtmpdump",
       "live_status": "DONE",
       "depth": null,
@@ -1572,6 +1537,41 @@
           "url": "https://github.com/search?q=repo%3Amariadb-corporation%2Fmariadb-connector-c+%22OpenSSL+4%22\u0026type=issues"
         }
       ],
+      "flags": {
+        "current_gate": true,
+        "ready": false,
+        "draft": false,
+        "ci_blocked": false,
+        "base_mismatch": false,
+        "missing_pr": false,
+        "upstream_blocked": false
+      }
+    },
+    {
+      "name": "python@3.12",
+      "live_status": "DONE",
+      "depth": 0,
+      "group_label": "Batch 0 — Roots",
+      "impact_count": 5,
+      "target_branch": "openssl-4-migration-staging",
+      "pr": {
+        "number": 0,
+        "url": "",
+        "base": "",
+        "is_draft": false,
+        "merge_state": "",
+        "updated_at": ""
+      },
+      "readiness": [
+        "done"
+      ],
+      "next_action": "Done",
+      "upstream": {
+        "provider": "python",
+        "repo": "",
+        "url": ""
+      },
+      "issues": [],
       "flags": {
         "current_gate": true,
         "ready": false,
