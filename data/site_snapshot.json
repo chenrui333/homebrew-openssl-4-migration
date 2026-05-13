@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-12T07:16:44Z",
+  "generated_at": "2026-05-13T07:22:48Z",
   "repository": "Homebrew/homebrew-core",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "target_branch": "openssl-4-migration-staging",
@@ -20,7 +20,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 660,
+      "impact_count": 652,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -55,7 +55,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 478,
+      "impact_count": 471,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 280846,
@@ -92,7 +92,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 301,
+      "impact_count": 295,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -132,7 +132,7 @@
       "live_status": "DONE",
       "depth": null,
       "group_label": "Staging closure",
-      "impact_count": 278,
+      "impact_count": 272,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -172,7 +172,7 @@
       "live_status": "PENDING",
       "depth": 1,
       "group_label": "Batch 1",
-      "impact_count": 276,
+      "impact_count": 270,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 280863,
@@ -217,7 +217,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 131,
+      "impact_count": 129,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -364,7 +364,7 @@
       "live_status": "PENDING",
       "depth": 1,
       "group_label": "Batch 1",
-      "impact_count": 71,
+      "impact_count": 70,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 280864,
@@ -406,7 +406,7 @@
       "live_status": "DONE",
       "depth": null,
       "group_label": "Staging closure",
-      "impact_count": 33,
+      "impact_count": 32,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -841,51 +841,6 @@
       }
     },
     {
-      "name": "libfido2",
-      "live_status": "PENDING",
-      "depth": 0,
-      "group_label": "Batch 0 — Roots",
-      "impact_count": 10,
-      "target_branch": "openssl-4-migration-staging",
-      "pr": {
-        "number": 280836,
-        "url": "https://github.com/Homebrew/homebrew-core/pull/280836",
-        "base": "openssl-4-migration-staging",
-        "is_draft": true,
-        "merge_state": "UNSTABLE",
-        "updated_at": "2026-05-05T14:08:32Z"
-      },
-      "readiness": [
-        "draft",
-        "checks-blocked",
-        "merge-unstable"
-      ],
-      "next_action": "Resolve draft blockers",
-      "upstream": {
-        "provider": "github",
-        "repo": "Yubico/libfido2",
-        "url": "https://github.com/Yubico/libfido2"
-      },
-      "issues": [
-        {
-          "label": "issues#966",
-          "state": "closed",
-          "status": "reference",
-          "title": "Fix library build with OpenSSL 4.x",
-          "url": "https://github.com/Yubico/libfido2/issues/966"
-        }
-      ],
-      "flags": {
-        "current_gate": true,
-        "ready": false,
-        "draft": true,
-        "ci_blocked": true,
-        "base_mismatch": false,
-        "missing_pr": false,
-        "upstream_blocked": false
-      }
-    },
-    {
       "name": "libzip",
       "live_status": "DONE",
       "depth": null,
@@ -993,6 +948,51 @@
       }
     },
     {
+      "name": "libfido2",
+      "live_status": "PENDING",
+      "depth": 0,
+      "group_label": "Batch 0 — Roots",
+      "impact_count": 9,
+      "target_branch": "openssl-4-migration-staging",
+      "pr": {
+        "number": 280836,
+        "url": "https://github.com/Homebrew/homebrew-core/pull/280836",
+        "base": "openssl-4-migration-staging",
+        "is_draft": true,
+        "merge_state": "UNSTABLE",
+        "updated_at": "2026-05-05T14:08:32Z"
+      },
+      "readiness": [
+        "draft",
+        "checks-blocked",
+        "merge-unstable"
+      ],
+      "next_action": "Resolve draft blockers",
+      "upstream": {
+        "provider": "github",
+        "repo": "Yubico/libfido2",
+        "url": "https://github.com/Yubico/libfido2"
+      },
+      "issues": [
+        {
+          "label": "issues#966",
+          "state": "closed",
+          "status": "reference",
+          "title": "Fix library build with OpenSSL 4.x",
+          "url": "https://github.com/Yubico/libfido2/issues/966"
+        }
+      ],
+      "flags": {
+        "current_gate": true,
+        "ready": false,
+        "draft": true,
+        "ci_blocked": true,
+        "base_mismatch": false,
+        "missing_pr": false,
+        "upstream_blocked": false
+      }
+    },
+    {
       "name": "httpd",
       "live_status": "DONE",
       "depth": 1,
@@ -1022,51 +1022,6 @@
         "ready": false,
         "draft": false,
         "ci_blocked": false,
-        "base_mismatch": false,
-        "missing_pr": false,
-        "upstream_blocked": false
-      }
-    },
-    {
-      "name": "node",
-      "live_status": "PENDING",
-      "depth": 1,
-      "group_label": "Batch 1",
-      "impact_count": 8,
-      "target_branch": "openssl-4-migration-staging",
-      "pr": {
-        "number": 280858,
-        "url": "https://github.com/Homebrew/homebrew-core/pull/280858",
-        "base": "openssl-4-migration-staging",
-        "is_draft": true,
-        "merge_state": "UNSTABLE",
-        "updated_at": "2026-05-05T03:20:13Z"
-      },
-      "readiness": [
-        "draft",
-        "checks-blocked",
-        "merge-unstable"
-      ],
-      "next_action": "Resolve draft blockers",
-      "upstream": {
-        "provider": "github",
-        "repo": "nodejs/node",
-        "url": "https://github.com/nodejs/node"
-      },
-      "issues": [
-        {
-          "label": "issues#62817",
-          "state": "closed",
-          "status": "reference",
-          "title": "[openssl-4.0.0] - failing tests",
-          "url": "https://github.com/nodejs/node/issues/62817"
-        }
-      ],
-      "flags": {
-        "current_gate": false,
-        "ready": false,
-        "draft": true,
-        "ci_blocked": true,
         "base_mismatch": false,
         "missing_pr": false,
         "upstream_blocked": false
@@ -1187,6 +1142,51 @@
         "ready": false,
         "draft": false,
         "ci_blocked": false,
+        "base_mismatch": false,
+        "missing_pr": false,
+        "upstream_blocked": false
+      }
+    },
+    {
+      "name": "node",
+      "live_status": "PENDING",
+      "depth": 1,
+      "group_label": "Batch 1",
+      "impact_count": 7,
+      "target_branch": "openssl-4-migration-staging",
+      "pr": {
+        "number": 280858,
+        "url": "https://github.com/Homebrew/homebrew-core/pull/280858",
+        "base": "openssl-4-migration-staging",
+        "is_draft": true,
+        "merge_state": "UNSTABLE",
+        "updated_at": "2026-05-05T03:20:13Z"
+      },
+      "readiness": [
+        "draft",
+        "checks-blocked",
+        "merge-unstable"
+      ],
+      "next_action": "Resolve draft blockers",
+      "upstream": {
+        "provider": "github",
+        "repo": "nodejs/node",
+        "url": "https://github.com/nodejs/node"
+      },
+      "issues": [
+        {
+          "label": "issues#62817",
+          "state": "closed",
+          "status": "reference",
+          "title": "[openssl-4.0.0] - failing tests",
+          "url": "https://github.com/nodejs/node/issues/62817"
+        }
+      ],
+      "flags": {
+        "current_gate": false,
+        "ready": false,
+        "draft": true,
+        "ci_blocked": true,
         "base_mismatch": false,
         "missing_pr": false,
         "upstream_blocked": false

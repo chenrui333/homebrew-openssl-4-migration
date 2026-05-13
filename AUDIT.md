@@ -1,4 +1,4 @@
-# OpenSSL 4 Migration Audit (2026-05-12)
+# OpenSSL 4 Migration Audit (2026-05-13)
 
 Tracking issue: Homebrew/homebrew-core#278366
 
@@ -26,17 +26,17 @@ Pending staged formulae are sorted by transitive dependent count.
 
 | Formula | Target | Depth | Impact | Status | PR | Readiness | Upstream | Issues |
 |---|---|---:|---:|---|---|---|---|---|
-| python@3.14 | openssl-4-migration-staging | 0 | 478 | PENDING | #280846 | draft, checks-blocked, merge-unstable | python |  |
-| rust | openssl-4-migration-staging | 1 | 276 | PENDING | #280863 | draft, checks-blocked, merge-unstable | github:rust-lang/rust | [issues#155397](https://github.com/rust-lang/rust/issues/155397) open |
+| python@3.14 | openssl-4-migration-staging | 0 | 471 | PENDING | #280846 | draft, checks-blocked, merge-unstable | python |  |
+| rust | openssl-4-migration-staging | 1 | 270 | PENDING | #280863 | draft, checks-blocked, merge-unstable | github:rust-lang/rust | [issues#155397](https://github.com/rust-lang/rust/issues/155397) open |
 | python@3.13 | openssl-4-migration-staging | 0 | 79 | PENDING | #280845 | draft, checks-blocked, merge-unstable | python |  |
-| systemd | openssl-4-migration-staging | 1 | 71 | PENDING | #280864 | draft, checks-blocked, merge-unstable | github:systemd/systemd |  |
+| systemd | openssl-4-migration-staging | 1 | 70 | PENDING | #280864 | draft, checks-blocked, merge-unstable | github:systemd/systemd |  |
 | cargo-c | openssl-4-migration-staging | 2 | 25 | PENDING | #280867 | draft, checks-blocked, merge-unstable | github:lu-zero/cargo-c |  |
 | pulseaudio | openssl-4-migration-staging | 1 | 21 | PENDING | #280861 | draft, checks-blocked, merge-unstable | gitlab:gitlab.freedesktop.org/pulseaudio/pulseaudio |  |
 | cryptography | openssl-4-migration-staging | 2 | 15 | PENDING | #280868 | draft, checks-blocked, merge-unstable | github:pyca/cryptography | [issues#14656](https://github.com/pyca/cryptography/issues/14656) closed |
 | grpc | openssl-4-migration-staging | 0 | 11 | PENDING | #280832 | draft, checks-blocked, merge-unstable | github:grpc/grpc | [issues#42020](https://github.com/grpc/grpc/issues/42020) open |
-| libfido2 | openssl-4-migration-staging | 0 | 10 | PENDING | #280836 | draft, checks-blocked, merge-unstable | github:Yubico/libfido2 | [issues#966](https://github.com/Yubico/libfido2/issues/966) closed |
 | qtbase | openssl-4-migration-staging | 1 | 10 | PENDING | #280862 | draft, checks-blocked, merge-unstable | qt |  |
-| node | openssl-4-migration-staging | 1 | 8 | PENDING | #280858 | draft, checks-blocked, merge-unstable | github:nodejs/node | [issues#62817](https://github.com/nodejs/node/issues/62817) closed |
+| libfido2 | openssl-4-migration-staging | 0 | 9 | PENDING | #280836 | draft, checks-blocked, merge-unstable | github:Yubico/libfido2 | [issues#966](https://github.com/Yubico/libfido2/issues/966) closed |
+| node | openssl-4-migration-staging | 1 | 7 | PENDING | #280858 | draft, checks-blocked, merge-unstable | github:nodejs/node | [issues#62817](https://github.com/nodejs/node/issues/62817) closed |
 | s2n | openssl-4-migration-staging | closure | 7 | PENDING | #280912 | draft, checks-blocked, merge-unstable | github:aws/s2n-tls | [issues#5783](https://github.com/aws/s2n-tls/issues/5783) open |
 | thrift | openssl-4-migration-staging | closure | 5 | PENDING | #280913 | draft, checks-blocked, merge-unstable | github:apache/thrift |  |
 | apache-arrow | openssl-4-migration-staging | 1 | 4 | PENDING | #280851 | draft, checks-blocked, merge-unstable | github:apache/arrow |  |
@@ -51,9 +51,9 @@ Top 20 pending staged formulae with upstream metadata and no curated upstream is
 
 | Formula | Depth | Impact | Upstream | Search | Readiness |
 |---|---:|---:|---|---|---|
-| python@3.14 | 0 | 478 | python |  | draft, checks-blocked, merge-unstable |
+| python@3.14 | 0 | 471 | python |  | draft, checks-blocked, merge-unstable |
 | python@3.13 | 0 | 79 | python |  | draft, checks-blocked, merge-unstable |
-| systemd | 1 | 71 | github:systemd/systemd | [issues](https://github.com/search?q=repo%3Asystemd%2Fsystemd+%22OpenSSL+4%22&type=issues) | draft, checks-blocked, merge-unstable |
+| systemd | 1 | 70 | github:systemd/systemd | [issues](https://github.com/search?q=repo%3Asystemd%2Fsystemd+%22OpenSSL+4%22&type=issues) | draft, checks-blocked, merge-unstable |
 | cargo-c | 2 | 25 | github:lu-zero/cargo-c | [issues](https://github.com/search?q=repo%3Alu-zero%2Fcargo-c+%22OpenSSL+4%22&type=issues) | draft, checks-blocked, merge-unstable |
 | pulseaudio | 1 | 21 | gitlab:gitlab.freedesktop.org/pulseaudio/pulseaudio |  | draft, checks-blocked, merge-unstable |
 | qtbase | 1 | 10 | qt |  | draft, checks-blocked, merge-unstable |
