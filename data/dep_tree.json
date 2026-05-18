@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-17T07:15:30Z",
+  "generated_at": "2026-05-18T07:44:50Z",
   "repository": "Homebrew/homebrew-core",
-  "git_head": "5ea3df7d202060aa30beacc75c9587eb912fbd26",
+  "git_head": "c0fcbba12454a2b71713e6eb0a488743e007ee9e",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "staging_branch": "openssl-4-migration-staging",
   "staged_depths": {
@@ -60,7 +60,7 @@
       "gstreamer"
     ]
   },
-  "formula_count": 745,
+  "formula_count": 744,
   "formulae": [
     {
       "name": "apr-util",
@@ -719,7 +719,6 @@
         "llgo",
         "localstack",
         "luvit",
-        "lychee",
         "lynx",
         "magika",
         "mago",
@@ -1875,7 +1874,6 @@
         "licensed",
         "lighthouse",
         "localstack",
-        "lychee",
         "magika",
         "mago",
         "mailcatcher",
@@ -2659,7 +2657,6 @@
         "llgo",
         "localstack",
         "luvit",
-        "lychee",
         "magika",
         "mago",
         "mailcatcher",
@@ -3850,7 +3847,7 @@
       "path": "Formula/q/qtbase.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://www.qt.io/",
-      "source_url": "https://download.qt.io/official_releases/qt/6.11/6.11.0/submodules/qtbase-everywhere-src-6.11.0.tar.xz",
+      "source_url": "https://download.qt.io/official_releases/qt/6.11/6.11.1/submodules/qtbase-everywhere-src-6.11.1.tar.xz",
       "head_url": "https://code.qt.io/qt/qtbase.git",
       "upstream_provider": "qt",
       "depth": 1,
@@ -4072,7 +4069,6 @@
         "legba",
         "lighthouse",
         "localstack",
-        "lychee",
         "magika",
         "mago",
         "mavsdk",
@@ -4321,7 +4317,6 @@
         "licensed",
         "lighthouse",
         "localstack",
-        "lychee",
         "magika",
         "mago",
         "mailcatcher",
@@ -5420,7 +5415,6 @@
         "licensed",
         "lighthouse",
         "localstack",
-        "lychee",
         "magika",
         "mago",
         "mailcatcher",
@@ -8093,7 +8087,7 @@
       "path": "Formula/c/chawan.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://sr.ht/~bptato/chawan/",
-      "source_url": "https://git.sr.ht/~bptato/chawan/archive/v0.3.3.tar.gz",
+      "source_url": "https://git.sr.ht/~bptato/chawan/archive/v0.4.0.tar.gz",
       "head_url": "https://git.sr.ht/~bptato/chawan",
       "upstream_provider": "other",
       "depth": null,
@@ -11402,7 +11396,7 @@
       "path": "Formula/f/fnox.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://fnox.jdx.dev/",
-      "source_url": "https://github.com/jdx/fnox/archive/refs/tags/v1.25.0.tar.gz",
+      "source_url": "https://github.com/jdx/fnox/archive/refs/tags/v1.25.1.tar.gz",
       "head_url": "https://github.com/jdx/fnox.git",
       "upstream_provider": "github",
       "upstream_repo": "jdx/fnox",
@@ -16016,36 +16010,6 @@
       "transitive_openssl_formula_dependents": []
     },
     {
-      "name": "lychee",
-      "path": "Formula/l/lychee.rb",
-      "openssl_dependency": "openssl@3",
-      "homepage": "https://lychee.cli.rs/",
-      "source_url": "https://github.com/lycheeverse/lychee/archive/refs/tags/lychee-v0.24.2.tar.gz",
-      "head_url": "https://github.com/lycheeverse/lychee.git",
-      "upstream_provider": "github",
-      "upstream_repo": "lycheeverse/lychee",
-      "depth": null,
-      "target_branch": "main",
-      "staging_required_by": [],
-      "dependencies": [
-        "pkgconf",
-        "rust",
-        "openssl@3"
-      ],
-      "openssl_formula_dependencies": [
-        "rust"
-      ],
-      "openssl_formula_dependents": [],
-      "transitive_openssl_formula_dependencies": [
-        "cmake",
-        "libgit2",
-        "libssh2",
-        "python@3.14",
-        "rust"
-      ],
-      "transitive_openssl_formula_dependents": []
-    },
-    {
       "name": "lynx",
       "path": "Formula/l/lynx.rb",
       "openssl_dependency": "openssl@4",
@@ -17000,7 +16964,7 @@
       "path": "Formula/m/mise.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://mise.jdx.dev/",
-      "source_url": "https://github.com/jdx/mise/archive/refs/tags/v2026.5.10.tar.gz",
+      "source_url": "https://github.com/jdx/mise/archive/refs/tags/v2026.5.11.tar.gz",
       "head_url": "https://github.com/jdx/mise.git",
       "upstream_provider": "github",
       "upstream_repo": "jdx/mise",
@@ -17647,7 +17611,7 @@
       "path": "Formula/m/mydumper.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/mydumper/mydumper",
-      "source_url": "https://github.com/mydumper/mydumper/archive/refs/tags/v0.21.3-1.tar.gz",
+      "source_url": "https://github.com/mydumper/mydumper/archive/refs/tags/v1.0.1-1.tar.gz",
       "head_url": "https://github.com/mydumper/mydumper.git",
       "upstream_provider": "github",
       "upstream_repo": "mydumper/mydumper",
@@ -22757,7 +22721,7 @@
       "path": "Formula/r/rsql.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/theseus-rs/rsql",
-      "source_url": "https://github.com/theseus-rs/rsql/archive/refs/tags/v0.19.3.tar.gz",
+      "source_url": "https://github.com/theseus-rs/rsql/archive/refs/tags/v0.19.4.tar.gz",
       "head_url": "https://github.com/theseus-rs/rsql.git",
       "upstream_provider": "github",
       "upstream_repo": "theseus-rs/rsql",
