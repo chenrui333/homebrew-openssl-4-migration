@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-18T07:44:50Z",
+  "generated_at": "2026-05-19T07:32:01Z",
   "repository": "Homebrew/homebrew-core",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "target_branch": "openssl-4-migration-staging",
@@ -55,7 +55,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 469,
+      "impact_count": 468,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 280846,
@@ -63,7 +63,7 @@
         "base": "openssl-4-migration-staging",
         "is_draft": true,
         "merge_state": "UNSTABLE",
-        "updated_at": "2026-05-09T13:43:33Z"
+        "updated_at": "2026-05-18T12:22:10Z"
       },
       "readiness": [
         "draft",
@@ -217,7 +217,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 118,
+      "impact_count": 117,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -1508,6 +1508,41 @@
       }
     },
     {
+      "name": "libssh",
+      "live_status": "DONE",
+      "depth": 0,
+      "group_label": "Batch 0 — Roots",
+      "impact_count": 5,
+      "target_branch": "openssl-4-migration-staging",
+      "pr": {
+        "number": 0,
+        "url": "",
+        "base": "",
+        "is_draft": false,
+        "merge_state": "",
+        "updated_at": ""
+      },
+      "readiness": [
+        "done"
+      ],
+      "next_action": "Done",
+      "upstream": {
+        "provider": "other",
+        "repo": "",
+        "url": ""
+      },
+      "issues": [],
+      "flags": {
+        "current_gate": true,
+        "ready": false,
+        "draft": false,
+        "ci_blocked": false,
+        "base_mismatch": false,
+        "missing_pr": false,
+        "upstream_blocked": false
+      }
+    },
+    {
       "name": "mariadb-connector-c",
       "live_status": "DONE",
       "depth": 0,
@@ -1773,41 +1808,6 @@
         "ready": false,
         "draft": true,
         "ci_blocked": true,
-        "base_mismatch": false,
-        "missing_pr": false,
-        "upstream_blocked": false
-      }
-    },
-    {
-      "name": "libssh",
-      "live_status": "DONE",
-      "depth": 0,
-      "group_label": "Batch 0 — Roots",
-      "impact_count": 4,
-      "target_branch": "openssl-4-migration-staging",
-      "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
-      },
-      "readiness": [
-        "done"
-      ],
-      "next_action": "Done",
-      "upstream": {
-        "provider": "other",
-        "repo": "",
-        "url": ""
-      },
-      "issues": [],
-      "flags": {
-        "current_gate": true,
-        "ready": false,
-        "draft": false,
-        "ci_blocked": false,
         "base_mismatch": false,
         "missing_pr": false,
         "upstream_blocked": false
