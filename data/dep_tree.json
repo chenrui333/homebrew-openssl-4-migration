@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-21T07:36:08Z",
+  "generated_at": "2026-05-22T07:31:50Z",
   "repository": "Homebrew/homebrew-core",
-  "git_head": "9881668b7fb66f2924013bf7d1cd91390f3a1c53",
+  "git_head": "a275516112bbff26ff5c4d6a99fcf261290ade70",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "staging_branch": "openssl-4-migration-staging",
   "staged_depths": {
@@ -1125,7 +1125,6 @@
       "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "ejabberd",
-        "electric",
         "expert",
         "teslamate"
       ],
@@ -5956,7 +5955,7 @@
     {
       "name": "aircrack-ng",
       "path": "Formula/a/aircrack-ng.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://aircrack-ng.org/",
       "source_url": "https://download.aircrack-ng.org/aircrack-ng-1.7.tar.gz",
       "upstream_provider": "other",
@@ -5968,7 +5967,7 @@
         "automake",
         "libtool",
         "pkgconf",
-        "openssl@3",
+        "openssl@4",
         "pcre2",
         "sqlite",
         "zlib-ng-compat"
@@ -6041,7 +6040,7 @@
     {
       "name": "amqp-cpp",
       "path": "Formula/a/amqp-cpp.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/CopernicaMarketingSoftware/AMQP-CPP",
       "source_url": "https://github.com/CopernicaMarketingSoftware/AMQP-CPP/archive/refs/tags/v4.3.27.tar.gz",
       "head_url": "https://github.com/CopernicaMarketingSoftware/AMQP-CPP.git",
@@ -6052,7 +6051,7 @@
       "staging_required_by": [],
       "dependencies": [
         "cmake",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [
         "cmake"
@@ -6716,7 +6715,7 @@
     {
       "name": "axel",
       "path": "Formula/a/axel.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/axel-download-accelerator/axel",
       "source_url": "https://github.com/axel-download-accelerator/axel/releases/download/v2.17.14/axel-2.17.14.tar.xz",
       "head_url": "https://github.com/axel-download-accelerator/axel.git",
@@ -6732,7 +6731,7 @@
         "gettext",
         "txt2man",
         "pkgconf",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [],
@@ -7205,7 +7204,7 @@
         "gflags",
         "leveldb",
         "openssl@3",
-        "protobuf"
+        "protobuf@33"
       ],
       "openssl_formula_dependencies": [
         "cmake"
@@ -7676,7 +7675,7 @@
       "path": "Formula/c/cargo-generate.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/cargo-generate/cargo-generate",
-      "source_url": "https://github.com/cargo-generate/cargo-generate/archive/refs/tags/v0.23.9.tar.gz",
+      "source_url": "https://github.com/cargo-generate/cargo-generate/archive/refs/tags/v0.23.10.tar.gz",
       "head_url": "https://github.com/cargo-generate/cargo-generate.git",
       "upstream_provider": "github",
       "upstream_repo": "cargo-generate/cargo-generate",
@@ -9355,7 +9354,7 @@
       "path": "Formula/d/dnsdist.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://www.dnsdist.org/",
-      "source_url": "https://downloads.powerdns.com/releases/dnsdist-2.0.5.tar.xz",
+      "source_url": "https://downloads.powerdns.com/releases/dnsdist-2.0.6.tar.xz",
       "upstream_provider": "other",
       "depth": null,
       "target_branch": "main",
@@ -10172,7 +10171,7 @@
       "path": "Formula/e/electric.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://electric-sql.com",
-      "source_url": "https://github.com/electric-sql/electric/archive/refs/tags/@core/sync-service@1.6.6.tar.gz",
+      "source_url": "https://github.com/electric-sql/electric/archive/refs/tags/@core/sync-service@1.6.7.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "electric-sql/electric",
       "depth": null,
@@ -10180,17 +10179,18 @@
       "staging_required_by": [],
       "dependencies": [
         "elixir",
-        "erlang",
+        "erlang@28",
         "openssl@3",
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
-        "erlang"
+        "erlang@28"
       ],
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
         "erlang",
+        "erlang@28",
         "libgit2",
         "libssh2",
         "python@3.13",
@@ -10500,7 +10500,8 @@
       ],
       "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
-        "couchdb"
+        "couchdb",
+        "electric"
       ],
       "transitive_openssl_formula_dependencies": [
         "cmake",
@@ -10511,7 +10512,8 @@
         "rust"
       ],
       "transitive_openssl_formula_dependents": [
-        "couchdb"
+        "couchdb",
+        "electric"
       ]
     },
     {
@@ -11301,7 +11303,7 @@
       "path": "Formula/f/fluent-bit.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/fluent/fluent-bit",
-      "source_url": "https://github.com/fluent/fluent-bit/archive/refs/tags/v5.0.5.tar.gz",
+      "source_url": "https://github.com/fluent/fluent-bit/archive/refs/tags/v5.0.6.tar.gz",
       "head_url": "https://github.com/fluent/fluent-bit.git",
       "upstream_provider": "github",
       "upstream_repo": "fluent/fluent-bit",
@@ -12451,7 +12453,7 @@
       "path": "Formula/g/got.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://gameoftrees.org/",
-      "source_url": "https://gameoftrees.org/releases/portable/got-portable-0.125.tar.gz",
+      "source_url": "https://gameoftrees.org/releases/portable/got-portable-0.126.tar.gz",
       "upstream_provider": "other",
       "depth": null,
       "target_branch": "main",
@@ -12856,7 +12858,7 @@
       "path": "Formula/h/helix-db.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://helix-db.com",
-      "source_url": "https://github.com/HelixDB/helix-db/archive/refs/tags/v3.0.0.tar.gz",
+      "source_url": "https://github.com/HelixDB/helix-db/archive/refs/tags/v3.0.1.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "HelixDB/helix-db",
       "depth": null,
@@ -12920,7 +12922,7 @@
       "path": "Formula/h/hf-mount.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/huggingface/hf-mount",
-      "source_url": "https://github.com/huggingface/hf-mount/archive/refs/tags/v0.6.1.tar.gz",
+      "source_url": "https://github.com/huggingface/hf-mount/archive/refs/tags/v0.6.2.tar.gz",
       "head_url": "https://github.com/huggingface/hf-mount.git",
       "upstream_provider": "github",
       "upstream_repo": "huggingface/hf-mount",
@@ -16888,7 +16890,7 @@
       "path": "Formula/m/mise.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://mise.jdx.dev/",
-      "source_url": "https://github.com/jdx/mise/archive/refs/tags/v2026.5.12.tar.gz",
+      "source_url": "https://github.com/jdx/mise/archive/refs/tags/v2026.5.13.tar.gz",
       "head_url": "https://github.com/jdx/mise.git",
       "upstream_provider": "github",
       "upstream_repo": "jdx/mise",
@@ -17249,7 +17251,7 @@
       "path": "Formula/m/moon.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://moonrepo.dev/moon",
-      "source_url": "https://github.com/moonrepo/moon/archive/refs/tags/v2.2.4.tar.gz",
+      "source_url": "https://github.com/moonrepo/moon/archive/refs/tags/v2.2.5.tar.gz",
       "head_url": "https://github.com/moonrepo/moon.git",
       "upstream_provider": "github",
       "upstream_repo": "moonrepo/moon",
@@ -18463,7 +18465,7 @@
       "path": "Formula/n/node@24.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://nodejs.org/",
-      "source_url": "https://nodejs.org/dist/v24.15.0/node-v24.15.0.tar.xz",
+      "source_url": "https://nodejs.org/dist/v24.16.0/node-v24.16.0.tar.xz",
       "upstream_provider": "nodejs",
       "depth": null,
       "target_branch": "main",
@@ -20568,7 +20570,7 @@
       "path": "Formula/p/pixi.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://pixi.sh",
-      "source_url": "https://github.com/prefix-dev/pixi/archive/refs/tags/v0.68.1.tar.gz",
+      "source_url": "https://github.com/prefix-dev/pixi/archive/refs/tags/v0.69.0.tar.gz",
       "head_url": "https://github.com/prefix-dev/pixi.git",
       "upstream_provider": "github",
       "upstream_repo": "prefix-dev/pixi",
@@ -22022,7 +22024,7 @@
       "path": "Formula/r/recc.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://buildgrid.gitlab.io/recc",
-      "source_url": "https://gitlab.com/BuildGrid/buildbox/buildbox/-/archive/1.4.6/buildbox-1.4.6.tar.gz",
+      "source_url": "https://gitlab.com/BuildGrid/buildbox/buildbox/-/archive/1.4.7/buildbox-1.4.7.tar.gz",
       "head_url": "https://gitlab.com/BuildGrid/buildbox/buildbox.git",
       "upstream_provider": "gitlab",
       "upstream_repo": "gitlab.com/BuildGrid/buildbox/buildbox",
@@ -22406,7 +22408,7 @@
       "path": "Formula/r/root.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://root.cern",
-      "source_url": "https://root.cern/download/root_v6.38.04.source.tar.gz",
+      "source_url": "https://root.cern/download/root_v6.40.00.source.tar.gz",
       "head_url": "https://github.com/root-project/root.git",
       "upstream_provider": "github",
       "upstream_repo": "root-project/root",
@@ -23368,7 +23370,7 @@
       "path": "Formula/s/sentry-cli.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://docs.sentry.io/cli/",
-      "source_url": "https://github.com/getsentry/sentry-cli/archive/refs/tags/3.4.2.tar.gz",
+      "source_url": "https://github.com/getsentry/sentry-cli/archive/refs/tags/3.4.3.tar.gz",
       "head_url": "https://github.com/getsentry/sentry-cli.git",
       "upstream_provider": "github",
       "upstream_repo": "getsentry/sentry-cli",
@@ -24567,7 +24569,7 @@
       "path": "Formula/s/sqlx-cli.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/launchbadge/sqlx",
-      "source_url": "https://github.com/launchbadge/sqlx/archive/refs/tags/v0.8.6.tar.gz",
+      "source_url": "https://github.com/launchbadge/sqlx/archive/refs/tags/v0.9.0.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "launchbadge/sqlx",
       "depth": null,
@@ -25389,9 +25391,9 @@
       "target_branch": "main",
       "staging_required_by": [],
       "dependencies": [
-        "node",
         "elixir",
         "erlang",
+        "node",
         "openssl@3",
         "zlib-ng-compat"
       ],
@@ -25924,7 +25926,7 @@
       "path": "Formula/t/tt.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/tarantool/tt",
-      "source_url": "https://github.com/tarantool/tt/releases/download/v2.12.0/tt-2.12.0-complete.tar.gz",
+      "source_url": "https://github.com/tarantool/tt/releases/download/v2.13.0/tt-2.13.0-complete.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "tarantool/tt",
       "depth": null,
@@ -26401,7 +26403,7 @@
       "path": "Formula/v/vtcode.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/vinhnx/vtcode",
-      "source_url": "https://static.crates.io/crates/vtcode/vtcode-0.106.0.crate",
+      "source_url": "https://static.crates.io/crates/vtcode/vtcode-0.107.0.crate",
       "head_url": "https://github.com/vinhnx/vtcode.git",
       "upstream_provider": "github",
       "upstream_repo": "vinhnx/vtcode",
