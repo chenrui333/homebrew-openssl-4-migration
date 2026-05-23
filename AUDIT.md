@@ -1,4 +1,4 @@
-# OpenSSL 4 Migration Audit (2026-05-22)
+# OpenSSL 4 Migration Audit (2026-05-23)
 
 Tracking issue: Homebrew/homebrew-core#278366
 
@@ -26,8 +26,8 @@ Pending staged formulae are sorted by transitive dependent count.
 
 | Formula | Target | Depth | Impact | Status | PR | Readiness | Upstream | Issues |
 |---|---|---:|---:|---|---|---|---|---|
-| python@3.14 | openssl-4-migration-staging | 0 | 469 | PENDING | #280846 | draft, checks-blocked, merge-unstable | python |  |
-| rust | openssl-4-migration-staging | 1 | 269 | PENDING | #280863 | draft, checks-blocked, merge-unstable | github:rust-lang/rust | [issues#155397](https://github.com/rust-lang/rust/issues/155397) open |
+| python@3.14 | openssl-4-migration-staging | 0 | 470 | PENDING | #280846 | draft, checks-blocked, merge-unstable | python |  |
+| rust | openssl-4-migration-staging | 1 | 270 | PENDING | #280863 | draft, checks-blocked, merge-unstable | github:rust-lang/rust | [issues#155397](https://github.com/rust-lang/rust/issues/155397) open |
 | python@3.13 | openssl-4-migration-staging | 0 | 80 | PENDING | #280845 | draft, checks-blocked, merge-unstable | python |  |
 | systemd | openssl-4-migration-staging | 1 | 56 | PENDING | #280864 | draft, checks-blocked, merge-unstable | github:systemd/systemd |  |
 | cargo-c | openssl-4-migration-staging | 2 | 25 | PENDING | #280867 | draft, checks-blocked, merge-unstable | github:lu-zero/cargo-c |  |
@@ -51,7 +51,7 @@ Top 20 pending staged formulae with upstream metadata and no curated upstream is
 
 | Formula | Depth | Impact | Upstream | Search | Readiness |
 |---|---:|---:|---|---|---|
-| python@3.14 | 0 | 469 | python |  | draft, checks-blocked, merge-unstable |
+| python@3.14 | 0 | 470 | python |  | draft, checks-blocked, merge-unstable |
 | python@3.13 | 0 | 80 | python |  | draft, checks-blocked, merge-unstable |
 | systemd | 1 | 56 | github:systemd/systemd | [issues](https://github.com/search?q=repo%3Asystemd%2Fsystemd+%22OpenSSL+4%22&type=issues) | draft, checks-blocked, merge-unstable |
 | cargo-c | 2 | 25 | github:lu-zero/cargo-c | [issues](https://github.com/search?q=repo%3Alu-zero%2Fcargo-c+%22OpenSSL+4%22&type=issues) | draft, checks-blocked, merge-unstable |
