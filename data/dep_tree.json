@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-23T07:11:33Z",
+  "generated_at": "2026-05-24T07:23:53Z",
   "repository": "Homebrew/homebrew-core",
-  "git_head": "2428362eff092ad00eb333c37242f5692955b4c5",
+  "git_head": "0c0ddd6cbf9db57bd05bb02ed562b6415575b604",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "staging_branch": "openssl-4-migration-staging",
   "staged_depths": {
@@ -60,7 +60,7 @@
       "gstreamer"
     ]
   },
-  "formula_count": 745,
+  "formula_count": 746,
   "formulae": [
     {
       "name": "apr-util",
@@ -931,6 +931,7 @@
         "sagittarius-scheme",
         "samba",
         "sapling",
+        "satellite-tracker",
         "scamper",
         "sccache",
         "screenpipe",
@@ -1932,6 +1933,7 @@
         "s3-backer",
         "s3fs",
         "sapling",
+        "satellite-tracker",
         "sccache",
         "screenpipe",
         "scryer-prolog",
@@ -2206,7 +2208,6 @@
       ],
       "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
-        "aws-sam-cli",
         "azure-cli",
         "cryptography",
         "dotnet@6",
@@ -2349,6 +2350,7 @@
       "openssl_formula_dependents": [
         "adios2",
         "afflib",
+        "aws-sam-cli",
         "awscli",
         "awscurl",
         "barman",
@@ -2496,6 +2498,7 @@
         "dnsviz",
         "doge",
         "dotnet",
+        "dotnet@8",
         "dotnet@9",
         "dovecot",
         "drill",
@@ -2795,6 +2798,7 @@
         "s3fs",
         "samba",
         "sapling",
+        "satellite-tracker",
         "sccache",
         "screenpipe",
         "scryer-prolog",
@@ -4098,6 +4102,7 @@
         "rustup",
         "rye",
         "sapling",
+        "satellite-tracker",
         "sccache",
         "screenpipe",
         "scryer-prolog",
@@ -4365,6 +4370,7 @@
         "rustup",
         "rye",
         "sapling",
+        "satellite-tracker",
         "sccache",
         "screenpipe",
         "scryer-prolog",
@@ -5431,6 +5437,7 @@
         "rustup",
         "rye",
         "sapling",
+        "satellite-tracker",
         "sccache",
         "screenpipe",
         "scryer-prolog",
@@ -6605,8 +6612,10 @@
       "path": "Formula/a/aws-sam-cli.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://aws.amazon.com/serverless/sam/",
-      "source_url": "https://files.pythonhosted.org/packages/64/03/f6ef51cd97392664e70a5c1c46f9d75337c67c93443d699a50202881ad1f/aws_sam_cli-1.160.1.tar.gz",
-      "upstream_provider": "python",
+      "source_url": "https://files.pythonhosted.org/packages/70/fa/3c34809a6bf157b2211da06a209bb92241c5bf94565fb2a4fe4c44e6b44b/aws_sam_cli-1.161.0.tar.gz",
+      "head_url": "https://github.com/aws/aws-sam-cli.git",
+      "upstream_provider": "github",
+      "upstream_repo": "aws/aws-sam-cli",
       "depth": null,
       "target_branch": "main",
       "staging_required_by": [],
@@ -6619,13 +6628,13 @@
         "libyaml",
         "openssl@3",
         "pydantic",
-        "python@3.13",
+        "python@3.14",
         "rpds-py"
       ],
       "openssl_formula_dependencies": [
         "cmake",
         "cryptography",
-        "python@3.13"
+        "python@3.14"
       ],
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
@@ -9551,7 +9560,7 @@
       "path": "Formula/d/dotnet@8.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://dotnet.microsoft.com/",
-      "source_url": "https://github.com/dotnet/dotnet/archive/refs/tags/v8.0.125.tar.gz",
+      "source_url": "https://github.com/dotnet/dotnet/archive/refs/tags/v8.0.127.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "dotnet/dotnet",
       "depth": null,
@@ -9563,9 +9572,11 @@
         "icu4c@78",
         "openssl@3",
         "grep",
+        "llvm@20",
         "libunwind",
         "lttng-ust",
-        "zlib-ng-compat"
+        "zlib-ng-compat",
+        "llvm"
       ],
       "openssl_formula_dependencies": [
         "cmake"
@@ -9573,6 +9584,7 @@
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
+        "python@3.14",
         "wget"
       ],
       "transitive_openssl_formula_dependents": []
@@ -9582,7 +9594,7 @@
       "path": "Formula/d/dotnet@9.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://dotnet.microsoft.com/",
-      "source_url": "https://github.com/dotnet/dotnet/archive/refs/tags/v9.0.115.tar.gz",
+      "source_url": "https://github.com/dotnet/dotnet/archive/refs/tags/v9.0.117.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "dotnet/dotnet",
       "depth": null,
@@ -9596,6 +9608,7 @@
         "icu4c@78",
         "openssl@3",
         "grep",
+        "llvm@20",
         "libunwind",
         "lttng-ust",
         "zlib-ng-compat",
@@ -16029,7 +16042,7 @@
       "path": "Formula/m/mago.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/carthage-software/mago",
-      "source_url": "https://github.com/carthage-software/mago/releases/download/1.28.0/source-code.tar.gz",
+      "source_url": "https://github.com/carthage-software/mago/releases/download/1.29.0/source-code.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "carthage-software/mago",
       "depth": null,
@@ -16925,7 +16938,7 @@
       "path": "Formula/m/mise.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://mise.jdx.dev/",
-      "source_url": "https://github.com/jdx/mise/archive/refs/tags/v2026.5.14.tar.gz",
+      "source_url": "https://github.com/jdx/mise/archive/refs/tags/v2026.5.15.tar.gz",
       "head_url": "https://github.com/jdx/mise.git",
       "upstream_provider": "github",
       "upstream_repo": "jdx/mise",
@@ -18780,7 +18793,7 @@
       "path": "Formula/n/nushell.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://www.nushell.sh",
-      "source_url": "https://github.com/nushell/nushell/archive/refs/tags/0.112.2.tar.gz",
+      "source_url": "https://github.com/nushell/nushell/archive/refs/tags/0.113.0.tar.gz",
       "head_url": "https://github.com/nushell/nushell.git",
       "upstream_provider": "github",
       "upstream_repo": "nushell/nushell",
@@ -18942,7 +18955,7 @@
       "path": "Formula/o/objfw.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://objfw.nil.im/",
-      "source_url": "https://objfw.nil.im/downloads/objfw-1.5.3.tar.gz",
+      "source_url": "https://objfw.nil.im/downloads/objfw-1.5.4.tar.gz",
       "head_url": "https://git.nil.im/ObjFW/ObjFW.git",
       "upstream_provider": "other",
       "depth": null,
@@ -19523,7 +19536,7 @@
       "path": "Formula/o/oterm.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/ggozad/oterm",
-      "source_url": "https://files.pythonhosted.org/packages/b3/de/09d761e167f2bd80998dae9ec3cec937a6cc2ec46153b43a79797e1348f7/oterm-0.17.2.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/c3/1b/f62cbe2f45c64b9bca7156032a146900c44461defbe90c7adf587d45fca0/oterm-0.18.0.tar.gz",
       "upstream_provider": "python",
       "depth": null,
       "target_branch": "main",
@@ -21155,7 +21168,7 @@
       "path": "Formula/p/prowler.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://prowler.com/",
-      "source_url": "https://files.pythonhosted.org/packages/fd/87/d21271a408af858103c8fcc8f756a696f19ebbd7217a2a331365d33b2b18/prowler-5.27.1.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/5f/4b/ec01e785f372984ad181034431c106d6e23512b9fcefa613d73e496d5c96/prowler-5.28.0.tar.gz",
       "head_url": "https://github.com/prowler-cloud/prowler.git",
       "upstream_provider": "github",
       "upstream_repo": "prowler-cloud/prowler",
@@ -23159,7 +23172,7 @@
       "path": "Formula/s/sapling.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://sapling-scm.com",
-      "source_url": "https://github.com/facebook/sapling/archive/refs/tags/0.2.20260317-201835+0234c21f.tar.gz",
+      "source_url": "https://github.com/facebook/sapling/archive/refs/tags/0.2.20260522-084851+1e764c94.tar.gz",
       "head_url": "https://github.com/facebook/sapling.git",
       "upstream_provider": "github",
       "upstream_repo": "facebook/sapling",
@@ -23195,6 +23208,35 @@
         "libssh2",
         "node",
         "python@3.12",
+        "python@3.14",
+        "rust"
+      ],
+      "transitive_openssl_formula_dependents": []
+    },
+    {
+      "name": "satellite-tracker",
+      "path": "Formula/s/satellite-tracker.rb",
+      "openssl_dependency": "openssl@4",
+      "homepage": "https://github.com/ShenMian/tracker",
+      "source_url": "https://github.com/ShenMian/tracker/archive/refs/tags/v0.1.20.tar.gz",
+      "upstream_provider": "github",
+      "upstream_repo": "ShenMian/tracker",
+      "depth": null,
+      "target_branch": "main",
+      "staging_required_by": [],
+      "dependencies": [
+        "pkgconf",
+        "rust",
+        "openssl@4"
+      ],
+      "openssl_formula_dependencies": [
+        "rust"
+      ],
+      "openssl_formula_dependents": [],
+      "transitive_openssl_formula_dependencies": [
+        "cmake",
+        "libgit2",
+        "libssh2",
         "python@3.14",
         "rust"
       ],
