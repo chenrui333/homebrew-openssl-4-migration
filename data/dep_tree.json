@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-24T07:23:53Z",
+  "generated_at": "2026-05-25T07:54:55Z",
   "repository": "Homebrew/homebrew-core",
-  "git_head": "0c0ddd6cbf9db57bd05bb02ed562b6415575b604",
+  "git_head": "164d412d6c827dcdfae456882f2ca6861c919f3d",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "staging_branch": "openssl-4-migration-staging",
   "staged_depths": {
@@ -60,7 +60,7 @@
       "gstreamer"
     ]
   },
-  "formula_count": 746,
+  "formula_count": 747,
   "formulae": [
     {
       "name": "apr-util",
@@ -480,6 +480,7 @@
         "chunkah",
         "citus",
         "clamav",
+        "claws-mail",
         "click",
         "clickhouse-cpp",
         "clickhouse-odbc",
@@ -1736,6 +1737,7 @@
         "chawan",
         "chunkah",
         "clamav",
+        "claws-mail",
         "click",
         "codanna",
         "code-cli",
@@ -2229,6 +2231,7 @@
         "bbot",
         "btcli",
         "btfs",
+        "claws-mail",
         "colmap",
         "couchdb",
         "crunchy-cli",
@@ -2467,6 +2470,7 @@
         "chunkah",
         "citus",
         "clamav",
+        "claws-mail",
         "click",
         "clickhouse-odbc",
         "clipboard",
@@ -3047,6 +3051,7 @@
         "bind",
         "btcli",
         "btfs",
+        "claws-mail",
         "colmap",
         "csound",
         "curl",
@@ -4193,6 +4198,7 @@
         "ccache",
         "chunkah",
         "clamav",
+        "claws-mail",
         "click",
         "codanna",
         "code-cli",
@@ -5258,6 +5264,7 @@
         "ccache",
         "chunkah",
         "clamav",
+        "claws-mail",
         "click",
         "codanna",
         "code-cli",
@@ -6155,7 +6162,7 @@
       "path": "Formula/a/aoe.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/njbrake/agent-of-empires",
-      "source_url": "https://github.com/njbrake/agent-of-empires/archive/refs/tags/v1.8.1.tar.gz",
+      "source_url": "https://github.com/njbrake/agent-of-empires/archive/refs/tags/v1.9.0.tar.gz",
       "head_url": "https://github.com/njbrake/agent-of-empires.git",
       "upstream_provider": "github",
       "upstream_repo": "njbrake/agent-of-empires",
@@ -8006,7 +8013,7 @@
       "path": "Formula/c/chawan.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://sr.ht/~bptato/chawan/",
-      "source_url": "https://git.sr.ht/~bptato/chawan/archive/v0.4.0.tar.gz",
+      "source_url": "https://git.sr.ht/~bptato/chawan/archive/v0.4.1.tar.gz",
       "head_url": "https://git.sr.ht/~bptato/chawan",
       "upstream_provider": "other",
       "depth": null,
@@ -8132,6 +8139,50 @@
         "python@3.14",
         "rust",
         "yara"
+      ],
+      "transitive_openssl_formula_dependents": []
+    },
+    {
+      "name": "claws-mail",
+      "path": "Formula/c/claws-mail.rb",
+      "openssl_dependency": "openssl@3",
+      "homepage": "https://www.claws-mail.org/",
+      "source_url": "https://www.claws-mail.org/releases/claws-mail-4.4.0.tar.gz",
+      "upstream_provider": "other",
+      "depth": null,
+      "target_branch": "main",
+      "staging_required_by": [],
+      "dependencies": [
+        "pkgconf",
+        "cairo",
+        "gdk-pixbuf",
+        "glib",
+        "gnutls",
+        "gtk+3",
+        "libetpan",
+        "nettle",
+        "openssl@3",
+        "pango",
+        "at-spi2-core",
+        "gettext",
+        "harfbuzz",
+        "libice",
+        "libsm",
+        "zlib-ng-compat"
+      ],
+      "openssl_formula_dependencies": [
+        "libetpan"
+      ],
+      "openssl_formula_dependents": [],
+      "transitive_openssl_formula_dependencies": [
+        "cmake",
+        "libetpan",
+        "libgit2",
+        "libssh2",
+        "python@3.13",
+        "python@3.14",
+        "rust",
+        "wget"
       ],
       "transitive_openssl_formula_dependents": []
     },
@@ -8610,7 +8661,7 @@
       "path": "Formula/c/coturn.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/coturn/coturn",
-      "source_url": "https://github.com/coturn/coturn/archive/refs/tags/4.11.0.tar.gz",
+      "source_url": "https://github.com/coturn/coturn/archive/refs/tags/4.12.0.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "coturn/coturn",
       "depth": null,
@@ -8712,7 +8763,7 @@
       "path": "Formula/c/cpp-httplib.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/yhirose/cpp-httplib",
-      "source_url": "https://github.com/yhirose/cpp-httplib/archive/refs/tags/v0.45.0.tar.gz",
+      "source_url": "https://github.com/yhirose/cpp-httplib/archive/refs/tags/v0.45.1.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "yhirose/cpp-httplib",
       "depth": null,
@@ -14061,7 +14112,7 @@
       "path": "Formula/k/keeper-commander.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://docs.keeper.io/en/privileged-access-manager/commander-cli/overview",
-      "source_url": "https://files.pythonhosted.org/packages/e9/45/b62ea250bcd25c020ce4e4e917856cf5344084b509530f6f0beaa2358602/keepercommander-18.0.2.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/e7/13/c9839da01b16e288e4444b39fee5677d1d00dccb59859b5bd1009a0980a8/keepercommander-18.0.3.tar.gz",
       "head_url": "https://github.com/Keeper-Security/Commander.git",
       "upstream_provider": "github",
       "upstream_repo": "Keeper-Security/Commander",
@@ -14796,7 +14847,7 @@
       "path": "Formula/lib/libetpan.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://www.etpan.org/libetpan.html",
-      "source_url": "https://github.com/dinhvh/libetpan/archive/refs/tags/1.9.4.tar.gz",
+      "source_url": "https://github.com/dinhvh/libetpan/archive/refs/tags/1.10.tar.gz",
       "head_url": "https://github.com/dinhvh/libetpan.git",
       "upstream_provider": "github",
       "upstream_repo": "dinhvh/libetpan",
@@ -14812,11 +14863,15 @@
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [],
-      "openssl_formula_dependents": [],
+      "openssl_formula_dependents": [
+        "claws-mail"
+      ],
       "transitive_openssl_formula_dependencies": [
         "cmake"
       ],
-      "transitive_openssl_formula_dependents": []
+      "transitive_openssl_formula_dependents": [
+        "claws-mail"
+      ]
     },
     {
       "name": "libewf",
@@ -15361,7 +15416,7 @@
       "path": "Formula/lib/librealsense.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/IntelRealSense/librealsense",
-      "source_url": "https://github.com/IntelRealSense/librealsense/archive/refs/tags/v2.57.7.tar.gz",
+      "source_url": "https://github.com/IntelRealSense/librealsense/archive/refs/tags/v2.58.1.tar.gz",
       "head_url": "https://github.com/IntelRealSense/librealsense.git",
       "upstream_provider": "github",
       "upstream_repo": "IntelRealSense/librealsense",
@@ -18559,7 +18614,7 @@
       "path": "Formula/n/noir.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://owasp.org/www-project-noir/",
-      "source_url": "https://github.com/owasp-noir/noir/archive/refs/tags/v0.30.0.tar.gz",
+      "source_url": "https://github.com/owasp-noir/noir/archive/refs/tags/v1.0.0.tar.gz",
       "head_url": "https://github.com/owasp-noir/noir.git",
       "upstream_provider": "github",
       "upstream_repo": "owasp-noir/noir",
@@ -21213,7 +21268,7 @@
       "path": "Formula/p/proxelar.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/emanuele-em/proxelar",
-      "source_url": "https://github.com/emanuele-em/proxelar/archive/refs/tags/v0.4.4.tar.gz",
+      "source_url": "https://github.com/emanuele-em/proxelar/archive/refs/tags/v0.4.5.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "emanuele-em/proxelar",
       "depth": null,
