@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-25T07:54:55Z",
+  "generated_at": "2026-05-26T07:31:29Z",
   "repository": "Homebrew/homebrew-core",
-  "git_head": "164d412d6c827dcdfae456882f2ca6861c919f3d",
+  "git_head": "bc3642b346d015033f5ef7a41cdc75194a1fee22",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "staging_branch": "openssl-4-migration-staging",
   "staged_depths": {
@@ -60,7 +60,7 @@
       "gstreamer"
     ]
   },
-  "formula_count": 747,
+  "formula_count": 746,
   "formulae": [
     {
       "name": "apr-util",
@@ -514,7 +514,6 @@
         "datadog-static-analyzer",
         "davix",
         "dcmtk",
-        "ddclient",
         "deadfinder",
         "dezoomify-rs",
         "dillo",
@@ -3431,7 +3430,7 @@
       "path": "Formula/f/folly.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/facebook/folly",
-      "source_url": "https://github.com/facebook/folly/archive/refs/tags/v2026.05.18.00.tar.gz",
+      "source_url": "https://github.com/facebook/folly/archive/refs/tags/v2026.05.25.00.tar.gz",
       "head_url": "https://github.com/facebook/folly.git",
       "upstream_provider": "github",
       "upstream_repo": "facebook/folly",
@@ -4975,7 +4974,6 @@
         "gettext",
         "gobject-introspection",
         "meson",
-        "nasm",
         "ninja",
         "pkgconf",
         "rust",
@@ -5050,7 +5048,8 @@
         "mesa",
         "pulseaudio",
         "wayland",
-        "zlib-ng-compat"
+        "zlib-ng-compat",
+        "nasm"
       ],
       "openssl_formula_dependencies": [
         "cargo-c",
@@ -7791,7 +7790,7 @@
       "path": "Formula/c/cargo-public-api.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/cargo-public-api/cargo-public-api",
-      "source_url": "https://github.com/cargo-public-api/cargo-public-api/archive/refs/tags/v0.51.0.tar.gz",
+      "source_url": "https://github.com/cargo-public-api/cargo-public-api/archive/refs/tags/v0.52.0.tar.gz",
       "head_url": "https://github.com/cargo-public-api/cargo-public-api.git",
       "upstream_provider": "github",
       "upstream_repo": "cargo-public-api/cargo-public-api",
@@ -8763,7 +8762,7 @@
       "path": "Formula/c/cpp-httplib.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/yhirose/cpp-httplib",
-      "source_url": "https://github.com/yhirose/cpp-httplib/archive/refs/tags/v0.45.1.tar.gz",
+      "source_url": "https://github.com/yhirose/cpp-httplib/archive/refs/tags/v0.46.0.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "yhirose/cpp-httplib",
       "depth": null,
@@ -9264,31 +9263,6 @@
       "transitive_openssl_formula_dependencies": [
         "cmake",
         "python@3.14"
-      ],
-      "transitive_openssl_formula_dependents": []
-    },
-    {
-      "name": "ddclient",
-      "path": "Formula/d/ddclient.rb",
-      "openssl_dependency": "openssl@3",
-      "homepage": "https://ddclient.net/",
-      "source_url": "https://github.com/ddclient/ddclient/archive/refs/tags/v4.0.0.tar.gz",
-      "head_url": "https://github.com/ddclient/ddclient.git",
-      "upstream_provider": "github",
-      "upstream_repo": "ddclient/ddclient",
-      "depth": null,
-      "target_branch": "main",
-      "staging_required_by": [],
-      "dependencies": [
-        "autoconf",
-        "automake",
-        "openssl@3",
-        "zlib-ng-compat"
-      ],
-      "openssl_formula_dependencies": [],
-      "openssl_formula_dependents": [],
-      "transitive_openssl_formula_dependencies": [
-        "cmake"
       ],
       "transitive_openssl_formula_dependents": []
     },
@@ -10270,7 +10244,7 @@
       "path": "Formula/e/electric.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://electric-sql.com",
-      "source_url": "https://github.com/electric-sql/electric/archive/refs/tags/@core/sync-service@1.6.7.tar.gz",
+      "source_url": "https://github.com/electric-sql/electric/archive/refs/tags/@core/sync-service@1.6.8.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "electric-sql/electric",
       "depth": null,
@@ -10958,7 +10932,7 @@
       "path": "Formula/f/fbthrift.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/facebook/fbthrift",
-      "source_url": "https://github.com/facebook/fbthrift/archive/refs/tags/v2026.05.18.00.tar.gz",
+      "source_url": "https://github.com/facebook/fbthrift/archive/refs/tags/v2026.05.25.00.tar.gz",
       "head_url": "https://github.com/facebook/fbthrift.git",
       "upstream_provider": "github",
       "upstream_repo": "facebook/fbthrift",
@@ -11011,7 +10985,7 @@
       "path": "Formula/f/feluda.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/anistark/feluda",
-      "source_url": "https://github.com/anistark/feluda/archive/refs/tags/v1.12.0.tar.gz",
+      "source_url": "https://github.com/anistark/feluda/archive/refs/tags/v1.13.0.tar.gz",
       "head_url": "https://github.com/anistark/feluda.git",
       "upstream_provider": "github",
       "upstream_repo": "anistark/feluda",
@@ -11264,7 +11238,7 @@
       "path": "Formula/f/fizz.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/facebookincubator/fizz",
-      "source_url": "https://github.com/facebookincubator/fizz/archive/refs/tags/v2026.05.18.00.tar.gz",
+      "source_url": "https://github.com/facebookincubator/fizz/archive/refs/tags/v2026.05.25.00.tar.gz",
       "head_url": "https://github.com/facebookincubator/fizz.git",
       "upstream_provider": "github",
       "upstream_repo": "facebookincubator/fizz",
@@ -11372,7 +11346,7 @@
       "path": "Formula/f/flowrs.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/jvanbuel/flowrs",
-      "source_url": "https://github.com/jvanbuel/flowrs/archive/refs/tags/flowrs-tui-v0.12.5.tar.gz",
+      "source_url": "https://github.com/jvanbuel/flowrs/archive/refs/tags/flowrs-tui-v0.12.6.tar.gz",
       "head_url": "https://github.com/jvanbuel/flowrs.git",
       "upstream_provider": "github",
       "upstream_repo": "jvanbuel/flowrs",
@@ -12137,7 +12111,7 @@
     {
       "name": "git-crypt",
       "path": "Formula/g/git-crypt.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://www.agwa.name/projects/git-crypt/",
       "source_url": "https://www.agwa.name/projects/git-crypt/downloads/git-crypt-0.8.0.tar.gz",
       "upstream_provider": "other",
@@ -12147,7 +12121,7 @@
       "dependencies": [
         "docbook",
         "docbook-xsl",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [],
@@ -13899,7 +13873,7 @@
     {
       "name": "jose",
       "path": "Formula/j/jose.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/latchset/jose",
       "source_url": "https://github.com/latchset/jose/releases/download/v14/jose-14.tar.xz",
       "upstream_provider": "github",
@@ -13912,7 +13886,7 @@
         "ninja",
         "pkgconf",
         "jansson",
-        "openssl@3",
+        "openssl@4",
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [],
@@ -14248,7 +14222,7 @@
     {
       "name": "kore",
       "path": "Formula/k/kore.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://kore.io/",
       "source_url": "https://kore.io/releases/kore-4.2.3.tar.gz",
       "head_url": "https://github.com/jorisvink/kore.git",
@@ -14259,7 +14233,7 @@
       "staging_required_by": [],
       "dependencies": [
         "pkgconf",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [],
@@ -17589,7 +17563,7 @@
       "path": "Formula/m/mvfst.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/facebook/mvfst",
-      "source_url": "https://github.com/facebook/mvfst/archive/refs/tags/v2026.05.18.00.tar.gz",
+      "source_url": "https://github.com/facebook/mvfst/archive/refs/tags/v2026.05.25.00.tar.gz",
       "head_url": "https://github.com/facebook/mvfst.git",
       "upstream_provider": "github",
       "upstream_repo": "facebook/mvfst",
@@ -17634,7 +17608,7 @@
       "path": "Formula/m/mydumper.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/mydumper/mydumper",
-      "source_url": "https://github.com/mydumper/mydumper/archive/refs/tags/v1.0.1-1.tar.gz",
+      "source_url": "https://github.com/mydumper/mydumper/archive/refs/tags/v1.0.1-3.tar.gz",
       "head_url": "https://github.com/mydumper/mydumper.git",
       "upstream_provider": "github",
       "upstream_repo": "mydumper/mydumper",
@@ -21297,7 +21271,7 @@
       "path": "Formula/p/proxygen.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/facebook/proxygen",
-      "source_url": "https://github.com/facebook/proxygen/releases/download/v2026.05.18.00/proxygen-v2026.05.18.00.tar.gz",
+      "source_url": "https://github.com/facebook/proxygen/releases/download/v2026.05.25.00/proxygen-v2026.05.25.00.tar.gz",
       "head_url": "https://github.com/facebook/proxygen.git",
       "upstream_provider": "github",
       "upstream_repo": "facebook/proxygen",
@@ -21949,7 +21923,7 @@
       "path": "Formula/r/rakudo-star.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://rakudo.org/",
-      "source_url": "https://github.com/rakudo/star/releases/download/2026.04/rakudo-star-2026.04.tar.gz",
+      "source_url": "https://github.com/rakudo/star/releases/download/2026.05/rakudo-star-2026.05.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "rakudo/star",
       "depth": null,
@@ -22185,7 +22159,7 @@
       "path": "Formula/r/redis.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://redis.io/",
-      "source_url": "https://download.redis.io/releases/redis-8.6.3.tar.gz",
+      "source_url": "https://download.redis.io/releases/redis-8.8.0.tar.gz",
       "head_url": "https://github.com/redis/redis.git",
       "upstream_provider": "github",
       "upstream_repo": "redis/redis",
@@ -23469,7 +23443,7 @@
       "path": "Formula/s/sem-cli.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/Ataraxy-Labs/sem",
-      "source_url": "https://github.com/Ataraxy-Labs/sem/archive/refs/tags/v0.6.0.tar.gz",
+      "source_url": "https://github.com/Ataraxy-Labs/sem/archive/refs/tags/v0.6.1.tar.gz",
       "head_url": "https://github.com/Ataraxy-Labs/sem.git",
       "upstream_provider": "github",
       "upstream_repo": "Ataraxy-Labs/sem",
@@ -26657,7 +26631,7 @@
       "path": "Formula/w/wangle.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/facebook/wangle",
-      "source_url": "https://github.com/facebook/wangle/archive/refs/tags/v2026.05.18.00.tar.gz",
+      "source_url": "https://github.com/facebook/wangle/archive/refs/tags/v2026.05.25.00.tar.gz",
       "head_url": "https://github.com/facebook/wangle.git",
       "upstream_provider": "github",
       "upstream_repo": "facebook/wangle",
@@ -26733,7 +26707,7 @@
       "path": "Formula/w/watchman.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/facebook/watchman",
-      "source_url": "https://github.com/facebook/watchman/archive/refs/tags/v2026.05.18.00.tar.gz",
+      "source_url": "https://github.com/facebook/watchman/archive/refs/tags/v2026.05.25.00.tar.gz",
       "head_url": "https://github.com/facebook/watchman.git",
       "upstream_provider": "github",
       "upstream_repo": "facebook/watchman",
