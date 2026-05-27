@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-26T07:31:29Z",
+  "generated_at": "2026-05-27T07:44:56Z",
   "repository": "Homebrew/homebrew-core",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "target_branch": "openssl-4-migration-staging",
@@ -180,7 +180,7 @@
         "base": "openssl-4-migration-staging",
         "is_draft": true,
         "merge_state": "UNSTABLE",
-        "updated_at": "2026-05-05T03:23:00Z"
+        "updated_at": "2026-05-26T17:10:10Z"
       },
       "readiness": [
         "draft",
@@ -496,7 +496,7 @@
         "base": "openssl-4-migration-staging",
         "is_draft": true,
         "merge_state": "UNSTABLE",
-        "updated_at": "2026-05-05T03:20:18Z"
+        "updated_at": "2026-05-26T18:01:16Z"
       },
       "readiness": [
         "draft",
@@ -608,7 +608,7 @@
         "base": "openssl-4-migration-staging",
         "is_draft": true,
         "merge_state": "UNSTABLE",
-        "updated_at": "2026-05-05T03:20:29Z"
+        "updated_at": "2026-05-26T17:10:08Z"
       },
       "readiness": [
         "draft",
@@ -768,7 +768,7 @@
         "base": "openssl-4-migration-staging",
         "is_draft": true,
         "merge_state": "UNSTABLE",
-        "updated_at": "2026-05-05T03:19:40Z"
+        "updated_at": "2026-05-27T00:41:42Z"
       },
       "readiness": [
         "draft",
@@ -883,7 +883,7 @@
         "base": "openssl-4-migration-staging",
         "is_draft": true,
         "merge_state": "UNSTABLE",
-        "updated_at": "2026-05-05T03:20:20Z"
+        "updated_at": "2026-05-26T17:10:13Z"
       },
       "readiness": [
         "draft",
@@ -920,7 +920,7 @@
         "base": "openssl-4-migration-staging",
         "is_draft": true,
         "merge_state": "UNSTABLE",
-        "updated_at": "2026-05-05T14:08:32Z"
+        "updated_at": "2026-05-26T18:01:23Z"
       },
       "readiness": [
         "draft",
@@ -1120,7 +1120,7 @@
         "base": "openssl-4-migration-staging",
         "is_draft": true,
         "merge_state": "UNSTABLE",
-        "updated_at": "2026-05-05T03:20:13Z"
+        "updated_at": "2026-05-26T18:01:18Z"
       },
       "readiness": [
         "draft",
@@ -1165,7 +1165,7 @@
         "base": "openssl-4-migration-staging",
         "is_draft": true,
         "merge_state": "UNSTABLE",
-        "updated_at": "2026-05-05T06:59:57Z"
+        "updated_at": "2026-05-26T17:10:01Z"
       },
       "readiness": [
         "draft",
@@ -1550,7 +1550,7 @@
         "base": "openssl-4-migration-staging",
         "is_draft": true,
         "merge_state": "UNSTABLE",
-        "updated_at": "2026-05-05T07:07:44Z"
+        "updated_at": "2026-05-26T17:09:59Z"
       },
       "readiness": [
         "draft",
@@ -1592,7 +1592,7 @@
         "base": "openssl-4-migration-staging",
         "is_draft": true,
         "merge_state": "UNSTABLE",
-        "updated_at": "2026-05-05T03:20:01Z"
+        "updated_at": "2026-05-26T18:01:21Z"
       },
       "readiness": [
         "draft",
@@ -1749,7 +1749,7 @@
         "base": "openssl-4-migration-staging",
         "is_draft": true,
         "merge_state": "UNSTABLE",
-        "updated_at": "2026-05-05T03:20:35Z"
+        "updated_at": "2026-05-26T17:10:03Z"
       },
       "readiness": [
         "draft",
@@ -1936,7 +1936,7 @@
         "base": "openssl-4-migration-staging",
         "is_draft": true,
         "merge_state": "UNSTABLE",
-        "updated_at": "2026-05-05T03:19:37Z"
+        "updated_at": "2026-05-27T00:41:44Z"
       },
       "readiness": [
         "draft",
@@ -1978,7 +1978,7 @@
         "base": "openssl-4-migration-staging",
         "is_draft": true,
         "merge_state": "UNSTABLE",
-        "updated_at": "2026-05-05T03:20:30Z"
+        "updated_at": "2026-05-26T17:10:06Z"
       },
       "readiness": [
         "draft",
