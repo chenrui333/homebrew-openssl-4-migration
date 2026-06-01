@@ -1,7 +1,7 @@
-OpenSSL 4 Migration Status (2026-05-31)
+OpenSSL 4 Migration Status (2026-06-01)
 ========================================
-Total pending:  18
-Total done:     39 (68.4%)
+Total pending:  17
+Total done:     40 (70.2%)
 
 Tracking issue: Homebrew/homebrew-core#278366
 
@@ -49,11 +49,11 @@ Batch 1 -> openssl-4-migration-staging   [9/15 done]
   systemd                  PENDING    [PR #280864 open]
   unbound                  DONE
 
-Batch 2 -> openssl-4-migration-staging   [1/5 done]
+Batch 2 -> openssl-4-migration-staging   [2/5 done]
   cargo-c                  PENDING    [PR #280867 open]
   cryptography             PENDING    [PR #280868 open]
   gdal                     PENDING    [PR #280870 open]
-  php                      PENDING    [PR #280871 open]
+  php                      DONE
   ruby                     DONE
 
 Batch 3 -> openssl-4-migration-staging   [0/1 done]

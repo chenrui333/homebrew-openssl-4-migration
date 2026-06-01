@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-05-31T07:34:26Z",
+  "generated_at": "2026-06-01T08:11:59Z",
   "repository": "Homebrew/homebrew-core",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "target_branch": "openssl-4-migration-staging",
   "scope": "staging",
   "summary": {
     "staged_formulae": 57,
-    "done": 39,
-    "pending": 18,
-    "open_staging_prs": 18,
+    "done": 40,
+    "pending": 17,
+    "open_staging_prs": 17,
     "current_gate": "Batch 0 — Roots",
     "current_gate_pending": 5,
     "upstream_blockers": 3,
@@ -332,7 +332,7 @@
         "base": "openssl-4-migration-staging",
         "is_draft": true,
         "merge_state": "UNSTABLE",
-        "updated_at": "2026-05-11T01:17:14Z"
+        "updated_at": "2026-06-01T06:19:37Z"
       },
       "readiness": [
         "draft",
@@ -454,7 +454,7 @@
         "base": "openssl-4-migration-staging",
         "is_draft": true,
         "merge_state": "UNSTABLE",
-        "updated_at": "2026-05-11T01:41:53Z"
+        "updated_at": "2026-06-01T02:25:05Z"
       },
       "readiness": [
         "draft",
@@ -2154,23 +2154,23 @@
     },
     {
       "name": "php",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": 2,
       "group_label": "Batch 2",
       "impact_count": 0,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
-        "number": 280871,
-        "url": "https://github.com/Homebrew/homebrew-core/pull/280871",
-        "base": "openssl-4-migration-staging",
+        "number": 0,
+        "url": "",
+        "base": "",
         "is_draft": false,
-        "merge_state": "CLEAN",
-        "updated_at": "2026-05-11T02:41:47Z"
+        "merge_state": "",
+        "updated_at": ""
       },
       "readiness": [
-        "ready"
+        "done"
       ],
-      "next_action": "Review and merge",
+      "next_action": "Done",
       "upstream": {
         "provider": "github",
         "repo": "php/php-src",
@@ -2184,7 +2184,7 @@
       ],
       "flags": {
         "current_gate": false,
-        "ready": true,
+        "ready": false,
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,

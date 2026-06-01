@@ -1,6 +1,6 @@
-# OpenSSL 4 Migration Checklist (2026-05-31)
+# OpenSSL 4 Migration Checklist (2026-06-01)
 
-Progress: **39/57 (68.4%)**
+Progress: **40/57 (70.2%)**
 Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/homebrew-core/issues/278366)
 
 > Staging batches are depth 0 → 1 → 2 → 3 plus their computed transitive closure.
@@ -52,12 +52,12 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 - [ ] systemd <!-- PR #280864 open -->
 - [x] ~~unbound~~
 
-## Batch 2 -> openssl-4-migration-staging [1/5]
+## Batch 2 -> openssl-4-migration-staging [2/5]
 
 - [ ] cargo-c <!-- PR #280867 open -->
 - [ ] cryptography <!-- PR #280868 open -->
 - [ ] gdal <!-- PR #280870 open -->
-- [ ] php <!-- PR #280871 open -->
+- [x] ~~php~~
 - [x] ~~ruby~~
 
 ## Batch 3 -> openssl-4-migration-staging [0/1]

@@ -1,13 +1,13 @@
-# OpenSSL 4 Migration Audit (2026-05-31)
+# OpenSSL 4 Migration Audit (2026-06-01)
 
 Tracking issue: Homebrew/homebrew-core#278366
 
 ## Summary
 
 - Staging-scope formulae: 57
-- Live pending: 18
-- Live done: 39 (68.4%)
-- Open staging PRs: 18
+- Live pending: 17
+- Live done: 40 (70.2%)
+- Open staging PRs: 17
 - Draft migration PRs: 17
 - PRs with merge/check blockers: 17
 - Pending formulae without open migration PRs: 0
@@ -43,7 +43,6 @@ Pending staged formulae are sorted by transitive dependent count.
 | gstreamer | openssl-4-migration-staging | 3 | 4 | PENDING | #280873 | draft, checks-blocked, merge-unstable | gitlab:gitlab.freedesktop.org/gstreamer/gstreamer |  |
 | dotnet | openssl-4-migration-staging | 0 | 2 | PENDING | #280829 | draft, checks-blocked, merge-unstable | github:dotnet/dotnet |  |
 | gdal | openssl-4-migration-staging | 2 | 2 | PENDING | #280870 | draft, checks-blocked, merge-unstable | github:OSGeo/gdal |  |
-| php | openssl-4-migration-staging | 2 | 0 | PENDING | #280871 | ready | github:php/php-src |  |
 
 ## Upstream Issue Coverage Gaps
 
@@ -62,7 +61,6 @@ Top 20 pending staged formulae with upstream metadata and no curated upstream is
 | gstreamer | 3 | 4 | gitlab:gitlab.freedesktop.org/gstreamer/gstreamer |  | draft, checks-blocked, merge-unstable |
 | dotnet | 0 | 2 | github:dotnet/dotnet | [issues](https://github.com/search?q=repo%3Adotnet%2Fdotnet+%22OpenSSL+4%22&type=issues) | draft, checks-blocked, merge-unstable |
 | gdal | 2 | 2 | github:OSGeo/gdal | [issues](https://github.com/search?q=repo%3AOSGeo%2Fgdal+%22OpenSSL+4%22&type=issues) | draft, checks-blocked, merge-unstable |
-| php | 2 | 0 | github:php/php-src | [issues](https://github.com/search?q=repo%3Aphp%2Fphp-src+%22OpenSSL+4%22&type=issues) | ready |
 
 ## Curated Upstream Issues
 
