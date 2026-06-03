@@ -1,4 +1,4 @@
-OpenSSL 4 Migration Status (2026-06-02)
+OpenSSL 4 Migration Status (2026-06-03)
 ========================================
 Total pending:  17
 Total done:     40 (70.2%)
@@ -52,12 +52,12 @@ Batch 1 -> openssl-4-migration-staging   [9/15 done]
 Batch 2 -> openssl-4-migration-staging   [2/5 done]
   cargo-c                  PENDING    [PR #280867 open]
   cryptography             PENDING    [PR #280868 open]
-  gdal                     PENDING    [PR #280870 open]
+  gdal                     PENDING
   php                      DONE
   ruby                     DONE
 
 Batch 3 -> openssl-4-migration-staging   [0/1 done]
-  gstreamer                PENDING    [PR #280873 open]
+  gstreamer                PENDING
 
 Staging closure -> openssl-4-migration-staging   [9/11 done]
   aws-c-cal                DONE
@@ -68,6 +68,6 @@ Staging closure -> openssl-4-migration-staging   [9/11 done]
   libzip                   DONE
   net-snmp                 DONE
   rtmpdump                 DONE
-  s2n                      PENDING    [PR #280912 open]
+  s2n                      PENDING
   srtp                     DONE
-  thrift                   PENDING    [PR #280913 open]
+  thrift                   PENDING

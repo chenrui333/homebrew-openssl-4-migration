@@ -1,4 +1,4 @@
-# OpenSSL 4 Migration Audit (2026-06-02)
+# OpenSSL 4 Migration Audit (2026-06-03)
 
 Tracking issue: Homebrew/homebrew-core#278366
 
@@ -7,10 +7,10 @@ Tracking issue: Homebrew/homebrew-core#278366
 - Staging-scope formulae: 57
 - Live pending: 17
 - Live done: 40 (70.2%)
-- Open staging PRs: 17
-- Draft migration PRs: 17
-- PRs with merge/check blockers: 17
-- Pending formulae without open migration PRs: 0
+- Open staging PRs: 13
+- Draft migration PRs: 13
+- PRs with merge/check blockers: 13
+- Pending formulae without open migration PRs: 4
 
 ## Retarget to Staging
 
@@ -37,12 +37,12 @@ Pending staged formulae are sorted by transitive dependent count.
 | qtbase | openssl-4-migration-staging | 1 | 10 | PENDING | #280862 | draft, checks-blocked, merge-unstable | qt |  |
 | libfido2 | openssl-4-migration-staging | 0 | 9 | PENDING | #280836 | draft, checks-blocked, merge-unstable | github:Yubico/libfido2 | [issues#966](https://github.com/Yubico/libfido2/issues/966) closed |
 | node | openssl-4-migration-staging | 1 | 7 | PENDING | #280858 | draft, checks-blocked, merge-unstable | github:nodejs/node | [issues#62817](https://github.com/nodejs/node/issues/62817) closed |
-| s2n | openssl-4-migration-staging | closure | 7 | PENDING | #280912 | draft, checks-blocked, merge-unstable | github:aws/s2n-tls | [issues#5783](https://github.com/aws/s2n-tls/issues/5783) open |
-| thrift | openssl-4-migration-staging | closure | 5 | PENDING | #280913 | draft, checks-blocked, merge-unstable | github:apache/thrift |  |
+| s2n | openssl-4-migration-staging | closure | 7 | PENDING | none | missing-pr | github:aws/s2n-tls | [issues#5783](https://github.com/aws/s2n-tls/issues/5783) open |
+| thrift | openssl-4-migration-staging | closure | 5 | PENDING | none | missing-pr | github:apache/thrift |  |
 | apache-arrow | openssl-4-migration-staging | 1 | 4 | PENDING | #280851 | draft, checks-blocked, merge-unstable | github:apache/arrow |  |
-| gstreamer | openssl-4-migration-staging | 3 | 4 | PENDING | #280873 | draft, checks-blocked, merge-unstable | gitlab:gitlab.freedesktop.org/gstreamer/gstreamer |  |
+| gstreamer | openssl-4-migration-staging | 3 | 4 | PENDING | none | missing-pr | gitlab:gitlab.freedesktop.org/gstreamer/gstreamer |  |
 | dotnet | openssl-4-migration-staging | 0 | 2 | PENDING | #280829 | draft, checks-blocked, merge-unstable | github:dotnet/dotnet |  |
-| gdal | openssl-4-migration-staging | 2 | 2 | PENDING | #280870 | draft, checks-blocked, merge-unstable | github:OSGeo/gdal |  |
+| gdal | openssl-4-migration-staging | 2 | 2 | PENDING | none | missing-pr | github:OSGeo/gdal |  |
 
 ## Upstream Issue Coverage Gaps
 
@@ -56,11 +56,11 @@ Top 20 pending staged formulae with upstream metadata and no curated upstream is
 | cargo-c | 2 | 25 | github:lu-zero/cargo-c | [issues](https://github.com/search?q=repo%3Alu-zero%2Fcargo-c+%22OpenSSL+4%22&type=issues) | draft, checks-blocked, merge-unstable |
 | pulseaudio | 1 | 21 | gitlab:gitlab.freedesktop.org/pulseaudio/pulseaudio |  | draft, checks-blocked, merge-unstable |
 | qtbase | 1 | 10 | qt |  | draft, checks-blocked, merge-unstable |
-| thrift | closure | 5 | github:apache/thrift | [issues](https://github.com/search?q=repo%3Aapache%2Fthrift+%22OpenSSL+4%22&type=issues) | draft, checks-blocked, merge-unstable |
+| thrift | closure | 5 | github:apache/thrift | [issues](https://github.com/search?q=repo%3Aapache%2Fthrift+%22OpenSSL+4%22&type=issues) | missing-pr |
 | apache-arrow | 1 | 4 | github:apache/arrow | [issues](https://github.com/search?q=repo%3Aapache%2Farrow+%22OpenSSL+4%22&type=issues) | draft, checks-blocked, merge-unstable |
-| gstreamer | 3 | 4 | gitlab:gitlab.freedesktop.org/gstreamer/gstreamer |  | draft, checks-blocked, merge-unstable |
+| gstreamer | 3 | 4 | gitlab:gitlab.freedesktop.org/gstreamer/gstreamer |  | missing-pr |
 | dotnet | 0 | 2 | github:dotnet/dotnet | [issues](https://github.com/search?q=repo%3Adotnet%2Fdotnet+%22OpenSSL+4%22&type=issues) | draft, checks-blocked, merge-unstable |
-| gdal | 2 | 2 | github:OSGeo/gdal | [issues](https://github.com/search?q=repo%3AOSGeo%2Fgdal+%22OpenSSL+4%22&type=issues) | draft, checks-blocked, merge-unstable |
+| gdal | 2 | 2 | github:OSGeo/gdal | [issues](https://github.com/search?q=repo%3AOSGeo%2Fgdal+%22OpenSSL+4%22&type=issues) | missing-pr |
 
 ## Curated Upstream Issues
 

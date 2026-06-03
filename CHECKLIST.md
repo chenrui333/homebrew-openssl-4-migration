@@ -1,4 +1,4 @@
-# OpenSSL 4 Migration Checklist (2026-06-02)
+# OpenSSL 4 Migration Checklist (2026-06-03)
 
 Progress: **40/57 (70.2%)**
 Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/homebrew-core/issues/278366)
@@ -56,13 +56,13 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 
 - [ ] cargo-c <!-- PR #280867 open -->
 - [ ] cryptography <!-- PR #280868 open -->
-- [ ] gdal <!-- PR #280870 open -->
+- [ ] gdal
 - [x] ~~php~~
 - [x] ~~ruby~~
 
 ## Batch 3 -> openssl-4-migration-staging [0/1]
 
-- [ ] gstreamer <!-- PR #280873 open -->
+- [ ] gstreamer
 
 ## Staging closure -> openssl-4-migration-staging [9/11]
 
@@ -74,6 +74,6 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 - [x] ~~libzip~~
 - [x] ~~net-snmp~~
 - [x] ~~rtmpdump~~
-- [ ] s2n <!-- PR #280912 open -->
+- [ ] s2n
 - [x] ~~srtp~~
-- [ ] thrift <!-- PR #280913 open -->
+- [ ] thrift

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T07:58:26Z",
+  "generated_at": "2026-06-03T08:02:17Z",
   "repository": "Homebrew/homebrew-core",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "target_branch": "openssl-4-migration-staging",
@@ -8,7 +8,7 @@
     "staged_formulae": 57,
     "done": 40,
     "pending": 17,
-    "open_staging_prs": 17,
+    "open_staging_prs": 13,
     "current_gate": "Batch 0 — Roots",
     "current_gate_pending": 5,
     "upstream_blockers": 3,
@@ -1160,19 +1160,17 @@
       "impact_count": 7,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
-        "number": 280912,
-        "url": "https://github.com/Homebrew/homebrew-core/pull/280912",
-        "base": "openssl-4-migration-staging",
-        "is_draft": true,
-        "merge_state": "UNSTABLE",
-        "updated_at": "2026-05-26T17:10:01Z"
+        "number": 0,
+        "url": "",
+        "base": "",
+        "is_draft": false,
+        "merge_state": "",
+        "updated_at": ""
       },
       "readiness": [
-        "draft",
-        "checks-blocked",
-        "merge-unstable"
+        "missing-pr"
       ],
-      "next_action": "Resolve draft blockers",
+      "next_action": "Open migration PR",
       "upstream": {
         "provider": "github",
         "repo": "aws/s2n-tls",
@@ -1190,10 +1188,10 @@
       "flags": {
         "current_gate": false,
         "ready": false,
-        "draft": true,
-        "ci_blocked": true,
+        "draft": false,
+        "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": false,
+        "missing_pr": true,
         "upstream_blocked": true
       }
     },
@@ -1545,19 +1543,17 @@
       "impact_count": 5,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
-        "number": 280913,
-        "url": "https://github.com/Homebrew/homebrew-core/pull/280913",
-        "base": "openssl-4-migration-staging",
-        "is_draft": true,
-        "merge_state": "UNSTABLE",
-        "updated_at": "2026-05-26T17:09:59Z"
+        "number": 0,
+        "url": "",
+        "base": "",
+        "is_draft": false,
+        "merge_state": "",
+        "updated_at": ""
       },
       "readiness": [
-        "draft",
-        "checks-blocked",
-        "merge-unstable"
+        "missing-pr"
       ],
-      "next_action": "Resolve draft blockers",
+      "next_action": "Open migration PR",
       "upstream": {
         "provider": "github",
         "repo": "apache/thrift",
@@ -1572,10 +1568,10 @@
       "flags": {
         "current_gate": false,
         "ready": false,
-        "draft": true,
-        "ci_blocked": true,
+        "draft": false,
+        "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": false,
+        "missing_pr": true,
         "upstream_blocked": false
       }
     },
@@ -1744,19 +1740,17 @@
       "impact_count": 4,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
-        "number": 280873,
-        "url": "https://github.com/Homebrew/homebrew-core/pull/280873",
-        "base": "openssl-4-migration-staging",
-        "is_draft": true,
-        "merge_state": "UNSTABLE",
-        "updated_at": "2026-05-26T17:10:03Z"
+        "number": 0,
+        "url": "",
+        "base": "",
+        "is_draft": false,
+        "merge_state": "",
+        "updated_at": ""
       },
       "readiness": [
-        "draft",
-        "checks-blocked",
-        "merge-unstable"
+        "missing-pr"
       ],
-      "next_action": "Resolve draft blockers",
+      "next_action": "Open migration PR",
       "upstream": {
         "provider": "gitlab",
         "repo": "gitlab.freedesktop.org/gstreamer/gstreamer",
@@ -1766,10 +1760,10 @@
       "flags": {
         "current_gate": false,
         "ready": false,
-        "draft": true,
-        "ci_blocked": true,
+        "draft": false,
+        "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": false,
+        "missing_pr": true,
         "upstream_blocked": false
       }
     },
@@ -1973,19 +1967,17 @@
       "impact_count": 2,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
-        "number": 280870,
-        "url": "https://github.com/Homebrew/homebrew-core/pull/280870",
-        "base": "openssl-4-migration-staging",
-        "is_draft": true,
-        "merge_state": "UNSTABLE",
-        "updated_at": "2026-05-26T17:10:06Z"
+        "number": 0,
+        "url": "",
+        "base": "",
+        "is_draft": false,
+        "merge_state": "",
+        "updated_at": ""
       },
       "readiness": [
-        "draft",
-        "checks-blocked",
-        "merge-unstable"
+        "missing-pr"
       ],
-      "next_action": "Resolve draft blockers",
+      "next_action": "Open migration PR",
       "upstream": {
         "provider": "github",
         "repo": "OSGeo/gdal",
@@ -2000,10 +1992,10 @@
       "flags": {
         "current_gate": false,
         "ready": false,
-        "draft": true,
-        "ci_blocked": true,
+        "draft": false,
+        "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": false,
+        "missing_pr": true,
         "upstream_blocked": false
       }
     },
