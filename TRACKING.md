@@ -1,4 +1,4 @@
-OpenSSL 4 Migration Status (2026-06-03)
+OpenSSL 4 Migration Status (2026-06-04)
 ========================================
 Total pending:  17
 Total done:     40 (70.2%)
@@ -9,14 +9,14 @@ Batch 0 — Roots -> openssl-4-migration-staging   [20/25 done]
   apr-util                 DONE
   asio                     DONE
   cmake                    DONE
-  dotnet                   PENDING    [PR #280829 open]
+  dotnet                   PENDING
   erlang                   DONE
   freetds                  DONE
-  grpc                     PENDING    [PR #280832 open]
+  grpc                     PENDING
   hiredis                  DONE
   krb5                     DONE
   libevent                 DONE
-  libfido2                 PENDING    [PR #280836 open]
+  libfido2                 PENDING
   librdkafka               DONE
   libssh                   DONE
   libssh2                  DONE
@@ -33,25 +33,25 @@ Batch 0 — Roots -> openssl-4-migration-staging   [20/25 done]
   wget                     DONE
 
 Batch 1 -> openssl-4-migration-staging   [9/15 done]
-  apache-arrow             PENDING    [PR #280851 open]
+  apache-arrow             PENDING
   bind                     DONE
   curl                     DONE
   ffmpeg                   DONE
   folly                    DONE
   httpd                    DONE
   libpq                    DONE
-  node                     PENDING    [PR #280858 open]
+  node                     PENDING
   postgresql@17            DONE
   postgresql@18            DONE
-  pulseaudio               PENDING    [PR #280861 open]
-  qtbase                   PENDING    [PR #280862 open]
-  rust                     PENDING    [PR #280863 open]
+  pulseaudio               PENDING
+  qtbase                   PENDING
+  rust                     PENDING
   systemd                  PENDING    [PR #280864 open]
   unbound                  DONE
 
 Batch 2 -> openssl-4-migration-staging   [2/5 done]
   cargo-c                  PENDING    [PR #280867 open]
-  cryptography             PENDING    [PR #280868 open]
+  cryptography             PENDING
   gdal                     PENDING
   php                      DONE
   ruby                     DONE
@@ -59,8 +59,9 @@ Batch 2 -> openssl-4-migration-staging   [2/5 done]
 Batch 3 -> openssl-4-migration-staging   [0/1 done]
   gstreamer                PENDING
 
-Staging closure -> openssl-4-migration-staging   [9/11 done]
+Staging closure -> openssl-4-migration-staging   [9/12 done]
   aws-c-cal                DONE
+  aws-c-io                 UNKNOWN
   cgal                     DONE
   libgit2                  DONE
   libngtcp2                DONE

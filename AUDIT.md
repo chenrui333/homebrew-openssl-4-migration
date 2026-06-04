@@ -1,16 +1,16 @@
-# OpenSSL 4 Migration Audit (2026-06-03)
+# OpenSSL 4 Migration Audit (2026-06-04)
 
 Tracking issue: Homebrew/homebrew-core#278366
 
 ## Summary
 
-- Staging-scope formulae: 57
+- Staging-scope formulae: 58
 - Live pending: 17
-- Live done: 40 (70.2%)
-- Open staging PRs: 13
-- Draft migration PRs: 13
-- PRs with merge/check blockers: 13
-- Pending formulae without open migration PRs: 4
+- Live done: 40 (69.0%)
+- Open staging PRs: 4
+- Draft migration PRs: 4
+- PRs with merge/check blockers: 4
+- Pending formulae without open migration PRs: 13
 
 ## Retarget to Staging
 
@@ -27,21 +27,21 @@ Pending staged formulae are sorted by transitive dependent count.
 | Formula | Target | Depth | Impact | Status | PR | Readiness | Upstream | Issues |
 |---|---|---:|---:|---|---|---|---|---|
 | python@3.14 | openssl-4-migration-staging | 0 | 473 | PENDING | #280846 | draft, checks-blocked, merge-unstable | python |  |
-| rust | openssl-4-migration-staging | 1 | 272 | PENDING | #280863 | draft, checks-blocked, merge-unstable | github:rust-lang/rust | [issues#155397](https://github.com/rust-lang/rust/issues/155397) open |
+| rust | openssl-4-migration-staging | 1 | 272 | PENDING | none | missing-pr | github:rust-lang/rust | [issues#155397](https://github.com/rust-lang/rust/issues/155397) open |
 | python@3.13 | openssl-4-migration-staging | 0 | 81 | PENDING | #280845 | draft, checks-blocked, merge-unstable | python |  |
 | systemd | openssl-4-migration-staging | 1 | 56 | PENDING | #280864 | draft, checks-blocked, merge-unstable | github:systemd/systemd |  |
 | cargo-c | openssl-4-migration-staging | 2 | 25 | PENDING | #280867 | draft, checks-blocked, merge-unstable | github:lu-zero/cargo-c |  |
-| pulseaudio | openssl-4-migration-staging | 1 | 21 | PENDING | #280861 | draft, checks-blocked, merge-unstable | gitlab:gitlab.freedesktop.org/pulseaudio/pulseaudio |  |
-| cryptography | openssl-4-migration-staging | 2 | 15 | PENDING | #280868 | draft, checks-blocked, merge-unstable | github:pyca/cryptography | [issues#14656](https://github.com/pyca/cryptography/issues/14656) closed |
-| grpc | openssl-4-migration-staging | 0 | 11 | PENDING | #280832 | draft, checks-blocked, merge-unstable | github:grpc/grpc | [issues#42020](https://github.com/grpc/grpc/issues/42020) open |
-| qtbase | openssl-4-migration-staging | 1 | 10 | PENDING | #280862 | draft, checks-blocked, merge-unstable | qt |  |
-| libfido2 | openssl-4-migration-staging | 0 | 9 | PENDING | #280836 | draft, checks-blocked, merge-unstable | github:Yubico/libfido2 | [issues#966](https://github.com/Yubico/libfido2/issues/966) closed |
-| node | openssl-4-migration-staging | 1 | 7 | PENDING | #280858 | draft, checks-blocked, merge-unstable | github:nodejs/node | [issues#62817](https://github.com/nodejs/node/issues/62817) closed |
-| s2n | openssl-4-migration-staging | closure | 7 | PENDING | none | missing-pr | github:aws/s2n-tls | [issues#5783](https://github.com/aws/s2n-tls/issues/5783) open |
+| pulseaudio | openssl-4-migration-staging | 1 | 21 | PENDING | none | missing-pr | gitlab:gitlab.freedesktop.org/pulseaudio/pulseaudio |  |
+| cryptography | openssl-4-migration-staging | 2 | 15 | PENDING | none | missing-pr | github:pyca/cryptography | [issues#14656](https://github.com/pyca/cryptography/issues/14656) closed |
+| grpc | openssl-4-migration-staging | 0 | 11 | PENDING | none | missing-pr | github:grpc/grpc | [issues#42020](https://github.com/grpc/grpc/issues/42020) open |
+| qtbase | openssl-4-migration-staging | 1 | 10 | PENDING | none | missing-pr | qt |  |
+| libfido2 | openssl-4-migration-staging | 0 | 9 | PENDING | none | missing-pr | github:Yubico/libfido2 | [issues#966](https://github.com/Yubico/libfido2/issues/966) closed |
+| s2n | openssl-4-migration-staging | closure | 8 | PENDING | none | missing-pr | github:aws/s2n-tls | [issues#5783](https://github.com/aws/s2n-tls/issues/5783) open |
+| node | openssl-4-migration-staging | 1 | 7 | PENDING | none | missing-pr | github:nodejs/node | [issues#62817](https://github.com/nodejs/node/issues/62817) closed |
 | thrift | openssl-4-migration-staging | closure | 5 | PENDING | none | missing-pr | github:apache/thrift |  |
-| apache-arrow | openssl-4-migration-staging | 1 | 4 | PENDING | #280851 | draft, checks-blocked, merge-unstable | github:apache/arrow |  |
+| apache-arrow | openssl-4-migration-staging | 1 | 4 | PENDING | none | missing-pr | github:apache/arrow |  |
 | gstreamer | openssl-4-migration-staging | 3 | 4 | PENDING | none | missing-pr | gitlab:gitlab.freedesktop.org/gstreamer/gstreamer |  |
-| dotnet | openssl-4-migration-staging | 0 | 2 | PENDING | #280829 | draft, checks-blocked, merge-unstable | github:dotnet/dotnet |  |
+| dotnet | openssl-4-migration-staging | 0 | 2 | PENDING | none | missing-pr | github:dotnet/dotnet |  |
 | gdal | openssl-4-migration-staging | 2 | 2 | PENDING | none | missing-pr | github:OSGeo/gdal |  |
 
 ## Upstream Issue Coverage Gaps
@@ -54,12 +54,12 @@ Top 20 pending staged formulae with upstream metadata and no curated upstream is
 | python@3.13 | 0 | 81 | python |  | draft, checks-blocked, merge-unstable |
 | systemd | 1 | 56 | github:systemd/systemd | [issues](https://github.com/search?q=repo%3Asystemd%2Fsystemd+%22OpenSSL+4%22&type=issues) | draft, checks-blocked, merge-unstable |
 | cargo-c | 2 | 25 | github:lu-zero/cargo-c | [issues](https://github.com/search?q=repo%3Alu-zero%2Fcargo-c+%22OpenSSL+4%22&type=issues) | draft, checks-blocked, merge-unstable |
-| pulseaudio | 1 | 21 | gitlab:gitlab.freedesktop.org/pulseaudio/pulseaudio |  | draft, checks-blocked, merge-unstable |
-| qtbase | 1 | 10 | qt |  | draft, checks-blocked, merge-unstable |
+| pulseaudio | 1 | 21 | gitlab:gitlab.freedesktop.org/pulseaudio/pulseaudio |  | missing-pr |
+| qtbase | 1 | 10 | qt |  | missing-pr |
 | thrift | closure | 5 | github:apache/thrift | [issues](https://github.com/search?q=repo%3Aapache%2Fthrift+%22OpenSSL+4%22&type=issues) | missing-pr |
-| apache-arrow | 1 | 4 | github:apache/arrow | [issues](https://github.com/search?q=repo%3Aapache%2Farrow+%22OpenSSL+4%22&type=issues) | draft, checks-blocked, merge-unstable |
+| apache-arrow | 1 | 4 | github:apache/arrow | [issues](https://github.com/search?q=repo%3Aapache%2Farrow+%22OpenSSL+4%22&type=issues) | missing-pr |
 | gstreamer | 3 | 4 | gitlab:gitlab.freedesktop.org/gstreamer/gstreamer |  | missing-pr |
-| dotnet | 0 | 2 | github:dotnet/dotnet | [issues](https://github.com/search?q=repo%3Adotnet%2Fdotnet+%22OpenSSL+4%22&type=issues) | draft, checks-blocked, merge-unstable |
+| dotnet | 0 | 2 | github:dotnet/dotnet | [issues](https://github.com/search?q=repo%3Adotnet%2Fdotnet+%22OpenSSL+4%22&type=issues) | missing-pr |
 | gdal | 2 | 2 | github:OSGeo/gdal | [issues](https://github.com/search?q=repo%3AOSGeo%2Fgdal+%22OpenSSL+4%22&type=issues) | missing-pr |
 
 ## Curated Upstream Issues

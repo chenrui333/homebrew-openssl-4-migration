@@ -1,4 +1,4 @@
-# OpenSSL 4 Migration Checklist (2026-06-03)
+# OpenSSL 4 Migration Checklist (2026-06-04)
 
 Progress: **40/57 (70.2%)**
 Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/homebrew-core/issues/278366)
@@ -11,14 +11,14 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 - [x] ~~apr-util~~
 - [x] ~~asio~~
 - [x] ~~cmake~~
-- [ ] dotnet <!-- PR #280829 open -->
+- [ ] dotnet
 - [x] ~~erlang~~
 - [x] ~~freetds~~
-- [ ] grpc <!-- PR #280832 open -->
+- [ ] grpc
 - [x] ~~hiredis~~
 - [x] ~~krb5~~
 - [x] ~~libevent~~
-- [ ] libfido2 <!-- PR #280836 open -->
+- [ ] libfido2
 - [x] ~~librdkafka~~
 - [x] ~~libssh~~
 - [x] ~~libssh2~~
@@ -36,26 +36,26 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 
 ## Batch 1 -> openssl-4-migration-staging [9/15]
 
-- [ ] apache-arrow <!-- PR #280851 open -->
+- [ ] apache-arrow
 - [x] ~~bind~~
 - [x] ~~curl~~
 - [x] ~~ffmpeg~~
 - [x] ~~folly~~
 - [x] ~~httpd~~
 - [x] ~~libpq~~
-- [ ] node <!-- PR #280858 open -->
+- [ ] node
 - [x] ~~postgresql@17~~
 - [x] ~~postgresql@18~~
-- [ ] pulseaudio <!-- PR #280861 open -->
-- [ ] qtbase <!-- PR #280862 open -->
-- [ ] rust <!-- PR #280863 open -->
+- [ ] pulseaudio
+- [ ] qtbase
+- [ ] rust
 - [ ] systemd <!-- PR #280864 open -->
 - [x] ~~unbound~~
 
 ## Batch 2 -> openssl-4-migration-staging [2/5]
 
 - [ ] cargo-c <!-- PR #280867 open -->
-- [ ] cryptography <!-- PR #280868 open -->
+- [ ] cryptography
 - [ ] gdal
 - [x] ~~php~~
 - [x] ~~ruby~~
@@ -64,9 +64,10 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 
 - [ ] gstreamer
 
-## Staging closure -> openssl-4-migration-staging [9/11]
+## Staging closure -> openssl-4-migration-staging [9/12]
 
 - [x] ~~aws-c-cal~~
+- [ ] aws-c-io
 - [x] ~~cgal~~
 - [x] ~~libgit2~~
 - [x] ~~libngtcp2~~
