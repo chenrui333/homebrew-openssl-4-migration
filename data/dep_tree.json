@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-06T07:21:51Z",
+  "generated_at": "2026-06-07T07:40:26Z",
   "repository": "Homebrew/homebrew-core",
-  "git_head": "c1599cc35573823428e3843ddc79eb1572406ac8",
+  "git_head": "8882344ca2bcdb5b41641fae0768697db2575c61",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "staging_branch": "openssl-4-migration-staging",
   "staged_depths": {
@@ -60,7 +60,7 @@
       "gstreamer"
     ]
   },
-  "formula_count": 747,
+  "formula_count": 746,
   "formulae": [
     {
       "name": "apr-util",
@@ -296,7 +296,6 @@
         "libvncserver",
         "libwebsockets",
         "libzip",
-        "licensed",
         "lighthouse",
         "llama.cpp",
         "luvit",
@@ -714,7 +713,6 @@
         "libwebsockets",
         "libxmlsec1",
         "libzip",
-        "licensed",
         "lighthouse",
         "lighttpd",
         "links",
@@ -1066,7 +1064,7 @@
       "path": "Formula/d/dotnet.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://dotnet.microsoft.com/",
-      "source_url": "https://github.com/dotnet/dotnet/archive/refs/tags/v10.0.108.tar.gz",
+      "source_url": "https://github.com/dotnet/dotnet/releases/download/v10.0.300/release.json",
       "head_url": "https://github.com/dotnet/dotnet.git",
       "upstream_provider": "github",
       "upstream_repo": "dotnet/dotnet",
@@ -1081,6 +1079,7 @@
         "brotli",
         "icu4c@78",
         "openssl@3",
+        "bash",
         "grep",
         "libunwind",
         "lttng-ust",
@@ -1254,7 +1253,7 @@
       "path": "Formula/h/hiredis.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/redis/hiredis",
-      "source_url": "https://github.com/redis/hiredis/archive/refs/tags/v1.3.0.tar.gz",
+      "source_url": "https://github.com/redis/hiredis/archive/refs/tags/v1.4.0.tar.gz",
       "head_url": "https://github.com/redis/hiredis.git",
       "upstream_provider": "github",
       "upstream_repo": "redis/hiredis",
@@ -1848,7 +1847,6 @@
         "libgit2@1.7",
         "libgit2@1.8",
         "librealsense",
-        "licensed",
         "lighthouse",
         "localstack",
         "magika",
@@ -2633,7 +2631,6 @@
         "libvncserver",
         "libwebsockets",
         "libxmlsec1",
-        "licensed",
         "lighthouse",
         "llama.cpp",
         "llgo",
@@ -4302,7 +4299,6 @@
         "leetup",
         "legba",
         "librealsense",
-        "licensed",
         "lighthouse",
         "localstack",
         "magika",
@@ -4929,7 +4925,6 @@
         "rust"
       ],
       "openssl_formula_dependents": [
-        "licensed",
         "mailcatcher",
         "picoruby",
         "rails-mcp-server"
@@ -4946,7 +4941,6 @@
         "ccache",
         "git-xet",
         "hf",
-        "licensed",
         "mailcatcher",
         "mdcat",
         "omnara",
@@ -5418,7 +5412,6 @@
         "leetup",
         "legba",
         "librealsense",
-        "licensed",
         "lighthouse",
         "localstack",
         "magika",
@@ -11434,7 +11427,7 @@
       "path": "Formula/f/fluent-bit.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/fluent/fluent-bit",
-      "source_url": "https://github.com/fluent/fluent-bit/archive/refs/tags/v5.0.6.tar.gz",
+      "source_url": "https://github.com/fluent/fluent-bit/archive/refs/tags/v5.0.7.tar.gz",
       "head_url": "https://github.com/fluent/fluent-bit.git",
       "upstream_provider": "github",
       "upstream_repo": "fluent/fluent-bit",
@@ -13017,7 +13010,7 @@
       "path": "Formula/h/hf.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://huggingface.co/docs/huggingface_hub/guides/cli",
-      "source_url": "https://files.pythonhosted.org/packages/bd/65/9826515abb600b5722bcf53f8b4a2fb58340b1f8bfcaee19f83561c13a44/huggingface_hub-1.17.0.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/fb/d8/748ea0a47f0fa15227fe682f7a80826b4b7c096e4818044b8f56d6cb66d6/huggingface_hub-1.18.0.tar.gz",
       "head_url": "https://github.com/huggingface/huggingface_hub.git",
       "upstream_provider": "github",
       "upstream_repo": "huggingface/huggingface_hub",
@@ -15827,40 +15820,6 @@
         "lasso",
         "oath-toolkit"
       ]
-    },
-    {
-      "name": "licensed",
-      "path": "Formula/l/licensed.rb",
-      "openssl_dependency": "openssl@3",
-      "homepage": "https://github.com/licensee/licensed",
-      "source_url": "https://github.com/licensee/licensed.git",
-      "upstream_provider": "github",
-      "upstream_repo": "licensee/licensed",
-      "depth": null,
-      "target_branch": "main",
-      "staging_required_by": [],
-      "dependencies": [
-        "cmake",
-        "pkgconf",
-        "ruby",
-        "xz",
-        "openssl@3",
-        "zlib-ng-compat"
-      ],
-      "openssl_formula_dependencies": [
-        "cmake",
-        "ruby"
-      ],
-      "openssl_formula_dependents": [],
-      "transitive_openssl_formula_dependencies": [
-        "cmake",
-        "libgit2",
-        "libssh2",
-        "python@3.14",
-        "ruby",
-        "rust"
-      ],
-      "transitive_openssl_formula_dependents": []
     },
     {
       "name": "lighthouse",
@@ -19571,9 +19530,9 @@
     {
       "name": "ortp",
       "path": "Formula/o/ortp.rb",
-      "openssl_dependency": "openssl@4",
+      "openssl_dependency": "openssl@3",
       "homepage": "https://linphone.org/",
-      "source_url": "https://gitlab.linphone.org/BC/public/ortp/-/archive/5.4.119/ortp-5.4.119.tar.bz2",
+      "source_url": "https://gitlab.linphone.org/BC/public/linphone-sdk/-/archive/5.5.0/linphone-sdk-5.5.0.tar.bz2",
       "head_url": "https://gitlab.linphone.org/BC/public/linphone-sdk.git",
       "upstream_provider": "gitlab",
       "upstream_repo": "gitlab.linphone.org/BC/public/linphone-sdk",
@@ -19583,7 +19542,7 @@
       "dependencies": [
         "cmake",
         "pkgconf",
-        "openssl@4"
+        "openssl@3"
       ],
       "openssl_formula_dependencies": [
         "cmake"
@@ -27419,7 +27378,7 @@
       "path": "Formula/y/yek.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/mohsen1/yek",
-      "source_url": "https://github.com/mohsen1/yek/archive/refs/tags/v0.25.3.tar.gz",
+      "source_url": "https://github.com/mohsen1/yek/archive/refs/tags/v0.25.4.tar.gz",
       "head_url": "https://github.com/mohsen1/yek.git",
       "upstream_provider": "github",
       "upstream_repo": "mohsen1/yek",
