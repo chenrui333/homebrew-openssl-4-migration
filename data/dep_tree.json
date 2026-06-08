@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-07T07:40:26Z",
+  "generated_at": "2026-06-08T08:05:53Z",
   "repository": "Homebrew/homebrew-core",
-  "git_head": "8882344ca2bcdb5b41641fae0768697db2575c61",
+  "git_head": "c9ba26bc8de7537b361f0176a41ab2ac45e817ec",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "staging_branch": "openssl-4-migration-staging",
   "staged_depths": {
@@ -2528,7 +2528,6 @@
         "erlang@26",
         "erlang@27",
         "erlang@28",
-        "et",
         "etcd-cpp-apiv3",
         "ettercap",
         "eureka",
@@ -2665,7 +2664,6 @@
         "monkeysphere",
         "monolith",
         "moon",
-        "mosh",
         "mosquitto",
         "mupdf",
         "musikcube",
@@ -3154,7 +3152,6 @@
         "u-boot-tools",
         "uuu",
         "vineyard",
-        "vroom",
         "weaviate-cli",
         "xml-tooling-c",
         "zurl"
@@ -6348,7 +6345,6 @@
         "berkeley-db@5",
         "bzip2",
         "dpkg",
-        "gcc",
         "lz4",
         "openssl@3",
         "perl",
@@ -10665,8 +10661,7 @@
       ],
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
-        "cmake",
-        "python@3.14"
+        "cmake"
       ],
       "transitive_openssl_formula_dependents": []
     },
@@ -14137,7 +14132,7 @@
       "path": "Formula/k/keeper-commander.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://docs.keeper.io/en/privileged-access-manager/commander-cli/overview",
-      "source_url": "https://files.pythonhosted.org/packages/ad/51/64e3ca528cb829f051fe5d385f646a097e39c049df855ed7e013672cc689/keepercommander-18.0.4.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/cb/e5/db005bab48f4b18c56d96d31d79f30c7a1df1bb774a72b382ebab53818f1/keepercommander-18.0.6.tar.gz",
       "head_url": "https://github.com/Keeper-Security/Commander.git",
       "upstream_provider": "github",
       "upstream_repo": "Keeper-Security/Commander",
@@ -14829,7 +14824,7 @@
         "openssl@3",
         "libtirpc",
         "util-linux",
-        "gcc@12"
+        "gcc@13"
       ],
       "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [],
@@ -16985,7 +16980,7 @@
       "path": "Formula/m/mise.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://mise.jdx.dev/",
-      "source_url": "https://github.com/jdx/mise/archive/refs/tags/v2026.6.0.tar.gz",
+      "source_url": "https://github.com/jdx/mise/archive/refs/tags/v2026.6.1.tar.gz",
       "head_url": "https://github.com/jdx/mise.git",
       "upstream_provider": "github",
       "upstream_repo": "jdx/mise",
@@ -17398,8 +17393,7 @@
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
-        "libevent",
-        "python@3.14"
+        "libevent"
       ],
       "transitive_openssl_formula_dependents": []
     },
@@ -19402,8 +19396,7 @@
         "protobuf",
         "c-ares",
         "openssl@3",
-        "re2",
-        "llvm"
+        "re2"
       ],
       "openssl_formula_dependencies": [
         "cmake",
@@ -25510,7 +25503,7 @@
       "path": "Formula/t/teslamate.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://docs.teslamate.org",
-      "source_url": "https://github.com/teslamate-org/teslamate/archive/refs/tags/v3.0.0.tar.gz",
+      "source_url": "https://github.com/teslamate-org/teslamate/archive/refs/tags/v3.1.0.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "teslamate-org/teslamate",
       "depth": null,
@@ -26475,8 +26468,7 @@
         "pkgconf",
         "rapidjson",
         "openssl@3",
-        "llvm",
-        "gcc"
+        "llvm"
       ],
       "openssl_formula_dependencies": [
         "asio"
@@ -26485,8 +26477,7 @@
       "transitive_openssl_formula_dependencies": [
         "asio",
         "cmake",
-        "python@3.14",
-        "wget"
+        "python@3.14"
       ],
       "transitive_openssl_formula_dependents": []
     },
@@ -26530,7 +26521,7 @@
       "path": "Formula/v/vtcode.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/vinhnx/vtcode",
-      "source_url": "https://static.crates.io/crates/vtcode/vtcode-0.123.0.crate",
+      "source_url": "https://static.crates.io/crates/vtcode/vtcode-0.123.5.crate",
       "head_url": "https://github.com/vinhnx/vtcode.git",
       "upstream_provider": "github",
       "upstream_repo": "vinhnx/vtcode",

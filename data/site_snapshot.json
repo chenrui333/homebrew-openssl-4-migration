@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-07T07:40:26Z",
+  "generated_at": "2026-06-08T08:05:53Z",
   "repository": "Homebrew/homebrew-core",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "target_branch": "openssl-4-migration-staging",
@@ -8,7 +8,7 @@
     "staged_formulae": 58,
     "done": 40,
     "pending": 17,
-    "open_staging_prs": 4,
+    "open_staging_prs": 3,
     "current_gate": "Batch 0 — Roots",
     "current_gate_pending": 5,
     "upstream_blockers": 3,
@@ -55,7 +55,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 473,
+      "impact_count": 471,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 280846,
@@ -215,7 +215,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 118,
+      "impact_count": 117,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -447,19 +447,17 @@
       "impact_count": 25,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
-        "number": 280867,
-        "url": "https://github.com/Homebrew/homebrew-core/pull/280867",
-        "base": "openssl-4-migration-staging",
-        "is_draft": true,
-        "merge_state": "UNSTABLE",
-        "updated_at": "2026-06-01T02:25:05Z"
+        "number": 0,
+        "url": "",
+        "base": "",
+        "is_draft": false,
+        "merge_state": "",
+        "updated_at": ""
       },
       "readiness": [
-        "draft",
-        "checks-blocked",
-        "merge-unstable"
+        "missing-pr"
       ],
-      "next_action": "Resolve draft blockers",
+      "next_action": "Open migration PR",
       "upstream": {
         "provider": "github",
         "repo": "lu-zero/cargo-c",
@@ -474,10 +472,10 @@
       "flags": {
         "current_gate": false,
         "ready": false,
-        "draft": true,
-        "ci_blocked": true,
+        "draft": false,
+        "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": false,
+        "missing_pr": true,
         "upstream_blocked": false
       }
     },

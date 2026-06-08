@@ -1,4 +1,4 @@
-OpenSSL 4 Migration Status (2026-06-07)
+OpenSSL 4 Migration Status (2026-06-08)
 ========================================
 Total pending:  17
 Total done:     40 (70.2%)
@@ -50,7 +50,7 @@ Batch 1 -> openssl-4-migration-staging   [9/15 done]
   unbound                  DONE
 
 Batch 2 -> openssl-4-migration-staging   [2/5 done]
-  cargo-c                  PENDING    [PR #280867 open]
+  cargo-c                  PENDING
   cryptography             PENDING
   gdal                     PENDING
   php                      DONE
