@@ -1,25 +1,25 @@
-# OpenSSL 4 Migration Checklist (2026-06-08)
+# OpenSSL 4 Migration Checklist (2026-06-09)
 
-Progress: **40/57 (70.2%)**
+Progress: **22/58 (37.9%)**
 Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/homebrew-core/issues/278366)
 
 > Staging batches are depth 0 → 1 → 2 → 3 plus their computed transitive closure.
 > This public checklist is scoped to formulae targeting openssl-4-migration-staging.
 
-## Batch 0 — Roots -> openssl-4-migration-staging [20/25]
+## Batch 0 — Roots -> openssl-4-migration-staging [14/25]
 
 - [x] ~~apr-util~~
 - [x] ~~asio~~
-- [x] ~~cmake~~
+- [ ] cmake
 - [ ] dotnet
-- [x] ~~erlang~~
-- [x] ~~freetds~~
+- [ ] erlang
+- [ ] freetds <!-- PR #280846 open -->
 - [ ] grpc
-- [x] ~~hiredis~~
+- [ ] hiredis <!-- PR #280846 open -->
 - [x] ~~krb5~~
 - [x] ~~libevent~~
 - [ ] libfido2
-- [x] ~~librdkafka~~
+- [ ] librdkafka <!-- PR #280846 open -->
 - [x] ~~libssh~~
 - [x] ~~libssh2~~
 - [x] ~~mariadb-connector-c~~
@@ -31,46 +31,46 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 - [ ] python@3.14 <!-- PR #280846 open -->
 - [x] ~~srt~~
 - [x] ~~tcl-tk~~
-- [x] ~~tcl-tk@8~~
+- [ ] tcl-tk@8
 - [x] ~~wget~~
 
-## Batch 1 -> openssl-4-migration-staging [9/15]
+## Batch 1 -> openssl-4-migration-staging [3/15]
 
 - [ ] apache-arrow
-- [x] ~~bind~~
+- [ ] bind
 - [x] ~~curl~~
 - [x] ~~ffmpeg~~
-- [x] ~~folly~~
+- [ ] folly
 - [x] ~~httpd~~
-- [x] ~~libpq~~
+- [ ] libpq
 - [ ] node
-- [x] ~~postgresql@17~~
-- [x] ~~postgresql@18~~
+- [ ] postgresql@17
+- [ ] postgresql@18
 - [ ] pulseaudio
 - [ ] qtbase
 - [ ] rust
 - [ ] systemd <!-- PR #280864 open -->
-- [x] ~~unbound~~
+- [ ] unbound
 
-## Batch 2 -> openssl-4-migration-staging [2/5]
+## Batch 2 -> openssl-4-migration-staging [0/5]
 
 - [ ] cargo-c
 - [ ] cryptography
 - [ ] gdal
-- [x] ~~php~~
-- [x] ~~ruby~~
+- [ ] php
+- [ ] ruby
 
 ## Batch 3 -> openssl-4-migration-staging [0/1]
 
 - [ ] gstreamer
 
-## Staging closure -> openssl-4-migration-staging [9/12]
+## Staging closure -> openssl-4-migration-staging [5/12]
 
-- [x] ~~aws-c-cal~~
+- [ ] aws-c-cal
 - [ ] aws-c-io
-- [x] ~~cgal~~
-- [x] ~~libgit2~~
-- [x] ~~libngtcp2~~
+- [ ] cgal
+- [ ] libgit2
+- [ ] libngtcp2
 - [x] ~~libshout~~
 - [x] ~~libzip~~
 - [x] ~~net-snmp~~

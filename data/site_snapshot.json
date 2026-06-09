@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-06-08T08:05:53Z",
+  "generated_at": "2026-06-09T07:32:36Z",
   "repository": "Homebrew/homebrew-core",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "target_branch": "openssl-4-migration-staging",
   "scope": "staging",
   "summary": {
     "staged_formulae": 58,
-    "done": 40,
-    "pending": 17,
+    "done": 22,
+    "pending": 36,
     "open_staging_prs": 3,
     "current_gate": "Batch 0 — Roots",
-    "current_gate_pending": 5,
+    "current_gate_pending": 11,
     "upstream_blockers": 3,
     "base_mismatches": 0
   },
   "rows": [
     {
       "name": "cmake",
-      "live_status": "DONE",
+      "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
       "impact_count": 650,
@@ -31,9 +31,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "done"
+        "missing-pr"
       ],
-      "next_action": "Done",
+      "next_action": "Open migration PR",
       "upstream": {
         "provider": "gitlab",
         "repo": "gitlab.kitware.com/cmake/cmake",
@@ -46,7 +46,7 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": false,
+        "missing_pr": true,
         "upstream_blocked": false
       }
     },
@@ -62,13 +62,13 @@
         "url": "https://github.com/Homebrew/homebrew-core/pull/280846",
         "base": "openssl-4-migration-staging",
         "is_draft": true,
-        "merge_state": "UNSTABLE",
-        "updated_at": "2026-05-18T12:22:10Z"
+        "merge_state": "DIRTY",
+        "updated_at": "2026-06-08T14:29:03Z"
       },
       "readiness": [
         "draft",
         "checks-blocked",
-        "merge-unstable"
+        "merge-dirty"
       ],
       "next_action": "Resolve draft blockers",
       "upstream": {
@@ -129,7 +129,7 @@
     },
     {
       "name": "libgit2",
-      "live_status": "DONE",
+      "live_status": "PENDING",
       "depth": null,
       "group_label": "Staging closure",
       "impact_count": 273,
@@ -143,9 +143,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "done"
+        "missing-pr"
       ],
-      "next_action": "Done",
+      "next_action": "Open migration PR",
       "upstream": {
         "provider": "github",
         "repo": "libgit2/libgit2",
@@ -163,7 +163,7 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": false,
+        "missing_pr": true,
         "upstream_blocked": false
       }
     },
@@ -257,13 +257,13 @@
         "url": "https://github.com/Homebrew/homebrew-core/pull/280845",
         "base": "openssl-4-migration-staging",
         "is_draft": true,
-        "merge_state": "UNSTABLE",
-        "updated_at": "2026-06-03T12:56:40Z"
+        "merge_state": "DIRTY",
+        "updated_at": "2026-06-08T14:29:26Z"
       },
       "readiness": [
         "draft",
         "checks-blocked",
-        "merge-unstable"
+        "merge-dirty"
       ],
       "next_action": "Resolve draft blockers",
       "upstream": {
@@ -330,7 +330,7 @@
         "base": "openssl-4-migration-staging",
         "is_draft": true,
         "merge_state": "UNSTABLE",
-        "updated_at": "2026-06-01T06:19:37Z"
+        "updated_at": "2026-06-08T14:38:02Z"
       },
       "readiness": [
         "draft",
@@ -367,12 +367,12 @@
       "impact_count": 49,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
+        "number": 280846,
+        "url": "https://github.com/Homebrew/homebrew-core/pull/280846",
+        "base": "openssl-4-migration-staging",
+        "is_draft": true,
+        "merge_state": "DIRTY",
+        "updated_at": "2026-06-08T14:29:03Z"
       },
       "readiness": [
         "done"
@@ -401,7 +401,7 @@
     },
     {
       "name": "libngtcp2",
-      "live_status": "DONE",
+      "live_status": "PENDING",
       "depth": null,
       "group_label": "Staging closure",
       "impact_count": 32,
@@ -415,9 +415,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "done"
+        "missing-pr"
       ],
-      "next_action": "Done",
+      "next_action": "Open migration PR",
       "upstream": {
         "provider": "github",
         "repo": "ngtcp2/ngtcp2",
@@ -435,7 +435,7 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": false,
+        "missing_pr": true,
         "upstream_blocked": false
       }
     },
@@ -556,7 +556,7 @@
     },
     {
       "name": "libpq",
-      "live_status": "DONE",
+      "live_status": "PENDING",
       "depth": 1,
       "group_label": "Batch 1",
       "impact_count": 17,
@@ -570,9 +570,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "done"
+        "missing-pr"
       ],
-      "next_action": "Done",
+      "next_action": "Open migration PR",
       "upstream": {
         "provider": "other",
         "repo": "",
@@ -585,7 +585,7 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": false,
+        "missing_pr": true,
         "upstream_blocked": false
       }
     },
@@ -674,7 +674,7 @@
     },
     {
       "name": "ruby",
-      "live_status": "DONE",
+      "live_status": "PENDING",
       "depth": 2,
       "group_label": "Batch 2",
       "impact_count": 12,
@@ -688,9 +688,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "done"
+        "missing-pr"
       ],
-      "next_action": "Done",
+      "next_action": "Open migration PR",
       "upstream": {
         "provider": "github",
         "repo": "ruby/ruby",
@@ -708,7 +708,7 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": false,
+        "missing_pr": true,
         "upstream_blocked": false
       }
     },
@@ -720,12 +720,12 @@
       "impact_count": 11,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
+        "number": 280846,
+        "url": "https://github.com/Homebrew/homebrew-core/pull/280846",
+        "base": "openssl-4-migration-staging",
+        "is_draft": true,
+        "merge_state": "DIRTY",
+        "updated_at": "2026-06-08T14:29:03Z"
       },
       "readiness": [
         "done"
@@ -940,7 +940,7 @@
     },
     {
       "name": "aws-c-cal",
-      "live_status": "DONE",
+      "live_status": "PENDING",
       "depth": null,
       "group_label": "Staging closure",
       "impact_count": 8,
@@ -954,9 +954,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "done"
+        "missing-pr"
       ],
-      "next_action": "Done",
+      "next_action": "Open migration PR",
       "upstream": {
         "provider": "github",
         "repo": "awslabs/aws-c-cal",
@@ -974,7 +974,7 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": false,
+        "missing_pr": true,
         "upstream_blocked": false
       }
     },
@@ -1058,7 +1058,7 @@
     },
     {
       "name": "aws-c-io",
-      "live_status": "UNKNOWN",
+      "live_status": "PENDING",
       "depth": null,
       "group_label": "Staging closure",
       "impact_count": 7,
@@ -1098,7 +1098,7 @@
     },
     {
       "name": "folly",
-      "live_status": "DONE",
+      "live_status": "PENDING",
       "depth": 1,
       "group_label": "Batch 1",
       "impact_count": 7,
@@ -1112,9 +1112,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "done"
+        "missing-pr"
       ],
-      "next_action": "Done",
+      "next_action": "Open migration PR",
       "upstream": {
         "provider": "github",
         "repo": "facebook/folly",
@@ -1132,29 +1132,31 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": false,
+        "missing_pr": true,
         "upstream_blocked": false
       }
     },
     {
       "name": "freetds",
-      "live_status": "DONE",
+      "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
       "impact_count": 7,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
+        "number": 280846,
+        "url": "https://github.com/Homebrew/homebrew-core/pull/280846",
+        "base": "openssl-4-migration-staging",
+        "is_draft": true,
+        "merge_state": "DIRTY",
+        "updated_at": "2026-06-08T14:29:03Z"
       },
       "readiness": [
-        "done"
+        "draft",
+        "checks-blocked",
+        "merge-dirty"
       ],
-      "next_action": "Done",
+      "next_action": "Resolve draft blockers",
       "upstream": {
         "provider": "github",
         "repo": "FreeTDS/freetds",
@@ -1169,8 +1171,8 @@
       "flags": {
         "current_gate": true,
         "ready": false,
-        "draft": false,
-        "ci_blocked": false,
+        "draft": true,
+        "ci_blocked": true,
         "base_mismatch": false,
         "missing_pr": false,
         "upstream_blocked": false
@@ -1262,12 +1264,12 @@
       "impact_count": 6,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
+        "number": 280846,
+        "url": "https://github.com/Homebrew/homebrew-core/pull/280846",
+        "base": "openssl-4-migration-staging",
+        "is_draft": true,
+        "merge_state": "DIRTY",
+        "updated_at": "2026-06-08T14:29:03Z"
       },
       "readiness": [
         "done"
@@ -1342,12 +1344,12 @@
       "impact_count": 5,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
+        "number": 280846,
+        "url": "https://github.com/Homebrew/homebrew-core/pull/280846",
+        "base": "openssl-4-migration-staging",
+        "is_draft": true,
+        "merge_state": "DIRTY",
+        "updated_at": "2026-06-08T14:29:03Z"
       },
       "readiness": [
         "done"
@@ -1376,23 +1378,25 @@
     },
     {
       "name": "hiredis",
-      "live_status": "DONE",
+      "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
       "impact_count": 5,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
+        "number": 280846,
+        "url": "https://github.com/Homebrew/homebrew-core/pull/280846",
+        "base": "openssl-4-migration-staging",
+        "is_draft": true,
+        "merge_state": "DIRTY",
+        "updated_at": "2026-06-08T14:29:03Z"
       },
       "readiness": [
-        "done"
+        "draft",
+        "checks-blocked",
+        "merge-dirty"
       ],
-      "next_action": "Done",
+      "next_action": "Resolve draft blockers",
       "upstream": {
         "provider": "github",
         "repo": "redis/hiredis",
@@ -1407,8 +1411,8 @@
       "flags": {
         "current_gate": true,
         "ready": false,
-        "draft": false,
-        "ci_blocked": false,
+        "draft": true,
+        "ci_blocked": true,
         "base_mismatch": false,
         "missing_pr": false,
         "upstream_blocked": false
@@ -1457,12 +1461,12 @@
       "impact_count": 5,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
+        "number": 280846,
+        "url": "https://github.com/Homebrew/homebrew-core/pull/280846",
+        "base": "openssl-4-migration-staging",
+        "is_draft": true,
+        "merge_state": "DIRTY",
+        "updated_at": "2026-06-08T14:29:03Z"
       },
       "readiness": [
         "done"
@@ -1492,12 +1496,12 @@
       "impact_count": 5,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
+        "number": 280846,
+        "url": "https://github.com/Homebrew/homebrew-core/pull/280846",
+        "base": "openssl-4-migration-staging",
+        "is_draft": true,
+        "merge_state": "DIRTY",
+        "updated_at": "2026-06-08T14:29:03Z"
       },
       "readiness": [
         "done"
@@ -1641,7 +1645,7 @@
     },
     {
       "name": "bind",
-      "live_status": "DONE",
+      "live_status": "PENDING",
       "depth": 1,
       "group_label": "Batch 1",
       "impact_count": 4,
@@ -1655,9 +1659,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "done"
+        "missing-pr"
       ],
-      "next_action": "Done",
+      "next_action": "Open migration PR",
       "upstream": {
         "provider": "gitlab",
         "repo": "gitlab.isc.org/isc-projects/bind9",
@@ -1670,13 +1674,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": false,
+        "missing_pr": true,
         "upstream_blocked": false
       }
     },
     {
       "name": "cgal",
-      "live_status": "DONE",
+      "live_status": "PENDING",
       "depth": null,
       "group_label": "Staging closure",
       "impact_count": 4,
@@ -1690,9 +1694,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "done"
+        "missing-pr"
       ],
-      "next_action": "Done",
+      "next_action": "Open migration PR",
       "upstream": {
         "provider": "github",
         "repo": "CGAL/cgal",
@@ -1710,13 +1714,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": false,
+        "missing_pr": true,
         "upstream_blocked": false
       }
     },
     {
       "name": "erlang",
-      "live_status": "DONE",
+      "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
       "impact_count": 4,
@@ -1730,9 +1734,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "done"
+        "missing-pr"
       ],
-      "next_action": "Done",
+      "next_action": "Open migration PR",
       "upstream": {
         "provider": "github",
         "repo": "erlang/otp",
@@ -1750,7 +1754,7 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": false,
+        "missing_pr": true,
         "upstream_blocked": false
       }
     },
@@ -1831,7 +1835,7 @@
     },
     {
       "name": "unbound",
-      "live_status": "DONE",
+      "live_status": "PENDING",
       "depth": 1,
       "group_label": "Batch 1",
       "impact_count": 4,
@@ -1845,9 +1849,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "done"
+        "missing-pr"
       ],
-      "next_action": "Done",
+      "next_action": "Open migration PR",
       "upstream": {
         "provider": "github",
         "repo": "NLnetLabs/unbound",
@@ -1865,7 +1869,7 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": false,
+        "missing_pr": true,
         "upstream_blocked": false
       }
     },
@@ -1906,7 +1910,7 @@
     },
     {
       "name": "tcl-tk@8",
-      "live_status": "DONE",
+      "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
       "impact_count": 3,
@@ -1920,9 +1924,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "done"
+        "missing-pr"
       ],
-      "next_action": "Done",
+      "next_action": "Open migration PR",
       "upstream": {
         "provider": "other",
         "repo": "",
@@ -1935,7 +1939,7 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": false,
+        "missing_pr": true,
         "upstream_blocked": false
       }
     },
@@ -2021,23 +2025,25 @@
     },
     {
       "name": "librdkafka",
-      "live_status": "DONE",
+      "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
       "impact_count": 1,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
+        "number": 280846,
+        "url": "https://github.com/Homebrew/homebrew-core/pull/280846",
+        "base": "openssl-4-migration-staging",
+        "is_draft": true,
+        "merge_state": "DIRTY",
+        "updated_at": "2026-06-08T14:29:03Z"
       },
       "readiness": [
-        "done"
+        "draft",
+        "checks-blocked",
+        "merge-dirty"
       ],
-      "next_action": "Done",
+      "next_action": "Resolve draft blockers",
       "upstream": {
         "provider": "github",
         "repo": "confluentinc/librdkafka",
@@ -2052,8 +2058,8 @@
       "flags": {
         "current_gate": true,
         "ready": false,
-        "draft": false,
-        "ci_blocked": false,
+        "draft": true,
+        "ci_blocked": true,
         "base_mismatch": false,
         "missing_pr": false,
         "upstream_blocked": false
@@ -2061,7 +2067,7 @@
     },
     {
       "name": "postgresql@17",
-      "live_status": "DONE",
+      "live_status": "PENDING",
       "depth": 1,
       "group_label": "Batch 1",
       "impact_count": 1,
@@ -2075,9 +2081,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "done"
+        "missing-pr"
       ],
-      "next_action": "Done",
+      "next_action": "Open migration PR",
       "upstream": {
         "provider": "other",
         "repo": "",
@@ -2090,13 +2096,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": false,
+        "missing_pr": true,
         "upstream_blocked": false
       }
     },
     {
       "name": "postgresql@18",
-      "live_status": "DONE",
+      "live_status": "PENDING",
       "depth": 1,
       "group_label": "Batch 1",
       "impact_count": 1,
@@ -2110,9 +2116,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "done"
+        "missing-pr"
       ],
-      "next_action": "Done",
+      "next_action": "Open migration PR",
       "upstream": {
         "provider": "other",
         "repo": "",
@@ -2125,7 +2131,7 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": false,
+        "missing_pr": true,
         "upstream_blocked": false
       }
     },
@@ -2166,7 +2172,7 @@
     },
     {
       "name": "php",
-      "live_status": "DONE",
+      "live_status": "PENDING",
       "depth": 2,
       "group_label": "Batch 2",
       "impact_count": 0,
@@ -2180,9 +2186,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "done"
+        "missing-pr"
       ],
-      "next_action": "Done",
+      "next_action": "Open migration PR",
       "upstream": {
         "provider": "github",
         "repo": "php/php-src",
@@ -2200,7 +2206,7 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": false,
+        "missing_pr": true,
         "upstream_blocked": false
       }
     },
