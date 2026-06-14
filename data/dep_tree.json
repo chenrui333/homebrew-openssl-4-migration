@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-13T07:34:35Z",
+  "generated_at": "2026-06-14T07:53:08Z",
   "repository": "Homebrew/homebrew-core",
-  "git_head": "095791f7fc93a05e31c3aaedfb5c9ca0e05812d5",
+  "git_head": "c177cfe52f1a725feb7ce391e5654995e2dcc061",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "staging_branch": "openssl-4-migration-staging",
   "staged_depths": {
@@ -1216,7 +1216,6 @@
         "openssl@3",
         "protobuf",
         "re2",
-        "llvm",
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
@@ -1232,8 +1231,7 @@
         "syslog-ng"
       ],
       "transitive_openssl_formula_dependencies": [
-        "cmake",
-        "python@3.14"
+        "cmake"
       ],
       "transitive_openssl_formula_dependents": [
         "apache-arrow",
@@ -2311,7 +2309,7 @@
       "path": "Formula/p/python@3.14.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://www.python.org/",
-      "source_url": "https://www.python.org/ftp/python/3.14.5/Python-3.14.5.tgz",
+      "source_url": "https://www.python.org/ftp/python/3.14.6/Python-3.14.6.tgz",
       "upstream_provider": "python",
       "depth": 0,
       "target_branch": "openssl-4-migration-staging",
@@ -2324,9 +2322,7 @@
         "dotnet",
         "erlang",
         "ffmpeg",
-        "folly",
         "gdal",
-        "grpc",
         "gstreamer",
         "libfido2",
         "node",
@@ -2448,7 +2444,6 @@
         "bkmr",
         "boa",
         "borgbackup",
-        "brpc",
         "btcli",
         "btfs",
         "bulletty",
@@ -2473,7 +2468,6 @@
         "clamav",
         "claws-mail",
         "click",
-        "clickhouse-odbc",
         "clipboard",
         "cnats",
         "codanna",
@@ -2530,14 +2524,12 @@
         "erlang@26",
         "erlang@27",
         "erlang@28",
-        "etcd-cpp-apiv3",
         "ettercap",
         "eureka",
         "expert",
         "fastd",
         "fastnetmon",
         "fb-client",
-        "fbthrift",
         "feluda",
         "fend",
         "feroxbuster",
@@ -2546,12 +2538,10 @@
         "ffsend",
         "findomain",
         "firefoxpwa",
-        "fizz",
         "flashrom",
         "flawz",
         "flowrs",
         "fnox",
-        "folly",
         "forbidden",
         "forgejo-cli",
         "freeradius-server",
@@ -2579,7 +2569,6 @@
         "gocryptfs",
         "gpac",
         "grin-wallet",
-        "grpc",
         "gstreamer",
         "gurk",
         "gwenhywfar",
@@ -2606,7 +2595,6 @@
         "karchive",
         "kea",
         "keeper-commander",
-        "keydb",
         "kmod",
         "komac",
         "kty",
@@ -2626,7 +2614,6 @@
         "libfixbuf",
         "libfreefare",
         "libjwt",
-        "libpulsar",
         "librealsense",
         "libtorrent-rasterbar",
         "libvncserver",
@@ -2670,7 +2657,6 @@
         "mupdf",
         "musikcube",
         "mutt",
-        "mvfst",
         "mydumper",
         "mysql",
         "mysql-client",
@@ -2709,7 +2695,6 @@
         "openapi-tui",
         "opensc",
         "openssh",
-        "opentelemetry-cpp",
         "openvpn",
         "ord",
         "orogene",
@@ -2754,7 +2739,6 @@
         "proto",
         "prowler",
         "proxelar",
-        "proxygen",
         "proxytunnel",
         "prr",
         "prs",
@@ -2846,7 +2830,6 @@
         "teslamate",
         "texlive",
         "text-embeddings-inference",
-        "thors-anvil",
         "tiledb",
         "tiny",
         "toktop",
@@ -2866,7 +2849,6 @@
         "vsd",
         "vtcode",
         "wally",
-        "wangle",
         "wassette",
         "watchman",
         "weave",
@@ -3453,7 +3435,6 @@
         "snappy",
         "xz",
         "zstd",
-        "llvm",
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
@@ -3471,8 +3452,7 @@
       ],
       "transitive_openssl_formula_dependencies": [
         "cmake",
-        "libevent",
-        "python@3.14"
+        "libevent"
       ],
       "transitive_openssl_formula_dependents": [
         "clickhouse-odbc",
@@ -5138,7 +5118,7 @@
       "path": "Formula/a/aws-c-io.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/awslabs/aws-c-io",
-      "source_url": "https://github.com/awslabs/aws-c-io/archive/refs/tags/v0.27.1.tar.gz",
+      "source_url": "https://github.com/awslabs/aws-c-io/archive/refs/tags/v0.27.2.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "awslabs/aws-c-io",
       "depth": null,
@@ -5794,7 +5774,8 @@
         "cmake"
       ],
       "openssl_formula_dependents": [
-        "aws-c-io"
+        "aws-c-io",
+        "awscurl"
       ],
       "transitive_openssl_formula_dependencies": [
         "cmake"
@@ -6668,7 +6649,7 @@
       "path": "Formula/a/aws-sam-cli.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://aws.amazon.com/serverless/sam/",
-      "source_url": "https://files.pythonhosted.org/packages/01/50/577a6b040cfa9cc4c3f62f0c49e11128affbd75bdf4ea1fd55802decdcd5/aws_sam_cli-1.162.0.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/47/12/34d86c3f31d0155361f89cee79343c45e0ac96783b6d5acd1428c3fa7629/aws_sam_cli-1.162.1.tar.gz",
       "head_url": "https://github.com/aws/aws-sam-cli.git",
       "upstream_provider": "github",
       "upstream_repo": "aws/aws-sam-cli",
@@ -6737,7 +6718,7 @@
       "path": "Formula/a/awscurl.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/okigan/awscurl",
-      "source_url": "https://files.pythonhosted.org/packages/54/a3/fcbc64c5e038b87394e72a03131643109e451a697d467a7f90c6b6413ee9/awscurl-0.42.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/f0/df/4db11e9a172ce840d73c37f40ee326d49dac7180792fdbc4d25d1f4706f0/awscurl-0.43.tar.gz",
       "head_url": "https://github.com/okigan/awscurl.git",
       "upstream_provider": "github",
       "upstream_repo": "okigan/awscurl",
@@ -6760,14 +6741,16 @@
         "certifi",
         "cryptography",
         "openssl@3",
-        "python@3.14"
+        "python@3.14",
+        "s2n"
       ],
       "openssl_formula_dependencies": [
         "aws-c-cal",
         "aws-c-io",
         "cmake",
         "cryptography",
-        "python@3.14"
+        "python@3.14",
+        "s2n"
       ],
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
@@ -7283,8 +7266,7 @@
       ],
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
-        "cmake",
-        "python@3.14"
+        "cmake"
       ],
       "transitive_openssl_formula_dependents": []
     },
@@ -8325,8 +8307,7 @@
         "cmake",
         "folly",
         "libevent",
-        "poco",
-        "python@3.14"
+        "poco"
       ],
       "transitive_openssl_formula_dependents": []
     },
@@ -8712,7 +8693,7 @@
       "path": "Formula/c/coturn.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/coturn/coturn",
-      "source_url": "https://github.com/coturn/coturn/archive/refs/tags/4.12.0.tar.gz",
+      "source_url": "https://github.com/coturn/coturn/archive/refs/tags/4.13.0.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "coturn/coturn",
       "depth": null,
@@ -10704,8 +10685,7 @@
       "transitive_openssl_formula_dependencies": [
         "cmake",
         "cpprestsdk",
-        "grpc",
-        "python@3.14"
+        "grpc"
       ],
       "transitive_openssl_formula_dependents": [
         "vineyard"
@@ -11006,7 +10986,6 @@
         "openssl@3",
         "wangle",
         "xxhash",
-        "llvm",
         "boost",
         "zlib-ng-compat"
       ],
@@ -11026,7 +11005,6 @@
         "folly",
         "libevent",
         "mvfst",
-        "python@3.14",
         "wangle"
       ],
       "transitive_openssl_formula_dependents": [
@@ -11324,8 +11302,7 @@
       "transitive_openssl_formula_dependencies": [
         "cmake",
         "folly",
-        "libevent",
-        "python@3.14"
+        "libevent"
       ],
       "transitive_openssl_formula_dependents": [
         "fbthrift",
@@ -11369,7 +11346,7 @@
       "path": "Formula/f/flawz.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/orhun/flawz",
-      "source_url": "https://github.com/orhun/flawz/archive/refs/tags/v0.3.0.tar.gz",
+      "source_url": "https://github.com/orhun/flawz/archive/refs/tags/v0.4.1.tar.gz",
       "head_url": "https://github.com/orhun/flawz.git",
       "upstream_provider": "github",
       "upstream_repo": "orhun/flawz",
@@ -14208,8 +14185,7 @@
       "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
-        "cmake",
-        "python@3.14"
+        "cmake"
       ],
       "transitive_openssl_formula_dependents": []
     },
@@ -15408,8 +15384,7 @@
       ],
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
-        "cmake",
-        "python@3.14"
+        "cmake"
       ],
       "transitive_openssl_formula_dependents": []
     },
@@ -16557,7 +16532,6 @@
         "re2",
         "tinyxml2",
         "xz",
-        "llvm",
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
@@ -16987,7 +16961,7 @@
       "path": "Formula/m/mise.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://mise.jdx.dev/",
-      "source_url": "https://github.com/jdx/mise/archive/refs/tags/v2026.6.5.tar.gz",
+      "source_url": "https://github.com/jdx/mise/archive/refs/tags/v2026.6.6.tar.gz",
       "head_url": "https://github.com/jdx/mise.git",
       "upstream_provider": "github",
       "upstream_repo": "jdx/mise",
@@ -17613,8 +17587,7 @@
         "cmake",
         "fizz",
         "folly",
-        "libevent",
-        "python@3.14"
+        "libevent"
       ],
       "transitive_openssl_formula_dependents": [
         "fbthrift",
@@ -18467,8 +18440,7 @@
         "icu4c@77",
         "libnghttp2",
         "libuv",
-        "openssl@3",
-        "llvm"
+        "openssl@3"
       ],
       "openssl_formula_dependencies": [
         "python@3.13"
@@ -18500,7 +18472,6 @@
         "libnghttp2",
         "libuv",
         "openssl@3",
-        "llvm",
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
@@ -18540,7 +18511,6 @@
         "sqlite",
         "uvwasi",
         "zstd",
-        "llvm",
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
@@ -19412,8 +19382,7 @@
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
-        "grpc",
-        "python@3.14"
+        "grpc"
       ],
       "transitive_openssl_formula_dependents": []
     },
@@ -19934,8 +19903,7 @@
         "rust",
         "boost",
         "lua",
-        "openssl@3",
-        "llvm"
+        "openssl@3"
       ],
       "openssl_formula_dependencies": [
         "rust"
@@ -21217,7 +21185,7 @@
       "path": "Formula/p/prowler.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://prowler.com/",
-      "source_url": "https://files.pythonhosted.org/packages/ee/7f/179a64160bee3cc11177328e2fbe5f81edcede50e0441e104d1801ea422a/prowler-5.30.0.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/19/4c/78ed9afd0a98682eaae197dd97a4b5f18b3b6735b8022cddd56a5b6d4522/prowler-5.30.1.tar.gz",
       "head_url": "https://github.com/prowler-cloud/prowler.git",
       "upstream_provider": "github",
       "upstream_repo": "prowler-cloud/prowler",
@@ -21328,7 +21296,6 @@
         "folly",
         "libevent",
         "mvfst",
-        "python@3.14",
         "wangle"
       ],
       "transitive_openssl_formula_dependents": []
@@ -21682,7 +21649,7 @@
       "path": "Formula/p/python-freethreading.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://www.python.org/",
-      "source_url": "https://www.python.org/ftp/python/3.14.5/Python-3.14.5.tgz",
+      "source_url": "https://www.python.org/ftp/python/3.14.6/Python-3.14.6.tgz",
       "upstream_provider": "python",
       "depth": null,
       "target_branch": "main",
@@ -22032,7 +21999,7 @@
       "path": "Formula/r/rattler-build.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://rattler.build",
-      "source_url": "https://github.com/prefix-dev/rattler-build/archive/refs/tags/v0.66.0.tar.gz",
+      "source_url": "https://github.com/prefix-dev/rattler-build/archive/refs/tags/v0.66.1.tar.gz",
       "head_url": "https://github.com/prefix-dev/rattler-build.git",
       "upstream_provider": "github",
       "upstream_repo": "prefix-dev/rattler-build",
@@ -25539,7 +25506,7 @@
       "path": "Formula/t/teslamate.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://docs.teslamate.org",
-      "source_url": "https://github.com/teslamate-org/teslamate/archive/refs/tags/v3.1.0.tar.gz",
+      "source_url": "https://github.com/teslamate-org/teslamate/archive/refs/tags/v4.0.0.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "teslamate-org/teslamate",
       "depth": null,
@@ -25719,8 +25686,7 @@
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
-        "libevent",
-        "python@3.14"
+        "libevent"
       ],
       "transitive_openssl_formula_dependents": []
     },
@@ -26557,7 +26523,7 @@
       "path": "Formula/v/vtcode.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/vinhnx/vtcode",
-      "source_url": "https://static.crates.io/crates/vtcode/vtcode-0.127.0.crate",
+      "source_url": "https://static.crates.io/crates/vtcode/vtcode-0.128.0.crate",
       "head_url": "https://github.com/vinhnx/vtcode.git",
       "upstream_provider": "github",
       "upstream_repo": "vinhnx/vtcode",
@@ -26711,8 +26677,7 @@
         "cmake",
         "fizz",
         "folly",
-        "libevent",
-        "python@3.14"
+        "libevent"
       ],
       "transitive_openssl_formula_dependents": [
         "fbthrift",
