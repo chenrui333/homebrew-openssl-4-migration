@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-20T07:36:33Z",
+  "generated_at": "2026-06-21T07:55:30Z",
   "repository": "Homebrew/homebrew-core",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "target_branch": "openssl-4-migration-staging",
@@ -20,7 +20,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 655,
+      "impact_count": 656,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -55,7 +55,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 462,
+      "impact_count": 463,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 280846,
@@ -92,7 +92,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 294,
+      "impact_count": 295,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -132,7 +132,7 @@
       "live_status": "PENDING",
       "depth": null,
       "group_label": "Staging closure",
-      "impact_count": 271,
+      "impact_count": 272,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -172,7 +172,7 @@
       "live_status": "PENDING",
       "depth": 1,
       "group_label": "Batch 1",
-      "impact_count": 269,
+      "impact_count": 270,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -215,7 +215,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 118,
+      "impact_count": 119,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -285,7 +285,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 73,
+      "impact_count": 75,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 280845,
@@ -322,7 +322,7 @@
       "live_status": "PENDING",
       "depth": 1,
       "group_label": "Batch 1",
-      "impact_count": 56,
+      "impact_count": 57,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 280864,
@@ -1529,41 +1529,6 @@
       }
     },
     {
-      "name": "python@3.12",
-      "live_status": "DONE",
-      "depth": 0,
-      "group_label": "Batch 0 — Roots",
-      "impact_count": 5,
-      "target_branch": "openssl-4-migration-staging",
-      "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
-      },
-      "readiness": [
-        "done"
-      ],
-      "next_action": "Done",
-      "upstream": {
-        "provider": "python",
-        "repo": "",
-        "url": ""
-      },
-      "issues": [],
-      "flags": {
-        "current_gate": true,
-        "ready": false,
-        "draft": false,
-        "ci_blocked": false,
-        "base_mismatch": false,
-        "missing_pr": false,
-        "upstream_blocked": false
-      }
-    },
-    {
       "name": "thrift",
       "live_status": "PENDING",
       "depth": null,
@@ -1825,6 +1790,41 @@
       ],
       "flags": {
         "current_gate": false,
+        "ready": false,
+        "draft": false,
+        "ci_blocked": false,
+        "base_mismatch": false,
+        "missing_pr": false,
+        "upstream_blocked": false
+      }
+    },
+    {
+      "name": "python@3.12",
+      "live_status": "DONE",
+      "depth": 0,
+      "group_label": "Batch 0 — Roots",
+      "impact_count": 4,
+      "target_branch": "openssl-4-migration-staging",
+      "pr": {
+        "number": 0,
+        "url": "",
+        "base": "",
+        "is_draft": false,
+        "merge_state": "",
+        "updated_at": ""
+      },
+      "readiness": [
+        "done"
+      ],
+      "next_action": "Done",
+      "upstream": {
+        "provider": "python",
+        "repo": "",
+        "url": ""
+      },
+      "issues": [],
+      "flags": {
+        "current_gate": true,
         "ready": false,
         "draft": false,
         "ci_blocked": false,

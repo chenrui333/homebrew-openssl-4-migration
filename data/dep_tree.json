@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-20T07:36:33Z",
+  "generated_at": "2026-06-21T07:55:30Z",
   "repository": "Homebrew/homebrew-core",
-  "git_head": "219547ba2015d3ca710207bc63b9cbd6dcb8574d",
+  "git_head": "365e2b4e0c624a34d51c6b6c90845e7ef00e496b",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "staging_branch": "openssl-4-migration-staging",
   "staged_depths": {
@@ -60,7 +60,7 @@
       "gstreamer"
     ]
   },
-  "formula_count": 751,
+  "formula_count": 752,
   "formulae": [
     {
       "name": "apr-util",
@@ -1048,6 +1048,7 @@
         "xml-security-c",
         "xml-tooling-c",
         "xmrig",
+        "xorg-server",
         "xrootd",
         "yafc",
         "yara",
@@ -1399,13 +1400,13 @@
         "rethinkdb",
         "root",
         "samba",
-        "sapling",
         "sgr",
         "sleuthkit",
         "spice-gtk",
         "termscp",
         "texlive",
         "uwsgi",
+        "xorg-server",
         "xrootd"
       ]
     },
@@ -1992,6 +1993,7 @@
         "wuppiefuzz",
         "x-cli",
         "xml-tooling-c",
+        "xorg-server",
         "yek",
         "yozefu",
         "zellij",
@@ -2169,8 +2171,7 @@
       "openssl_formula_dependents": [
         "ansible@10",
         "ansible@9",
-        "prowler",
-        "sapling"
+        "prowler"
       ],
       "transitive_openssl_formula_dependencies": [
         "cmake",
@@ -2180,8 +2181,7 @@
         "ansible@10",
         "ansible@9",
         "prowler",
-        "rethinkdb",
-        "sapling"
+        "rethinkdb"
       ]
     },
     {
@@ -2217,7 +2217,8 @@
         "node@18",
         "node@20",
         "node@22",
-        "node@24"
+        "node@24",
+        "sapling"
       ],
       "transitive_openssl_formula_dependencies": [
         "cmake"
@@ -2286,6 +2287,7 @@
         "rawdog",
         "rethinkdb",
         "root",
+        "sapling",
         "sgr",
         "sigstore",
         "spice-gtk",
@@ -2294,6 +2296,7 @@
         "teslamate",
         "texlive",
         "weaviate-cli",
+        "xorg-server",
         "zeek",
         "zurl"
       ]
@@ -2859,6 +2862,7 @@
         "x11vnc",
         "x3270",
         "xmrig",
+        "xorg-server",
         "xrootd",
         "yara",
         "yek",
@@ -3139,6 +3143,7 @@
         "vineyard",
         "weaviate-cli",
         "xml-tooling-c",
+        "xorg-server",
         "zurl"
       ]
     },
@@ -4404,6 +4409,7 @@
         "wthrr",
         "wuppiefuzz",
         "x-cli",
+        "xorg-server",
         "yek",
         "yozefu",
         "zellij",
@@ -4466,7 +4472,8 @@
         "pipewire",
         "qtbase",
         "spice-server",
-        "stellar-cli"
+        "stellar-cli",
+        "xorg-server"
       ],
       "transitive_openssl_formula_dependencies": [
         "cmake",
@@ -4529,6 +4536,7 @@
         "synergy-core",
         "tsduck",
         "uuu",
+        "xorg-server",
         "zurl"
       ]
     },
@@ -5515,6 +5523,7 @@
         "wthrr",
         "wuppiefuzz",
         "x-cli",
+        "xorg-server",
         "yek",
         "yozefu",
         "zellij",
@@ -10814,7 +10823,7 @@
       "path": "Formula/f/fakecloud.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://fakecloud.dev/",
-      "source_url": "https://github.com/faiscadev/fakecloud/archive/refs/tags/v0.20.0.tar.gz",
+      "source_url": "https://github.com/faiscadev/fakecloud/archive/refs/tags/v0.20.1.tar.gz",
       "head_url": "https://github.com/faiscadev/fakecloud.git",
       "upstream_provider": "github",
       "upstream_repo": "faiscadev/fakecloud",
@@ -16169,7 +16178,7 @@
       "path": "Formula/m/manticoresearch.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://manticoresearch.com",
-      "source_url": "https://github.com/manticoresoftware/manticoresearch/archive/refs/tags/25.0.0.tar.gz",
+      "source_url": "https://github.com/manticoresoftware/manticoresearch/archive/refs/tags/27.1.5.tar.gz",
       "head_url": "https://github.com/manticoresoftware/manticoresearch.git",
       "upstream_provider": "github",
       "upstream_repo": "manticoresoftware/manticoresearch",
@@ -21267,7 +21276,7 @@
       "path": "Formula/p/prowler.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://prowler.com/",
-      "source_url": "https://files.pythonhosted.org/packages/dd/33/ec9149a76a5f6f7cac4f3f1c39f661c22cdb8892d6f571408d7e5f471181/prowler-5.30.2.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/9c/46/ffc70de1d4d0de773d17278505213b0f9c5180b2f6ad97316169597c72f6/prowler-5.30.3.tar.gz",
       "head_url": "https://github.com/prowler-cloud/prowler.git",
       "upstream_provider": "github",
       "upstream_repo": "prowler-cloud/prowler",
@@ -23317,25 +23326,24 @@
         "libssh2",
         "node",
         "openssl@3",
-        "python@3.12",
+        "python@3.13",
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
         "cmake",
         "libssh2",
         "node",
-        "python@3.12",
+        "python@3.13",
         "rust"
       ],
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
-        "krb5",
         "libgit2",
         "libngtcp2",
         "libssh2",
         "node",
-        "python@3.12",
+        "python@3.13",
         "python@3.14",
         "rust"
       ],
@@ -25066,7 +25074,7 @@
       "path": "Formula/s/superseedr.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/Jagalite/superseedr",
-      "source_url": "https://github.com/Jagalite/superseedr/archive/refs/tags/v1.0.9.tar.gz",
+      "source_url": "https://github.com/Jagalite/superseedr/archive/refs/tags/v1.0.10.tar.gz",
       "head_url": "https://github.com/Jagalite/superseedr.git",
       "upstream_provider": "github",
       "upstream_repo": "Jagalite/superseedr",
@@ -27369,11 +27377,75 @@
       "transitive_openssl_formula_dependents": []
     },
     {
+      "name": "xorg-server",
+      "path": "Formula/x/xorg-server.rb",
+      "openssl_dependency": "openssl@3",
+      "homepage": "https://www.x.org",
+      "source_url": "https://www.x.org/releases/individual/xserver/xorg-server-21.1.23.tar.xz",
+      "upstream_provider": "other",
+      "depth": null,
+      "target_branch": "main",
+      "staging_required_by": [],
+      "dependencies": [
+        "font-util",
+        "libxkbfile",
+        "meson",
+        "ninja",
+        "pkgconf",
+        "util-macros",
+        "xorgproto",
+        "xtrans",
+        "libx11",
+        "libxau",
+        "libxcb",
+        "libxdmcp",
+        "libxext",
+        "libxfixes",
+        "libxfont2",
+        "mesa",
+        "pixman",
+        "xauth",
+        "xcb-util",
+        "xcb-util-image",
+        "xcb-util-keysyms",
+        "xcb-util-renderutil",
+        "xcb-util-wm",
+        "xkbcomp",
+        "xkeyboard-config",
+        "libapplewm",
+        "dbus",
+        "libdrm",
+        "libepoxy",
+        "libpciaccess",
+        "libtirpc",
+        "libxcvt",
+        "libxshmfence",
+        "openssl@3",
+        "systemd"
+      ],
+      "openssl_formula_dependencies": [
+        "systemd"
+      ],
+      "openssl_formula_dependents": [],
+      "transitive_openssl_formula_dependencies": [
+        "cmake",
+        "krb5",
+        "libgit2",
+        "libssh2",
+        "python@3.13",
+        "python@3.14",
+        "rust",
+        "systemd",
+        "wget"
+      ],
+      "transitive_openssl_formula_dependents": []
+    },
+    {
       "name": "xrootd",
       "path": "Formula/x/xrootd.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://xrootd.slac.stanford.edu/",
-      "source_url": "https://github.com/xrootd/xrootd/releases/download/v6.0.3/xrootd-6.0.3.tar.gz",
+      "source_url": "https://github.com/xrootd/xrootd/releases/download/v6.1.0/xrootd-6.1.0.tar.gz",
       "head_url": "https://github.com/xrootd/xrootd.git",
       "upstream_provider": "github",
       "upstream_repo": "xrootd/xrootd",
