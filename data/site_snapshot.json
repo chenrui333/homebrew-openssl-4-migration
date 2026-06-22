@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-21T07:55:30Z",
+  "generated_at": "2026-06-22T08:28:59Z",
   "repository": "Homebrew/homebrew-core",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "target_branch": "openssl-4-migration-staging",
@@ -215,7 +215,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 119,
+      "impact_count": 120,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
