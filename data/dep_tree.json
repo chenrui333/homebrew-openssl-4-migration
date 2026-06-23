@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-22T08:28:59Z",
+  "generated_at": "2026-06-23T07:32:19Z",
   "repository": "Homebrew/homebrew-core",
-  "git_head": "ff28922b251f5e3fa840585d53bc808f031931bc",
+  "git_head": "cbcbe8dc1a21e04f94b3e81d818774f3dc997552",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "staging_branch": "openssl-4-migration-staging",
   "staged_depths": {
@@ -60,7 +60,7 @@
       "gstreamer"
     ]
   },
-  "formula_count": 752,
+  "formula_count": 753,
   "formulae": [
     {
       "name": "apr-util",
@@ -882,6 +882,7 @@
         "pyenv",
         "pypy",
         "pypy3.10",
+        "pypy3.11",
         "pypy3.9",
         "python-freethreading",
         "python@3.10",
@@ -2749,6 +2750,7 @@
         "pushpin",
         "pypy",
         "pypy3.10",
+        "pypy3.11",
         "pypy3.9",
         "qca",
         "qpdf",
@@ -2974,6 +2976,7 @@
       "openssl_formula_dependents": [
         "pypy",
         "pypy3.10",
+        "pypy3.11",
         "pypy3.9"
       ],
       "transitive_openssl_formula_dependencies": [
@@ -2983,6 +2986,7 @@
       "transitive_openssl_formula_dependents": [
         "pypy",
         "pypy3.10",
+        "pypy3.11",
         "pypy3.9"
       ]
     },
@@ -6691,7 +6695,7 @@
       "path": "Formula/a/awscli.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://aws.amazon.com/cli/",
-      "source_url": "https://github.com/aws/aws-cli/archive/refs/tags/2.35.9.tar.gz",
+      "source_url": "https://github.com/aws/aws-cli/archive/refs/tags/2.35.11.tar.gz",
       "head_url": "https://github.com/aws/aws-cli.git",
       "upstream_provider": "github",
       "upstream_repo": "aws/aws-cli",
@@ -7459,7 +7463,7 @@
       "path": "Formula/c/c2patool.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://contentauthenticity.org",
-      "source_url": "https://github.com/contentauth/c2pa-rs/archive/refs/tags/c2patool-v0.26.67.tar.gz",
+      "source_url": "https://github.com/contentauth/c2pa-rs/archive/refs/tags/c2patool-v0.26.68.tar.gz",
       "head_url": "https://github.com/contentauth/c2pa-rs.git",
       "upstream_provider": "github",
       "upstream_repo": "contentauth/c2pa-rs",
@@ -10824,7 +10828,7 @@
       "path": "Formula/f/fakecloud.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://fakecloud.dev/",
-      "source_url": "https://github.com/faiscadev/fakecloud/archive/refs/tags/v0.20.2.tar.gz",
+      "source_url": "https://github.com/faiscadev/fakecloud/archive/refs/tags/v0.21.0.tar.gz",
       "head_url": "https://github.com/faiscadev/fakecloud.git",
       "upstream_provider": "github",
       "upstream_repo": "faiscadev/fakecloud",
@@ -11403,7 +11407,7 @@
       "path": "Formula/f/flowrs.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/jvanbuel/flowrs",
-      "source_url": "https://github.com/jvanbuel/flowrs/archive/refs/tags/flowrs-tui-v0.12.7.tar.gz",
+      "source_url": "https://github.com/jvanbuel/flowrs/archive/refs/tags/flowrs-tui-v0.12.8.tar.gz",
       "head_url": "https://github.com/jvanbuel/flowrs.git",
       "upstream_provider": "github",
       "upstream_repo": "jvanbuel/flowrs",
@@ -13044,7 +13048,7 @@
       "path": "Formula/h/hf-mount.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/huggingface/hf-mount",
-      "source_url": "https://github.com/huggingface/hf-mount/archive/refs/tags/v0.7.1.tar.gz",
+      "source_url": "https://github.com/huggingface/hf-mount/archive/refs/tags/v0.7.2.tar.gz",
       "head_url": "https://github.com/huggingface/hf-mount.git",
       "upstream_provider": "github",
       "upstream_repo": "huggingface/hf-mount",
@@ -14321,7 +14325,7 @@
     {
       "name": "lakekeeper",
       "path": "Formula/l/lakekeeper.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://docs.lakekeeper.io",
       "source_url": "https://github.com/lakekeeper/lakekeeper/archive/refs/tags/v0.12.4.tar.gz",
       "head_url": "https://github.com/lakekeeper/lakekeeper.git",
@@ -14333,7 +14337,7 @@
       "dependencies": [
         "cmake",
         "rust",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [
         "cmake",
@@ -15576,7 +15580,7 @@
       "path": "Formula/lib/libtorrent-rakshasa.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/rakshasa/libtorrent",
-      "source_url": "https://github.com/rakshasa/libtorrent/archive/refs/tags/v0.16.14.tar.gz",
+      "source_url": "https://github.com/rakshasa/libtorrent/archive/refs/tags/v0.16.15.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "rakshasa/libtorrent",
       "depth": null,
@@ -15788,7 +15792,7 @@
       "path": "Formula/lib/libxmlsec1.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://www.aleksey.com/xmlsec/",
-      "source_url": "https://github.com/lsh123/xmlsec/releases/download/1.3.11/xmlsec1-1.3.11.tar.gz",
+      "source_url": "https://github.com/lsh123/xmlsec/releases/download/1.3.12/xmlsec1-1.3.12.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "lsh123/xmlsec",
       "depth": null,
@@ -15822,7 +15826,7 @@
       "path": "Formula/l/lighthouse.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://lighthouse.sigmaprime.io/",
-      "source_url": "https://github.com/sigp/lighthouse/archive/refs/tags/v8.1.3.tar.gz",
+      "source_url": "https://github.com/sigp/lighthouse/archive/refs/tags/v8.2.0.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "sigp/lighthouse",
       "depth": null,
@@ -16712,7 +16716,7 @@
       "path": "Formula/m/memtier_benchmark.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/RedisLabs/memtier_benchmark",
-      "source_url": "https://github.com/RedisLabs/memtier_benchmark/archive/refs/tags/2.4.2.tar.gz",
+      "source_url": "https://github.com/RedisLabs/memtier_benchmark/archive/refs/tags/2.4.3.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "RedisLabs/memtier_benchmark",
       "depth": null,
@@ -18421,7 +18425,7 @@
       "path": "Formula/n/node-build.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/nodenv/node-build",
-      "source_url": "https://github.com/nodenv/node-build/archive/refs/tags/v5.4.42.tar.gz",
+      "source_url": "https://github.com/nodenv/node-build/archive/refs/tags/v5.4.43.tar.gz",
       "head_url": "https://github.com/nodenv/node-build.git",
       "upstream_provider": "github",
       "upstream_repo": "nodenv/node-build",
@@ -19566,7 +19570,7 @@
       "path": "Formula/o/ortp.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://linphone.org/",
-      "source_url": "https://gitlab.linphone.org/BC/public/linphone-sdk/-/archive/5.5.4/linphone-sdk-5.5.4.tar.bz2",
+      "source_url": "https://gitlab.linphone.org/BC/public/linphone-sdk/-/archive/5.5.6/linphone-sdk-5.5.6.tar.bz2",
       "head_url": "https://gitlab.linphone.org/BC/public/linphone-sdk.git",
       "upstream_provider": "gitlab",
       "upstream_repo": "gitlab.linphone.org/BC/public/linphone-sdk",
@@ -21492,7 +21496,7 @@
       "path": "Formula/p/pup.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.datadoghq.com",
-      "source_url": "https://github.com/DataDog/pup/archive/refs/tags/v1.2.1.tar.gz",
+      "source_url": "https://github.com/DataDog/pup/archive/refs/tags/v1.2.2.tar.gz",
       "head_url": "https://github.com/DataDog/pup.git",
       "upstream_provider": "github",
       "upstream_repo": "DataDog/pup",
@@ -21658,6 +21662,7 @@
       ],
       "openssl_formula_dependents": [
         "pypy3.10",
+        "pypy3.11",
         "pypy3.9"
       ],
       "transitive_openssl_formula_dependencies": [
@@ -21667,6 +21672,7 @@
       ],
       "transitive_openssl_formula_dependents": [
         "pypy3.10",
+        "pypy3.11",
         "pypy3.9"
       ]
     },
@@ -21690,6 +21696,39 @@
         "sqlite",
         "tcl-tk@8",
         "xz"
+      ],
+      "openssl_formula_dependencies": [
+        "pypy",
+        "tcl-tk@8"
+      ],
+      "openssl_formula_dependents": [],
+      "transitive_openssl_formula_dependencies": [
+        "cmake",
+        "pypy",
+        "python@3.14",
+        "tcl-tk@8"
+      ],
+      "transitive_openssl_formula_dependents": []
+    },
+    {
+      "name": "pypy3.11",
+      "path": "Formula/p/pypy3.11.rb",
+      "openssl_dependency": "openssl@3",
+      "homepage": "https://pypy.org/",
+      "source_url": "https://downloads.python.org/pypy/pypy3.11-v7.3.23-src.tar.bz2",
+      "upstream_provider": "python",
+      "depth": null,
+      "target_branch": "main",
+      "staging_required_by": [],
+      "dependencies": [
+        "pkgconf",
+        "pypy",
+        "gdbm",
+        "openssl@3",
+        "sqlite",
+        "tcl-tk@8",
+        "xz",
+        "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
         "pypy",
@@ -22093,7 +22132,7 @@
       "path": "Formula/r/rattler-build.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://rattler.build",
-      "source_url": "https://github.com/prefix-dev/rattler-build/archive/refs/tags/v0.66.2.tar.gz",
+      "source_url": "https://github.com/prefix-dev/rattler-build/archive/refs/tags/v0.67.0.tar.gz",
       "head_url": "https://github.com/prefix-dev/rattler-build.git",
       "upstream_provider": "github",
       "upstream_repo": "prefix-dev/rattler-build",
@@ -23678,7 +23717,7 @@
       "path": "Formula/s/sequoia-sqv.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://sequoia-pgp.org/",
-      "source_url": "https://gitlab.com/sequoia-pgp/sequoia-sqv/-/archive/v1.3.0/sequoia-sqv-v1.3.0.tar.bz2",
+      "source_url": "https://gitlab.com/sequoia-pgp/sequoia-sqv/-/archive/v1.4.0/sequoia-sqv-v1.4.0.tar.bz2",
       "head_url": "https://gitlab.com/sequoia-pgp/sequoia-sqv.git",
       "upstream_provider": "gitlab",
       "upstream_repo": "gitlab.com/sequoia-pgp/sequoia-sqv",
