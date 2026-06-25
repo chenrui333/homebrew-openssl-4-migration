@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-24T07:28:22Z",
+  "generated_at": "2026-06-25T07:28:51Z",
   "repository": "Homebrew/homebrew-core",
-  "git_head": "33d434193486d451fb97d4e04961af8aa9176537",
+  "git_head": "3cedcd7aaefa1ffda99a25a1b87e41f5e85a3975",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "staging_branch": "openssl-4-migration-staging",
   "staged_depths": {
@@ -60,7 +60,7 @@
       "gstreamer"
     ]
   },
-  "formula_count": 753,
+  "formula_count": 754,
   "formulae": [
     {
       "name": "apr-util",
@@ -225,6 +225,7 @@
         "cassandra-cpp-driver",
         "ccache",
         "cgal",
+        "civetweb",
         "clamav",
         "clickhouse-cpp",
         "clickhouse-odbc",
@@ -481,6 +482,7 @@
         "chawan",
         "chunkah",
         "citus",
+        "civetweb",
         "clamav",
         "claws-mail",
         "click",
@@ -1391,7 +1393,6 @@
         "postgresql@16",
         "postgresql@17",
         "postgresql@18",
-        "prowler",
         "pure-ftpd",
         "python-freethreading",
         "python@3.10",
@@ -2171,8 +2172,7 @@
       "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "ansible@10",
-        "ansible@9",
-        "prowler"
+        "ansible@9"
       ],
       "transitive_openssl_formula_dependencies": [
         "cmake",
@@ -2181,7 +2181,6 @@
       "transitive_openssl_formula_dependents": [
         "ansible@10",
         "ansible@9",
-        "prowler",
         "rethinkdb"
       ]
     },
@@ -2219,6 +2218,7 @@
         "node@20",
         "node@22",
         "node@24",
+        "prowler",
         "sapling"
       ],
       "transitive_openssl_formula_dependencies": [
@@ -2281,6 +2281,7 @@
         "pdfalyzer",
         "pdfly",
         "pocket-tts",
+        "prowler",
         "pushpin",
         "qca",
         "qtbase",
@@ -3267,7 +3268,7 @@
       "path": "Formula/c/curl.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://curl.se",
-      "source_url": "https://curl.se/download/curl-8.20.0.tar.bz2",
+      "source_url": "https://curl.se/download/curl-8.21.0.tar.bz2",
       "head_url": "https://github.com/curl/curl.git",
       "upstream_provider": "github",
       "upstream_repo": "curl/curl",
@@ -4689,6 +4690,7 @@
         "omnara",
         "oterm",
         "pdfly",
+        "prowler",
         "sgr",
         "sigstore",
         "weaviate-cli"
@@ -4714,6 +4716,7 @@
         "omnara",
         "oterm",
         "pdfly",
+        "prowler",
         "sgr",
         "sigstore",
         "weaviate-cli"
@@ -5780,7 +5783,8 @@
       ],
       "openssl_formula_dependents": [
         "aws-c-io",
-        "awscurl"
+        "awscurl",
+        "dxpy"
       ],
       "transitive_openssl_formula_dependencies": [
         "cmake"
@@ -6198,7 +6202,7 @@
       "path": "Formula/a/aoe.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/njbrake/agent-of-empires",
-      "source_url": "https://github.com/njbrake/agent-of-empires/archive/refs/tags/v1.11.1.tar.gz",
+      "source_url": "https://github.com/njbrake/agent-of-empires/archive/refs/tags/v1.11.2.tar.gz",
       "head_url": "https://github.com/njbrake/agent-of-empires.git",
       "upstream_provider": "github",
       "upstream_repo": "njbrake/agent-of-empires",
@@ -8143,6 +8147,32 @@
       "transitive_openssl_formula_dependents": []
     },
     {
+      "name": "civetweb",
+      "path": "Formula/c/civetweb.rb",
+      "openssl_dependency": "openssl@3",
+      "homepage": "https://github.com/civetweb/civetweb",
+      "source_url": "https://github.com/civetweb/civetweb/archive/refs/tags/v1.16.tar.gz",
+      "head_url": "https://github.com/civetweb/civetweb.git",
+      "upstream_provider": "github",
+      "upstream_repo": "civetweb/civetweb",
+      "depth": null,
+      "target_branch": "main",
+      "staging_required_by": [],
+      "dependencies": [
+        "cmake",
+        "openssl@3",
+        "zlib-ng-compat"
+      ],
+      "openssl_formula_dependencies": [
+        "cmake"
+      ],
+      "openssl_formula_dependents": [],
+      "transitive_openssl_formula_dependencies": [
+        "cmake"
+      ],
+      "transitive_openssl_formula_dependents": []
+    },
+    {
       "name": "clamav",
       "path": "Formula/c/clamav.rb",
       "openssl_dependency": "openssl@3",
@@ -8435,7 +8465,7 @@
       "path": "Formula/c/code-cli.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://code.visualstudio.com",
-      "source_url": "https://github.com/microsoft/vscode/archive/refs/tags/1.125.0.tar.gz",
+      "source_url": "https://github.com/microsoft/vscode/archive/refs/tags/1.126.0.tar.gz",
       "head_url": "https://github.com/microsoft/vscode.git",
       "upstream_provider": "github",
       "upstream_repo": "microsoft/vscode",
@@ -9917,7 +9947,7 @@
       "path": "Formula/d/dxpy.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/dnanexus/dx-toolkit",
-      "source_url": "https://files.pythonhosted.org/packages/0f/c9/adbd07666a6ca61f88a33ce914a804f6fb80c082fb7b9c1e4ee8e880be29/dxpy-0.408.2.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/d8/cb/c53cbfef4871d8bb5981935c09ef4f669937bfefd467fb5587689e10f38c/dxpy-0.409.0.tar.gz",
       "upstream_provider": "python",
       "depth": null,
       "target_branch": "main",
@@ -9935,6 +9965,7 @@
         "certifi",
         "cryptography",
         "python@3.14",
+        "s2n",
         "aws-c-compression",
         "aws-c-sdkutils",
         "openssl@3"
@@ -9943,7 +9974,8 @@
         "aws-c-cal",
         "aws-c-io",
         "cryptography",
-        "python@3.14"
+        "python@3.14",
+        "s2n"
       ],
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
@@ -10828,7 +10860,7 @@
       "path": "Formula/f/fakecloud.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://fakecloud.dev/",
-      "source_url": "https://github.com/faiscadev/fakecloud/archive/refs/tags/v0.21.0.tar.gz",
+      "source_url": "https://github.com/faiscadev/fakecloud/archive/refs/tags/v0.21.1.tar.gz",
       "head_url": "https://github.com/faiscadev/fakecloud.git",
       "upstream_provider": "github",
       "upstream_repo": "faiscadev/fakecloud",
@@ -11142,7 +11174,7 @@
       "path": "Formula/f/fetchmail.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://www.fetchmail.info/",
-      "source_url": "https://downloads.sourceforge.net/project/fetchmail/branch_6.6/fetchmail-6.6.5.tar.xz",
+      "source_url": "https://downloads.sourceforge.net/project/fetchmail/branch_6.6/fetchmail-6.6.6.tar.xz",
       "upstream_provider": "other",
       "depth": null,
       "target_branch": "main",
@@ -11437,7 +11469,7 @@
       "path": "Formula/f/fluent-bit.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://fluentbit.io",
-      "source_url": "https://github.com/fluent/fluent-bit/archive/refs/tags/v5.0.7.tar.gz",
+      "source_url": "https://github.com/fluent/fluent-bit/archive/refs/tags/v5.0.8.tar.gz",
       "head_url": "https://github.com/fluent/fluent-bit.git",
       "upstream_provider": "github",
       "upstream_repo": "fluent/fluent-bit",
@@ -11468,7 +11500,7 @@
       "path": "Formula/f/fnox.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://fnox.jdx.dev/",
-      "source_url": "https://github.com/jdx/fnox/archive/refs/tags/v1.27.1.tar.gz",
+      "source_url": "https://github.com/jdx/fnox/archive/refs/tags/v1.28.0.tar.gz",
       "head_url": "https://github.com/jdx/fnox.git",
       "upstream_provider": "github",
       "upstream_repo": "jdx/fnox",
@@ -13288,7 +13320,7 @@
       "path": "Formula/h/hyper-mcp.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/hyper-mcp-rs/hyper-mcp",
-      "source_url": "https://github.com/hyper-mcp-rs/hyper-mcp/archive/refs/tags/v0.8.2.tar.gz",
+      "source_url": "https://github.com/hyper-mcp-rs/hyper-mcp/archive/refs/tags/v0.8.3.tar.gz",
       "head_url": "https://github.com/hyper-mcp-rs/hyper-mcp.git",
       "upstream_provider": "github",
       "upstream_repo": "hyper-mcp-rs/hyper-mcp",
@@ -13444,7 +13476,7 @@
       "path": "Formula/i/icp-cli.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://dfinity.github.io/icp-cli/",
-      "source_url": "https://github.com/dfinity/icp-cli/archive/refs/tags/v1.0.0.tar.gz",
+      "source_url": "https://github.com/dfinity/icp-cli/archive/refs/tags/v1.0.1.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "dfinity/icp-cli",
       "depth": null,
@@ -14497,7 +14529,7 @@
       "path": "Formula/l/lavinmq.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://lavinmq.com",
-      "source_url": "https://github.com/cloudamqp/lavinmq/archive/refs/tags/v2.8.1.tar.gz",
+      "source_url": "https://github.com/cloudamqp/lavinmq/archive/refs/tags/v2.8.2.tar.gz",
       "head_url": "https://github.com/cloudamqp/lavinmq.git",
       "upstream_provider": "github",
       "upstream_repo": "cloudamqp/lavinmq",
@@ -16089,7 +16121,7 @@
       "path": "Formula/m/mago.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/carthage-software/mago",
-      "source_url": "https://github.com/carthage-software/mago/releases/download/1.30.0/source-code.tar.gz",
+      "source_url": "https://github.com/carthage-software/mago/releases/download/1.40.2/source-code.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "carthage-software/mago",
       "depth": null,
@@ -16328,7 +16360,7 @@
       "path": "Formula/m/mariadb-connector-odbc.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://mariadb.org/download/?tab=connector\u0026prod=connector-odbc",
-      "source_url": "https://archive.mariadb.org/connector-odbc-3.2.8/mariadb-connector-odbc-3.2.8-src.tar.gz",
+      "source_url": "https://archive.mariadb.org/connector-odbc-3.2.9/mariadb-connector-odbc-3.2.9-src.tar.gz",
       "upstream_provider": "other",
       "depth": null,
       "target_branch": "main",
@@ -18995,7 +19027,7 @@
       "path": "Formula/o/objfw.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://objfw.nil.im/",
-      "source_url": "https://objfw.nil.im/downloads/objfw-1.5.5.tar.gz",
+      "source_url": "https://objfw.nil.im/downloads/objfw-1.5.6.tar.gz",
       "head_url": "https://git.nil.im/ObjFW/ObjFW.git",
       "upstream_provider": "other",
       "depth": null,
@@ -19258,7 +19290,7 @@
       "path": "Formula/o/openrtsp.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "http://www.live555.com/openRTSP",
-      "source_url": "https://download.live555.com/live.2026.06.12.tar.gz",
+      "source_url": "https://download.live555.com/live.2026.06.24.tar.gz",
       "upstream_provider": "other",
       "depth": null,
       "target_branch": "main",
@@ -20705,7 +20737,7 @@
       "path": "Formula/p/pixi.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://pixi.sh",
-      "source_url": "https://github.com/prefix-dev/pixi/archive/refs/tags/v0.70.2.tar.gz",
+      "source_url": "https://github.com/prefix-dev/pixi/archive/refs/tags/v0.71.0.tar.gz",
       "head_url": "https://github.com/prefix-dev/pixi.git",
       "upstream_provider": "github",
       "upstream_repo": "prefix-dev/pixi",
@@ -21284,7 +21316,7 @@
       "path": "Formula/p/prowler.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://prowler.com/",
-      "source_url": "https://files.pythonhosted.org/packages/9c/46/ffc70de1d4d0de773d17278505213b0f9c5180b2f6ad97316169597c72f6/prowler-5.30.3.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/6a/e5/fa33d7c314c5fac002eaeb26d153d2a24ead1185237144a985f8b3b8bfb9/prowler-5.31.0.tar.gz",
       "head_url": "https://github.com/prowler-cloud/prowler.git",
       "upstream_provider": "github",
       "upstream_repo": "prowler-cloud/prowler",
@@ -21298,26 +21330,31 @@
         "pkgconf",
         "rust",
         "certifi",
+        "cryptography",
         "libsodium",
         "libyaml",
         "lz4",
+        "numpy",
         "openssl@3",
-        "python@3.12",
+        "pydantic",
+        "python@3.13",
+        "rpds-py",
         "patchelf",
         "openblas"
       ],
       "openssl_formula_dependencies": [
         "cmake",
-        "python@3.12",
+        "cryptography",
+        "python@3.13",
         "rust"
       ],
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
-        "krb5",
+        "cryptography",
         "libgit2",
         "libssh2",
-        "python@3.12",
+        "python@3.13",
         "python@3.14",
         "rust",
         "wget"
@@ -21978,7 +22015,7 @@
       "path": "Formula/q/qxmpp.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://invent.kde.org/libraries/qxmpp",
-      "source_url": "https://invent.kde.org/libraries/qxmpp/-/archive/v1.15.1/qxmpp-v1.15.1.tar.bz2",
+      "source_url": "https://invent.kde.org/libraries/qxmpp/-/archive/v1.16.0/qxmpp-v1.16.0.tar.bz2",
       "upstream_provider": "other",
       "depth": null,
       "target_branch": "main",
@@ -25370,7 +25407,7 @@
       "path": "Formula/t/tabiew.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/shshemi/tabiew",
-      "source_url": "https://github.com/shshemi/tabiew/archive/refs/tags/v0.13.1.tar.gz",
+      "source_url": "https://github.com/shshemi/tabiew/archive/refs/tags/v0.14.0.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "shshemi/tabiew",
       "depth": null,
