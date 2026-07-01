@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T07:35:54Z",
+  "generated_at": "2026-07-01T07:48:37Z",
   "repository": "Homebrew/homebrew-core",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "target_branch": "openssl-4-migration-staging",
@@ -20,7 +20,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 658,
+      "impact_count": 659,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -55,7 +55,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 463,
+      "impact_count": 464,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 280846,
@@ -92,7 +92,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 295,
+      "impact_count": 296,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -132,7 +132,7 @@
       "live_status": "PENDING",
       "depth": null,
       "group_label": "Staging closure",
-      "impact_count": 272,
+      "impact_count": 273,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -172,7 +172,7 @@
       "live_status": "PENDING",
       "depth": 1,
       "group_label": "Batch 1",
-      "impact_count": 270,
+      "impact_count": 271,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -215,7 +215,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 119,
+      "impact_count": 120,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -677,7 +677,7 @@
       "live_status": "PENDING",
       "depth": 2,
       "group_label": "Batch 2",
-      "impact_count": 12,
+      "impact_count": 13,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,

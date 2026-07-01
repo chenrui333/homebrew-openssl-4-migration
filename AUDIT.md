@@ -1,4 +1,4 @@
-# OpenSSL 4 Migration Audit (2026-06-30)
+# OpenSSL 4 Migration Audit (2026-07-01)
 
 Tracking issue: Homebrew/homebrew-core#278366
 
@@ -26,10 +26,10 @@ Pending staged formulae are sorted by transitive dependent count.
 
 | Formula | Target | Depth | Impact | Status | PR | Readiness | Upstream | Issues |
 |---|---|---:|---:|---|---|---|---|---|
-| cmake | openssl-4-migration-staging | 0 | 658 | PENDING | none | missing-pr | gitlab:gitlab.kitware.com/cmake/cmake |  |
-| python@3.14 | openssl-4-migration-staging | 0 | 463 | PENDING | #280846 | draft, checks-blocked, merge-dirty | python |  |
-| libgit2 | openssl-4-migration-staging | closure | 272 | PENDING | none | missing-pr | github:libgit2/libgit2 |  |
-| rust | openssl-4-migration-staging | 1 | 270 | PENDING | none | missing-pr | github:rust-lang/rust | [issues#155397](https://github.com/rust-lang/rust/issues/155397) open |
+| cmake | openssl-4-migration-staging | 0 | 659 | PENDING | none | missing-pr | gitlab:gitlab.kitware.com/cmake/cmake |  |
+| python@3.14 | openssl-4-migration-staging | 0 | 464 | PENDING | #280846 | draft, checks-blocked, merge-dirty | python |  |
+| libgit2 | openssl-4-migration-staging | closure | 273 | PENDING | none | missing-pr | github:libgit2/libgit2 |  |
+| rust | openssl-4-migration-staging | 1 | 271 | PENDING | none | missing-pr | github:rust-lang/rust | [issues#155397](https://github.com/rust-lang/rust/issues/155397) open |
 | python@3.13 | openssl-4-migration-staging | 0 | 76 | PENDING | #280845 | draft, checks-blocked, merge-dirty | python |  |
 | systemd | openssl-4-migration-staging | 1 | 57 | PENDING | #280864 | draft, checks-blocked, merge-unstable | github:systemd/systemd |  |
 | libngtcp2 | openssl-4-migration-staging | closure | 32 | PENDING | none | missing-pr | github:ngtcp2/ngtcp2 |  |
@@ -37,7 +37,7 @@ Pending staged formulae are sorted by transitive dependent count.
 | pulseaudio | openssl-4-migration-staging | 1 | 21 | PENDING | none | missing-pr | gitlab:gitlab.freedesktop.org/pulseaudio/pulseaudio |  |
 | libpq | openssl-4-migration-staging | 1 | 17 | PENDING | none | missing-pr | other |  |
 | cryptography | openssl-4-migration-staging | 2 | 16 | PENDING | none | missing-pr | github:pyca/cryptography | [issues#14656](https://github.com/pyca/cryptography/issues/14656) closed |
-| ruby | openssl-4-migration-staging | 2 | 12 | PENDING | none | missing-pr | github:ruby/ruby |  |
+| ruby | openssl-4-migration-staging | 2 | 13 | PENDING | none | missing-pr | github:ruby/ruby |  |
 | grpc | openssl-4-migration-staging | 0 | 11 | PENDING | none | missing-pr | github:grpc/grpc | [issues#42020](https://github.com/grpc/grpc/issues/42020) open |
 | libfido2 | openssl-4-migration-staging | 0 | 10 | PENDING | none | missing-pr | github:Yubico/libfido2 | [issues#966](https://github.com/Yubico/libfido2/issues/966) closed |
 | qtbase | openssl-4-migration-staging | 1 | 10 | PENDING | none | missing-pr | qt |  |
@@ -69,15 +69,15 @@ Top 20 pending staged formulae with upstream metadata and no curated upstream is
 
 | Formula | Depth | Impact | Upstream | Search | Readiness |
 |---|---:|---:|---|---|---|
-| cmake | 0 | 658 | gitlab:gitlab.kitware.com/cmake/cmake |  | missing-pr |
-| python@3.14 | 0 | 463 | python |  | draft, checks-blocked, merge-dirty |
-| libgit2 | closure | 272 | github:libgit2/libgit2 | [issues](https://github.com/search?q=repo%3Alibgit2%2Flibgit2+%22OpenSSL+4%22&type=issues) | missing-pr |
+| cmake | 0 | 659 | gitlab:gitlab.kitware.com/cmake/cmake |  | missing-pr |
+| python@3.14 | 0 | 464 | python |  | draft, checks-blocked, merge-dirty |
+| libgit2 | closure | 273 | github:libgit2/libgit2 | [issues](https://github.com/search?q=repo%3Alibgit2%2Flibgit2+%22OpenSSL+4%22&type=issues) | missing-pr |
 | python@3.13 | 0 | 76 | python |  | draft, checks-blocked, merge-dirty |
 | systemd | 1 | 57 | github:systemd/systemd | [issues](https://github.com/search?q=repo%3Asystemd%2Fsystemd+%22OpenSSL+4%22&type=issues) | draft, checks-blocked, merge-unstable |
 | libngtcp2 | closure | 32 | github:ngtcp2/ngtcp2 | [issues](https://github.com/search?q=repo%3Angtcp2%2Fngtcp2+%22OpenSSL+4%22&type=issues) | missing-pr |
 | cargo-c | 2 | 25 | github:lu-zero/cargo-c | [issues](https://github.com/search?q=repo%3Alu-zero%2Fcargo-c+%22OpenSSL+4%22&type=issues) | missing-pr |
 | pulseaudio | 1 | 21 | gitlab:gitlab.freedesktop.org/pulseaudio/pulseaudio |  | missing-pr |
-| ruby | 2 | 12 | github:ruby/ruby | [issues](https://github.com/search?q=repo%3Aruby%2Fruby+%22OpenSSL+4%22&type=issues) | missing-pr |
+| ruby | 2 | 13 | github:ruby/ruby | [issues](https://github.com/search?q=repo%3Aruby%2Fruby+%22OpenSSL+4%22&type=issues) | missing-pr |
 | qtbase | 1 | 10 | qt |  | missing-pr |
 | aws-c-cal | closure | 8 | github:awslabs/aws-c-cal | [issues](https://github.com/search?q=repo%3Aawslabs%2Faws-c-cal+%22OpenSSL+4%22&type=issues) | missing-pr |
 | aws-c-io | closure | 7 | github:awslabs/aws-c-io | [issues](https://github.com/search?q=repo%3Aawslabs%2Faws-c-io+%22OpenSSL+4%22&type=issues) | missing-pr |
