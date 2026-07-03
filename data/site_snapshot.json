@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-07-02T07:25:13Z",
+  "generated_at": "2026-07-03T09:33:23Z",
   "repository": "Homebrew/homebrew-core",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "target_branch": "openssl-4-migration-staging",
   "scope": "staging",
   "summary": {
-    "staged_formulae": 58,
+    "staged_formulae": 59,
     "done": 22,
-    "pending": 36,
+    "pending": 37,
     "open_staging_prs": 3,
     "current_gate": "Batch 0 — Roots",
     "current_gate_pending": 11,
@@ -92,7 +92,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 296,
+      "impact_count": 302,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -132,7 +132,7 @@
       "live_status": "PENDING",
       "depth": null,
       "group_label": "Staging closure",
-      "impact_count": 273,
+      "impact_count": 279,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -172,7 +172,7 @@
       "live_status": "PENDING",
       "depth": 1,
       "group_label": "Batch 1",
-      "impact_count": 271,
+      "impact_count": 277,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -215,7 +215,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 120,
+      "impact_count": 128,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -250,7 +250,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 76,
+      "impact_count": 85,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 280845,
@@ -322,7 +322,7 @@
       "live_status": "PENDING",
       "depth": 1,
       "group_label": "Batch 1",
-      "impact_count": 57,
+      "impact_count": 66,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 280864,
@@ -364,7 +364,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 49,
+      "impact_count": 65,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 280846,
@@ -577,6 +577,41 @@
         "provider": "other",
         "repo": "",
         "url": ""
+      },
+      "issues": [],
+      "flags": {
+        "current_gate": false,
+        "ready": false,
+        "draft": false,
+        "ci_blocked": false,
+        "base_mismatch": false,
+        "missing_pr": true,
+        "upstream_blocked": false
+      }
+    },
+    {
+      "name": "pipewire",
+      "live_status": "PENDING",
+      "depth": null,
+      "group_label": "Staging closure",
+      "impact_count": 17,
+      "target_branch": "openssl-4-migration-staging",
+      "pr": {
+        "number": 0,
+        "url": "",
+        "base": "",
+        "is_draft": false,
+        "merge_state": "",
+        "updated_at": ""
+      },
+      "readiness": [
+        "missing-pr"
+      ],
+      "next_action": "Open migration PR",
+      "upstream": {
+        "provider": "gitlab",
+        "repo": "gitlab.freedesktop.org/pipewire/pipewire",
+        "url": "https://gitlab.freedesktop.org/pipewire/pipewire"
       },
       "issues": [],
       "flags": {
