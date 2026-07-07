@@ -1,4 +1,4 @@
-OpenSSL 4 Migration Status (2026-07-06)
+OpenSSL 4 Migration Status (2026-07-07)
 ========================================
 Total pending:  37
 Total done:     22 (37.3%)
@@ -6,28 +6,28 @@ Total done:     22 (37.3%)
 Tracking issue: Homebrew/homebrew-core#278366
 
 Batch 0 — Roots -> openssl-4-migration-staging   [14/25 done]
-  apr-util                 DONE       [PR #280846 open]
-  asio                     DONE       [PR #280846 open]
+  apr-util                 DONE
+  asio                     DONE
   cmake                    PENDING
   dotnet                   PENDING
   erlang                   PENDING
-  freetds                  PENDING    [PR #280846 open]
+  freetds                  PENDING
   grpc                     PENDING
-  hiredis                  PENDING    [PR #280846 open]
+  hiredis                  PENDING
   krb5                     DONE
-  libevent                 DONE       [PR #280846 open]
+  libevent                 DONE
   libfido2                 PENDING
-  librdkafka               PENDING    [PR #280846 open]
-  libssh                   DONE       [PR #280846 open]
+  librdkafka               PENDING
+  libssh                   DONE
   libssh2                  DONE
-  mariadb-connector-c      DONE       [PR #280846 open]
+  mariadb-connector-c      DONE
   openldap                 DONE
   opusfile                 DONE
   python@3.11              DONE
   python@3.12              DONE
-  python@3.13              PENDING    [PR #280845 open]
-  python@3.14              PENDING    [PR #280846 open]
-  srt                      DONE       [PR #280846 open]
+  python@3.13              PENDING
+  python@3.14              PENDING
+  srt                      DONE
   tcl-tk                   DONE
   tcl-tk@8                 PENDING
   wget                     DONE
@@ -46,7 +46,7 @@ Batch 1 -> openssl-4-migration-staging   [3/15 done]
   pulseaudio               PENDING
   qtbase                   PENDING
   rust                     PENDING
-  systemd                  PENDING    [PR #280864 open]
+  systemd                  PENDING
   unbound                  PENDING
 
 Batch 2 -> openssl-4-migration-staging   [0/5 done]

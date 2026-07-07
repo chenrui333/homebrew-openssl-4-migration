@@ -1,4 +1,4 @@
-# OpenSSL 4 Migration Checklist (2026-07-06)
+# OpenSSL 4 Migration Checklist (2026-07-07)
 
 Progress: **22/59 (37.3%)**
 Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/homebrew-core/issues/278366)
@@ -13,13 +13,13 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 - [ ] cmake
 - [ ] dotnet
 - [ ] erlang
-- [ ] freetds <!-- PR #280846 open -->
+- [ ] freetds
 - [ ] grpc
-- [ ] hiredis <!-- PR #280846 open -->
+- [ ] hiredis
 - [x] ~~krb5~~
 - [x] ~~libevent~~
 - [ ] libfido2
-- [ ] librdkafka <!-- PR #280846 open -->
+- [ ] librdkafka
 - [x] ~~libssh~~
 - [x] ~~libssh2~~
 - [x] ~~mariadb-connector-c~~
@@ -27,8 +27,8 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 - [x] ~~opusfile~~
 - [x] ~~python@3.11~~
 - [x] ~~python@3.12~~
-- [ ] python@3.13 <!-- PR #280845 open -->
-- [ ] python@3.14 <!-- PR #280846 open -->
+- [ ] python@3.13
+- [ ] python@3.14
 - [x] ~~srt~~
 - [x] ~~tcl-tk~~
 - [ ] tcl-tk@8
@@ -49,7 +49,7 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 - [ ] pulseaudio
 - [ ] qtbase
 - [ ] rust
-- [ ] systemd <!-- PR #280864 open -->
+- [ ] systemd
 - [ ] unbound
 
 ## Batch 2 -> openssl-4-migration-staging [0/5]
