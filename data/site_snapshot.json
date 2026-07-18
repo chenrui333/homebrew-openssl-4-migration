@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T08:25:56Z",
+  "generated_at": "2026-07-18T08:06:06Z",
   "repository": "Homebrew/homebrew-core",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "target_branch": "openssl-4-migration-staging",
@@ -20,7 +20,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 666,
+      "impact_count": 668,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -55,7 +55,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 465,
+      "impact_count": 466,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -90,7 +90,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 304,
+      "impact_count": 305,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -130,7 +130,7 @@
       "live_status": "PENDING",
       "depth": null,
       "group_label": "Staging closure",
-      "impact_count": 281,
+      "impact_count": 282,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -170,7 +170,7 @@
       "live_status": "PENDING",
       "depth": 1,
       "group_label": "Batch 1",
-      "impact_count": 279,
+      "impact_count": 280,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -213,7 +213,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 129,
+      "impact_count": 128,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -248,7 +248,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 85,
+      "impact_count": 84,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -283,7 +283,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 74,
+      "impact_count": 75,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -318,7 +318,7 @@
       "live_status": "PENDING",
       "depth": 1,
       "group_label": "Batch 1",
-      "impact_count": 66,
+      "impact_count": 65,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -358,7 +358,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 65,
+      "impact_count": 64,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -474,41 +474,6 @@
       }
     },
     {
-      "name": "pulseaudio",
-      "live_status": "PENDING",
-      "depth": 1,
-      "group_label": "Batch 1",
-      "impact_count": 21,
-      "target_branch": "openssl-4-migration-staging",
-      "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
-      },
-      "readiness": [
-        "missing-pr"
-      ],
-      "next_action": "Open migration PR",
-      "upstream": {
-        "provider": "gitlab",
-        "repo": "gitlab.freedesktop.org/pulseaudio/pulseaudio",
-        "url": "https://gitlab.freedesktop.org/pulseaudio/pulseaudio"
-      },
-      "issues": [],
-      "flags": {
-        "current_gate": false,
-        "ready": false,
-        "draft": false,
-        "ci_blocked": false,
-        "base_mismatch": false,
-        "missing_pr": true,
-        "upstream_blocked": false
-      }
-    },
-    {
       "name": "curl",
       "live_status": "DONE",
       "depth": 1,
@@ -549,6 +514,41 @@
       }
     },
     {
+      "name": "pulseaudio",
+      "live_status": "PENDING",
+      "depth": 1,
+      "group_label": "Batch 1",
+      "impact_count": 20,
+      "target_branch": "openssl-4-migration-staging",
+      "pr": {
+        "number": 0,
+        "url": "",
+        "base": "",
+        "is_draft": false,
+        "merge_state": "",
+        "updated_at": ""
+      },
+      "readiness": [
+        "missing-pr"
+      ],
+      "next_action": "Open migration PR",
+      "upstream": {
+        "provider": "gitlab",
+        "repo": "gitlab.freedesktop.org/pulseaudio/pulseaudio",
+        "url": "https://gitlab.freedesktop.org/pulseaudio/pulseaudio"
+      },
+      "issues": [],
+      "flags": {
+        "current_gate": false,
+        "ready": false,
+        "draft": false,
+        "ci_blocked": false,
+        "base_mismatch": false,
+        "missing_pr": true,
+        "upstream_blocked": false
+      }
+    },
+    {
       "name": "libpq",
       "live_status": "PENDING",
       "depth": 1,
@@ -571,41 +571,6 @@
         "provider": "other",
         "repo": "",
         "url": ""
-      },
-      "issues": [],
-      "flags": {
-        "current_gate": false,
-        "ready": false,
-        "draft": false,
-        "ci_blocked": false,
-        "base_mismatch": false,
-        "missing_pr": true,
-        "upstream_blocked": false
-      }
-    },
-    {
-      "name": "pipewire",
-      "live_status": "PENDING",
-      "depth": null,
-      "group_label": "Staging closure",
-      "impact_count": 17,
-      "target_branch": "openssl-4-migration-staging",
-      "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
-      },
-      "readiness": [
-        "missing-pr"
-      ],
-      "next_action": "Open migration PR",
-      "upstream": {
-        "provider": "gitlab",
-        "repo": "gitlab.freedesktop.org/pipewire/pipewire",
-        "url": "https://gitlab.freedesktop.org/pipewire/pipewire"
       },
       "issues": [],
       "flags": {
@@ -662,11 +627,46 @@
       }
     },
     {
+      "name": "pipewire",
+      "live_status": "PENDING",
+      "depth": null,
+      "group_label": "Staging closure",
+      "impact_count": 16,
+      "target_branch": "openssl-4-migration-staging",
+      "pr": {
+        "number": 0,
+        "url": "",
+        "base": "",
+        "is_draft": false,
+        "merge_state": "",
+        "updated_at": ""
+      },
+      "readiness": [
+        "missing-pr"
+      ],
+      "next_action": "Open migration PR",
+      "upstream": {
+        "provider": "gitlab",
+        "repo": "gitlab.freedesktop.org/pipewire/pipewire",
+        "url": "https://gitlab.freedesktop.org/pipewire/pipewire"
+      },
+      "issues": [],
+      "flags": {
+        "current_gate": false,
+        "ready": false,
+        "draft": false,
+        "ci_blocked": false,
+        "base_mismatch": false,
+        "missing_pr": true,
+        "upstream_blocked": false
+      }
+    },
+    {
       "name": "ffmpeg",
       "live_status": "DONE",
       "depth": 1,
       "group_label": "Batch 1",
-      "impact_count": 14,
+      "impact_count": 13,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
