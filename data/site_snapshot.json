@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-29T09:06:12Z",
+  "generated_at": "2026-07-30T08:46:28Z",
   "repository": "Homebrew/homebrew-core",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "target_branch": "openssl-4-migration-staging",
@@ -20,7 +20,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 669,
+      "impact_count": 670,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -55,7 +55,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 467,
+      "impact_count": 468,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -398,7 +398,7 @@
       "live_status": "PENDING",
       "depth": null,
       "group_label": "Staging closure",
-      "impact_count": 33,
+      "impact_count": 34,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -968,6 +968,49 @@
       }
     },
     {
+      "name": "node",
+      "live_status": "PENDING",
+      "depth": 1,
+      "group_label": "Batch 1",
+      "impact_count": 9,
+      "target_branch": "openssl-4-migration-staging",
+      "pr": {
+        "number": 0,
+        "url": "",
+        "base": "",
+        "is_draft": false,
+        "merge_state": "",
+        "updated_at": ""
+      },
+      "readiness": [
+        "missing-pr"
+      ],
+      "next_action": "Open migration PR",
+      "upstream": {
+        "provider": "github",
+        "repo": "nodejs/node",
+        "url": "https://github.com/nodejs/node"
+      },
+      "issues": [
+        {
+          "label": "issues#62817",
+          "state": "closed",
+          "status": "reference",
+          "title": "[openssl-4.0.0] - failing tests",
+          "url": "https://github.com/nodejs/node/issues/62817"
+        }
+      ],
+      "flags": {
+        "current_gate": false,
+        "ready": false,
+        "draft": false,
+        "ci_blocked": false,
+        "base_mismatch": false,
+        "missing_pr": true,
+        "upstream_blocked": false
+      }
+    },
+    {
       "name": "aws-c-cal",
       "live_status": "PENDING",
       "depth": null,
@@ -1039,49 +1082,6 @@
         "ci_blocked": false,
         "base_mismatch": false,
         "missing_pr": false,
-        "upstream_blocked": false
-      }
-    },
-    {
-      "name": "node",
-      "live_status": "PENDING",
-      "depth": 1,
-      "group_label": "Batch 1",
-      "impact_count": 8,
-      "target_branch": "openssl-4-migration-staging",
-      "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
-      },
-      "readiness": [
-        "missing-pr"
-      ],
-      "next_action": "Open migration PR",
-      "upstream": {
-        "provider": "github",
-        "repo": "nodejs/node",
-        "url": "https://github.com/nodejs/node"
-      },
-      "issues": [
-        {
-          "label": "issues#62817",
-          "state": "closed",
-          "status": "reference",
-          "title": "[openssl-4.0.0] - failing tests",
-          "url": "https://github.com/nodejs/node/issues/62817"
-        }
-      ],
-      "flags": {
-        "current_gate": false,
-        "ready": false,
-        "draft": false,
-        "ci_blocked": false,
-        "base_mismatch": false,
-        "missing_pr": true,
         "upstream_blocked": false
       }
     },
