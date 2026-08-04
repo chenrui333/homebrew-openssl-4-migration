@@ -1,4 +1,4 @@
-OpenSSL 4 Migration Status (2026-08-03)
+OpenSSL 4 Migration Status (2026-08-04)
 ========================================
 Total pending:  37
 Total done:     22 (37.3%)
