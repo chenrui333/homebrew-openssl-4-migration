@@ -1,4 +1,4 @@
-# OpenSSL 4 Migration Audit (2026-08-05)
+# OpenSSL 4 Migration Audit (2026-08-06)
 
 Tracking issue: Homebrew/homebrew-core#278366
 
@@ -36,8 +36,8 @@ Pending staged formulae are sorted by transitive dependent count.
 | cargo-c | openssl-4-migration-staging | 2 | 25 | PENDING | none | missing-pr | github:lu-zero/cargo-c |  |
 | pulseaudio | openssl-4-migration-staging | 1 | 20 | PENDING | none | missing-pr | gitlab:gitlab.freedesktop.org/pulseaudio/pulseaudio |  |
 | ruby | openssl-4-migration-staging | 2 | 19 | PENDING | none | missing-pr | github:ruby/ruby |  |
+| cryptography | openssl-4-migration-staging | 2 | 17 | PENDING | none | missing-pr | github:pyca/cryptography | [issues#14656](https://github.com/pyca/cryptography/issues/14656) closed |
 | libpq | openssl-4-migration-staging | 1 | 17 | PENDING | none | missing-pr | other |  |
-| cryptography | openssl-4-migration-staging | 2 | 16 | PENDING | none | missing-pr | github:pyca/cryptography | [issues#14656](https://github.com/pyca/cryptography/issues/14656) closed |
 | pipewire | openssl-4-migration-staging | closure | 16 | PENDING | none | missing-pr | gitlab:gitlab.freedesktop.org/pipewire/pipewire |  |
 | grpc | openssl-4-migration-staging | 0 | 11 | PENDING | none | missing-pr | github:grpc/grpc | [issues#42020](https://github.com/grpc/grpc/issues/42020) open |
 | libfido2 | openssl-4-migration-staging | 0 | 10 | PENDING | none | missing-pr | github:Yubico/libfido2 | [issues#966](https://github.com/Yubico/libfido2/issues/966) closed |
