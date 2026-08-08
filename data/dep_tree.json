@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-07T07:38:51Z",
+  "generated_at": "2026-08-08T07:11:35Z",
   "repository": "Homebrew/homebrew-core",
-  "git_head": "c8ac2ce2256881720285c9e34f6a586ae09875c4",
+  "git_head": "fe768a52a415a40498a551344200d2b76c5f0bf3",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "staging_branch": "openssl-4-migration-staging",
   "staged_depths": {
@@ -60,7 +60,7 @@
       "gstreamer"
     ]
   },
-  "formula_count": 764,
+  "formula_count": 763,
   "formulae": [
     {
       "name": "apr-util",
@@ -614,7 +614,6 @@
         "git",
         "git-series",
         "git-trim",
-        "git-workspace",
         "git-xet",
         "gitlogue",
         "gitnr",
@@ -1728,7 +1727,6 @@
         "chawan",
         "curl",
         "git-series",
-        "git-workspace",
         "julia",
         "libgit2",
         "libgit2@1.7",
@@ -1861,7 +1859,6 @@
         "ggshield",
         "git-series",
         "git-trim",
-        "git-workspace",
         "git-xet",
         "gitlogue",
         "gitnr",
@@ -2109,7 +2106,7 @@
       "path": "Formula/o/openldap.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://www.openldap.org/software/",
-      "source_url": "https://www.openldap.org/software/download/OpenLDAP/openldap-release/openldap-2.6.13.tgz",
+      "source_url": "https://www.openldap.org/software/download/OpenLDAP/openldap-release/openldap-2.7.0.tgz",
       "upstream_provider": "other",
       "depth": 0,
       "target_branch": "openssl-4-migration-staging",
@@ -2118,6 +2115,7 @@
         "php"
       ],
       "dependencies": [
+        "llvm",
         "openssl@3",
         "util-linux"
       ],
@@ -2135,7 +2133,8 @@
         "php@8.4"
       ],
       "transitive_openssl_formula_dependencies": [
-        "cmake"
+        "cmake",
+        "python@3.14"
       ],
       "transitive_openssl_formula_dependents": [
         "dovecot",
@@ -2395,6 +2394,7 @@
         "gstreamer",
         "libfido2",
         "node",
+        "openldap",
         "php",
         "postgresql@17",
         "postgresql@18",
@@ -2633,7 +2633,6 @@
         "ggshield",
         "git-series",
         "git-trim",
-        "git-workspace",
         "git-xet",
         "gitlogue",
         "gitnr",
@@ -2648,6 +2647,7 @@
         "gurk",
         "gwenhywfar",
         "halide",
+        "heimdal",
         "helix-db",
         "hf",
         "hf-mount",
@@ -2695,6 +2695,7 @@
         "libwebsockets",
         "libxmlsec1",
         "lighthouse",
+        "lighttpd",
         "llama.cpp",
         "llgo",
         "localstack",
@@ -2770,6 +2771,7 @@
         "omniorb",
         "openapi-tui",
         "opencrabs",
+        "openldap",
         "openlore",
         "opensc",
         "openssh",
@@ -4111,7 +4113,6 @@
         "ggshield",
         "git-series",
         "git-trim",
-        "git-workspace",
         "git-xet",
         "gitlogue",
         "gitnr",
@@ -4373,7 +4374,6 @@
         "ggshield",
         "git-series",
         "git-trim",
-        "git-workspace",
         "git-xet",
         "gitlogue",
         "gitnr",
@@ -5410,7 +5410,6 @@
         "cargo-udeps",
         "cargo-update",
         "git-series",
-        "git-workspace",
         "julia",
         "nushell",
         "projectable",
@@ -5534,7 +5533,6 @@
         "ggshield",
         "git-series",
         "git-trim",
-        "git-workspace",
         "git-xet",
         "gitlogue",
         "gitnr",
@@ -7014,7 +7012,7 @@
       "path": "Formula/a/awscli.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://aws.amazon.com/cli/",
-      "source_url": "https://github.com/aws/aws-cli/archive/refs/tags/2.36.18.tar.gz",
+      "source_url": "https://github.com/aws/aws-cli/archive/refs/tags/2.36.19.tar.gz",
       "head_url": "https://github.com/aws/aws-cli.git",
       "upstream_provider": "github",
       "upstream_repo": "aws/aws-cli",
@@ -7817,7 +7815,7 @@
       "path": "Formula/c/c2patool.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://contentauthenticity.org",
-      "source_url": "https://github.com/contentauth/c2pa-rs/archive/refs/tags/c2patool-v0.27.6.tar.gz",
+      "source_url": "https://github.com/contentauth/c2pa-rs/archive/refs/tags/c2patool-v0.27.7.tar.gz",
       "head_url": "https://github.com/contentauth/c2pa-rs.git",
       "upstream_provider": "github",
       "upstream_repo": "contentauth/c2pa-rs",
@@ -8531,7 +8529,7 @@
       "path": "Formula/c/clamav.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://www.clamav.net/",
-      "source_url": "https://github.com/Cisco-Talos/clamav/releases/download/clamav-1.5.3/clamav-1.5.3.tar.gz",
+      "source_url": "https://github.com/Cisco-Talos/clamav/releases/download/clamav-1.5.4/clamav-1.5.4.tar.gz",
       "head_url": "https://github.com/Cisco-Talos/clamav.git",
       "upstream_provider": "github",
       "upstream_repo": "Cisco-Talos/clamav",
@@ -9085,7 +9083,7 @@
       "path": "Formula/c/coturn.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/coturn/coturn",
-      "source_url": "https://github.com/coturn/coturn/archive/refs/tags/4.17.0.tar.gz",
+      "source_url": "https://github.com/coturn/coturn/archive/refs/tags/4.17.1.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "coturn/coturn",
       "depth": null,
@@ -10693,7 +10691,7 @@
       "path": "Formula/e/emmylua_ls.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/EmmyLuaLs/emmylua-analyzer-rust",
-      "source_url": "https://github.com/EmmyLuaLs/emmylua-analyzer-rust/archive/refs/tags/0.24.0.tar.gz",
+      "source_url": "https://github.com/EmmyLuaLs/emmylua-analyzer-rust/archive/refs/tags/0.25.0.tar.gz",
       "head_url": "https://github.com/EmmyLuaLs/emmylua-analyzer-rust.git",
       "upstream_provider": "github",
       "upstream_repo": "EmmyLuaLs/emmylua-analyzer-rust",
@@ -12622,40 +12620,6 @@
       "transitive_openssl_formula_dependents": []
     },
     {
-      "name": "git-workspace",
-      "path": "Formula/g/git-workspace.rb",
-      "openssl_dependency": "openssl@3",
-      "homepage": "https://github.com/orf/git-workspace",
-      "source_url": "https://github.com/orf/git-workspace/archive/refs/tags/v1.10.1.tar.gz",
-      "head_url": "https://github.com/orf/git-workspace.git",
-      "upstream_provider": "github",
-      "upstream_repo": "orf/git-workspace",
-      "depth": null,
-      "target_branch": "main",
-      "staging_required_by": [],
-      "dependencies": [
-        "pkgconf",
-        "rust",
-        "libgit2",
-        "libssh2",
-        "openssl@3"
-      ],
-      "openssl_formula_dependencies": [
-        "libgit2",
-        "libssh2",
-        "rust"
-      ],
-      "openssl_formula_dependents": [],
-      "transitive_openssl_formula_dependencies": [
-        "cmake",
-        "libgit2",
-        "libssh2",
-        "python@3.14",
-        "rust"
-      ],
-      "transitive_openssl_formula_dependents": []
-    },
-    {
       "name": "git-xet",
       "path": "Formula/g/git-xet.rb",
       "openssl_dependency": "openssl@3",
@@ -13387,7 +13351,8 @@
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
-        "openldap"
+        "openldap",
+        "python@3.14"
       ],
       "transitive_openssl_formula_dependents": []
     },
@@ -13424,7 +13389,7 @@
       "path": "Formula/h/hf.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://huggingface.co/docs/huggingface_hub/guides/cli",
-      "source_url": "https://files.pythonhosted.org/packages/82/db/3582597f8be0d34bd6881365a26d390854f12893eabdd62dd36de9df5a47/huggingface_hub-1.26.0.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/89/64/bfe23dab749cb2342e1e13b61c9e684ce46b4d189c7d433cd26f76f52baf/huggingface_hub-1.26.1.tar.gz",
       "head_url": "https://github.com/huggingface/huggingface_hub.git",
       "upstream_provider": "github",
       "upstream_repo": "huggingface/huggingface_hub",
@@ -13858,7 +13823,7 @@
       "path": "Formula/i/icp-cli.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://dfinity.github.io/icp-cli/",
-      "source_url": "https://github.com/dfinity/icp-cli/archive/refs/tags/v1.2.0.tar.gz",
+      "source_url": "https://github.com/dfinity/icp-cli/archive/refs/tags/v1.3.0.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "dfinity/icp-cli",
       "depth": null,
@@ -16340,7 +16305,8 @@
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
-        "openldap"
+        "openldap",
+        "python@3.14"
       ],
       "transitive_openssl_formula_dependents": []
     },
@@ -17445,7 +17411,7 @@
       "path": "Formula/m/mise.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://mise.jdx.dev/",
-      "source_url": "https://github.com/jdx/mise/archive/refs/tags/v2026.8.2.tar.gz",
+      "source_url": "https://github.com/jdx/mise/archive/refs/tags/v2026.8.3.tar.gz",
       "head_url": "https://github.com/jdx/mise.git",
       "upstream_provider": "github",
       "upstream_repo": "jdx/mise",
@@ -19714,7 +19680,7 @@
       "path": "Formula/o/opencrabs.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://opencrabs.com",
-      "source_url": "https://github.com/adolfousier/opencrabs/archive/refs/tags/v0.3.78.tar.gz",
+      "source_url": "https://github.com/adolfousier/opencrabs/archive/refs/tags/v0.3.79.tar.gz",
       "head_url": "https://github.com/adolfousier/opencrabs.git",
       "upstream_provider": "github",
       "upstream_repo": "adolfousier/opencrabs",
@@ -19830,7 +19796,7 @@
       "path": "Formula/o/openrtsp.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "http://www.live555.com/openRTSP",
-      "source_url": "https://download.live555.com/live.2026.07.23.tar.gz",
+      "source_url": "https://download.live555.com/live.2026.08.07.tar.gz",
       "upstream_provider": "other",
       "depth": null,
       "target_branch": "main",
@@ -20194,7 +20160,7 @@
       "path": "Formula/o/oterm.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/ggozad/oterm",
-      "source_url": "https://files.pythonhosted.org/packages/52/8a/81eeb2ae5f72e92a2415b861b6b94f0fc365c6a26fe35769a090c06fe0fd/oterm-0.23.0.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/8b/9e/ad36f0b1d2a7b2850da70d357551d307ea4d4ede20abe5ce0832fc32a50a/oterm-0.23.1.tar.gz",
       "upstream_provider": "python",
       "depth": null,
       "target_branch": "main",
@@ -22032,7 +21998,7 @@
       "path": "Formula/p/pup.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.datadoghq.com",
-      "source_url": "https://github.com/DataDog/pup/archive/refs/tags/v1.10.4.tar.gz",
+      "source_url": "https://github.com/DataDog/pup/archive/refs/tags/v1.10.5.tar.gz",
       "head_url": "https://github.com/DataDog/pup.git",
       "upstream_provider": "github",
       "upstream_repo": "DataDog/pup",
@@ -26870,7 +26836,7 @@
       "path": "Formula/t/tt.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/tarantool/tt",
-      "source_url": "https://github.com/tarantool/tt/releases/download/v2.13.0/tt-2.13.0-complete.tar.gz",
+      "source_url": "https://github.com/tarantool/tt/releases/download/v2.14.0/tt-2.14.0-complete.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "tarantool/tt",
       "depth": null,
@@ -28537,7 +28503,7 @@
       "path": "Formula/z/zola.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://www.getzola.org/",
-      "source_url": "https://github.com/getzola/zola/archive/refs/tags/v0.23.1.tar.gz",
+      "source_url": "https://github.com/getzola/zola/archive/refs/tags/v0.23.2.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "getzola/zola",
       "depth": null,
