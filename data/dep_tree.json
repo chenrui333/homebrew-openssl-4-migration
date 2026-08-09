@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-08T07:11:35Z",
+  "generated_at": "2026-08-09T07:14:02Z",
   "repository": "Homebrew/homebrew-core",
-  "git_head": "fe768a52a415a40498a551344200d2b76c5f0bf3",
+  "git_head": "3a20d82adb5688384bf6d8c9892ebc984ba4f1ad",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "staging_branch": "openssl-4-migration-staging",
   "staged_depths": {
@@ -5892,6 +5892,7 @@
       ],
       "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
+        "monitoring-plugins",
         "php",
         "php@8.4",
         "syslog-ng"
@@ -5899,6 +5900,7 @@
       "transitive_openssl_formula_dependencies": [],
       "transitive_openssl_formula_dependents": [
         "freeradius-server",
+        "monitoring-plugins",
         "php",
         "php@8.4",
         "syslog-ng"
@@ -9083,7 +9085,7 @@
       "path": "Formula/c/coturn.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/coturn/coturn",
-      "source_url": "https://github.com/coturn/coturn/archive/refs/tags/4.17.1.tar.gz",
+      "source_url": "https://github.com/coturn/coturn/archive/refs/tags/4.17.2.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "coturn/coturn",
       "depth": null,
@@ -13361,7 +13363,7 @@
       "path": "Formula/h/helix-db.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://helix-db.com",
-      "source_url": "https://github.com/HelixDB/helix-db/archive/refs/tags/v3.0.8.tar.gz",
+      "source_url": "https://github.com/HelixDB/helix-db/archive/refs/tags/v3.1.0.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "HelixDB/helix-db",
       "depth": null,
@@ -13389,7 +13391,7 @@
       "path": "Formula/h/hf.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://huggingface.co/docs/huggingface_hub/guides/cli",
-      "source_url": "https://files.pythonhosted.org/packages/89/64/bfe23dab749cb2342e1e13b61c9e684ce46b4d189c7d433cd26f76f52baf/huggingface_hub-1.26.1.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/3e/9b/ddf3d02a8681f1b9ce52fda03d755dad6b74c4f8172304c4c8d2975450f9/huggingface_hub-1.27.0.tar.gz",
       "head_url": "https://github.com/huggingface/huggingface_hub.git",
       "upstream_provider": "github",
       "upstream_repo": "huggingface/huggingface_hub",
@@ -13613,7 +13615,7 @@
       "path": "Formula/h/httrack.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.httrack.com/",
-      "source_url": "https://github.com/xroche/httrack/releases/download/3.49.18/httrack-3.49.18.tar.gz",
+      "source_url": "https://github.com/xroche/httrack/releases/download/3.49.19/httrack-3.49.19.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "xroche/httrack",
       "depth": null,
@@ -15671,7 +15673,7 @@
       "path": "Formula/lib/libp11.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/OpenSC/libp11/wiki",
-      "source_url": "https://github.com/OpenSC/libp11/releases/download/libp11-0.4.19/libp11-0.4.19.tar.gz",
+      "source_url": "https://github.com/OpenSC/libp11/releases/download/libp11-0.4.20/libp11-0.4.20.tar.gz",
       "head_url": "https://github.com/OpenSC/libp11.git",
       "upstream_provider": "github",
       "upstream_repo": "OpenSC/libp11",
@@ -17683,23 +17685,26 @@
       "path": "Formula/m/monitoring-plugins.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://www.monitoring-plugins.org",
-      "source_url": "https://www.monitoring-plugins.org/download/monitoring-plugins-2.4.0.tar.gz",
+      "source_url": "https://www.monitoring-plugins.org/download/monitoring-plugins-3.0.3.tar.gz",
       "upstream_provider": "other",
       "depth": null,
       "target_branch": "main",
       "staging_required_by": [],
       "dependencies": [
+        "net-snmp",
         "openssl@3",
         "gettext",
         "bind"
       ],
       "openssl_formula_dependencies": [
-        "bind"
+        "bind",
+        "net-snmp"
       ],
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "bind",
         "cmake",
+        "net-snmp",
         "python@3.14",
         "wget"
       ],
@@ -22183,7 +22188,7 @@
       "path": "Formula/p/pypy3.10.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://pypy.org/",
-      "source_url": "https://downloads.python.org/pypy/pypy3.10-v7.3.17-src.tar.bz2",
+      "source_url": "https://github.com/pypy/pypy/archive/refs/tags/release-pypy3.10-v7.3.19.tar.gz",
       "head_url": "https://github.com/pypy/pypy.git",
       "upstream_provider": "github",
       "upstream_repo": "pypy/pypy",
@@ -22197,7 +22202,8 @@
         "openssl@3",
         "sqlite",
         "tcl-tk@8",
-        "xz"
+        "xz",
+        "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
         "pypy",
@@ -22667,7 +22673,7 @@
       "path": "Formula/r/rapid-mlx.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/raullenchai/Rapid-MLX",
-      "source_url": "https://files.pythonhosted.org/packages/ae/fa/d6f122ae9876627195b2c7b0d0a370dff35be4ae2bf2118364f9b511a239/rapid_mlx-0.12.4.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/06/8b/b67c4f8f204d51ceb0ff826abeb6e73ff0d568b3904f50d7620effa08f76/rapid_mlx-0.12.7.tar.gz",
       "upstream_provider": "python",
       "depth": null,
       "target_branch": "main",
@@ -25091,7 +25097,7 @@
       "path": "Formula/s/solana.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://www.anza.xyz/",
-      "source_url": "https://github.com/anza-xyz/agave/archive/refs/tags/v4.1.2.tar.gz",
+      "source_url": "https://github.com/anza-xyz/agave/archive/refs/tags/v4.2.0.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "anza-xyz/agave",
       "depth": null,
@@ -27346,7 +27352,7 @@
       "path": "Formula/v/vtcode.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://vinhnx.github.io",
-      "source_url": "https://static.crates.io/crates/vtcode/vtcode-0.141.10.crate",
+      "source_url": "https://static.crates.io/crates/vtcode/vtcode-0.142.0.crate",
       "head_url": "https://github.com/vinhnx/vtcode.git",
       "upstream_provider": "github",
       "upstream_repo": "vinhnx/vtcode",
