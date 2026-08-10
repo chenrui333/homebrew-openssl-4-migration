@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-09T07:14:02Z",
+  "generated_at": "2026-08-10T08:02:04Z",
   "repository": "Homebrew/homebrew-core",
-  "git_head": "3a20d82adb5688384bf6d8c9892ebc984ba4f1ad",
+  "git_head": "83be9c077c829a14ef69a657f90a3bdbd8a60815",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "staging_branch": "openssl-4-migration-staging",
   "staged_depths": {
@@ -60,7 +60,7 @@
       "gstreamer"
     ]
   },
-  "formula_count": 763,
+  "formula_count": 762,
   "formulae": [
     {
       "name": "apr-util",
@@ -505,7 +505,6 @@
         "code2prompt",
         "codeberg-cli",
         "codesnap",
-        "codex-acp",
         "colmap",
         "condure",
         "coturn",
@@ -1794,7 +1793,6 @@
         "code2prompt",
         "codeberg-cli",
         "codesnap",
-        "codex-acp",
         "colmap",
         "condure",
         "couchbase-shell",
@@ -2115,8 +2113,8 @@
         "php"
       ],
       "dependencies": [
-        "llvm",
         "openssl@3",
+        "llvm",
         "util-linux"
       ],
       "openssl_formula_dependencies": [],
@@ -2272,7 +2270,6 @@
       ],
       "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
-        "bittensor",
         "cryptography",
         "dotnet@6",
         "node@18",
@@ -2425,6 +2422,7 @@
         "azure-cli",
         "barman",
         "bbot",
+        "bittensor",
         "borgbackup",
         "btcli",
         "cryptography",
@@ -2551,7 +2549,6 @@
         "code2prompt",
         "codeberg-cli",
         "codesnap",
-        "codex-acp",
         "colmap",
         "condure",
         "couchbase-shell",
@@ -4079,7 +4076,6 @@
         "code2prompt",
         "codeberg-cli",
         "codesnap",
-        "codex-acp",
         "condure",
         "couchbase-shell",
         "crates-tui",
@@ -4312,7 +4308,6 @@
         "code2prompt",
         "codeberg-cli",
         "codesnap",
-        "codex-acp",
         "colmap",
         "condure",
         "couchbase-shell",
@@ -5471,7 +5466,6 @@
         "code2prompt",
         "codeberg-cli",
         "codesnap",
-        "codex-acp",
         "colmap",
         "condure",
         "couchbase-shell",
@@ -7474,10 +7468,10 @@
         "rust",
         "openssl@3",
         "pydantic",
-        "python@3.13"
+        "python@3.14"
       ],
       "openssl_formula_dependencies": [
-        "python@3.13",
+        "python@3.14",
         "rust"
       ],
       "openssl_formula_dependents": [],
@@ -7670,7 +7664,7 @@
       "path": "Formula/b/btfs.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/johang/btfs",
-      "source_url": "https://github.com/johang/btfs/archive/refs/tags/v3.1.tar.gz",
+      "source_url": "https://github.com/johang/btfs/archive/refs/tags/v3.2.tar.gz",
       "head_url": "https://github.com/johang/btfs.git",
       "upstream_provider": "github",
       "upstream_repo": "johang/btfs",
@@ -8937,38 +8931,6 @@
       "transitive_openssl_formula_dependents": []
     },
     {
-      "name": "codex-acp",
-      "path": "Formula/c/codex-acp.rb",
-      "openssl_dependency": "openssl@4",
-      "homepage": "https://github.com/zed-industries/codex-acp",
-      "source_url": "https://github.com/zed-industries/codex-acp/archive/refs/tags/v0.16.0.tar.gz",
-      "head_url": "https://github.com/zed-industries/codex-acp.git",
-      "upstream_provider": "github",
-      "upstream_repo": "zed-industries/codex-acp",
-      "depth": null,
-      "target_branch": "main",
-      "staging_required_by": [],
-      "dependencies": [
-        "pkgconf",
-        "rust",
-        "libcap",
-        "openssl@4",
-        "zlib-ng-compat"
-      ],
-      "openssl_formula_dependencies": [
-        "rust"
-      ],
-      "openssl_formula_dependents": [],
-      "transitive_openssl_formula_dependencies": [
-        "cmake",
-        "libgit2",
-        "libssh2",
-        "python@3.14",
-        "rust"
-      ],
-      "transitive_openssl_formula_dependents": []
-    },
-    {
       "name": "colmap",
       "path": "Formula/c/colmap.rb",
       "openssl_dependency": "openssl@3",
@@ -9187,7 +9149,7 @@
       "path": "Formula/c/cpp-httplib.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://yhirose.github.io/cpp-httplib/",
-      "source_url": "https://github.com/yhirose/cpp-httplib/archive/refs/tags/v0.52.0.tar.gz",
+      "source_url": "https://github.com/yhirose/cpp-httplib/archive/refs/tags/v0.53.0.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "yhirose/cpp-httplib",
       "depth": null,
@@ -11827,7 +11789,7 @@
       "path": "Formula/f/fnox.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://fnox.jdx.dev/",
-      "source_url": "https://github.com/jdx/fnox/archive/refs/tags/v1.32.0.tar.gz",
+      "source_url": "https://github.com/jdx/fnox/archive/refs/tags/v1.33.0.tar.gz",
       "head_url": "https://github.com/jdx/fnox.git",
       "upstream_provider": "github",
       "upstream_repo": "jdx/fnox",
@@ -12024,7 +11986,6 @@
       "dependencies": [
         "cmake",
         "pkgconf",
-        "cjson",
         "ffmpeg",
         "jansson",
         "jpeg-turbo",
@@ -12041,7 +12002,6 @@
         "libxrender",
         "libxv",
         "openssl@3",
-        "pkcs11-helper",
         "sdl3",
         "sdl3_ttf",
         "uriparser",
@@ -12059,7 +12019,6 @@
         "ffmpeg",
         "krb5",
         "libfido2",
-        "pkcs11-helper",
         "systemd"
       ],
       "openssl_formula_dependents": [],
@@ -12072,7 +12031,6 @@
         "libgit2",
         "libssh2",
         "pipewire",
-        "pkcs11-helper",
         "pulseaudio",
         "python@3.13",
         "python@3.14",
@@ -12087,7 +12045,7 @@
       "path": "Formula/f/freeswitch.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://freeswitch.org",
-      "source_url": "https://files.freeswitch.org/releases/freeswitch/freeswitch-1.11.1.-release.tar.gz",
+      "source_url": "https://files.freeswitch.org/releases/freeswitch/freeswitch-1.11.2.-release.tar.gz",
       "head_url": "https://github.com/signalwire/freeswitch.git",
       "upstream_provider": "github",
       "upstream_repo": "signalwire/freeswitch",
@@ -12174,7 +12132,7 @@
       "path": "Formula/g/gambit-scheme.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://gambitscheme.org/",
-      "source_url": "https://github.com/gambit/gambit/archive/refs/tags/v4.9.7.tar.gz",
+      "source_url": "https://github.com/gambit/gambit/archive/refs/tags/v4.9.8.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "gambit/gambit",
       "depth": null,
@@ -14504,7 +14462,7 @@
       "path": "Formula/k/keeper-commander.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://docs.keeper.io/en/privileged-access-manager/commander-cli/overview",
-      "source_url": "https://files.pythonhosted.org/packages/29/26/2e6dfa90265ee10924a093e43a897bbd8cb4736f50b5a6ad5e464ba72ef4/keepercommander-18.0.15.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/52/ab/b1e3e56a8b70313888c91c53322daf426d92ca4d9c047ad7e1b41a1ceb2f/keepercommander-18.1.0.tar.gz",
       "head_url": "https://github.com/Keeper-Security/Commander.git",
       "upstream_provider": "github",
       "upstream_repo": "Keeper-Security/Commander",
@@ -21326,14 +21284,12 @@
       ],
       "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
-        "freerdp",
         "gnupg-pkcs11-scd",
         "openvpn",
         "qca"
       ],
       "transitive_openssl_formula_dependencies": [],
       "transitive_openssl_formula_dependents": [
-        "freerdp",
         "gnupg-pkcs11-scd",
         "openvpn",
         "qca"
@@ -21724,7 +21680,7 @@
       "path": "Formula/p/proto.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://moonrepo.dev/proto",
-      "source_url": "https://github.com/moonrepo/proto/archive/refs/tags/v0.60.0.tar.gz",
+      "source_url": "https://github.com/moonrepo/proto/archive/refs/tags/v0.60.1.tar.gz",
       "head_url": "https://github.com/moonrepo/proto.git",
       "upstream_provider": "github",
       "upstream_repo": "moonrepo/proto",
@@ -22003,7 +21959,7 @@
       "path": "Formula/p/pup.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.datadoghq.com",
-      "source_url": "https://github.com/DataDog/pup/archive/refs/tags/v1.10.5.tar.gz",
+      "source_url": "https://github.com/DataDog/pup/releases/download/v1.10.5/pup_1.10.5_source.tar.gz",
       "head_url": "https://github.com/DataDog/pup.git",
       "upstream_provider": "github",
       "upstream_repo": "DataDog/pup",
@@ -22489,7 +22445,7 @@
       "path": "Formula/q/qpdf.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://qpdf.sourceforge.io/",
-      "source_url": "https://github.com/qpdf/qpdf/releases/download/v12.3.2/qpdf-12.3.2.tar.gz",
+      "source_url": "https://github.com/qpdf/qpdf/releases/download/v12.4.0/qpdf-12.4.0.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "qpdf/qpdf",
       "depth": null,
@@ -27352,7 +27308,7 @@
       "path": "Formula/v/vtcode.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://vinhnx.github.io",
-      "source_url": "https://static.crates.io/crates/vtcode/vtcode-0.142.0.crate",
+      "source_url": "https://static.crates.io/crates/vtcode/vtcode-0.142.5.crate",
       "head_url": "https://github.com/vinhnx/vtcode.git",
       "upstream_provider": "github",
       "upstream_repo": "vinhnx/vtcode",
