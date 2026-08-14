@@ -1,6 +1,6 @@
-# OpenSSL 4 Migration Checklist (2026-08-13)
+# OpenSSL 4 Migration Checklist (2026-08-14)
 
-Progress: **22/59 (37.3%)**
+Progress: **22/58 (37.9%)**
 Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/homebrew-core/issues/278366)
 
 > Staging batches are depth 0 → 1 → 2 → 3 plus their computed transitive closure.
@@ -64,11 +64,10 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 
 - [ ] gstreamer
 
-## Staging closure -> openssl-4-migration-staging [5/13]
+## Staging closure -> openssl-4-migration-staging [5/12]
 
 - [ ] aws-c-cal
 - [ ] aws-c-io
-- [ ] cgal
 - [ ] libgit2
 - [ ] libngtcp2
 - [x] ~~libshout~~

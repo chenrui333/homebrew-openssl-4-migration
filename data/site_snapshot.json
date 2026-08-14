@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-08-13T07:50:15Z",
+  "generated_at": "2026-08-14T07:47:26Z",
   "repository": "Homebrew/homebrew-core",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "target_branch": "openssl-4-migration-staging",
   "scope": "staging",
   "summary": {
-    "staged_formulae": 59,
+    "staged_formulae": 58,
     "done": 22,
-    "pending": 37,
+    "pending": 36,
     "open_staging_prs": 0,
     "current_gate": "Batch 0 — Roots",
     "current_gate_pending": 11,
@@ -20,7 +20,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 670,
+      "impact_count": 669,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -1698,46 +1698,6 @@
         "url": "https://gitlab.isc.org/isc-projects/bind9"
       },
       "issues": [],
-      "flags": {
-        "current_gate": false,
-        "ready": false,
-        "draft": false,
-        "ci_blocked": false,
-        "base_mismatch": false,
-        "missing_pr": true,
-        "upstream_blocked": false
-      }
-    },
-    {
-      "name": "cgal",
-      "live_status": "PENDING",
-      "depth": null,
-      "group_label": "Staging closure",
-      "impact_count": 4,
-      "target_branch": "openssl-4-migration-staging",
-      "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
-      },
-      "readiness": [
-        "missing-pr"
-      ],
-      "next_action": "Open migration PR",
-      "upstream": {
-        "provider": "github",
-        "repo": "CGAL/cgal",
-        "url": "https://github.com/CGAL/cgal"
-      },
-      "issues": [
-        {
-          "label": "search",
-          "url": "https://github.com/search?q=repo%3ACGAL%2Fcgal+%22OpenSSL+4%22\u0026type=issues"
-        }
-      ],
       "flags": {
         "current_gate": false,
         "ready": false,

@@ -1,16 +1,16 @@
-# OpenSSL 4 Migration Audit (2026-08-13)
+# OpenSSL 4 Migration Audit (2026-08-14)
 
 Tracking issue: Homebrew/homebrew-core#278366
 
 ## Summary
 
-- Staging-scope formulae: 59
-- Live pending: 37
-- Live done: 22 (37.3%)
+- Staging-scope formulae: 58
+- Live pending: 36
+- Live done: 22 (37.9%)
 - Open staging PRs: 0
 - Draft migration PRs: 0
 - PRs with merge/check blockers: 0
-- Pending formulae without open migration PRs: 37
+- Pending formulae without open migration PRs: 36
 
 ## Retarget to Staging
 
@@ -26,7 +26,7 @@ Pending staged formulae are sorted by transitive dependent count.
 
 | Formula | Target | Depth | Impact | Status | PR | Readiness | Upstream | Issues |
 |---|---|---:|---:|---|---|---|---|---|
-| cmake | openssl-4-migration-staging | 0 | 670 | PENDING | none | missing-pr | gitlab:gitlab.kitware.com/cmake/cmake |  |
+| cmake | openssl-4-migration-staging | 0 | 669 | PENDING | none | missing-pr | gitlab:gitlab.kitware.com/cmake/cmake |  |
 | python@3.14 | openssl-4-migration-staging | 0 | 471 | PENDING | none | missing-pr | python |  |
 | libgit2 | openssl-4-migration-staging | closure | 290 | PENDING | none | missing-pr | github:libgit2/libgit2 |  |
 | rust | openssl-4-migration-staging | 1 | 288 | PENDING | none | missing-pr | github:rust-lang/rust | [issues#155397](https://github.com/rust-lang/rust/issues/155397) open |
@@ -52,7 +52,6 @@ Pending staged formulae are sorted by transitive dependent count.
 | thrift | openssl-4-migration-staging | closure | 5 | PENDING | none | missing-pr | github:apache/thrift |  |
 | apache-arrow | openssl-4-migration-staging | 1 | 4 | PENDING | none | missing-pr | github:apache/arrow |  |
 | bind | openssl-4-migration-staging | 1 | 4 | PENDING | none | missing-pr | gitlab:gitlab.isc.org/isc-projects/bind9 |  |
-| cgal | openssl-4-migration-staging | closure | 4 | PENDING | none | missing-pr | github:CGAL/cgal |  |
 | erlang | openssl-4-migration-staging | 0 | 4 | PENDING | none | missing-pr | github:erlang/otp |  |
 | gstreamer | openssl-4-migration-staging | 3 | 4 | PENDING | none | missing-pr | gitlab:gitlab.freedesktop.org/gstreamer/gstreamer |  |
 | tcl-tk@8 | openssl-4-migration-staging | 0 | 4 | PENDING | none | missing-pr | other |  |
@@ -70,7 +69,7 @@ Top 20 pending staged formulae with upstream metadata and no curated upstream is
 
 | Formula | Depth | Impact | Upstream | Search | Readiness |
 |---|---:|---:|---|---|---|
-| cmake | 0 | 670 | gitlab:gitlab.kitware.com/cmake/cmake |  | missing-pr |
+| cmake | 0 | 669 | gitlab:gitlab.kitware.com/cmake/cmake |  | missing-pr |
 | python@3.14 | 0 | 471 | python |  | missing-pr |
 | libgit2 | closure | 290 | github:libgit2/libgit2 | [issues](https://github.com/search?q=repo%3Alibgit2%2Flibgit2+%22OpenSSL+4%22&type=issues) | missing-pr |
 | python@3.13 | 0 | 84 | python |  | missing-pr |
@@ -89,7 +88,7 @@ Top 20 pending staged formulae with upstream metadata and no curated upstream is
 | thrift | closure | 5 | github:apache/thrift | [issues](https://github.com/search?q=repo%3Aapache%2Fthrift+%22OpenSSL+4%22&type=issues) | missing-pr |
 | apache-arrow | 1 | 4 | github:apache/arrow | [issues](https://github.com/search?q=repo%3Aapache%2Farrow+%22OpenSSL+4%22&type=issues) | missing-pr |
 | bind | 1 | 4 | gitlab:gitlab.isc.org/isc-projects/bind9 |  | missing-pr |
-| cgal | closure | 4 | github:CGAL/cgal | [issues](https://github.com/search?q=repo%3ACGAL%2Fcgal+%22OpenSSL+4%22&type=issues) | missing-pr |
+| erlang | 0 | 4 | github:erlang/otp | [issues](https://github.com/search?q=repo%3Aerlang%2Fotp+%22OpenSSL+4%22&type=issues) | missing-pr |
 
 ## Curated Upstream Issues
 
