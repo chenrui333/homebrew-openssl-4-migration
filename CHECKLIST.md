@@ -1,15 +1,15 @@
-# OpenSSL 4 Migration Checklist (2026-08-14)
+# OpenSSL 4 Migration Checklist (2026-08-15)
 
-Progress: **22/58 (37.9%)**
+Progress: **8/58 (13.8%)**
 Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/homebrew-core/issues/278366)
 
 > Staging batches are depth 0 → 1 → 2 → 3 plus their computed transitive closure.
 > This public checklist is scoped to formulae targeting openssl-4-migration-staging.
 
-## Batch 0 — Roots -> openssl-4-migration-staging [14/25]
+## Batch 0 — Roots -> openssl-4-migration-staging [3/25]
 
-- [x] ~~apr-util~~
-- [x] ~~asio~~
+- [ ] apr-util
+- [ ] asio
 - [ ] cmake
 - [ ] dotnet
 - [ ] erlang
@@ -17,31 +17,31 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 - [ ] grpc
 - [ ] hiredis
 - [x] ~~krb5~~
-- [x] ~~libevent~~
+- [ ] libevent
 - [ ] libfido2
 - [ ] librdkafka
-- [x] ~~libssh~~
-- [x] ~~libssh2~~
-- [x] ~~mariadb-connector-c~~
-- [x] ~~openldap~~
+- [ ] libssh
+- [ ] libssh2
+- [ ] mariadb-connector-c
+- [ ] openldap
 - [x] ~~opusfile~~
-- [x] ~~python@3.11~~
-- [x] ~~python@3.12~~
+- [ ] python@3.11
+- [ ] python@3.12
 - [ ] python@3.13
 - [ ] python@3.14
-- [x] ~~srt~~
-- [x] ~~tcl-tk~~
+- [ ] srt
+- [ ] tcl-tk
 - [ ] tcl-tk@8
 - [x] ~~wget~~
 
-## Batch 1 -> openssl-4-migration-staging [3/15]
+## Batch 1 -> openssl-4-migration-staging [0/15]
 
 - [ ] apache-arrow
 - [ ] bind
-- [x] ~~curl~~
-- [x] ~~ffmpeg~~
+- [ ] curl
+- [ ] ffmpeg
 - [ ] folly
-- [x] ~~httpd~~
+- [ ] httpd
 - [ ] libpq
 - [ ] node
 - [ ] postgresql@17

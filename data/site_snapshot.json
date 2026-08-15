@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-08-14T07:47:26Z",
+  "generated_at": "2026-08-15T06:55:25Z",
   "repository": "Homebrew/homebrew-core",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "target_branch": "openssl-4-migration-staging",
   "scope": "staging",
   "summary": {
     "staged_formulae": 58,
-    "done": 22,
-    "pending": 36,
+    "done": 8,
+    "pending": 50,
     "open_staging_prs": 0,
     "current_gate": "Batch 0 — Roots",
-    "current_gate_pending": 11,
+    "current_gate_pending": 22,
     "upstream_blockers": 3,
     "base_mismatches": 0
   },
@@ -87,7 +87,7 @@
     },
     {
       "name": "libssh2",
-      "live_status": "DONE",
+      "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
       "impact_count": 313,
@@ -101,9 +101,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "done"
+        "missing-pr"
       ],
-      "next_action": "Done",
+      "next_action": "Open migration PR",
       "upstream": {
         "provider": "github",
         "repo": "libssh2/libssh2",
@@ -121,7 +121,7 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": false,
+        "missing_pr": true,
         "upstream_blocked": false
       }
     },
@@ -355,7 +355,7 @@
     },
     {
       "name": "libevent",
-      "live_status": "DONE",
+      "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
       "impact_count": 64,
@@ -369,9 +369,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "done"
+        "missing-pr"
       ],
-      "next_action": "Done",
+      "next_action": "Open migration PR",
       "upstream": {
         "provider": "github",
         "repo": "libevent/libevent",
@@ -389,7 +389,7 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": false,
+        "missing_pr": true,
         "upstream_blocked": false
       }
     },
@@ -475,7 +475,7 @@
     },
     {
       "name": "curl",
-      "live_status": "DONE",
+      "live_status": "PENDING",
       "depth": 1,
       "group_label": "Batch 1",
       "impact_count": 20,
@@ -489,9 +489,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "done"
+        "missing-pr"
       ],
-      "next_action": "Done",
+      "next_action": "Open migration PR",
       "upstream": {
         "provider": "github",
         "repo": "curl/curl",
@@ -509,7 +509,7 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": false,
+        "missing_pr": true,
         "upstream_blocked": false
       }
     },
@@ -703,7 +703,7 @@
     },
     {
       "name": "ffmpeg",
-      "live_status": "DONE",
+      "live_status": "PENDING",
       "depth": 1,
       "group_label": "Batch 1",
       "impact_count": 13,
@@ -717,9 +717,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "done"
+        "missing-pr"
       ],
-      "next_action": "Done",
+      "next_action": "Open migration PR",
       "upstream": {
         "provider": "github",
         "repo": "FFmpeg/FFmpeg",
@@ -737,13 +737,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": false,
+        "missing_pr": true,
         "upstream_blocked": false
       }
     },
     {
       "name": "apr-util",
-      "live_status": "DONE",
+      "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
       "impact_count": 11,
@@ -757,9 +757,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "done"
+        "missing-pr"
       ],
-      "next_action": "Done",
+      "next_action": "Open migration PR",
       "upstream": {
         "provider": "apache",
         "repo": "",
@@ -772,7 +772,7 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": false,
+        "missing_pr": true,
         "upstream_blocked": false
       }
     },
@@ -899,7 +899,7 @@
     },
     {
       "name": "openldap",
-      "live_status": "DONE",
+      "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
       "impact_count": 10,
@@ -913,9 +913,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "done"
+        "missing-pr"
       ],
-      "next_action": "Done",
+      "next_action": "Open migration PR",
       "upstream": {
         "provider": "other",
         "repo": "",
@@ -928,7 +928,7 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": false,
+        "missing_pr": true,
         "upstream_blocked": false
       }
     },
@@ -1052,7 +1052,7 @@
     },
     {
       "name": "httpd",
-      "live_status": "DONE",
+      "live_status": "PENDING",
       "depth": 1,
       "group_label": "Batch 1",
       "impact_count": 8,
@@ -1066,9 +1066,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "done"
+        "missing-pr"
       ],
-      "next_action": "Done",
+      "next_action": "Open migration PR",
       "upstream": {
         "provider": "apache",
         "repo": "",
@@ -1081,7 +1081,7 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": false,
+        "missing_pr": true,
         "upstream_blocked": false
       }
     },
@@ -1285,7 +1285,7 @@
     },
     {
       "name": "srt",
-      "live_status": "DONE",
+      "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
       "impact_count": 6,
@@ -1299,9 +1299,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "done"
+        "missing-pr"
       ],
-      "next_action": "Done",
+      "next_action": "Open migration PR",
       "upstream": {
         "provider": "github",
         "repo": "Haivision/srt",
@@ -1319,7 +1319,7 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": false,
+        "missing_pr": true,
         "upstream_blocked": false
       }
     },
@@ -1365,7 +1365,7 @@
     },
     {
       "name": "asio",
-      "live_status": "DONE",
+      "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
       "impact_count": 5,
@@ -1379,9 +1379,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "done"
+        "missing-pr"
       ],
-      "next_action": "Done",
+      "next_action": "Open migration PR",
       "upstream": {
         "provider": "github",
         "repo": "chriskohlhoff/asio",
@@ -1399,7 +1399,7 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": false,
+        "missing_pr": true,
         "upstream_blocked": false
       }
     },
@@ -1480,7 +1480,7 @@
     },
     {
       "name": "libssh",
-      "live_status": "DONE",
+      "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
       "impact_count": 5,
@@ -1494,9 +1494,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "done"
+        "missing-pr"
       ],
-      "next_action": "Done",
+      "next_action": "Open migration PR",
       "upstream": {
         "provider": "other",
         "repo": "",
@@ -1509,13 +1509,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": false,
+        "missing_pr": true,
         "upstream_blocked": false
       }
     },
     {
       "name": "mariadb-connector-c",
-      "live_status": "DONE",
+      "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
       "impact_count": 5,
@@ -1529,9 +1529,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "done"
+        "missing-pr"
       ],
-      "next_action": "Done",
+      "next_action": "Open migration PR",
       "upstream": {
         "provider": "github",
         "repo": "mariadb-corporation/mariadb-connector-c",
@@ -1549,7 +1549,7 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": false,
+        "missing_pr": true,
         "upstream_blocked": false
       }
     },
@@ -1860,7 +1860,7 @@
     },
     {
       "name": "python@3.12",
-      "live_status": "DONE",
+      "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
       "impact_count": 3,
@@ -1874,9 +1874,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "done"
+        "missing-pr"
       ],
-      "next_action": "Done",
+      "next_action": "Open migration PR",
       "upstream": {
         "provider": "python",
         "repo": "",
@@ -1889,13 +1889,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": false,
+        "missing_pr": true,
         "upstream_blocked": false
       }
     },
     {
       "name": "tcl-tk",
-      "live_status": "DONE",
+      "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
       "impact_count": 3,
@@ -1909,9 +1909,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "done"
+        "missing-pr"
       ],
-      "next_action": "Done",
+      "next_action": "Open migration PR",
       "upstream": {
         "provider": "other",
         "repo": "",
@@ -1924,7 +1924,7 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": false,
+        "missing_pr": true,
         "upstream_blocked": false
       }
     },
@@ -2195,7 +2195,7 @@
     },
     {
       "name": "python@3.11",
-      "live_status": "DONE",
+      "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
       "impact_count": 0,
@@ -2209,9 +2209,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "done"
+        "missing-pr"
       ],
-      "next_action": "Done",
+      "next_action": "Open migration PR",
       "upstream": {
         "provider": "python",
         "repo": "",
@@ -2224,7 +2224,7 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": false,
+        "missing_pr": true,
         "upstream_blocked": false
       }
     }

@@ -1,13 +1,13 @@
-OpenSSL 4 Migration Status (2026-08-14)
+OpenSSL 4 Migration Status (2026-08-15)
 ========================================
-Total pending:  36
-Total done:     22 (37.9%)
+Total pending:  50
+Total done:     8 (13.8%)
 
 Tracking issue: Homebrew/homebrew-core#278366
 
-Batch 0 — Roots -> openssl-4-migration-staging   [14/25 done]
-  apr-util                 DONE
-  asio                     DONE
+Batch 0 — Roots -> openssl-4-migration-staging   [3/25 done]
+  apr-util                 PENDING
+  asio                     PENDING
   cmake                    PENDING
   dotnet                   PENDING
   erlang                   PENDING
@@ -15,30 +15,30 @@ Batch 0 — Roots -> openssl-4-migration-staging   [14/25 done]
   grpc                     PENDING
   hiredis                  PENDING
   krb5                     DONE
-  libevent                 DONE
+  libevent                 PENDING
   libfido2                 PENDING
   librdkafka               PENDING
-  libssh                   DONE
-  libssh2                  DONE
-  mariadb-connector-c      DONE
-  openldap                 DONE
+  libssh                   PENDING
+  libssh2                  PENDING
+  mariadb-connector-c      PENDING
+  openldap                 PENDING
   opusfile                 DONE
-  python@3.11              DONE
-  python@3.12              DONE
+  python@3.11              PENDING
+  python@3.12              PENDING
   python@3.13              PENDING
   python@3.14              PENDING
-  srt                      DONE
-  tcl-tk                   DONE
+  srt                      PENDING
+  tcl-tk                   PENDING
   tcl-tk@8                 PENDING
   wget                     DONE
 
-Batch 1 -> openssl-4-migration-staging   [3/15 done]
+Batch 1 -> openssl-4-migration-staging   [0/15 done]
   apache-arrow             PENDING
   bind                     PENDING
-  curl                     DONE
-  ffmpeg                   DONE
+  curl                     PENDING
+  ffmpeg                   PENDING
   folly                    PENDING
-  httpd                    DONE
+  httpd                    PENDING
   libpq                    PENDING
   node                     PENDING
   postgresql@17            PENDING
