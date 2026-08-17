@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-16T06:56:51Z",
+  "generated_at": "2026-08-17T07:13:34Z",
   "repository": "Homebrew/homebrew-core",
-  "git_head": "c4c95da4dac6fb100f7cf2bbbde6b4e82faeeeab",
+  "git_head": "11a954f596c46f6108013126f410b206400b2fd8",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "staging_branch": "openssl-4-migration-staging",
   "staged_depths": {
@@ -815,7 +815,6 @@
         "nvchecker",
         "nzbget",
         "oath-toolkit",
-        "objfw",
         "observerward",
         "octobuild",
         "oha",
@@ -1178,7 +1177,7 @@
       "path": "Formula/f/freetds.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://www.freetds.org/",
-      "source_url": "https://www.freetds.org/files/stable/freetds-1.5.18.tar.bz2",
+      "source_url": "https://www.freetds.org/files/stable/freetds-1.5.19.tar.bz2",
       "head_url": "https://github.com/FreeTDS/freetds.git",
       "upstream_provider": "github",
       "upstream_repo": "FreeTDS/freetds",
@@ -2754,7 +2753,6 @@
         "nut",
         "nvchecker",
         "oath-toolkit",
-        "objfw",
         "observerward",
         "octobuild",
         "oha",
@@ -3797,7 +3795,7 @@
       "path": "Formula/p/postgresql@18.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://www.postgresql.org/",
-      "source_url": "https://ftp.postgresql.org/pub/source/v18.4/postgresql-18.4.tar.bz2",
+      "source_url": "https://ftp.postgresql.org/pub/source/v18.6/postgresql-18.6.tar.bz2",
       "upstream_provider": "other",
       "depth": 1,
       "target_branch": "openssl-4-migration-staging",
@@ -9911,7 +9909,7 @@
       "path": "Formula/d/dotnet@9.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://dotnet.microsoft.com/",
-      "source_url": "https://github.com/dotnet/dotnet/archive/refs/tags/v9.0.119.tar.gz",
+      "source_url": "https://github.com/dotnet/dotnet/archive/refs/tags/v9.0.120.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "dotnet/dotnet",
       "depth": null,
@@ -11509,7 +11507,7 @@
       "path": "Formula/f/firefoxpwa.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://pwasforfirefox.filips.si/",
-      "source_url": "https://github.com/filips123/PWAsForFirefox/archive/refs/tags/v2.18.4.tar.gz",
+      "source_url": "https://github.com/filips123/PWAsForFirefox/archive/refs/tags/v2.19.0.tar.gz",
       "head_url": "https://github.com/filips123/PWAsForFirefox.git",
       "upstream_provider": "github",
       "upstream_repo": "filips123/PWAsForFirefox",
@@ -13241,7 +13239,7 @@
       "path": "Formula/h/helix-db.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://helix-db.com",
-      "source_url": "https://github.com/HelixDB/helix-db/archive/refs/tags/v3.1.0.tar.gz",
+      "source_url": "https://github.com/HelixDB/helix-db/archive/refs/tags/v3.1.1.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "HelixDB/helix-db",
       "depth": null,
@@ -13336,7 +13334,7 @@
       "path": "Formula/h/himalaya.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://pimalaya.org",
-      "source_url": "https://github.com/pimalaya/himalaya/archive/refs/tags/v2.0.0.tar.gz",
+      "source_url": "https://github.com/pimalaya/himalaya/archive/refs/tags/v2.1.0.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "pimalaya/himalaya",
       "depth": null,
@@ -13493,7 +13491,7 @@
       "path": "Formula/h/httrack.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.httrack.com/",
-      "source_url": "https://github.com/xroche/httrack/releases/download/3.49.21/httrack-3.49.21.tar.gz",
+      "source_url": "https://github.com/xroche/httrack/releases/download/3.49.22/httrack-3.49.22.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "xroche/httrack",
       "depth": null,
@@ -14382,7 +14380,7 @@
       "path": "Formula/k/keeper-commander.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://docs.keeper.io/en/privileged-access-manager/commander-cli/overview",
-      "source_url": "https://files.pythonhosted.org/packages/52/ab/b1e3e56a8b70313888c91c53322daf426d92ca4d9c047ad7e1b41a1ceb2f/keepercommander-18.1.0.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/31/25/f07b69a6a3dc5b9ef182c9d4a4051b9675b1aa311a5a098c0f7f99de92b5/keepercommander-18.1.1.tar.gz",
       "head_url": "https://github.com/Keeper-Security/Commander.git",
       "upstream_provider": "github",
       "upstream_repo": "Keeper-Security/Commander",
@@ -14912,7 +14910,7 @@
     {
       "name": "leetcode-cli",
       "path": "Formula/l/leetcode-cli.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/clearloop/leetcode-cli",
       "source_url": "https://github.com/clearloop/leetcode-cli/archive/refs/tags/v0.5.5.tar.gz",
       "head_url": "https://github.com/clearloop/leetcode-cli.git",
@@ -14924,7 +14922,7 @@
       "dependencies": [
         "pkgconf",
         "rust",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [
         "rust"
@@ -17656,7 +17654,7 @@
       "path": "Formula/m/moon.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://moonrepo.dev/moon",
-      "source_url": "https://github.com/moonrepo/moon/archive/refs/tags/v2.5.0.tar.gz",
+      "source_url": "https://github.com/moonrepo/moon/archive/refs/tags/v2.5.1.tar.gz",
       "head_url": "https://github.com/moonrepo/moon.git",
       "upstream_provider": "github",
       "upstream_repo": "moonrepo/moon",
@@ -19359,16 +19357,11 @@
       "dependencies": [
         "autoconf",
         "automake",
-        "openssl@3",
-        "llvm",
-        "zlib-ng-compat"
+        "openssl@3"
       ],
       "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [],
-      "transitive_openssl_formula_dependencies": [
-        "cmake",
-        "python@3.14"
-      ],
+      "transitive_openssl_formula_dependencies": [],
       "transitive_openssl_formula_dependents": []
     },
     {
@@ -22548,7 +22541,7 @@
       "path": "Formula/r/rapid-mlx.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/raullenchai/Rapid-MLX",
-      "source_url": "https://files.pythonhosted.org/packages/7a/7a/231a86b705c848c6c4e11808b2cc7dd0e2ab5c96f897ab76c6e9918c8960/rapid_mlx-0.12.13.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/14/ac/dbdeeed3dbe851ef5c03bdd9a55ea47aa706c134c96b342e351437182133/rapid_mlx-0.12.14.tar.gz",
       "upstream_provider": "python",
       "depth": null,
       "target_branch": "main",
@@ -22618,7 +22611,7 @@
     {
       "name": "rattler-build",
       "path": "Formula/r/rattler-build.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://rattler.build",
       "source_url": "https://github.com/prefix-dev/rattler-build/archive/refs/tags/v0.73.0.tar.gz",
       "head_url": "https://github.com/prefix-dev/rattler-build.git",
@@ -22630,7 +22623,7 @@
       "dependencies": [
         "pkgconf",
         "rust",
-        "openssl@3",
+        "openssl@4",
         "xz",
         "zlib-ng-compat"
       ],
@@ -24094,7 +24087,7 @@
       "path": "Formula/s/sem-cli.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://ataraxy-labs.github.io/sem/",
-      "source_url": "https://github.com/Ataraxy-Labs/sem/archive/refs/tags/v0.21.1.tar.gz",
+      "source_url": "https://github.com/Ataraxy-Labs/sem/archive/refs/tags/v0.22.1.tar.gz",
       "head_url": "https://github.com/Ataraxy-Labs/sem.git",
       "upstream_provider": "github",
       "upstream_repo": "Ataraxy-Labs/sem",
@@ -25216,7 +25209,7 @@
     {
       "name": "sprocket",
       "path": "Formula/s/sprocket.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://sprocket.bio",
       "source_url": "https://github.com/stjude-rust-labs/sprocket/archive/refs/tags/v0.29.0.tar.gz",
       "head_url": "https://github.com/stjude-rust-labs/sprocket.git",
@@ -25228,7 +25221,7 @@
       "dependencies": [
         "pkgconf",
         "rust",
-        "openssl@3",
+        "openssl@4",
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
