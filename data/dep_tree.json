@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-18T07:01:31Z",
+  "generated_at": "2026-08-19T07:03:00Z",
   "repository": "Homebrew/homebrew-core",
-  "git_head": "eff3ad3cadeeb7e4b995eb7c343df5d08505ea20",
+  "git_head": "a124289f4f954db19647ae0c1ec3a8c5040f1443",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "staging_branch": "openssl-4-migration-staging",
   "staged_depths": {
@@ -60,7 +60,7 @@
       "gstreamer"
     ]
   },
-  "formula_count": 759,
+  "formula_count": 760,
   "formulae": [
     {
       "name": "apr-util",
@@ -211,6 +211,7 @@
         "apt",
         "aptos",
         "aws-c-cal",
+        "aws-c-http",
         "aws-c-io",
         "aws-sam-cli",
         "awscurl",
@@ -441,6 +442,7 @@
         "atuin-server",
         "authoscope",
         "aws-c-cal",
+        "aws-c-http",
         "aws-c-io",
         "aws-sam-cli",
         "awscurl",
@@ -3284,6 +3286,7 @@
       ],
       "transitive_openssl_formula_dependencies": [
         "aws-c-cal",
+        "aws-c-http",
         "aws-c-io",
         "cmake",
         "grpc",
@@ -4018,7 +4021,7 @@
       "dependencies": [
         "libgit2",
         "libssh2",
-        "llvm",
+        "llvm@22",
         "openssl@3",
         "pkgconf",
         "sqlite"
@@ -4859,7 +4862,7 @@
       "path": "Formula/g/gdal.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://gdal.org/en/stable/",
-      "source_url": "https://github.com/OSGeo/gdal/releases/download/v3.13.2/gdal-3.13.2.tar.gz",
+      "source_url": "https://github.com/OSGeo/gdal/releases/download/v3.13.3/gdal-3.13.3.tar.gz",
       "head_url": "https://github.com/OSGeo/gdal.git",
       "upstream_provider": "github",
       "upstream_repo": "OSGeo/gdal",
@@ -4935,6 +4938,7 @@
       "transitive_openssl_formula_dependencies": [
         "apache-arrow",
         "aws-c-cal",
+        "aws-c-http",
         "aws-c-io",
         "cargo-c",
         "cmake",
@@ -5248,6 +5252,7 @@
         "cmake"
       ],
       "openssl_formula_dependents": [
+        "aws-c-http",
         "aws-c-io",
         "awscurl",
         "dxpy"
@@ -5257,7 +5262,58 @@
       ],
       "transitive_openssl_formula_dependents": [
         "apache-arrow",
+        "aws-c-http",
         "aws-c-io",
+        "awscurl",
+        "dxpy",
+        "gdal",
+        "mapnik",
+        "pdal",
+        "vineyard"
+      ]
+    },
+    {
+      "name": "aws-c-http",
+      "path": "Formula/a/aws-c-http.rb",
+      "openssl_dependency": "openssl@3",
+      "homepage": "https://github.com/awslabs/aws-c-http",
+      "source_url": "https://github.com/awslabs/aws-c-http/archive/refs/tags/v0.11.1.tar.gz",
+      "upstream_provider": "github",
+      "upstream_repo": "awslabs/aws-c-http",
+      "depth": null,
+      "target_branch": "openssl-4-migration-staging",
+      "staging_reason": "staged-transitive-dependency",
+      "staging_required_by": [
+        "apache-arrow",
+        "gdal"
+      ],
+      "dependencies": [
+        "cmake",
+        "aws-c-cal",
+        "aws-c-common",
+        "aws-c-compression",
+        "aws-c-io",
+        "openssl@3",
+        "s2n"
+      ],
+      "openssl_formula_dependencies": [
+        "aws-c-cal",
+        "aws-c-io",
+        "cmake",
+        "s2n"
+      ],
+      "openssl_formula_dependents": [
+        "awscurl",
+        "dxpy"
+      ],
+      "transitive_openssl_formula_dependencies": [
+        "aws-c-cal",
+        "aws-c-io",
+        "cmake",
+        "s2n"
+      ],
+      "transitive_openssl_formula_dependents": [
+        "apache-arrow",
         "awscurl",
         "dxpy",
         "gdal",
@@ -5294,6 +5350,7 @@
         "s2n"
       ],
       "openssl_formula_dependents": [
+        "aws-c-http",
         "awscurl",
         "dxpy"
       ],
@@ -5304,6 +5361,7 @@
       ],
       "transitive_openssl_formula_dependents": [
         "apache-arrow",
+        "aws-c-http",
         "awscurl",
         "dxpy",
         "gdal",
@@ -5972,6 +6030,7 @@
         "cmake"
       ],
       "openssl_formula_dependents": [
+        "aws-c-http",
         "aws-c-io",
         "awscurl",
         "dxpy"
@@ -5981,6 +6040,7 @@
       ],
       "transitive_openssl_formula_dependents": [
         "apache-arrow",
+        "aws-c-http",
         "aws-c-io",
         "awscurl",
         "dxpy",
@@ -6985,6 +7045,7 @@
       ],
       "openssl_formula_dependencies": [
         "aws-c-cal",
+        "aws-c-http",
         "aws-c-io",
         "cmake",
         "cryptography",
@@ -6994,6 +7055,7 @@
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "aws-c-cal",
+        "aws-c-http",
         "aws-c-io",
         "cmake",
         "cryptography",
@@ -7645,7 +7707,7 @@
       "path": "Formula/b/bulk_extractor.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/simsong/bulk_extractor/wiki",
-      "source_url": "https://github.com/simsong/bulk_extractor/releases/download/v2.1.1/bulk_extractor-2.1.1.tar.gz",
+      "source_url": "https://github.com/simsong/bulk_extractor/releases/download/v2.2.0/bulk_extractor-2.2.0.tar.gz",
       "head_url": "https://github.com/simsong/bulk_extractor.git",
       "upstream_provider": "github",
       "upstream_repo": "simsong/bulk_extractor",
@@ -7655,6 +7717,7 @@
       "dependencies": [
         "autoconf",
         "automake",
+        "abseil",
         "pkgconf",
         "re2",
         "openssl@4",
@@ -9225,7 +9288,7 @@
         "bdw-gc",
         "gmp",
         "libyaml",
-        "llvm",
+        "llvm@22",
         "openssl@3",
         "pcre2",
         "pkgconf",
@@ -10195,6 +10258,7 @@
       ],
       "openssl_formula_dependencies": [
         "aws-c-cal",
+        "aws-c-http",
         "aws-c-io",
         "cryptography",
         "python@3.14",
@@ -10203,6 +10267,7 @@
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "aws-c-cal",
+        "aws-c-http",
         "aws-c-io",
         "cmake",
         "cryptography",
@@ -15752,7 +15817,7 @@
       "path": "Formula/lib/librefang.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://librefang.ai",
-      "source_url": "https://github.com/librefang/librefang/archive/refs/tags/v2026.7.31.tar.gz",
+      "source_url": "https://github.com/librefang/librefang/archive/refs/tags/v2026.8.19.tar.gz",
       "head_url": "https://github.com/librefang/librefang.git",
       "upstream_provider": "github",
       "upstream_repo": "librefang/librefang",
@@ -16394,7 +16459,7 @@
       "path": "Formula/m/mago.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/carthage-software/mago",
-      "source_url": "https://github.com/carthage-software/mago/releases/download/1.46.0/source-code.tar.gz",
+      "source_url": "https://github.com/carthage-software/mago/releases/download/1.47.1/source-code.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "carthage-software/mago",
       "depth": null,
@@ -16571,6 +16636,7 @@
       "transitive_openssl_formula_dependencies": [
         "apache-arrow",
         "aws-c-cal",
+        "aws-c-http",
         "aws-c-io",
         "cargo-c",
         "cmake",
@@ -17934,7 +18000,7 @@
       "path": "Formula/m/mydumper.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/mydumper/mydumper",
-      "source_url": "https://github.com/mydumper/mydumper/archive/refs/tags/v1.0.3-1.tar.gz",
+      "source_url": "https://github.com/mydumper/mydumper/archive/refs/tags/v1.0.5-1.tar.gz",
       "head_url": "https://github.com/mydumper/mydumper.git",
       "upstream_provider": "github",
       "upstream_repo": "mydumper/mydumper",
@@ -18949,7 +19015,7 @@
       "path": "Formula/n/noir.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://owasp.org/www-project-noir/",
-      "source_url": "https://github.com/owasp-noir/noir/archive/refs/tags/v1.2.1.tar.gz",
+      "source_url": "https://github.com/owasp-noir/noir/archive/refs/tags/v1.3.0.tar.gz",
       "head_url": "https://github.com/owasp-noir/noir.git",
       "upstream_provider": "github",
       "upstream_repo": "owasp-noir/noir",
@@ -19986,7 +20052,7 @@
       "path": "Formula/o/ortp.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://linphone.org/",
-      "source_url": "https://gitlab.linphone.org/BC/public/linphone-sdk/-/archive/5.5.15/linphone-sdk-5.5.15.tar.bz2",
+      "source_url": "https://gitlab.linphone.org/BC/public/linphone-sdk/-/archive/5.5.16/linphone-sdk-5.5.16.tar.bz2",
       "head_url": "https://gitlab.linphone.org/BC/public/linphone-sdk.git",
       "upstream_provider": "gitlab",
       "upstream_repo": "gitlab.linphone.org/BC/public/linphone-sdk",
@@ -20137,7 +20203,7 @@
       "path": "Formula/p/passenger.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://www.phusionpassenger.com/",
-      "source_url": "https://github.com/phusion/passenger/releases/download/release-6.1.8/passenger-6.1.8.tar.gz",
+      "source_url": "https://github.com/phusion/passenger/releases/download/release-6.2.0/passenger-6.2.0.tar.gz",
       "head_url": "https://github.com/phusion/passenger.git",
       "upstream_provider": "github",
       "upstream_repo": "phusion/passenger",
@@ -20251,6 +20317,7 @@
       "transitive_openssl_formula_dependencies": [
         "apache-arrow",
         "aws-c-cal",
+        "aws-c-http",
         "aws-c-io",
         "cargo-c",
         "cmake",
@@ -21871,7 +21938,7 @@
       "path": "Formula/p/pup.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.datadoghq.com",
-      "source_url": "https://github.com/DataDog/pup/releases/download/v1.11.1/pup_1.11.1_source.tar.gz",
+      "source_url": "https://github.com/DataDog/pup/releases/download/v1.11.2/pup_1.11.2_source.tar.gz",
       "head_url": "https://github.com/DataDog/pup.git",
       "upstream_provider": "github",
       "upstream_repo": "DataDog/pup",
@@ -24427,7 +24494,7 @@
       "path": "Formula/s/siege.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.joedog.org/siege",
-      "source_url": "https://download.joedog.org/siege/siege-4.1.7.tar.gz",
+      "source_url": "https://download.joedog.org/siege/siege-4.2.0.tar.gz",
       "upstream_provider": "other",
       "depth": null,
       "target_branch": "main",
@@ -25266,7 +25333,7 @@
       "path": "Formula/s/sqlcipher.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.zetetic.net/sqlcipher/",
-      "source_url": "https://github.com/sqlcipher/sqlcipher/archive/refs/tags/v4.17.0.tar.gz",
+      "source_url": "https://github.com/sqlcipher/sqlcipher/archive/refs/tags/v4.18.0.tar.gz",
       "head_url": "https://github.com/sqlcipher/sqlcipher.git",
       "upstream_provider": "github",
       "upstream_repo": "sqlcipher/sqlcipher",
@@ -25648,7 +25715,7 @@
       "path": "Formula/s/swtpm.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/stefanberger/swtpm",
-      "source_url": "https://github.com/stefanberger/swtpm/archive/refs/tags/v0.10.1.tar.gz",
+      "source_url": "https://github.com/stefanberger/swtpm/archive/refs/tags/v0.10.2.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "stefanberger/swtpm",
       "depth": null,
@@ -25841,7 +25908,7 @@
       "path": "Formula/t/tabiew.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/shshemi/tabiew",
-      "source_url": "https://github.com/shshemi/tabiew/archive/refs/tags/v0.14.1.tar.gz",
+      "source_url": "https://github.com/shshemi/tabiew/archive/refs/tags/v0.14.2.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "shshemi/tabiew",
       "depth": null,
@@ -27073,6 +27140,7 @@
       "transitive_openssl_formula_dependencies": [
         "apache-arrow",
         "aws-c-cal",
+        "aws-c-http",
         "aws-c-io",
         "cmake",
         "cpprestsdk",
@@ -27356,7 +27424,7 @@
       "path": "Formula/w/wassette.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://microsoft.github.io/wassette/",
-      "source_url": "https://github.com/microsoft/wassette/archive/refs/tags/v0.5.0.tar.gz",
+      "source_url": "https://github.com/microsoft/wassette/archive/refs/tags/v0.6.0.tar.gz",
       "head_url": "https://github.com/microsoft/wassette.git",
       "upstream_provider": "github",
       "upstream_repo": "microsoft/wassette",

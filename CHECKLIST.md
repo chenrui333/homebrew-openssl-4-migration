@@ -1,4 +1,4 @@
-# OpenSSL 4 Migration Checklist (2026-08-18)
+# OpenSSL 4 Migration Checklist (2026-08-19)
 
 Progress: **8/58 (13.8%)**
 Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/homebrew-core/issues/278366)
@@ -64,9 +64,10 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 
 - [ ] gstreamer
 
-## Staging closure -> openssl-4-migration-staging [5/12]
+## Staging closure -> openssl-4-migration-staging [5/13]
 
 - [ ] aws-c-cal
+- [ ] aws-c-http
 - [ ] aws-c-io
 - [ ] libgit2
 - [ ] libngtcp2

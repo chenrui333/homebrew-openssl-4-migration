@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-08-18T07:01:31Z",
+  "generated_at": "2026-08-19T07:03:00Z",
   "repository": "Homebrew/homebrew-core",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "target_branch": "openssl-4-migration-staging",
   "scope": "staging",
   "summary": {
-    "staged_formulae": 58,
+    "staged_formulae": 59,
     "done": 8,
     "pending": 50,
     "open_staging_prs": 0,
@@ -20,7 +20,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 668,
+      "impact_count": 669,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -968,6 +968,46 @@
       }
     },
     {
+      "name": "aws-c-cal",
+      "live_status": "PENDING",
+      "depth": null,
+      "group_label": "Staging closure",
+      "impact_count": 9,
+      "target_branch": "openssl-4-migration-staging",
+      "pr": {
+        "number": 0,
+        "url": "",
+        "base": "",
+        "is_draft": false,
+        "merge_state": "",
+        "updated_at": ""
+      },
+      "readiness": [
+        "missing-pr"
+      ],
+      "next_action": "Open migration PR",
+      "upstream": {
+        "provider": "github",
+        "repo": "awslabs/aws-c-cal",
+        "url": "https://github.com/awslabs/aws-c-cal"
+      },
+      "issues": [
+        {
+          "label": "search",
+          "url": "https://github.com/search?q=repo%3Aawslabs%2Faws-c-cal+%22OpenSSL+4%22\u0026type=issues"
+        }
+      ],
+      "flags": {
+        "current_gate": false,
+        "ready": false,
+        "draft": false,
+        "ci_blocked": false,
+        "base_mismatch": false,
+        "missing_pr": true,
+        "upstream_blocked": false
+      }
+    },
+    {
       "name": "node",
       "live_status": "PENDING",
       "depth": 1,
@@ -1011,7 +1051,50 @@
       }
     },
     {
-      "name": "aws-c-cal",
+      "name": "s2n",
+      "live_status": "PENDING",
+      "depth": null,
+      "group_label": "Staging closure",
+      "impact_count": 9,
+      "target_branch": "openssl-4-migration-staging",
+      "pr": {
+        "number": 0,
+        "url": "",
+        "base": "",
+        "is_draft": false,
+        "merge_state": "",
+        "updated_at": ""
+      },
+      "readiness": [
+        "missing-pr"
+      ],
+      "next_action": "Open migration PR",
+      "upstream": {
+        "provider": "github",
+        "repo": "aws/s2n-tls",
+        "url": "https://github.com/aws/s2n-tls"
+      },
+      "issues": [
+        {
+          "label": "issues#5783",
+          "state": "open",
+          "status": "relevant",
+          "title": "OpenSSL Support Roadmap",
+          "url": "https://github.com/aws/s2n-tls/issues/5783"
+        }
+      ],
+      "flags": {
+        "current_gate": false,
+        "ready": false,
+        "draft": false,
+        "ci_blocked": false,
+        "base_mismatch": false,
+        "missing_pr": true,
+        "upstream_blocked": true
+      }
+    },
+    {
+      "name": "aws-c-io",
       "live_status": "PENDING",
       "depth": null,
       "group_label": "Staging closure",
@@ -1031,13 +1114,13 @@
       "next_action": "Open migration PR",
       "upstream": {
         "provider": "github",
-        "repo": "awslabs/aws-c-cal",
-        "url": "https://github.com/awslabs/aws-c-cal"
+        "repo": "awslabs/aws-c-io",
+        "url": "https://github.com/awslabs/aws-c-io"
       },
       "issues": [
         {
           "label": "search",
-          "url": "https://github.com/search?q=repo%3Aawslabs%2Faws-c-cal+%22OpenSSL+4%22\u0026type=issues"
+          "url": "https://github.com/search?q=repo%3Aawslabs%2Faws-c-io+%22OpenSSL+4%22\u0026type=issues"
         }
       ],
       "flags": {
@@ -1086,51 +1169,8 @@
       }
     },
     {
-      "name": "s2n",
-      "live_status": "PENDING",
-      "depth": null,
-      "group_label": "Staging closure",
-      "impact_count": 8,
-      "target_branch": "openssl-4-migration-staging",
-      "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
-      },
-      "readiness": [
-        "missing-pr"
-      ],
-      "next_action": "Open migration PR",
-      "upstream": {
-        "provider": "github",
-        "repo": "aws/s2n-tls",
-        "url": "https://github.com/aws/s2n-tls"
-      },
-      "issues": [
-        {
-          "label": "issues#5783",
-          "state": "open",
-          "status": "relevant",
-          "title": "OpenSSL Support Roadmap",
-          "url": "https://github.com/aws/s2n-tls/issues/5783"
-        }
-      ],
-      "flags": {
-        "current_gate": false,
-        "ready": false,
-        "draft": false,
-        "ci_blocked": false,
-        "base_mismatch": false,
-        "missing_pr": true,
-        "upstream_blocked": true
-      }
-    },
-    {
-      "name": "aws-c-io",
-      "live_status": "PENDING",
+      "name": "aws-c-http",
+      "live_status": "UNKNOWN",
       "depth": null,
       "group_label": "Staging closure",
       "impact_count": 7,
@@ -1149,13 +1189,13 @@
       "next_action": "Open migration PR",
       "upstream": {
         "provider": "github",
-        "repo": "awslabs/aws-c-io",
-        "url": "https://github.com/awslabs/aws-c-io"
+        "repo": "awslabs/aws-c-http",
+        "url": "https://github.com/awslabs/aws-c-http"
       },
       "issues": [
         {
           "label": "search",
-          "url": "https://github.com/search?q=repo%3Aawslabs%2Faws-c-io+%22OpenSSL+4%22\u0026type=issues"
+          "url": "https://github.com/search?q=repo%3Aawslabs%2Faws-c-http+%22OpenSSL+4%22\u0026type=issues"
         }
       ],
       "flags": {

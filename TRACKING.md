@@ -1,4 +1,4 @@
-OpenSSL 4 Migration Status (2026-08-18)
+OpenSSL 4 Migration Status (2026-08-19)
 ========================================
 Total pending:  50
 Total done:     8 (13.8%)
@@ -59,8 +59,9 @@ Batch 2 -> openssl-4-migration-staging   [0/5 done]
 Batch 3 -> openssl-4-migration-staging   [0/1 done]
   gstreamer                PENDING
 
-Staging closure -> openssl-4-migration-staging   [5/12 done]
+Staging closure -> openssl-4-migration-staging   [5/13 done]
   aws-c-cal                PENDING
+  aws-c-http               UNKNOWN
   aws-c-io                 PENDING
   libgit2                  PENDING
   libngtcp2                PENDING

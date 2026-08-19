@@ -1,12 +1,12 @@
-# OpenSSL 4 Migration Audit (2026-08-18)
+# OpenSSL 4 Migration Audit (2026-08-19)
 
 Tracking issue: Homebrew/homebrew-core#278366
 
 ## Summary
 
-- Staging-scope formulae: 58
+- Staging-scope formulae: 59
 - Live pending: 50
-- Live done: 8 (13.8%)
+- Live done: 8 (13.6%)
 - Open staging PRs: 0
 - Draft migration PRs: 0
 - PRs with merge/check blockers: 0
@@ -26,7 +26,7 @@ Pending staged formulae are sorted by transitive dependent count.
 
 | Formula | Target | Depth | Impact | Status | PR | Readiness | Upstream | Issues |
 |---|---|---:|---:|---|---|---|---|---|
-| cmake | openssl-4-migration-staging | 0 | 668 | PENDING | none | missing-pr | gitlab:gitlab.kitware.com/cmake/cmake |  |
+| cmake | openssl-4-migration-staging | 0 | 669 | PENDING | none | missing-pr | gitlab:gitlab.kitware.com/cmake/cmake |  |
 | python@3.14 | openssl-4-migration-staging | 0 | 470 | PENDING | none | missing-pr | python |  |
 | libssh2 | openssl-4-migration-staging | 0 | 313 | PENDING | none | missing-pr | github:libssh2/libssh2 |  |
 | libgit2 | openssl-4-migration-staging | closure | 290 | PENDING | none | missing-pr | github:libgit2/libgit2 |  |
@@ -48,11 +48,11 @@ Pending staged formulae are sorted by transitive dependent count.
 | libfido2 | openssl-4-migration-staging | 0 | 10 | PENDING | none | missing-pr | github:Yubico/libfido2 | [issues#966](https://github.com/Yubico/libfido2/issues/966) closed |
 | openldap | openssl-4-migration-staging | 0 | 10 | PENDING | none | missing-pr | other |  |
 | qtbase | openssl-4-migration-staging | 1 | 10 | PENDING | none | missing-pr | qt |  |
+| aws-c-cal | openssl-4-migration-staging | closure | 9 | PENDING | none | missing-pr | github:awslabs/aws-c-cal |  |
 | node | openssl-4-migration-staging | 1 | 9 | PENDING | none | missing-pr | github:nodejs/node | [issues#62817](https://github.com/nodejs/node/issues/62817) closed |
-| aws-c-cal | openssl-4-migration-staging | closure | 8 | PENDING | none | missing-pr | github:awslabs/aws-c-cal |  |
+| s2n | openssl-4-migration-staging | closure | 9 | PENDING | none | missing-pr | github:aws/s2n-tls | [issues#5783](https://github.com/aws/s2n-tls/issues/5783) open |
+| aws-c-io | openssl-4-migration-staging | closure | 8 | PENDING | none | missing-pr | github:awslabs/aws-c-io |  |
 | httpd | openssl-4-migration-staging | 1 | 8 | PENDING | none | missing-pr | apache |  |
-| s2n | openssl-4-migration-staging | closure | 8 | PENDING | none | missing-pr | github:aws/s2n-tls | [issues#5783](https://github.com/aws/s2n-tls/issues/5783) open |
-| aws-c-io | openssl-4-migration-staging | closure | 7 | PENDING | none | missing-pr | github:awslabs/aws-c-io |  |
 | folly | openssl-4-migration-staging | 1 | 7 | PENDING | none | missing-pr | github:facebook/folly |  |
 | freetds | openssl-4-migration-staging | 0 | 7 | PENDING | none | missing-pr | github:FreeTDS/freetds |  |
 | srt | openssl-4-migration-staging | 0 | 6 | PENDING | none | missing-pr | github:Haivision/srt |  |
@@ -83,7 +83,7 @@ Top 20 pending staged formulae with upstream metadata and no curated upstream is
 
 | Formula | Depth | Impact | Upstream | Search | Readiness |
 |---|---:|---:|---|---|---|
-| cmake | 0 | 668 | gitlab:gitlab.kitware.com/cmake/cmake |  | missing-pr |
+| cmake | 0 | 669 | gitlab:gitlab.kitware.com/cmake/cmake |  | missing-pr |
 | python@3.14 | 0 | 470 | python |  | missing-pr |
 | libssh2 | 0 | 313 | github:libssh2/libssh2 | [issues](https://github.com/search?q=repo%3Alibssh2%2Flibssh2+%22OpenSSL+4%22&type=issues) | missing-pr |
 | libgit2 | closure | 290 | github:libgit2/libgit2 | [issues](https://github.com/search?q=repo%3Alibgit2%2Flibgit2+%22OpenSSL+4%22&type=issues) | missing-pr |
@@ -99,9 +99,9 @@ Top 20 pending staged formulae with upstream metadata and no curated upstream is
 | ffmpeg | 1 | 13 | github:FFmpeg/FFmpeg | [issues](https://github.com/search?q=repo%3AFFmpeg%2FFFmpeg+%22OpenSSL+4%22&type=issues) | missing-pr |
 | apr-util | 0 | 11 | apache |  | missing-pr |
 | qtbase | 1 | 10 | qt |  | missing-pr |
-| aws-c-cal | closure | 8 | github:awslabs/aws-c-cal | [issues](https://github.com/search?q=repo%3Aawslabs%2Faws-c-cal+%22OpenSSL+4%22&type=issues) | missing-pr |
+| aws-c-cal | closure | 9 | github:awslabs/aws-c-cal | [issues](https://github.com/search?q=repo%3Aawslabs%2Faws-c-cal+%22OpenSSL+4%22&type=issues) | missing-pr |
+| aws-c-io | closure | 8 | github:awslabs/aws-c-io | [issues](https://github.com/search?q=repo%3Aawslabs%2Faws-c-io+%22OpenSSL+4%22&type=issues) | missing-pr |
 | httpd | 1 | 8 | apache |  | missing-pr |
-| aws-c-io | closure | 7 | github:awslabs/aws-c-io | [issues](https://github.com/search?q=repo%3Aawslabs%2Faws-c-io+%22OpenSSL+4%22&type=issues) | missing-pr |
 | folly | 1 | 7 | github:facebook/folly | [issues](https://github.com/search?q=repo%3Afacebook%2Ffolly+%22OpenSSL+4%22&type=issues) | missing-pr |
 
 ## Curated Upstream Issues
