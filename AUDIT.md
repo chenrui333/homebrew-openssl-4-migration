@@ -1,4 +1,4 @@
-# OpenSSL 4 Migration Audit (2026-08-23)
+# OpenSSL 4 Migration Audit (2026-08-24)
 
 Tracking issue: Homebrew/homebrew-core#278366
 
@@ -26,13 +26,13 @@ Pending staged formulae are sorted by transitive dependent count.
 
 | Formula | Target | Depth | Impact | Status | PR | Readiness | Upstream | Issues |
 |---|---|---:|---:|---|---|---|---|---|
-| cmake | openssl-4-migration-staging | 0 | 671 | PENDING | none | missing-pr | gitlab:gitlab.kitware.com/cmake/cmake |  |
-| python@3.14 | openssl-4-migration-staging | 0 | 472 | PENDING | none | missing-pr | python |  |
+| cmake | openssl-4-migration-staging | 0 | 673 | PENDING | none | missing-pr | gitlab:gitlab.kitware.com/cmake/cmake |  |
+| python@3.14 | openssl-4-migration-staging | 0 | 474 | PENDING | none | missing-pr | python |  |
 | libssh2 | openssl-4-migration-staging | 0 | 316 | PENDING | none | missing-pr | github:libssh2/libssh2 |  |
 | libgit2 | openssl-4-migration-staging | closure | 293 | PENDING | none | missing-pr | github:libgit2/libgit2 |  |
 | rust | openssl-4-migration-staging | 1 | 291 | PENDING | none | missing-pr | github:rust-lang/rust | [issues#155397](https://github.com/rust-lang/rust/issues/155397) open |
 | python@3.13 | openssl-4-migration-staging | 0 | 84 | PENDING | none | missing-pr | python |  |
-| systemd | openssl-4-migration-staging | 1 | 66 | PENDING | none | missing-pr | github:systemd/systemd |  |
+| systemd | openssl-4-migration-staging | 1 | 67 | PENDING | none | missing-pr | github:systemd/systemd |  |
 | libevent | openssl-4-migration-staging | 0 | 64 | PENDING | none | missing-pr | github:libevent/libevent |  |
 | libngtcp2 | openssl-4-migration-staging | closure | 34 | PENDING | none | missing-pr | github:ngtcp2/ngtcp2 |  |
 | cargo-c | openssl-4-migration-staging | 2 | 25 | PENDING | none | missing-pr | github:lu-zero/cargo-c |  |
@@ -45,7 +45,7 @@ Pending staged formulae are sorted by transitive dependent count.
 | ffmpeg | openssl-4-migration-staging | 1 | 13 | PENDING | none | missing-pr | github:FFmpeg/FFmpeg |  |
 | apr-util | openssl-4-migration-staging | 0 | 11 | PENDING | none | missing-pr | apache |  |
 | grpc | openssl-4-migration-staging | 0 | 11 | PENDING | none | missing-pr | github:grpc/grpc | [issues#42020](https://github.com/grpc/grpc/issues/42020) open |
-| libfido2 | openssl-4-migration-staging | 0 | 10 | PENDING | none | missing-pr | github:Yubico/libfido2 | [issues#966](https://github.com/Yubico/libfido2/issues/966) closed |
+| libfido2 | openssl-4-migration-staging | 0 | 11 | PENDING | none | missing-pr | github:Yubico/libfido2 | [issues#966](https://github.com/Yubico/libfido2/issues/966) closed |
 | openldap | openssl-4-migration-staging | 0 | 10 | PENDING | none | missing-pr | other |  |
 | qtbase | openssl-4-migration-staging | 1 | 10 | PENDING | none | missing-pr | qt |  |
 | aws-c-cal | openssl-4-migration-staging | closure | 9 | PENDING | none | missing-pr | github:awslabs/aws-c-cal |  |
@@ -83,12 +83,12 @@ Top 20 pending staged formulae with upstream metadata and no curated upstream is
 
 | Formula | Depth | Impact | Upstream | Search | Readiness |
 |---|---:|---:|---|---|---|
-| cmake | 0 | 671 | gitlab:gitlab.kitware.com/cmake/cmake |  | missing-pr |
-| python@3.14 | 0 | 472 | python |  | missing-pr |
+| cmake | 0 | 673 | gitlab:gitlab.kitware.com/cmake/cmake |  | missing-pr |
+| python@3.14 | 0 | 474 | python |  | missing-pr |
 | libssh2 | 0 | 316 | github:libssh2/libssh2 | [issues](https://github.com/search?q=repo%3Alibssh2%2Flibssh2+%22OpenSSL+4%22&type=issues) | missing-pr |
 | libgit2 | closure | 293 | github:libgit2/libgit2 | [issues](https://github.com/search?q=repo%3Alibgit2%2Flibgit2+%22OpenSSL+4%22&type=issues) | missing-pr |
 | python@3.13 | 0 | 84 | python |  | missing-pr |
-| systemd | 1 | 66 | github:systemd/systemd | [issues](https://github.com/search?q=repo%3Asystemd%2Fsystemd+%22OpenSSL+4%22&type=issues) | missing-pr |
+| systemd | 1 | 67 | github:systemd/systemd | [issues](https://github.com/search?q=repo%3Asystemd%2Fsystemd+%22OpenSSL+4%22&type=issues) | missing-pr |
 | libevent | 0 | 64 | github:libevent/libevent | [issues](https://github.com/search?q=repo%3Alibevent%2Flibevent+%22OpenSSL+4%22&type=issues) | missing-pr |
 | libngtcp2 | closure | 34 | github:ngtcp2/ngtcp2 | [issues](https://github.com/search?q=repo%3Angtcp2%2Fngtcp2+%22OpenSSL+4%22&type=issues) | missing-pr |
 | cargo-c | 2 | 25 | github:lu-zero/cargo-c | [issues](https://github.com/search?q=repo%3Alu-zero%2Fcargo-c+%22OpenSSL+4%22&type=issues) | missing-pr |

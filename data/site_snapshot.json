@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-23T06:58:34Z",
+  "generated_at": "2026-08-24T07:17:44Z",
   "repository": "Homebrew/homebrew-core",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "target_branch": "openssl-4-migration-staging",
@@ -20,7 +20,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 671,
+      "impact_count": 673,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -55,7 +55,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 472,
+      "impact_count": 474,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -213,7 +213,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 131,
+      "impact_count": 132,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -283,7 +283,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 75,
+      "impact_count": 77,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -318,7 +318,7 @@
       "live_status": "PENDING",
       "depth": 1,
       "group_label": "Batch 1",
-      "impact_count": 66,
+      "impact_count": 67,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -824,7 +824,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 10,
+      "impact_count": 11,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
