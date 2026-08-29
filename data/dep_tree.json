@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-28T18:38:11Z",
+  "generated_at": "2026-08-29T12:39:16Z",
   "repository": "Homebrew/homebrew-core",
-  "git_head": "b6c3da6f936dc3843a108a775519233a5a07cce7",
+  "git_head": "c3d46a33f3e826d093954e68493ad9099c098350",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "staging_branch": "openssl-4-migration-staging",
   "staged_depths": {
@@ -220,6 +220,7 @@
         "bareos-client",
         "bbot",
         "bibtexconv",
+        "boa",
         "brpc",
         "caf",
         "capnp",
@@ -1772,6 +1773,7 @@
         "aws-sam-cli",
         "awscurl",
         "azure-cli",
+        "barman",
         "bbot",
         "bittensor",
         "bkmr",
@@ -3707,7 +3709,7 @@
       "path": "Formula/n/node.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://nodejs.org/",
-      "source_url": "https://nodejs.org/dist/v26.7.0/node-v26.7.0.tar.xz",
+      "source_url": "https://nodejs.org/dist/v26.8.1/node-v26.8.1.tar.xz",
       "head_url": "https://github.com/nodejs/node.git",
       "upstream_provider": "github",
       "upstream_repo": "nodejs/node",
@@ -4062,6 +4064,7 @@
         "atuin-server",
         "authoscope",
         "azure-cli",
+        "barman",
         "bbot",
         "bittensor",
         "bkmr",
@@ -4293,6 +4296,7 @@
         "aws-sam-cli",
         "awscurl",
         "azure-cli",
+        "barman",
         "bbot",
         "bittensor",
         "bkmr",
@@ -5467,6 +5471,7 @@
         "aws-sam-cli",
         "awscurl",
         "azure-cli",
+        "barman",
         "bbot",
         "bittensor",
         "bkmr",
@@ -6480,7 +6485,7 @@
       "path": "Formula/a/aoe.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/agent-of-empires/agent-of-empires",
-      "source_url": "https://github.com/agent-of-empires/agent-of-empires/archive/refs/tags/v1.15.0.tar.gz",
+      "source_url": "https://github.com/agent-of-empires/agent-of-empires/archive/refs/tags/v1.15.1.tar.gz",
       "head_url": "https://github.com/agent-of-empires/agent-of-empires.git",
       "upstream_provider": "github",
       "upstream_repo": "agent-of-empires/agent-of-empires",
@@ -6908,7 +6913,7 @@
       "path": "Formula/a/atuin.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://atuin.sh/",
-      "source_url": "https://github.com/atuinsh/atuin/releases/download/v18.19.0/source.tar.gz",
+      "source_url": "https://github.com/atuinsh/atuin/releases/download/v18.20.1/source.tar.gz",
       "head_url": "https://github.com/atuinsh/atuin.git",
       "upstream_provider": "github",
       "upstream_repo": "atuinsh/atuin",
@@ -7271,27 +7276,31 @@
       "path": "Formula/b/barman.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://www.pgbarman.org/",
-      "source_url": "https://github.com/EnterpriseDB/barman/releases/download/release%2F3.19.1/barman-3.19.1.tar.gz",
-      "upstream_provider": "github",
-      "upstream_repo": "EnterpriseDB/barman",
+      "source_url": "https://files.pythonhosted.org/packages/6a/f4/aa08320a5763e2be204379a0c384f8557a9de1d8b6a3de2d0f454f876b48/barman-3.20.0.tar.gz",
+      "upstream_provider": "python",
       "depth": null,
       "target_branch": "main",
       "staging_required_by": [],
       "dependencies": [
+        "rust",
         "libpq",
         "openssl@3",
         "python@3.14"
       ],
       "openssl_formula_dependencies": [
         "libpq",
-        "python@3.14"
+        "python@3.14",
+        "rust"
       ],
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
         "krb5",
+        "libgit2",
         "libpq",
-        "python@3.14"
+        "libssh2",
+        "python@3.14",
+        "rust"
       ],
       "transitive_openssl_formula_dependents": []
     },
@@ -7525,9 +7534,9 @@
     {
       "name": "boa",
       "path": "Formula/b/boa.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/boa-dev/boa",
-      "source_url": "https://github.com/boa-dev/boa/archive/refs/tags/v0.21.1.tar.gz",
+      "source_url": "https://github.com/boa-dev/boa/archive/refs/tags/v0.22.tar.gz",
       "head_url": "https://github.com/boa-dev/boa.git",
       "upstream_provider": "github",
       "upstream_repo": "boa-dev/boa",
@@ -7535,11 +7544,13 @@
       "target_branch": "main",
       "staging_required_by": [],
       "dependencies": [
+        "cmake",
         "pkgconf",
         "rust",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [
+        "cmake",
         "rust"
       ],
       "openssl_formula_dependents": [],
@@ -8791,7 +8802,7 @@
       "path": "Formula/c/codanna.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://docs.codanna.sh/",
-      "source_url": "https://github.com/bartolli/codanna/archive/refs/tags/v0.14.0.tar.gz",
+      "source_url": "https://github.com/bartolli/codanna/archive/refs/tags/v0.15.0.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "bartolli/codanna",
       "depth": null,
@@ -9155,7 +9166,7 @@
       "path": "Formula/c/cpp-httplib.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://yhirose.github.io/cpp-httplib/",
-      "source_url": "https://github.com/yhirose/cpp-httplib/archive/refs/tags/v0.53.1.tar.gz",
+      "source_url": "https://github.com/yhirose/cpp-httplib/archive/refs/tags/v0.54.0.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "yhirose/cpp-httplib",
       "depth": null,
@@ -12054,7 +12065,7 @@
       "path": "Formula/f/freeswitch.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://freeswitch.org",
-      "source_url": "https://files.freeswitch.org/releases/freeswitch/freeswitch-1.11.2.-release.tar.gz",
+      "source_url": "https://files.freeswitch.org/releases/freeswitch/freeswitch-1.11.3.-release.tar.gz",
       "head_url": "https://github.com/signalwire/freeswitch.git",
       "upstream_provider": "github",
       "upstream_repo": "signalwire/freeswitch",
@@ -12656,7 +12667,7 @@
       "path": "Formula/g/gitnr.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/reemus-dev/gitnr",
-      "source_url": "https://github.com/reemus-dev/gitnr/archive/refs/tags/v0.3.0.tar.gz",
+      "source_url": "https://github.com/reemus-dev/gitnr/archive/refs/tags/v0.3.1.tar.gz",
       "head_url": "https://github.com/reemus-dev/gitnr.git",
       "upstream_provider": "github",
       "upstream_repo": "reemus-dev/gitnr",
@@ -13358,7 +13369,7 @@
       "path": "Formula/h/hf.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://huggingface.co/docs/huggingface_hub/guides/cli",
-      "source_url": "https://files.pythonhosted.org/packages/c6/ae/222a91937ebee7f62c0ca8f5ee0afd97577caf24c0abb927d1f5c7e9f6d2/huggingface_hub-1.28.0.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/64/35/42316e8f6908b6d21bc8df017cc6efba94fb5edbf99b64e28dd142325e20/huggingface_hub-1.29.0.tar.gz",
       "head_url": "https://github.com/huggingface/huggingface_hub.git",
       "upstream_provider": "github",
       "upstream_repo": "huggingface/huggingface_hub",
@@ -22246,7 +22257,6 @@
       ],
       "openssl_formula_dependents": [
         "pypy3.10",
-        "pypy3.11",
         "pypy3.9"
       ],
       "transitive_openssl_formula_dependencies": [
@@ -22256,7 +22266,6 @@
       ],
       "transitive_openssl_formula_dependents": [
         "pypy3.10",
-        "pypy3.11",
         "pypy3.9"
       ]
     },
@@ -22307,7 +22316,6 @@
       "staging_required_by": [],
       "dependencies": [
         "pkgconf",
-        "pypy",
         "gdbm",
         "openssl@3",
         "sqlite",
@@ -22316,13 +22324,11 @@
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
-        "pypy",
         "tcl-tk@8"
       ],
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
-        "pypy",
         "python@3.14",
         "tcl-tk@8"
       ],
@@ -22720,7 +22726,7 @@
       "path": "Formula/r/rakudo-star.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://rakudo.org/",
-      "source_url": "https://github.com/rakudo/star/releases/download/2026.07/rakudo-star-2026.07.tar.gz",
+      "source_url": "https://github.com/rakudo/star/releases/download/2026.08/rakudo-star-2026.08.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "rakudo/star",
       "depth": null,
@@ -27550,7 +27556,7 @@
       "path": "Formula/w/wassette.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://microsoft.github.io/wassette/",
-      "source_url": "https://github.com/microsoft/wassette/archive/refs/tags/v0.6.0.tar.gz",
+      "source_url": "https://github.com/microsoft/wassette/archive/refs/tags/v0.7.0.tar.gz",
       "head_url": "https://github.com/microsoft/wassette.git",
       "upstream_provider": "github",
       "upstream_repo": "microsoft/wassette",
