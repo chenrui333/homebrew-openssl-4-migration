@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-30T11:51:25Z",
+  "generated_at": "2026-08-31T13:42:40Z",
   "repository": "Homebrew/homebrew-core",
-  "git_head": "0100eb058787b71b34ee2a8b6c3e0be28d58aaed",
+  "git_head": "351cd953e11856cfd7d1dd4a8522ed043a4a70b2",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "staging_branch": "openssl-4-migration-staging",
   "staged_depths": {
@@ -60,7 +60,7 @@
       "gstreamer"
     ]
   },
-  "formula_count": 762,
+  "formula_count": 763,
   "formulae": [
     {
       "name": "apr-util",
@@ -271,6 +271,7 @@
         "h2o",
         "halide",
         "httping",
+        "jcode",
         "julia",
         "karchive",
         "kcov",
@@ -664,6 +665,7 @@
         "ironclaw",
         "irssi",
         "isync",
+        "jcode",
         "jikken",
         "jimtcl",
         "john-jumbo",
@@ -1891,6 +1893,7 @@
         "intelli-shell",
         "intermodal",
         "ironclaw",
+        "jcode",
         "jikken",
         "julia",
         "jwt-hack",
@@ -2670,6 +2673,7 @@
         "intermodal",
         "ironclaw",
         "irssi",
+        "jcode",
         "jikken",
         "jose",
         "julia",
@@ -4146,6 +4150,7 @@
         "intelli-shell",
         "intermodal",
         "ironclaw",
+        "jcode",
         "jikken",
         "jwt-hack",
         "keeper-commander",
@@ -4409,6 +4414,7 @@
         "intelli-shell",
         "intermodal",
         "ironclaw",
+        "jcode",
         "jikken",
         "jwt-hack",
         "karchive",
@@ -5584,6 +5590,7 @@
         "intelli-shell",
         "intermodal",
         "ironclaw",
+        "jcode",
         "jikken",
         "julia",
         "jwt-hack",
@@ -9043,7 +9050,7 @@
     {
       "name": "conserver",
       "path": "Formula/c/conserver.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://www.conserver.com/",
       "source_url": "https://github.com/bstansell/conserver/releases/download/v8.3.0/conserver-8.3.0.tar.gz",
       "upstream_provider": "github",
@@ -9052,7 +9059,7 @@
       "target_branch": "main",
       "staging_required_by": [],
       "dependencies": [
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [],
@@ -10809,7 +10816,7 @@
     {
       "name": "epic5",
       "path": "Formula/e/epic5.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://www.epicsol.org/",
       "source_url": "https://ftp.epicsol.org/pub/epic/EPIC5-PRODUCTION/epic5-3.0.3.tar.xz",
       "head_url": "https://git.epicsol.org/epic5.git",
@@ -10818,7 +10825,7 @@
       "target_branch": "main",
       "staging_required_by": [],
       "dependencies": [
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [],
@@ -11748,7 +11755,7 @@
       "path": "Formula/f/flowrs.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/jvanbuel/flowrs",
-      "source_url": "https://github.com/jvanbuel/flowrs/archive/refs/tags/flowrs-tui-v0.14.0.tar.gz",
+      "source_url": "https://github.com/jvanbuel/flowrs/archive/refs/tags/flowrs-tui-v0.14.1.tar.gz",
       "head_url": "https://github.com/jvanbuel/flowrs.git",
       "upstream_provider": "github",
       "upstream_repo": "jvanbuel/flowrs",
@@ -14191,6 +14198,37 @@
       "transitive_openssl_formula_dependents": []
     },
     {
+      "name": "jcode",
+      "path": "Formula/j/jcode.rb",
+      "openssl_dependency": "openssl@3",
+      "homepage": "https://jcode.sh",
+      "source_url": "https://github.com/1jehuang/jcode/archive/refs/tags/v0.81.4.tar.gz",
+      "upstream_provider": "github",
+      "upstream_repo": "1jehuang/jcode",
+      "depth": null,
+      "target_branch": "main",
+      "staging_required_by": [],
+      "dependencies": [
+        "cmake",
+        "pkgconf",
+        "rust",
+        "openssl@3"
+      ],
+      "openssl_formula_dependencies": [
+        "cmake",
+        "rust"
+      ],
+      "openssl_formula_dependents": [],
+      "transitive_openssl_formula_dependencies": [
+        "cmake",
+        "libgit2",
+        "libssh2",
+        "python@3.14",
+        "rust"
+      ],
+      "transitive_openssl_formula_dependents": []
+    },
+    {
       "name": "jikken",
       "path": "Formula/j/jikken.rb",
       "openssl_dependency": "openssl@3",
@@ -14564,7 +14602,7 @@
       "path": "Formula/k/kingfisher.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://mongodb.github.io/kingfisher/",
-      "source_url": "https://github.com/mongodb/kingfisher/archive/refs/tags/v2.0.0.tar.gz",
+      "source_url": "https://github.com/mongodb/kingfisher/archive/refs/tags/v2.1.0.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "mongodb/kingfisher",
       "depth": null,
@@ -14710,7 +14748,7 @@
       "path": "Formula/l/ladybug.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://ladybugdb.com/",
-      "source_url": "https://github.com/LadybugDB/ladybug/archive/refs/tags/v0.20.0.tar.gz",
+      "source_url": "https://github.com/LadybugDB/ladybug/archive/refs/tags/v0.20.1.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "LadybugDB/ladybug",
       "depth": null,
@@ -15541,7 +15579,7 @@
     {
       "name": "libjwt",
       "path": "Formula/lib/libjwt.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://libjwt.io/",
       "source_url": "https://github.com/benmcollins/libjwt/archive/refs/tags/v3.6.1.tar.gz",
       "head_url": "https://github.com/benmcollins/libjwt.git",
@@ -15554,7 +15592,7 @@
         "cmake",
         "pkgconf",
         "jansson",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [
         "cmake"
@@ -15601,7 +15639,7 @@
     {
       "name": "libmowgli",
       "path": "Formula/lib/libmowgli.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/atheme/libmowgli-2",
       "source_url": "https://github.com/atheme/libmowgli-2/archive/refs/tags/v2.1.3.tar.gz",
       "head_url": "https://github.com/atheme/libmowgli-2.git",
@@ -15611,7 +15649,7 @@
       "target_branch": "main",
       "staging_required_by": [],
       "dependencies": [
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [],
@@ -15855,7 +15893,7 @@
       "path": "Formula/lib/librealsense.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/realsenseai/librealsense",
-      "source_url": "https://github.com/realsenseai/librealsense/archive/refs/tags/v2.58.3.tar.gz",
+      "source_url": "https://github.com/realsenseai/librealsense/archive/refs/tags/v2.58.4.tar.gz",
       "head_url": "https://github.com/realsenseai/librealsense.git",
       "upstream_provider": "github",
       "upstream_repo": "realsenseai/librealsense",
@@ -17433,7 +17471,7 @@
       "path": "Formula/m/mise.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://mise.jdx.dev/",
-      "source_url": "https://github.com/jdx/mise/archive/refs/tags/v2026.8.14.tar.gz",
+      "source_url": "https://github.com/jdx/mise/archive/refs/tags/v2026.8.15.tar.gz",
       "head_url": "https://github.com/jdx/mise.git",
       "upstream_provider": "github",
       "upstream_repo": "jdx/mise",
@@ -19204,7 +19242,7 @@
     {
       "name": "nopoll",
       "path": "Formula/n/nopoll.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://www.aspl.es/nopoll/",
       "source_url": "https://www.aspl.es/nopoll/downloads/nopoll-0.4.9.b462.tar.gz",
       "upstream_provider": "other",
@@ -19212,7 +19250,7 @@
       "target_branch": "main",
       "staging_required_by": [],
       "dependencies": [
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [],
@@ -21327,7 +21365,7 @@
       "path": "Formula/p/pixi-pack.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://pixi.sh/latest/advanced/production_deployment/#pixi-pack",
-      "source_url": "https://github.com/quantco/pixi-pack/archive/refs/tags/v0.7.10.tar.gz",
+      "source_url": "https://github.com/quantco/pixi-pack/archive/refs/tags/v0.7.11.tar.gz",
       "head_url": "https://github.com/quantco/pixi-pack.git",
       "upstream_provider": "github",
       "upstream_repo": "quantco/pixi-pack",
@@ -24486,7 +24524,7 @@
     {
       "name": "sh4d0wup",
       "path": "Formula/s/sh4d0wup.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/kpcyrd/sh4d0wup",
       "source_url": "https://github.com/kpcyrd/sh4d0wup/archive/refs/tags/v0.11.1.tar.gz",
       "upstream_provider": "github",
@@ -24495,11 +24533,9 @@
       "target_branch": "main",
       "staging_required_by": [],
       "dependencies": [
-        "llvm",
         "pkgconf",
         "rust",
-        "openssl@3",
-        "pcsc-lite",
+        "openssl@4",
         "xz",
         "zstd"
       ],
@@ -25169,7 +25205,7 @@
       "path": "Formula/s/solana.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://www.anza.xyz/",
-      "source_url": "https://github.com/anza-xyz/agave/archive/refs/tags/v4.2.1.tar.gz",
+      "source_url": "https://github.com/anza-xyz/agave/archive/refs/tags/v4.2.2.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "anza-xyz/agave",
       "depth": null,

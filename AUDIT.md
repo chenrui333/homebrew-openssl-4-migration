@@ -1,4 +1,4 @@
-# OpenSSL 4 Migration Audit (2026-08-30)
+# OpenSSL 4 Migration Audit (2026-08-31)
 
 Tracking issue: Homebrew/homebrew-core#278366
 
@@ -26,11 +26,11 @@ Pending staged formulae are sorted by transitive dependent count.
 
 | Formula | Target | Depth | Impact | Status | PR | Readiness | Upstream | Issues |
 |---|---|---:|---:|---|---|---|---|---|
-| cmake | openssl-4-migration-staging | 0 | 672 | PENDING | none | missing-pr | gitlab:gitlab.kitware.com/cmake/cmake |  |
-| python@3.14 | openssl-4-migration-staging | 0 | 473 | PENDING | none | missing-pr | python |  |
-| libssh2 | openssl-4-migration-staging | 0 | 316 | PENDING | none | missing-pr | github:libssh2/libssh2 |  |
-| libgit2 | openssl-4-migration-staging | closure | 293 | PENDING | none | missing-pr | github:libgit2/libgit2 |  |
-| rust | openssl-4-migration-staging | 1 | 291 | PENDING | none | missing-pr | github:rust-lang/rust | [issues#155397](https://github.com/rust-lang/rust/issues/155397) open |
+| cmake | openssl-4-migration-staging | 0 | 673 | PENDING | none | missing-pr | gitlab:gitlab.kitware.com/cmake/cmake |  |
+| python@3.14 | openssl-4-migration-staging | 0 | 474 | PENDING | none | missing-pr | python |  |
+| libssh2 | openssl-4-migration-staging | 0 | 317 | PENDING | none | missing-pr | github:libssh2/libssh2 |  |
+| libgit2 | openssl-4-migration-staging | closure | 294 | PENDING | none | missing-pr | github:libgit2/libgit2 |  |
+| rust | openssl-4-migration-staging | 1 | 292 | PENDING | none | missing-pr | github:rust-lang/rust | [issues#155397](https://github.com/rust-lang/rust/issues/155397) open |
 | python@3.13 | openssl-4-migration-staging | 0 | 83 | PENDING | none | missing-pr | python |  |
 | systemd | openssl-4-migration-staging | 1 | 66 | PENDING | none | missing-pr | github:systemd/systemd |  |
 | libevent | openssl-4-migration-staging | 0 | 64 | PENDING | none | missing-pr | github:libevent/libevent |  |
@@ -83,10 +83,10 @@ Top 20 pending staged formulae with upstream metadata and no curated upstream is
 
 | Formula | Depth | Impact | Upstream | Search | Readiness |
 |---|---:|---:|---|---|---|
-| cmake | 0 | 672 | gitlab:gitlab.kitware.com/cmake/cmake |  | missing-pr |
-| python@3.14 | 0 | 473 | python |  | missing-pr |
-| libssh2 | 0 | 316 | github:libssh2/libssh2 | [issues](https://github.com/search?q=repo%3Alibssh2%2Flibssh2+%22OpenSSL+4%22&type=issues) | missing-pr |
-| libgit2 | closure | 293 | github:libgit2/libgit2 | [issues](https://github.com/search?q=repo%3Alibgit2%2Flibgit2+%22OpenSSL+4%22&type=issues) | missing-pr |
+| cmake | 0 | 673 | gitlab:gitlab.kitware.com/cmake/cmake |  | missing-pr |
+| python@3.14 | 0 | 474 | python |  | missing-pr |
+| libssh2 | 0 | 317 | github:libssh2/libssh2 | [issues](https://github.com/search?q=repo%3Alibssh2%2Flibssh2+%22OpenSSL+4%22&type=issues) | missing-pr |
+| libgit2 | closure | 294 | github:libgit2/libgit2 | [issues](https://github.com/search?q=repo%3Alibgit2%2Flibgit2+%22OpenSSL+4%22&type=issues) | missing-pr |
 | python@3.13 | 0 | 83 | python |  | missing-pr |
 | systemd | 1 | 66 | github:systemd/systemd | [issues](https://github.com/search?q=repo%3Asystemd%2Fsystemd+%22OpenSSL+4%22&type=issues) | missing-pr |
 | libevent | 0 | 64 | github:libevent/libevent | [issues](https://github.com/search?q=repo%3Alibevent%2Flibevent+%22OpenSSL+4%22&type=issues) | missing-pr |
