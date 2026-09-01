@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-31T13:42:40Z",
+  "generated_at": "2026-09-01T11:35:37Z",
   "repository": "Homebrew/homebrew-core",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "target_branch": "openssl-4-migration-staging",
@@ -20,7 +20,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 673,
+      "impact_count": 674,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -55,7 +55,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 474,
+      "impact_count": 475,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -90,7 +90,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 317,
+      "impact_count": 318,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -130,7 +130,7 @@
       "live_status": "PENDING",
       "depth": null,
       "group_label": "Staging closure",
-      "impact_count": 294,
+      "impact_count": 295,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -170,7 +170,7 @@
       "live_status": "PENDING",
       "depth": 1,
       "group_label": "Batch 1",
-      "impact_count": 292,
+      "impact_count": 293,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -213,7 +213,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 131,
+      "impact_count": 132,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -248,7 +248,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 83,
+      "impact_count": 84,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -593,7 +593,7 @@
       "live_status": "PENDING",
       "depth": 2,
       "group_label": "Batch 2",
-      "impact_count": 17,
+      "impact_count": 18,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
