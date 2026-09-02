@@ -1,4 +1,4 @@
-# OpenSSL 4 Migration Audit (2026-09-01)
+# OpenSSL 4 Migration Audit (2026-09-02)
 
 Tracking issue: Homebrew/homebrew-core#278366
 
@@ -31,17 +31,17 @@ Pending staged formulae are sorted by transitive dependent count.
 | libssh2 | openssl-4-migration-staging | 0 | 318 | PENDING | none | missing-pr | github:libssh2/libssh2 |  |
 | libgit2 | openssl-4-migration-staging | closure | 295 | PENDING | none | missing-pr | github:libgit2/libgit2 |  |
 | rust | openssl-4-migration-staging | 1 | 293 | PENDING | none | missing-pr | github:rust-lang/rust | [issues#155397](https://github.com/rust-lang/rust/issues/155397) open |
-| python@3.13 | openssl-4-migration-staging | 0 | 84 | PENDING | none | missing-pr | python |  |
-| systemd | openssl-4-migration-staging | 1 | 66 | PENDING | none | missing-pr | github:systemd/systemd |  |
-| libevent | openssl-4-migration-staging | 0 | 64 | PENDING | none | missing-pr | github:libevent/libevent |  |
+| python@3.13 | openssl-4-migration-staging | 0 | 85 | PENDING | none | missing-pr | python |  |
+| systemd | openssl-4-migration-staging | 1 | 67 | PENDING | none | missing-pr | github:systemd/systemd |  |
+| libevent | openssl-4-migration-staging | 0 | 65 | PENDING | none | missing-pr | github:libevent/libevent |  |
 | libngtcp2 | openssl-4-migration-staging | closure | 34 | PENDING | none | missing-pr | github:ngtcp2/ngtcp2 |  |
 | cargo-c | openssl-4-migration-staging | 2 | 25 | PENDING | none | missing-pr | github:lu-zero/cargo-c |  |
+| pulseaudio | openssl-4-migration-staging | 1 | 21 | PENDING | none | missing-pr | gitlab:gitlab.freedesktop.org/pulseaudio/pulseaudio |  |
 | curl | openssl-4-migration-staging | 1 | 20 | PENDING | none | missing-pr | github:curl/curl |  |
-| pulseaudio | openssl-4-migration-staging | 1 | 20 | PENDING | none | missing-pr | gitlab:gitlab.freedesktop.org/pulseaudio/pulseaudio |  |
 | ruby | openssl-4-migration-staging | 2 | 19 | PENDING | none | missing-pr | github:ruby/ruby |  |
 | cryptography | openssl-4-migration-staging | 2 | 18 | PENDING | none | missing-pr | github:pyca/cryptography | [issues#14656](https://github.com/pyca/cryptography/issues/14656) closed |
 | libpq | openssl-4-migration-staging | 1 | 17 | PENDING | none | missing-pr | other |  |
-| pipewire | openssl-4-migration-staging | closure | 16 | PENDING | none | missing-pr | gitlab:gitlab.freedesktop.org/pipewire/pipewire |  |
+| pipewire | openssl-4-migration-staging | closure | 17 | PENDING | none | missing-pr | gitlab:gitlab.freedesktop.org/pipewire/pipewire |  |
 | ffmpeg | openssl-4-migration-staging | 1 | 13 | PENDING | none | missing-pr | github:FFmpeg/FFmpeg |  |
 | apr-util | openssl-4-migration-staging | 0 | 11 | PENDING | none | missing-pr | apache |  |
 | grpc | openssl-4-migration-staging | 0 | 11 | PENDING | none | missing-pr | github:grpc/grpc | [issues#42020](https://github.com/grpc/grpc/issues/42020) open |
@@ -87,15 +87,15 @@ Top 20 pending staged formulae with upstream metadata and no curated upstream is
 | python@3.14 | 0 | 475 | python |  | missing-pr |
 | libssh2 | 0 | 318 | github:libssh2/libssh2 | [issues](https://github.com/search?q=repo%3Alibssh2%2Flibssh2+%22OpenSSL+4%22&type=issues) | missing-pr |
 | libgit2 | closure | 295 | github:libgit2/libgit2 | [issues](https://github.com/search?q=repo%3Alibgit2%2Flibgit2+%22OpenSSL+4%22&type=issues) | missing-pr |
-| python@3.13 | 0 | 84 | python |  | missing-pr |
-| systemd | 1 | 66 | github:systemd/systemd | [issues](https://github.com/search?q=repo%3Asystemd%2Fsystemd+%22OpenSSL+4%22&type=issues) | missing-pr |
-| libevent | 0 | 64 | github:libevent/libevent | [issues](https://github.com/search?q=repo%3Alibevent%2Flibevent+%22OpenSSL+4%22&type=issues) | missing-pr |
+| python@3.13 | 0 | 85 | python |  | missing-pr |
+| systemd | 1 | 67 | github:systemd/systemd | [issues](https://github.com/search?q=repo%3Asystemd%2Fsystemd+%22OpenSSL+4%22&type=issues) | missing-pr |
+| libevent | 0 | 65 | github:libevent/libevent | [issues](https://github.com/search?q=repo%3Alibevent%2Flibevent+%22OpenSSL+4%22&type=issues) | missing-pr |
 | libngtcp2 | closure | 34 | github:ngtcp2/ngtcp2 | [issues](https://github.com/search?q=repo%3Angtcp2%2Fngtcp2+%22OpenSSL+4%22&type=issues) | missing-pr |
 | cargo-c | 2 | 25 | github:lu-zero/cargo-c | [issues](https://github.com/search?q=repo%3Alu-zero%2Fcargo-c+%22OpenSSL+4%22&type=issues) | missing-pr |
+| pulseaudio | 1 | 21 | gitlab:gitlab.freedesktop.org/pulseaudio/pulseaudio |  | missing-pr |
 | curl | 1 | 20 | github:curl/curl | [issues](https://github.com/search?q=repo%3Acurl%2Fcurl+%22OpenSSL+4%22&type=issues) | missing-pr |
-| pulseaudio | 1 | 20 | gitlab:gitlab.freedesktop.org/pulseaudio/pulseaudio |  | missing-pr |
 | ruby | 2 | 19 | github:ruby/ruby | [issues](https://github.com/search?q=repo%3Aruby%2Fruby+%22OpenSSL+4%22&type=issues) | missing-pr |
-| pipewire | closure | 16 | gitlab:gitlab.freedesktop.org/pipewire/pipewire |  | missing-pr |
+| pipewire | closure | 17 | gitlab:gitlab.freedesktop.org/pipewire/pipewire |  | missing-pr |
 | ffmpeg | 1 | 13 | github:FFmpeg/FFmpeg | [issues](https://github.com/search?q=repo%3AFFmpeg%2FFFmpeg+%22OpenSSL+4%22&type=issues) | missing-pr |
 | apr-util | 0 | 11 | apache |  | missing-pr |
 | qtbase | 1 | 10 | qt |  | missing-pr |
