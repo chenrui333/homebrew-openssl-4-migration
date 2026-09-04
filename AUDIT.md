@@ -1,4 +1,4 @@
-# OpenSSL 4 Migration Audit (2026-09-03)
+# OpenSSL 4 Migration Audit (2026-09-04)
 
 Tracking issue: Homebrew/homebrew-core#278366
 
@@ -34,7 +34,7 @@ Pending staged formulae are sorted by transitive dependent count.
 | python@3.13 | openssl-4-migration-staging | 0 | 85 | PENDING | none | missing-pr | python |  |
 | systemd | openssl-4-migration-staging | 1 | 67 | PENDING | none | missing-pr | github:systemd/systemd |  |
 | libevent | openssl-4-migration-staging | 0 | 65 | PENDING | none | missing-pr | github:libevent/libevent |  |
-| libngtcp2 | openssl-4-migration-staging | closure | 34 | PENDING | none | missing-pr | github:ngtcp2/ngtcp2 |  |
+| libngtcp2 | openssl-4-migration-staging | closure | 33 | PENDING | none | missing-pr | github:ngtcp2/ngtcp2 |  |
 | cargo-c | openssl-4-migration-staging | 2 | 25 | PENDING | none | missing-pr | github:lu-zero/cargo-c |  |
 | pulseaudio | openssl-4-migration-staging | 1 | 21 | PENDING | none | missing-pr | gitlab:gitlab.freedesktop.org/pulseaudio/pulseaudio |  |
 | curl | openssl-4-migration-staging | 1 | 20 | PENDING | none | missing-pr | github:curl/curl |  |
@@ -49,10 +49,10 @@ Pending staged formulae are sorted by transitive dependent count.
 | openldap | openssl-4-migration-staging | 0 | 10 | PENDING | none | missing-pr | other |  |
 | qtbase | openssl-4-migration-staging | 1 | 10 | PENDING | none | missing-pr | qt |  |
 | aws-c-cal | openssl-4-migration-staging | closure | 9 | PENDING | none | missing-pr | github:awslabs/aws-c-cal |  |
-| node | openssl-4-migration-staging | 1 | 9 | PENDING | none | missing-pr | github:nodejs/node | [issues#62817](https://github.com/nodejs/node/issues/62817) closed |
 | s2n | openssl-4-migration-staging | closure | 9 | PENDING | none | missing-pr | github:aws/s2n-tls | [issues#5783](https://github.com/aws/s2n-tls/issues/5783) open |
 | aws-c-io | openssl-4-migration-staging | closure | 8 | PENDING | none | missing-pr | github:awslabs/aws-c-io |  |
 | httpd | openssl-4-migration-staging | 1 | 8 | PENDING | none | missing-pr | apache |  |
+| node | openssl-4-migration-staging | 1 | 8 | PENDING | none | missing-pr | github:nodejs/node | [issues#62817](https://github.com/nodejs/node/issues/62817) closed |
 | folly | openssl-4-migration-staging | 1 | 7 | PENDING | none | missing-pr | github:facebook/folly |  |
 | freetds | openssl-4-migration-staging | 0 | 7 | PENDING | none | missing-pr | github:FreeTDS/freetds |  |
 | srt | openssl-4-migration-staging | 0 | 6 | PENDING | none | missing-pr | github:Haivision/srt |  |
@@ -90,7 +90,7 @@ Top 20 pending staged formulae with upstream metadata and no curated upstream is
 | python@3.13 | 0 | 85 | python |  | missing-pr |
 | systemd | 1 | 67 | github:systemd/systemd | [issues](https://github.com/search?q=repo%3Asystemd%2Fsystemd+%22OpenSSL+4%22&type=issues) | missing-pr |
 | libevent | 0 | 65 | github:libevent/libevent | [issues](https://github.com/search?q=repo%3Alibevent%2Flibevent+%22OpenSSL+4%22&type=issues) | missing-pr |
-| libngtcp2 | closure | 34 | github:ngtcp2/ngtcp2 | [issues](https://github.com/search?q=repo%3Angtcp2%2Fngtcp2+%22OpenSSL+4%22&type=issues) | missing-pr |
+| libngtcp2 | closure | 33 | github:ngtcp2/ngtcp2 | [issues](https://github.com/search?q=repo%3Angtcp2%2Fngtcp2+%22OpenSSL+4%22&type=issues) | missing-pr |
 | cargo-c | 2 | 25 | github:lu-zero/cargo-c | [issues](https://github.com/search?q=repo%3Alu-zero%2Fcargo-c+%22OpenSSL+4%22&type=issues) | missing-pr |
 | pulseaudio | 1 | 21 | gitlab:gitlab.freedesktop.org/pulseaudio/pulseaudio |  | missing-pr |
 | curl | 1 | 20 | github:curl/curl | [issues](https://github.com/search?q=repo%3Acurl%2Fcurl+%22OpenSSL+4%22&type=issues) | missing-pr |
