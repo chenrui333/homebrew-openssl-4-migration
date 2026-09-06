@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-05T10:31:32Z",
+  "generated_at": "2026-09-06T10:52:08Z",
   "repository": "Homebrew/homebrew-core",
-  "git_head": "05a948c3b06af5f9e6f98f54d832f3d4f17c724a",
+  "git_head": "d1107702ceb534c5154a323933503615f1a89ad8",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "staging_branch": "openssl-4-migration-staging",
   "staged_depths": {
@@ -60,7 +60,7 @@
       "gstreamer"
     ]
   },
-  "formula_count": 764,
+  "formula_count": 763,
   "formulae": [
     {
       "name": "apr-util",
@@ -906,7 +906,6 @@
         "pypy",
         "pypy3.10",
         "pypy3.11",
-        "pypy3.9",
         "python-freethreading",
         "python@3.10",
         "python@3.11",
@@ -2850,7 +2849,6 @@
         "pypy",
         "pypy3.10",
         "pypy3.11",
-        "pypy3.9",
         "qca",
         "qobine-tui",
         "qobine-web",
@@ -3079,8 +3077,7 @@
       "openssl_formula_dependents": [
         "pypy",
         "pypy3.10",
-        "pypy3.11",
-        "pypy3.9"
+        "pypy3.11"
       ],
       "transitive_openssl_formula_dependencies": [
         "cmake",
@@ -3089,8 +3086,7 @@
       "transitive_openssl_formula_dependents": [
         "pypy",
         "pypy3.10",
-        "pypy3.11",
-        "pypy3.9"
+        "pypy3.11"
       ]
     },
     {
@@ -5159,7 +5155,6 @@
         "dav1d",
         "faac",
         "faad2",
-        "fdk-aac",
         "ffmpeg",
         "flac",
         "gdk-pixbuf",
@@ -11056,7 +11051,7 @@
     {
       "name": "eureka",
       "path": "Formula/e/eureka.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/simeg/eureka",
       "source_url": "https://github.com/simeg/eureka/archive/refs/tags/v2.1.0.tar.gz",
       "head_url": "https://github.com/simeg/eureka.git",
@@ -11068,7 +11063,7 @@
       "dependencies": [
         "pkgconf",
         "rust",
-        "openssl@3",
+        "openssl@4",
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
@@ -11838,7 +11833,7 @@
       "path": "Formula/f/fnox.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://fnox.jdx.dev/",
-      "source_url": "https://github.com/jdx/fnox/archive/refs/tags/v1.35.0.tar.gz",
+      "source_url": "https://github.com/jdx/fnox/archive/refs/tags/v1.35.1.tar.gz",
       "head_url": "https://github.com/jdx/fnox.git",
       "upstream_provider": "github",
       "upstream_repo": "jdx/fnox",
@@ -14224,7 +14219,7 @@
       "path": "Formula/j/jcode.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://jcode.sh",
-      "source_url": "https://github.com/1jehuang/jcode/archive/refs/tags/v0.81.7.tar.gz",
+      "source_url": "https://github.com/1jehuang/jcode/archive/refs/tags/v0.82.0.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "1jehuang/jcode",
       "depth": null,
@@ -19831,7 +19826,7 @@
       "path": "Formula/o/opencrabs.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://opencrabs.com",
-      "source_url": "https://github.com/adolfousier/opencrabs/archive/refs/tags/v0.3.83.tar.gz",
+      "source_url": "https://github.com/adolfousier/opencrabs/archive/refs/tags/v0.5.0.tar.gz",
       "head_url": "https://github.com/adolfousier/opencrabs.git",
       "upstream_provider": "github",
       "upstream_repo": "adolfousier/opencrabs",
@@ -22312,8 +22307,7 @@
         "tcl-tk@8"
       ],
       "openssl_formula_dependents": [
-        "pypy3.10",
-        "pypy3.9"
+        "pypy3.10"
       ],
       "transitive_openssl_formula_dependencies": [
         "cmake",
@@ -22321,8 +22315,7 @@
         "tcl-tk@8"
       ],
       "transitive_openssl_formula_dependents": [
-        "pypy3.10",
-        "pypy3.9"
+        "pypy3.10"
       ]
     },
     {
@@ -22385,40 +22378,6 @@
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
-        "python@3.14",
-        "tcl-tk@8"
-      ],
-      "transitive_openssl_formula_dependents": []
-    },
-    {
-      "name": "pypy3.9",
-      "path": "Formula/p/pypy3.9.rb",
-      "openssl_dependency": "openssl@3",
-      "homepage": "https://pypy.org/",
-      "source_url": "https://downloads.python.org/pypy/pypy3.9-v7.3.16-src.tar.bz2",
-      "head_url": "https://github.com/pypy/pypy.git",
-      "upstream_provider": "github",
-      "upstream_repo": "pypy/pypy",
-      "depth": null,
-      "target_branch": "main",
-      "staging_required_by": [],
-      "dependencies": [
-        "pkgconf",
-        "pypy",
-        "gdbm",
-        "openssl@3",
-        "sqlite",
-        "tcl-tk@8",
-        "xz"
-      ],
-      "openssl_formula_dependencies": [
-        "pypy",
-        "tcl-tk@8"
-      ],
-      "openssl_formula_dependents": [],
-      "transitive_openssl_formula_dependencies": [
-        "cmake",
-        "pypy",
         "python@3.14",
         "tcl-tk@8"
       ],
@@ -26136,7 +26095,7 @@
       "path": "Formula/t/tabiew.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/shshemi/tabiew",
-      "source_url": "https://github.com/shshemi/tabiew/archive/refs/tags/v0.14.2.tar.gz",
+      "source_url": "https://github.com/shshemi/tabiew/archive/refs/tags/v0.15.0.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "shshemi/tabiew",
       "depth": null,
@@ -27485,7 +27444,7 @@
       "path": "Formula/v/vtcode.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://vinhnx.github.io",
-      "source_url": "https://static.crates.io/crates/vtcode/vtcode-0.156.0.crate",
+      "source_url": "https://static.crates.io/crates/vtcode/vtcode-0.158.0.crate",
       "head_url": "https://github.com/vinhnx/vtcode.git",
       "upstream_provider": "github",
       "upstream_repo": "vinhnx/vtcode",
