@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-06T10:52:08Z",
+  "generated_at": "2026-09-07T12:25:21Z",
   "repository": "Homebrew/homebrew-core",
-  "git_head": "d1107702ceb534c5154a323933503615f1a89ad8",
+  "git_head": "ade93969bf4ea746ed02edd3fc17d8e2ab994bf0",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "staging_branch": "openssl-4-migration-staging",
   "staged_depths": {
@@ -60,7 +60,7 @@
       "gstreamer"
     ]
   },
-  "formula_count": 763,
+  "formula_count": 764,
   "formulae": [
     {
       "name": "apr-util",
@@ -990,6 +990,7 @@
         "snobol4",
         "snort",
         "snownews",
+        "snx-rs",
         "so",
         "sofia-sip",
         "solana",
@@ -2027,6 +2028,7 @@
         "sigstore",
         "sile",
         "skillspector",
+        "snx-rs",
         "so",
         "solana",
         "spice-gtk",
@@ -2907,6 +2909,7 @@
         "skillspector",
         "sleuthkit",
         "snapcast",
+        "snx-rs",
         "so",
         "sofia-sip",
         "solana",
@@ -4243,6 +4246,7 @@
         "sigstore",
         "sile",
         "skillspector",
+        "snx-rs",
         "so",
         "solana",
         "spotify_player",
@@ -4533,6 +4537,7 @@
         "sigstore",
         "sile",
         "skillspector",
+        "snx-rs",
         "so",
         "solana",
         "spice-gtk",
@@ -5713,6 +5718,7 @@
         "sigstore",
         "sile",
         "skillspector",
+        "snx-rs",
         "so",
         "solana",
         "spice-gtk",
@@ -9605,7 +9611,7 @@
       "path": "Formula/d/dbx-cli.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://dbxio.com",
-      "source_url": "https://github.com/t8y2/dbx/archive/refs/tags/packages-v0.4.80.tar.gz",
+      "source_url": "https://github.com/t8y2/dbx/archive/refs/tags/packages-v0.4.81.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "t8y2/dbx",
       "depth": null,
@@ -9675,6 +9681,7 @@
       "dependencies": [
         "cmake",
         "crystal",
+        "lexbor",
         "pkgconf",
         "bdw-gc",
         "libevent",
@@ -10404,7 +10411,7 @@
       "path": "Formula/e/ecflow-ui.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://ecflow.readthedocs.io",
-      "source_url": "https://confluence.ecmwf.int/download/attachments/8650755/ecFlow-5.18.0-Source.tar.gz",
+      "source_url": "https://confluence.ecmwf.int/download/attachments/8650755/ecFlow-5.19.0-Source.tar.gz",
       "upstream_provider": "other",
       "depth": null,
       "target_branch": "main",
@@ -11907,7 +11914,7 @@
     {
       "name": "forgejo-cli",
       "path": "Formula/f/forgejo-cli.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://codeberg.org/forgejo-contrib/forgejo-cli",
       "source_url": "https://static.crates.io/crates/forgejo-cli/forgejo-cli-0.6.0.crate",
       "head_url": "https://codeberg.org/forgejo-contrib/forgejo-cli.git",
@@ -11918,7 +11925,7 @@
       "dependencies": [
         "pkgconf",
         "rust",
-        "openssl@3",
+        "openssl@4",
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
@@ -14219,7 +14226,7 @@
       "path": "Formula/j/jcode.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://jcode.sh",
-      "source_url": "https://github.com/1jehuang/jcode/archive/refs/tags/v0.82.0.tar.gz",
+      "source_url": "https://github.com/1jehuang/jcode/archive/refs/tags/v0.84.0.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "1jehuang/jcode",
       "depth": null,
@@ -16440,7 +16447,7 @@
       "path": "Formula/l/llgo.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/xgo-dev/llgo",
-      "source_url": "https://github.com/xgo-dev/llgo/archive/refs/tags/v1.0.1.tar.gz",
+      "source_url": "https://github.com/xgo-dev/llgo/archive/refs/tags/v1.0.2.tar.gz",
       "head_url": "https://github.com/xgo-dev/llgo.git",
       "upstream_provider": "github",
       "upstream_repo": "xgo-dev/llgo",
@@ -16451,13 +16458,11 @@
         "bdw-gc",
         "go",
         "libuv",
+        "lld@22",
+        "llvm@22",
         "openssl@3",
         "pkgconf",
-        "lld@21",
-        "llvm@21",
         "libunwind",
-        "lld@19",
-        "llvm@19",
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [],
@@ -17245,7 +17250,7 @@
       "path": "Formula/m/mender-artifact.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://mender.io",
-      "source_url": "https://github.com/mendersoftware/mender-artifact/archive/refs/tags/4.4.1.tar.gz",
+      "source_url": "https://github.com/mendersoftware/mender-artifact/archive/refs/tags/4.4.2.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "mendersoftware/mender-artifact",
       "depth": null,
@@ -25112,6 +25117,37 @@
       "transitive_openssl_formula_dependents": []
     },
     {
+      "name": "snx-rs",
+      "path": "Formula/s/snx-rs.rb",
+      "openssl_dependency": "openssl@3",
+      "homepage": "https://github.com/ancwrd1/snx-rs",
+      "source_url": "https://github.com/ancwrd1/snx-rs/archive/refs/tags/v6.2.4.tar.gz",
+      "head_url": "https://github.com/ancwrd1/snx-rs.git",
+      "upstream_provider": "github",
+      "upstream_repo": "ancwrd1/snx-rs",
+      "depth": null,
+      "target_branch": "main",
+      "staging_required_by": [],
+      "dependencies": [
+        "pkgconf",
+        "rust",
+        "openssl@3",
+        "fontconfig"
+      ],
+      "openssl_formula_dependencies": [
+        "rust"
+      ],
+      "openssl_formula_dependents": [],
+      "transitive_openssl_formula_dependencies": [
+        "cmake",
+        "libgit2",
+        "libssh2",
+        "python@3.14",
+        "rust"
+      ],
+      "transitive_openssl_formula_dependents": []
+    },
+    {
       "name": "so",
       "path": "Formula/s/so.rb",
       "openssl_dependency": "openssl@3",
@@ -28384,7 +28420,7 @@
     {
       "name": "yozefu",
       "path": "Formula/y/yozefu.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://maif.github.io/yozefu/",
       "source_url": "https://github.com/MAIF/yozefu/archive/refs/tags/v0.0.32.tar.gz",
       "head_url": "https://github.com/MAIF/yozefu.git",
@@ -28397,7 +28433,7 @@
         "cmake",
         "pkgconf",
         "rust",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [
         "cmake",
