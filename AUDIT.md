@@ -1,4 +1,4 @@
-# OpenSSL 4 Migration Audit (2026-09-11)
+# OpenSSL 4 Migration Audit (2026-09-12)
 
 Tracking issue: Homebrew/homebrew-core#278366
 
@@ -26,8 +26,8 @@ Pending staged formulae are sorted by transitive dependent count.
 
 | Formula | Target | Depth | Impact | Status | PR | Readiness | Upstream | Issues |
 |---|---|---:|---:|---|---|---|---|---|
-| cmake | openssl-4-migration-staging | 0 | 674 | PENDING | none | missing-pr | gitlab:gitlab.kitware.com/cmake/cmake |  |
-| python@3.14 | openssl-4-migration-staging | 0 | 475 | PENDING | none | missing-pr | python |  |
+| cmake | openssl-4-migration-staging | 0 | 676 | PENDING | none | missing-pr | gitlab:gitlab.kitware.com/cmake/cmake |  |
+| python@3.14 | openssl-4-migration-staging | 0 | 476 | PENDING | none | missing-pr | python |  |
 | libssh2 | openssl-4-migration-staging | 0 | 319 | PENDING | none | missing-pr | github:libssh2/libssh2 |  |
 | libgit2 | openssl-4-migration-staging | closure | 296 | PENDING | none | missing-pr | github:libgit2/libgit2 |  |
 | rust | openssl-4-migration-staging | 1 | 294 | PENDING | none | missing-pr | github:rust-lang/rust | [issues#155397](https://github.com/rust-lang/rust/issues/155397) open |
@@ -83,8 +83,8 @@ Top 20 pending staged formulae with upstream metadata and no curated upstream is
 
 | Formula | Depth | Impact | Upstream | Search | Readiness |
 |---|---:|---:|---|---|---|
-| cmake | 0 | 674 | gitlab:gitlab.kitware.com/cmake/cmake |  | missing-pr |
-| python@3.14 | 0 | 475 | python |  | missing-pr |
+| cmake | 0 | 676 | gitlab:gitlab.kitware.com/cmake/cmake |  | missing-pr |
+| python@3.14 | 0 | 476 | python |  | missing-pr |
 | libssh2 | 0 | 319 | github:libssh2/libssh2 | [issues](https://github.com/search?q=repo%3Alibssh2%2Flibssh2+%22OpenSSL+4%22&type=issues) | missing-pr |
 | libgit2 | closure | 296 | github:libgit2/libgit2 | [issues](https://github.com/search?q=repo%3Alibgit2%2Flibgit2+%22OpenSSL+4%22&type=issues) | missing-pr |
 | python@3.13 | 0 | 85 | python |  | missing-pr |

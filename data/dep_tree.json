@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-11T11:16:11Z",
+  "generated_at": "2026-09-12T10:41:48Z",
   "repository": "Homebrew/homebrew-core",
-  "git_head": "fc57ee22f7cfc8908c489fd43cb315f8f937ef1a",
+  "git_head": "20933b7c14d0b2ca0ecca4902aaa98ee84ca67ae",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "staging_branch": "openssl-4-migration-staging",
   "staged_depths": {
@@ -60,7 +60,7 @@
       "gstreamer"
     ]
   },
-  "formula_count": 765,
+  "formula_count": 767,
   "formulae": [
     {
       "name": "apr-util",
@@ -241,6 +241,7 @@
         "davix",
         "dcmtk",
         "deadfinder",
+        "dislocker",
         "dotnet",
         "dotnet@6",
         "dotnet@8",
@@ -364,6 +365,7 @@
         "pocket-tts",
         "poco",
         "podofo",
+        "ponyc",
         "prowler",
         "proxygen",
         "qca",
@@ -533,6 +535,7 @@
         "deadfinder",
         "dezoomify-rs",
         "dillo",
+        "dislocker",
         "distill-cli",
         "dmg2img",
         "dnsdist",
@@ -881,6 +884,7 @@
         "pocket-tts",
         "poco",
         "podofo",
+        "ponyc",
         "postgresql@12",
         "postgresql@13",
         "postgresql@14",
@@ -2583,6 +2587,7 @@
         "deadfinder",
         "dezoomify-rs",
         "dillo",
+        "dislocker",
         "distill-cli",
         "dnsdist",
         "dnsperf",
@@ -3097,7 +3102,7 @@
       "path": "Formula/w/wget.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://www.gnu.org/software/wget/",
-      "source_url": "https://ftpmirror.gnu.org/gnu/wget/wget-1.25.0.tar.gz",
+      "source_url": "https://ftpmirror.gnu.org/wget/wget-1.25.0.tar.gz",
       "head_url": "https://git.savannah.gnu.org/git/wget.git",
       "upstream_provider": "other",
       "depth": 0,
@@ -9150,7 +9155,7 @@
       "path": "Formula/c/cpp-httplib.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://yhirose.github.io/cpp-httplib/",
-      "source_url": "https://github.com/yhirose/cpp-httplib/archive/refs/tags/v0.54.1.tar.gz",
+      "source_url": "https://github.com/yhirose/cpp-httplib/archive/refs/tags/v0.56.0.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "yhirose/cpp-httplib",
       "depth": null,
@@ -9610,7 +9615,7 @@
       "path": "Formula/d/dbx-cli.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://dbxio.com",
-      "source_url": "https://github.com/t8y2/dbx/archive/refs/tags/packages-v0.4.85.tar.gz",
+      "source_url": "https://github.com/t8y2/dbx/archive/refs/tags/packages-v0.4.86.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "t8y2/dbx",
       "depth": null,
@@ -9768,6 +9773,33 @@
         "python@3.13",
         "python@3.14",
         "rust"
+      ],
+      "transitive_openssl_formula_dependents": []
+    },
+    {
+      "name": "dislocker",
+      "path": "Formula/d/dislocker.rb",
+      "openssl_dependency": "openssl@4",
+      "homepage": "https://github.com/Aorimn/dislocker",
+      "source_url": "https://github.com/Aorimn/dislocker/archive/refs/tags/v0.7.3.tar.gz",
+      "upstream_provider": "github",
+      "upstream_repo": "Aorimn/dislocker",
+      "depth": null,
+      "target_branch": "main",
+      "staging_required_by": [],
+      "dependencies": [
+        "cmake",
+        "pkgconf",
+        "libfuse",
+        "openssl@4"
+      ],
+      "openssl_formula_dependencies": [
+        "cmake"
+      ],
+      "openssl_formula_dependents": [],
+      "transitive_openssl_formula_dependencies": [
+        "cmake",
+        "python@3.14"
       ],
       "transitive_openssl_formula_dependents": []
     },
@@ -13399,7 +13431,7 @@
       "path": "Formula/h/hf.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://huggingface.co/docs/huggingface_hub/guides/cli",
-      "source_url": "https://files.pythonhosted.org/packages/35/97/2eb4abaa5b969ed385066a0496a3823b3ff467fc1082e2202955f1867d60/huggingface_hub-1.30.0.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/9b/f0/61159db90b5cd275d55516fe27920828e7d3be4053fdbdb27c3f70e5f1ef/huggingface_hub-1.31.0.tar.gz",
       "head_url": "https://github.com/huggingface/huggingface_hub.git",
       "upstream_provider": "github",
       "upstream_repo": "huggingface/huggingface_hub",
@@ -16446,7 +16478,7 @@
       "path": "Formula/l/llgo.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/xgo-dev/llgo",
-      "source_url": "https://github.com/xgo-dev/llgo/archive/refs/tags/v1.0.2.tar.gz",
+      "source_url": "https://github.com/xgo-dev/llgo/archive/refs/tags/v1.0.3.tar.gz",
       "head_url": "https://github.com/xgo-dev/llgo.git",
       "upstream_provider": "github",
       "upstream_repo": "xgo-dev/llgo",
@@ -16688,7 +16720,7 @@
       "path": "Formula/m/manticoresearch.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://manticoresearch.com",
-      "source_url": "https://github.com/manticoresoftware/manticoresearch/archive/refs/tags/29.0.2.tar.gz",
+      "source_url": "https://github.com/manticoresoftware/manticoresearch/archive/refs/tags/29.9.0.tar.gz",
       "head_url": "https://github.com/manticoresoftware/manticoresearch.git",
       "upstream_provider": "github",
       "upstream_repo": "manticoresoftware/manticoresearch",
@@ -21639,6 +21671,31 @@
       "transitive_openssl_formula_dependents": []
     },
     {
+      "name": "ponyc",
+      "path": "Formula/p/ponyc.rb",
+      "openssl_dependency": "openssl@3",
+      "homepage": "https://www.ponylang.io/",
+      "source_url": "https://github.com/ponylang/ponyc.git",
+      "upstream_provider": "github",
+      "upstream_repo": "ponylang/ponyc",
+      "depth": null,
+      "target_branch": "main",
+      "staging_required_by": [],
+      "dependencies": [
+        "cmake",
+        "openssl@3",
+        "zlib-ng-compat"
+      ],
+      "openssl_formula_dependencies": [
+        "cmake"
+      ],
+      "openssl_formula_dependents": [],
+      "transitive_openssl_formula_dependencies": [
+        "cmake"
+      ],
+      "transitive_openssl_formula_dependents": []
+    },
+    {
       "name": "postgresql@12",
       "path": "Formula/p/postgresql@12.rb",
       "openssl_dependency": "openssl@3",
@@ -22775,7 +22832,7 @@
       "path": "Formula/r/rapid-mlx.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/raullenchai/Rapid-MLX",
-      "source_url": "https://files.pythonhosted.org/packages/be/18/363c6e6eabc6992bec263ebbe6b8860b3b8173c6093e5c5168911ef406e2/rapid_mlx-0.14.0.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/99/20/83bef369fa0dacbd873e63355f23054d59f5bcf9ba6ad9b615b643296161/rapid_mlx-0.14.1.tar.gz",
       "upstream_provider": "python",
       "depth": null,
       "target_branch": "main",
@@ -26893,7 +26950,7 @@
       "path": "Formula/t/trealla-prolog.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/trealla-prolog/trealla-prolog",
-      "source_url": "https://github.com/trealla-prolog/trealla-prolog/archive/refs/tags/v3.9.65.tar.gz",
+      "source_url": "https://github.com/trealla-prolog/trealla-prolog/archive/refs/tags/v3.9.69.tar.gz",
       "head_url": "https://github.com/trealla-prolog/trealla-prolog.git",
       "upstream_provider": "github",
       "upstream_repo": "trealla-prolog/trealla-prolog",
@@ -27666,7 +27723,7 @@
       "path": "Formula/w/wassette.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://microsoft.github.io/wassette/",
-      "source_url": "https://github.com/microsoft/wassette/archive/refs/tags/v0.7.0.tar.gz",
+      "source_url": "https://github.com/microsoft/wassette/archive/refs/tags/v0.7.1.tar.gz",
       "head_url": "https://github.com/microsoft/wassette.git",
       "upstream_provider": "github",
       "upstream_repo": "microsoft/wassette",
@@ -28656,7 +28713,7 @@
       "path": "Formula/z/zola.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://www.getzola.org/",
-      "source_url": "https://github.com/getzola/zola/archive/refs/tags/v0.23.4.tar.gz",
+      "source_url": "https://github.com/getzola/zola/archive/refs/tags/v0.23.5.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "getzola/zola",
       "depth": null,
