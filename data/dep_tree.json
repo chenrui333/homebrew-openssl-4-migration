@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-13T11:46:59Z",
+  "generated_at": "2026-09-14T12:39:55Z",
   "repository": "Homebrew/homebrew-core",
-  "git_head": "ab9328177c59256ca64c9c05f744f84b938f74e0",
+  "git_head": "fab43b53791f6160cd66a7ac5b991d89585cfb14",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "staging_branch": "openssl-4-migration-staging",
   "staged_depths": {
@@ -1449,7 +1449,8 @@
         "texlive",
         "uwsgi",
         "xorg-server",
-        "xrootd"
+        "xrootd",
+        "znc"
       ]
     },
     {
@@ -6070,7 +6071,7 @@
       "path": "Formula/s/s2n.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://aws.github.io/s2n-tls/usage-guide/",
-      "source_url": "https://github.com/aws/s2n-tls/archive/refs/tags/v1.7.9.tar.gz",
+      "source_url": "https://github.com/aws/s2n-tls/archive/refs/tags/v1.7.10.tar.gz",
       "head_url": "https://github.com/aws/s2n-tls.git",
       "upstream_provider": "github",
       "upstream_repo": "aws/s2n-tls",
@@ -9543,13 +9544,15 @@
         "krb5"
       ],
       "openssl_formula_dependents": [
-        "spice-gtk"
+        "spice-gtk",
+        "znc"
       ],
       "transitive_openssl_formula_dependencies": [
         "krb5"
       ],
       "transitive_openssl_formula_dependents": [
-        "spice-gtk"
+        "spice-gtk",
+        "znc"
       ]
     },
     {
@@ -11877,7 +11880,7 @@
       "path": "Formula/f/fnox.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://fnox.jdx.dev/",
-      "source_url": "https://github.com/jdx/fnox/archive/refs/tags/v1.35.1.tar.gz",
+      "source_url": "https://github.com/jdx/fnox/archive/refs/tags/v1.35.2.tar.gz",
       "head_url": "https://github.com/jdx/fnox.git",
       "upstream_provider": "github",
       "upstream_repo": "jdx/fnox",
@@ -15993,7 +15996,7 @@
       "path": "Formula/lib/librefang.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://librefang.ai",
-      "source_url": "https://github.com/librefang/librefang/archive/refs/tags/v2026.8.30.tar.gz",
+      "source_url": "https://github.com/librefang/librefang/archive/refs/tags/v2026.9.14.tar.gz",
       "head_url": "https://github.com/librefang/librefang.git",
       "upstream_provider": "github",
       "upstream_repo": "librefang/librefang",
@@ -17557,7 +17560,7 @@
       "path": "Formula/m/mise.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://mise.jdx.dev/",
-      "source_url": "https://github.com/jdx/mise/archive/refs/tags/v2026.9.6.tar.gz",
+      "source_url": "https://github.com/jdx/mise/archive/refs/tags/v2026.9.7.tar.gz",
       "head_url": "https://github.com/jdx/mise.git",
       "upstream_provider": "github",
       "upstream_repo": "jdx/mise",
@@ -20136,7 +20139,7 @@
       "path": "Formula/o/opentelemetry-cpp.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://opentelemetry.io/",
-      "source_url": "https://github.com/open-telemetry/opentelemetry-cpp/archive/refs/tags/v1.28.0.tar.gz",
+      "source_url": "https://github.com/open-telemetry/opentelemetry-cpp/archive/refs/tags/v1.29.0.tar.gz",
       "head_url": "https://github.com/open-telemetry/opentelemetry-cpp.git",
       "upstream_provider": "github",
       "upstream_repo": "open-telemetry/opentelemetry-cpp",
@@ -22654,7 +22657,7 @@
       "path": "Formula/q/qobine-web.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/SofusA/qobine",
-      "source_url": "https://github.com/sofusA/qobine/archive/refs/tags/v2026-07-31.tar.gz",
+      "source_url": "https://github.com/sofusA/qobine/archive/refs/tags/v2026-08-28.tar.gz",
       "head_url": "https://github.com/sofusa/qobine.git",
       "upstream_provider": "github",
       "upstream_repo": "sofusa/qobine",
@@ -24307,7 +24310,7 @@
       "path": "Formula/s/sccache.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/mozilla/sccache",
-      "source_url": "https://github.com/mozilla/sccache/archive/refs/tags/v0.17.0.tar.gz",
+      "source_url": "https://github.com/mozilla/sccache/archive/refs/tags/v0.18.0.tar.gz",
       "head_url": "https://github.com/mozilla/sccache.git",
       "upstream_provider": "github",
       "upstream_repo": "mozilla/sccache",
@@ -24434,7 +24437,7 @@
       "path": "Formula/s/sem-cli.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://ataraxy-labs.github.io/sem/",
-      "source_url": "https://github.com/Ataraxy-Labs/sem/archive/refs/tags/v0.24.0.tar.gz",
+      "source_url": "https://github.com/Ataraxy-Labs/sem/archive/refs/tags/v0.25.0.tar.gz",
       "head_url": "https://github.com/Ataraxy-Labs/sem.git",
       "upstream_provider": "github",
       "upstream_repo": "Ataraxy-Labs/sem",
@@ -26987,7 +26990,7 @@
       "path": "Formula/t/trealla-prolog.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/trealla-prolog/trealla-prolog",
-      "source_url": "https://github.com/trealla-prolog/trealla-prolog/archive/refs/tags/v3.9.74.tar.gz",
+      "source_url": "https://github.com/trealla-prolog/trealla-prolog/archive/refs/tags/v3.10.0.tar.gz",
       "head_url": "https://github.com/trealla-prolog/trealla-prolog.git",
       "upstream_provider": "github",
       "upstream_repo": "trealla-prolog/trealla-prolog",
@@ -28718,7 +28721,7 @@
       "path": "Formula/z/znc.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://wiki.znc.in/ZNC",
-      "source_url": "https://znc.in/releases/znc-1.10.2.tar.gz",
+      "source_url": "https://znc.in/releases/znc-1.10.3.tar.gz",
       "upstream_provider": "other",
       "depth": null,
       "target_branch": "main",
@@ -28732,15 +28735,19 @@
         "icu4c@78",
         "openssl@3",
         "python@3.14",
+        "cyrus-sasl",
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
         "cmake",
+        "cyrus-sasl",
         "python@3.14"
       ],
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
+        "cyrus-sasl",
+        "krb5",
         "python@3.14"
       ],
       "transitive_openssl_formula_dependents": []
