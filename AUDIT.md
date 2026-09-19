@@ -1,4 +1,4 @@
-# OpenSSL 4 Migration Audit (2026-09-18)
+# OpenSSL 4 Migration Audit (2026-09-19)
 
 Tracking issue: Homebrew/homebrew-core#278366
 
@@ -34,8 +34,8 @@ Pending staged formulae are sorted by transitive dependent count.
 | python@3.13 | openssl-4-migration-staging | 0 | 85 | PENDING | none | missing-pr | python |  |
 | systemd | openssl-4-migration-staging | 1 | 67 | PENDING | none | missing-pr | github:systemd/systemd |  |
 | libevent | openssl-4-migration-staging | 0 | 65 | PENDING | none | missing-pr | github:libevent/libevent |  |
-| libngtcp2 | openssl-4-migration-staging | closure | 33 | PENDING | none | missing-pr | github:ngtcp2/ngtcp2 |  |
 | cargo-c | openssl-4-migration-staging | 2 | 25 | PENDING | none | missing-pr | github:lu-zero/cargo-c |  |
+| libngtcp2 | openssl-4-migration-staging | closure | 24 | PENDING | none | missing-pr | github:ngtcp2/ngtcp2 |  |
 | pulseaudio | openssl-4-migration-staging | 1 | 21 | PENDING | none | missing-pr | gitlab:gitlab.freedesktop.org/pulseaudio/pulseaudio |  |
 | curl | openssl-4-migration-staging | 1 | 20 | PENDING | none | missing-pr | github:curl/curl |  |
 | ruby | openssl-4-migration-staging | 2 | 19 | PENDING | none | missing-pr | github:ruby/ruby |  |
@@ -90,8 +90,8 @@ Top 20 pending staged formulae with upstream metadata and no curated upstream is
 | python@3.13 | 0 | 85 | python |  | missing-pr |
 | systemd | 1 | 67 | github:systemd/systemd | [issues](https://github.com/search?q=repo%3Asystemd%2Fsystemd+%22OpenSSL+4%22&type=issues) | missing-pr |
 | libevent | 0 | 65 | github:libevent/libevent | [issues](https://github.com/search?q=repo%3Alibevent%2Flibevent+%22OpenSSL+4%22&type=issues) | missing-pr |
-| libngtcp2 | closure | 33 | github:ngtcp2/ngtcp2 | [issues](https://github.com/search?q=repo%3Angtcp2%2Fngtcp2+%22OpenSSL+4%22&type=issues) | missing-pr |
 | cargo-c | 2 | 25 | github:lu-zero/cargo-c | [issues](https://github.com/search?q=repo%3Alu-zero%2Fcargo-c+%22OpenSSL+4%22&type=issues) | missing-pr |
+| libngtcp2 | closure | 24 | github:ngtcp2/ngtcp2 | [issues](https://github.com/search?q=repo%3Angtcp2%2Fngtcp2+%22OpenSSL+4%22&type=issues) | missing-pr |
 | pulseaudio | 1 | 21 | gitlab:gitlab.freedesktop.org/pulseaudio/pulseaudio |  | missing-pr |
 | curl | 1 | 20 | github:curl/curl | [issues](https://github.com/search?q=repo%3Acurl%2Fcurl+%22OpenSSL+4%22&type=issues) | missing-pr |
 | ruby | 2 | 19 | github:ruby/ruby | [issues](https://github.com/search?q=repo%3Aruby%2Fruby+%22OpenSSL+4%22&type=issues) | missing-pr |

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T11:09:35Z",
+  "generated_at": "2026-09-19T10:54:10Z",
   "repository": "Homebrew/homebrew-core",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "target_branch": "openssl-4-migration-staging",
@@ -394,46 +394,6 @@
       }
     },
     {
-      "name": "libngtcp2",
-      "live_status": "PENDING",
-      "depth": null,
-      "group_label": "Staging closure",
-      "impact_count": 33,
-      "target_branch": "openssl-4-migration-staging",
-      "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
-      },
-      "readiness": [
-        "missing-pr"
-      ],
-      "next_action": "Open migration PR",
-      "upstream": {
-        "provider": "github",
-        "repo": "ngtcp2/ngtcp2",
-        "url": "https://github.com/ngtcp2/ngtcp2"
-      },
-      "issues": [
-        {
-          "label": "search",
-          "url": "https://github.com/search?q=repo%3Angtcp2%2Fngtcp2+%22OpenSSL+4%22\u0026type=issues"
-        }
-      ],
-      "flags": {
-        "current_gate": false,
-        "ready": false,
-        "draft": false,
-        "ci_blocked": false,
-        "base_mismatch": false,
-        "missing_pr": true,
-        "upstream_blocked": false
-      }
-    },
-    {
       "name": "cargo-c",
       "live_status": "PENDING",
       "depth": 2,
@@ -461,6 +421,46 @@
         {
           "label": "search",
           "url": "https://github.com/search?q=repo%3Alu-zero%2Fcargo-c+%22OpenSSL+4%22\u0026type=issues"
+        }
+      ],
+      "flags": {
+        "current_gate": false,
+        "ready": false,
+        "draft": false,
+        "ci_blocked": false,
+        "base_mismatch": false,
+        "missing_pr": true,
+        "upstream_blocked": false
+      }
+    },
+    {
+      "name": "libngtcp2",
+      "live_status": "PENDING",
+      "depth": null,
+      "group_label": "Staging closure",
+      "impact_count": 24,
+      "target_branch": "openssl-4-migration-staging",
+      "pr": {
+        "number": 0,
+        "url": "",
+        "base": "",
+        "is_draft": false,
+        "merge_state": "",
+        "updated_at": ""
+      },
+      "readiness": [
+        "missing-pr"
+      ],
+      "next_action": "Open migration PR",
+      "upstream": {
+        "provider": "github",
+        "repo": "ngtcp2/ngtcp2",
+        "url": "https://github.com/ngtcp2/ngtcp2"
+      },
+      "issues": [
+        {
+          "label": "search",
+          "url": "https://github.com/search?q=repo%3Angtcp2%2Fngtcp2+%22OpenSSL+4%22\u0026type=issues"
         }
       ],
       "flags": {
