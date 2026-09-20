@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T10:54:10Z",
+  "generated_at": "2026-09-20T11:18:19Z",
   "repository": "Homebrew/homebrew-core",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "target_branch": "openssl-4-migration-staging",
@@ -20,7 +20,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 677,
+      "impact_count": 678,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -55,7 +55,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 477,
+      "impact_count": 478,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -213,7 +213,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 134,
+      "impact_count": 135,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -283,7 +283,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 78,
+      "impact_count": 79,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -318,7 +318,7 @@
       "live_status": "PENDING",
       "depth": 1,
       "group_label": "Batch 1",
-      "impact_count": 67,
+      "impact_count": 68,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -742,6 +742,49 @@
       }
     },
     {
+      "name": "libfido2",
+      "live_status": "PENDING",
+      "depth": 0,
+      "group_label": "Batch 0 — Roots",
+      "impact_count": 12,
+      "target_branch": "openssl-4-migration-staging",
+      "pr": {
+        "number": 0,
+        "url": "",
+        "base": "",
+        "is_draft": false,
+        "merge_state": "",
+        "updated_at": ""
+      },
+      "readiness": [
+        "missing-pr"
+      ],
+      "next_action": "Open migration PR",
+      "upstream": {
+        "provider": "github",
+        "repo": "Yubico/libfido2",
+        "url": "https://github.com/Yubico/libfido2"
+      },
+      "issues": [
+        {
+          "label": "issues#966",
+          "state": "closed",
+          "status": "reference",
+          "title": "Fix library build with OpenSSL 4.x",
+          "url": "https://github.com/Yubico/libfido2/issues/966"
+        }
+      ],
+      "flags": {
+        "current_gate": true,
+        "ready": false,
+        "draft": false,
+        "ci_blocked": false,
+        "base_mismatch": false,
+        "missing_pr": true,
+        "upstream_blocked": false
+      }
+    },
+    {
       "name": "apr-util",
       "live_status": "PENDING",
       "depth": 0,
@@ -820,7 +863,7 @@
       }
     },
     {
-      "name": "libfido2",
+      "name": "openldap",
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
@@ -839,19 +882,11 @@
       ],
       "next_action": "Open migration PR",
       "upstream": {
-        "provider": "github",
-        "repo": "Yubico/libfido2",
-        "url": "https://github.com/Yubico/libfido2"
+        "provider": "other",
+        "repo": "",
+        "url": ""
       },
-      "issues": [
-        {
-          "label": "issues#966",
-          "state": "closed",
-          "status": "reference",
-          "title": "Fix library build with OpenSSL 4.x",
-          "url": "https://github.com/Yubico/libfido2/issues/966"
-        }
-      ],
+      "issues": [],
       "flags": {
         "current_gate": true,
         "ready": false,
@@ -894,41 +929,6 @@
         "ci_blocked": false,
         "base_mismatch": false,
         "missing_pr": false,
-        "upstream_blocked": false
-      }
-    },
-    {
-      "name": "openldap",
-      "live_status": "PENDING",
-      "depth": 0,
-      "group_label": "Batch 0 — Roots",
-      "impact_count": 10,
-      "target_branch": "openssl-4-migration-staging",
-      "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
-      },
-      "readiness": [
-        "missing-pr"
-      ],
-      "next_action": "Open migration PR",
-      "upstream": {
-        "provider": "other",
-        "repo": "",
-        "url": ""
-      },
-      "issues": [],
-      "flags": {
-        "current_gate": true,
-        "ready": false,
-        "draft": false,
-        "ci_blocked": false,
-        "base_mismatch": false,
-        "missing_pr": true,
         "upstream_blocked": false
       }
     },
