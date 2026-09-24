@@ -1,4 +1,4 @@
-# OpenSSL 4 Migration Audit (2026-09-23)
+# OpenSSL 4 Migration Audit (2026-09-24)
 
 Tracking issue: Homebrew/homebrew-core#278366
 
@@ -26,11 +26,11 @@ Pending staged formulae are sorted by transitive dependent count.
 
 | Formula | Target | Depth | Impact | Status | PR | Readiness | Upstream | Issues |
 |---|---|---:|---:|---|---|---|---|---|
-| cmake | openssl-4-migration-staging | 0 | 675 | PENDING | none | missing-pr | gitlab:gitlab.kitware.com/cmake/cmake |  |
-| python@3.14 | openssl-4-migration-staging | 0 | 475 | PENDING | none | missing-pr | python |  |
-| libssh2 | openssl-4-migration-staging | 0 | 317 | PENDING | none | missing-pr | github:libssh2/libssh2 |  |
-| libgit2 | openssl-4-migration-staging | closure | 294 | PENDING | none | missing-pr | github:libgit2/libgit2 |  |
-| rust | openssl-4-migration-staging | 1 | 292 | PENDING | none | missing-pr | github:rust-lang/rust | [issues#155397](https://github.com/rust-lang/rust/issues/155397) open |
+| cmake | openssl-4-migration-staging | 0 | 672 | PENDING | none | missing-pr | gitlab:gitlab.kitware.com/cmake/cmake |  |
+| python@3.14 | openssl-4-migration-staging | 0 | 472 | PENDING | none | missing-pr | python |  |
+| libssh2 | openssl-4-migration-staging | 0 | 313 | PENDING | none | missing-pr | github:libssh2/libssh2 |  |
+| libgit2 | openssl-4-migration-staging | closure | 290 | PENDING | none | missing-pr | github:libgit2/libgit2 |  |
+| rust | openssl-4-migration-staging | 1 | 288 | PENDING | none | missing-pr | github:rust-lang/rust | [issues#155397](https://github.com/rust-lang/rust/issues/155397) open |
 | python@3.13 | openssl-4-migration-staging | 0 | 85 | PENDING | none | missing-pr | python |  |
 | systemd | openssl-4-migration-staging | 1 | 68 | PENDING | none | missing-pr | github:systemd/systemd |  |
 | libevent | openssl-4-migration-staging | 0 | 65 | PENDING | none | missing-pr | github:libevent/libevent |  |
@@ -52,9 +52,9 @@ Pending staged formulae are sorted by transitive dependent count.
 | s2n | openssl-4-migration-staging | closure | 9 | PENDING | none | missing-pr | github:aws/s2n-tls | [issues#5783](https://github.com/aws/s2n-tls/issues/5783) open |
 | aws-c-io | openssl-4-migration-staging | closure | 8 | PENDING | none | missing-pr | github:awslabs/aws-c-io |  |
 | httpd | openssl-4-migration-staging | 1 | 8 | PENDING | none | missing-pr | apache |  |
-| node | openssl-4-migration-staging | 1 | 8 | PENDING | none | missing-pr | github:nodejs/node | [issues#62817](https://github.com/nodejs/node/issues/62817) closed |
 | folly | openssl-4-migration-staging | 1 | 7 | PENDING | none | missing-pr | github:facebook/folly |  |
 | freetds | openssl-4-migration-staging | 0 | 7 | PENDING | none | missing-pr | github:FreeTDS/freetds |  |
+| node | openssl-4-migration-staging | 1 | 7 | PENDING | none | missing-pr | github:nodejs/node | [issues#62817](https://github.com/nodejs/node/issues/62817) closed |
 | asio | openssl-4-migration-staging | 0 | 6 | PENDING | none | missing-pr | github:chriskohlhoff/asio |  |
 | srt | openssl-4-migration-staging | 0 | 6 | PENDING | none | missing-pr | github:Haivision/srt |  |
 | hiredis | openssl-4-migration-staging | 0 | 5 | PENDING | none | missing-pr | github:redis/hiredis |  |
@@ -83,10 +83,10 @@ Top 20 pending staged formulae with upstream metadata and no curated upstream is
 
 | Formula | Depth | Impact | Upstream | Search | Readiness |
 |---|---:|---:|---|---|---|
-| cmake | 0 | 675 | gitlab:gitlab.kitware.com/cmake/cmake |  | missing-pr |
-| python@3.14 | 0 | 475 | python |  | missing-pr |
-| libssh2 | 0 | 317 | github:libssh2/libssh2 | [issues](https://github.com/search?q=repo%3Alibssh2%2Flibssh2+%22OpenSSL+4%22&type=issues) | missing-pr |
-| libgit2 | closure | 294 | github:libgit2/libgit2 | [issues](https://github.com/search?q=repo%3Alibgit2%2Flibgit2+%22OpenSSL+4%22&type=issues) | missing-pr |
+| cmake | 0 | 672 | gitlab:gitlab.kitware.com/cmake/cmake |  | missing-pr |
+| python@3.14 | 0 | 472 | python |  | missing-pr |
+| libssh2 | 0 | 313 | github:libssh2/libssh2 | [issues](https://github.com/search?q=repo%3Alibssh2%2Flibssh2+%22OpenSSL+4%22&type=issues) | missing-pr |
+| libgit2 | closure | 290 | github:libgit2/libgit2 | [issues](https://github.com/search?q=repo%3Alibgit2%2Flibgit2+%22OpenSSL+4%22&type=issues) | missing-pr |
 | python@3.13 | 0 | 85 | python |  | missing-pr |
 | systemd | 1 | 68 | github:systemd/systemd | [issues](https://github.com/search?q=repo%3Asystemd%2Fsystemd+%22OpenSSL+4%22&type=issues) | missing-pr |
 | libevent | 0 | 65 | github:libevent/libevent | [issues](https://github.com/search?q=repo%3Alibevent%2Flibevent+%22OpenSSL+4%22&type=issues) | missing-pr |
