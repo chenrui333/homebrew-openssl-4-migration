@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-09-26T11:19:55Z",
+  "generated_at": "2026-09-27T11:58:11Z",
   "repository": "Homebrew/homebrew-core",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "target_branch": "openssl-4-migration-staging",
   "scope": "staging",
   "summary": {
-    "staged_formulae": 59,
+    "staged_formulae": 58,
     "done": 8,
-    "pending": 50,
+    "pending": 49,
     "open_staging_prs": 0,
     "current_gate": "Batch 0 — Roots",
-    "current_gate_pending": 22,
+    "current_gate_pending": 21,
     "upstream_blockers": 3,
     "base_mismatches": 0
   },
@@ -1884,41 +1884,6 @@
       "next_action": "Open migration PR",
       "upstream": {
         "provider": "python",
-        "repo": "",
-        "url": ""
-      },
-      "issues": [],
-      "flags": {
-        "current_gate": true,
-        "ready": false,
-        "draft": false,
-        "ci_blocked": false,
-        "base_mismatch": false,
-        "missing_pr": true,
-        "upstream_blocked": false
-      }
-    },
-    {
-      "name": "tcl-tk",
-      "live_status": "PENDING",
-      "depth": 0,
-      "group_label": "Batch 0 — Roots",
-      "impact_count": 3,
-      "target_branch": "openssl-4-migration-staging",
-      "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
-      },
-      "readiness": [
-        "missing-pr"
-      ],
-      "next_action": "Open migration PR",
-      "upstream": {
-        "provider": "other",
         "repo": "",
         "url": ""
       },

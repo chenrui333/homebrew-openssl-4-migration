@@ -1,16 +1,16 @@
-# OpenSSL 4 Migration Audit (2026-09-26)
+# OpenSSL 4 Migration Audit (2026-09-27)
 
 Tracking issue: Homebrew/homebrew-core#278366
 
 ## Summary
 
-- Staging-scope formulae: 59
-- Live pending: 50
-- Live done: 8 (13.6%)
+- Staging-scope formulae: 58
+- Live pending: 49
+- Live done: 8 (13.8%)
 - Open staging PRs: 0
 - Draft migration PRs: 0
 - PRs with merge/check blockers: 0
-- Pending formulae without open migration PRs: 50
+- Pending formulae without open migration PRs: 49
 
 ## Retarget to Staging
 
@@ -67,7 +67,6 @@ Pending staged formulae are sorted by transitive dependent count.
 | gstreamer | openssl-4-migration-staging | 3 | 4 | PENDING | none | missing-pr | gitlab:gitlab.freedesktop.org/gstreamer/gstreamer |  |
 | unbound | openssl-4-migration-staging | 1 | 4 | PENDING | none | missing-pr | github:NLnetLabs/unbound |  |
 | python@3.12 | openssl-4-migration-staging | 0 | 3 | PENDING | none | missing-pr | python |  |
-| tcl-tk | openssl-4-migration-staging | 0 | 3 | PENDING | none | missing-pr | other |  |
 | tcl-tk@8 | openssl-4-migration-staging | 0 | 3 | PENDING | none | missing-pr | other |  |
 | dotnet | openssl-4-migration-staging | 0 | 2 | PENDING | none | missing-pr | github:dotnet/dotnet |  |
 | gdal | openssl-4-migration-staging | 2 | 2 | PENDING | none | missing-pr | github:OSGeo/gdal |  |

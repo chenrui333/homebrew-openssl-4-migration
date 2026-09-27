@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-26T11:19:55Z",
+  "generated_at": "2026-09-27T11:58:11Z",
   "repository": "Homebrew/homebrew-core",
-  "git_head": "461ceeaa5208cb5dbb8c8653e4de59465b836d2f",
+  "git_head": "225b2d401a68e4a97005abe5508e3880cc4ed374",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "staging_branch": "openssl-4-migration-staging",
   "staged_depths": {
@@ -197,7 +197,6 @@
         "rust",
         "srt",
         "systemd",
-        "tcl-tk",
         "tcl-tk@8",
         "wget"
       ],
@@ -242,7 +241,6 @@
         "csound",
         "davix",
         "dcmtk",
-        "deadfinder",
         "dislocker",
         "dotnet",
         "dotnet@6",
@@ -1016,8 +1014,8 @@
         "tabiew",
         "tarantool",
         "tarsnap",
-        "tcl-tk",
         "tcl-tk@8",
+        "tcltls",
         "tcpflow",
         "tdlib",
         "tectonic",
@@ -2410,7 +2408,6 @@
         "ruby",
         "rust",
         "systemd",
-        "tcl-tk",
         "tcl-tk@8"
       ],
       "dependencies": [
@@ -2909,8 +2906,8 @@
         "syslog-ng",
         "systemd",
         "tabiew",
-        "tcl-tk",
         "tcl-tk@8",
+        "tcltls",
         "tectonic",
         "teller",
         "termscp",
@@ -2998,42 +2995,6 @@
         "spice-gtk",
         "spice-server",
         "tsduck"
-      ]
-    },
-    {
-      "name": "tcl-tk",
-      "path": "Formula/t/tcl-tk.rb",
-      "openssl_dependency": "openssl@3",
-      "homepage": "https://www.tcl-lang.org",
-      "source_url": "https://downloads.sourceforge.net/project/tcl/Tcl/9.0.4/tcl9.0.4-src.tar.gz",
-      "upstream_provider": "other",
-      "depth": 0,
-      "target_branch": "openssl-4-migration-staging",
-      "staging_reason": "staged-depth",
-      "staging_required_by": [],
-      "dependencies": [
-        "libtommath",
-        "openssl@3",
-        "freetype",
-        "pkgconf",
-        "libx11",
-        "libxext",
-        "zlib-ng-compat"
-      ],
-      "openssl_formula_dependencies": [],
-      "openssl_formula_dependents": [
-        "gensio",
-        "neomutt",
-        "texlive"
-      ],
-      "transitive_openssl_formula_dependencies": [
-        "cmake",
-        "python@3.14"
-      ],
-      "transitive_openssl_formula_dependents": [
-        "gensio",
-        "neomutt",
-        "texlive"
       ]
     },
     {
@@ -6224,7 +6185,7 @@
       "path": "Formula/a/aiken.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://aiken-lang.org/",
-      "source_url": "https://github.com/aiken-lang/aiken/archive/refs/tags/v1.1.23.tar.gz",
+      "source_url": "https://github.com/aiken-lang/aiken/archive/refs/tags/v1.1.24.tar.gz",
       "head_url": "https://github.com/aiken-lang/aiken.git",
       "upstream_provider": "github",
       "upstream_repo": "aiken-lang/aiken",
@@ -9206,7 +9167,7 @@
       "path": "Formula/c/crystal.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://crystal-lang.org/",
-      "source_url": "https://github.com/crystal-lang/crystal/archive/refs/tags/1.21.0.tar.gz",
+      "source_url": "https://github.com/crystal-lang/crystal/archive/refs/tags/1.21.1.tar.gz",
       "head_url": "https://github.com/crystal-lang/crystal.git",
       "upstream_provider": "github",
       "upstream_repo": "crystal-lang/crystal",
@@ -9218,7 +9179,7 @@
         "bdw-gc",
         "gmp",
         "libyaml",
-        "llvm@22",
+        "llvm",
         "openssl@3",
         "pcre2",
         "pkgconf",
@@ -9523,7 +9484,7 @@
       "path": "Formula/d/dbx-cli.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://dbxio.com",
-      "source_url": "https://github.com/t8y2/dbx/archive/refs/tags/packages-v0.4.98.tar.gz",
+      "source_url": "https://github.com/t8y2/dbx/archive/refs/tags/packages-v0.4.99.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "t8y2/dbx",
       "depth": null,
@@ -9591,7 +9552,6 @@
       "target_branch": "main",
       "staging_required_by": [],
       "dependencies": [
-        "cmake",
         "crystal",
         "lexbor",
         "pkgconf",
@@ -9603,7 +9563,6 @@
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
-        "cmake",
         "crystal",
         "libevent"
       ],
@@ -12108,8 +12067,7 @@
       ],
       "openssl_formula_dependencies": [
         "python@3.14",
-        "systemd",
-        "tcl-tk"
+        "systemd"
       ],
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
@@ -12117,7 +12075,6 @@
         "krb5",
         "python@3.14",
         "systemd",
-        "tcl-tk",
         "wget"
       ],
       "transitive_openssl_formula_dependents": []
@@ -12288,7 +12245,7 @@
     {
       "name": "getxbook",
       "path": "Formula/g/getxbook.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://njw.name/getxbook/",
       "source_url": "https://njw.name/getxbook/getxbook-1.3.tar.xz",
       "upstream_provider": "other",
@@ -12296,7 +12253,7 @@
       "target_branch": "main",
       "staging_required_by": [],
       "dependencies": [
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [],
@@ -18357,9 +18314,7 @@
         "libiconv",
         "zlib-ng-compat"
       ],
-      "openssl_formula_dependencies": [
-        "tcl-tk"
-      ],
+      "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cargo-c",
@@ -18370,7 +18325,6 @@
         "python@3.14",
         "rust",
         "systemd",
-        "tcl-tk",
         "wget"
       ],
       "transitive_openssl_formula_dependents": []
@@ -19107,7 +19061,7 @@
       "path": "Formula/n/nushell.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://www.nushell.sh",
-      "source_url": "https://github.com/nushell/nushell/archive/refs/tags/0.115.1.tar.gz",
+      "source_url": "https://github.com/nushell/nushell/archive/refs/tags/0.116.0.tar.gz",
       "head_url": "https://github.com/nushell/nushell.git",
       "upstream_provider": "github",
       "upstream_repo": "nushell/nushell",
@@ -22312,7 +22266,7 @@
       "path": "Formula/q/qpdf.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://qpdf.sourceforge.io/",
-      "source_url": "https://github.com/qpdf/qpdf/releases/download/v12.4.1/qpdf-12.4.1.tar.gz",
+      "source_url": "https://github.com/qpdf/qpdf/releases/download/v12.4.2/qpdf-12.4.2.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "qpdf/qpdf",
       "depth": null,
@@ -22496,7 +22450,7 @@
       "path": "Formula/r/rapid-mlx.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://github.com/raullenchai/Rapid-MLX",
-      "source_url": "https://files.pythonhosted.org/packages/a1/c3/cf7f460b89301a65e0bf6bab286d438932e9e661d0af113cb3816f2ea577/rapid_mlx-0.15.1.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/82/17/eff4b995cd19a4ff8c7a4d5aa1c63c2cc0158934301d8005ee2e466474e4/rapid_mlx-0.15.2.tar.gz",
       "upstream_provider": "python",
       "depth": null,
       "target_branch": "main",
@@ -25939,6 +25893,28 @@
       "transitive_openssl_formula_dependents": []
     },
     {
+      "name": "tcltls",
+      "path": "Formula/t/tcltls.rb",
+      "openssl_dependency": "openssl@4",
+      "homepage": "https://core.tcl-lang.org/tcltls/home",
+      "source_url": "https://core.tcl-lang.org/tcltls/uv/tcltls2.0.1.tar.gz",
+      "upstream_provider": "other",
+      "depth": null,
+      "target_branch": "main",
+      "staging_required_by": [],
+      "dependencies": [
+        "openssl@4",
+        "tcl-tk"
+      ],
+      "openssl_formula_dependencies": [],
+      "openssl_formula_dependents": [],
+      "transitive_openssl_formula_dependencies": [
+        "cmake",
+        "python@3.14"
+      ],
+      "transitive_openssl_formula_dependents": []
+    },
+    {
       "name": "tcpdump",
       "path": "Formula/t/tcpdump.rb",
       "openssl_dependency": "openssl@4",
@@ -26229,8 +26205,7 @@
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
-        "python@3.14",
-        "tcl-tk"
+        "python@3.14"
       ],
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
@@ -26241,8 +26216,7 @@
         "libzip",
         "python@3.13",
         "python@3.14",
-        "rust",
-        "tcl-tk"
+        "rust"
       ],
       "transitive_openssl_formula_dependents": []
     },
@@ -26620,7 +26594,7 @@
       "path": "Formula/t/trealla-prolog.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/trealla-prolog/trealla-prolog",
-      "source_url": "https://github.com/trealla-prolog/trealla-prolog/archive/refs/tags/v3.11.0.tar.gz",
+      "source_url": "https://github.com/trealla-prolog/trealla-prolog/archive/refs/tags/v3.12.0.tar.gz",
       "head_url": "https://github.com/trealla-prolog/trealla-prolog.git",
       "upstream_provider": "github",
       "upstream_repo": "trealla-prolog/trealla-prolog",

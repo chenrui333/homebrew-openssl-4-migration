@@ -1,12 +1,12 @@
-# OpenSSL 4 Migration Checklist (2026-09-26)
+# OpenSSL 4 Migration Checklist (2026-09-27)
 
-Progress: **8/58 (13.8%)**
+Progress: **8/57 (14.0%)**
 Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/homebrew-core/issues/278366)
 
 > Staging batches are depth 0 → 1 → 2 → 3 plus their computed transitive closure.
 > This public checklist is scoped to formulae targeting openssl-4-migration-staging.
 
-## Batch 0 — Roots -> openssl-4-migration-staging [3/25]
+## Batch 0 — Roots -> openssl-4-migration-staging [3/24]
 
 - [ ] apr-util
 - [ ] asio
@@ -30,7 +30,6 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 - [ ] python@3.13
 - [ ] python@3.14
 - [ ] srt
-- [ ] tcl-tk
 - [ ] tcl-tk@8
 - [x] ~~wget~~
 

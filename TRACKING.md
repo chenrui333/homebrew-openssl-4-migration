@@ -1,11 +1,11 @@
-OpenSSL 4 Migration Status (2026-09-26)
+OpenSSL 4 Migration Status (2026-09-27)
 ========================================
-Total pending:  50
-Total done:     8 (13.8%)
+Total pending:  49
+Total done:     8 (14.0%)
 
 Tracking issue: Homebrew/homebrew-core#278366
 
-Batch 0 — Roots -> openssl-4-migration-staging   [3/25 done]
+Batch 0 — Roots -> openssl-4-migration-staging   [3/24 done]
   apr-util                 PENDING
   asio                     PENDING
   cmake                    PENDING
@@ -28,7 +28,6 @@ Batch 0 — Roots -> openssl-4-migration-staging   [3/25 done]
   python@3.13              PENDING
   python@3.14              PENDING
   srt                      PENDING
-  tcl-tk                   PENDING
   tcl-tk@8                 PENDING
   wget                     DONE
 
