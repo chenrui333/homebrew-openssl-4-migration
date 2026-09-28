@@ -1,16 +1,16 @@
-# OpenSSL 4 Migration Audit (2026-09-27)
+# OpenSSL 4 Migration Audit (2026-09-28)
 
 Tracking issue: Homebrew/homebrew-core#278366
 
 ## Summary
 
-- Staging-scope formulae: 58
-- Live pending: 49
-- Live done: 8 (13.8%)
+- Staging-scope formulae: 57
+- Live pending: 48
+- Live done: 8 (14.0%)
 - Open staging PRs: 0
 - Draft migration PRs: 0
 - PRs with merge/check blockers: 0
-- Pending formulae without open migration PRs: 49
+- Pending formulae without open migration PRs: 48
 
 ## Retarget to Staging
 
@@ -33,7 +33,7 @@ Pending staged formulae are sorted by transitive dependent count.
 | rust | openssl-4-migration-staging | 1 | 282 | PENDING | none | missing-pr | github:rust-lang/rust | [issues#155397](https://github.com/rust-lang/rust/issues/155397) open |
 | python@3.13 | openssl-4-migration-staging | 0 | 85 | PENDING | none | missing-pr | python |  |
 | systemd | openssl-4-migration-staging | 1 | 68 | PENDING | none | missing-pr | github:systemd/systemd |  |
-| libevent | openssl-4-migration-staging | 0 | 65 | PENDING | none | missing-pr | github:libevent/libevent |  |
+| libevent | openssl-4-migration-staging | 0 | 62 | PENDING | none | missing-pr | github:libevent/libevent |  |
 | cargo-c | openssl-4-migration-staging | 2 | 25 | PENDING | none | missing-pr | github:lu-zero/cargo-c |  |
 | libngtcp2 | openssl-4-migration-staging | closure | 24 | PENDING | none | missing-pr | github:ngtcp2/ngtcp2 |  |
 | pulseaudio | openssl-4-migration-staging | 1 | 21 | PENDING | none | missing-pr | gitlab:gitlab.freedesktop.org/pulseaudio/pulseaudio |  |
@@ -55,7 +55,6 @@ Pending staged formulae are sorted by transitive dependent count.
 | folly | openssl-4-migration-staging | 1 | 7 | PENDING | none | missing-pr | github:facebook/folly |  |
 | freetds | openssl-4-migration-staging | 0 | 7 | PENDING | none | missing-pr | github:FreeTDS/freetds |  |
 | node | openssl-4-migration-staging | 1 | 7 | PENDING | none | missing-pr | github:nodejs/node | [issues#62817](https://github.com/nodejs/node/issues/62817) closed |
-| asio | openssl-4-migration-staging | 0 | 6 | PENDING | none | missing-pr | github:chriskohlhoff/asio |  |
 | srt | openssl-4-migration-staging | 0 | 6 | PENDING | none | missing-pr | github:Haivision/srt |  |
 | hiredis | openssl-4-migration-staging | 0 | 5 | PENDING | none | missing-pr | github:redis/hiredis |  |
 | libssh | openssl-4-migration-staging | 0 | 5 | PENDING | none | missing-pr | other |  |
@@ -88,7 +87,7 @@ Top 20 pending staged formulae with upstream metadata and no curated upstream is
 | libgit2 | closure | 284 | github:libgit2/libgit2 | [issues](https://github.com/search?q=repo%3Alibgit2%2Flibgit2+%22OpenSSL+4%22&type=issues) | missing-pr |
 | python@3.13 | 0 | 85 | python |  | missing-pr |
 | systemd | 1 | 68 | github:systemd/systemd | [issues](https://github.com/search?q=repo%3Asystemd%2Fsystemd+%22OpenSSL+4%22&type=issues) | missing-pr |
-| libevent | 0 | 65 | github:libevent/libevent | [issues](https://github.com/search?q=repo%3Alibevent%2Flibevent+%22OpenSSL+4%22&type=issues) | missing-pr |
+| libevent | 0 | 62 | github:libevent/libevent | [issues](https://github.com/search?q=repo%3Alibevent%2Flibevent+%22OpenSSL+4%22&type=issues) | missing-pr |
 | cargo-c | 2 | 25 | github:lu-zero/cargo-c | [issues](https://github.com/search?q=repo%3Alu-zero%2Fcargo-c+%22OpenSSL+4%22&type=issues) | missing-pr |
 | libngtcp2 | closure | 24 | github:ngtcp2/ngtcp2 | [issues](https://github.com/search?q=repo%3Angtcp2%2Fngtcp2+%22OpenSSL+4%22&type=issues) | missing-pr |
 | pulseaudio | 1 | 21 | gitlab:gitlab.freedesktop.org/pulseaudio/pulseaudio |  | missing-pr |
