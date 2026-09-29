@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-28T13:47:45Z",
+  "generated_at": "2026-09-29T12:47:19Z",
   "repository": "Homebrew/homebrew-core",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "target_branch": "openssl-4-migration-staging",
@@ -20,7 +20,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 664,
+      "impact_count": 659,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -55,7 +55,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 464,
+      "impact_count": 460,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -90,7 +90,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 307,
+      "impact_count": 305,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -130,7 +130,7 @@
       "live_status": "PENDING",
       "depth": null,
       "group_label": "Staging closure",
-      "impact_count": 284,
+      "impact_count": 282,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -170,7 +170,7 @@
       "live_status": "PENDING",
       "depth": 1,
       "group_label": "Batch 1",
-      "impact_count": 282,
+      "impact_count": 280,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -213,7 +213,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 138,
+      "impact_count": 135,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -318,7 +318,7 @@
       "live_status": "PENDING",
       "depth": 1,
       "group_label": "Batch 1",
-      "impact_count": 68,
+      "impact_count": 66,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -394,46 +394,6 @@
       }
     },
     {
-      "name": "cargo-c",
-      "live_status": "PENDING",
-      "depth": 2,
-      "group_label": "Batch 2",
-      "impact_count": 25,
-      "target_branch": "openssl-4-migration-staging",
-      "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
-      },
-      "readiness": [
-        "missing-pr"
-      ],
-      "next_action": "Open migration PR",
-      "upstream": {
-        "provider": "github",
-        "repo": "lu-zero/cargo-c",
-        "url": "https://github.com/lu-zero/cargo-c"
-      },
-      "issues": [
-        {
-          "label": "search",
-          "url": "https://github.com/search?q=repo%3Alu-zero%2Fcargo-c+%22OpenSSL+4%22\u0026type=issues"
-        }
-      ],
-      "flags": {
-        "current_gate": false,
-        "ready": false,
-        "draft": false,
-        "ci_blocked": false,
-        "base_mismatch": false,
-        "missing_pr": true,
-        "upstream_blocked": false
-      }
-    },
-    {
       "name": "libngtcp2",
       "live_status": "PENDING",
       "depth": null,
@@ -461,6 +421,46 @@
         {
           "label": "search",
           "url": "https://github.com/search?q=repo%3Angtcp2%2Fngtcp2+%22OpenSSL+4%22\u0026type=issues"
+        }
+      ],
+      "flags": {
+        "current_gate": false,
+        "ready": false,
+        "draft": false,
+        "ci_blocked": false,
+        "base_mismatch": false,
+        "missing_pr": true,
+        "upstream_blocked": false
+      }
+    },
+    {
+      "name": "cargo-c",
+      "live_status": "PENDING",
+      "depth": 2,
+      "group_label": "Batch 2",
+      "impact_count": 23,
+      "target_branch": "openssl-4-migration-staging",
+      "pr": {
+        "number": 0,
+        "url": "",
+        "base": "",
+        "is_draft": false,
+        "merge_state": "",
+        "updated_at": ""
+      },
+      "readiness": [
+        "missing-pr"
+      ],
+      "next_action": "Open migration PR",
+      "upstream": {
+        "provider": "github",
+        "repo": "lu-zero/cargo-c",
+        "url": "https://github.com/lu-zero/cargo-c"
+      },
+      "issues": [
+        {
+          "label": "search",
+          "url": "https://github.com/search?q=repo%3Alu-zero%2Fcargo-c+%22OpenSSL+4%22\u0026type=issues"
         }
       ],
       "flags": {
@@ -593,7 +593,7 @@
       "live_status": "PENDING",
       "depth": 2,
       "group_label": "Batch 2",
-      "impact_count": 18,
+      "impact_count": 17,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -1246,11 +1246,46 @@
       }
     },
     {
+      "name": "libssh",
+      "live_status": "PENDING",
+      "depth": 0,
+      "group_label": "Batch 0 — Roots",
+      "impact_count": 6,
+      "target_branch": "openssl-4-migration-staging",
+      "pr": {
+        "number": 0,
+        "url": "",
+        "base": "",
+        "is_draft": false,
+        "merge_state": "",
+        "updated_at": ""
+      },
+      "readiness": [
+        "missing-pr"
+      ],
+      "next_action": "Open migration PR",
+      "upstream": {
+        "provider": "other",
+        "repo": "",
+        "url": ""
+      },
+      "issues": [],
+      "flags": {
+        "current_gate": true,
+        "ready": false,
+        "draft": false,
+        "ci_blocked": false,
+        "base_mismatch": false,
+        "missing_pr": true,
+        "upstream_blocked": false
+      }
+    },
+    {
       "name": "node",
       "live_status": "PENDING",
       "depth": 1,
       "group_label": "Batch 1",
-      "impact_count": 7,
+      "impact_count": 6,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -1475,41 +1510,6 @@
         "ci_blocked": false,
         "base_mismatch": false,
         "missing_pr": false,
-        "upstream_blocked": false
-      }
-    },
-    {
-      "name": "libssh",
-      "live_status": "PENDING",
-      "depth": 0,
-      "group_label": "Batch 0 — Roots",
-      "impact_count": 5,
-      "target_branch": "openssl-4-migration-staging",
-      "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
-      },
-      "readiness": [
-        "missing-pr"
-      ],
-      "next_action": "Open migration PR",
-      "upstream": {
-        "provider": "other",
-        "repo": "",
-        "url": ""
-      },
-      "issues": [],
-      "flags": {
-        "current_gate": true,
-        "ready": false,
-        "draft": false,
-        "ci_blocked": false,
-        "base_mismatch": false,
-        "missing_pr": true,
         "upstream_blocked": false
       }
     },
@@ -1894,46 +1894,6 @@
       }
     },
     {
-      "name": "dotnet",
-      "live_status": "PENDING",
-      "depth": 0,
-      "group_label": "Batch 0 — Roots",
-      "impact_count": 2,
-      "target_branch": "openssl-4-migration-staging",
-      "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
-      },
-      "readiness": [
-        "missing-pr"
-      ],
-      "next_action": "Open migration PR",
-      "upstream": {
-        "provider": "github",
-        "repo": "dotnet/dotnet",
-        "url": "https://github.com/dotnet/dotnet"
-      },
-      "issues": [
-        {
-          "label": "search",
-          "url": "https://github.com/search?q=repo%3Adotnet%2Fdotnet+%22OpenSSL+4%22\u0026type=issues"
-        }
-      ],
-      "flags": {
-        "current_gate": true,
-        "ready": false,
-        "draft": false,
-        "ci_blocked": false,
-        "base_mismatch": false,
-        "missing_pr": true,
-        "upstream_blocked": false
-      }
-    },
-    {
       "name": "gdal",
       "live_status": "PENDING",
       "depth": 2,
@@ -1965,6 +1925,46 @@
       ],
       "flags": {
         "current_gate": false,
+        "ready": false,
+        "draft": false,
+        "ci_blocked": false,
+        "base_mismatch": false,
+        "missing_pr": true,
+        "upstream_blocked": false
+      }
+    },
+    {
+      "name": "dotnet",
+      "live_status": "PENDING",
+      "depth": 0,
+      "group_label": "Batch 0 — Roots",
+      "impact_count": 1,
+      "target_branch": "openssl-4-migration-staging",
+      "pr": {
+        "number": 0,
+        "url": "",
+        "base": "",
+        "is_draft": false,
+        "merge_state": "",
+        "updated_at": ""
+      },
+      "readiness": [
+        "missing-pr"
+      ],
+      "next_action": "Open migration PR",
+      "upstream": {
+        "provider": "github",
+        "repo": "dotnet/dotnet",
+        "url": "https://github.com/dotnet/dotnet"
+      },
+      "issues": [
+        {
+          "label": "search",
+          "url": "https://github.com/search?q=repo%3Adotnet%2Fdotnet+%22OpenSSL+4%22\u0026type=issues"
+        }
+      ],
+      "flags": {
+        "current_gate": true,
         "ready": false,
         "draft": false,
         "ci_blocked": false,
