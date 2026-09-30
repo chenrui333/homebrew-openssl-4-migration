@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-29T12:47:19Z",
+  "generated_at": "2026-09-30T12:29:22Z",
   "repository": "Homebrew/homebrew-core",
-  "git_head": "0c1774d770f204a7ce31e000c38445e12dc256d5",
+  "git_head": "cb041076de6e5e57578e9adaca3f64008383addc",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "staging_branch": "openssl-4-migration-staging",
   "staged_depths": {
@@ -60,7 +60,7 @@
       "gstreamer"
     ]
   },
-  "formula_count": 749,
+  "formula_count": 748,
   "formulae": [
     {
       "name": "apr-util",
@@ -462,7 +462,6 @@
         "citus",
         "civetweb",
         "clamav",
-        "claws-mail",
         "click",
         "clickhouse-cpp",
         "clickhouse-odbc",
@@ -1115,6 +1114,7 @@
       "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "ejabberd",
+        "electric",
         "expert",
         "teslamate"
       ],
@@ -1749,7 +1749,6 @@
         "chawan",
         "chunkah",
         "clamav",
-        "claws-mail",
         "click",
         "codanna",
         "code-cli",
@@ -2250,7 +2249,6 @@
         "bittensor",
         "btcli",
         "btfs",
-        "claws-mail",
         "colmap",
         "couchdb",
         "cryptography",
@@ -2494,7 +2492,6 @@
         "chunkah",
         "citus",
         "clamav",
-        "claws-mail",
         "click",
         "clipboard",
         "cnats",
@@ -3027,7 +3024,6 @@
         "btcli",
         "btfs",
         "ccache",
-        "claws-mail",
         "colmap",
         "csound",
         "curl",
@@ -4205,7 +4201,6 @@
         "ccache",
         "chunkah",
         "clamav",
-        "claws-mail",
         "click",
         "codanna",
         "code-cli",
@@ -5364,7 +5359,6 @@
         "ccache",
         "chunkah",
         "clamav",
-        "claws-mail",
         "click",
         "codanna",
         "code-cli",
@@ -7482,7 +7476,7 @@
         "gflags",
         "leveldb",
         "openssl@3",
-        "protobuf@33"
+        "protobuf"
       ],
       "openssl_formula_dependencies": [
         "cmake"
@@ -8393,50 +8387,6 @@
         "python@3.14",
         "rust",
         "yara"
-      ],
-      "transitive_openssl_formula_dependents": []
-    },
-    {
-      "name": "claws-mail",
-      "path": "Formula/c/claws-mail.rb",
-      "openssl_dependency": "openssl@3",
-      "homepage": "https://www.claws-mail.org/",
-      "source_url": "https://www.claws-mail.org/releases/claws-mail-4.4.0.tar.gz",
-      "upstream_provider": "other",
-      "depth": null,
-      "target_branch": "main",
-      "staging_required_by": [],
-      "dependencies": [
-        "pkgconf",
-        "cairo",
-        "gdk-pixbuf",
-        "glib",
-        "gnutls",
-        "gtk+3",
-        "libetpan",
-        "nettle",
-        "openssl@3",
-        "pango",
-        "at-spi2-core",
-        "gettext",
-        "harfbuzz",
-        "libice",
-        "libsm",
-        "zlib-ng-compat"
-      ],
-      "openssl_formula_dependencies": [
-        "libetpan"
-      ],
-      "openssl_formula_dependents": [],
-      "transitive_openssl_formula_dependencies": [
-        "cmake",
-        "libetpan",
-        "libgit2",
-        "libssh2",
-        "python@3.13",
-        "python@3.14",
-        "rust",
-        "wget"
       ],
       "transitive_openssl_formula_dependents": []
     },
@@ -9469,7 +9419,7 @@
     {
       "name": "dcmtk",
       "path": "Formula/d/dcmtk.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://dcmtk.org/en/dcmtk/",
       "source_url": "https://github.com/DCMTK/dcmtk/archive/refs/tags/DCMTK-3.7.0.tar.gz",
       "head_url": "https://git.dcmtk.org/dcmtk.git",
@@ -9483,7 +9433,7 @@
         "jpeg-turbo",
         "libpng",
         "libtiff",
-        "openssl@3",
+        "openssl@4",
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
@@ -10272,7 +10222,7 @@
     {
       "name": "echtvar",
       "path": "Formula/e/echtvar.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkac931/6775383",
       "source_url": "https://github.com/brentp/echtvar/archive/refs/tags/v0.2.4.tar.gz",
       "upstream_provider": "github",
@@ -10284,7 +10234,7 @@
         "cmake",
         "pkgconf",
         "rust",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [
         "cmake",
@@ -10411,7 +10361,7 @@
       "path": "Formula/e/ejabberd.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.ejabberd.im",
-      "source_url": "https://github.com/processone/ejabberd/archive/refs/tags/26.07.tar.gz",
+      "source_url": "https://github.com/processone/ejabberd/archive/refs/tags/26.09.tar.gz",
       "head_url": "https://github.com/processone/ejabberd.git",
       "upstream_provider": "github",
       "upstream_repo": "processone/ejabberd",
@@ -10480,7 +10430,7 @@
     {
       "name": "electric",
       "path": "Formula/e/electric.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://electric-sql.com",
       "source_url": "https://github.com/electric-sql/electric/archive/refs/tags/@core/sync-service@1.8.1.tar.gz",
       "upstream_provider": "github",
@@ -10490,18 +10440,17 @@
       "staging_required_by": [],
       "dependencies": [
         "elixir",
-        "erlang@28",
-        "openssl@3",
+        "erlang",
+        "openssl@4",
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
-        "erlang@28"
+        "erlang"
       ],
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
         "erlang",
-        "erlang@28",
         "libgit2",
         "libssh2",
         "python@3.13",
@@ -10724,8 +10673,7 @@
       ],
       "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
-        "couchdb",
-        "electric"
+        "couchdb"
       ],
       "transitive_openssl_formula_dependencies": [
         "cmake",
@@ -10736,8 +10684,7 @@
         "rust"
       ],
       "transitive_openssl_formula_dependents": [
-        "couchdb",
-        "electric"
+        "couchdb"
       ]
     },
     {
@@ -11330,7 +11277,7 @@
     {
       "name": "ffmpeg@8",
       "path": "Formula/f/ffmpeg@8.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://ffmpeg.org/",
       "source_url": "https://ffmpeg.org/releases/ffmpeg-8.1.3.tar.xz",
       "upstream_provider": "other",
@@ -11343,7 +11290,7 @@
         "lame",
         "libvmaf",
         "libvpx",
-        "openssl@3",
+        "openssl@4",
         "opus",
         "sdl2-compat",
         "svt-av1",
@@ -11512,7 +11459,7 @@
     {
       "name": "flashrom",
       "path": "Formula/f/flashrom.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://flashrom.org/",
       "source_url": "https://download.flashrom.org/releases/flashrom-v1.8.0.tar.xz",
       "head_url": "https://review.coreboot.org/flashrom.git",
@@ -11527,7 +11474,7 @@
         "libftdi",
         "libjaylink",
         "libusb",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [],
@@ -12125,7 +12072,7 @@
     {
       "name": "get_iplayer",
       "path": "Formula/g/get_iplayer.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/get-iplayer/get_iplayer",
       "source_url": "https://github.com/get-iplayer/get_iplayer/archive/refs/tags/v3.36.tar.gz",
       "head_url": "https://github.com/get-iplayer/get_iplayer.git",
@@ -12137,7 +12084,7 @@
       "dependencies": [
         "atomicparsley",
         "ffmpeg",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [
         "ffmpeg"
@@ -12261,7 +12208,7 @@
       "path": "Formula/g/git.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://git-scm.com",
-      "source_url": "https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.55.0.tar.xz",
+      "source_url": "https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.56.0.tar.xz",
       "head_url": "https://github.com/git/git.git",
       "upstream_provider": "github",
       "upstream_repo": "git/git",
@@ -13141,7 +13088,7 @@
       "path": "Formula/h/hf-mount.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/huggingface/hf-mount",
-      "source_url": "https://github.com/huggingface/hf-mount/archive/refs/tags/v0.13.0.tar.gz",
+      "source_url": "https://github.com/huggingface/hf-mount/archive/refs/tags/v0.13.1.tar.gz",
       "head_url": "https://github.com/huggingface/hf-mount.git",
       "upstream_provider": "github",
       "upstream_repo": "huggingface/hf-mount",
@@ -13703,7 +13650,7 @@
       "path": "Formula/i/iperf3.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/esnet/iperf",
-      "source_url": "https://downloads.es.net/pub/iperf/iperf-3.21.tar.gz",
+      "source_url": "https://downloads.es.net/pub/iperf/iperf-3.22.tar.gz",
       "head_url": "https://github.com/esnet/iperf.git",
       "upstream_provider": "github",
       "upstream_repo": "esnet/iperf",
@@ -14208,7 +14155,7 @@
     {
       "name": "kingfisher",
       "path": "Formula/k/kingfisher.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://mongodb.github.io/kingfisher/",
       "source_url": "https://github.com/mongodb/kingfisher/archive/refs/tags/v2.7.0.tar.gz",
       "upstream_provider": "github",
@@ -14219,9 +14166,9 @@
       "dependencies": [
         "boost",
         "cmake",
-        "openssl@3",
         "pkgconf",
-        "rust"
+        "rust",
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [
         "cmake",
@@ -14356,7 +14303,7 @@
       "path": "Formula/l/ladybug.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://ladybugdb.com/",
-      "source_url": "https://github.com/LadybugDB/ladybug/archive/refs/tags/v0.21.0.tar.gz",
+      "source_url": "https://github.com/LadybugDB/ladybug/archive/refs/tags/v0.21.1.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "LadybugDB/ladybug",
       "depth": null,
@@ -14951,15 +14898,11 @@
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [],
-      "openssl_formula_dependents": [
-        "claws-mail"
-      ],
+      "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake"
       ],
-      "transitive_openssl_formula_dependents": [
-        "claws-mail"
-      ]
+      "transitive_openssl_formula_dependents": []
     },
     {
       "name": "libewf",
@@ -19744,7 +19687,7 @@
       "path": "Formula/o/ortp.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://linphone.org/",
-      "source_url": "https://gitlab.linphone.org/BC/public/linphone-sdk/-/archive/5.5.25/linphone-sdk-5.5.25.tar.bz2",
+      "source_url": "https://gitlab.linphone.org/BC/public/linphone-sdk/-/archive/5.5.27/linphone-sdk-5.5.27.tar.bz2",
       "head_url": "https://gitlab.linphone.org/BC/public/linphone-sdk.git",
       "upstream_provider": "gitlab",
       "upstream_repo": "gitlab.linphone.org/BC/public/linphone-sdk",
@@ -21113,7 +21056,7 @@
     {
       "name": "ponyc",
       "path": "Formula/p/ponyc.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://www.ponylang.io/",
       "source_url": "https://github.com/ponylang/ponyc.git",
       "upstream_provider": "github",
@@ -21123,7 +21066,9 @@
       "staging_required_by": [],
       "dependencies": [
         "cmake",
-        "openssl@3",
+        "google-benchmark",
+        "googletest",
+        "openssl@4",
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
@@ -22312,7 +22257,7 @@
       "path": "Formula/r/rattler-index.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/conda/rattler",
-      "source_url": "https://github.com/conda/rattler/archive/refs/tags/rattler_index-v0.31.7.tar.gz",
+      "source_url": "https://github.com/conda/rattler/archive/refs/tags/rattler_index-v0.32.0.tar.gz",
       "head_url": "https://github.com/conda/rattler.git",
       "upstream_provider": "github",
       "upstream_repo": "conda/rattler",
@@ -22602,7 +22547,7 @@
     {
       "name": "retdec",
       "path": "Formula/r/retdec.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/avast/retdec",
       "source_url": "https://github.com/avast/retdec.git",
       "head_url": "https://github.com/avast/retdec.git",
@@ -22617,8 +22562,8 @@
         "cmake",
         "libtool",
         "pkgconf",
-        "openssl@3",
         "python@3.14",
+        "openssl@4",
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
@@ -23065,7 +23010,7 @@
     {
       "name": "rsync",
       "path": "Formula/r/rsync.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://rsync.samba.org/",
       "source_url": "https://github.com/RsyncProject/rsync/releases/download/v3.5.1/rsync-3.5.1.tar.gz",
       "upstream_provider": "github",
@@ -23076,7 +23021,7 @@
       "dependencies": [
         "libidn2",
         "lz4",
-        "openssl@3",
+        "openssl@4",
         "popt",
         "xxhash",
         "zstd",
@@ -27725,7 +27670,7 @@
       "path": "Formula/x/xrootd.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://xrootd.org/",
-      "source_url": "https://github.com/xrootd/xrootd/releases/download/v6.1.1/xrootd-6.1.1.tar.gz",
+      "source_url": "https://github.com/xrootd/xrootd/releases/download/v6.2.0/xrootd-6.2.0.tar.gz",
       "head_url": "https://github.com/xrootd/xrootd.git",
       "upstream_provider": "github",
       "upstream_repo": "xrootd/xrootd",
@@ -27735,6 +27680,7 @@
       "dependencies": [
         "cmake",
         "pkgconf",
+        "python-setuptools",
         "python@3.14",
         "davix",
         "krb5",
