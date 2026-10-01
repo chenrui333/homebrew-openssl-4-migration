@@ -1,4 +1,4 @@
-# OpenSSL 4 Migration Audit (2026-09-30)
+# OpenSSL 4 Migration Audit (2026-10-01)
 
 Tracking issue: Homebrew/homebrew-core#278366
 
@@ -28,9 +28,9 @@ Pending staged formulae are sorted by transitive dependent count.
 |---|---|---:|---:|---|---|---|---|---|
 | cmake | openssl-4-migration-staging | 0 | 658 | PENDING | none | missing-pr | gitlab:gitlab.kitware.com/cmake/cmake |  |
 | python@3.14 | openssl-4-migration-staging | 0 | 459 | PENDING | none | missing-pr | python |  |
-| libssh2 | openssl-4-migration-staging | 0 | 304 | PENDING | none | missing-pr | github:libssh2/libssh2 |  |
-| libgit2 | openssl-4-migration-staging | closure | 281 | PENDING | none | missing-pr | github:libgit2/libgit2 |  |
-| rust | openssl-4-migration-staging | 1 | 279 | PENDING | none | missing-pr | github:rust-lang/rust | [issues#155397](https://github.com/rust-lang/rust/issues/155397) open |
+| libssh2 | openssl-4-migration-staging | 0 | 305 | PENDING | none | missing-pr | github:libssh2/libssh2 |  |
+| libgit2 | openssl-4-migration-staging | closure | 282 | PENDING | none | missing-pr | github:libgit2/libgit2 |  |
+| rust | openssl-4-migration-staging | 1 | 280 | PENDING | none | missing-pr | github:rust-lang/rust | [issues#155397](https://github.com/rust-lang/rust/issues/155397) open |
 | python@3.13 | openssl-4-migration-staging | 0 | 84 | PENDING | none | missing-pr | python |  |
 | systemd | openssl-4-migration-staging | 1 | 66 | PENDING | none | missing-pr | github:systemd/systemd |  |
 | libevent | openssl-4-migration-staging | 0 | 62 | PENDING | none | missing-pr | github:libevent/libevent |  |
@@ -38,7 +38,7 @@ Pending staged formulae are sorted by transitive dependent count.
 | cargo-c | openssl-4-migration-staging | 2 | 23 | PENDING | none | missing-pr | github:lu-zero/cargo-c |  |
 | pulseaudio | openssl-4-migration-staging | 1 | 21 | PENDING | none | missing-pr | gitlab:gitlab.freedesktop.org/pulseaudio/pulseaudio |  |
 | curl | openssl-4-migration-staging | 1 | 20 | PENDING | none | missing-pr | github:curl/curl |  |
-| ruby | openssl-4-migration-staging | 2 | 19 | PENDING | none | missing-pr | github:ruby/ruby |  |
+| ruby | openssl-4-migration-staging | 2 | 20 | PENDING | none | missing-pr | github:ruby/ruby |  |
 | cryptography | openssl-4-migration-staging | 2 | 17 | PENDING | none | missing-pr | github:pyca/cryptography | [issues#14656](https://github.com/pyca/cryptography/issues/14656) closed |
 | libpq | openssl-4-migration-staging | 1 | 17 | PENDING | none | missing-pr | other |  |
 | pipewire | openssl-4-migration-staging | closure | 17 | PENDING | none | missing-pr | gitlab:gitlab.freedesktop.org/pipewire/pipewire |  |
@@ -54,8 +54,8 @@ Pending staged formulae are sorted by transitive dependent count.
 | httpd | openssl-4-migration-staging | 1 | 8 | PENDING | none | missing-pr | apache |  |
 | folly | openssl-4-migration-staging | 1 | 7 | PENDING | none | missing-pr | github:facebook/folly |  |
 | freetds | openssl-4-migration-staging | 0 | 7 | PENDING | none | missing-pr | github:FreeTDS/freetds |  |
+| node | openssl-4-migration-staging | 1 | 7 | PENDING | none | missing-pr | github:nodejs/node | [issues#62817](https://github.com/nodejs/node/issues/62817) closed |
 | libssh | openssl-4-migration-staging | 0 | 6 | PENDING | none | missing-pr | other |  |
-| node | openssl-4-migration-staging | 1 | 6 | PENDING | none | missing-pr | github:nodejs/node | [issues#62817](https://github.com/nodejs/node/issues/62817) closed |
 | srt | openssl-4-migration-staging | 0 | 6 | PENDING | none | missing-pr | github:Haivision/srt |  |
 | hiredis | openssl-4-migration-staging | 0 | 5 | PENDING | none | missing-pr | github:redis/hiredis |  |
 | mariadb-connector-c | openssl-4-migration-staging | 0 | 5 | PENDING | none | missing-pr | github:mariadb-corporation/mariadb-connector-c |  |
@@ -83,8 +83,8 @@ Top 20 pending staged formulae with upstream metadata and no curated upstream is
 |---|---:|---:|---|---|---|
 | cmake | 0 | 658 | gitlab:gitlab.kitware.com/cmake/cmake |  | missing-pr |
 | python@3.14 | 0 | 459 | python |  | missing-pr |
-| libssh2 | 0 | 304 | github:libssh2/libssh2 | [issues](https://github.com/search?q=repo%3Alibssh2%2Flibssh2+%22OpenSSL+4%22&type=issues) | missing-pr |
-| libgit2 | closure | 281 | github:libgit2/libgit2 | [issues](https://github.com/search?q=repo%3Alibgit2%2Flibgit2+%22OpenSSL+4%22&type=issues) | missing-pr |
+| libssh2 | 0 | 305 | github:libssh2/libssh2 | [issues](https://github.com/search?q=repo%3Alibssh2%2Flibssh2+%22OpenSSL+4%22&type=issues) | missing-pr |
+| libgit2 | closure | 282 | github:libgit2/libgit2 | [issues](https://github.com/search?q=repo%3Alibgit2%2Flibgit2+%22OpenSSL+4%22&type=issues) | missing-pr |
 | python@3.13 | 0 | 84 | python |  | missing-pr |
 | systemd | 1 | 66 | github:systemd/systemd | [issues](https://github.com/search?q=repo%3Asystemd%2Fsystemd+%22OpenSSL+4%22&type=issues) | missing-pr |
 | libevent | 0 | 62 | github:libevent/libevent | [issues](https://github.com/search?q=repo%3Alibevent%2Flibevent+%22OpenSSL+4%22&type=issues) | missing-pr |
@@ -92,7 +92,7 @@ Top 20 pending staged formulae with upstream metadata and no curated upstream is
 | cargo-c | 2 | 23 | github:lu-zero/cargo-c | [issues](https://github.com/search?q=repo%3Alu-zero%2Fcargo-c+%22OpenSSL+4%22&type=issues) | missing-pr |
 | pulseaudio | 1 | 21 | gitlab:gitlab.freedesktop.org/pulseaudio/pulseaudio |  | missing-pr |
 | curl | 1 | 20 | github:curl/curl | [issues](https://github.com/search?q=repo%3Acurl%2Fcurl+%22OpenSSL+4%22&type=issues) | missing-pr |
-| ruby | 2 | 19 | github:ruby/ruby | [issues](https://github.com/search?q=repo%3Aruby%2Fruby+%22OpenSSL+4%22&type=issues) | missing-pr |
+| ruby | 2 | 20 | github:ruby/ruby | [issues](https://github.com/search?q=repo%3Aruby%2Fruby+%22OpenSSL+4%22&type=issues) | missing-pr |
 | pipewire | closure | 17 | gitlab:gitlab.freedesktop.org/pipewire/pipewire |  | missing-pr |
 | ffmpeg | 1 | 13 | github:FFmpeg/FFmpeg | [issues](https://github.com/search?q=repo%3AFFmpeg%2FFFmpeg+%22OpenSSL+4%22&type=issues) | missing-pr |
 | apr-util | 0 | 11 | apache |  | missing-pr |
