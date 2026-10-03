@@ -1,4 +1,4 @@
-# OpenSSL 4 Migration Checklist (2026-10-02)
+# OpenSSL 4 Migration Checklist (2026-10-03)
 
 Progress: **8/56 (14.3%)**
 Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/homebrew-core/issues/278366)
