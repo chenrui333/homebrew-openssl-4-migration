@@ -1,6 +1,6 @@
-# OpenSSL 4 Migration Checklist (2026-10-05)
+# OpenSSL 4 Migration Checklist (2026-10-06)
 
-Progress: **8/56 (14.3%)**
+Progress: **3/56 (5.4%)**
 Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/homebrew-core/issues/278366)
 
 > Staging batches are depth 0 → 1 → 2 → 3 plus their computed transitive closure.
@@ -9,13 +9,13 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 ## Batch 0 — Roots -> openssl-4-migration-staging [3/23]
 
 - [ ] apr-util
-- [ ] cmake
+- [x] ~~cmake~~
 - [ ] dotnet
-- [ ] erlang
+- [x] ~~erlang~~
 - [ ] freetds
 - [ ] grpc
 - [ ] hiredis
-- [x] ~~krb5~~
+- [ ] krb5
 - [ ] libevent
 - [ ] libfido2
 - [ ] librdkafka
@@ -23,7 +23,7 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 - [ ] libssh2
 - [ ] mariadb-connector-c
 - [ ] openldap
-- [x] ~~opusfile~~
+- [ ] opusfile
 - [ ] python@3.11
 - [ ] python@3.12
 - [ ] python@3.13
@@ -62,18 +62,17 @@ Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/home
 
 - [ ] gstreamer
 
-## Staging closure -> openssl-4-migration-staging [5/13]
+## Staging closure -> openssl-4-migration-staging [0/12]
 
 - [ ] aws-c-cal
-- [ ] aws-c-http
 - [ ] aws-c-io
 - [ ] libgit2
 - [ ] libngtcp2
-- [x] ~~libshout~~
-- [x] ~~libzip~~
-- [x] ~~net-snmp~~
+- [ ] libshout
+- [ ] libzip
+- [ ] net-snmp
 - [ ] pipewire
-- [x] ~~rtmpdump~~
+- [ ] rtmpdump
 - [ ] s2n
-- [x] ~~srtp~~
+- [ ] srtp
 - [ ] thrift

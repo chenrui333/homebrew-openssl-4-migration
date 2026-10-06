@@ -1,16 +1,16 @@
-# OpenSSL 4 Migration Audit (2026-10-05)
+# OpenSSL 4 Migration Audit (2026-10-06)
 
 Tracking issue: Homebrew/homebrew-core#278366
 
 ## Summary
 
-- Staging-scope formulae: 57
-- Live pending: 48
-- Live done: 8 (14.0%)
+- Staging-scope formulae: 56
+- Live pending: 53
+- Live done: 3 (5.4%)
 - Open staging PRs: 0
 - Draft migration PRs: 0
 - PRs with merge/check blockers: 0
-- Pending formulae without open migration PRs: 48
+- Pending formulae without open migration PRs: 53
 
 ## Retarget to Staging
 
@@ -26,43 +26,47 @@ Pending staged formulae are sorted by transitive dependent count.
 
 | Formula | Target | Depth | Impact | Status | PR | Readiness | Upstream | Issues |
 |---|---|---:|---:|---|---|---|---|---|
-| cmake | openssl-4-migration-staging | 0 | 660 | PENDING | none | missing-pr | gitlab:gitlab.kitware.com/cmake/cmake |  |
 | python@3.14 | openssl-4-migration-staging | 0 | 460 | PENDING | none | missing-pr | python |  |
 | libssh2 | openssl-4-migration-staging | 0 | 305 | PENDING | none | missing-pr | github:libssh2/libssh2 |  |
 | libgit2 | openssl-4-migration-staging | closure | 282 | PENDING | none | missing-pr | github:libgit2/libgit2 |  |
 | rust | openssl-4-migration-staging | 1 | 280 | PENDING | none | missing-pr | github:rust-lang/rust | [issues#155397](https://github.com/rust-lang/rust/issues/155397) open |
-| python@3.13 | openssl-4-migration-staging | 0 | 84 | PENDING | none | missing-pr | python |  |
+| krb5 | openssl-4-migration-staging | 0 | 79 | PENDING | none | missing-pr | other |  |
 | systemd | openssl-4-migration-staging | 1 | 67 | PENDING | none | missing-pr | github:systemd/systemd |  |
 | libevent | openssl-4-migration-staging | 0 | 61 | PENDING | none | missing-pr | github:libevent/libevent |  |
+| python@3.13 | openssl-4-migration-staging | 0 | 48 | PENDING | none | missing-pr | python |  |
 | libngtcp2 | openssl-4-migration-staging | closure | 24 | PENDING | none | missing-pr | github:ngtcp2/ngtcp2 |  |
 | cargo-c | openssl-4-migration-staging | 2 | 23 | PENDING | none | missing-pr | github:lu-zero/cargo-c |  |
 | pulseaudio | openssl-4-migration-staging | 1 | 21 | PENDING | none | missing-pr | gitlab:gitlab.freedesktop.org/pulseaudio/pulseaudio |  |
 | curl | openssl-4-migration-staging | 1 | 20 | PENDING | none | missing-pr | github:curl/curl |  |
 | ruby | openssl-4-migration-staging | 2 | 20 | PENDING | none | missing-pr | github:ruby/ruby |  |
-| cryptography | openssl-4-migration-staging | 2 | 17 | PENDING | none | missing-pr | github:pyca/cryptography | [issues#14656](https://github.com/pyca/cryptography/issues/14656) closed |
 | libpq | openssl-4-migration-staging | 1 | 17 | PENDING | none | missing-pr | other |  |
 | pipewire | openssl-4-migration-staging | closure | 17 | PENDING | none | missing-pr | gitlab:gitlab.freedesktop.org/pipewire/pipewire |  |
+| cryptography | openssl-4-migration-staging | 2 | 16 | PENDING | none | missing-pr | github:pyca/cryptography | [issues#14656](https://github.com/pyca/cryptography/issues/14656) closed |
 | ffmpeg | openssl-4-migration-staging | 1 | 13 | PENDING | none | missing-pr | github:FFmpeg/FFmpeg |  |
 | grpc | openssl-4-migration-staging | 0 | 12 | PENDING | none | missing-pr | github:grpc/grpc | [issues#42020](https://github.com/grpc/grpc/issues/42020) open |
 | libfido2 | openssl-4-migration-staging | 0 | 12 | PENDING | none | missing-pr | github:Yubico/libfido2 | [issues#966](https://github.com/Yubico/libfido2/issues/966) closed |
 | apr-util | openssl-4-migration-staging | 0 | 11 | PENDING | none | missing-pr | apache |  |
 | openldap | openssl-4-migration-staging | 0 | 11 | PENDING | none | missing-pr | other |  |
 | qtbase | openssl-4-migration-staging | 1 | 10 | PENDING | none | missing-pr | qt |  |
-| aws-c-cal | openssl-4-migration-staging | closure | 9 | PENDING | none | missing-pr | github:awslabs/aws-c-cal |  |
-| s2n | openssl-4-migration-staging | closure | 9 | PENDING | none | missing-pr | github:aws/s2n-tls | [issues#5783](https://github.com/aws/s2n-tls/issues/5783) open |
-| aws-c-io | openssl-4-migration-staging | closure | 8 | PENDING | none | missing-pr | github:awslabs/aws-c-io |  |
+| libzip | openssl-4-migration-staging | closure | 9 | PENDING | none | missing-pr | other |  |
+| aws-c-cal | openssl-4-migration-staging | closure | 8 | PENDING | none | missing-pr | github:awslabs/aws-c-cal |  |
 | httpd | openssl-4-migration-staging | 1 | 8 | PENDING | none | missing-pr | apache |  |
+| s2n | openssl-4-migration-staging | closure | 8 | PENDING | none | missing-pr | github:aws/s2n-tls | [issues#5783](https://github.com/aws/s2n-tls/issues/5783) open |
+| aws-c-io | openssl-4-migration-staging | closure | 7 | PENDING | none | missing-pr | github:awslabs/aws-c-io |  |
 | folly | openssl-4-migration-staging | 1 | 7 | PENDING | none | missing-pr | github:facebook/folly |  |
 | freetds | openssl-4-migration-staging | 0 | 7 | PENDING | none | missing-pr | github:FreeTDS/freetds |  |
 | node | openssl-4-migration-staging | 1 | 7 | PENDING | none | missing-pr | github:nodejs/node | [issues#62817](https://github.com/nodejs/node/issues/62817) closed |
 | libssh | openssl-4-migration-staging | 0 | 6 | PENDING | none | missing-pr | other |  |
+| rtmpdump | openssl-4-migration-staging | closure | 6 | PENDING | none | missing-pr | other |  |
 | srt | openssl-4-migration-staging | 0 | 6 | PENDING | none | missing-pr | github:Haivision/srt |  |
+| srtp | openssl-4-migration-staging | closure | 6 | PENDING | none | missing-pr | github:cisco/libsrtp |  |
 | hiredis | openssl-4-migration-staging | 0 | 5 | PENDING | none | missing-pr | github:redis/hiredis |  |
+| libshout | openssl-4-migration-staging | closure | 5 | PENDING | none | missing-pr | other |  |
 | mariadb-connector-c | openssl-4-migration-staging | 0 | 5 | PENDING | none | missing-pr | github:mariadb-corporation/mariadb-connector-c |  |
+| net-snmp | openssl-4-migration-staging | closure | 5 | PENDING | none | missing-pr | github:net-snmp/net-snmp |  |
 | thrift | openssl-4-migration-staging | closure | 5 | PENDING | none | missing-pr | github:apache/thrift |  |
 | apache-arrow | openssl-4-migration-staging | 1 | 4 | PENDING | none | missing-pr | github:apache/arrow |  |
 | bind | openssl-4-migration-staging | 1 | 4 | PENDING | none | missing-pr | gitlab:gitlab.isc.org/isc-projects/bind9 |  |
-| erlang | openssl-4-migration-staging | 0 | 4 | PENDING | none | missing-pr | github:erlang/otp |  |
 | gstreamer | openssl-4-migration-staging | 3 | 4 | PENDING | none | missing-pr | gitlab:gitlab.freedesktop.org/gstreamer/gstreamer |  |
 | unbound | openssl-4-migration-staging | 1 | 4 | PENDING | none | missing-pr | github:NLnetLabs/unbound |  |
 | python@3.12 | openssl-4-migration-staging | 0 | 3 | PENDING | none | missing-pr | python |  |
@@ -72,6 +76,7 @@ Pending staged formulae are sorted by transitive dependent count.
 | librdkafka | openssl-4-migration-staging | 0 | 1 | PENDING | none | missing-pr | github:confluentinc/librdkafka |  |
 | postgresql@17 | openssl-4-migration-staging | 1 | 1 | PENDING | none | missing-pr | other |  |
 | postgresql@18 | openssl-4-migration-staging | 1 | 1 | PENDING | none | missing-pr | other |  |
+| opusfile | openssl-4-migration-staging | 0 | 0 | PENDING | none | missing-pr | gitlab:gitlab.xiph.org/xiph/opusfile |  |
 | php | openssl-4-migration-staging | 2 | 0 | PENDING | none | missing-pr | github:php/php-src |  |
 | python@3.11 | openssl-4-migration-staging | 0 | 0 | PENDING | none | missing-pr | python |  |
 
@@ -81,13 +86,12 @@ Top 20 pending staged formulae with upstream metadata and no curated upstream is
 
 | Formula | Depth | Impact | Upstream | Search | Readiness |
 |---|---:|---:|---|---|---|
-| cmake | 0 | 660 | gitlab:gitlab.kitware.com/cmake/cmake |  | missing-pr |
 | python@3.14 | 0 | 460 | python |  | missing-pr |
 | libssh2 | 0 | 305 | github:libssh2/libssh2 | [issues](https://github.com/search?q=repo%3Alibssh2%2Flibssh2+%22OpenSSL+4%22&type=issues) | missing-pr |
 | libgit2 | closure | 282 | github:libgit2/libgit2 | [issues](https://github.com/search?q=repo%3Alibgit2%2Flibgit2+%22OpenSSL+4%22&type=issues) | missing-pr |
-| python@3.13 | 0 | 84 | python |  | missing-pr |
 | systemd | 1 | 67 | github:systemd/systemd | [issues](https://github.com/search?q=repo%3Asystemd%2Fsystemd+%22OpenSSL+4%22&type=issues) | missing-pr |
 | libevent | 0 | 61 | github:libevent/libevent | [issues](https://github.com/search?q=repo%3Alibevent%2Flibevent+%22OpenSSL+4%22&type=issues) | missing-pr |
+| python@3.13 | 0 | 48 | python |  | missing-pr |
 | libngtcp2 | closure | 24 | github:ngtcp2/ngtcp2 | [issues](https://github.com/search?q=repo%3Angtcp2%2Fngtcp2+%22OpenSSL+4%22&type=issues) | missing-pr |
 | cargo-c | 2 | 23 | github:lu-zero/cargo-c | [issues](https://github.com/search?q=repo%3Alu-zero%2Fcargo-c+%22OpenSSL+4%22&type=issues) | missing-pr |
 | pulseaudio | 1 | 21 | gitlab:gitlab.freedesktop.org/pulseaudio/pulseaudio |  | missing-pr |
@@ -97,10 +101,11 @@ Top 20 pending staged formulae with upstream metadata and no curated upstream is
 | ffmpeg | 1 | 13 | github:FFmpeg/FFmpeg | [issues](https://github.com/search?q=repo%3AFFmpeg%2FFFmpeg+%22OpenSSL+4%22&type=issues) | missing-pr |
 | apr-util | 0 | 11 | apache |  | missing-pr |
 | qtbase | 1 | 10 | qt |  | missing-pr |
-| aws-c-cal | closure | 9 | github:awslabs/aws-c-cal | [issues](https://github.com/search?q=repo%3Aawslabs%2Faws-c-cal+%22OpenSSL+4%22&type=issues) | missing-pr |
-| aws-c-io | closure | 8 | github:awslabs/aws-c-io | [issues](https://github.com/search?q=repo%3Aawslabs%2Faws-c-io+%22OpenSSL+4%22&type=issues) | missing-pr |
+| aws-c-cal | closure | 8 | github:awslabs/aws-c-cal | [issues](https://github.com/search?q=repo%3Aawslabs%2Faws-c-cal+%22OpenSSL+4%22&type=issues) | missing-pr |
 | httpd | 1 | 8 | apache |  | missing-pr |
+| aws-c-io | closure | 7 | github:awslabs/aws-c-io | [issues](https://github.com/search?q=repo%3Aawslabs%2Faws-c-io+%22OpenSSL+4%22&type=issues) | missing-pr |
 | folly | 1 | 7 | github:facebook/folly | [issues](https://github.com/search?q=repo%3Afacebook%2Ffolly+%22OpenSSL+4%22&type=issues) | missing-pr |
+| freetds | 0 | 7 | github:FreeTDS/freetds | [issues](https://github.com/search?q=repo%3AFreeTDS%2Ffreetds+%22OpenSSL+4%22&type=issues) | missing-pr |
 
 ## Curated Upstream Issues
 

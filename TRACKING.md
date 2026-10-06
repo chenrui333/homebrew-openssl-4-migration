@@ -1,19 +1,19 @@
-OpenSSL 4 Migration Status (2026-10-05)
+OpenSSL 4 Migration Status (2026-10-06)
 ========================================
-Total pending:  48
-Total done:     8 (14.3%)
+Total pending:  53
+Total done:     3 (5.4%)
 
 Tracking issue: Homebrew/homebrew-core#278366
 
 Batch 0 — Roots -> openssl-4-migration-staging   [3/23 done]
   apr-util                 PENDING
-  cmake                    PENDING
+  cmake                    DONE
   dotnet                   PENDING
-  erlang                   PENDING
+  erlang                   DONE
   freetds                  PENDING
   grpc                     PENDING
   hiredis                  PENDING
-  krb5                     DONE
+  krb5                     PENDING
   libevent                 PENDING
   libfido2                 PENDING
   librdkafka               PENDING
@@ -21,7 +21,7 @@ Batch 0 — Roots -> openssl-4-migration-staging   [3/23 done]
   libssh2                  PENDING
   mariadb-connector-c      PENDING
   openldap                 PENDING
-  opusfile                 DONE
+  opusfile                 PENDING
   python@3.11              PENDING
   python@3.12              PENDING
   python@3.13              PENDING
@@ -57,17 +57,16 @@ Batch 2 -> openssl-4-migration-staging   [0/5 done]
 Batch 3 -> openssl-4-migration-staging   [0/1 done]
   gstreamer                PENDING
 
-Staging closure -> openssl-4-migration-staging   [5/13 done]
+Staging closure -> openssl-4-migration-staging   [0/12 done]
   aws-c-cal                PENDING
-  aws-c-http               UNKNOWN
   aws-c-io                 PENDING
   libgit2                  PENDING
   libngtcp2                PENDING
-  libshout                 DONE
-  libzip                   DONE
-  net-snmp                 DONE
+  libshout                 PENDING
+  libzip                   PENDING
+  net-snmp                 PENDING
   pipewire                 PENDING
-  rtmpdump                 DONE
+  rtmpdump                 PENDING
   s2n                      PENDING
-  srtp                     DONE
+  srtp                     PENDING
   thrift                   PENDING
