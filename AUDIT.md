@@ -1,16 +1,16 @@
-# OpenSSL 4 Migration Audit (2026-10-06)
+# OpenSSL 4 Migration Audit (2026-10-07)
 
 Tracking issue: Homebrew/homebrew-core#278366
 
 ## Summary
 
-- Staging-scope formulae: 56
-- Live pending: 53
-- Live done: 3 (5.4%)
+- Staging-scope formulae: 55
+- Live pending: 52
+- Live done: 3 (5.5%)
 - Open staging PRs: 0
 - Draft migration PRs: 0
 - PRs with merge/check blockers: 0
-- Pending formulae without open migration PRs: 53
+- Pending formulae without open migration PRs: 52
 
 ## Retarget to Staging
 
@@ -26,49 +26,48 @@ Pending staged formulae are sorted by transitive dependent count.
 
 | Formula | Target | Depth | Impact | Status | PR | Readiness | Upstream | Issues |
 |---|---|---:|---:|---|---|---|---|---|
-| python@3.14 | openssl-4-migration-staging | 0 | 460 | PENDING | none | missing-pr | python |  |
-| libssh2 | openssl-4-migration-staging | 0 | 305 | PENDING | none | missing-pr | github:libssh2/libssh2 |  |
-| libgit2 | openssl-4-migration-staging | closure | 282 | PENDING | none | missing-pr | github:libgit2/libgit2 |  |
-| rust | openssl-4-migration-staging | 1 | 280 | PENDING | none | missing-pr | github:rust-lang/rust | [issues#155397](https://github.com/rust-lang/rust/issues/155397) open |
-| krb5 | openssl-4-migration-staging | 0 | 79 | PENDING | none | missing-pr | other |  |
-| systemd | openssl-4-migration-staging | 1 | 67 | PENDING | none | missing-pr | github:systemd/systemd |  |
-| libevent | openssl-4-migration-staging | 0 | 61 | PENDING | none | missing-pr | github:libevent/libevent |  |
-| python@3.13 | openssl-4-migration-staging | 0 | 48 | PENDING | none | missing-pr | python |  |
-| libngtcp2 | openssl-4-migration-staging | closure | 24 | PENDING | none | missing-pr | github:ngtcp2/ngtcp2 |  |
-| cargo-c | openssl-4-migration-staging | 2 | 23 | PENDING | none | missing-pr | github:lu-zero/cargo-c |  |
-| pulseaudio | openssl-4-migration-staging | 1 | 21 | PENDING | none | missing-pr | gitlab:gitlab.freedesktop.org/pulseaudio/pulseaudio |  |
-| curl | openssl-4-migration-staging | 1 | 20 | PENDING | none | missing-pr | github:curl/curl |  |
+| python@3.14 | openssl-4-migration-staging | 0 | 453 | PENDING | none | missing-pr | python |  |
+| libssh2 | openssl-4-migration-staging | 0 | 299 | PENDING | none | missing-pr | github:libssh2/libssh2 |  |
+| libgit2 | openssl-4-migration-staging | closure | 277 | PENDING | none | missing-pr | github:libgit2/libgit2 |  |
+| rust | openssl-4-migration-staging | 1 | 275 | PENDING | none | missing-pr | github:rust-lang/rust | [issues#155397](https://github.com/rust-lang/rust/issues/155397) open |
+| krb5 | openssl-4-migration-staging | 0 | 76 | PENDING | none | missing-pr | other |  |
+| systemd | openssl-4-migration-staging | 1 | 66 | PENDING | none | missing-pr | github:systemd/systemd |  |
+| libevent | openssl-4-migration-staging | 0 | 60 | PENDING | none | missing-pr | github:libevent/libevent |  |
+| python@3.13 | openssl-4-migration-staging | 0 | 45 | PENDING | none | missing-pr | python |  |
+| libngtcp2 | openssl-4-migration-staging | closure | 23 | PENDING | none | missing-pr | github:ngtcp2/ngtcp2 |  |
+| cargo-c | openssl-4-migration-staging | 2 | 22 | PENDING | none | missing-pr | github:lu-zero/cargo-c |  |
+| pulseaudio | openssl-4-migration-staging | 1 | 20 | PENDING | none | missing-pr | gitlab:gitlab.freedesktop.org/pulseaudio/pulseaudio |  |
 | ruby | openssl-4-migration-staging | 2 | 20 | PENDING | none | missing-pr | github:ruby/ruby |  |
-| libpq | openssl-4-migration-staging | 1 | 17 | PENDING | none | missing-pr | other |  |
-| pipewire | openssl-4-migration-staging | closure | 17 | PENDING | none | missing-pr | gitlab:gitlab.freedesktop.org/pipewire/pipewire |  |
-| cryptography | openssl-4-migration-staging | 2 | 16 | PENDING | none | missing-pr | github:pyca/cryptography | [issues#14656](https://github.com/pyca/cryptography/issues/14656) closed |
-| ffmpeg | openssl-4-migration-staging | 1 | 13 | PENDING | none | missing-pr | github:FFmpeg/FFmpeg |  |
+| curl | openssl-4-migration-staging | 1 | 19 | PENDING | none | missing-pr | github:curl/curl |  |
+| pipewire | openssl-4-migration-staging | closure | 16 | PENDING | none | missing-pr | gitlab:gitlab.freedesktop.org/pipewire/pipewire |  |
+| libpq | openssl-4-migration-staging | 1 | 15 | PENDING | none | missing-pr | other |  |
+| cryptography | openssl-4-migration-staging | 2 | 12 | PENDING | none | missing-pr | github:pyca/cryptography | [issues#14656](https://github.com/pyca/cryptography/issues/14656) closed |
+| ffmpeg | openssl-4-migration-staging | 1 | 12 | PENDING | none | missing-pr | github:FFmpeg/FFmpeg |  |
 | grpc | openssl-4-migration-staging | 0 | 12 | PENDING | none | missing-pr | github:grpc/grpc | [issues#42020](https://github.com/grpc/grpc/issues/42020) open |
 | libfido2 | openssl-4-migration-staging | 0 | 12 | PENDING | none | missing-pr | github:Yubico/libfido2 | [issues#966](https://github.com/Yubico/libfido2/issues/966) closed |
 | apr-util | openssl-4-migration-staging | 0 | 11 | PENDING | none | missing-pr | apache |  |
 | openldap | openssl-4-migration-staging | 0 | 11 | PENDING | none | missing-pr | other |  |
-| qtbase | openssl-4-migration-staging | 1 | 10 | PENDING | none | missing-pr | qt |  |
 | libzip | openssl-4-migration-staging | closure | 9 | PENDING | none | missing-pr | other |  |
-| aws-c-cal | openssl-4-migration-staging | closure | 8 | PENDING | none | missing-pr | github:awslabs/aws-c-cal |  |
+| qtbase | openssl-4-migration-staging | 1 | 9 | PENDING | none | missing-pr | qt |  |
 | httpd | openssl-4-migration-staging | 1 | 8 | PENDING | none | missing-pr | apache |  |
-| s2n | openssl-4-migration-staging | closure | 8 | PENDING | none | missing-pr | github:aws/s2n-tls | [issues#5783](https://github.com/aws/s2n-tls/issues/5783) open |
-| aws-c-io | openssl-4-migration-staging | closure | 7 | PENDING | none | missing-pr | github:awslabs/aws-c-io |  |
 | folly | openssl-4-migration-staging | 1 | 7 | PENDING | none | missing-pr | github:facebook/folly |  |
 | freetds | openssl-4-migration-staging | 0 | 7 | PENDING | none | missing-pr | github:FreeTDS/freetds |  |
+| libssh | openssl-4-migration-staging | 0 | 7 | PENDING | none | missing-pr | other |  |
 | node | openssl-4-migration-staging | 1 | 7 | PENDING | none | missing-pr | github:nodejs/node | [issues#62817](https://github.com/nodejs/node/issues/62817) closed |
-| libssh | openssl-4-migration-staging | 0 | 6 | PENDING | none | missing-pr | other |  |
 | rtmpdump | openssl-4-migration-staging | closure | 6 | PENDING | none | missing-pr | other |  |
 | srt | openssl-4-migration-staging | 0 | 6 | PENDING | none | missing-pr | github:Haivision/srt |  |
-| srtp | openssl-4-migration-staging | closure | 6 | PENDING | none | missing-pr | github:cisco/libsrtp |  |
+| aws-c-cal | openssl-4-migration-staging | closure | 5 | PENDING | none | missing-pr | github:awslabs/aws-c-cal |  |
 | hiredis | openssl-4-migration-staging | 0 | 5 | PENDING | none | missing-pr | github:redis/hiredis |  |
 | libshout | openssl-4-migration-staging | closure | 5 | PENDING | none | missing-pr | other |  |
-| mariadb-connector-c | openssl-4-migration-staging | 0 | 5 | PENDING | none | missing-pr | github:mariadb-corporation/mariadb-connector-c |  |
 | net-snmp | openssl-4-migration-staging | closure | 5 | PENDING | none | missing-pr | github:net-snmp/net-snmp |  |
+| s2n | openssl-4-migration-staging | closure | 5 | PENDING | none | missing-pr | github:aws/s2n-tls | [issues#5783](https://github.com/aws/s2n-tls/issues/5783) open |
+| srtp | openssl-4-migration-staging | closure | 5 | PENDING | none | missing-pr | github:cisco/libsrtp |  |
 | thrift | openssl-4-migration-staging | closure | 5 | PENDING | none | missing-pr | github:apache/thrift |  |
 | apache-arrow | openssl-4-migration-staging | 1 | 4 | PENDING | none | missing-pr | github:apache/arrow |  |
-| bind | openssl-4-migration-staging | 1 | 4 | PENDING | none | missing-pr | gitlab:gitlab.isc.org/isc-projects/bind9 |  |
 | gstreamer | openssl-4-migration-staging | 3 | 4 | PENDING | none | missing-pr | gitlab:gitlab.freedesktop.org/gstreamer/gstreamer |  |
+| mariadb-connector-c | openssl-4-migration-staging | 0 | 4 | PENDING | none | missing-pr | github:mariadb-corporation/mariadb-connector-c |  |
 | unbound | openssl-4-migration-staging | 1 | 4 | PENDING | none | missing-pr | github:NLnetLabs/unbound |  |
+| bind | openssl-4-migration-staging | 1 | 3 | PENDING | none | missing-pr | gitlab:gitlab.isc.org/isc-projects/bind9 |  |
 | python@3.12 | openssl-4-migration-staging | 0 | 3 | PENDING | none | missing-pr | python |  |
 | tcl-tk@8 | openssl-4-migration-staging | 0 | 3 | PENDING | none | missing-pr | other |  |
 | gdal | openssl-4-migration-staging | 2 | 2 | PENDING | none | missing-pr | github:OSGeo/gdal |  |
@@ -86,26 +85,26 @@ Top 20 pending staged formulae with upstream metadata and no curated upstream is
 
 | Formula | Depth | Impact | Upstream | Search | Readiness |
 |---|---:|---:|---|---|---|
-| python@3.14 | 0 | 460 | python |  | missing-pr |
-| libssh2 | 0 | 305 | github:libssh2/libssh2 | [issues](https://github.com/search?q=repo%3Alibssh2%2Flibssh2+%22OpenSSL+4%22&type=issues) | missing-pr |
-| libgit2 | closure | 282 | github:libgit2/libgit2 | [issues](https://github.com/search?q=repo%3Alibgit2%2Flibgit2+%22OpenSSL+4%22&type=issues) | missing-pr |
-| systemd | 1 | 67 | github:systemd/systemd | [issues](https://github.com/search?q=repo%3Asystemd%2Fsystemd+%22OpenSSL+4%22&type=issues) | missing-pr |
-| libevent | 0 | 61 | github:libevent/libevent | [issues](https://github.com/search?q=repo%3Alibevent%2Flibevent+%22OpenSSL+4%22&type=issues) | missing-pr |
-| python@3.13 | 0 | 48 | python |  | missing-pr |
-| libngtcp2 | closure | 24 | github:ngtcp2/ngtcp2 | [issues](https://github.com/search?q=repo%3Angtcp2%2Fngtcp2+%22OpenSSL+4%22&type=issues) | missing-pr |
-| cargo-c | 2 | 23 | github:lu-zero/cargo-c | [issues](https://github.com/search?q=repo%3Alu-zero%2Fcargo-c+%22OpenSSL+4%22&type=issues) | missing-pr |
-| pulseaudio | 1 | 21 | gitlab:gitlab.freedesktop.org/pulseaudio/pulseaudio |  | missing-pr |
-| curl | 1 | 20 | github:curl/curl | [issues](https://github.com/search?q=repo%3Acurl%2Fcurl+%22OpenSSL+4%22&type=issues) | missing-pr |
+| python@3.14 | 0 | 453 | python |  | missing-pr |
+| libssh2 | 0 | 299 | github:libssh2/libssh2 | [issues](https://github.com/search?q=repo%3Alibssh2%2Flibssh2+%22OpenSSL+4%22&type=issues) | missing-pr |
+| libgit2 | closure | 277 | github:libgit2/libgit2 | [issues](https://github.com/search?q=repo%3Alibgit2%2Flibgit2+%22OpenSSL+4%22&type=issues) | missing-pr |
+| systemd | 1 | 66 | github:systemd/systemd | [issues](https://github.com/search?q=repo%3Asystemd%2Fsystemd+%22OpenSSL+4%22&type=issues) | missing-pr |
+| libevent | 0 | 60 | github:libevent/libevent | [issues](https://github.com/search?q=repo%3Alibevent%2Flibevent+%22OpenSSL+4%22&type=issues) | missing-pr |
+| python@3.13 | 0 | 45 | python |  | missing-pr |
+| libngtcp2 | closure | 23 | github:ngtcp2/ngtcp2 | [issues](https://github.com/search?q=repo%3Angtcp2%2Fngtcp2+%22OpenSSL+4%22&type=issues) | missing-pr |
+| cargo-c | 2 | 22 | github:lu-zero/cargo-c | [issues](https://github.com/search?q=repo%3Alu-zero%2Fcargo-c+%22OpenSSL+4%22&type=issues) | missing-pr |
+| pulseaudio | 1 | 20 | gitlab:gitlab.freedesktop.org/pulseaudio/pulseaudio |  | missing-pr |
 | ruby | 2 | 20 | github:ruby/ruby | [issues](https://github.com/search?q=repo%3Aruby%2Fruby+%22OpenSSL+4%22&type=issues) | missing-pr |
-| pipewire | closure | 17 | gitlab:gitlab.freedesktop.org/pipewire/pipewire |  | missing-pr |
-| ffmpeg | 1 | 13 | github:FFmpeg/FFmpeg | [issues](https://github.com/search?q=repo%3AFFmpeg%2FFFmpeg+%22OpenSSL+4%22&type=issues) | missing-pr |
+| curl | 1 | 19 | github:curl/curl | [issues](https://github.com/search?q=repo%3Acurl%2Fcurl+%22OpenSSL+4%22&type=issues) | missing-pr |
+| pipewire | closure | 16 | gitlab:gitlab.freedesktop.org/pipewire/pipewire |  | missing-pr |
+| ffmpeg | 1 | 12 | github:FFmpeg/FFmpeg | [issues](https://github.com/search?q=repo%3AFFmpeg%2FFFmpeg+%22OpenSSL+4%22&type=issues) | missing-pr |
 | apr-util | 0 | 11 | apache |  | missing-pr |
-| qtbase | 1 | 10 | qt |  | missing-pr |
-| aws-c-cal | closure | 8 | github:awslabs/aws-c-cal | [issues](https://github.com/search?q=repo%3Aawslabs%2Faws-c-cal+%22OpenSSL+4%22&type=issues) | missing-pr |
+| qtbase | 1 | 9 | qt |  | missing-pr |
 | httpd | 1 | 8 | apache |  | missing-pr |
-| aws-c-io | closure | 7 | github:awslabs/aws-c-io | [issues](https://github.com/search?q=repo%3Aawslabs%2Faws-c-io+%22OpenSSL+4%22&type=issues) | missing-pr |
 | folly | 1 | 7 | github:facebook/folly | [issues](https://github.com/search?q=repo%3Afacebook%2Ffolly+%22OpenSSL+4%22&type=issues) | missing-pr |
 | freetds | 0 | 7 | github:FreeTDS/freetds | [issues](https://github.com/search?q=repo%3AFreeTDS%2Ffreetds+%22OpenSSL+4%22&type=issues) | missing-pr |
+| srt | 0 | 6 | github:Haivision/srt | [issues](https://github.com/search?q=repo%3AHaivision%2Fsrt+%22OpenSSL+4%22&type=issues) | missing-pr |
+| aws-c-cal | closure | 5 | github:awslabs/aws-c-cal | [issues](https://github.com/search?q=repo%3Aawslabs%2Faws-c-cal+%22OpenSSL+4%22&type=issues) | missing-pr |
 
 ## Curated Upstream Issues
 

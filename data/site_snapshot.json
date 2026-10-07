@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-06T13:15:10Z",
+  "generated_at": "2026-10-07T13:16:16Z",
   "repository": "Homebrew/homebrew-core",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "target_branch": "openssl-4-migration-staging",
   "scope": "staging",
   "summary": {
-    "staged_formulae": 56,
+    "staged_formulae": 55,
     "done": 3,
-    "pending": 53,
+    "pending": 52,
     "open_staging_prs": 0,
     "current_gate": "Batch 0 — Roots",
     "current_gate_pending": 20,
@@ -20,7 +20,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 659,
+      "impact_count": 649,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -55,7 +55,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 460,
+      "impact_count": 453,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -90,7 +90,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 305,
+      "impact_count": 299,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -130,7 +130,7 @@
       "live_status": "PENDING",
       "depth": null,
       "group_label": "Staging closure",
-      "impact_count": 282,
+      "impact_count": 277,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -170,7 +170,7 @@
       "live_status": "PENDING",
       "depth": 1,
       "group_label": "Batch 1",
-      "impact_count": 280,
+      "impact_count": 275,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -213,7 +213,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 135,
+      "impact_count": 131,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -248,7 +248,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 79,
+      "impact_count": 76,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -283,7 +283,7 @@
       "live_status": "PENDING",
       "depth": 1,
       "group_label": "Batch 1",
-      "impact_count": 67,
+      "impact_count": 66,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -323,7 +323,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 61,
+      "impact_count": 60,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -363,7 +363,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 48,
+      "impact_count": 45,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -398,7 +398,7 @@
       "live_status": "PENDING",
       "depth": null,
       "group_label": "Staging closure",
-      "impact_count": 24,
+      "impact_count": 23,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -438,7 +438,7 @@
       "live_status": "PENDING",
       "depth": 2,
       "group_label": "Batch 2",
-      "impact_count": 23,
+      "impact_count": 22,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -478,7 +478,7 @@
       "live_status": "PENDING",
       "depth": 1,
       "group_label": "Batch 1",
-      "impact_count": 21,
+      "impact_count": 20,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -498,46 +498,6 @@
         "url": "https://gitlab.freedesktop.org/pulseaudio/pulseaudio"
       },
       "issues": [],
-      "flags": {
-        "current_gate": false,
-        "ready": false,
-        "draft": false,
-        "ci_blocked": false,
-        "base_mismatch": false,
-        "missing_pr": true,
-        "upstream_blocked": false
-      }
-    },
-    {
-      "name": "curl",
-      "live_status": "PENDING",
-      "depth": 1,
-      "group_label": "Batch 1",
-      "impact_count": 20,
-      "target_branch": "openssl-4-migration-staging",
-      "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
-      },
-      "readiness": [
-        "missing-pr"
-      ],
-      "next_action": "Open migration PR",
-      "upstream": {
-        "provider": "github",
-        "repo": "curl/curl",
-        "url": "https://github.com/curl/curl"
-      },
-      "issues": [
-        {
-          "label": "search",
-          "url": "https://github.com/search?q=repo%3Acurl%2Fcurl+%22OpenSSL+4%22\u0026type=issues"
-        }
-      ],
       "flags": {
         "current_gate": false,
         "ready": false,
@@ -589,11 +549,11 @@
       }
     },
     {
-      "name": "libpq",
+      "name": "curl",
       "live_status": "PENDING",
       "depth": 1,
       "group_label": "Batch 1",
-      "impact_count": 17,
+      "impact_count": 19,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -608,11 +568,16 @@
       ],
       "next_action": "Open migration PR",
       "upstream": {
-        "provider": "other",
-        "repo": "",
-        "url": ""
+        "provider": "github",
+        "repo": "curl/curl",
+        "url": "https://github.com/curl/curl"
       },
-      "issues": [],
+      "issues": [
+        {
+          "label": "search",
+          "url": "https://github.com/search?q=repo%3Acurl%2Fcurl+%22OpenSSL+4%22\u0026type=issues"
+        }
+      ],
       "flags": {
         "current_gate": false,
         "ready": false,
@@ -628,7 +593,7 @@
       "live_status": "PENDING",
       "depth": null,
       "group_label": "Staging closure",
-      "impact_count": 17,
+      "impact_count": 16,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -659,11 +624,46 @@
       }
     },
     {
+      "name": "libpq",
+      "live_status": "PENDING",
+      "depth": 1,
+      "group_label": "Batch 1",
+      "impact_count": 15,
+      "target_branch": "openssl-4-migration-staging",
+      "pr": {
+        "number": 0,
+        "url": "",
+        "base": "",
+        "is_draft": false,
+        "merge_state": "",
+        "updated_at": ""
+      },
+      "readiness": [
+        "missing-pr"
+      ],
+      "next_action": "Open migration PR",
+      "upstream": {
+        "provider": "other",
+        "repo": "",
+        "url": ""
+      },
+      "issues": [],
+      "flags": {
+        "current_gate": false,
+        "ready": false,
+        "draft": false,
+        "ci_blocked": false,
+        "base_mismatch": false,
+        "missing_pr": true,
+        "upstream_blocked": false
+      }
+    },
+    {
       "name": "cryptography",
       "live_status": "PENDING",
       "depth": 2,
       "group_label": "Batch 2",
-      "impact_count": 16,
+      "impact_count": 12,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -706,7 +706,7 @@
       "live_status": "PENDING",
       "depth": 1,
       "group_label": "Batch 1",
-      "impact_count": 13,
+      "impact_count": 12,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -898,41 +898,6 @@
       }
     },
     {
-      "name": "qtbase",
-      "live_status": "PENDING",
-      "depth": 1,
-      "group_label": "Batch 1",
-      "impact_count": 10,
-      "target_branch": "openssl-4-migration-staging",
-      "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
-      },
-      "readiness": [
-        "missing-pr"
-      ],
-      "next_action": "Open migration PR",
-      "upstream": {
-        "provider": "qt",
-        "repo": "",
-        "url": ""
-      },
-      "issues": [],
-      "flags": {
-        "current_gate": false,
-        "ready": false,
-        "draft": false,
-        "ci_blocked": false,
-        "base_mismatch": false,
-        "missing_pr": true,
-        "upstream_blocked": false
-      }
-    },
-    {
       "name": "libzip",
       "live_status": "PENDING",
       "depth": null,
@@ -968,11 +933,11 @@
       }
     },
     {
-      "name": "aws-c-cal",
+      "name": "qtbase",
       "live_status": "PENDING",
-      "depth": null,
-      "group_label": "Staging closure",
-      "impact_count": 8,
+      "depth": 1,
+      "group_label": "Batch 1",
+      "impact_count": 9,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -987,16 +952,11 @@
       ],
       "next_action": "Open migration PR",
       "upstream": {
-        "provider": "github",
-        "repo": "awslabs/aws-c-cal",
-        "url": "https://github.com/awslabs/aws-c-cal"
+        "provider": "qt",
+        "repo": "",
+        "url": ""
       },
-      "issues": [
-        {
-          "label": "search",
-          "url": "https://github.com/search?q=repo%3Aawslabs%2Faws-c-cal+%22OpenSSL+4%22\u0026type=issues"
-        }
-      ],
+      "issues": [],
       "flags": {
         "current_gate": false,
         "ready": false,
@@ -1032,89 +992,6 @@
         "url": ""
       },
       "issues": [],
-      "flags": {
-        "current_gate": false,
-        "ready": false,
-        "draft": false,
-        "ci_blocked": false,
-        "base_mismatch": false,
-        "missing_pr": true,
-        "upstream_blocked": false
-      }
-    },
-    {
-      "name": "s2n",
-      "live_status": "PENDING",
-      "depth": null,
-      "group_label": "Staging closure",
-      "impact_count": 8,
-      "target_branch": "openssl-4-migration-staging",
-      "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
-      },
-      "readiness": [
-        "missing-pr"
-      ],
-      "next_action": "Open migration PR",
-      "upstream": {
-        "provider": "github",
-        "repo": "aws/s2n-tls",
-        "url": "https://github.com/aws/s2n-tls"
-      },
-      "issues": [
-        {
-          "label": "issues#5783",
-          "state": "open",
-          "status": "relevant",
-          "title": "OpenSSL Support Roadmap",
-          "url": "https://github.com/aws/s2n-tls/issues/5783"
-        }
-      ],
-      "flags": {
-        "current_gate": false,
-        "ready": false,
-        "draft": false,
-        "ci_blocked": false,
-        "base_mismatch": false,
-        "missing_pr": true,
-        "upstream_blocked": true
-      }
-    },
-    {
-      "name": "aws-c-io",
-      "live_status": "PENDING",
-      "depth": null,
-      "group_label": "Staging closure",
-      "impact_count": 7,
-      "target_branch": "openssl-4-migration-staging",
-      "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
-      },
-      "readiness": [
-        "missing-pr"
-      ],
-      "next_action": "Open migration PR",
-      "upstream": {
-        "provider": "github",
-        "repo": "awslabs/aws-c-io",
-        "url": "https://github.com/awslabs/aws-c-io"
-      },
-      "issues": [
-        {
-          "label": "search",
-          "url": "https://github.com/search?q=repo%3Aawslabs%2Faws-c-io+%22OpenSSL+4%22\u0026type=issues"
-        }
-      ],
       "flags": {
         "current_gate": false,
         "ready": false,
@@ -1206,6 +1083,41 @@
       }
     },
     {
+      "name": "libssh",
+      "live_status": "PENDING",
+      "depth": 0,
+      "group_label": "Batch 0 — Roots",
+      "impact_count": 7,
+      "target_branch": "openssl-4-migration-staging",
+      "pr": {
+        "number": 0,
+        "url": "",
+        "base": "",
+        "is_draft": false,
+        "merge_state": "",
+        "updated_at": ""
+      },
+      "readiness": [
+        "missing-pr"
+      ],
+      "next_action": "Open migration PR",
+      "upstream": {
+        "provider": "other",
+        "repo": "",
+        "url": ""
+      },
+      "issues": [],
+      "flags": {
+        "current_gate": true,
+        "ready": false,
+        "draft": false,
+        "ci_blocked": false,
+        "base_mismatch": false,
+        "missing_pr": true,
+        "upstream_blocked": false
+      }
+    },
+    {
       "name": "node",
       "live_status": "PENDING",
       "depth": 1,
@@ -1240,41 +1152,6 @@
       ],
       "flags": {
         "current_gate": false,
-        "ready": false,
-        "draft": false,
-        "ci_blocked": false,
-        "base_mismatch": false,
-        "missing_pr": true,
-        "upstream_blocked": false
-      }
-    },
-    {
-      "name": "libssh",
-      "live_status": "PENDING",
-      "depth": 0,
-      "group_label": "Batch 0 — Roots",
-      "impact_count": 6,
-      "target_branch": "openssl-4-migration-staging",
-      "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
-      },
-      "readiness": [
-        "missing-pr"
-      ],
-      "next_action": "Open migration PR",
-      "upstream": {
-        "provider": "other",
-        "repo": "",
-        "url": ""
-      },
-      "issues": [],
-      "flags": {
-        "current_gate": true,
         "ready": false,
         "draft": false,
         "ci_blocked": false,
@@ -1359,11 +1236,11 @@
       }
     },
     {
-      "name": "srtp",
+      "name": "aws-c-cal",
       "live_status": "PENDING",
       "depth": null,
       "group_label": "Staging closure",
-      "impact_count": 6,
+      "impact_count": 5,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -1379,13 +1256,13 @@
       "next_action": "Open migration PR",
       "upstream": {
         "provider": "github",
-        "repo": "cisco/libsrtp",
-        "url": "https://github.com/cisco/libsrtp"
+        "repo": "awslabs/aws-c-cal",
+        "url": "https://github.com/awslabs/aws-c-cal"
       },
       "issues": [
         {
           "label": "search",
-          "url": "https://github.com/search?q=repo%3Acisco%2Flibsrtp+%22OpenSSL+4%22\u0026type=issues"
+          "url": "https://github.com/search?q=repo%3Aawslabs%2Faws-c-cal+%22OpenSSL+4%22\u0026type=issues"
         }
       ],
       "flags": {
@@ -1474,46 +1351,6 @@
       }
     },
     {
-      "name": "mariadb-connector-c",
-      "live_status": "PENDING",
-      "depth": 0,
-      "group_label": "Batch 0 — Roots",
-      "impact_count": 5,
-      "target_branch": "openssl-4-migration-staging",
-      "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
-      },
-      "readiness": [
-        "missing-pr"
-      ],
-      "next_action": "Open migration PR",
-      "upstream": {
-        "provider": "github",
-        "repo": "mariadb-corporation/mariadb-connector-c",
-        "url": "https://github.com/mariadb-corporation/mariadb-connector-c"
-      },
-      "issues": [
-        {
-          "label": "search",
-          "url": "https://github.com/search?q=repo%3Amariadb-corporation%2Fmariadb-connector-c+%22OpenSSL+4%22\u0026type=issues"
-        }
-      ],
-      "flags": {
-        "current_gate": true,
-        "ready": false,
-        "draft": false,
-        "ci_blocked": false,
-        "base_mismatch": false,
-        "missing_pr": true,
-        "upstream_blocked": false
-      }
-    },
-    {
       "name": "net-snmp",
       "live_status": "PENDING",
       "depth": null,
@@ -1541,6 +1378,89 @@
         {
           "label": "search",
           "url": "https://github.com/search?q=repo%3Anet-snmp%2Fnet-snmp+%22OpenSSL+4%22\u0026type=issues"
+        }
+      ],
+      "flags": {
+        "current_gate": false,
+        "ready": false,
+        "draft": false,
+        "ci_blocked": false,
+        "base_mismatch": false,
+        "missing_pr": true,
+        "upstream_blocked": false
+      }
+    },
+    {
+      "name": "s2n",
+      "live_status": "PENDING",
+      "depth": null,
+      "group_label": "Staging closure",
+      "impact_count": 5,
+      "target_branch": "openssl-4-migration-staging",
+      "pr": {
+        "number": 0,
+        "url": "",
+        "base": "",
+        "is_draft": false,
+        "merge_state": "",
+        "updated_at": ""
+      },
+      "readiness": [
+        "missing-pr"
+      ],
+      "next_action": "Open migration PR",
+      "upstream": {
+        "provider": "github",
+        "repo": "aws/s2n-tls",
+        "url": "https://github.com/aws/s2n-tls"
+      },
+      "issues": [
+        {
+          "label": "issues#5783",
+          "state": "open",
+          "status": "relevant",
+          "title": "OpenSSL Support Roadmap",
+          "url": "https://github.com/aws/s2n-tls/issues/5783"
+        }
+      ],
+      "flags": {
+        "current_gate": false,
+        "ready": false,
+        "draft": false,
+        "ci_blocked": false,
+        "base_mismatch": false,
+        "missing_pr": true,
+        "upstream_blocked": true
+      }
+    },
+    {
+      "name": "srtp",
+      "live_status": "PENDING",
+      "depth": null,
+      "group_label": "Staging closure",
+      "impact_count": 5,
+      "target_branch": "openssl-4-migration-staging",
+      "pr": {
+        "number": 0,
+        "url": "",
+        "base": "",
+        "is_draft": false,
+        "merge_state": "",
+        "updated_at": ""
+      },
+      "readiness": [
+        "missing-pr"
+      ],
+      "next_action": "Open migration PR",
+      "upstream": {
+        "provider": "github",
+        "repo": "cisco/libsrtp",
+        "url": "https://github.com/cisco/libsrtp"
+      },
+      "issues": [
+        {
+          "label": "search",
+          "url": "https://github.com/search?q=repo%3Acisco%2Flibsrtp+%22OpenSSL+4%22\u0026type=issues"
         }
       ],
       "flags": {
@@ -1634,41 +1554,6 @@
       }
     },
     {
-      "name": "bind",
-      "live_status": "PENDING",
-      "depth": 1,
-      "group_label": "Batch 1",
-      "impact_count": 4,
-      "target_branch": "openssl-4-migration-staging",
-      "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
-      },
-      "readiness": [
-        "missing-pr"
-      ],
-      "next_action": "Open migration PR",
-      "upstream": {
-        "provider": "gitlab",
-        "repo": "gitlab.isc.org/isc-projects/bind9",
-        "url": "https://gitlab.isc.org/isc-projects/bind9"
-      },
-      "issues": [],
-      "flags": {
-        "current_gate": false,
-        "ready": false,
-        "draft": false,
-        "ci_blocked": false,
-        "base_mismatch": false,
-        "missing_pr": true,
-        "upstream_blocked": false
-      }
-    },
-    {
       "name": "erlang",
       "live_status": "DONE",
       "depth": 0,
@@ -1744,6 +1629,46 @@
       }
     },
     {
+      "name": "mariadb-connector-c",
+      "live_status": "PENDING",
+      "depth": 0,
+      "group_label": "Batch 0 — Roots",
+      "impact_count": 4,
+      "target_branch": "openssl-4-migration-staging",
+      "pr": {
+        "number": 0,
+        "url": "",
+        "base": "",
+        "is_draft": false,
+        "merge_state": "",
+        "updated_at": ""
+      },
+      "readiness": [
+        "missing-pr"
+      ],
+      "next_action": "Open migration PR",
+      "upstream": {
+        "provider": "github",
+        "repo": "mariadb-corporation/mariadb-connector-c",
+        "url": "https://github.com/mariadb-corporation/mariadb-connector-c"
+      },
+      "issues": [
+        {
+          "label": "search",
+          "url": "https://github.com/search?q=repo%3Amariadb-corporation%2Fmariadb-connector-c+%22OpenSSL+4%22\u0026type=issues"
+        }
+      ],
+      "flags": {
+        "current_gate": true,
+        "ready": false,
+        "draft": false,
+        "ci_blocked": false,
+        "base_mismatch": false,
+        "missing_pr": true,
+        "upstream_blocked": false
+      }
+    },
+    {
       "name": "unbound",
       "live_status": "PENDING",
       "depth": 1,
@@ -1773,6 +1698,41 @@
           "url": "https://github.com/search?q=repo%3ANLnetLabs%2Funbound+%22OpenSSL+4%22\u0026type=issues"
         }
       ],
+      "flags": {
+        "current_gate": false,
+        "ready": false,
+        "draft": false,
+        "ci_blocked": false,
+        "base_mismatch": false,
+        "missing_pr": true,
+        "upstream_blocked": false
+      }
+    },
+    {
+      "name": "bind",
+      "live_status": "PENDING",
+      "depth": 1,
+      "group_label": "Batch 1",
+      "impact_count": 3,
+      "target_branch": "openssl-4-migration-staging",
+      "pr": {
+        "number": 0,
+        "url": "",
+        "base": "",
+        "is_draft": false,
+        "merge_state": "",
+        "updated_at": ""
+      },
+      "readiness": [
+        "missing-pr"
+      ],
+      "next_action": "Open migration PR",
+      "upstream": {
+        "provider": "gitlab",
+        "repo": "gitlab.isc.org/isc-projects/bind9",
+        "url": "https://gitlab.isc.org/isc-projects/bind9"
+      },
+      "issues": [],
       "flags": {
         "current_gate": false,
         "ready": false,

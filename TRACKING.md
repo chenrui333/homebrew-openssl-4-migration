@@ -1,7 +1,7 @@
-OpenSSL 4 Migration Status (2026-10-06)
+OpenSSL 4 Migration Status (2026-10-07)
 ========================================
-Total pending:  53
-Total done:     3 (5.4%)
+Total pending:  52
+Total done:     3 (5.5%)
 
 Tracking issue: Homebrew/homebrew-core#278366
 
@@ -57,9 +57,8 @@ Batch 2 -> openssl-4-migration-staging   [0/5 done]
 Batch 3 -> openssl-4-migration-staging   [0/1 done]
   gstreamer                PENDING
 
-Staging closure -> openssl-4-migration-staging   [0/12 done]
+Staging closure -> openssl-4-migration-staging   [0/11 done]
   aws-c-cal                PENDING
-  aws-c-io                 PENDING
   libgit2                  PENDING
   libngtcp2                PENDING
   libshout                 PENDING
