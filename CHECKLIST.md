@@ -1,77 +1,77 @@
-# OpenSSL 4 Migration Checklist (2026-10-08)
+# OpenSSL 4 Migration Checklist (2026-10-09)
 
-Progress: **3/55 (5.5%)**
+Progress: **50/55 (90.9%)**
 Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/homebrew-core/issues/278366)
 
 > Staging batches are depth 0 → 1 → 2 → 3 plus their computed transitive closure.
 > This public checklist is scoped to formulae targeting openssl-4-migration-staging.
 
-## Batch 0 — Roots -> openssl-4-migration-staging [3/23]
+## Batch 0 — Roots -> openssl-4-migration-staging [18/23]
 
-- [ ] apr-util
+- [x] ~~apr-util~~
 - [x] ~~cmake~~
 - [ ] dotnet
 - [x] ~~erlang~~
-- [ ] freetds
-- [ ] grpc
-- [ ] hiredis
-- [ ] krb5
-- [ ] libevent
-- [ ] libfido2
-- [ ] librdkafka
-- [ ] libssh
-- [ ] libssh2
-- [ ] mariadb-connector-c
-- [ ] openldap
-- [ ] opusfile
+- [x] ~~freetds~~
+- [x] ~~grpc~~
+- [x] ~~hiredis~~
+- [x] ~~krb5~~
+- [x] ~~libevent~~
+- [x] ~~libfido2~~
+- [x] ~~librdkafka~~
+- [x] ~~libssh~~
+- [x] ~~libssh2~~
+- [x] ~~mariadb-connector-c~~
+- [x] ~~openldap~~
+- [x] ~~opusfile~~
 - [ ] python@3.11
 - [ ] python@3.12
 - [ ] python@3.13
-- [ ] python@3.14
-- [ ] srt
+- [x] ~~python@3.14~~
+- [x] ~~srt~~
 - [ ] tcl-tk@8
 - [x] ~~wget~~
 
-## Batch 1 -> openssl-4-migration-staging [0/15]
+## Batch 1 -> openssl-4-migration-staging [15/15]
 
-- [ ] apache-arrow
-- [ ] bind
-- [ ] curl
-- [ ] ffmpeg
-- [ ] folly
-- [ ] httpd
-- [ ] libpq
-- [ ] node
-- [ ] postgresql@17
-- [ ] postgresql@18
-- [ ] pulseaudio
-- [ ] qtbase
-- [ ] rust
-- [ ] systemd
-- [ ] unbound
+- [x] ~~apache-arrow~~
+- [x] ~~bind~~
+- [x] ~~curl~~
+- [x] ~~ffmpeg~~
+- [x] ~~folly~~
+- [x] ~~httpd~~
+- [x] ~~libpq~~
+- [x] ~~node~~
+- [x] ~~postgresql@17~~
+- [x] ~~postgresql@18~~
+- [x] ~~pulseaudio~~
+- [x] ~~qtbase~~
+- [x] ~~rust~~
+- [x] ~~systemd~~
+- [x] ~~unbound~~
 
-## Batch 2 -> openssl-4-migration-staging [0/5]
+## Batch 2 -> openssl-4-migration-staging [5/5]
 
-- [ ] cargo-c
-- [ ] cryptography
-- [ ] gdal
-- [ ] php
-- [ ] ruby
+- [x] ~~cargo-c~~
+- [x] ~~cryptography~~
+- [x] ~~gdal~~
+- [x] ~~php~~
+- [x] ~~ruby~~
 
-## Batch 3 -> openssl-4-migration-staging [0/1]
+## Batch 3 -> openssl-4-migration-staging [1/1]
 
-- [ ] gstreamer
+- [x] ~~gstreamer~~
 
-## Staging closure -> openssl-4-migration-staging [0/11]
+## Staging closure -> openssl-4-migration-staging [11/11]
 
-- [ ] aws-c-cal
-- [ ] libgit2
-- [ ] libngtcp2
-- [ ] libshout
-- [ ] libzip
-- [ ] net-snmp
-- [ ] pipewire
-- [ ] rtmpdump
-- [ ] s2n
-- [ ] srtp
-- [ ] thrift
+- [x] ~~aws-c-cal~~
+- [x] ~~libgit2~~
+- [x] ~~libngtcp2~~
+- [x] ~~libshout~~
+- [x] ~~libzip~~
+- [x] ~~net-snmp~~
+- [x] ~~pipewire~~
+- [x] ~~rtmpdump~~
+- [x] ~~s2n~~
+- [x] ~~srtp~~
+- [x] ~~thrift~~

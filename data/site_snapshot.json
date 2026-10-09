@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-10-08T13:22:52Z",
+  "generated_at": "2026-10-09T13:11:16Z",
   "repository": "Homebrew/homebrew-core",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "target_branch": "openssl-4-migration-staging",
   "scope": "staging",
   "summary": {
     "staged_formulae": 55,
-    "done": 3,
-    "pending": 52,
+    "done": 50,
+    "pending": 5,
     "open_staging_prs": 0,
     "current_gate": "Batch 0 — Roots",
-    "current_gate_pending": 20,
-    "upstream_blockers": 3,
+    "current_gate_pending": 5,
+    "upstream_blockers": 0,
     "base_mismatches": 0
   },
   "rows": [
@@ -20,7 +20,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 634,
+      "impact_count": 633,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -52,10 +52,10 @@
     },
     {
       "name": "python@3.14",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 441,
+      "impact_count": 440,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -66,9 +66,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "python",
         "repo": "",
@@ -81,13 +81,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "libssh2",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
       "impact_count": 289,
@@ -101,9 +101,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "github",
         "repo": "libssh2/libssh2",
@@ -121,13 +121,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "libgit2",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": null,
       "group_label": "Staging closure",
       "impact_count": 270,
@@ -141,9 +141,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "github",
         "repo": "libgit2/libgit2",
@@ -161,13 +161,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "rust",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": 1,
       "group_label": "Batch 1",
       "impact_count": 268,
@@ -181,9 +181,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "github",
         "repo": "rust-lang/rust",
@@ -204,7 +204,7 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": true
       }
     },
@@ -245,7 +245,7 @@
     },
     {
       "name": "krb5",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
       "impact_count": 75,
@@ -259,9 +259,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "other",
         "repo": "",
@@ -274,13 +274,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "systemd",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": 1,
       "group_label": "Batch 1",
       "impact_count": 65,
@@ -294,9 +294,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "github",
         "repo": "systemd/systemd",
@@ -314,13 +314,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "libevent",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
       "impact_count": 59,
@@ -334,9 +334,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "github",
         "repo": "libevent/libevent",
@@ -354,7 +354,7 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
@@ -363,7 +363,7 @@
       "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 39,
+      "impact_count": 38,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -395,10 +395,10 @@
     },
     {
       "name": "libngtcp2",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": null,
       "group_label": "Staging closure",
-      "impact_count": 21,
+      "impact_count": 20,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -409,9 +409,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "github",
         "repo": "ngtcp2/ngtcp2",
@@ -429,13 +429,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "pulseaudio",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": 1,
       "group_label": "Batch 1",
       "impact_count": 20,
@@ -449,9 +449,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "gitlab",
         "repo": "gitlab.freedesktop.org/pulseaudio/pulseaudio",
@@ -464,16 +464,16 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "ruby",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": 2,
       "group_label": "Batch 2",
-      "impact_count": 20,
+      "impact_count": 19,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -484,9 +484,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "github",
         "repo": "ruby/ruby",
@@ -504,13 +504,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "cargo-c",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": 2,
       "group_label": "Batch 2",
       "impact_count": 18,
@@ -524,9 +524,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "github",
         "repo": "lu-zero/cargo-c",
@@ -544,13 +544,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "curl",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": 1,
       "group_label": "Batch 1",
       "impact_count": 17,
@@ -564,9 +564,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "github",
         "repo": "curl/curl",
@@ -584,13 +584,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "pipewire",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": null,
       "group_label": "Staging closure",
       "impact_count": 16,
@@ -604,9 +604,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "gitlab",
         "repo": "gitlab.freedesktop.org/pipewire/pipewire",
@@ -619,13 +619,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "libpq",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": 1,
       "group_label": "Batch 1",
       "impact_count": 14,
@@ -639,9 +639,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "other",
         "repo": "",
@@ -654,13 +654,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "ffmpeg",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": 1,
       "group_label": "Batch 1",
       "impact_count": 12,
@@ -674,9 +674,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "github",
         "repo": "FFmpeg/FFmpeg",
@@ -694,13 +694,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "libfido2",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
       "impact_count": 12,
@@ -714,9 +714,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "github",
         "repo": "Yubico/libfido2",
@@ -737,13 +737,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "grpc",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
       "impact_count": 11,
@@ -757,9 +757,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "github",
         "repo": "grpc/grpc",
@@ -780,13 +780,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": true
       }
     },
     {
       "name": "openldap",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
       "impact_count": 11,
@@ -800,9 +800,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "other",
         "repo": "",
@@ -815,13 +815,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "apr-util",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
       "impact_count": 10,
@@ -835,9 +835,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "apache",
         "repo": "",
@@ -850,13 +850,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "libzip",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": null,
       "group_label": "Staging closure",
       "impact_count": 9,
@@ -870,9 +870,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "other",
         "repo": "",
@@ -885,13 +885,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "qtbase",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": 1,
       "group_label": "Batch 1",
       "impact_count": 9,
@@ -905,9 +905,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "qt",
         "repo": "",
@@ -920,13 +920,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "cryptography",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": 2,
       "group_label": "Batch 2",
       "impact_count": 8,
@@ -940,9 +940,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "github",
         "repo": "pyca/cryptography",
@@ -963,13 +963,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "folly",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": 1,
       "group_label": "Batch 1",
       "impact_count": 7,
@@ -983,9 +983,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "github",
         "repo": "facebook/folly",
@@ -1003,13 +1003,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "freetds",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
       "impact_count": 7,
@@ -1023,9 +1023,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "github",
         "repo": "FreeTDS/freetds",
@@ -1043,13 +1043,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "httpd",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": 1,
       "group_label": "Batch 1",
       "impact_count": 7,
@@ -1063,9 +1063,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "apache",
         "repo": "",
@@ -1078,16 +1078,16 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
-      "name": "node",
-      "live_status": "PENDING",
-      "depth": 1,
-      "group_label": "Batch 1",
-      "impact_count": 7,
+      "name": "libssh",
+      "live_status": "DONE",
+      "depth": 0,
+      "group_label": "Batch 0 — Roots",
+      "impact_count": 6,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -1098,9 +1098,44 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
+      "upstream": {
+        "provider": "other",
+        "repo": "",
+        "url": ""
+      },
+      "issues": [],
+      "flags": {
+        "current_gate": true,
+        "ready": false,
+        "draft": false,
+        "ci_blocked": false,
+        "base_mismatch": false,
+        "missing_pr": false,
+        "upstream_blocked": false
+      }
+    },
+    {
+      "name": "node",
+      "live_status": "DONE",
+      "depth": 1,
+      "group_label": "Batch 1",
+      "impact_count": 6,
+      "target_branch": "openssl-4-migration-staging",
+      "pr": {
+        "number": 0,
+        "url": "",
+        "base": "",
+        "is_draft": false,
+        "merge_state": "",
+        "updated_at": ""
+      },
+      "readiness": [
+        "done"
+      ],
+      "next_action": "Done",
       "upstream": {
         "provider": "github",
         "repo": "nodejs/node",
@@ -1121,48 +1156,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
-        "upstream_blocked": false
-      }
-    },
-    {
-      "name": "libssh",
-      "live_status": "PENDING",
-      "depth": 0,
-      "group_label": "Batch 0 — Roots",
-      "impact_count": 6,
-      "target_branch": "openssl-4-migration-staging",
-      "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
-      },
-      "readiness": [
-        "missing-pr"
-      ],
-      "next_action": "Open migration PR",
-      "upstream": {
-        "provider": "other",
-        "repo": "",
-        "url": ""
-      },
-      "issues": [],
-      "flags": {
-        "current_gate": true,
-        "ready": false,
-        "draft": false,
-        "ci_blocked": false,
-        "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "rtmpdump",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": null,
       "group_label": "Staging closure",
       "impact_count": 6,
@@ -1176,9 +1176,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "other",
         "repo": "",
@@ -1191,13 +1191,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "srt",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
       "impact_count": 6,
@@ -1211,9 +1211,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "github",
         "repo": "Haivision/srt",
@@ -1231,13 +1231,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "aws-c-cal",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": null,
       "group_label": "Staging closure",
       "impact_count": 5,
@@ -1251,9 +1251,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "github",
         "repo": "awslabs/aws-c-cal",
@@ -1271,13 +1271,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "hiredis",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
       "impact_count": 5,
@@ -1291,9 +1291,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "github",
         "repo": "redis/hiredis",
@@ -1311,13 +1311,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "libshout",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": null,
       "group_label": "Staging closure",
       "impact_count": 5,
@@ -1331,9 +1331,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "other",
         "repo": "",
@@ -1346,13 +1346,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "net-snmp",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": null,
       "group_label": "Staging closure",
       "impact_count": 5,
@@ -1366,9 +1366,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "github",
         "repo": "net-snmp/net-snmp",
@@ -1386,13 +1386,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "s2n",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": null,
       "group_label": "Staging closure",
       "impact_count": 5,
@@ -1406,9 +1406,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "github",
         "repo": "aws/s2n-tls",
@@ -1429,13 +1429,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": true
       }
     },
     {
       "name": "srtp",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": null,
       "group_label": "Staging closure",
       "impact_count": 5,
@@ -1449,9 +1449,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "github",
         "repo": "cisco/libsrtp",
@@ -1469,13 +1469,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "thrift",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": null,
       "group_label": "Staging closure",
       "impact_count": 5,
@@ -1489,9 +1489,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "github",
         "repo": "apache/thrift",
@@ -1509,13 +1509,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "apache-arrow",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": 1,
       "group_label": "Batch 1",
       "impact_count": 4,
@@ -1529,9 +1529,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "github",
         "repo": "apache/arrow",
@@ -1549,7 +1549,7 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
@@ -1595,7 +1595,7 @@
     },
     {
       "name": "gstreamer",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": 3,
       "group_label": "Batch 3",
       "impact_count": 4,
@@ -1609,9 +1609,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "gitlab",
         "repo": "gitlab.freedesktop.org/gstreamer/gstreamer",
@@ -1624,13 +1624,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "bind",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": 1,
       "group_label": "Batch 1",
       "impact_count": 3,
@@ -1644,9 +1644,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "gitlab",
         "repo": "gitlab.isc.org/isc-projects/bind9",
@@ -1659,13 +1659,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "mariadb-connector-c",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
       "impact_count": 3,
@@ -1679,9 +1679,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "github",
         "repo": "mariadb-corporation/mariadb-connector-c",
@@ -1699,7 +1699,7 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
@@ -1775,7 +1775,7 @@
     },
     {
       "name": "unbound",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": 1,
       "group_label": "Batch 1",
       "impact_count": 3,
@@ -1789,9 +1789,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "github",
         "repo": "NLnetLabs/unbound",
@@ -1809,13 +1809,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "gdal",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": 2,
       "group_label": "Batch 2",
       "impact_count": 2,
@@ -1829,9 +1829,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "github",
         "repo": "OSGeo/gdal",
@@ -1849,7 +1849,7 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
@@ -1895,7 +1895,7 @@
     },
     {
       "name": "librdkafka",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
       "impact_count": 1,
@@ -1909,9 +1909,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "github",
         "repo": "confluentinc/librdkafka",
@@ -1929,13 +1929,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "postgresql@17",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": 1,
       "group_label": "Batch 1",
       "impact_count": 1,
@@ -1949,9 +1949,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "other",
         "repo": "",
@@ -1964,13 +1964,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "postgresql@18",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": 1,
       "group_label": "Batch 1",
       "impact_count": 1,
@@ -1984,9 +1984,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "other",
         "repo": "",
@@ -1999,13 +1999,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "opusfile",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
       "impact_count": 0,
@@ -2019,9 +2019,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "gitlab",
         "repo": "gitlab.xiph.org/xiph/opusfile",
@@ -2034,13 +2034,13 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
     {
       "name": "php",
-      "live_status": "PENDING",
+      "live_status": "DONE",
       "depth": 2,
       "group_label": "Batch 2",
       "impact_count": 0,
@@ -2054,9 +2054,9 @@
         "updated_at": ""
       },
       "readiness": [
-        "missing-pr"
+        "done"
       ],
-      "next_action": "Open migration PR",
+      "next_action": "Done",
       "upstream": {
         "provider": "github",
         "repo": "php/php-src",
@@ -2074,7 +2074,7 @@
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": true,
+        "missing_pr": false,
         "upstream_blocked": false
       }
     },
