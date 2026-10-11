@@ -1,4 +1,4 @@
-# OpenSSL 4 Migration Audit (2026-10-10)
+# OpenSSL 4 Migration Audit (2026-10-11)
 
 Tracking issue: Homebrew/homebrew-core#278366
 
@@ -26,7 +26,7 @@ Pending staged formulae are sorted by transitive dependent count.
 
 | Formula | Target | Depth | Impact | Status | PR | Readiness | Upstream | Issues |
 |---|---|---:|---:|---|---|---|---|---|
-| python@3.13 | openssl-4-migration-staging | 0 | 34 | PENDING | none | missing-pr | python |  |
+| python@3.13 | openssl-4-migration-staging | 0 | 15 | PENDING | none | missing-pr | python |  |
 | python@3.12 | openssl-4-migration-staging | 0 | 3 | PENDING | none | missing-pr | python |  |
 | tcl-tk@8 | openssl-4-migration-staging | 0 | 3 | PENDING | none | missing-pr | other |  |
 | dotnet | openssl-4-migration-staging | 0 | 1 | PENDING | none | missing-pr | github:dotnet/dotnet |  |
@@ -38,7 +38,7 @@ Top 20 pending staged formulae with upstream metadata and no curated upstream is
 
 | Formula | Depth | Impact | Upstream | Search | Readiness |
 |---|---:|---:|---|---|---|
-| python@3.13 | 0 | 34 | python |  | missing-pr |
+| python@3.13 | 0 | 15 | python |  | missing-pr |
 | python@3.12 | 0 | 3 | python |  | missing-pr |
 | dotnet | 0 | 1 | github:dotnet/dotnet | [issues](https://github.com/search?q=repo%3Adotnet%2Fdotnet+%22OpenSSL+4%22&type=issues) | missing-pr |
 | python@3.11 | 0 | 0 | python |  | missing-pr |

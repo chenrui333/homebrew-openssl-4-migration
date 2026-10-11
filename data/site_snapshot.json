@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T12:26:07Z",
+  "generated_at": "2026-10-11T12:43:43Z",
   "repository": "Homebrew/homebrew-core",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "target_branch": "openssl-4-migration-staging",
@@ -20,7 +20,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 633,
+      "impact_count": 628,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -55,7 +55,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 412,
+      "impact_count": 376,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -90,7 +90,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 288,
+      "impact_count": 285,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -130,7 +130,7 @@
       "live_status": "DONE",
       "depth": null,
       "group_label": "Staging closure",
-      "impact_count": 269,
+      "impact_count": 266,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -170,7 +170,7 @@
       "live_status": "DONE",
       "depth": 1,
       "group_label": "Batch 1",
-      "impact_count": 267,
+      "impact_count": 264,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -213,7 +213,7 @@
       "live_status": "DONE",
       "depth": null,
       "group_label": "Staging closure",
-      "impact_count": 224,
+      "impact_count": 237,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -248,7 +248,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 123,
+      "impact_count": 121,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -283,7 +283,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 75,
+      "impact_count": 74,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -318,7 +318,7 @@
       "live_status": "DONE",
       "depth": 1,
       "group_label": "Batch 1",
-      "impact_count": 65,
+      "impact_count": 64,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -390,41 +390,6 @@
         "ci_blocked": false,
         "base_mismatch": false,
         "missing_pr": false,
-        "upstream_blocked": false
-      }
-    },
-    {
-      "name": "python@3.13",
-      "live_status": "PENDING",
-      "depth": 0,
-      "group_label": "Batch 0 — Roots",
-      "impact_count": 34,
-      "target_branch": "openssl-4-migration-staging",
-      "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
-      },
-      "readiness": [
-        "missing-pr"
-      ],
-      "next_action": "Open migration PR",
-      "upstream": {
-        "provider": "python",
-        "repo": "",
-        "url": ""
-      },
-      "issues": [],
-      "flags": {
-        "current_gate": true,
-        "ready": false,
-        "draft": false,
-        "ci_blocked": false,
-        "base_mismatch": false,
-        "missing_pr": true,
         "upstream_blocked": false
       }
     },
@@ -655,6 +620,41 @@
         "ci_blocked": false,
         "base_mismatch": false,
         "missing_pr": false,
+        "upstream_blocked": false
+      }
+    },
+    {
+      "name": "python@3.13",
+      "live_status": "PENDING",
+      "depth": 0,
+      "group_label": "Batch 0 — Roots",
+      "impact_count": 15,
+      "target_branch": "openssl-4-migration-staging",
+      "pr": {
+        "number": 0,
+        "url": "",
+        "base": "",
+        "is_draft": false,
+        "merge_state": "",
+        "updated_at": ""
+      },
+      "readiness": [
+        "missing-pr"
+      ],
+      "next_action": "Open migration PR",
+      "upstream": {
+        "provider": "python",
+        "repo": "",
+        "url": ""
+      },
+      "issues": [],
+      "flags": {
+        "current_gate": true,
+        "ready": false,
+        "draft": false,
+        "ci_blocked": false,
+        "base_mismatch": false,
+        "missing_pr": true,
         "upstream_blocked": false
       }
     },
@@ -964,7 +964,7 @@
       "live_status": "DONE",
       "depth": 2,
       "group_label": "Batch 2",
-      "impact_count": 8,
+      "impact_count": 7,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
