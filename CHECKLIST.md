@@ -1,16 +1,16 @@
-# OpenSSL 4 Migration Checklist (2026-10-11)
+# OpenSSL 4 Migration Checklist (2026-10-12)
 
-Progress: **51/56 (91.1%)**
+Progress: **52/56 (92.9%)**
 Tracking issue: [Homebrew/homebrew-core#278366](https://github.com/Homebrew/homebrew-core/issues/278366)
 
 > Staging batches are depth 0 → 1 → 2 → 3 plus their computed transitive closure.
 > This public checklist is scoped to formulae targeting openssl-4-migration-staging.
 
-## Batch 0 — Roots -> openssl-4-migration-staging [18/23]
+## Batch 0 — Roots -> openssl-4-migration-staging [19/23]
 
 - [x] ~~apr-util~~
 - [x] ~~cmake~~
-- [ ] dotnet
+- [x] ~~dotnet~~
 - [x] ~~erlang~~
 - [x] ~~freetds~~
 - [x] ~~grpc~~

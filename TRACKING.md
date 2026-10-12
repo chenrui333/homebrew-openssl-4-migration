@@ -1,14 +1,14 @@
-OpenSSL 4 Migration Status (2026-10-11)
+OpenSSL 4 Migration Status (2026-10-12)
 ========================================
-Total pending:  5
-Total done:     51 (91.1%)
+Total pending:  4
+Total done:     52 (92.9%)
 
 Tracking issue: Homebrew/homebrew-core#278366
 
-Batch 0 — Roots -> openssl-4-migration-staging   [18/23 done]
+Batch 0 — Roots -> openssl-4-migration-staging   [19/23 done]
   apr-util                 DONE
   cmake                    DONE
-  dotnet                   PENDING
+  dotnet                   DONE
   erlang                   DONE
   freetds                  DONE
   grpc                     DONE
