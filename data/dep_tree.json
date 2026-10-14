@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-13T14:06:12Z",
+  "generated_at": "2026-10-14T11:46:23Z",
   "repository": "Homebrew/homebrew-core",
-  "git_head": "923e8f8ebf984ec5d9ed5f0b755699b9f6ad9208",
+  "git_head": "9bfa98a6b9feac1c79c7ab75451e774fdd0439e4",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "staging_branch": "openssl-4-migration-staging",
   "staged_depths": {
@@ -224,7 +224,6 @@
         "gdal",
         "gdcm",
         "getdns",
-        "gitui",
         "grpc",
         "gstreamer",
         "h2o",
@@ -1636,6 +1635,7 @@
         "chawan",
         "curl",
         "git-series",
+        "gitui",
         "julia",
         "libgit2",
         "libgit2@1.7",
@@ -2207,13 +2207,10 @@
       ],
       "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
-        "adios2",
-        "afflib",
         "bbot",
         "btcli",
         "cryptography",
         "csound",
-        "freeradius-server",
         "gdal",
         "gdcm",
         "gensio",
@@ -2226,31 +2223,23 @@
         "omnara",
         "omniorb",
         "pocket-tts",
-        "pushpin",
-        "rawdog",
         "redis",
-        "retdec",
         "root",
         "rpm",
         "sgr",
-        "sigstore",
         "spice-gtk",
-        "syslog-ng",
         "systemd",
-        "texlive",
         "uhd",
         "vineyard",
         "watchman",
         "xrootd",
-        "zeek",
-        "znc"
+        "zeek"
       ],
       "transitive_openssl_formula_dependencies": [
         "cmake"
       ],
       "transitive_openssl_formula_dependents": [
         "adios2",
-        "afflib",
         "aiken",
         "amber",
         "ansible@10",
@@ -2347,7 +2336,6 @@
         "fnox",
         "forbidden",
         "forgejo-cli",
-        "freeradius-server",
         "freerdp",
         "freeswitch",
         "fw",
@@ -2518,7 +2506,6 @@
         "redis",
         "redwax-tool",
         "reshape",
-        "retdec",
         "rink",
         "river",
         "rizin",
@@ -2608,7 +2595,6 @@
         "yozefu",
         "zeek",
         "zellij",
-        "znc",
         "zookeeper",
         "zurl"
       ]
@@ -3510,7 +3496,7 @@
       "path": "Formula/q/qtbase.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.qt.io/",
-      "source_url": "https://download.qt.io/official_releases/qt/6.11/6.11.2/submodules/qtbase-everywhere-src-6.11.2.tar.xz",
+      "source_url": "https://download.qt.io/official_releases/qt/6.12/6.12.0/submodules/qtbase-everywhere-src-6.12.0.tar.xz",
       "head_url": "https://code.qt.io/qt/qtbase.git",
       "upstream_provider": "qt",
       "depth": 1,
@@ -4830,6 +4816,7 @@
         "cargo-udeps",
         "cargo-update",
         "git-series",
+        "gitui",
         "julia",
         "nushell",
         "projectable",
@@ -5385,26 +5372,37 @@
       ],
       "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
+        "adios2",
+        "afflib",
         "bittensor",
         "borgbackup",
         "cryptography",
         "dnsdist",
         "fb-client",
         "forbidden",
+        "freeradius-server",
         "ggshield",
         "hf",
         "ldns",
         "libtorrent-rasterbar",
         "nvchecker",
         "oterm",
+        "pushpin",
+        "rawdog",
+        "retdec",
         "rpmspectool",
-        "uwsgi"
+        "sigstore",
+        "syslog-ng",
+        "texlive",
+        "uwsgi",
+        "znc"
       ],
       "transitive_openssl_formula_dependencies": [
         "cmake"
       ],
       "transitive_openssl_formula_dependents": [
         "adios2",
+        "afflib",
         "alpine",
         "ansible@10",
         "ansible@12",
@@ -5598,6 +5596,7 @@
         "rawdog",
         "recc",
         "redwax-tool",
+        "retdec",
         "riemann-client",
         "rizin",
         "root",
@@ -5652,6 +5651,7 @@
         "yara",
         "zchunk",
         "zeek",
+        "znc",
         "zookeeper",
         "zurl"
       ]
@@ -5848,7 +5848,7 @@
         "open-mpi",
         "openssl@4",
         "pugixml",
-        "python@3.14",
+        "python@3.15",
         "sqlite",
         "yaml-cpp",
         "zeromq",
@@ -5859,7 +5859,7 @@
       ],
       "openssl_formula_dependencies": [
         "cmake",
-        "python@3.14"
+        "python@3.15"
       ],
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
@@ -5887,17 +5887,17 @@
         "automake",
         "libtool",
         "pkgconf",
-        "python@3.14",
+        "python@3.15",
         "openssl@4",
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
-        "python@3.14"
+        "python@3.15"
       ],
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
-        "python@3.14"
+        "python@3.15"
       ],
       "transitive_openssl_formula_dependents": []
     },
@@ -8070,7 +8070,7 @@
       "path": "Formula/c/code-cli.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://code.visualstudio.com",
-      "source_url": "https://github.com/microsoft/vscode/archive/refs/tags/1.141.0.tar.gz",
+      "source_url": "https://github.com/microsoft/vscode/archive/refs/tags/1.141.1.tar.gz",
       "head_url": "https://github.com/microsoft/vscode.git",
       "upstream_provider": "github",
       "upstream_repo": "microsoft/vscode",
@@ -8405,7 +8405,7 @@
       "path": "Formula/c/cpp-httplib.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://yhirose.github.io/cpp-httplib/",
-      "source_url": "https://github.com/yhirose/cpp-httplib/archive/refs/tags/v0.60.1.tar.gz",
+      "source_url": "https://github.com/yhirose/cpp-httplib/archive/refs/tags/v0.61.0.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "yhirose/cpp-httplib",
       "depth": null,
@@ -8549,7 +8549,7 @@
       "path": "Formula/c/crystal.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://crystal-lang.org/",
-      "source_url": "https://github.com/crystal-lang/crystal/archive/refs/tags/1.21.1.tar.gz",
+      "source_url": "https://github.com/crystal-lang/crystal/archive/refs/tags/1.22.0.tar.gz",
       "head_url": "https://github.com/crystal-lang/crystal.git",
       "upstream_provider": "github",
       "upstream_repo": "crystal-lang/crystal",
@@ -8861,7 +8861,7 @@
       "path": "Formula/d/dbx-cli.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://dbxio.com",
-      "source_url": "https://github.com/t8y2/dbx/archive/refs/tags/packages-v0.4.117.tar.gz",
+      "source_url": "https://github.com/t8y2/dbx/archive/refs/tags/packages-v0.4.118.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "t8y2/dbx",
       "depth": null,
@@ -11044,20 +11044,19 @@
         "collectd",
         "json-c",
         "openssl@4",
-        "python@3.14",
+        "python@3.15",
         "talloc",
         "readline",
         "sqlite",
         "gdbm"
       ],
       "openssl_formula_dependencies": [
-        "python@3.14"
+        "python@3.15"
       ],
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
         "net-snmp",
-        "python@3.14",
         "python@3.15",
         "riemann-client"
       ],
@@ -11798,7 +11797,7 @@
     {
       "name": "gitui",
       "path": "Formula/g/gitui.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/gitui-org/gitui",
       "source_url": "https://github.com/gitui-org/gitui/archive/refs/tags/v0.28.1.tar.gz",
       "head_url": "https://github.com/gitui-org/gitui.git",
@@ -11808,14 +11807,16 @@
       "target_branch": "main",
       "staging_required_by": [],
       "dependencies": [
-        "cmake",
         "pkgconf",
         "rust",
-        "openssl@3",
+        "libgit2",
+        "libssh2",
+        "openssl@4",
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
-        "cmake",
+        "libgit2",
+        "libssh2",
         "rust"
       ],
       "openssl_formula_dependents": [],
@@ -13106,7 +13107,7 @@
       "path": "Formula/j/jcode.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://jcode.sh",
-      "source_url": "https://github.com/1jehuang/jcode/archive/refs/tags/v0.95.0.tar.gz",
+      "source_url": "https://github.com/1jehuang/jcode/archive/refs/tags/v0.96.0.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "1jehuang/jcode",
       "depth": null,
@@ -14409,7 +14410,7 @@
       "path": "Formula/lib/libmsquic.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/microsoft/msquic",
-      "source_url": "https://github.com/microsoft/msquic/archive/refs/tags/v2.6.2.tar.gz",
+      "source_url": "https://github.com/microsoft/msquic/archive/refs/tags/v2.6.3.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "microsoft/msquic",
       "depth": null,
@@ -16157,7 +16158,7 @@
       "path": "Formula/m/mise.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://mise.jdx.dev/",
-      "source_url": "https://github.com/jdx/mise/archive/refs/tags/v2026.10.8.tar.gz",
+      "source_url": "https://github.com/jdx/mise/archive/refs/tags/v2026.10.9.tar.gz",
       "head_url": "https://github.com/jdx/mise.git",
       "upstream_provider": "github",
       "upstream_repo": "jdx/mise",
@@ -18456,7 +18457,7 @@
       "path": "Formula/o/openrtsp.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "http://www.live555.com/openRTSP",
-      "source_url": "https://download.live555.com/live.2026.09.23.tar.gz",
+      "source_url": "https://download.live555.com/live.2026.10.13.tar.gz",
       "upstream_provider": "other",
       "depth": null,
       "target_branch": "main",
@@ -19238,7 +19239,7 @@
       "path": "Formula/p/pgbouncer.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.pgbouncer.org/",
-      "source_url": "https://www.pgbouncer.org/downloads/files/1.26.0/pgbouncer-1.26.0.tar.gz",
+      "source_url": "https://www.pgbouncer.org/downloads/files/1.26.1/pgbouncer-1.26.1.tar.gz",
       "head_url": "https://github.com/pgbouncer/pgbouncer.git",
       "upstream_provider": "github",
       "upstream_repo": "pgbouncer/pgbouncer",
@@ -20427,7 +20428,7 @@
       "path": "Formula/p/pup.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.datadoghq.com",
-      "source_url": "https://github.com/DataDog/pup/releases/download/v1.26.0/pup_1.26.0_source.tar.gz",
+      "source_url": "https://github.com/DataDog/pup/releases/download/v1.27.0/pup_1.27.0_source.tar.gz",
       "head_url": "https://github.com/DataDog/pup.git",
       "upstream_provider": "github",
       "upstream_repo": "DataDog/pup",
@@ -20493,12 +20494,12 @@
         "pkgconf",
         "rust",
         "openssl@4",
-        "python@3.14",
+        "python@3.15",
         "qtbase",
         "zeromq"
       ],
       "openssl_formula_dependencies": [
-        "python@3.14",
+        "python@3.15",
         "qtbase",
         "rust"
       ],
@@ -20570,7 +20571,7 @@
       "path": "Formula/p/pypy.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://pypy.org/",
-      "source_url": "https://downloads.python.org/pypy/pypy2.7-v8.0.0-src.tar.gz",
+      "source_url": "https://downloads.python.org/pypy/pypy2.7-v8.0.1-src.tar.gz",
       "head_url": "https://github.com/pypy/pypy.git",
       "upstream_provider": "github",
       "upstream_repo": "pypy/pypy",
@@ -20640,7 +20641,7 @@
       "path": "Formula/p/pypy3.11.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://pypy.org/",
-      "source_url": "https://downloads.python.org/pypy/pypy3.11-v8.0.0-src.tar.gz",
+      "source_url": "https://downloads.python.org/pypy/pypy3.11-v8.0.1-src.tar.gz",
       "upstream_provider": "python",
       "depth": null,
       "target_branch": "main",
@@ -20670,7 +20671,7 @@
       "path": "Formula/p/pypy3.12.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://pypy.org/",
-      "source_url": "https://downloads.python.org/pypy/pypy3.12-v8.0.0-src.tar.gz",
+      "source_url": "https://downloads.python.org/pypy/pypy3.12-v8.0.1-src.tar.gz",
       "upstream_provider": "python",
       "depth": null,
       "target_branch": "main",
@@ -21138,7 +21139,7 @@
       "path": "Formula/r/rattler-index.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/conda/rattler",
-      "source_url": "https://github.com/conda/rattler/archive/refs/tags/rattler_index-v0.33.3.tar.gz",
+      "source_url": "https://github.com/conda/rattler/archive/refs/tags/rattler_index-v0.33.4.tar.gz",
       "head_url": "https://github.com/conda/rattler.git",
       "upstream_provider": "github",
       "upstream_repo": "conda/rattler",
@@ -21181,13 +21182,13 @@
         "certifi",
         "libyaml",
         "pydantic",
-        "python@3.14",
+        "python@3.15",
         "rpds-py",
         "sqlite",
         "openssl@4"
       ],
       "openssl_formula_dependencies": [
-        "python@3.14",
+        "python@3.15",
         "rust"
       ],
       "openssl_formula_dependents": [],
@@ -21448,18 +21449,18 @@
         "cmake",
         "libtool",
         "pkgconf",
-        "python@3.14",
+        "python@3.15",
         "openssl@4",
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
         "cmake",
-        "python@3.14"
+        "python@3.15"
       ],
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
-        "python@3.14"
+        "python@3.15"
       ],
       "transitive_openssl_formula_dependents": []
     },
@@ -22903,11 +22904,11 @@
         "cryptography",
         "openssl@4",
         "pydantic",
-        "python@3.14"
+        "python@3.15"
       ],
       "openssl_formula_dependencies": [
         "cryptography",
-        "python@3.14",
+        "python@3.15",
         "rust"
       ],
       "openssl_formula_dependents": [],
@@ -24119,7 +24120,7 @@
         "openssl@4",
         "pcre2",
         "protobuf",
-        "python@3.14",
+        "python@3.15",
         "rabbitmq-c",
         "riemann-client",
         "autoconf",
@@ -24135,7 +24136,7 @@
         "librdkafka",
         "mongo-c-driver",
         "net-snmp",
-        "python@3.14",
+        "python@3.15",
         "rabbitmq-c",
         "riemann-client",
         "rust"
@@ -24543,7 +24544,7 @@
         "pixman",
         "potrace",
         "pstoedit",
-        "python@3.14",
+        "python@3.15",
         "tcl-tk",
         "libice",
         "libnsl",
@@ -24558,7 +24559,7 @@
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
-        "python@3.14"
+        "python@3.15"
       ],
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
@@ -24949,7 +24950,7 @@
       "path": "Formula/t/trealla-prolog.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/trealla-prolog/trealla-prolog",
-      "source_url": "https://github.com/trealla-prolog/trealla-prolog/archive/refs/tags/v3.13.5.tar.gz",
+      "source_url": "https://github.com/trealla-prolog/trealla-prolog/archive/refs/tags/v3.13.10.tar.gz",
       "head_url": "https://github.com/trealla-prolog/trealla-prolog.git",
       "upstream_provider": "github",
       "upstream_repo": "trealla-prolog/trealla-prolog",
@@ -25625,7 +25626,7 @@
       "path": "Formula/v/vtcode.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://vinhnx.github.io",
-      "source_url": "https://static.crates.io/crates/vtcode/vtcode-0.176.0.crate",
+      "source_url": "https://static.crates.io/crates/vtcode/vtcode-0.177.0.crate",
       "head_url": "https://github.com/vinhnx/vtcode.git",
       "upstream_provider": "github",
       "upstream_repo": "vinhnx/vtcode",
@@ -26682,21 +26683,21 @@
         "cctz",
         "icu4c@78",
         "openssl@4",
-        "python@3.14",
+        "python@3.15",
         "cyrus-sasl",
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
         "cmake",
         "cyrus-sasl",
-        "python@3.14"
+        "python@3.15"
       ],
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
         "cyrus-sasl",
         "krb5",
-        "python@3.14"
+        "python@3.15"
       ],
       "transitive_openssl_formula_dependents": []
     },
