@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-15T11:22:25Z",
+  "generated_at": "2026-10-16T11:17:20Z",
   "repository": "Homebrew/homebrew-core",
-  "git_head": "8c6968b52c8d6b6011b1bbcbe40d67b010ef2709",
+  "git_head": "fe725a80f47bb784cf80d39806fe6517c19fcf7c",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "staging_branch": "openssl-4-migration-staging",
   "staged_depths": {
@@ -1194,7 +1194,7 @@
       "path": "Formula/h/hiredis.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/redis/hiredis",
-      "source_url": "https://github.com/redis/hiredis/archive/refs/tags/v1.4.1.tar.gz",
+      "source_url": "https://github.com/redis/hiredis/archive/refs/tags/v1.5.0.tar.gz",
       "head_url": "https://github.com/redis/hiredis.git",
       "upstream_provider": "github",
       "upstream_repo": "redis/hiredis",
@@ -1635,8 +1635,11 @@
         "cargo-update",
         "chawan",
         "curl",
+        "dura",
         "fw",
         "git-series",
+        "git-trim",
+        "git-xet",
         "gitui",
         "julia",
         "libgit2",
@@ -1648,7 +1651,9 @@
         "prr",
         "rust",
         "sapling",
-        "sheldon"
+        "sheldon",
+        "toml-bombadil",
+        "yek"
       ],
       "transitive_openssl_formula_dependencies": [
         "cmake"
@@ -2212,18 +2217,13 @@
         "btcli",
         "cryptography",
         "gstreamer",
-        "node",
         "omnara",
         "pocket-tts",
         "redis",
-        "root",
         "sgr",
         "spice-gtk",
         "uhd",
-        "vineyard",
-        "watchman",
-        "xrootd",
-        "zeek"
+        "vineyard"
       ],
       "transitive_openssl_formula_dependencies": [
         "cmake"
@@ -2418,7 +2418,6 @@
         "neomutt",
         "netdata",
         "nghttp2",
-        "nmail",
         "node",
         "node@24",
         "noir",
@@ -2562,7 +2561,6 @@
         "wuppiefuzz",
         "x-cli",
         "xorg-server",
-        "xrootd",
         "yek",
         "yozefu",
         "zeek",
@@ -3247,7 +3245,7 @@
       "path": "Formula/n/node.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://nodejs.org/",
-      "source_url": "https://nodejs.org/dist/v26.11.1/node-v26.11.1.tar.xz",
+      "source_url": "https://nodejs.org/dist/v26.12.0/node-v26.12.0.tar.xz",
       "head_url": "https://github.com/nodejs/node.git",
       "upstream_provider": "github",
       "upstream_repo": "nodejs/node",
@@ -3257,7 +3255,7 @@
       "staging_required_by": [],
       "dependencies": [
         "pkgconf",
-        "python@3.14",
+        "python@3.15",
         "rust",
         "abseil",
         "ada-url",
@@ -3282,7 +3280,7 @@
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
-        "python@3.14",
+        "python@3.15",
         "rust"
       ],
       "openssl_formula_dependents": [
@@ -4794,6 +4792,9 @@
         "cargo-update",
         "fw",
         "git-series",
+        "git-xet",
+        "gitlogue",
+        "gittype",
         "gitui",
         "julia",
         "nushell",
@@ -4802,6 +4803,7 @@
         "rust",
         "sem-cli",
         "sheldon",
+        "toml-bombadil",
         "weave"
       ],
       "transitive_openssl_formula_dependencies": [
@@ -5372,12 +5374,14 @@
         "libtorrent-rasterbar",
         "mupdf",
         "nmap",
+        "node",
         "nvchecker",
         "omniorb",
         "oterm",
         "pushpin",
         "rawdog",
         "retdec",
+        "root",
         "rpm",
         "rpmspectool",
         "sigstore",
@@ -5385,6 +5389,9 @@
         "systemd",
         "texlive",
         "uwsgi",
+        "watchman",
+        "xrootd",
+        "zeek",
         "znc"
       ],
       "transitive_openssl_formula_dependencies": [
@@ -5505,6 +5512,7 @@
         "mariadb@11.8",
         "mariadb@12.3",
         "megatools",
+        "meli",
         "mfterm",
         "micromamba",
         "monero",
@@ -5626,7 +5634,6 @@
         "teslamate",
         "texlive",
         "tiledb",
-        "tiny",
         "tomcat-native",
         "trafficserver",
         "tsduck",
@@ -6510,7 +6517,7 @@
       "path": "Formula/a/atuin.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://atuin.sh/",
-      "source_url": "https://github.com/atuinsh/atuin/releases/download/v18.23.0/source.tar.gz",
+      "source_url": "https://github.com/atuinsh/atuin/releases/download/v18.24.0/source.tar.gz",
       "head_url": "https://github.com/atuinsh/atuin.git",
       "upstream_provider": "github",
       "upstream_repo": "atuinsh/atuin",
@@ -6541,7 +6548,7 @@
       "path": "Formula/a/atuin-server.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://atuin.sh",
-      "source_url": "https://github.com/atuinsh/atuin/releases/download/v18.23.0/source.tar.gz",
+      "source_url": "https://github.com/atuinsh/atuin/releases/download/v18.24.0/source.tar.gz",
       "head_url": "https://github.com/atuinsh/atuin.git",
       "upstream_provider": "github",
       "upstream_repo": "atuinsh/atuin",
@@ -7302,6 +7309,7 @@
       ],
       "openssl_formula_dependents": [
         "fastnetmon",
+        "sequoia-chameleon-gnupg",
         "sequoia-sq"
       ],
       "transitive_openssl_formula_dependencies": [
@@ -7309,6 +7317,7 @@
       ],
       "transitive_openssl_formula_dependents": [
         "fastnetmon",
+        "sequoia-chameleon-gnupg",
         "sequoia-sq"
       ]
     },
@@ -7890,7 +7899,7 @@
     {
       "name": "click",
       "path": "Formula/c/click.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/databricks/click",
       "source_url": "https://github.com/databricks/click/archive/refs/tags/v0.6.3.tar.gz",
       "head_url": "https://github.com/databricks/click.git",
@@ -7902,7 +7911,7 @@
       "dependencies": [
         "pkgconf",
         "rust",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [
         "rust"
@@ -8516,7 +8525,7 @@
     {
       "name": "crates-tui",
       "path": "Formula/c/crates-tui.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/ratatui/crates-tui",
       "source_url": "https://github.com/ratatui/crates-tui/archive/refs/tags/v0.1.25.tar.gz",
       "head_url": "https://github.com/ratatui/crates-tui.git",
@@ -8528,7 +8537,7 @@
       "dependencies": [
         "pkgconf",
         "rust",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [
         "rust"
@@ -8860,7 +8869,7 @@
       "path": "Formula/d/dbx-cli.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://dbxio.com",
-      "source_url": "https://github.com/t8y2/dbx/archive/refs/tags/packages-v0.4.119.tar.gz",
+      "source_url": "https://github.com/t8y2/dbx/archive/refs/tags/packages-v0.4.120.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "t8y2/dbx",
       "depth": null,
@@ -9163,7 +9172,7 @@
     {
       "name": "doge",
       "path": "Formula/d/doge.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://dog.ramfield.net/",
       "source_url": "https://github.com/Dj-Codeman/dog_community/archive/refs/tags/v0.2.9.tar.gz",
       "upstream_provider": "github",
@@ -9175,7 +9184,7 @@
         "pandoc",
         "pkgconf",
         "rust",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [
         "rust"
@@ -9363,7 +9372,7 @@
     {
       "name": "duckscript",
       "path": "Formula/d/duckscript.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://sagiegurari.github.io/duckscript",
       "source_url": "https://github.com/sagiegurari/duckscript/archive/refs/tags/0.11.1.tar.gz",
       "head_url": "https://github.com/sagiegurari/duckscript.git",
@@ -9375,7 +9384,7 @@
       "dependencies": [
         "pkgconf",
         "rust",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [
         "rust"
@@ -9393,7 +9402,7 @@
     {
       "name": "duo_unix",
       "path": "Formula/d/duo_unix.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://www.duosecurity.com/docs/duounix",
       "source_url": "https://github.com/duosecurity/duo_unix/archive/refs/tags/duo_unix-2.3.0.tar.gz",
       "upstream_provider": "github",
@@ -9405,7 +9414,7 @@
         "autoconf",
         "automake",
         "libtool",
-        "openssl@3",
+        "openssl@4",
         "linux-pam"
       ],
       "openssl_formula_dependencies": [],
@@ -9420,7 +9429,7 @@
     {
       "name": "dura",
       "path": "Formula/d/dura.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/tkellogg/dura",
       "source_url": "https://github.com/tkellogg/dura/archive/refs/tags/v0.2.0.tar.gz",
       "upstream_provider": "github",
@@ -9431,10 +9440,12 @@
       "dependencies": [
         "pkgconf",
         "rust",
-        "openssl@3",
+        "libssh2",
+        "openssl@4",
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
+        "libssh2",
         "rust"
       ],
       "openssl_formula_dependents": [],
@@ -9493,7 +9504,7 @@
     {
       "name": "dynein",
       "path": "Formula/d/dynein.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/awslabs/dynein",
       "source_url": "https://github.com/awslabs/dynein/archive/refs/tags/v0.3.0.tar.gz",
       "head_url": "https://github.com/awslabs/dynein.git",
@@ -9504,7 +9515,7 @@
       "staging_required_by": [],
       "dependencies": [
         "cmake",
-        "openssl@3",
+        "openssl@4",
         "aws-lc",
         "pkgconf",
         "rust"
@@ -10704,7 +10715,7 @@
     {
       "name": "findomain",
       "path": "Formula/f/findomain.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/Findomain/Findomain",
       "source_url": "https://github.com/Findomain/Findomain/archive/refs/tags/10.0.1.tar.gz",
       "upstream_provider": "github",
@@ -10713,9 +10724,9 @@
       "target_branch": "main",
       "staging_required_by": [],
       "dependencies": [
+        "openssl@4",
         "pkgconf",
-        "rust",
-        "openssl@3"
+        "rust"
       ],
       "openssl_formula_dependencies": [
         "rust"
@@ -11350,7 +11361,7 @@
     {
       "name": "geph4",
       "path": "Formula/g/geph4.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://geph.io/",
       "source_url": "https://github.com/geph-official/geph4-client/archive/refs/tags/v4.99.32.tar.gz",
       "head_url": "https://github.com/geph-official/geph4-client.git",
@@ -11362,7 +11373,8 @@
       "dependencies": [
         "pkgconf",
         "rust",
-        "openssl@3"
+        "sqlite",
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [
         "rust"
@@ -11646,7 +11658,7 @@
     {
       "name": "git-trim",
       "path": "Formula/g/git-trim.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/foriequal0/git-trim",
       "source_url": "https://github.com/foriequal0/git-trim.git",
       "upstream_provider": "github",
@@ -11657,10 +11669,12 @@
       "dependencies": [
         "pkgconf",
         "rust",
-        "openssl@3",
+        "libssh2",
+        "openssl@4",
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
+        "libssh2",
         "rust"
       ],
       "openssl_formula_dependents": [],
@@ -11676,7 +11690,7 @@
     {
       "name": "git-xet",
       "path": "Formula/g/git-xet.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/huggingface/xet-core",
       "source_url": "https://github.com/huggingface/xet-core/archive/refs/tags/git-xet-v0.2.1.tar.gz",
       "upstream_provider": "github",
@@ -11688,10 +11702,14 @@
         "pkgconf",
         "rust",
         "git-lfs",
-        "openssl@3",
+        "libgit2",
+        "libssh2",
+        "openssl@4",
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
+        "libgit2",
+        "libssh2",
         "rust"
       ],
       "openssl_formula_dependents": [],
@@ -11708,7 +11726,7 @@
     {
       "name": "gitlogue",
       "path": "Formula/g/gitlogue.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/unhappychoice/gitlogue",
       "source_url": "https://github.com/unhappychoice/gitlogue/archive/refs/tags/v0.12.0.tar.gz",
       "head_url": "https://github.com/unhappychoice/gitlogue.git",
@@ -11718,12 +11736,14 @@
       "target_branch": "main",
       "staging_required_by": [],
       "dependencies": [
+        "openssl@4",
         "pkgconf",
         "rust",
-        "openssl@3",
+        "libgit2",
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
+        "libgit2",
         "rust"
       ],
       "openssl_formula_dependents": [],
@@ -11739,7 +11759,7 @@
     {
       "name": "gitnr",
       "path": "Formula/g/gitnr.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/reemus-dev/gitnr",
       "source_url": "https://github.com/reemus-dev/gitnr/archive/refs/tags/v0.3.1.tar.gz",
       "head_url": "https://github.com/reemus-dev/gitnr.git",
@@ -11751,7 +11771,7 @@
       "dependencies": [
         "pkgconf",
         "rust",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [
         "rust"
@@ -11769,7 +11789,7 @@
     {
       "name": "gittype",
       "path": "Formula/g/gittype.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/unhappychoice/gittype",
       "source_url": "https://github.com/unhappychoice/gittype/archive/refs/tags/v0.10.3.tar.gz",
       "head_url": "https://github.com/unhappychoice/gittype.git",
@@ -11779,12 +11799,14 @@
       "target_branch": "main",
       "staging_required_by": [],
       "dependencies": [
+        "openssl@4",
         "pkgconf",
         "rust",
-        "openssl@3",
+        "libgit2",
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
+        "libgit2",
         "rust"
       ],
       "openssl_formula_dependents": [],
@@ -12910,7 +12932,7 @@
     {
       "name": "intermodal",
       "path": "Formula/i/intermodal.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://imdl.io",
       "source_url": "https://github.com/casey/intermodal/archive/refs/tags/v0.1.16.tar.gz",
       "upstream_provider": "github",
@@ -12920,9 +12942,9 @@
       "staging_required_by": [],
       "dependencies": [
         "help2man",
+        "openssl@4",
         "pkgconf",
-        "rust",
-        "openssl@3"
+        "rust"
       ],
       "openssl_formula_dependencies": [
         "rust"
@@ -13450,7 +13472,7 @@
     {
       "name": "komac",
       "path": "Formula/k/komac.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/russellbanks/Komac",
       "source_url": "https://github.com/russellbanks/Komac/archive/refs/tags/v2.17.1.tar.gz",
       "head_url": "https://github.com/russellbanks/Komac.git",
@@ -13462,7 +13484,7 @@
       "dependencies": [
         "pkgconf",
         "rust",
-        "openssl@3",
+        "openssl@4",
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
@@ -13502,7 +13524,7 @@
     {
       "name": "kty",
       "path": "Formula/k/kty.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://kty.dev",
       "source_url": "https://github.com/grampelberg/kty/archive/refs/tags/v0.3.1.tar.gz",
       "head_url": "https://github.com/grampelberg/kty.git",
@@ -13514,7 +13536,7 @@
       "dependencies": [
         "pkgconf",
         "rust",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [
         "rust"
@@ -13589,7 +13611,7 @@
     {
       "name": "languagetool-rust",
       "path": "Formula/l/languagetool-rust.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://docs.rs/languagetool-rust",
       "source_url": "https://github.com/jeertmans/languagetool-rust/archive/refs/tags/v3.0.1.tar.gz",
       "head_url": "https://github.com/jeertmans/languagetool-rust.git",
@@ -13601,7 +13623,7 @@
       "dependencies": [
         "pkgconf",
         "rust",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [
         "rust"
@@ -14673,7 +14695,7 @@
     {
       "name": "librespot",
       "path": "Formula/lib/librespot.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/librespot-org/librespot",
       "source_url": "https://github.com/librespot-org/librespot/archive/refs/tags/v0.8.0.tar.gz",
       "head_url": "https://github.com/librespot-org/librespot.git",
@@ -14686,7 +14708,7 @@
         "pkgconf",
         "rust",
         "alsa-lib",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [
         "rust"
@@ -15834,7 +15856,7 @@
     {
       "name": "meli",
       "path": "Formula/m/meli.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://meli-email.org/",
       "source_url": "https://git.meli-email.org/meli/meli/archive/v0.8.13.tar.gz",
       "upstream_provider": "other",
@@ -15844,7 +15866,9 @@
       "dependencies": [
         "pkgconf",
         "rust",
-        "openssl@3"
+        "openssl@4",
+        "sqlite",
+        "dbus"
       ],
       "openssl_formula_dependencies": [
         "rust"
@@ -15855,6 +15879,7 @@
         "libgit2",
         "libssh2",
         "python@3.14",
+        "python@3.15",
         "rust"
       ],
       "transitive_openssl_formula_dependents": []
@@ -15891,7 +15916,7 @@
       "path": "Formula/m/memex.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/nicosuave/memex",
-      "source_url": "https://github.com/nicosuave/memex/archive/refs/tags/v0.29.0.tar.gz",
+      "source_url": "https://github.com/nicosuave/memex/archive/refs/tags/v0.29.1.tar.gz",
       "head_url": "https://github.com/nicosuave/memex.git",
       "upstream_provider": "github",
       "upstream_repo": "nicosuave/memex",
@@ -16157,7 +16182,7 @@
       "path": "Formula/m/mise.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://mise.jdx.dev/",
-      "source_url": "https://github.com/jdx/mise/archive/refs/tags/v2026.10.10.tar.gz",
+      "source_url": "https://github.com/jdx/mise/archive/refs/tags/v2026.10.11.tar.gz",
       "head_url": "https://github.com/jdx/mise.git",
       "upstream_provider": "github",
       "upstream_repo": "jdx/mise",
@@ -16237,7 +16262,7 @@
     {
       "name": "modsurfer",
       "path": "Formula/m/modsurfer.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://dylibso.com/products/modsurfer/",
       "source_url": "https://github.com/dylibso/modsurfer/archive/refs/tags/v0.0.10.tar.gz",
       "upstream_provider": "github",
@@ -16248,7 +16273,7 @@
       "dependencies": [
         "pkgconf",
         "rust",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [
         "rust"
@@ -17552,7 +17577,6 @@
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
-        "python@3.14",
         "python@3.15"
       ],
       "transitive_openssl_formula_dependents": []
@@ -17562,7 +17586,7 @@
       "path": "Formula/n/nmap.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://nmap.org/",
-      "source_url": "https://nmap.org/dist/nmap-7.991.tar.bz2",
+      "source_url": "https://nmap.org/dist/nmap-7.992.tar.bz2",
       "head_url": "https://svn.nmap.org/nmap/",
       "upstream_provider": "other",
       "depth": null,
@@ -18178,7 +18202,7 @@
     {
       "name": "observerward",
       "path": "Formula/o/observerward.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://blog.kali-team.cn/projects/observer_ward/",
       "source_url": "https://github.com/emo-crab/observer_ward/archive/refs/tags/v2026.6.28.tar.gz",
       "upstream_provider": "github",
@@ -18190,7 +18214,7 @@
         "pkgconf",
         "protobuf",
         "rust",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [
         "rust"
@@ -18334,7 +18358,7 @@
     {
       "name": "openapi-tui",
       "path": "Formula/o/openapi-tui.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/zaghaghi/openapi-tui",
       "source_url": "https://github.com/zaghaghi/openapi-tui/archive/refs/tags/0.10.2.tar.gz",
       "head_url": "https://github.com/zaghaghi/openapi-tui.git",
@@ -18346,7 +18370,7 @@
       "dependencies": [
         "pkgconf",
         "rust",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [
         "rust"
@@ -20419,7 +20443,7 @@
       "path": "Formula/p/pup.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.datadoghq.com",
-      "source_url": "https://github.com/DataDog/pup/releases/download/v1.27.1/pup_1.27.1_source.tar.gz",
+      "source_url": "https://github.com/DataDog/pup/releases/download/v2.0.0/pup_2.0.0_source.tar.gz",
       "head_url": "https://github.com/DataDog/pup.git",
       "upstream_provider": "github",
       "upstream_repo": "DataDog/pup",
@@ -21067,7 +21091,7 @@
     {
       "name": "rathole",
       "path": "Formula/r/rathole.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/rathole-org/rathole",
       "source_url": "https://github.com/rathole-org/rathole/archive/refs/tags/v0.5.0.tar.gz",
       "upstream_provider": "github",
@@ -21078,7 +21102,7 @@
       "dependencies": [
         "pkgconf",
         "rust",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [
         "rust"
@@ -21518,7 +21542,7 @@
     {
       "name": "rink",
       "path": "Formula/r/rink.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://rinkcalc.app/about",
       "source_url": "https://github.com/tiffany352/rink-rs/archive/refs/tags/v0.9.0.tar.gz",
       "upstream_provider": "github",
@@ -21530,7 +21554,7 @@
         "asciidoctor",
         "pkgconf",
         "rust",
-        "openssl@3",
+        "openssl@4",
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
@@ -21550,7 +21574,7 @@
     {
       "name": "river",
       "path": "Formula/r/river.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://www.memorysafety.org/initiative/reverse-proxy/",
       "source_url": "https://github.com/memorysafety/river/archive/refs/tags/v0.5.0.tar.gz",
       "head_url": "https://github.com/memorysafety/river.git",
@@ -21563,7 +21587,7 @@
         "cmake",
         "pkgconf",
         "rust",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [
         "cmake",
@@ -21663,7 +21687,7 @@
         "openblas",
         "openssl@4",
         "pcre2",
-        "python@3.14",
+        "python@3.15",
         "sqlite",
         "tbb",
         "unuran",
@@ -21684,7 +21708,7 @@
         "civetweb",
         "cmake",
         "davix",
-        "python@3.14",
+        "python@3.15",
         "xrootd"
       ],
       "openssl_formula_dependents": [],
@@ -22481,7 +22505,7 @@
     {
       "name": "scryer-prolog",
       "path": "Formula/s/scryer-prolog.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://www.scryer.pl",
       "source_url": "https://github.com/mthom/scryer-prolog/archive/refs/tags/v0.10.0.tar.gz",
       "head_url": "https://github.com/mthom/scryer-prolog.git",
@@ -22493,7 +22517,7 @@
       "dependencies": [
         "pkgconf",
         "rust",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [
         "rust"
@@ -22566,24 +22590,28 @@
     {
       "name": "sequoia-chameleon-gnupg",
       "path": "Formula/s/sequoia-chameleon-gnupg.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://sequoia-pgp.org",
       "source_url": "https://gitlab.com/sequoia-pgp/sequoia-chameleon-gnupg/-/archive/v0.13.1/sequoia-chameleon-gnupg-v0.13.1.tar.bz2",
+      "head_url": "https://gitlab.com/sequoia-pgp/sequoia-chameleon-gnupg.git",
       "upstream_provider": "gitlab",
       "upstream_repo": "gitlab.com/sequoia-pgp/sequoia-chameleon-gnupg",
       "depth": null,
       "target_branch": "main",
       "staging_required_by": [],
       "dependencies": [
+        "capnp",
         "pkgconf",
         "rust",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [
+        "capnp",
         "rust"
       ],
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
+        "capnp",
         "cmake",
         "libgit2",
         "libssh2",
@@ -23205,7 +23233,7 @@
       "path": "Formula/s/snx-rs.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/ancwrd1/snx-rs",
-      "source_url": "https://github.com/ancwrd1/snx-rs/archive/refs/tags/v6.5.1.tar.gz",
+      "source_url": "https://github.com/ancwrd1/snx-rs/archive/refs/tags/v6.5.2.tar.gz",
       "head_url": "https://github.com/ancwrd1/snx-rs.git",
       "upstream_provider": "github",
       "upstream_repo": "ancwrd1/snx-rs",
@@ -23235,7 +23263,7 @@
     {
       "name": "so",
       "path": "Formula/s/so.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/samtay/so",
       "source_url": "https://github.com/samtay/so/archive/refs/tags/v0.4.10.tar.gz",
       "upstream_provider": "github",
@@ -23246,7 +23274,7 @@
       "dependencies": [
         "pkgconf",
         "rust",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [
         "rust"
@@ -23553,7 +23581,7 @@
     {
       "name": "spotifyd",
       "path": "Formula/s/spotifyd.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://spotifyd.rs/",
       "source_url": "https://github.com/Spotifyd/spotifyd/archive/refs/tags/v0.4.2.tar.gz",
       "head_url": "https://github.com/Spotifyd/spotifyd.git",
@@ -23568,7 +23596,7 @@
         "portaudio",
         "alsa-lib",
         "dbus",
-        "openssl@3",
+        "openssl@4",
         "pulseaudio"
       ],
       "openssl_formula_dependencies": [
@@ -23592,7 +23620,7 @@
     {
       "name": "spr",
       "path": "Formula/s/spr.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://spacedentist.github.io/spr/",
       "source_url": "https://github.com/spacedentist/spr/archive/refs/tags/v1.3.7.tar.gz",
       "head_url": "https://github.com/spacedentist/spr.git",
@@ -23604,7 +23632,7 @@
       "dependencies": [
         "pkgconf",
         "rust",
-        "openssl@3",
+        "openssl@4",
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
@@ -24386,7 +24414,7 @@
     {
       "name": "teller",
       "path": "Formula/t/teller.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/tellerops/teller",
       "source_url": "https://github.com/tellerops/teller/archive/refs/tags/v2.0.7.tar.gz",
       "head_url": "https://github.com/tellerops/teller.git",
@@ -24399,7 +24427,7 @@
         "pkgconf",
         "protobuf",
         "rust",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [
         "rust"
@@ -24729,7 +24757,7 @@
     {
       "name": "tiny",
       "path": "Formula/t/tiny.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/osa1/tiny",
       "source_url": "https://github.com/osa1/tiny/archive/refs/tags/v0.13.0.tar.gz",
       "head_url": "https://github.com/osa1/tiny.git",
@@ -24741,8 +24769,7 @@
       "dependencies": [
         "pkgconf",
         "rust",
-        "dbus",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [
         "rust"
@@ -24753,7 +24780,6 @@
         "libgit2",
         "libssh2",
         "python@3.14",
-        "python@3.15",
         "rust"
       ],
       "transitive_openssl_formula_dependents": []
@@ -24761,7 +24787,7 @@
     {
       "name": "toktop",
       "path": "Formula/t/toktop.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/htin1/toktop",
       "source_url": "https://github.com/htin1/toktop/archive/refs/tags/v0.1.5.tar.gz",
       "head_url": "https://github.com/htin1/toktop.git",
@@ -24773,7 +24799,7 @@
       "dependencies": [
         "pkgconf",
         "rust",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [
         "rust"
@@ -24815,7 +24841,7 @@
     {
       "name": "toml-bombadil",
       "path": "Formula/t/toml-bombadil.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/oknozor/toml-bombadil",
       "source_url": "https://github.com/oknozor/toml-bombadil/archive/refs/tags/4.2.0.tar.gz",
       "head_url": "https://github.com/oknozor/toml-bombadil.git",
@@ -24827,10 +24853,14 @@
       "dependencies": [
         "pkgconf",
         "rust",
-        "openssl@3",
+        "libgit2",
+        "libssh2",
+        "openssl@4",
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
+        "libgit2",
+        "libssh2",
         "rust"
       ],
       "openssl_formula_dependents": [],
@@ -24969,7 +24999,7 @@
     {
       "name": "trunk",
       "path": "Formula/t/trunk.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://trunk-rs.github.io/trunk",
       "source_url": "https://github.com/trunk-rs/trunk/archive/refs/tags/v0.21.14.tar.gz",
       "head_url": "https://github.com/trunk-rs/trunk.git",
@@ -24981,7 +25011,7 @@
       "dependencies": [
         "pkgconf",
         "rust",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [
         "rust"
@@ -25103,7 +25133,7 @@
     {
       "name": "tuisky",
       "path": "Formula/t/tuisky.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/sugyan/tuisky",
       "source_url": "https://github.com/sugyan/tuisky/archive/refs/tags/v0.2.2.tar.gz",
       "head_url": "https://github.com/sugyan/tuisky.git",
@@ -25115,7 +25145,7 @@
       "dependencies": [
         "pkgconf",
         "rust",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [
         "rust"
@@ -25628,7 +25658,7 @@
       "path": "Formula/v/vtcode.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://vinhnx.github.io",
-      "source_url": "https://static.crates.io/crates/vtcode/vtcode-0.177.0.crate",
+      "source_url": "https://static.crates.io/crates/vtcode/vtcode-0.178.0.crate",
       "head_url": "https://github.com/vinhnx/vtcode.git",
       "upstream_provider": "github",
       "upstream_repo": "vinhnx/vtcode",
@@ -25713,7 +25743,7 @@
     {
       "name": "wally",
       "path": "Formula/w/wally.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://wally.run",
       "source_url": "https://github.com/UpliftGames/wally/archive/refs/tags/v0.3.2.tar.gz",
       "head_url": "https://github.com/UpliftGames/wally.git",
@@ -25725,7 +25755,7 @@
       "dependencies": [
         "pkgconf",
         "rust",
-        "openssl@3",
+        "openssl@4",
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
@@ -25816,7 +25846,7 @@
         "folly",
         "glog",
         "pcre2",
-        "python@3.14",
+        "python@3.15",
         "boost",
         "libunwind"
       ],
@@ -25826,7 +25856,7 @@
         "folly",
         "libevent",
         "mvfst",
-        "python@3.14",
+        "python@3.15",
         "rust"
       ],
       "openssl_formula_dependents": [],
@@ -25983,7 +26013,7 @@
     {
       "name": "wthrr",
       "path": "Formula/w/wthrr.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/ttytm/wthrr-the-weathercrab",
       "source_url": "https://github.com/ttytm/wthrr-the-weathercrab/archive/refs/tags/v1.2.1.tar.gz",
       "head_url": "https://github.com/ttytm/wthrr-the-weathercrab.git",
@@ -25995,7 +26025,7 @@
       "dependencies": [
         "pkgconf",
         "rust",
-        "openssl@3"
+        "openssl@4"
       ],
       "openssl_formula_dependencies": [
         "rust"
@@ -26045,7 +26075,7 @@
     {
       "name": "x-cli",
       "path": "Formula/x/x-cli.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/sferik/x-cli",
       "source_url": "https://github.com/sferik/x-cli/archive/refs/tags/v5.0.0.tar.gz",
       "head_url": "https://github.com/sferik/x-cli.git",
@@ -26055,9 +26085,9 @@
       "target_branch": "main",
       "staging_required_by": [],
       "dependencies": [
+        "openssl@4",
         "pkgconf",
-        "rust",
-        "openssl@3"
+        "rust"
       ],
       "openssl_formula_dependencies": [
         "rust"
@@ -26357,7 +26387,7 @@
         "cmake",
         "pkgconf",
         "python-setuptools",
-        "python@3.14",
+        "python@3.15",
         "davix",
         "krb5",
         "libzip",
@@ -26371,7 +26401,7 @@
         "davix",
         "krb5",
         "libzip",
-        "python@3.14"
+        "python@3.15"
       ],
       "openssl_formula_dependents": [
         "root"
@@ -26381,7 +26411,6 @@
         "davix",
         "krb5",
         "libzip",
-        "python@3.14",
         "python@3.15"
       ],
       "transitive_openssl_formula_dependents": [
@@ -26455,7 +26484,7 @@
     {
       "name": "yek",
       "path": "Formula/y/yek.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/mohsen1/yek",
       "source_url": "https://github.com/mohsen1/yek/archive/refs/tags/v0.25.5.tar.gz",
       "head_url": "https://github.com/mohsen1/yek.git",
@@ -26467,10 +26496,12 @@
       "dependencies": [
         "pkgconf",
         "rust",
-        "openssl@3",
+        "libssh2",
+        "openssl@4",
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
+        "libssh2",
         "rust"
       ],
       "openssl_formula_dependents": [],
@@ -26617,14 +26648,14 @@
         "libuv",
         "node@24",
         "openssl@4",
-        "python@3.14",
+        "python@3.15",
         "zeromq",
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
         "cmake",
         "node@24",
-        "python@3.14"
+        "python@3.15"
       ],
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
