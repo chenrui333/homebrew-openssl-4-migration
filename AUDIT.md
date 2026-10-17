@@ -1,4 +1,4 @@
-# OpenSSL 4 Migration Audit (2026-10-16)
+# OpenSSL 4 Migration Audit (2026-10-17)
 
 Tracking issue: Homebrew/homebrew-core#278366
 
@@ -26,7 +26,7 @@ Pending staged formulae are sorted by transitive dependent count.
 
 | Formula | Target | Depth | Impact | Status | PR | Readiness | Upstream | Issues |
 |---|---|---:|---:|---|---|---|---|---|
-| python@3.13 | openssl-4-migration-staging | 0 | 10 | PENDING | none | missing-pr | python |  |
+| python@3.13 | openssl-4-migration-staging | 0 | 9 | PENDING | none | missing-pr | python |  |
 | python@3.12 | openssl-4-migration-staging | 0 | 3 | PENDING | none | missing-pr | python |  |
 | tcl-tk@8 | openssl-4-migration-staging | 0 | 3 | PENDING | none | missing-pr | other |  |
 | python@3.11 | openssl-4-migration-staging | 0 | 0 | PENDING | none | missing-pr | python |  |
@@ -37,7 +37,7 @@ Top 20 pending staged formulae with upstream metadata and no curated upstream is
 
 | Formula | Depth | Impact | Upstream | Search | Readiness |
 |---|---:|---:|---|---|---|
-| python@3.13 | 0 | 10 | python |  | missing-pr |
+| python@3.13 | 0 | 9 | python |  | missing-pr |
 | python@3.12 | 0 | 3 | python |  | missing-pr |
 | python@3.11 | 0 | 0 | python |  | missing-pr |
 
