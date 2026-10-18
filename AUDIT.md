@@ -1,12 +1,12 @@
-# OpenSSL 4 Migration Audit (2026-10-17)
+# OpenSSL 4 Migration Audit (2026-10-18)
 
 Tracking issue: Homebrew/homebrew-core#278366
 
 ## Summary
 
-- Staging-scope formulae: 56
+- Staging-scope formulae: 57
 - Live pending: 4
-- Live done: 52 (92.9%)
+- Live done: 53 (93.0%)
 - Open staging PRs: 0
 - Draft migration PRs: 0
 - PRs with merge/check blockers: 0
