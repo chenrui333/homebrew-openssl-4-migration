@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T10:58:57Z",
+  "generated_at": "2026-10-19T13:04:55Z",
   "repository": "Homebrew/homebrew-core",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "target_branch": "openssl-4-migration-staging",
@@ -213,7 +213,7 @@
       "live_status": "DONE",
       "depth": null,
       "group_label": "Staging closure",
-      "impact_count": 122,
+      "impact_count": 121,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -248,7 +248,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 122,
+      "impact_count": 121,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -283,7 +283,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 105,
+      "impact_count": 87,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,

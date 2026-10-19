@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-18T10:58:57Z",
+  "generated_at": "2026-10-19T13:04:55Z",
   "repository": "Homebrew/homebrew-core",
-  "git_head": "8a362003821e1605af73bc1488741cc6b2ea4799",
+  "git_head": "bf15382d54581a9a5f9836fbe141cdd1b57eff67",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "staging_branch": "openssl-4-migration-staging",
   "staged_depths": {
@@ -2192,7 +2192,6 @@
         "ffmpeg",
         "gdal",
         "gstreamer",
-        "pulseaudio",
         "qtbase"
       ],
       "dependencies": [
@@ -2233,7 +2232,6 @@
         "ecflow-ui",
         "efl",
         "ejabberd",
-        "ekg2",
         "electric",
         "emqx",
         "erlang",
@@ -2247,7 +2245,6 @@
         "ffmpeg@8",
         "forbidden",
         "freerdp",
-        "freeswitch",
         "gdal",
         "gensio",
         "get_iplayer",
@@ -2256,13 +2253,9 @@
         "gpac",
         "gstreamer",
         "gwenhywfar",
-        "irssi",
         "karchive",
         "lanraragi",
-        "lasso",
         "lastpass-cli",
-        "ldapvi",
-        "libfixbuf",
         "libtorrent-rasterbar",
         "magika",
         "mapnik",
@@ -2273,45 +2266,33 @@
         "mariadb@11.4",
         "mariadb@11.8",
         "mariadb@12.3",
-        "megatools",
         "memex",
         "monkeysphere",
         "mupdf",
         "musikcube",
         "mutt",
-        "ncspot",
         "neomutt",
         "ntopng",
-        "nut",
         "omnara",
-        "opensc",
         "oterm",
         "pdal",
         "pgloader",
-        "pipewire",
         "pocket-tts",
-        "pulseaudio",
         "pushpin",
         "qca",
         "qtbase",
         "qxmpp",
         "rawdog",
-        "redwax-tool",
         "root",
         "screenpipe",
         "sgr",
         "shairport-sync",
         "sigstore",
         "sile",
-        "snapcast",
-        "sofia-sip",
         "spice-gtk",
         "spice-server",
-        "spotifyd",
-        "swtpm",
         "sylpheed",
         "synergy-core",
-        "syslog-ng",
         "tcltls",
         "tectonic",
         "teslamate",
@@ -2451,7 +2432,6 @@
         "arturo",
         "bind",
         "btcli",
-        "ccache",
         "colmap",
         "coreutils",
         "csound",
@@ -3203,7 +3183,6 @@
       ],
       "transitive_openssl_formula_dependencies": [
         "cmake",
-        "python@3.14",
         "python@3.15"
       ],
       "transitive_openssl_formula_dependents": [
@@ -4578,7 +4557,6 @@
         "arturo",
         "bind",
         "btcli",
-        "ccache",
         "colmap",
         "csound",
         "curl",
@@ -5240,7 +5218,6 @@
         "coreutils",
         "libevent",
         "pulseaudio",
-        "python@3.14",
         "python@3.15",
         "systemd",
         "wget"
@@ -7775,7 +7752,7 @@
       "path": "Formula/c/ccache.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://ccache.dev/",
-      "source_url": "https://github.com/ccache/ccache/releases/download/v4.14.1/ccache-4.14.1.tar.xz",
+      "source_url": "https://github.com/ccache/ccache/releases/download/v4.14.2/ccache-4.14.2.tar.xz",
       "head_url": "https://github.com/ccache/ccache.git",
       "upstream_provider": "github",
       "upstream_repo": "ccache/ccache",
@@ -7796,7 +7773,7 @@
         "openssl@4",
         "xxhash",
         "zstd",
-        "gcc",
+        "elfutils",
         "zlib-ng-compat"
       ],
       "openssl_formula_dependencies": [
@@ -7807,15 +7784,13 @@
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
-        "coreutils",
         "cpp-httplib",
         "hiredis",
         "libgit2",
         "libssh2",
         "python@3.15",
         "ruby",
-        "rust",
-        "wget"
+        "rust"
       ],
       "transitive_openssl_formula_dependents": []
     },
@@ -8546,7 +8521,7 @@
       "path": "Formula/c/cpp-httplib.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://yhirose.github.io/cpp-httplib/",
-      "source_url": "https://github.com/yhirose/cpp-httplib/archive/refs/tags/v0.61.0.tar.gz",
+      "source_url": "https://github.com/yhirose/cpp-httplib/archive/refs/tags/v0.62.0.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "yhirose/cpp-httplib",
       "depth": null,
@@ -9003,7 +8978,7 @@
       "path": "Formula/d/dbx-cli.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://dbxio.com",
-      "source_url": "https://github.com/t8y2/dbx/archive/refs/tags/packages-v0.4.123.tar.gz",
+      "source_url": "https://github.com/t8y2/dbx/archive/refs/tags/packages-v0.4.124.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "t8y2/dbx",
       "depth": null,
@@ -9033,7 +9008,7 @@
       "path": "Formula/d/dcmtk.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://dcmtk.org/en/dcmtk/",
-      "source_url": "https://github.com/DCMTK/dcmtk/archive/refs/tags/DCMTK-3.7.0.tar.gz",
+      "source_url": "https://github.com/DCMTK/dcmtk/archive/refs/tags/DCMTK-3.7.1.tar.gz",
       "head_url": "https://git.dcmtk.org/dcmtk.git",
       "upstream_provider": "github",
       "upstream_repo": "DCMTK/dcmtk",
@@ -9132,11 +9107,10 @@
       "name": "dillo",
       "path": "Formula/d/dillo.rb",
       "openssl_dependency": "openssl@4",
-      "homepage": "https://dillo-browser.github.io/",
-      "source_url": "https://github.com/dillo-browser/dillo/releases/download/v3.2.0/dillo-3.2.0.tar.bz2",
-      "head_url": "https://github.com/dillo-browser/dillo.git",
-      "upstream_provider": "github",
-      "upstream_repo": "dillo-browser/dillo",
+      "homepage": "https://dillo-browser.org/",
+      "source_url": "https://dillo-browser.org/release/3.3.0/dillo-3.3.0.tar.gz",
+      "head_url": "https://git.dillo-browser.org/dillo/",
+      "upstream_provider": "other",
       "depth": null,
       "target_branch": "main",
       "staging_required_by": [],
@@ -9147,6 +9121,7 @@
         "jpeg-turbo",
         "libpng",
         "openssl@4",
+        "brotli",
         "libx11",
         "zlib-ng-compat"
       ],
@@ -9954,7 +9929,6 @@
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
-        "python@3.14",
         "python@3.15"
       ],
       "transitive_openssl_formula_dependents": []
@@ -10388,7 +10362,7 @@
       "path": "Formula/f/fakecloud.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://fakecloud.dev/",
-      "source_url": "https://github.com/faiscadev/fakecloud/archive/refs/tags/v0.50.0.tar.gz",
+      "source_url": "https://github.com/faiscadev/fakecloud/archive/refs/tags/v0.51.0.tar.gz",
       "head_url": "https://github.com/faiscadev/fakecloud.git",
       "upstream_provider": "github",
       "upstream_repo": "faiscadev/fakecloud",
@@ -11026,7 +11000,7 @@
       "path": "Formula/f/fnox.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://fnox.jdx.dev/",
-      "source_url": "https://github.com/jdx/fnox/archive/refs/tags/v1.40.0.tar.gz",
+      "source_url": "https://github.com/jdx/fnox/archive/refs/tags/v1.41.0.tar.gz",
       "head_url": "https://github.com/jdx/fnox.git",
       "upstream_provider": "github",
       "upstream_repo": "jdx/fnox",
@@ -11338,7 +11312,6 @@
         "ldns",
         "libks",
         "libpq",
-        "python@3.14",
         "python@3.15",
         "signalwire-client-c",
         "sofia-sip"
@@ -13222,7 +13195,6 @@
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
-        "python@3.14",
         "python@3.15"
       ],
       "transitive_openssl_formula_dependents": []
@@ -13257,7 +13229,7 @@
       "path": "Formula/j/jcode.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://jcode.sh",
-      "source_url": "https://github.com/1jehuang/jcode/archive/refs/tags/v0.98.1.tar.gz",
+      "source_url": "https://github.com/1jehuang/jcode/archive/refs/tags/v0.99.0.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "1jehuang/jcode",
       "depth": null,
@@ -13836,7 +13808,6 @@
         "cmake",
         "coreutils",
         "libxmlsec1",
-        "python@3.14",
         "python@3.15",
         "wget"
       ],
@@ -13948,7 +13919,6 @@
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
-        "python@3.14",
         "python@3.15"
       ],
       "transitive_openssl_formula_dependents": []
@@ -14358,7 +14328,6 @@
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
-        "python@3.14",
         "python@3.15"
       ],
       "transitive_openssl_formula_dependents": []
@@ -15939,7 +15908,7 @@
       "path": "Formula/m/mdcat.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/BIRSAx2/mdcat",
-      "source_url": "https://github.com/BIRSAx2/mdcat/archive/refs/tags/mdcat-2.18.0.tar.gz",
+      "source_url": "https://github.com/BIRSAx2/mdcat/archive/refs/tags/mdcat-2.19.0.tar.gz",
       "head_url": "https://github.com/BIRSAx2/mdcat.git",
       "upstream_provider": "github",
       "upstream_repo": "BIRSAx2/mdcat",
@@ -15988,7 +15957,6 @@
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
-        "python@3.14",
         "python@3.15"
       ],
       "transitive_openssl_formula_dependents": []
@@ -16322,7 +16290,7 @@
       "path": "Formula/m/mise.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://mise.jdx.dev/",
-      "source_url": "https://github.com/jdx/mise/archive/refs/tags/v2026.10.13.tar.gz",
+      "source_url": "https://github.com/jdx/mise/archive/refs/tags/v2026.10.15.tar.gz",
       "head_url": "https://github.com/jdx/mise.git",
       "upstream_provider": "github",
       "upstream_repo": "jdx/mise",
@@ -17391,7 +17359,6 @@
         "libgit2",
         "libssh2",
         "pulseaudio",
-        "python@3.14",
         "python@3.15",
         "rust"
       ],
@@ -17900,7 +17867,6 @@
         "libuv",
         "openssl@3",
         "simdjson",
-        "simdutf",
         "sqlite",
         "uvwasi",
         "zstd",
@@ -18259,7 +18225,6 @@
       "transitive_openssl_formula_dependencies": [
         "cmake",
         "coreutils",
-        "python@3.14",
         "python@3.15",
         "systemd",
         "wget"
@@ -18662,7 +18627,6 @@
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
-        "python@3.14",
         "python@3.15"
       ],
       "transitive_openssl_formula_dependents": []
@@ -18817,7 +18781,7 @@
       "path": "Formula/o/ortp.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://linphone.org/",
-      "source_url": "https://gitlab.linphone.org/BC/public/linphone-sdk/-/archive/5.5.33/linphone-sdk-5.5.33.tar.bz2",
+      "source_url": "https://gitlab.linphone.org/BC/public/linphone-sdk/-/archive/5.5.34/linphone-sdk-5.5.34.tar.bz2",
       "head_url": "https://gitlab.linphone.org/BC/public/linphone-sdk.git",
       "upstream_provider": "gitlab",
       "upstream_repo": "gitlab.linphone.org/BC/public/linphone-sdk",
@@ -18946,7 +18910,7 @@
       "path": "Formula/p/passenger.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.phusionpassenger.com/",
-      "source_url": "https://github.com/phusion/passenger/releases/download/release-6.2.0/passenger-6.2.0.tar.gz",
+      "source_url": "https://github.com/phusion/passenger/releases/download/release-6.2.1/passenger-6.2.1.tar.gz",
       "head_url": "https://github.com/phusion/passenger.git",
       "upstream_provider": "github",
       "upstream_repo": "phusion/passenger",
@@ -19365,7 +19329,7 @@
       "path": "Formula/p/pgbackrest.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://pgbackrest.org",
-      "source_url": "https://github.com/pgbackrest/pgbackrest/releases/download/release/2.59.3/pgbackrest-2.59.3.tar.gz",
+      "source_url": "https://github.com/pgbackrest/pgbackrest/releases/download/release/2.60.0/pgbackrest-2.60.0.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "pgbackrest/pgbackrest",
       "depth": null,
@@ -21561,7 +21525,6 @@
         "cmake",
         "ldns",
         "libevent",
-        "python@3.14",
         "python@3.15",
         "unbound"
       ],
@@ -23273,7 +23236,6 @@
       "transitive_openssl_formula_dependencies": [
         "cmake",
         "coreutils",
-        "python@3.14",
         "python@3.15",
         "systemd",
         "wget"
@@ -23391,7 +23353,7 @@
       "path": "Formula/s/snx-rs.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/ancwrd1/snx-rs",
-      "source_url": "https://github.com/ancwrd1/snx-rs/archive/refs/tags/v6.5.2.tar.gz",
+      "source_url": "https://github.com/ancwrd1/snx-rs/archive/refs/tags/v6.5.3.tar.gz",
       "head_url": "https://github.com/ancwrd1/snx-rs.git",
       "upstream_provider": "github",
       "upstream_repo": "ancwrd1/snx-rs",
@@ -23495,7 +23457,6 @@
       ],
       "transitive_openssl_formula_dependencies": [
         "cmake",
-        "python@3.14",
         "python@3.15"
       ],
       "transitive_openssl_formula_dependents": [
@@ -23768,7 +23729,6 @@
         "libgit2",
         "libssh2",
         "pulseaudio",
-        "python@3.14",
         "python@3.15",
         "rust",
         "systemd",
@@ -24182,7 +24142,6 @@
       "transitive_openssl_formula_dependencies": [
         "cmake",
         "libtpms",
-        "python@3.14",
         "python@3.15",
         "socat"
       ],
@@ -24342,7 +24301,6 @@
         "libssh2",
         "mongo-c-driver",
         "net-snmp",
-        "python@3.14",
         "python@3.15",
         "rabbitmq-c",
         "riemann-client",
@@ -25826,7 +25784,7 @@
       "path": "Formula/v/vtcode.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://vinhnx.github.io",
-      "source_url": "https://static.crates.io/crates/vtcode/vtcode-0.179.0.crate",
+      "source_url": "https://static.crates.io/crates/vtcode/vtcode-0.179.5.crate",
       "head_url": "https://github.com/vinhnx/vtcode.git",
       "upstream_provider": "github",
       "upstream_repo": "vinhnx/vtcode",
