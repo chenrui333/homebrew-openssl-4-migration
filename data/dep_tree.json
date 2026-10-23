@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-22T11:45:41Z",
+  "generated_at": "2026-10-23T11:32:54Z",
   "repository": "Homebrew/homebrew-core",
-  "git_head": "2eefbd80ade67a40f93f0d988703eea6ea5253bf",
+  "git_head": "d5bb02675bc731429a9cf98547f6d24ecd1d1fa1",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "staging_branch": "openssl-4-migration-staging",
   "staged_depths": {
@@ -1080,7 +1080,6 @@
         "cmake",
         "libgit2",
         "libssh2",
-        "python@3.14",
         "python@3.15",
         "rust"
       ],
@@ -2000,7 +1999,7 @@
       "path": "Formula/o/openldap.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.openldap.org/software/",
-      "source_url": "https://www.openldap.org/software/download/OpenLDAP/openldap-release/openldap-2.7.1.tgz",
+      "source_url": "https://www.openldap.org/software/download/OpenLDAP/openldap-release/openldap-2.7.2.tgz",
       "upstream_provider": "other",
       "depth": 0,
       "target_branch": "openssl-4-migration-staging",
@@ -2197,10 +2196,8 @@
       "staging_reason": "staged-depth",
       "staging_required_by": [
         "cryptography",
-        "erlang",
         "gdal",
-        "gstreamer",
-        "qtbase"
+        "gstreamer"
       ],
       "dependencies": [
         "pkgconf",
@@ -2229,80 +2226,31 @@
         "adios2",
         "arturo",
         "bbot",
-        "bigloo",
         "bittensor",
         "btcli",
         "colmap",
-        "couchdb",
         "cryptography",
-        "ecflow-ui",
         "efl",
-        "ejabberd",
-        "electric",
-        "emqx",
-        "erlang",
-        "erlang@26",
-        "erlang@27",
-        "erlang@28",
-        "ettercap",
-        "expert",
-        "ffmpeg@2.8",
         "forbidden",
-        "freerdp",
         "gdal",
-        "gensio",
         "ggshield",
-        "gkrellm",
         "gstreamer",
-        "gwenhywfar",
-        "karchive",
-        "lanraragi",
-        "lastpass-cli",
         "libtorrent-rasterbar",
         "magika",
         "mapnik",
-        "mariadb",
-        "mariadb@10.11",
-        "mariadb@10.5",
-        "mariadb@10.6",
-        "mariadb@11.4",
-        "mariadb@11.8",
-        "mariadb@12.3",
         "memex",
-        "monkeysphere",
-        "mupdf",
-        "mutt",
         "neomutt",
-        "ntopng",
         "omnara",
         "oterm",
         "pdal",
-        "pgloader",
         "pocket-tts",
-        "pushpin",
-        "qca",
-        "qtbase",
-        "qxmpp",
         "rawdog",
         "root",
-        "screenpipe",
         "sgr",
         "sigstore",
-        "sile",
         "spice-gtk",
         "spice-server",
-        "sylpheed",
-        "synergy-core",
-        "tcltls",
-        "tectonic",
-        "teslamate",
-        "texlive",
-        "tomcat-native",
-        "tsduck",
-        "varnish",
-        "vineyard",
-        "zookeeper",
-        "zurl"
+        "vineyard"
       ]
     },
     {
@@ -3279,7 +3227,6 @@
         "coreutils",
         "libgit2",
         "libssh2",
-        "python@3.14",
         "python@3.15",
         "rust",
         "systemd",
@@ -4274,7 +4221,7 @@
       "path": "Formula/r/ruby.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.ruby-lang.org/",
-      "source_url": "https://cache.ruby-lang.org/pub/ruby/4.0/ruby-4.0.8.tar.gz",
+      "source_url": "https://cache.ruby-lang.org/pub/ruby/4.0/ruby-4.0.9.tar.gz",
       "head_url": "https://github.com/ruby/ruby.git",
       "upstream_provider": "github",
       "upstream_repo": "ruby/ruby",
@@ -5192,7 +5139,7 @@
       "path": "Formula/p/pipewire.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://pipewire.org",
-      "source_url": "https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/1.6.9/pipewire-1.6.9.tar.gz",
+      "source_url": "https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/1.6.10/pipewire-1.6.10.tar.gz",
       "head_url": "https://gitlab.freedesktop.org/pipewire/pipewire.git",
       "upstream_provider": "gitlab",
       "upstream_repo": "gitlab.freedesktop.org/pipewire/pipewire",
@@ -6678,7 +6625,7 @@
       "path": "Formula/a/atuin.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://atuin.sh/",
-      "source_url": "https://github.com/atuinsh/atuin/releases/download/v18.24.1/source.tar.gz",
+      "source_url": "https://github.com/atuinsh/atuin/releases/download/v18.24.2/source.tar.gz",
       "head_url": "https://github.com/atuinsh/atuin.git",
       "upstream_provider": "github",
       "upstream_repo": "atuinsh/atuin",
@@ -6709,7 +6656,7 @@
       "path": "Formula/a/atuin-server.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://atuin.sh",
-      "source_url": "https://github.com/atuinsh/atuin/releases/download/v18.24.1/source.tar.gz",
+      "source_url": "https://github.com/atuinsh/atuin/releases/download/v18.24.2/source.tar.gz",
       "head_url": "https://github.com/atuinsh/atuin.git",
       "upstream_provider": "github",
       "upstream_repo": "atuinsh/atuin",
@@ -7051,7 +6998,6 @@
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
-        "python@3.14",
         "python@3.15"
       ],
       "transitive_openssl_formula_dependents": []
@@ -7613,7 +7559,7 @@
       "path": "Formula/c/cargo-instruments.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/cmyr/cargo-instruments",
-      "source_url": "https://github.com/cmyr/cargo-instruments/archive/refs/tags/v0.4.17.tar.gz",
+      "source_url": "https://github.com/cmyr/cargo-instruments/archive/refs/tags/v0.4.18.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "cmyr/cargo-instruments",
       "depth": null,
@@ -8237,7 +8183,7 @@
       "path": "Formula/c/code-cli.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://code.visualstudio.com",
-      "source_url": "https://github.com/microsoft/vscode/archive/refs/tags/1.142.0.tar.gz",
+      "source_url": "https://github.com/microsoft/vscode/archive/refs/tags/1.143.1.tar.gz",
       "head_url": "https://github.com/microsoft/vscode.git",
       "upstream_provider": "github",
       "upstream_repo": "microsoft/vscode",
@@ -8560,7 +8506,6 @@
         "erlang@28",
         "libgit2",
         "libssh2",
-        "python@3.14",
         "python@3.15",
         "rust"
       ],
@@ -8715,7 +8660,7 @@
       "path": "Formula/c/crystal.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://crystal-lang.org/",
-      "source_url": "https://github.com/crystal-lang/crystal/archive/refs/tags/1.22.0.tar.gz",
+      "source_url": "https://github.com/crystal-lang/crystal/archive/refs/tags/1.22.1.tar.gz",
       "head_url": "https://github.com/crystal-lang/crystal.git",
       "upstream_provider": "github",
       "upstream_repo": "crystal-lang/crystal",
@@ -8898,7 +8843,7 @@
       "path": "Formula/d/datadog-static-analyzer.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://docs.datadoghq.com/security/code_security/static_analysis/",
-      "source_url": "https://github.com/DataDog/datadog-static-analyzer/archive/refs/tags/0.9.9.tar.gz",
+      "source_url": "https://github.com/DataDog/datadog-static-analyzer/archive/refs/tags/0.9.10.tar.gz",
       "head_url": "https://github.com/DataDog/datadog-static-analyzer.git",
       "upstream_provider": "github",
       "upstream_repo": "DataDog/datadog-static-analyzer",
@@ -8962,7 +8907,7 @@
       "path": "Formula/d/dbx-cli.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://dbxio.com",
-      "source_url": "https://github.com/t8y2/dbx/archive/refs/tags/packages-v0.4.127.tar.gz",
+      "source_url": "https://github.com/t8y2/dbx/archive/refs/tags/packages-v0.4.128.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "t8y2/dbx",
       "depth": null,
@@ -9695,7 +9640,6 @@
         "coreutils",
         "libgit2",
         "libssh2",
-        "python@3.14",
         "python@3.15",
         "qtbase",
         "rust",
@@ -9879,7 +9823,6 @@
         "krb5",
         "libgit2",
         "libssh2",
-        "python@3.14",
         "python@3.15",
         "rust",
         "wget"
@@ -9979,7 +9922,6 @@
         "erlang",
         "libgit2",
         "libssh2",
-        "python@3.14",
         "python@3.15",
         "rust"
       ],
@@ -10021,7 +9963,6 @@
         "freetds",
         "libgit2",
         "libssh2",
-        "python@3.14",
         "python@3.15",
         "rust",
         "wget"
@@ -10109,7 +10050,6 @@
         "cmake",
         "libgit2",
         "libssh2",
-        "python@3.14",
         "python@3.15",
         "rust"
       ],
@@ -10141,7 +10081,6 @@
         "cmake",
         "libgit2",
         "libssh2",
-        "python@3.14",
         "python@3.15",
         "rust"
       ],
@@ -10173,7 +10112,6 @@
         "cmake",
         "libgit2",
         "libssh2",
-        "python@3.14",
         "python@3.15",
         "rust"
       ],
@@ -10285,7 +10223,6 @@
         "cmake",
         "libgit2",
         "libssh2",
-        "python@3.14",
         "python@3.15",
         "rust"
       ],
@@ -10348,7 +10285,7 @@
       "path": "Formula/e/expert.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://expert-lsp.org",
-      "source_url": "https://github.com/expert-lsp/expert/archive/refs/tags/v0.2.0.tar.gz",
+      "source_url": "https://github.com/expert-lsp/expert/archive/refs/tags/v0.2.2.tar.gz",
       "head_url": "https://github.com/expert-lsp/expert.git",
       "upstream_provider": "github",
       "upstream_repo": "expert-lsp/expert",
@@ -10371,7 +10308,6 @@
         "erlang",
         "libgit2",
         "libssh2",
-        "python@3.14",
         "python@3.15",
         "rust"
       ],
@@ -10761,7 +10697,6 @@
         "libssh2",
         "pipewire",
         "pulseaudio",
-        "python@3.14",
         "python@3.15",
         "rtmpdump",
         "rust",
@@ -11271,7 +11206,6 @@
         "libssh2",
         "pipewire",
         "pulseaudio",
-        "python@3.14",
         "python@3.15",
         "rust",
         "systemd",
@@ -11487,7 +11421,6 @@
         "cmake",
         "coreutils",
         "krb5",
-        "python@3.14",
         "python@3.15",
         "systemd",
         "wget"
@@ -12049,7 +11982,6 @@
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
-        "python@3.14",
         "python@3.15"
       ],
       "transitive_openssl_formula_dependents": []
@@ -12332,7 +12264,6 @@
         "coreutils",
         "libgit2",
         "libssh2",
-        "python@3.14",
         "python@3.15",
         "qtbase",
         "rust",
@@ -12891,6 +12822,7 @@
       "openssl_dependency": "openssl@4",
       "homepage": "https://dfinity.github.io/icp-cli/",
       "source_url": "https://github.com/dfinity/icp-cli/archive/refs/tags/v1.7.0.tar.gz",
+      "head_url": "https://github.com/dfinity/icp-cli.git",
       "upstream_provider": "github",
       "upstream_repo": "dfinity/icp-cli",
       "depth": null,
@@ -13247,7 +13179,7 @@
       "path": "Formula/j/jcode.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://jcode.sh",
-      "source_url": "https://github.com/1jehuang/jcode/archive/refs/tags/v0.99.0.tar.gz",
+      "source_url": "https://github.com/1jehuang/jcode/archive/refs/tags/v0.99.1.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "1jehuang/jcode",
       "depth": null,
@@ -13465,7 +13397,6 @@
         "coreutils",
         "libgit2",
         "libssh2",
-        "python@3.14",
         "python@3.15",
         "qtbase",
         "rust",
@@ -13791,7 +13722,6 @@
         "libgit2",
         "libssh2",
         "node",
-        "python@3.14",
         "python@3.15",
         "redis",
         "rust",
@@ -13865,7 +13795,6 @@
         "libgit2",
         "libngtcp2",
         "libssh2",
-        "python@3.14",
         "python@3.15",
         "rust",
         "wget"
@@ -14948,7 +14877,7 @@
       "path": "Formula/lib/libtorrent-rakshasa.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/rakshasa/libtorrent",
-      "source_url": "https://github.com/rakshasa/libtorrent/archive/refs/tags/v0.16.25.tar.gz",
+      "source_url": "https://github.com/rakshasa/libtorrent/archive/refs/tags/v0.16.26.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "rakshasa/libtorrent",
       "depth": null,
@@ -15620,7 +15549,6 @@
       "transitive_openssl_formula_dependencies": [
         "cmake",
         "krb5",
-        "python@3.14",
         "python@3.15"
       ],
       "transitive_openssl_formula_dependents": []
@@ -15658,7 +15586,6 @@
       "transitive_openssl_formula_dependencies": [
         "cmake",
         "krb5",
-        "python@3.14",
         "python@3.15"
       ],
       "transitive_openssl_formula_dependents": []
@@ -15695,7 +15622,6 @@
       "transitive_openssl_formula_dependencies": [
         "cmake",
         "krb5",
-        "python@3.14",
         "python@3.15"
       ],
       "transitive_openssl_formula_dependents": []
@@ -15732,7 +15658,6 @@
       "transitive_openssl_formula_dependencies": [
         "cmake",
         "krb5",
-        "python@3.14",
         "python@3.15"
       ],
       "transitive_openssl_formula_dependents": []
@@ -15770,7 +15695,6 @@
       "transitive_openssl_formula_dependencies": [
         "cmake",
         "krb5",
-        "python@3.14",
         "python@3.15"
       ],
       "transitive_openssl_formula_dependents": []
@@ -15808,7 +15732,6 @@
       "transitive_openssl_formula_dependencies": [
         "cmake",
         "krb5",
-        "python@3.14",
         "python@3.15"
       ],
       "transitive_openssl_formula_dependents": []
@@ -15846,7 +15769,6 @@
       "transitive_openssl_formula_dependencies": [
         "cmake",
         "krb5",
-        "python@3.14",
         "python@3.15"
       ],
       "transitive_openssl_formula_dependents": []
@@ -16489,7 +16411,7 @@
       "path": "Formula/m/mongo-c-driver.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/mongodb/mongo-c-driver",
-      "source_url": "https://github.com/mongodb/mongo-c-driver/archive/refs/tags/2.5.6.tar.gz",
+      "source_url": "https://github.com/mongodb/mongo-c-driver/archive/refs/tags/2.5.7.tar.gz",
       "head_url": "https://github.com/mongodb/mongo-c-driver.git",
       "upstream_provider": "github",
       "upstream_repo": "mongodb/mongo-c-driver",
@@ -16525,7 +16447,7 @@
       "path": "Formula/m/mongo-c-driver@1.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/mongodb/mongo-c-driver",
-      "source_url": "https://github.com/mongodb/mongo-c-driver/archive/refs/tags/1.30.13.tar.gz",
+      "source_url": "https://github.com/mongodb/mongo-c-driver/archive/refs/tags/1.30.14.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "mongodb/mongo-c-driver",
       "depth": null,
@@ -16631,7 +16553,6 @@
         "coreutils",
         "libgit2",
         "libssh2",
-        "python@3.14",
         "python@3.15",
         "rust",
         "systemd",
@@ -16772,7 +16693,6 @@
         "cmake",
         "libgit2",
         "libssh2",
-        "python@3.14",
         "python@3.15",
         "rust"
       ],
@@ -16867,7 +16787,6 @@
         "coreutils",
         "libgit2",
         "libssh2",
-        "python@3.14",
         "python@3.15",
         "rust",
         "systemd",
@@ -18128,7 +18047,6 @@
         "cmake",
         "hiredis",
         "mariadb-connector-c",
-        "python@3.14",
         "python@3.15"
       ],
       "transitive_openssl_formula_dependents": []
@@ -18608,7 +18526,7 @@
       "path": "Formula/o/openrtsp.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "http://www.live555.com/openRTSP",
-      "source_url": "https://download.live555.com/live.2026.10.22.tar.gz",
+      "source_url": "https://download.live555.com/live.2026.10.23.tar.gz",
       "upstream_provider": "other",
       "depth": null,
       "target_branch": "main",
@@ -18886,7 +18804,7 @@
       "path": "Formula/o/oterm.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/ggozad/oterm",
-      "source_url": "https://files.pythonhosted.org/packages/e8/6b/bc33e856356d0f4c463e33c70bede09b652f8b55a52cc151a4606f1aa663/oterm-0.26.0.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/0f/67/ddde964be663cb5f9c0bc7c6bc34d19749d220cb099be4dd460184b052a4/oterm-0.26.1.tar.gz",
       "upstream_provider": "python",
       "depth": null,
       "target_branch": "main",
@@ -19475,7 +19393,6 @@
       "transitive_openssl_formula_dependencies": [
         "cmake",
         "freetds",
-        "python@3.14",
         "python@3.15"
       ],
       "transitive_openssl_formula_dependents": []
@@ -19849,7 +19766,7 @@
       "path": "Formula/p/pixi.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://pixi.sh",
-      "source_url": "https://github.com/prefix-dev/pixi/archive/refs/tags/v0.82.1.tar.gz",
+      "source_url": "https://github.com/prefix-dev/pixi/archive/refs/tags/v0.83.0.tar.gz",
       "head_url": "https://github.com/prefix-dev/pixi.git",
       "upstream_provider": "github",
       "upstream_repo": "prefix-dev/pixi",
@@ -20036,7 +19953,7 @@
       "path": "Formula/p/pocket-tts.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/kyutai-labs/pocket-tts",
-      "source_url": "https://files.pythonhosted.org/packages/56/e4/08262e47704291a99c211515b17e754d4891a899323a8171e220f468e45b/pocket_tts-3.3.0.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/03/a5/e787a6b68ad100c1f33539e3f9108b32a08d65d94d18996927a3562cdd38/pocket_tts-4.0.1.tar.gz",
       "head_url": "https://github.com/kyutai-labs/pocket-tts.git",
       "upstream_provider": "github",
       "upstream_repo": "kyutai-labs/pocket-tts",
@@ -20609,7 +20526,7 @@
       "path": "Formula/p/pup.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.datadoghq.com",
-      "source_url": "https://github.com/DataDog/pup/releases/download/v2.2.1/pup_2.2.1_source.tar.gz",
+      "source_url": "https://github.com/DataDog/pup/releases/download/v2.3.0/pup_2.3.0_source.tar.gz",
       "head_url": "https://github.com/DataDog/pup.git",
       "upstream_provider": "github",
       "upstream_repo": "DataDog/pup",
@@ -20690,7 +20607,6 @@
         "coreutils",
         "libgit2",
         "libssh2",
-        "python@3.14",
         "python@3.15",
         "qtbase",
         "rust",
@@ -20727,7 +20643,7 @@
       "path": "Formula/p/pyenv.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/pyenv/pyenv",
-      "source_url": "https://github.com/pyenv/pyenv/archive/refs/tags/v2.8.11.tar.gz",
+      "source_url": "https://github.com/pyenv/pyenv/archive/refs/tags/v2.8.13.tar.gz",
       "head_url": "https://github.com/pyenv/pyenv.git",
       "upstream_provider": "github",
       "upstream_repo": "pyenv/pyenv",
@@ -21000,7 +20916,6 @@
         "libgit2",
         "libssh2",
         "pkcs11-helper",
-        "python@3.14",
         "python@3.15",
         "qtbase",
         "rust",
@@ -21107,7 +21022,7 @@
       "path": "Formula/q/qpid-proton.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://qpid.apache.org/proton/",
-      "source_url": "https://www.apache.org/dyn/closer.lua?path=qpid/proton/0.40.0/qpid-proton-0.40.0.tar.gz",
+      "source_url": "https://www.apache.org/dyn/closer.lua?path=qpid/proton/0.41.1/qpid-proton-0.41.1.tar.gz",
       "head_url": "https://github.com/apache/qpid-proton.git",
       "upstream_provider": "github",
       "upstream_repo": "apache/qpid-proton",
@@ -21190,7 +21105,6 @@
         "coreutils",
         "libgit2",
         "libssh2",
-        "python@3.14",
         "python@3.15",
         "qtbase",
         "rust",
@@ -21444,7 +21358,7 @@
       "path": "Formula/r/recc.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://buildgrid.gitlab.io/recc",
-      "source_url": "https://gitlab.com/BuildGrid/buildbox/buildbox/-/archive/1.4.28/buildbox-1.4.28.tar.gz",
+      "source_url": "https://gitlab.com/BuildGrid/buildbox/buildbox/-/archive/1.4.29/buildbox-1.4.29.tar.gz",
       "head_url": "https://gitlab.com/BuildGrid/buildbox/buildbox.git",
       "upstream_provider": "gitlab",
       "upstream_repo": "gitlab.com/BuildGrid/buildbox/buildbox",
@@ -21517,6 +21431,7 @@
         "libtool",
         "rust",
         "openssl@4",
+        "zstd",
         "make"
       ],
       "openssl_formula_dependencies": [
@@ -22212,9 +22127,9 @@
     {
       "name": "ruby-build",
       "path": "Formula/r/ruby-build.rb",
-      "openssl_dependency": "openssl@3",
+      "openssl_dependency": "openssl@4",
       "homepage": "https://rbenv.org/man/ruby-build.1",
-      "source_url": "https://github.com/rbenv/ruby-build/archive/refs/tags/v20261013.tar.gz",
+      "source_url": "https://github.com/rbenv/ruby-build/archive/refs/tags/v20261023.tar.gz",
       "head_url": "https://github.com/rbenv/ruby-build.git",
       "upstream_provider": "github",
       "upstream_repo": "rbenv/ruby-build",
@@ -22224,7 +22139,7 @@
       "dependencies": [
         "autoconf",
         "libyaml",
-        "openssl@3",
+        "openssl@4",
         "pkgconf",
         "readline"
       ],
@@ -22295,7 +22210,7 @@
       "path": "Formula/r/ruby@3.3.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.ruby-lang.org/",
-      "source_url": "https://cache.ruby-lang.org/pub/ruby/3.3/ruby-3.3.12.tar.gz",
+      "source_url": "https://cache.ruby-lang.org/pub/ruby/3.3/ruby-3.3.13.tar.gz",
       "upstream_provider": "other",
       "depth": null,
       "target_branch": "main",
@@ -22326,7 +22241,7 @@
       "path": "Formula/r/ruby@3.4.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.ruby-lang.org/",
-      "source_url": "https://cache.ruby-lang.org/pub/ruby/3.4/ruby-3.4.11.tar.gz",
+      "source_url": "https://cache.ruby-lang.org/pub/ruby/3.4/ruby-3.4.12.tar.gz",
       "upstream_provider": "other",
       "depth": null,
       "target_branch": "main",
@@ -22699,7 +22614,6 @@
         "libssh2",
         "pipewire",
         "pulseaudio",
-        "python@3.14",
         "python@3.15",
         "rust",
         "systemd",
@@ -23196,7 +23110,6 @@
         "coreutils",
         "libgit2",
         "libssh2",
-        "python@3.14",
         "python@3.15",
         "rust",
         "systemd",
@@ -24266,7 +24179,6 @@
         "coreutils",
         "libgit2",
         "libssh2",
-        "python@3.14",
         "python@3.15",
         "rust",
         "systemd",
@@ -24314,7 +24226,6 @@
         "coreutils",
         "libgit2",
         "libssh2",
-        "python@3.14",
         "python@3.15",
         "qtbase",
         "rust",
@@ -24497,7 +24408,6 @@
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
-        "python@3.14",
         "python@3.15"
       ],
       "transitive_openssl_formula_dependents": []
@@ -24610,7 +24520,6 @@
         "cmake",
         "libgit2",
         "libssh2",
-        "python@3.14",
         "python@3.15",
         "rust"
       ],
@@ -24712,7 +24621,6 @@
         "libgit2",
         "libssh2",
         "node",
-        "python@3.14",
         "python@3.15",
         "rust"
       ],
@@ -24802,7 +24710,6 @@
         "libgit2",
         "libssh2",
         "libzip",
-        "python@3.14",
         "python@3.15",
         "rust"
       ],
@@ -25037,7 +24944,6 @@
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
-        "python@3.14",
         "python@3.15"
       ],
       "transitive_openssl_formula_dependents": []
@@ -25267,7 +25173,6 @@
         "coreutils",
         "libgit2",
         "libssh2",
-        "python@3.14",
         "python@3.15",
         "qpdf",
         "ruby",
@@ -25676,7 +25581,6 @@
         "cmake",
         "libgit2",
         "libssh2",
-        "python@3.14",
         "python@3.15",
         "rust"
       ],
@@ -25869,7 +25773,7 @@
       "path": "Formula/v/vtcode.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://vinhnx.github.io",
-      "source_url": "https://static.crates.io/crates/vtcode/vtcode-0.180.0.crate",
+      "source_url": "https://static.crates.io/crates/vtcode/vtcode-0.180.5.crate",
       "head_url": "https://github.com/vinhnx/vtcode.git",
       "upstream_provider": "github",
       "upstream_repo": "vinhnx/vtcode",
@@ -26970,7 +26874,6 @@
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
-        "python@3.14",
         "python@3.15"
       ],
       "transitive_openssl_formula_dependents": []
@@ -27030,7 +26933,6 @@
         "coreutils",
         "libgit2",
         "libssh2",
-        "python@3.14",
         "python@3.15",
         "qtbase",
         "rust",
