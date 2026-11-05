@@ -1,4 +1,4 @@
-# OpenSSL 4 Migration Audit (2026-11-04)
+# OpenSSL 4 Migration Audit (2026-11-05)
 
 Tracking issue: Homebrew/homebrew-core#278366
 
