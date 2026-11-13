@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-12T15:05:53Z",
+  "generated_at": "2026-11-13T14:29:42Z",
   "repository": "Homebrew/homebrew-core",
-  "git_head": "c94229366fa7e8747cd2ca72f0e03b4300b96c2f",
+  "git_head": "f3a21c12c0ec4e7873ddbcdb1433802d3d2b409a",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "staging_branch": "openssl-4-migration-staging",
   "staged_depths": {
@@ -60,7 +60,7 @@
       "gstreamer"
     ]
   },
-  "formula_count": 720,
+  "formula_count": 718,
   "formulae": [
     {
       "name": "apr-util",
@@ -114,7 +114,7 @@
       "path": "Formula/c/cmake.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.cmake.org/",
-      "source_url": "https://github.com/Kitware/CMake/releases/download/v4.4.5/cmake-4.4.5.tar.gz",
+      "source_url": "https://github.com/Kitware/CMake/releases/download/v4.5.0/cmake-4.5.0.tar.gz",
       "head_url": "https://gitlab.kitware.com/cmake/cmake.git",
       "upstream_provider": "gitlab",
       "upstream_repo": "gitlab.kitware.com/cmake/cmake",
@@ -203,7 +203,6 @@
         "dislocker",
         "dotnet",
         "dotnet@10",
-        "dotnet@6",
         "dotnet@8",
         "dotnet@9",
         "drogon",
@@ -484,7 +483,6 @@
         "doge",
         "dotnet",
         "dotnet@10",
-        "dotnet@6",
         "dotnet@8",
         "dotnet@9",
         "dovecot",
@@ -850,7 +848,6 @@
         "redwax-tool",
         "reshape",
         "retdec",
-        "rethinkdb",
         "riemann-client",
         "rink",
         "river",
@@ -1011,7 +1008,7 @@
       "path": "Formula/d/dotnet.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://dotnet.microsoft.com/",
-      "source_url": "https://github.com/dotnet/dotnet/releases/download/v10.0.403/release.json",
+      "source_url": "https://github.com/dotnet/dotnet/releases/download/v11.0.100/release.json",
       "head_url": "https://github.com/dotnet/dotnet.git",
       "upstream_provider": "github",
       "upstream_repo": "dotnet/dotnet",
@@ -1020,14 +1017,14 @@
       "staging_reason": "staged-depth",
       "staging_required_by": [],
       "dependencies": [
-        "ninja",
-        "zstd",
         "cmake",
+        "ninja",
         "pkgconf",
         "rapidjson",
         "brotli",
         "icu4c@79",
         "openssl@4",
+        "zstd",
         "bash",
         "grep",
         "libunwind",
@@ -1038,18 +1035,14 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": [
-        "gitversion"
-      ],
+      "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
         "coreutils",
         "python@3.15",
         "wget"
       ],
-      "transitive_openssl_formula_dependents": [
-        "gitversion"
-      ]
+      "transitive_openssl_formula_dependents": []
     },
     {
       "name": "erlang",
@@ -1343,7 +1336,6 @@
         "python@3.11",
         "python@3.12",
         "python@3.9",
-        "rethinkdb",
         "root",
         "sgr",
         "spice-gtk",
@@ -2142,8 +2134,7 @@
       ],
       "transitive_openssl_formula_dependents": [
         "ansible@10",
-        "ansible@9",
-        "rethinkdb"
+        "ansible@9"
       ]
     },
     {
@@ -2168,7 +2159,6 @@
       "openssl_formula_dependencies": [],
       "openssl_formula_dependents": [
         "ansible@12",
-        "dotnet@6",
         "node@20",
         "node@22",
         "node@24",
@@ -2180,12 +2170,10 @@
       ],
       "transitive_openssl_formula_dependents": [
         "ansible@12",
-        "dotnet@6",
         "node@20",
         "node@22",
         "node@24",
         "prowler",
-        "rethinkdb",
         "sapling"
       ]
     },
@@ -2878,7 +2866,7 @@
       "path": "Formula/lib/libpq.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.postgresql.org/docs/current/libpq.html",
-      "source_url": "https://ftp.postgresql.org/pub/source/v18.6/postgresql-18.6.tar.bz2",
+      "source_url": "https://ftp.postgresql.org/pub/source/v18.7/postgresql-18.7.tar.bz2",
       "upstream_provider": "other",
       "depth": 1,
       "target_branch": "openssl-4-migration-staging",
@@ -3015,7 +3003,7 @@
       "path": "Formula/p/postgresql@17.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.postgresql.org/",
-      "source_url": "https://ftp.postgresql.org/pub/source/v17.11/postgresql-17.11.tar.bz2",
+      "source_url": "https://ftp.postgresql.org/pub/source/v17.12/postgresql-17.12.tar.bz2",
       "upstream_provider": "other",
       "depth": 1,
       "target_branch": "openssl-4-migration-staging",
@@ -3056,7 +3044,7 @@
       "path": "Formula/p/postgresql@18.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.postgresql.org/",
-      "source_url": "https://ftp.postgresql.org/pub/source/v18.6/postgresql-18.6.tar.bz2",
+      "source_url": "https://ftp.postgresql.org/pub/source/v18.7/postgresql-18.7.tar.bz2",
       "upstream_provider": "other",
       "depth": 1,
       "target_branch": "openssl-4-migration-staging",
@@ -6641,7 +6629,7 @@
       "path": "Formula/a/atuin.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://atuin.sh/",
-      "source_url": "https://github.com/atuinsh/atuin/releases/download/v18.24.6/source.tar.gz",
+      "source_url": "https://github.com/atuinsh/atuin/releases/download/v18.24.8/source.tar.gz",
       "head_url": "https://github.com/atuinsh/atuin.git",
       "upstream_provider": "github",
       "upstream_repo": "atuinsh/atuin",
@@ -6672,7 +6660,7 @@
       "path": "Formula/a/atuin-server.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://atuin.sh",
-      "source_url": "https://github.com/atuinsh/atuin/releases/download/v18.24.6/source.tar.gz",
+      "source_url": "https://github.com/atuinsh/atuin/releases/download/v18.24.8/source.tar.gz",
       "head_url": "https://github.com/atuinsh/atuin.git",
       "upstream_provider": "github",
       "upstream_repo": "atuinsh/atuin",
@@ -7330,7 +7318,7 @@
       "path": "Formula/c/c2patool.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://contentauthenticity.org",
-      "source_url": "https://github.com/contentauth/c2patool/archive/refs/tags/v0.28.6.tar.gz",
+      "source_url": "https://github.com/contentauth/c2patool/archive/refs/tags/v0.29.0.tar.gz",
       "head_url": "https://github.com/contentauth/c2patool.git",
       "upstream_provider": "github",
       "upstream_repo": "contentauth/c2patool",
@@ -8921,7 +8909,7 @@
       "path": "Formula/d/datadog-static-analyzer.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://docs.datadoghq.com/security/code_security/static_analysis/",
-      "source_url": "https://github.com/DataDog/datadog-static-analyzer/archive/refs/tags/0.9.12.tar.gz",
+      "source_url": "https://github.com/DataDog/datadog-static-analyzer/archive/refs/tags/0.9.13.tar.gz",
       "head_url": "https://github.com/DataDog/datadog-static-analyzer.git",
       "upstream_provider": "github",
       "upstream_repo": "DataDog/datadog-static-analyzer",
@@ -8985,7 +8973,7 @@
       "path": "Formula/d/dbx-cli.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://dbxio.com",
-      "source_url": "https://github.com/t8y2/dbx/archive/refs/tags/packages-v0.4.142.tar.gz",
+      "source_url": "https://github.com/t8y2/dbx/archive/refs/tags/packages-v0.4.143.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "t8y2/dbx",
       "depth": null,
@@ -9341,52 +9329,25 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": [],
+      "openssl_formula_dependents": [
+        "gitversion"
+      ],
       "transitive_openssl_formula_dependencies": [
         "cmake",
         "coreutils",
         "python@3.15",
         "wget"
       ],
-      "transitive_openssl_formula_dependents": []
-    },
-    {
-      "name": "dotnet@6",
-      "path": "Formula/d/dotnet@6.rb",
-      "openssl_dependency": "openssl@3",
-      "homepage": "https://dotnet.microsoft.com/",
-      "source_url": "https://github.com/dotnet/installer.git",
-      "upstream_provider": "github",
-      "upstream_repo": "dotnet/installer",
-      "depth": null,
-      "target_branch": "main",
-      "staging_required_by": [],
-      "dependencies": [
-        "cmake",
-        "pkgconf",
-        "python@3.13",
-        "icu4c@77",
-        "openssl@3",
-        "libunwind",
-        "lttng-ust"
-      ],
-      "openssl_formula_dependencies": [
-        "cmake",
-        "python@3.13"
-      ],
-      "openssl_formula_dependents": [],
-      "transitive_openssl_formula_dependencies": [
-        "cmake",
-        "python@3.13"
-      ],
-      "transitive_openssl_formula_dependents": []
+      "transitive_openssl_formula_dependents": [
+        "gitversion"
+      ]
     },
     {
       "name": "dotnet@8",
       "path": "Formula/d/dotnet@8.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://dotnet.microsoft.com/",
-      "source_url": "https://github.com/dotnet/dotnet/archive/refs/tags/v8.0.133.tar.gz",
+      "source_url": "https://github.com/dotnet/dotnet/archive/refs/tags/v8.0.134.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "dotnet/dotnet",
       "depth": null,
@@ -10714,7 +10675,7 @@
       "path": "Formula/f/feroxbuster.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://epi052.github.io/feroxbuster",
-      "source_url": "https://github.com/epi052/feroxbuster/archive/refs/tags/v2.13.1.tar.gz",
+      "source_url": "https://github.com/epi052/feroxbuster/archive/refs/tags/v2.14.0.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "epi052/feroxbuster",
       "depth": null,
@@ -12051,17 +12012,17 @@
       "target_branch": "main",
       "staging_required_by": [],
       "dependencies": [
-        "dotnet",
+        "dotnet@10",
         "openssl@4"
       ],
       "openssl_formula_dependencies": [
-        "dotnet"
+        "dotnet@10"
       ],
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
         "coreutils",
-        "dotnet",
+        "dotnet@10",
         "python@3.15",
         "wget"
       ],
@@ -12566,7 +12527,7 @@
       "path": "Formula/h/hf-mount.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/huggingface/hf-mount",
-      "source_url": "https://github.com/huggingface/hf-mount/archive/refs/tags/v0.13.4.tar.gz",
+      "source_url": "https://github.com/huggingface/hf-mount/archive/refs/tags/v0.13.6.tar.gz",
       "head_url": "https://github.com/huggingface/hf-mount.git",
       "upstream_provider": "github",
       "upstream_repo": "huggingface/hf-mount",
@@ -13919,7 +13880,7 @@
       "path": "Formula/l/lavinmq.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://lavinmq.com",
-      "source_url": "https://github.com/cloudamqp/lavinmq/archive/refs/tags/v2.10.6.tar.gz",
+      "source_url": "https://github.com/cloudamqp/lavinmq/archive/refs/tags/v2.11.0.tar.gz",
       "head_url": "https://github.com/cloudamqp/lavinmq.git",
       "upstream_provider": "github",
       "upstream_repo": "cloudamqp/lavinmq",
@@ -14517,7 +14478,7 @@
       "path": "Formula/lib/libjwt.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://libjwt.io/",
-      "source_url": "https://github.com/benmcollins/libjwt/archive/refs/tags/v3.6.1.tar.gz",
+      "source_url": "https://github.com/benmcollins/libjwt/archive/refs/tags/v3.6.2.tar.gz",
       "head_url": "https://github.com/benmcollins/libjwt.git",
       "upstream_provider": "github",
       "upstream_repo": "benmcollins/libjwt",
@@ -14717,7 +14678,7 @@
       "path": "Formula/lib/libpq@16.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.postgresql.org/docs/16/libpq.html",
-      "source_url": "https://ftp.postgresql.org/pub/source/v16.15/postgresql-16.15.tar.bz2",
+      "source_url": "https://ftp.postgresql.org/pub/source/v16.16/postgresql-16.16.tar.bz2",
       "upstream_provider": "other",
       "depth": null,
       "target_branch": "main",
@@ -14745,7 +14706,7 @@
       "path": "Formula/lib/libpq@17.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.postgresql.org/docs/17/libpq.html",
-      "source_url": "https://ftp.postgresql.org/pub/source/v17.11/postgresql-17.11.tar.bz2",
+      "source_url": "https://ftp.postgresql.org/pub/source/v17.12/postgresql-17.12.tar.bz2",
       "upstream_provider": "other",
       "depth": null,
       "target_branch": "main",
@@ -15930,7 +15891,7 @@
       "path": "Formula/m/mdcat.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/BIRSAx2/mdcat",
-      "source_url": "https://github.com/BIRSAx2/mdcat/archive/refs/tags/mdcat-2.20.0.tar.gz",
+      "source_url": "https://github.com/BIRSAx2/mdcat/archive/refs/tags/mdcat-2.20.1.tar.gz",
       "head_url": "https://github.com/BIRSAx2/mdcat.git",
       "upstream_provider": "github",
       "upstream_repo": "BIRSAx2/mdcat",
@@ -17790,7 +17751,7 @@
       "path": "Formula/n/node-build.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/nodenv/node-build",
-      "source_url": "https://github.com/nodenv/node-build/archive/refs/tags/v5.4.62.tar.gz",
+      "source_url": "https://github.com/nodenv/node-build/archive/refs/tags/v5.4.63.tar.gz",
       "head_url": "https://github.com/nodenv/node-build.git",
       "upstream_provider": "github",
       "upstream_repo": "nodenv/node-build",
@@ -19495,7 +19456,7 @@
       "path": "Formula/p/pgrx.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/pgcentralfoundation/pgrx",
-      "source_url": "https://github.com/pgcentralfoundation/pgrx/archive/refs/tags/v0.19.3.tar.gz",
+      "source_url": "https://github.com/pgcentralfoundation/pgrx/archive/refs/tags/v0.20.0.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "pgcentralfoundation/pgrx",
       "depth": null,
@@ -20243,7 +20204,7 @@
       "path": "Formula/p/postgresql@14.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.postgresql.org/",
-      "source_url": "https://ftp.postgresql.org/pub/source/v14.24/postgresql-14.24.tar.bz2",
+      "source_url": "https://ftp.postgresql.org/pub/source/v14.25/postgresql-14.25.tar.bz2",
       "upstream_provider": "other",
       "depth": null,
       "target_branch": "main",
@@ -20275,7 +20236,7 @@
       "path": "Formula/p/postgresql@15.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.postgresql.org/",
-      "source_url": "https://ftp.postgresql.org/pub/source/v15.19/postgresql-15.19.tar.bz2",
+      "source_url": "https://ftp.postgresql.org/pub/source/v15.20/postgresql-15.20.tar.bz2",
       "upstream_provider": "other",
       "depth": null,
       "target_branch": "main",
@@ -20309,7 +20270,7 @@
       "path": "Formula/p/postgresql@16.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.postgresql.org/",
-      "source_url": "https://ftp.postgresql.org/pub/source/v16.15/postgresql-16.15.tar.bz2",
+      "source_url": "https://ftp.postgresql.org/pub/source/v16.16/postgresql-16.16.tar.bz2",
       "upstream_provider": "other",
       "depth": null,
       "target_branch": "main",
@@ -20620,7 +20581,7 @@
       "path": "Formula/p/pup.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.datadoghq.com",
-      "source_url": "https://github.com/DataDog/pup/releases/download/v2.4.5/pup_2.4.5_source.tar.gz",
+      "source_url": "https://github.com/DataDog/pup/releases/download/v2.4.7/pup_2.4.7_source.tar.gz",
       "head_url": "https://github.com/DataDog/pup.git",
       "upstream_provider": "github",
       "upstream_repo": "DataDog/pup",
@@ -21364,7 +21325,7 @@
       "path": "Formula/r/rattler-index.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/conda/rattler",
-      "source_url": "https://github.com/conda/rattler/archive/refs/tags/rattler_index-v0.34.7.tar.gz",
+      "source_url": "https://github.com/conda/rattler/archive/refs/tags/rattler_index-v0.34.8.tar.gz",
       "head_url": "https://github.com/conda/rattler.git",
       "upstream_provider": "github",
       "upstream_repo": "conda/rattler",
@@ -21686,33 +21647,6 @@
       "transitive_openssl_formula_dependencies": [
         "cmake",
         "python@3.15"
-      ],
-      "transitive_openssl_formula_dependents": []
-    },
-    {
-      "name": "rethinkdb",
-      "path": "Formula/r/rethinkdb.rb",
-      "openssl_dependency": "openssl@3",
-      "homepage": "https://rethinkdb.com/",
-      "source_url": "https://download.rethinkdb.com/repository/raw/dist/rethinkdb-2.4.4.tgz",
-      "head_url": "https://github.com/rethinkdb/rethinkdb.git",
-      "upstream_provider": "github",
-      "upstream_repo": "rethinkdb/rethinkdb",
-      "depth": null,
-      "target_branch": "main",
-      "staging_required_by": [],
-      "dependencies": [
-        "boost",
-        "openssl@3",
-        "protobuf@21"
-      ],
-      "openssl_formula_dependencies": [],
-      "openssl_formula_dependents": [],
-      "transitive_openssl_formula_dependencies": [
-        "cmake",
-        "krb5",
-        "python@3.12",
-        "python@3.13"
       ],
       "transitive_openssl_formula_dependents": []
     },
@@ -25186,7 +25120,7 @@
       "path": "Formula/t/trealla-prolog.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/trealla-prolog/trealla-prolog",
-      "source_url": "https://github.com/trealla-prolog/trealla-prolog/archive/refs/tags/v3.15.6.tar.gz",
+      "source_url": "https://github.com/trealla-prolog/trealla-prolog/archive/refs/tags/v3.15.10.tar.gz",
       "head_url": "https://github.com/trealla-prolog/trealla-prolog.git",
       "upstream_provider": "github",
       "upstream_repo": "trealla-prolog/trealla-prolog",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T15:05:53Z",
+  "generated_at": "2026-11-13T14:29:42Z",
   "repository": "Homebrew/homebrew-core",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "target_branch": "openssl-4-migration-staging",
@@ -20,7 +20,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 631,
+      "impact_count": 629,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -283,7 +283,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 75,
+      "impact_count": 74,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -1003,41 +1003,6 @@
       }
     },
     {
-      "name": "python@3.13",
-      "live_status": "PENDING",
-      "depth": 0,
-      "group_label": "Batch 0 — Roots",
-      "impact_count": 8,
-      "target_branch": "openssl-4-migration-staging",
-      "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
-      },
-      "readiness": [
-        "missing-pr"
-      ],
-      "next_action": "Open migration PR",
-      "upstream": {
-        "provider": "python",
-        "repo": "",
-        "url": ""
-      },
-      "issues": [],
-      "flags": {
-        "current_gate": true,
-        "ready": false,
-        "draft": false,
-        "ci_blocked": false,
-        "base_mismatch": false,
-        "missing_pr": true,
-        "upstream_blocked": false
-      }
-    },
-    {
       "name": "cryptography",
       "live_status": "DONE",
       "depth": 2,
@@ -1227,6 +1192,41 @@
         "ci_blocked": false,
         "base_mismatch": false,
         "missing_pr": false,
+        "upstream_blocked": false
+      }
+    },
+    {
+      "name": "python@3.13",
+      "live_status": "PENDING",
+      "depth": 0,
+      "group_label": "Batch 0 — Roots",
+      "impact_count": 6,
+      "target_branch": "openssl-4-migration-staging",
+      "pr": {
+        "number": 0,
+        "url": "",
+        "base": "",
+        "is_draft": false,
+        "merge_state": "",
+        "updated_at": ""
+      },
+      "readiness": [
+        "missing-pr"
+      ],
+      "next_action": "Open migration PR",
+      "upstream": {
+        "provider": "python",
+        "repo": "",
+        "url": ""
+      },
+      "issues": [],
+      "flags": {
+        "current_gate": true,
+        "ready": false,
+        "draft": false,
+        "ci_blocked": false,
+        "base_mismatch": false,
+        "missing_pr": true,
         "upstream_blocked": false
       }
     },
@@ -1774,41 +1774,6 @@
       }
     },
     {
-      "name": "python@3.12",
-      "live_status": "PENDING",
-      "depth": 0,
-      "group_label": "Batch 0 — Roots",
-      "impact_count": 3,
-      "target_branch": "openssl-4-migration-staging",
-      "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
-      },
-      "readiness": [
-        "missing-pr"
-      ],
-      "next_action": "Open migration PR",
-      "upstream": {
-        "provider": "python",
-        "repo": "",
-        "url": ""
-      },
-      "issues": [],
-      "flags": {
-        "current_gate": true,
-        "ready": false,
-        "draft": false,
-        "ci_blocked": false,
-        "base_mismatch": false,
-        "missing_pr": true,
-        "upstream_blocked": false
-      }
-    },
-    {
       "name": "tcl-tk@8",
       "live_status": "PENDING",
       "depth": 0,
@@ -1924,11 +1889,11 @@
       }
     },
     {
-      "name": "dotnet",
-      "live_status": "DONE",
+      "name": "python@3.12",
+      "live_status": "PENDING",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 1,
+      "impact_count": 2,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -1939,27 +1904,22 @@
         "updated_at": ""
       },
       "readiness": [
-        "done"
+        "missing-pr"
       ],
-      "next_action": "Done",
+      "next_action": "Open migration PR",
       "upstream": {
-        "provider": "github",
-        "repo": "dotnet/dotnet",
-        "url": "https://github.com/dotnet/dotnet"
+        "provider": "python",
+        "repo": "",
+        "url": ""
       },
-      "issues": [
-        {
-          "label": "search",
-          "url": "https://github.com/search?q=repo%3Adotnet%2Fdotnet+%22OpenSSL+4%22\u0026type=issues"
-        }
-      ],
+      "issues": [],
       "flags": {
         "current_gate": true,
         "ready": false,
         "draft": false,
         "ci_blocked": false,
         "base_mismatch": false,
-        "missing_pr": false,
+        "missing_pr": true,
         "upstream_blocked": false
       }
     },
@@ -2065,6 +2025,46 @@
       "issues": [],
       "flags": {
         "current_gate": false,
+        "ready": false,
+        "draft": false,
+        "ci_blocked": false,
+        "base_mismatch": false,
+        "missing_pr": false,
+        "upstream_blocked": false
+      }
+    },
+    {
+      "name": "dotnet",
+      "live_status": "DONE",
+      "depth": 0,
+      "group_label": "Batch 0 — Roots",
+      "impact_count": 0,
+      "target_branch": "openssl-4-migration-staging",
+      "pr": {
+        "number": 0,
+        "url": "",
+        "base": "",
+        "is_draft": false,
+        "merge_state": "",
+        "updated_at": ""
+      },
+      "readiness": [
+        "done"
+      ],
+      "next_action": "Done",
+      "upstream": {
+        "provider": "github",
+        "repo": "dotnet/dotnet",
+        "url": "https://github.com/dotnet/dotnet"
+      },
+      "issues": [
+        {
+          "label": "search",
+          "url": "https://github.com/search?q=repo%3Adotnet%2Fdotnet+%22OpenSSL+4%22\u0026type=issues"
+        }
+      ],
+      "flags": {
+        "current_gate": true,
         "ready": false,
         "draft": false,
         "ci_blocked": false,
