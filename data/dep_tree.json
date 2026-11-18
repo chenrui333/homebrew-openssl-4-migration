@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-17T15:55:15Z",
+  "generated_at": "2026-11-18T15:33:46Z",
   "repository": "Homebrew/homebrew-core",
-  "git_head": "0dcd29edadc63581f83c6e7af8ada02a57a444b2",
+  "git_head": "df69c4ae50a5c295943b98a727fcc48fd0c8d585",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "staging_branch": "openssl-4-migration-staging",
   "staged_depths": {
@@ -1035,14 +1035,18 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": [],
+      "openssl_formula_dependents": [
+        "gitversion"
+      ],
       "transitive_openssl_formula_dependencies": [
         "cmake",
         "coreutils",
         "python@3.15",
         "wget"
       ],
-      "transitive_openssl_formula_dependents": []
+      "transitive_openssl_formula_dependents": [
+        "gitversion"
+      ]
     },
     {
       "name": "erlang",
@@ -1444,6 +1448,8 @@
         "pipewire",
         "pistache",
         "proxygen",
+        "qobine-tui",
+        "qobine-web",
         "redwax-tool",
         "root",
         "screenpipe",
@@ -2452,6 +2458,8 @@
         "prowler",
         "pushpin",
         "qca",
+        "qobine-tui",
+        "qobine-web",
         "qtbase",
         "qxmpp",
         "redis",
@@ -3142,6 +3150,8 @@
         "musikcube",
         "ncspot",
         "pipewire",
+        "qobine-tui",
+        "qobine-web",
         "screenpipe",
         "shairport-sync",
         "spice-gtk",
@@ -3868,6 +3878,8 @@
         "pipewire",
         "pushpin",
         "qca",
+        "qobine-tui",
+        "qobine-web",
         "qtbase",
         "qxmpp",
         "rtl_433",
@@ -4591,6 +4603,8 @@
         "prowler",
         "pushpin",
         "qca",
+        "qobine-tui",
+        "qobine-web",
         "qtbase",
         "qxmpp",
         "redis",
@@ -5170,7 +5184,10 @@
         "pulseaudio",
         "systemd"
       ],
-      "openssl_formula_dependents": [],
+      "openssl_formula_dependents": [
+        "qobine-tui",
+        "qobine-web"
+      ],
       "transitive_openssl_formula_dependencies": [
         "cmake",
         "coreutils",
@@ -5193,6 +5210,8 @@
         "gpac",
         "gstreamer",
         "musikcube",
+        "qobine-tui",
+        "qobine-web",
         "screenpipe",
         "shairport-sync",
         "spice-gtk",
@@ -8191,7 +8210,7 @@
       "path": "Formula/c/code-cli.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://code.visualstudio.com",
-      "source_url": "https://github.com/microsoft/vscode/archive/refs/tags/1.146.0.tar.gz",
+      "source_url": "https://github.com/microsoft/vscode/archive/refs/tags/1.147.0.tar.gz",
       "head_url": "https://github.com/microsoft/vscode.git",
       "upstream_provider": "github",
       "upstream_repo": "microsoft/vscode",
@@ -9332,18 +9351,14 @@
       "openssl_formula_dependencies": [
         "cmake"
       ],
-      "openssl_formula_dependents": [
-        "gitversion"
-      ],
+      "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
         "coreutils",
         "python@3.15",
         "wget"
       ],
-      "transitive_openssl_formula_dependents": [
-        "gitversion"
-      ]
+      "transitive_openssl_formula_dependents": []
     },
     {
       "name": "dotnet@8",
@@ -9942,7 +9957,7 @@
       "path": "Formula/e/elan-init.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/leanprover/elan",
-      "source_url": "https://github.com/leanprover/elan/archive/refs/tags/v4.2.4.tar.gz",
+      "source_url": "https://github.com/leanprover/elan/archive/refs/tags/v4.3.0.tar.gz",
       "head_url": "https://github.com/leanprover/elan.git",
       "upstream_provider": "github",
       "upstream_repo": "leanprover/elan",
@@ -10266,7 +10281,7 @@
       "path": "Formula/e/ettercap.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://ettercap.github.io/ettercap/",
-      "source_url": "https://github.com/Ettercap/ettercap/archive/refs/tags/v0.8.5.1.tar.gz",
+      "source_url": "https://github.com/Ettercap/ettercap/archive/refs/tags/v0.8.5.2.tar.gz",
       "head_url": "https://github.com/Ettercap/ettercap.git",
       "upstream_provider": "github",
       "upstream_repo": "Ettercap/ettercap",
@@ -10359,7 +10374,7 @@
       "path": "Formula/e/expert.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://expert-lsp.org",
-      "source_url": "https://github.com/expert-lsp/expert/archive/refs/tags/v0.2.3.tar.gz",
+      "source_url": "https://github.com/expert-lsp/expert/archive/refs/tags/v0.2.4.tar.gz",
       "head_url": "https://github.com/expert-lsp/expert.git",
       "upstream_provider": "github",
       "upstream_repo": "expert-lsp/expert",
@@ -11028,7 +11043,7 @@
       "path": "Formula/f/fnox.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://fnox.jdx.dev/",
-      "source_url": "https://github.com/jdx/fnox/archive/refs/tags/v1.49.0.tar.gz",
+      "source_url": "https://github.com/jdx/fnox/archive/refs/tags/v1.50.0.tar.gz",
       "head_url": "https://github.com/jdx/fnox.git",
       "upstream_provider": "github",
       "upstream_repo": "jdx/fnox",
@@ -12008,24 +12023,24 @@
       "path": "Formula/g/gitversion.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://gitversion.net/docs/",
-      "source_url": "https://github.com/GitTools/GitVersion/archive/refs/tags/6.8.2.tar.gz",
+      "source_url": "https://github.com/GitTools/GitVersion/archive/refs/tags/7.0.0.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "GitTools/GitVersion",
       "depth": null,
       "target_branch": "main",
       "staging_required_by": [],
       "dependencies": [
-        "dotnet@10",
+        "dotnet",
         "openssl@4"
       ],
       "openssl_formula_dependencies": [
-        "dotnet@10"
+        "dotnet"
       ],
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
         "coreutils",
-        "dotnet@10",
+        "dotnet",
         "python@3.15",
         "wget"
       ],
@@ -15606,7 +15621,7 @@
       "path": "Formula/m/mariadb@10.11.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://mariadb.org/",
-      "source_url": "https://archive.mariadb.org/mariadb-10.11.19/source/mariadb-10.11.19.tar.gz",
+      "source_url": "https://archive.mariadb.org/mariadb-10.11.20/source/mariadb-10.11.20.tar.gz",
       "upstream_provider": "other",
       "depth": null,
       "target_branch": "main",
@@ -15715,7 +15730,7 @@
       "path": "Formula/m/mariadb@11.4.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://mariadb.org/",
-      "source_url": "https://archive.mariadb.org/mariadb-11.4.13/source/mariadb-11.4.13.tar.gz",
+      "source_url": "https://archive.mariadb.org/mariadb-11.4.14/source/mariadb-11.4.14.tar.gz",
       "upstream_provider": "other",
       "depth": null,
       "target_branch": "main",
@@ -16674,7 +16689,7 @@
       "path": "Formula/m/mosquitto.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://mosquitto.org/",
-      "source_url": "https://mosquitto.org/files/source/mosquitto-2.1.2.tar.gz",
+      "source_url": "https://mosquitto.org/files/source/mosquitto-2.1.4.tar.gz",
       "upstream_provider": "other",
       "depth": null,
       "target_branch": "main",
@@ -20372,7 +20387,7 @@
       "path": "Formula/p/prowler.rb",
       "openssl_dependency": "openssl@3",
       "homepage": "https://prowler.com/",
-      "source_url": "https://files.pythonhosted.org/packages/cf/ee/52500446d03ec197d14cdce77e11707bf7fb85585d3f707ec735fb6e3851/prowler-5.49.0.tar.gz",
+      "source_url": "https://files.pythonhosted.org/packages/e9/05/e6b08989b53821114d1bb0d0a01a26b873d27998a656e9ddb63325529dca/prowler-5.50.0.tar.gz",
       "head_url": "https://github.com/prowler-cloud/prowler.git",
       "upstream_provider": "github",
       "upstream_repo": "prowler-cloud/prowler",
@@ -20554,7 +20569,7 @@
       "path": "Formula/p/pup.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.datadoghq.com",
-      "source_url": "https://github.com/DataDog/pup/releases/download/v2.5.0/pup_2.5.0_source.tar.gz",
+      "source_url": "https://github.com/DataDog/pup/releases/download/v2.5.1/pup_2.5.1_source.tar.gz",
       "head_url": "https://github.com/DataDog/pup.git",
       "upstream_provider": "github",
       "upstream_repo": "DataDog/pup",
@@ -20968,18 +20983,26 @@
         "pkgconf",
         "rust",
         "alsa-lib",
-        "openssl@4"
+        "openssl@4",
+        "pipewire"
       ],
       "openssl_formula_dependencies": [
+        "pipewire",
         "rust"
       ],
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
+        "coreutils",
+        "libevent",
         "libgit2",
         "libssh2",
+        "pipewire",
+        "pulseaudio",
         "python@3.15",
-        "rust"
+        "rust",
+        "systemd",
+        "wget"
       ],
       "transitive_openssl_formula_dependents": []
     },
@@ -20999,18 +21022,26 @@
         "pkgconf",
         "rust",
         "alsa-lib",
-        "openssl@4"
+        "openssl@4",
+        "pipewire"
       ],
       "openssl_formula_dependencies": [
+        "pipewire",
         "rust"
       ],
       "openssl_formula_dependents": [],
       "transitive_openssl_formula_dependencies": [
         "cmake",
+        "coreutils",
+        "libevent",
         "libgit2",
         "libssh2",
+        "pipewire",
+        "pulseaudio",
         "python@3.15",
-        "rust"
+        "rust",
+        "systemd",
+        "wget"
       ],
       "transitive_openssl_formula_dependents": []
     },
@@ -24626,7 +24657,7 @@
       "path": "Formula/t/teslamate.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://docs.teslamate.org",
-      "source_url": "https://github.com/teslamate-org/teslamate/archive/refs/tags/v4.4.0.tar.gz",
+      "source_url": "https://github.com/teslamate-org/teslamate/archive/refs/tags/v4.5.0.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "teslamate-org/teslamate",
       "depth": null,
@@ -25141,7 +25172,7 @@
       "path": "Formula/t/trunk.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://trunk-rs.github.io/trunk",
-      "source_url": "https://github.com/trunk-rs/trunk/archive/refs/tags/v0.22.1.tar.gz",
+      "source_url": "https://github.com/trunk-rs/trunk/archive/refs/tags/v0.22.2.tar.gz",
       "head_url": "https://github.com/trunk-rs/trunk.git",
       "upstream_provider": "github",
       "upstream_repo": "trunk-rs/trunk",
@@ -25803,7 +25834,7 @@
       "path": "Formula/v/vtcode.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://vinhnx.github.io",
-      "source_url": "https://static.crates.io/crates/vtcode/vtcode-0.182.4.crate",
+      "source_url": "https://static.crates.io/crates/vtcode/vtcode-0.182.7.crate",
       "head_url": "https://github.com/vinhnx/vtcode.git",
       "upstream_provider": "github",
       "upstream_repo": "vinhnx/vtcode",
