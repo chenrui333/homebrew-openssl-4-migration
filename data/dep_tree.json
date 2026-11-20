@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-19T15:40:14Z",
+  "generated_at": "2026-11-20T15:22:00Z",
   "repository": "Homebrew/homebrew-core",
-  "git_head": "6e9f0efc166921b8294f2c4c46a51b328e040981",
+  "git_head": "6660f708e4565fcd8ca0625ca1f360fe955f1d6f",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "staging_branch": "openssl-4-migration-staging",
   "staged_depths": {
@@ -60,7 +60,7 @@
       "gstreamer"
     ]
   },
-  "formula_count": 718,
+  "formula_count": 720,
   "formulae": [
     {
       "name": "apr-util",
@@ -91,6 +91,7 @@
         "php@8.2",
         "php@8.3",
         "php@8.4",
+        "php@8.5",
         "redwax-tool"
       ],
       "transitive_openssl_formula_dependencies": [
@@ -105,6 +106,7 @@
         "php@8.2",
         "php@8.3",
         "php@8.4",
+        "php@8.5",
         "redwax-tool",
         "webfs"
       ]
@@ -114,7 +116,7 @@
       "path": "Formula/c/cmake.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.cmake.org/",
-      "source_url": "https://github.com/Kitware/CMake/releases/download/v4.5.0/cmake-4.5.0.tar.gz",
+      "source_url": "https://github.com/Kitware/CMake/releases/download/v4.5.1/cmake-4.5.1.tar.gz",
       "head_url": "https://gitlab.kitware.com/cmake/cmake.git",
       "upstream_provider": "gitlab",
       "upstream_repo": "gitlab.kitware.com/cmake/cmake",
@@ -786,6 +788,7 @@
         "php@8.2",
         "php@8.3",
         "php@8.4",
+        "php@8.5",
         "picoruby",
         "pipewire",
         "pistache",
@@ -802,6 +805,7 @@
         "postgresql@16",
         "postgresql@17",
         "postgresql@18",
+        "postgresql@19",
         "projectable",
         "proto",
         "proton-pass-cli",
@@ -1126,7 +1130,8 @@
         "php@8.1",
         "php@8.2",
         "php@8.3",
-        "php@8.4"
+        "php@8.4",
+        "php@8.5"
       ],
       "transitive_openssl_formula_dependencies": [
         "cmake"
@@ -1138,7 +1143,8 @@
         "php@8.1",
         "php@8.2",
         "php@8.3",
-        "php@8.4"
+        "php@8.4",
+        "php@8.5"
       ]
     },
     {
@@ -1200,7 +1206,7 @@
       "path": "Formula/h/hiredis.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/redis/hiredis",
-      "source_url": "https://github.com/redis/hiredis/archive/refs/tags/v1.5.0.tar.gz",
+      "source_url": "https://github.com/redis/hiredis/archive/refs/tags/v1.5.1.tar.gz",
       "head_url": "https://github.com/redis/hiredis.git",
       "upstream_provider": "github",
       "upstream_repo": "redis/hiredis",
@@ -1270,6 +1276,7 @@
         "postgresql@16",
         "postgresql@17",
         "postgresql@18",
+        "postgresql@19",
         "xrootd"
       ],
       "transitive_openssl_formula_dependencies": [],
@@ -1327,12 +1334,14 @@
         "php@8.2",
         "php@8.3",
         "php@8.4",
+        "php@8.5",
         "postgresql@13",
         "postgresql@14",
         "postgresql@15",
         "postgresql@16",
         "postgresql@17",
         "postgresql@18",
+        "postgresql@19",
         "pure-ftpd",
         "python@3.10",
         "python@3.11",
@@ -1854,6 +1863,7 @@
         "php@8.2",
         "php@8.3",
         "php@8.4",
+        "php@8.5",
         "picoruby",
         "pixi",
         "pixi-pack",
@@ -2028,7 +2038,8 @@
         "php@8.1",
         "php@8.2",
         "php@8.3",
-        "php@8.4"
+        "php@8.4",
+        "php@8.5"
       ],
       "transitive_openssl_formula_dependencies": [
         "cmake",
@@ -2045,7 +2056,8 @@
         "php@8.1",
         "php@8.2",
         "php@8.3",
-        "php@8.4"
+        "php@8.4",
+        "php@8.5"
       ]
     },
     {
@@ -2453,6 +2465,7 @@
         "php@8.2",
         "php@8.3",
         "php@8.4",
+        "php@8.5",
         "pipewire",
         "pocket-tts",
         "prowler",
@@ -2655,6 +2668,7 @@
         "php@8.2",
         "php@8.3",
         "php@8.4",
+        "php@8.5",
         "rpmspectool",
         "s3-backer",
         "s3fs",
@@ -2682,6 +2696,7 @@
         "php@8.2",
         "php@8.3",
         "php@8.4",
+        "php@8.5",
         "rpmspectool",
         "s3-backer",
         "s3fs",
@@ -2851,6 +2866,7 @@
         "php@8.2",
         "php@8.3",
         "php@8.4",
+        "php@8.5",
         "webfs"
       ],
       "transitive_openssl_formula_dependencies": [
@@ -2864,6 +2880,7 @@
         "php@8.2",
         "php@8.3",
         "php@8.4",
+        "php@8.5",
         "webfs"
       ]
     },
@@ -2872,7 +2889,7 @@
       "path": "Formula/lib/libpq.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.postgresql.org/docs/current/libpq.html",
-      "source_url": "https://ftp.postgresql.org/pub/source/v18.7/postgresql-18.7.tar.bz2",
+      "source_url": "https://ftp.postgresql.org/pub/source/v19.0/postgresql-19.0.tar.bz2",
       "upstream_provider": "other",
       "depth": 1,
       "target_branch": "openssl-4-migration-staging",
@@ -2908,6 +2925,7 @@
         "php@8.2",
         "php@8.3",
         "php@8.4",
+        "php@8.5",
         "sgr"
       ],
       "transitive_openssl_formula_dependencies": [
@@ -2928,6 +2946,7 @@
         "php@8.2",
         "php@8.3",
         "php@8.4",
+        "php@8.5",
         "sgr"
       ]
     },
@@ -4156,7 +4175,7 @@
       "path": "Formula/p/php.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.php.net/",
-      "source_url": "https://www.php.net/distributions/php-8.5.12.tar.xz",
+      "source_url": "https://www.php.net/distributions/php-8.6.0.tar.xz",
       "head_url": "https://github.com/php/php-src.git",
       "upstream_provider": "github",
       "upstream_repo": "php/php-src",
@@ -4598,6 +4617,7 @@
         "php@8.2",
         "php@8.3",
         "php@8.4",
+        "php@8.5",
         "pipewire",
         "pocket-tts",
         "prowler",
@@ -5022,6 +5042,7 @@
         "php@8.2",
         "php@8.3",
         "php@8.4",
+        "php@8.5",
         "rpmspectool",
         "s3-backer",
         "s3fs",
@@ -5093,6 +5114,7 @@
         "php@8.2",
         "php@8.3",
         "php@8.4",
+        "php@8.5",
         "rizin",
         "xrootd"
       ],
@@ -5105,6 +5127,7 @@
         "php@8.2",
         "php@8.3",
         "php@8.4",
+        "php@8.5",
         "rizin",
         "root",
         "texlive",
@@ -5137,6 +5160,7 @@
         "monitoring-plugins",
         "php",
         "php@8.4",
+        "php@8.5",
         "syslog-ng"
       ],
       "transitive_openssl_formula_dependencies": [],
@@ -5145,6 +5169,7 @@
         "monitoring-plugins",
         "php",
         "php@8.4",
+        "php@8.5",
         "syslog-ng"
       ]
     },
@@ -5601,6 +5626,7 @@
         "php@8.2",
         "php@8.3",
         "php@8.4",
+        "php@8.5",
         "picoruby",
         "pipewire",
         "pistache",
@@ -5615,6 +5641,7 @@
         "postgresql@16",
         "postgresql@17",
         "postgresql@18",
+        "postgresql@19",
         "projectable",
         "proto",
         "proton-pass-cli",
@@ -6651,7 +6678,7 @@
       "path": "Formula/a/atuin.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://atuin.sh/",
-      "source_url": "https://github.com/atuinsh/atuin/releases/download/v18.24.8/source.tar.gz",
+      "source_url": "https://github.com/atuinsh/atuin/releases/download/v18.25.0/source.tar.gz",
       "head_url": "https://github.com/atuinsh/atuin.git",
       "upstream_provider": "github",
       "upstream_repo": "atuinsh/atuin",
@@ -6682,7 +6709,7 @@
       "path": "Formula/a/atuin-server.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://atuin.sh",
-      "source_url": "https://github.com/atuinsh/atuin/releases/download/v18.24.8/source.tar.gz",
+      "source_url": "https://github.com/atuinsh/atuin/releases/download/v18.25.0/source.tar.gz",
       "head_url": "https://github.com/atuinsh/atuin.git",
       "upstream_provider": "github",
       "upstream_repo": "atuinsh/atuin",
@@ -12025,7 +12052,7 @@
       "path": "Formula/g/gitversion.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://gitversion.net/docs/",
-      "source_url": "https://github.com/GitTools/GitVersion/archive/refs/tags/7.0.0.tar.gz",
+      "source_url": "https://github.com/GitTools/GitVersion/archive/refs/tags/7.0.1.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "GitTools/GitVersion",
       "depth": null,
@@ -13137,7 +13164,7 @@
       "path": "Formula/i/iperf3.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/esnet/iperf",
-      "source_url": "https://downloads.es.net/pub/iperf/iperf-3.22.tar.gz",
+      "source_url": "https://downloads.es.net/pub/iperf/iperf-3.22.1.tar.gz",
       "head_url": "https://github.com/esnet/iperf.git",
       "upstream_provider": "github",
       "upstream_repo": "esnet/iperf",
@@ -16476,7 +16503,7 @@
       "path": "Formula/m/mongo-c-driver.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/mongodb/mongo-c-driver",
-      "source_url": "https://github.com/mongodb/mongo-c-driver/archive/refs/tags/2.5.8.tar.gz",
+      "source_url": "https://github.com/mongodb/mongo-c-driver/archive/refs/tags/2.5.9.tar.gz",
       "head_url": "https://github.com/mongodb/mongo-c-driver.git",
       "upstream_provider": "github",
       "upstream_repo": "mongodb/mongo-c-driver",
@@ -16512,7 +16539,7 @@
       "path": "Formula/m/mongo-c-driver@1.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/mongodb/mongo-c-driver",
-      "source_url": "https://github.com/mongodb/mongo-c-driver/archive/refs/tags/1.30.15.tar.gz",
+      "source_url": "https://github.com/mongodb/mongo-c-driver/archive/refs/tags/1.30.16.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "mongodb/mongo-c-driver",
       "depth": null,
@@ -17484,7 +17511,7 @@
       "path": "Formula/n/netdata.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.netdata.cloud/",
-      "source_url": "https://github.com/netdata/netdata/releases/download/v2.12.3/netdata-v2.12.3.tar.gz",
+      "source_url": "https://github.com/netdata/netdata/releases/download/v2.13.0/netdata-v2.13.0.tar.gz",
       "upstream_provider": "github",
       "upstream_repo": "netdata/netdata",
       "depth": null,
@@ -19571,7 +19598,7 @@
       "path": "Formula/p/php@8.2.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.php.net/",
-      "source_url": "https://www.php.net/distributions/php-8.2.35.tar.xz",
+      "source_url": "https://www.php.net/distributions/php-8.2.36.tar.xz",
       "upstream_provider": "php",
       "depth": null,
       "target_branch": "main",
@@ -19637,7 +19664,7 @@
       "path": "Formula/p/php@8.3.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.php.net/",
-      "source_url": "https://www.php.net/distributions/php-8.3.36.tar.xz",
+      "source_url": "https://www.php.net/distributions/php-8.3.37.tar.xz",
       "upstream_provider": "php",
       "depth": null,
       "target_branch": "main",
@@ -19703,7 +19730,73 @@
       "path": "Formula/p/php@8.4.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://www.php.net/",
-      "source_url": "https://www.php.net/distributions/php-8.4.27.tar.xz",
+      "source_url": "https://www.php.net/distributions/php-8.4.28.tar.xz",
+      "upstream_provider": "php",
+      "depth": null,
+      "target_branch": "main",
+      "staging_required_by": [],
+      "dependencies": [
+        "httpd",
+        "pkgconf",
+        "apr",
+        "apr-util",
+        "argon2",
+        "autoconf",
+        "curl",
+        "freetds",
+        "gd",
+        "gmp",
+        "icu4c@79",
+        "libpq",
+        "libsodium",
+        "libzip",
+        "net-snmp",
+        "oniguruma",
+        "openldap",
+        "openssl@4",
+        "pcre2",
+        "sqlite",
+        "tidy-html5",
+        "unixodbc",
+        "gettext",
+        "zlib-ng-compat"
+      ],
+      "openssl_formula_dependencies": [
+        "apr-util",
+        "curl",
+        "freetds",
+        "httpd",
+        "libpq",
+        "libzip",
+        "net-snmp",
+        "openldap"
+      ],
+      "openssl_formula_dependents": [],
+      "transitive_openssl_formula_dependencies": [
+        "apr-util",
+        "cmake",
+        "coreutils",
+        "curl",
+        "freetds",
+        "httpd",
+        "krb5",
+        "libngtcp2",
+        "libpq",
+        "libssh2",
+        "libzip",
+        "net-snmp",
+        "openldap",
+        "python@3.15",
+        "wget"
+      ],
+      "transitive_openssl_formula_dependents": []
+    },
+    {
+      "name": "php@8.5",
+      "path": "Formula/p/php@8.5.rb",
+      "openssl_dependency": "openssl@4",
+      "homepage": "https://www.php.net/",
+      "source_url": "https://www.php.net/distributions/php-8.5.13.tar.xz",
       "upstream_provider": "php",
       "depth": null,
       "target_branch": "main",
@@ -19997,7 +20090,7 @@
       "path": "Formula/p/pkgx.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://pkgx.sh",
-      "source_url": "https://github.com/pkgxdev/pkgx/archive/refs/tags/v2.11.tar.gz",
+      "source_url": "https://github.com/pkgxdev/pkgx/archive/refs/tags/v2.11.1.tar.gz",
       "head_url": "https://github.com/pkgxdev/pkgx.git",
       "upstream_provider": "github",
       "upstream_repo": "pkgxdev/pkgx",
@@ -20266,6 +20359,42 @@
       "target_branch": "main",
       "staging_required_by": [],
       "dependencies": [
+        "gettext",
+        "pkgconf",
+        "icu4c@79",
+        "krb5",
+        "lz4",
+        "openssl@4",
+        "readline",
+        "zstd",
+        "linux-pam",
+        "util-linux",
+        "zlib-ng-compat"
+      ],
+      "openssl_formula_dependencies": [
+        "krb5"
+      ],
+      "openssl_formula_dependents": [],
+      "transitive_openssl_formula_dependencies": [
+        "cmake",
+        "krb5",
+        "python@3.15"
+      ],
+      "transitive_openssl_formula_dependents": []
+    },
+    {
+      "name": "postgresql@19",
+      "path": "Formula/p/postgresql@19.rb",
+      "openssl_dependency": "openssl@4",
+      "homepage": "https://www.postgresql.org/",
+      "source_url": "https://ftp.postgresql.org/pub/source/v19.0/postgresql-19.0.tar.bz2",
+      "upstream_provider": "other",
+      "depth": null,
+      "target_branch": "main",
+      "staging_required_by": [],
+      "dependencies": [
+        "docbook",
+        "docbook-xsl",
         "gettext",
         "pkgconf",
         "icu4c@79",
@@ -25155,7 +25284,7 @@
       "path": "Formula/t/trealla-prolog.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://github.com/trealla-prolog/trealla-prolog",
-      "source_url": "https://github.com/trealla-prolog/trealla-prolog/archive/refs/tags/v3.15.20.tar.gz",
+      "source_url": "https://github.com/trealla-prolog/trealla-prolog/archive/refs/tags/v3.15.21.tar.gz",
       "head_url": "https://github.com/trealla-prolog/trealla-prolog.git",
       "upstream_provider": "github",
       "upstream_repo": "trealla-prolog/trealla-prolog",
@@ -25837,7 +25966,7 @@
       "path": "Formula/v/vtcode.rb",
       "openssl_dependency": "openssl@4",
       "homepage": "https://vinhnx.github.io",
-      "source_url": "https://static.crates.io/crates/vtcode/vtcode-0.183.1.crate",
+      "source_url": "https://static.crates.io/crates/vtcode/vtcode-0.184.0.crate",
       "head_url": "https://github.com/vinhnx/vtcode.git",
       "upstream_provider": "github",
       "upstream_repo": "vinhnx/vtcode",
