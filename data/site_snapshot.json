@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T14:34:47Z",
+  "generated_at": "2026-11-22T14:29:33Z",
   "repository": "Homebrew/homebrew-core",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "target_branch": "openssl-4-migration-staging",
@@ -1141,13 +1141,13 @@
       "next_action": "Done",
       "upstream": {
         "provider": "github",
-        "repo": "facebook/folly",
-        "url": "https://github.com/facebook/folly"
+        "repo": "meta/folly",
+        "url": "https://github.com/meta/folly"
       },
       "issues": [
         {
           "label": "search",
-          "url": "https://github.com/search?q=repo%3Afacebook%2Ffolly+%22OpenSSL+4%22\u0026type=issues"
+          "url": "https://github.com/search?q=repo%3Ameta%2Ffolly+%22OpenSSL+4%22\u0026type=issues"
         }
       ],
       "flags": {
