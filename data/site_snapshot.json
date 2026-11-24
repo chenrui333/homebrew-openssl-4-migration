@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T17:58:26Z",
+  "generated_at": "2026-11-24T17:36:24Z",
   "repository": "Homebrew/homebrew-core",
   "tracking_issue": "Homebrew/homebrew-core#278366",
   "target_branch": "openssl-4-migration-staging",
@@ -20,7 +20,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 631,
+      "impact_count": 629,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -55,7 +55,7 @@
       "live_status": "DONE",
       "depth": null,
       "group_label": "Staging closure",
-      "impact_count": 440,
+      "impact_count": 438,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -90,7 +90,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 290,
+      "impact_count": 289,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -130,7 +130,7 @@
       "live_status": "DONE",
       "depth": null,
       "group_label": "Staging closure",
-      "impact_count": 270,
+      "impact_count": 269,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -170,7 +170,7 @@
       "live_status": "DONE",
       "depth": 1,
       "group_label": "Batch 1",
-      "impact_count": 268,
+      "impact_count": 267,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -213,7 +213,7 @@
       "live_status": "DONE",
       "depth": null,
       "group_label": "Staging closure",
-      "impact_count": 129,
+      "impact_count": 127,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -248,7 +248,7 @@
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 129,
+      "impact_count": 127,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -318,7 +318,7 @@
       "live_status": "DONE",
       "depth": 1,
       "group_label": "Batch 1",
-      "impact_count": 69,
+      "impact_count": 68,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -468,7 +468,7 @@
       "live_status": "DONE",
       "depth": null,
       "group_label": "Staging closure",
-      "impact_count": 21,
+      "impact_count": 20,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -544,46 +544,6 @@
       }
     },
     {
-      "name": "curl",
-      "live_status": "DONE",
-      "depth": 1,
-      "group_label": "Batch 1",
-      "impact_count": 19,
-      "target_branch": "openssl-4-migration-staging",
-      "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
-      },
-      "readiness": [
-        "done"
-      ],
-      "next_action": "Done",
-      "upstream": {
-        "provider": "github",
-        "repo": "curl/curl",
-        "url": "https://github.com/curl/curl"
-      },
-      "issues": [
-        {
-          "label": "search",
-          "url": "https://github.com/search?q=repo%3Acurl%2Fcurl+%22OpenSSL+4%22\u0026type=issues"
-        }
-      ],
-      "flags": {
-        "current_gate": false,
-        "ready": false,
-        "draft": false,
-        "ci_blocked": false,
-        "base_mismatch": false,
-        "missing_pr": false,
-        "upstream_blocked": false
-      }
-    },
-    {
       "name": "pipewire",
       "live_status": "DONE",
       "depth": null,
@@ -646,6 +606,46 @@
         {
           "label": "search",
           "url": "https://github.com/search?q=repo%3Alu-zero%2Fcargo-c+%22OpenSSL+4%22\u0026type=issues"
+        }
+      ],
+      "flags": {
+        "current_gate": false,
+        "ready": false,
+        "draft": false,
+        "ci_blocked": false,
+        "base_mismatch": false,
+        "missing_pr": false,
+        "upstream_blocked": false
+      }
+    },
+    {
+      "name": "curl",
+      "live_status": "DONE",
+      "depth": 1,
+      "group_label": "Batch 1",
+      "impact_count": 18,
+      "target_branch": "openssl-4-migration-staging",
+      "pr": {
+        "number": 0,
+        "url": "",
+        "base": "",
+        "is_draft": false,
+        "merge_state": "",
+        "updated_at": ""
+      },
+      "readiness": [
+        "done"
+      ],
+      "next_action": "Done",
+      "upstream": {
+        "provider": "github",
+        "repo": "curl/curl",
+        "url": "https://github.com/curl/curl"
+      },
+      "issues": [
+        {
+          "label": "search",
+          "url": "https://github.com/search?q=repo%3Acurl%2Fcurl+%22OpenSSL+4%22\u0026type=issues"
         }
       ],
       "flags": {
@@ -847,11 +847,46 @@
       }
     },
     {
+      "name": "libzip",
+      "live_status": "DONE",
+      "depth": null,
+      "group_label": "Staging closure",
+      "impact_count": 10,
+      "target_branch": "openssl-4-migration-staging",
+      "pr": {
+        "number": 0,
+        "url": "",
+        "base": "",
+        "is_draft": false,
+        "merge_state": "",
+        "updated_at": ""
+      },
+      "readiness": [
+        "done"
+      ],
+      "next_action": "Done",
+      "upstream": {
+        "provider": "other",
+        "repo": "",
+        "url": ""
+      },
+      "issues": [],
+      "flags": {
+        "current_gate": false,
+        "ready": false,
+        "draft": false,
+        "ci_blocked": false,
+        "base_mismatch": false,
+        "missing_pr": false,
+        "upstream_blocked": false
+      }
+    },
+    {
       "name": "grpc",
       "live_status": "DONE",
       "depth": 0,
       "group_label": "Batch 0 — Roots",
-      "impact_count": 11,
+      "impact_count": 9,
       "target_branch": "openssl-4-migration-staging",
       "pr": {
         "number": 0,
@@ -887,41 +922,6 @@
         "base_mismatch": false,
         "missing_pr": false,
         "upstream_blocked": true
-      }
-    },
-    {
-      "name": "libzip",
-      "live_status": "DONE",
-      "depth": null,
-      "group_label": "Staging closure",
-      "impact_count": 10,
-      "target_branch": "openssl-4-migration-staging",
-      "pr": {
-        "number": 0,
-        "url": "",
-        "base": "",
-        "is_draft": false,
-        "merge_state": "",
-        "updated_at": ""
-      },
-      "readiness": [
-        "done"
-      ],
-      "next_action": "Done",
-      "upstream": {
-        "provider": "other",
-        "repo": "",
-        "url": ""
-      },
-      "issues": [],
-      "flags": {
-        "current_gate": false,
-        "ready": false,
-        "draft": false,
-        "ci_blocked": false,
-        "base_mismatch": false,
-        "missing_pr": false,
-        "upstream_blocked": false
       }
     },
     {
